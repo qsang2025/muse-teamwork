@@ -1,0 +1,75 @@
+# Registry 3 agents — muse-teamwork
+# IP đã kiểm chứng ngày 2026-11-16 (Tailscale tailnet, TCP-reachable qua proxy).
+# Cập nhật file này khi có agent mới, đổi IP, hoặc đổi vai trò.
+# Lưu ý probe 2026-11-16 ~21:44: muse-1 và muse-2 KHÔNG trả lời HTTP ở các
+# cổng 80, 8080, 18080, 3000 qua proxy port 3130 (timeout 5s, code 000) —
+# hiện không host sẵn service nào. Hub Tailscale chỉ chạy được sau khi một
+# agent chạy `node hub/server.js` trên máy của mình (xem docs/SETUP-HUB.md).
+
+version: 1
+updated_at: "2026-11-16"
+github_org: qsang2025
+repo: qsang2025/muse-teamwork
+
+agents:
+  - id: muse-main
+    name: Muse chính
+    tailscale_ip: 100.114.114.44
+    host: VM Linux (máy này)
+    role: coordinator
+    responsibilities:
+      - Nhận việc từ Anh, tạo task, chia việc
+      - Merge duy nhất lên Qsang_vbook main (theo quy tắc auto-merge)
+      - Báo cáo tổng hợp cho Anh sau mỗi task xong
+      - Giữ ROADMAP.md + todo của Qsang_vbook
+    can_merge_qsang_vbook: true
+    can_host_hub: false   # VM Tailscale client-only: chỉ gọi ra, KHÔNG nhận inbound
+    status: active
+    capabilities:
+      - vbook-build
+      - validate
+      - device-test
+      - merge
+      - report
+
+  - id: muse-1
+    name: muse-1
+    tailscale_ip: 100.85.79.92
+    host: (máy thật của Anh — chưa rõ OS, cần xác nhận)
+    role: worker
+    responsibilities:
+      - Build + test extension vBook song song với muse-2
+      - Claim task open, làm xong để status review, KHÔNG tự merge
+    can_merge_qsang_vbook: false
+    can_host_hub: true   # CHỈ khi máy này mở được port 8787 qua Tailscale — CHƯA kiểm chứng, xem docs/SETUP-HUB.md
+    hub_probe_2026_11_16: "timeout 5s, code 000 ở cổng 80/8080/18080/3000 — chưa có service"
+    status: active
+    capabilities:
+      - vbook-build
+      - validate
+      - research
+    # Lưu ý: KHÔNG có device-test — chỉ muse-main device-test trên điện thoại Anh (PLAN §3).
+
+  - id: muse-2
+    name: muse-2
+    tailscale_ip: 100.126.2.102
+    host: (máy thật của Anh — chưa rõ OS, cần xác nhận)
+    role: worker
+    responsibilities:
+      - Build + test extension vBook song song với muse-1
+      - Claim task open, làm xong để status review, KHÔNG tự merge
+    can_merge_qsang_vbook: false
+    can_host_hub: true   # CHỈ khi máy này mở được port 8787 qua Tailscale — CHƯA kiểm chứng, xem docs/SETUP-HUB.md
+    hub_probe_2026_11_16: "timeout 5s, code 000 ở cổng 80/8080/18080/3000 — chưa có service"
+    status: active
+    capabilities:
+      - vbook-build
+      - validate
+      - research
+    # Lưu ý: KHÔNG có device-test — chỉ muse-main device-test trên điện thoại Anh (PLAN §3).
+
+# Quy tắc chia việc gợi ý (muse-main quyết cuối cùng):
+# - Task build extension: giao muse-1 hoặc muse-2 (ai rảnh thì claim trước).
+# - Task research/khảo sát site: giao 1 agent, agent còn lại làm task khác.
+# - Task merge/quyết định: chỉ muse-main.
+# - Không giao 2 task build cùng lúc cho 1 agent.

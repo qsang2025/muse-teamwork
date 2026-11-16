@@ -1,0 +1,31 @@
+{
+  "assignee": "",
+  "branch": "",
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "claim_expires_at": "",
+  "claimed_at": "",
+  "created_at": "2026-11-16T00:00:00+07:00",
+  "created_by": "muse-main",
+  "id": "000-template",
+  "notes": "Ghi chú thêm: link site, link ROADMAP, quyết định của Anh liên quan.",
+  "priority": "medium",
+  "repo": "Qsang_vbook",
+  "result": {
+    "branch": "",
+    "notes": "",
+    "test": {
+      "device_test": "",
+      "install": "",
+      "validate": ""
+    }
+  },
+  "status": "open",
+  "title": "Tiêu đề task ngắn gọn, nói rõ làm gì",
+  "type": "vbook-extension"
+}

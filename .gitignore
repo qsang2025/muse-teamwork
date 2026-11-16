@@ -1,0 +1,15 @@
+# .gitignore — muse-teamwork
+# Dữ liệu runtime của hub (task cache local, không phải nguồn sự thật)
+hub/data/
+# Secret — không bao giờ commit
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
+credentials*.json
+# Hệ thống / editor
+.DS_Store
+Thumbs.db
+*.log
+node_modules/

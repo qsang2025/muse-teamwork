@@ -1,0 +1,30 @@
+{
+  "assignee": "",
+  "branch": "feature/novelnext",
+  "checklist": [
+    "Chỉ test ĐÚNG 1 chương (ch.1), không test dồn dập — lần retest tối 16/11 vẫn 429, retest thêm có thể kéo dài block",
+    "Ghi rõ mã HTTP + thời gian test vào result.notes",
+    "Nếu ch.1 đọc đầy đủ: chạy validate + device test + install, cập nhật task sang review để muse-main merge",
+    "Nếu vẫn 429: để task blocked, ghi rõ, chờ Anh quyết — KHÔNG retest liên tục"
+  ],
+  "claim_expires_at": "",
+  "claimed_at": "",
+  "created_at": "2026-11-16T21:45:00+07:00",
+  "created_by": "muse-main",
+  "id": "087-novelnext-retest",
+  "notes": "Nguồn: ROADMAP vBook #87 novelnext.me (EN, NovelNext v1). Ch.1 từng đọc đầy đủ trên điện thoại; các chương discovery bị HTTP 429. Retest tối 16/11 vẫn 429 sau thời gian lặng. Quy tắc Anh đã dặn: 1 lần retest duy nhất sau thời gian lặng dài (sang ngày 17/11), rồi quyết định merge-or-hold. Extension base bị mã hoá, cần test máy + viết mới; lọc thể loại Adult, nsfw: true.",
+  "priority": "high",
+  "repo": "Qsang_vbook",
+  "result": {
+    "branch": "",
+    "notes": "",
+    "test": {
+      "device_test": "",
+      "install": "",
+      "validate": ""
+    }
+  },
+  "status": "open",
+  "title": "Retest 1 chương novelnext.me sau thời gian lặng dài, quyết định merge hay giữ",
+  "type": "vbook-extension"
+}
