@@ -125,25 +125,25 @@ Execute an in-depth technical verification, vulnerability audit, scalability ass
 ---
 
 ## 5. Definition of Done (Final Checklist)
-- [ ] Plan, Request, and Context files tracked in git on `feature/antigravity-review`.
-- [ ] Architectural verification completed (§5.a, §8.Q1, §8.Q3) with empirical evidence.
-- [ ] Failure mode and vulnerability audit completed (§5.b, §8.Q2, §8.Q4) with race condition analysis.
-- [ ] Scalability stress-testing (3 -> 7 agents) completed (§5.c, §8.Q5) with concurrency thresholds.
-- [ ] P0, P1, P2 proposals detailed with exact file:line and code replacements (§5.d).
-- [ ] Direct answers provided for all 6 questions in §8.
-- [ ] Comprehensive report `ANTIGRAVITY-FINDINGS.md` generated and committed.
-- [ ] Zero secrets leaked, zero changes to tasks 087/088.
-- [ ] Branch `feature/antigravity-review` pushed to origin.
+- [x] Plan, Request, and Context files tracked in git on `feature/antigravity-review`.
+- [x] Architectural verification completed (§5.a, §8.Q1, §8.Q3) with empirical evidence.
+- [x] Failure mode and vulnerability audit completed (§5.b, §8.Q2, §8.Q4) with race condition analysis.
+- [x] Scalability stress-testing (3 -> 7 agents) completed (§5.c, §8.Q5) with concurrency thresholds.
+- [x] P0, P1, P2 proposals detailed with exact file:line and code replacements (§5.d).
+- [x] Direct answers provided for all 6 questions in §8.
+- [x] Comprehensive report `ANTIGRAVITY-FINDINGS.md` generated and committed.
+- [x] Zero secrets leaked, zero changes to tasks 087/088.
+- [x] Branch `feature/antigravity-review` pushed to origin.
 
 ---
 
 ## 6. Progress
 - [x] Step 0 — Baseline verified. REQUEST & CONTEXT written.
-- [ ] Step 1 — Architectural verification (§5.a, §8.Q1, §8.Q3).
-- [ ] Step 2 — Vulnerability audit & failure modes (§5.b, §8.Q2, §8.Q4).
-- [ ] Step 3 — Scalability stress-test 3 -> 7 agents (§5.c, §8.Q5).
-- [ ] Step 4 — Concrete P0/P1/P2 actionable proposals (§5.d, §8.Q6).
-- [ ] Step 5 — Compile `ANTIGRAVITY-FINDINGS.md`, commit & push.
+- [x] Step 1 — Architectural verification (§5.a, §8.Q1, §8.Q3).
+- [x] Step 2 — Vulnerability audit & failure modes (§5.b, §8.Q2, §8.Q4).
+- [x] Step 3 — Scalability stress-test 3 -> 7 agents (§5.c, §8.Q5).
+- [x] Step 4 — Concrete P0/P1/P2 actionable proposals (§5.d, §8.Q6).
+- [x] Step 5 — Compile `ANTIGRAVITY-FINDINGS.md`, commit & push.
 
 ---
 
