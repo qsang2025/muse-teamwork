@@ -116,6 +116,35 @@ Tên file task giữ nguyên (087/088), không đổi tên file.
 | L3: chạy thử 2 dòng curl mới trong SETUP-HUB.md | Cú pháp đúng; curl exit 28 timeout (chưa có hub thật trên muse-1:8787) |
 | Không còn tiến trình hub test chạy; `hub/data/` đã dọn sạch | `ps` không thấy `server.js`; `hub/data/` trống |
 
+## 7. Vá P0 "TOXIC UNPUSHED COMMIT" trong `scripts/claim-task.sh` (2026-11-16 ~22:25, branch `fix/claim-toxic-commit`, CHƯA push)
+
+- **Lỗi (Antigravity review 22:19):** `git push` cuối script chạy dưới `set -e`
+  mà không có rollback. Khi 2 agent cùng claim 1 task, agent đến sau bị remote
+  từ chối push (exit 1) → bash dừng đột ngột, commit claim vẫn nằm ở local.
+  Lần chạy sau, `git pull --rebase` cố rebase commit lỗi đè lên commit của
+  agent kia → hard merge conflict + treo rebase, tê liệt quy trình.
+- **Cách vá (chỉ sửa `scripts/claim-task.sh`):** vòng lặp tối đa 3 lần — mỗi lần
+  `git pull --rebase` lại trạng thái mới nhất → kiểm tra task còn open (python
+  trả 3 = đã có người nhận → dừng ngay, exit 3) → commit `claim: <id> -> <agent>`
+  → push. Push thất bại → `git reset --hard HEAD~1` rollback commit local ngay,
+  rồi thử lại sau 2 giây. Hết 3 lần vẫn fail → exit 1, local sạch. Giữ nguyên:
+  kiểm tra status open/assignee trống, `claimed_at`/`claim_expires_at` +07:00,
+  commit message, mọi thông báo cũ.
+- **Kiểm chứng thực nghiệm (remote bare local trong `/tmp/mt-claim-test/`,
+  KHÔNG động vào origin thật):** Test 1 — pre-push hook luôn reject: 3 lần
+  push fail đều rollback, exit 1, `git log` không có commit claim, `git status`
+  sạch, task vẫn open. Test 2 — race thật (B kẹt 8s ở pre-push, A claim + push
+  trước): B push bị reject → rollback → thử lại → thấy task claimed bởi muse-1
+  → dừng exit 3, local B sạch. Test 3 — claim bình thường 1 agent: exit 0,
+  status claimed, assignee muse-1, `claimed_at`/`claim_expires_at` +07:00 cách
+  nhau đúng 2h, commit đã lên origin test. Cả 3 PASS.
+- **Rủi ro khác phát hiện (ngoài phạm vi vá, chỉ ghi nhận):** `git pull --rebase`
+  ở đầu mỗi lần thử vẫn có thể kẹt nếu working tree bẩn vì lý do khác (file
+  task bị sửa tay, hoặc agent đang có commit chưa push khác) — lúc đó script
+  exit 1 với thông báo "git pull lỗi" và commit claim chưa tạo nên không để lại
+  rác, nhưng agent phải tự dọn working tree. Ngoài ra nếu `git push` fail vì
+  mất mạng cả 3 lần thì task vẫn open (an toàn), agent chỉ cần chạy lại.
+
 ## 6. Còn cần Anh quyết (2 điểm)
 
 1. **Tên repo chốt chưa?** Đề xuất `qsang2025/muse-teamwork` (đã kiểm chứng chưa
