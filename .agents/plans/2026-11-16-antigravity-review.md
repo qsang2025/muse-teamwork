@@ -144,9 +144,12 @@ Execute an in-depth technical verification, vulnerability audit, scalability ass
 - [x] Step 3 — Scalability stress-test 3 -> 7 agents (§5.c, §8.Q5).
 - [x] Step 4 — Concrete P0/P1/P2 actionable proposals (§5.d, §8.Q6).
 - [x] Step 5 — Compile `ANTIGRAVITY-FINDINGS.md`, commit & push.
+- [x] Step 6 — Vietnamese v2 comprehensive update with 705c625 delta audit (F-01..F-07), 2-Squad architecture, and full P0/P1/P2 blueprint.
 
 ---
 
 ## 7. Decisions Made During Execution
 - 2026-11-16: Confirmed GitHub-only (Plan A) as the sole viable zero-infrastructure path due to client-only VM limitations and unexposed worker ports.
 - 2026-11-16: Identified critical flaw in `scripts/claim-task.sh`: lack of `git push` rollback causes local branch pollution on lost races.
+- 2026-11-16: Delta audit on origin/main (commit 705c625) confirmed P0 toxic unpushed commit rollback fix, but uncovered missing --autostash edge case, _template.json:28 open trap in grep scans, notes soft-assignment claim vulnerability, and hub/client.js result field omission.
+- 2026-11-16: Standardized comprehensive Vietnamese v2 documentation across all 6 core questions, 7 failure modes, 2-tier verification gatekeeping, and full CLI script blueprints.
