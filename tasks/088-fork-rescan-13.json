@@ -13,7 +13,7 @@
   "created_at": "2026-11-16T21:45:00+07:00",
   "created_by": "muse-main",
   "id": "088-fork-rescan-13",
-  "notes": "Nguồn: ROADMAP vBook — rescan #12 xong 2026-11-16 (109 host): kho build-ready kiểm chứng được từ VM đã CẠN HẲN, không còn ứng viên novel-type nào đạt 200 + ch.1 đầy đủ + base đọc được. Danh sách chờ hiện chỉ còn #10 shuhaige (để nguyên) + #87 novelnext. Lần rescan này chỉ ưu tiên host MỚI xuất hiện trong fork sau 16/11. Trước khi liệt kê bất kỳ host nào, kiểm tra ROADMAP mục đã đóng/đã merge — KHÔNG đề xuất lại site đã có trong repo hoặc đã đóng.",
+  "notes": "Nguồn: ROADMAP vBook — rescan #12 xong 2026-11-16 (109 host): kho build-ready kiểm chứng được từ VM đã CẠN HẲN, không còn ứng viên novel-type nào đạt 200 + ch.1 đầy đủ + base đọc được. Danh sách chờ hiện chỉ còn #10 shuhaige (để nguyên) + #87 novelnext. Lần rescan này chỉ ưu tiên host MỚI xuất hiện trong fork sau 16/11. Trước khi liệt kê bất kỳ host nào, kiểm tra ROADMAP mục đã đóng/đã merge — KHÔNG đề xuất lại site đã có trong repo hoặc đã đóng. GÁN CHO muse-2 — quyết định 2026-11-16 22:22, Anh ủy quyền Muse tự quyết theo kết quả review Antigravity: muse-2 claim task này khi bắt đầu; các agent khác không claim.",
   "priority": "medium",
   "repo": "Qsang_vbook",
   "result": {

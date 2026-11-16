@@ -12,7 +12,7 @@
   "created_at": "2026-11-16T21:45:00+07:00",
   "created_by": "muse-main",
   "id": "087-novelnext-retest",
-  "notes": "Nguồn: ROADMAP vBook #87 novelnext.me (EN, NovelNext v1). Ch.1 từng đọc đầy đủ trên điện thoại; các chương discovery bị HTTP 429. Retest tối 16/11 vẫn 429 sau thời gian lặng. Quy tắc Anh đã dặn: 1 lần retest duy nhất sau thời gian lặng dài (sang ngày 17/11), rồi quyết định merge-or-hold. Extension base bị mã hoá, cần test máy + viết mới; lọc thể loại Adult, nsfw: true.",
+  "notes": "Nguồn: ROADMAP vBook #87 novelnext.me (EN, NovelNext v1). Ch.1 từng đọc đầy đủ trên điện thoại; các chương discovery bị HTTP 429. Retest tối 16/11 vẫn 429 sau thời gian lặng. Quy tắc Anh đã dặn: 1 lần retest duy nhất sau thời gian lặng dài (sang ngày 17/11), rồi quyết định merge-or-hold. Extension base bị mã hoá, cần test máy + viết mới; lọc thể loại Adult, nsfw: true. GÁN CHO muse-1 — quyết định 2026-11-16 22:22, Anh ủy quyền Muse tự quyết theo kết quả review Antigravity: muse-1 claim task này khi bắt đầu; các agent khác không claim.",
   "priority": "high",
   "repo": "Qsang_vbook",
   "result": {
