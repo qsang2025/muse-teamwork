@@ -129,13 +129,26 @@ function iso07(d) {
 }
 
 function taskFiles() {
-  return fs.readdirSync(TASKS_DIR)
-    .filter((f) => f.endsWith('.json') && f !== '_template.json')
+  const top = fs.readdirSync(TASKS_DIR)
+    .filter((f) => f.endsWith('.json') && f !== '_template.json' && f !== '000-template.json')
     .sort()
     .map((f) => path.join(TASKS_DIR, f));
+  // Sharding P2.2 (2026-11-17): đọc thêm 1 tầng thư mục con (tasks/vbook/,
+  // tasks/research/, tasks/infra/, tasks/archive/). Không đệ quy sâu hơn.
+  const sub = [];
+  for (const d of fs.readdirSync(TASKS_DIR, { withFileTypes: true })) {
+    if (!d.isDirectory()) continue;
+    const dir = path.join(TASKS_DIR, d.name);
+    for (const f of fs.readdirSync(dir).sort()) {
+      if (f.endsWith('.json') && f !== '_template.json' && f !== '000-template.json') {
+        sub.push(path.join(dir, f));
+      }
+    }
+  }
+  return top.concat(sub.sort());
 }
 
-// Đọc toàn bộ task thật từ tasks/*.json (_template.json là mẫu, không phải task).
+// Đọc toàn bộ task thật từ tasks/*.json + tasks/*/*.json (_template.json là mẫu, không phải task).
 function loadTasks() {
   const tasks = {};
   for (const file of taskFiles()) {
@@ -153,8 +166,18 @@ function loadTasks() {
   return tasks;
 }
 
+// Tìm file thật của task: tasks/<id>.json trước, rồi tasks/*/<id>.json
+// (1 tầng, sharding P2.2). Cần thiết để saveTask() không ghi nhầm task
+// trong thư mục con ra tầng trên (gây trùng task 2 chỗ).
 function taskFile(id) {
-  return path.join(TASKS_DIR, id + '.json');
+  const top = path.join(TASKS_DIR, id + '.json');
+  if (fs.existsSync(top)) return top;
+  for (const d of fs.readdirSync(TASKS_DIR, { withFileTypes: true })) {
+    if (!d.isDirectory()) continue;
+    const f = path.join(TASKS_DIR, d.name, id + '.json');
+    if (fs.existsSync(f)) return f;
+  }
+  return top; // chưa có file → mặc định tầng trên cùng
 }
 
 function readFileOrNull(file) {

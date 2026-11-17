@@ -22,6 +22,11 @@
 #   không phải task thật — script tự loại nó ra là đủ.)
 # - F-03: tôn trọng preferred_assignee trong file task; đọc danh sách agent hợp
 #   lệ ĐỘNG từ agents.yaml (fallback 3 tên cũ nếu đọc lỗi).
+#
+# Sharding P2.2 (2026-11-17 — theo review độc lập Antigravity qsang2027):
+# task có thể nằm ở tasks/<id>.json hoặc tasks/*/<id>.json (1 tầng con:
+# tasks/vbook/, tasks/research/, tasks/infra/, tasks/archive/). Script tìm
+# ở tầng trên trước, rồi tìm 1 tầng con; danh sách task open liệt kê cả 2 tầng.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
@@ -58,10 +63,16 @@ if [ "$ID" = "_template" ]; then
   exit 3
 fi
 
+# P2.2: tìm file task ở tasks/<id>.json trước, rồi tasks/*/<id>.json (1 tầng).
 FILE="tasks/$ID.json"
 if [ ! -f "$FILE" ]; then
+  for f in tasks/*/"$ID.json"; do
+    [ -f "$f" ] && { FILE="$f"; break; }
+  done
+fi
+if [ ! -f "$FILE" ]; then
   echo "Không có task $ID. Task mở hiện có:"
-  grep -l '"status": "open"' tasks/*.json 2>/dev/null | grep -v '_template\.json' | sed 's|tasks/||; s|\.json||' || true
+  grep -l '"status": "open"' tasks/*.json tasks/*/*.json 2>/dev/null | grep -v '_template\.json' | sed 's|tasks/||; s|\.json||' || true
   exit 1
 fi
 
