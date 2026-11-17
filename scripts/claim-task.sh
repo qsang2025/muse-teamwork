@@ -13,6 +13,15 @@
 # rollback commit local ngay (git reset --hard HEAD~1) rồi thử lại tối đa
 # 3 lần, mỗi lần pull lại trạng thái mới nhất. Nếu task đã bị người khác
 # claim thì dừng ngay, exit 3, không để lại commit rác nào ở local.
+#
+# Vá F-01/F-02/F-03 (2026-11-17 — theo review độc lập Antigravity qsang2027):
+# - F-01: git pull --rebase dùng --autostash để không kẹt khi working tree bẩn.
+# - F-02: chặn claim "_template" (file mẫu); danh sách task open loại _template.json.
+#   (Không đổi status của _template.json: tasks/README.md quy định status chỉ
+#   gồm open/claimed/doing/review/done/blocked/cancelled, và đã ghi rõ template
+#   không phải task thật — script tự loại nó ra là đủ.)
+# - F-03: tôn trọng preferred_assignee trong file task; đọc danh sách agent hợp
+#   lệ ĐỘNG từ agents.yaml (fallback 3 tên cũ nếu đọc lỗi).
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
@@ -24,15 +33,35 @@ if [ -z "$ID" ] || [ -z "$AGENT" ]; then
   echo "Ví dụ: $0 087-novelnext-retest muse-1"
   exit 2
 fi
-case "$AGENT" in
-  muse-main|muse-1|muse-2) ;;
-  *) echo "agent phải là muse-main, muse-1 hoặc muse-2 (xem agents.yaml)."; exit 2 ;;
+
+# F-03: đọc agent hợp lệ động từ agents.yaml (danh sách "- id:" trong agents:).
+# Fallback về 3 tên cũ nếu agents.yaml thiếu hoặc đọc lỗi.
+VALID_AGENTS="$(python3 -c '
+import re, sys
+try:
+    text = open("agents.yaml", encoding="utf-8").read()
+except OSError:
+    sys.exit(1)
+ids = re.findall(r"^\s+-\s+id:\s*([A-Za-z0-9_-]+)\s*$", text, re.M)
+print(" ".join(ids) if ids else "")
+' 2>/dev/null || true)"
+[ -n "$VALID_AGENTS" ] || VALID_AGENTS="muse-main muse-1 muse-2"
+case " $VALID_AGENTS " in
+  *" $AGENT "*) ;;
+  *) echo "agent '$AGENT' không có trong agents.yaml (hợp lệ: $VALID_AGENTS)."; exit 2 ;;
 esac
+
+# F-02: _template.json là file mẫu, KHÔNG phải task thật — chặn claim hẳn.
+if [ "$ID" = "_template" ]; then
+  echo "Task '_template' là file mẫu (tasks/_template.json), không phải task thật. Không claim được."
+  echo "Tạo task mới bằng ./scripts/new-task.sh \"Tiêu đề task\" rồi claim task đó."
+  exit 3
+fi
 
 FILE="tasks/$ID.json"
 if [ ! -f "$FILE" ]; then
   echo "Không có task $ID. Task mở hiện có:"
-  grep -l '"status": "open"' tasks/*.json 2>/dev/null | sed 's|tasks/||; s|\.json||' || true
+  grep -l '"status": "open"' tasks/*.json 2>/dev/null | grep -v '_template\.json' | sed 's|tasks/||; s|\.json||' || true
   exit 1
 fi
 
@@ -43,7 +72,8 @@ MAX_ATTEMPTS=3
 ATTEMPT=1
 while [ "$ATTEMPT" -le "$MAX_ATTEMPTS" ]; do
   echo "Lần thử $ATTEMPT/$MAX_ATTEMPTS: đang git pull để lấy trạng thái mới nhất..."
-  git pull --rebase || { echo "git pull lỗi — kiểm tra mạng rồi chạy lại."; exit 1; }
+  # F-01: --autostash để pull không kẹt khi working tree có thay đổi chưa commit.
+  git pull --rebase --autostash || { echo "git pull lỗi — kiểm tra mạng rồi chạy lại."; exit 1; }
 
   # python trả 3 = task đã có người nhận (không còn open / đã có assignee):
   # dừng ngay, không thử lại. Trả khác 0 = lỗi ghi file: hoàn tác rồi dừng.
@@ -59,6 +89,11 @@ if task.get("status") != "open":
     sys.exit(3)
 if task.get("assignee"):
     print(f"Task {task['id']} đã có người nhận ({task['assignee']}). Chọn task khác.")
+    sys.exit(3)
+# F-03: task đã gán cho agent khác (preferred_assignee) thì từ chối claim.
+pref = task.get("preferred_assignee") or ""
+if pref and pref != agent:
+    print(f"Task {task['id']} đã được gán cho {pref} (preferred_assignee). {agent} không được claim task này — chọn task khác.")
     sys.exit(3)
 now = datetime.now(timezone(timedelta(hours=7)))
 task["status"] = "claimed"
