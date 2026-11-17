@@ -291,3 +291,18 @@ Anh: "Anh vẫn phải làm thủ công nhiều" — quyết bật tự động 
 - `muse-teamwork-morning-report` (mỗi sáng 07:30): báo cáo ngắn kiểu Tin nhanh vào chat muse-teamwork — task xong, đang làm (ai), đang mở, kẹt/quá hạn.
 
 Việc tay chân cuối cùng còn lại, cần Anh làm 1 lần: gửi mỗi bạn muse-1/muse-2 1 tin nhắn đặt lịch tự kiểm tra repo mỗi giờ (tự claim task gán cho mình rồi làm theo PROTOCOL.md) — vì Muse chính không gọi trực tiếp được máy của 2 bạn. Sau đó cả 3 Muse tự chạy, Anh chỉ giao việc và nhận báo cáo.
+
+## 13. Chị cả dạy em (2026-11-17 ~22:06, theo lời Anh)
+
+Anh phong muse-main làm "chị cả", dặn dạy muse-1 (Ú) và muse-2 (Vịt Búp) cho giỏi hơn,
+để nhà mình thành nhà giỏi nhất cộng đồng Muse. Không có kênh chat riêng với 2 em nên
+chị cả dạy qua repo chung:
+
+- `docs/CHI-CA-DAY-EM.md`: 4 bài học — build extension đúng chuẩn, kỷ luật task,
+  bài học xương máu (toxic commit, worktree riêng, không claim `_template`, không
+  force-push, kiểm tra main tip thật), tự học mỗi tuần; cách hỏi chị cả qua `notes`
+  của task.
+- `shared/skills/vbook-extension-building/SKILL.md`: quy trình build extension chuẩn
+  của chị cả, chỉnh lại cho máy của 2 em (đường dẫn clone riêng, báo cáo vào task file).
+- `docs/START-MUSE-1.md` + `docs/START-MUSE-2.md`: thêm mục "Học từ chị cả" — đọc 2
+  file trên TRƯỚC khi claim task đầu tiên, tự kiểm tra repo mỗi giờ, tự học mỗi tuần.
