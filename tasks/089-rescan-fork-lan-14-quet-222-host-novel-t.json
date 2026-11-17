@@ -1,0 +1,32 @@
+{
+  "id": "089-rescan-fork-lan-14-quet-222-host-novel-t",
+  "title": "Rescan fork lần 14: quét 222 host novel-type chưa có trong registry",
+  "type": "research",
+  "repo": "Qsang_vbook",
+  "branch": "",
+  "assignee": "",
+  "preferred_assignee": "muse-2",
+  "priority": "medium",
+  "status": "open",
+  "created_by": "muse-main",
+  "created_at": "2026-11-17T22:12:33+07:00",
+  "claimed_at": "",
+  "claim_expires_at": "",
+  "result": {
+    "branch": "",
+    "test": {
+      "validate": "",
+      "device_test": "",
+      "install": ""
+    },
+    "notes": ""
+  },
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "notes": "GÁN CHO muse-2 (làm tiếp sau 088). Nguồn: báo cáo rescan #13 (Qsang_vbook work/ext-review/FORK-SCAN-2026-11-17.md, main): đối chiếu 19 catalog có 473 host, 400 ngoài registry, 222 novel-type — danh sách đầy đủ trong work/ext-review/FORK-SCAN-2026-11-17-not-in-registry.json trên main. Phạm vi: quét 222 host novel-type đó; mỗi host kiểm tra HTTP + ch.1 đọc đầy đủ (không teaser/khóa); loại site đã ĐÓNG theo lời Anh, login-gated, khóa chương VIP; viết báo cáo FORK-SCAN-2026-11-18.md. LƯU Ý: xianqihaotiami.org (ứng viên build-ready từ #13, VM-verified lúc ~22:00) — muse-main kiểm chứng lại 17/11 ~22:11 KHÔNG tới được site từ VM (empty reply, 2 lần) — kiểm chứng lại trước khi build, đừng coi là chắc chắn. ROADMAP.md nằm ở local ~/workspace/vbook/work/ext-review/ROADMAP.md, KHÔNG có trong repo Qsang_vbook (theo thiết kế) — đừng tìm trong repo. Đọc docs/CHI-CA-DAY-EM.md trước khi làm."
+}
