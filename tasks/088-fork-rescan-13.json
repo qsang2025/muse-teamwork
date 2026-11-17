@@ -13,7 +13,7 @@
   "created_at": "2026-11-16T21:45:00+07:00",
   "created_by": "muse-main",
   "id": "088-fork-rescan-13",
-  "notes": "Nguồn: ROADMAP vBook — rescan #12 xong 2026-11-16 (109 host): kho build-ready kiểm chứng được từ VM đã CẠN HẲN, không còn ứng viên novel-type nào đạt 200 + ch.1 đầy đủ + base đọc được. Danh sách chờ hiện chỉ còn #10 shuhaige (để nguyên) + #87 novelnext. Lần rescan này chỉ ưu tiên host MỚI xuất hiện trong fork sau 16/11. Trước khi liệt kê bất kỳ host nào, kiểm tra ROADMAP mục đã đóng/đã merge — KHÔNG đề xuất lại site đã có trong repo hoặc đã đóng. GÁN CHO muse-2 — quyết định 2026-11-16 22:22, Anh ủy quyền Muse tự quyết theo kết quả review Antigravity: muse-2 claim task này khi bắt đầu; các agent khác không claim.\n\nTiến độ 2026-11-17 ~22:15+07 (muse-2): đã quét 19 catalog cộng đồng (repository.json) + 86 fork Darkrai9x + fork của 18 repo còn lại; chỉ 3 repo/fork có push sau 16/11 (kychitoge, duongden/vbook, BaoBao + 2 fork sync của duongden). Extension mới duy nhất sau 16/11 là kychi vbook_hdsd (type ai, tài liệu GitBook — không phải host truyện). Đang kiểm chứng các host ngoài registry còn sống (xianqihaotiami.org đã PASS 200 + ch.1 đầy đủ; duahau 404; taonovel API lỗi app id).",
+  "notes": "Nguồn: ROADMAP vBook — rescan #12 xong 2026-11-16 (109 host): kho build-ready kiểm chứng được từ VM đã CẠN HẲN, không còn ứng viên novel-type nào đạt 200 + ch.1 đầy đủ + base đọc được. Danh sách chờ hiện chỉ còn #10 shuhaige (để nguyên) + #87 novelnext. Lần rescan này chỉ ưu tiên host MỚI xuất hiện trong fork sau 16/11. Trước khi liệt kê bất kỳ host nào, kiểm tra ROADMAP mục đã đóng/đã merge — KHÔNG đề xuất lại site đã có trong repo hoặc đã đóng. GÁN CHO muse-2 — quyết định 2026-11-16 22:22, Anh ủy quyền Muse tự quyết theo kết quả review Antigravity: muse-2 claim task này khi bắt đầu; các agent khác không claim.\n\nTiến độ 2026-11-17 ~22:15+07 (muse-2): đã quét 19 catalog cộng đồng (repository.json) + 86 fork Darkrai9x + fork của 18 repo còn lại; chỉ 3 repo/fork có push sau 16/11 (kychitoge, duongden/vbook, BaoBao + 2 fork sync của duongden). Extension mới duy nhất sau 16/11 là kychi vbook_hdsd (type ai, tài liệu GitBook — không phải host truyện). Đang kiểm chứng các host ngoài registry còn sống (xianqihaotiami.org đã PASS 200 + ch.1 đầy đủ; duahau 404; taonovel API lỗi app id).\n\nmuse-main đã kiểm chứng 17/11 ~22:15: báo cáo đọc kỹ, branch chỉ thêm 2 file báo cáo, merge FF vào Qsang_vbook main 3b8e695 (validate 113 PASS, 0 cảnh báo, kiểm chứng trên đúng cây đã merge). xianqihaotiami.org: muse-main kiểm chứng lại 2 lần ~22:11 KHÔNG tới được từ VM (empty reply) — chưa chắc chắn, kiểm chứng lại trước khi build. ROADMAP.md nằm ở local ~/workspace/vbook/work/ext-review/ROADMAP.md, KHÔNG có trong repo Qsang_vbook (theo thiết kế). Đề xuất rescan #14 → task 089 (đã tạo, gán muse-2).",
   "preferred_assignee": "muse-2",
   "priority": "medium",
   "repo": "Qsang_vbook",
@@ -26,7 +26,7 @@
       "validate": ""
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Rescan fork lần 13: tìm nguồn truyện mới chưa có trong Qsang_vbook",
   "type": "research"
 }
