@@ -15,6 +15,7 @@ agent nào muốn biết "việc gì đang mở, ai đang làm gì" thì đọc 
 | `repo` | Repo đích làm việc (vd `Qsang_vbook`) |
 | `branch` | Branch làm việc trên repo đích (điền khi claim) |
 | `assignee` | `muse-main` / `muse-1` / `muse-2` / `""` (chưa gán) |
+| `preferred_assignee` | Agent được gán cố định (vd `muse-1` cho 087, `muse-2` cho 088) — `claim-task.sh` và hub từ chối agent khác claim (vá F-03); `""` = ai cũng claim được |
 | `priority` | `high` / `medium` / `low` |
 | `status` | `open` / `claimed` / `doing` / `review` / `done` / `blocked` / `cancelled` |
 | `created_by` | Ai tạo task |
@@ -32,16 +33,35 @@ agent nào muốn biết "việc gì đang mở, ai đang làm gì" thì đọc 
 - **Tạo task mới:** `./scripts/new-task.sh "Tiêu đề task" vbook-extension`
   (xem `scripts/`), hoặc copy `_template.json` rồi sửa tay.
 - **Claim task:** `./scripts/claim-task.sh <id> <agent-id>`
+- **Gia hạn / nộp task (kênh GitHub-only):** `./scripts/heartbeat-task.sh <id> <agent-id> [tiến-độ]`,
+  `./scripts/complete-task.sh <id> <agent-id> <branch> [ghi-chú] [--validate X] [--device-test X] [--install X]`
+- **Dọn task quá hạn:** `./scripts/sweep-expired.sh` (thu hồi task claimed/doing quá hạn 2h về open)
 - **Xem task mở:** `grep -l '"status": "open"' tasks/*.json` (trừ `_template.json`).
 - **Đổi status:** sửa file, commit, push ngay. Không giữ thay đổi local lâu.
+
+## Bố cục thư mục con (sharding P2.2, review qsang2027)
+
+Khi số task vượt ~100, task được xếp vào thư mục con theo loại, vẫn trong
+cùng 1 repo (không chia repo):
+
+- `tasks/vbook/` — task build/fix extension truyện tranh/chữ
+- `tasks/research/` — task scan fork, phân tích API nguồn truyện
+- `tasks/infra/` — task cải tiến toolchain, script CI/CD
+- `tasks/archive/YYYY/` — task đã hoàn thành (status `done`)
+
+Các script (`new-task.sh`, `claim-task.sh`, `sweep-expired.sh`,
+`heartbeat-task.sh`, `complete-task.sh`, `status-board.sh`) đều quét cả thư
+mục con. Task ở thư mục con vẫn dùng cùng schema và vòng đời
+open → claimed → doing → review → done.
 
 ## Task mẫu đang mở
 
 - `087-novelnext-retest.json` — retest 1 chương novelnext.me sau thời gian lặng
-  dài (từ ROADMAP #87, MERGE HELD vì HTTP 429). Status: `open`, chưa gán.
+  dài (từ ROADMAP #87, MERGE HELD vì HTTP 429). Status: `open`, đã gán cố định
+  cho muse-1 (`preferred_assignee`).
 - `088-fork-rescan-13.json` — rescan fork lần 13 tìm nguồn mới (rescan #12 đã
   xong 2026-11-16, kho build-ready kiểm chứng được từ VM đã cạn). Status:
-  `open`, chưa gán.
+  `open`, đã gán cố định cho muse-2 (`preferred_assignee`).
 
 ## Quy tắc
 
@@ -50,3 +70,17 @@ agent nào muốn biết "việc gì đang mở, ai đang làm gì" thì đọc 
 - `_template.json` không phải task thật — đừng đổi status của nó, đừng claim nó.
 - File task phải là JSON hợp lệ: kiểm tra bằng
   `python3 -m json.tool tasks/<id>.json`.
+- **Xem bảng trạng thái:** `./scripts/status-board.sh` (thêm `--status open`
+  để chỉ xem task mở).
+
+## Bố cục thư mục (sharding P2.2, 2026-11-17 — theo review qsang2027 §4.3)
+
+- `tasks/vbook/` — task build/fix extension; `tasks/research/` — scan fork,
+  phân tích API nguồn; `tasks/infra/` — cải tiến toolchain/script;
+  `tasks/archive/` — task đã hoàn thành (`status: "done"`, thêm thư mục con
+  theo năm: `tasks/archive/2026/`).
+- **Task hiện có (087, 088) CHƯA di chuyển** — vẫn ở `tasks/` tầng trên, để
+  không gãy đường claim của muse-1/muse-2. Sharding áp dụng cho task mới khi
+  số lượng tăng (theo review: khi > 100 task).
+- `claim-task.sh`, `hub/server.js` và `status-board.sh` tìm task ở cả 2 tầng
+  (`tasks/*.json` và `tasks/*/*.json`, 1 tầng con).

@@ -21,16 +21,28 @@ if [ -z "$TITLE" ]; then
   exit 2
 fi
 
-ID=$(python3 - "$TITLE" "$TYPE" "$PRIORITY" "$REPO" <<'EOF'
+# P1.1 (vá F-06, review qsang2027): pull trạng thái mới nhất TRƯỚC khi quét
+# ID lớn nhất — nếu không, 2 máy cùng tạo khi chưa pull sẽ sinh trùng ID.
+# Pull lỗi thì dừng ngay, không tạo task trên trạng thái cũ.
+echo "Đang đồng bộ trạng thái mới nhất từ remote trước khi tạo ID..."
+git pull --rebase --autostash || { echo "git pull lỗi — kiểm tra mạng rồi chạy lại, chưa tạo task nào."; exit 1; }
+
+# P1.1 (vá F-06): created_by lấy từ biến môi trường, mặc định muse-main.
+CREATOR="${MUSE_AGENT_ID:-muse-main}"
+
+ID=$(CREATOR="$CREATOR" python3 - "$TITLE" "$TYPE" "$PRIORITY" "$REPO" <<'EOF'
 import json, glob, os, re, sys, unicodedata
 from datetime import datetime, timezone, timedelta
 
 title, typ, prio, repo = sys.argv[1:5]
-# Số tiếp theo: quét tasks/*.json (bỏ _template), lấy số đầu id lớn nhất.
+creator = os.environ.get("CREATOR", "muse-main")
+# Số tiếp theo: quét tasks/*.json và tasks/*/*.json (cả thư mục con sau
+# sharding P2.2: tasks/vbook/, tasks/research/, tasks/infra/, tasks/archive/),
+# bỏ _template, lấy số đầu id lớn nhất.
 nums = []
-for f in glob.glob("tasks/*.json"):
+for f in glob.glob("tasks/**/*.json", recursive=True):
     base = os.path.basename(f)[:-5]
-    if base == "_template":
+    if base in ("_template", "000-template"):
         continue
     m = re.match(r"(\d+)", base)
     if m:
@@ -51,9 +63,10 @@ task = {
     "repo": repo,
     "branch": "",
     "assignee": "",
+    "preferred_assignee": "",
     "priority": prio,
     "status": "open",
-    "created_by": "muse-main",
+    "created_by": creator,
     "created_at": now,
     "claimed_at": "",
     "claim_expires_at": "",
