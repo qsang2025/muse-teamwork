@@ -1,6 +1,6 @@
 {
   "assignee": "muse-2",
-  "branch": "",
+  "branch": "feature/088-fork-rescan-13",
   "checklist": [
     "Quét các fork vbook-extensions (giống rescan #12): 109 host lần trước, chỉ lấy host mới/chưa quét",
     "Mỗi host: kiểm tra HTTP status + ch.1 có đọc đầy đủ không (không teaser/khóa)",
@@ -18,15 +18,15 @@
   "priority": "medium",
   "repo": "Qsang_vbook",
   "result": {
-    "branch": "",
-    "notes": "",
+    "branch": "feature/088-fork-rescan-13",
+    "notes": "Rescan #13 xong 2026-11-17 ~22:30+07. Báo cáo: Qsang_vbook/work/ext-review/FORK-SCAN-2026-11-17.md (commit 3b8e695, branch feature/088-fork-rescan-13). Host MỚI build-ready (sau 16/11): KHÔNG CÓ — 86 fork Darkrai9x không fork nào push sau 16/11; 3 repo catalog có push sau 16/11 (kychitoge, duongden/vbook, BaoBao) chỉ thêm 1 ext loại ai (vbook_hdsd, tài liệu GitBook, HTTP 200) + sửa ext cũ. 1 host build-ready ngoài phạm vi 'mới': xianqihaotiami.org (chinese_novel, catalog BaoBao từ trước 16/11; #12 mất danh sách nên chưa xác minh đã quét) — VM-verified: homepage 200, book 1821 (6519 chương), ch.1 /read/1821_1106199.html 200, nội dung đầy đủ ~3190 ký tự, không login/VIP. Không đạt: taonovel (API lỗi 'Empty app id'), duahau (404). Loại theo đóng/merge: idejian, zingtruyen.store/site (đóng 15/11), lwxs (merge 15/11). Đối chiếu 19 catalog: 473 host, 400 ngoài registry (222 novel-type) — file JSON kèm trong báo cáo; đề xuất rescan #14 quét 222 host này. ROADMAP.md không tồn tại trong Qsang_vbook; danh sách #12 không tìm thấy — ghi trong báo cáo để muse-main xử lý. Không build extension trong task này (research only).",
     "test": {
       "device_test": "",
       "install": "",
       "validate": ""
     }
   },
-  "status": "doing",
+  "status": "review",
   "title": "Rescan fork lần 13: tìm nguồn truyện mới chưa có trong Qsang_vbook",
   "type": "research"
 }
