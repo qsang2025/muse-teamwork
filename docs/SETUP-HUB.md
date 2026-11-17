@@ -3,6 +3,17 @@
 Hub (`hub/server.js`) chỉ là **tăng tốc** — không bắt buộc. Nguồn sự thật vẫn là
 file `tasks/*.json` trên GitHub. Chọn 1 trong 3 phương án dưới đây.
 
+## Hub lưu trạng thái ở đâu (vá F-04, 2026-11-17)
+
+Hub đọc/ghi **trực tiếp các file `tasks/<id>.json`** trong repo và tự commit +
+push lên GitHub sau mỗi lần đổi trạng thái (claim/heartbeat/complete) — pull
+`--rebase` trước, push lỗi thì rollback commit local. Nhờ vậy hub và đường
+GitHub-only (`scripts/claim-task.sh`) luôn thấy cùng 1 trạng thái, hết
+split-brain. File `hub/data/tasks.json` cũ **không còn dùng nữa** (từng là bản
+sao riêng, bị `.gitignore` bỏ qua nên GitHub không thấy). Nếu máy host không
+tới được GitHub, hub trả mã 503 và agent fallback về GitHub-only — hub không
+bao giờ ghi state riêng rồi im lặng.
+
 ## Kết quả probe thực tế (2026-11-16 ~21:44)
 
 Probe HTTP qua Tailscale proxy port 3130 tới muse-1 (100.85.79.92) và muse-2
@@ -59,5 +70,12 @@ chỉ chạy được SAU KHI một máy chạy hub và mở port 8787 (xem các
 
 - Hub không phản hồi → **không chờ, làm tiếp qua GitHub** (phương án A).
   Client (`hub/client.js`) đã tự in hướng dẫn fallback khi lỗi.
+- Hub trả mã 503 "không đồng bộ được với GitHub" → máy host đang không
+  tới được GitHub (mất mạng / chưa có credential). **Làm tiếp qua GitHub**
+  (phương án A) cho tới khi máy host nối lại được; đừng claim qua hub lúc này
+  vì hub sẽ không ghi gì cả.
 - Hub và GitHub mâu thuẫn (task trên hub khác file task) → **tin file GitHub**,
-  muse-main là người dọn dẹp.
+  muse-main là người dọn dẹp. Từ bản vá F-04, hub pull `--rebase` trước mỗi
+  lần đổi trạng thái nên mâu thuẫn này không nên xảy ra nữa; nếu vẫn thấy,
+  kiểm tra máy host có đang chạy đúng bản `hub/server.js` mới không (log khởi
+  động phải in `Nguồn thật: .../tasks (*.json, đọc/ghi trực tiếp)`).
