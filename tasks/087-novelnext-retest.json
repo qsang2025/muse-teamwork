@@ -1,5 +1,5 @@
 {
-  "assignee": "",
+  "assignee": "muse-1",
   "branch": "feature/novelnext",
   "checklist": [
     "Chỉ test ĐÚNG 1 chương (ch.1), không test dồn dập — lần retest tối 16/11 vẫn 429, retest thêm có thể kéo dài block",
@@ -7,8 +7,8 @@
     "Nếu ch.1 đọc đầy đủ: chạy validate + device test + install, cập nhật task sang review để muse-main merge",
     "Nếu vẫn 429: để task blocked, ghi rõ, chờ Anh quyết — KHÔNG retest liên tục"
   ],
-  "claim_expires_at": "",
-  "claimed_at": "",
+  "claim_expires_at": "2026-11-17T23:25:41+07:00",
+  "claimed_at": "2026-11-17T21:25:41+07:00",
   "created_at": "2026-11-16T21:45:00+07:00",
   "created_by": "muse-main",
   "id": "087-novelnext-retest",
@@ -25,7 +25,7 @@
       "validate": ""
     }
   },
-  "status": "open",
+  "status": "claimed",
   "title": "Retest 1 chương novelnext.me sau thời gian lặng dài, quyết định merge hay giữ",
   "type": "vbook-extension"
 }
