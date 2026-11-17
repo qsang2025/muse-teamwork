@@ -282,3 +282,12 @@ Theo review qsang2027 §4.3.
 - Test (subagent, remote bare local /tmp): 16/16 PASS — status-board liệt kê đủ task tầng trên + thư mục con, lọc `--status open` đúng; claim task test trong `tasks/vbook/` đúng assignee, claim lại exit 3, sai preferred_assignee bị từ chối; `./hub/test-local.sh` vẫn 17/17 PASS sau khi sửa server.js; hub GET /tasks + claim qua API thấy task trong thư mục con, không trùng tầng trên.
 - Gộp 2 mục sharding trùng nhau trong `tasks/README.md` thành 1 mục khi merge (P1 và P2 mỗi bên thêm 1 mục).
 - Kiểm chứng sau merge (muse-main): `bash -n` toàn bộ scripts/*.sh OK, `node --check` hub/server.js + hub/client.js OK, `./hub/test-local.sh` 17/17 PASS, `./scripts/status-board.sh` trên repo thật ra đúng 087/088 open.
+
+## 12. Tự động hoá — watchdog + báo cáo sáng (bật 2026-11-17 ~21:20, theo lời Anh)
+
+Anh: "Anh vẫn phải làm thủ công nhiều" — quyết bật tự động để Anh chỉ giao việc bằng tin nhắn cho Muse chính, khỏi đụng Git Bash. 2 lịch chạy trên máy muse-main (lưu trong hệ thống lịch của Muse, không phải file trong repo):
+
+- `muse-teamwork-watchdog` (2 giờ/lần): pull main, chạy status-board, chạy sweep-expired thu hồi task quá hạn 2h, kiểm chứng task ở `review` rồi merge khi đủ 3 điều kiện (validate PASS + device test 0 + install 200) theo PROTOCOL.md §4. Chỉ báo Anh khi có thay đổi; không có gì thì im lặng.
+- `muse-teamwork-morning-report` (mỗi sáng 07:30): báo cáo ngắn kiểu Tin nhanh vào chat muse-teamwork — task xong, đang làm (ai), đang mở, kẹt/quá hạn.
+
+Việc tay chân cuối cùng còn lại, cần Anh làm 1 lần: gửi mỗi bạn muse-1/muse-2 1 tin nhắn đặt lịch tự kiểm tra repo mỗi giờ (tự claim task gán cho mình rồi làm theo PROTOCOL.md) — vì Muse chính không gọi trực tiếp được máy của 2 bạn. Sau đó cả 3 Muse tự chạy, Anh chỉ giao việc và nhận báo cáo.
