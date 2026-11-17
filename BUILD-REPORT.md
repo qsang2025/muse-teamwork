@@ -156,3 +156,53 @@ Tên file task giữ nguyên (087/088), không đổi tên file.
    của bạn ấy rồi kiểm tra lại bằng curl; (c) chạy hub trên PC Windows của Anh
    nếu có máy luôn bật. Nếu Anh chọn (a) thì không cần làm gì thêm — repo dùng
    được ngay sau khi push.
+
+## 8. Vá F-01 (phần còn lại), F-02, F-03 trong `scripts/claim-task.sh` (2026-11-17 ~08:30, branch `fix/claim-2027-f02-f03`, CHƯA push)
+
+Theo review độc lập Antigravity qsang2027 (file `ANTIGRAVITY-FINDINGS-2027.md`,
+813 dòng, commit `821ad49` trên branch `feature/antigravity-review-2027` —
+lúc vá file này chưa lên GitHub được, làm theo tóm tắt review):
+
+- **F-01 (phần còn lại của Toxic Unpushed Commit):** `git pull --rebase` thiếu
+  `--autostash` nên kẹt khi working tree có thay đổi chưa commit. Vá: thêm
+  `--autostash` vào lệnh pull trong vòng lặp claim. (Phần chính đã vá ở §7:
+  rollback `git reset --hard HEAD~1` + retry 3 lần.)
+- **F-02:** `tasks/_template.json` để `"status": "open"` nên
+  `grep -l '"status": "open"' tasks/*.json` luôn trả về `_template.json` đầu
+  tiên, và script không chặn claim ID `_template`. Vá: (a) chặn hẳn claim khi
+  ID là `_template` (exit 3, báo rõ đây là file mẫu); (b) lệnh liệt kê task
+  open loại `_template.json` khỏi kết quả. KHÔNG đổi status của
+  `_template.json` sang `"template"`: `tasks/README.md` quy định status chỉ
+  gồm `open/claimed/doing/review/done/blocked/cancelled`, và đã ghi rõ template
+  không phải task thật — script tự loại nó ra là đủ. Thêm trường
+  `"preferred_assignee": ""` vào `_template.json` để mẫu ghi đủ schema mới.
+- **F-03:** gán task bằng chữ `"GÁN CHO muse-1/muse-2"` trong `notes` (commit
+  `5ef1a7e`) không được script kiểm tra. Vá: (a) thêm trường
+  `"preferred_assignee"` vào `tasks/087-novelnext-retest.json` (`muse-1`) và
+  `tasks/088-fork-rescan-13.json` (`muse-2`); (b) `claim-task.sh` từ chối ngay
+  (exit 3, nêu rõ agent được gán) khi người claim khác `preferred_assignee`;
+  (c) đọc danh sách agent hợp lệ ĐỘNG từ `agents.yaml` (regex dòng
+  `- id:`) thay vì hardcode `muse-main|muse-1|muse-2`; nếu `agents.yaml`
+  thiếu hoặc đọc lỗi thì fallback về 3 tên cũ, không làm hỏng script.
+  Giữ nguyên mọi hành vi khác: rollback + retry 3 lần, `claimed_at` /
+  `claim_expires_at` +07:00, commit message `claim: <id> -> <agent>`, exit 3
+  khi task đã có người nhận.
+- **Kiểm chứng thực nghiệm (remote bare local trong `/tmp/mt-claim2-work/`,
+  KHÔNG động vào origin thật): 22/22 PASS.**
+  (a) claim `_template` → exit 3, báo file mẫu; danh sách task open không còn
+  `_template` nhưng vẫn đủ 087 + 088. (b) muse-2 claim 087 (gán muse-1) → exit
+  3, nêu đúng muse-1, không để lại commit rác; muse-1 claim 087 → exit 0,
+  status `claimed`, assignee `muse-1`, `claimed_at`/`claim_expires_at` +07:00
+  cách nhau đúng 2h, commit message đúng. (c) task mới tạo bằng `new-task.sh`
+  (không có trường `preferred_assignee`) claim bình thường, exit 0.
+  (d) remote ahead 1 commit + working tree bẩn (sửa `tasks/088-...json` chưa
+  commit) → claim exit 0, không kẹt; thay đổi dirty còn nguyên sau claim
+  (autostash pop lại); đã pull được commit remote-ahead. (e) agent lạ →
+  exit 2; thêm `muse-9` vào `agents.yaml` (chỉ test clone) → claim được,
+  chứng minh đọc động không hardcode; xóa `agents.yaml` → fallback 3 tên cũ,
+  muse-2 claim 088 OK.
+- **Rủi ro còn lại (ngoài phạm vi, chỉ ghi nhận):** `git reset --hard HEAD~1`
+  khi rollback sau push-fail vẫn xóa cả thay đổi local chưa commit (đã có từ
+  §7, không đổi ở bản vá này). Bảng schema trong `tasks/README.md` chưa liệt
+  kê trường `preferred_assignee` — nên bổ sung 1 dòng khi merge (không sửa
+  trong bản vá này vì ngoài phạm vi file được giao).
