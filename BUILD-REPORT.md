@@ -157,6 +157,7 @@ Tên file task giữ nguyên (087/088), không đổi tên file.
    nếu có máy luôn bật. Nếu Anh chọn (a) thì không cần làm gì thêm — repo dùng
    được ngay sau khi push.
 
+
 ## 8. Vá F-01 (phần còn lại), F-02, F-03 trong `scripts/claim-task.sh` (2026-11-17 ~08:30, branch `fix/claim-2027-f02-f03`, CHƯA push)
 
 Theo review độc lập Antigravity qsang2027 (file `ANTIGRAVITY-FINDINGS-2027.md`,
@@ -206,3 +207,58 @@ lúc vá file này chưa lên GitHub được, làm theo tóm tắt review):
   §7, không đổi ở bản vá này). Bảng schema trong `tasks/README.md` chưa liệt
   kê trường `preferred_assignee` — nên bổ sung 1 dòng khi merge (không sửa
   trong bản vá này vì ngoài phạm vi file được giao).
+
+
+## 9. Vá P0 F-04 "Split-Brain hub ↔ GitHub" (2026-11-17 ~08:30, branch `fix/hub-2027-f04`, CHƯA push)
+
+- **Lỗi (Antigravity review qsang2027, Turn 4):** `hub/server.js` đọc/ghi
+  `hub/data/tasks.json` — file riêng, còn bị `.gitignore` bỏ qua, tách rời
+  hoàn toàn với `tasks/*.json` trên GitHub: claim trên hub không thấy trên
+  GitHub và ngược lại. Thêm 2 lỗi kèm: POST `/heartbeat` và POST `/complete`
+  quên gọi `sweepExpired` (task quá hạn 2h không được thu hồi khi dùng hub),
+  và `hub/client.js` lệnh `complete` không gửi `result` nên hub làm rơi kết
+  quả test/validate/device-test.
+- **Cách vá (đồng bộ đầy đủ, không chọn phương án tối thiểu "hub chỉ đọc"):**
+  `tasks/*.json` là nguồn thật duy nhất.
+  - `hub/server.js`: đọc/ghi trực tiếp `tasks/<id>.json` (bỏ `_template.json`
+    vì là mẫu, không phải task); ghi file kiểu atomic (file tạm + rename);
+    giờ `claimed_at`/`claim_expires_at` theo +07:00 như `scripts/claim-task.sh`.
+    Trước mỗi lần đổi trạng thái: `git pull --rebase --autostash`, rồi
+    `sweepExpired` (cả `/heartbeat` và `/complete` đều gọi — trước đây quên),
+    rồi mới đổi + commit + push (`git add tasks/`, commit
+    `hub: <hành động> <id>`, push). Push lỗi → `git reset --hard HEAD~1`
+    rollback commit local (giống cách vá P0 trong `scripts/claim-task.sh`)
+    + khôi phục nội dung file, trả 503 để agent fallback về GitHub-only.
+    Pull lỗi cũng trả 503, không ghi state riêng rồi im lặng. GET `/tasks`
+    pull định kỳ (throttle 60s, lỗi thì dùng trạng thái local). Thêm biến
+    `TASKS_DIR` (mặc định `tasks/` cạnh `hub/`) và `HUB_GIT_SYNC=0` (tắt sync,
+    chỉ dùng để test). `hub/data/tasks.json` không còn được đọc/ghi.
+  - `hub/client.js`: lệnh `complete` nhận thêm `--branch/--notes/--validate/
+    --device-test/--install` hoặc `--result-json '<json>'` để gửi đủ `result`;
+    server merge sâu 1 cấp cho `test` (chỉ gửi `validate` thì
+    `device_test`/`install` đã có vẫn giữ).
+  - `hub/test-local.sh`: viết lại thành bộ kiểm chứng đầy đủ, chạy hoàn toàn
+    trong `/tmp` với remote bare local + 2 clone (host chạy hub, client kênh
+    GitHub-only), không động origin thật hay repo thật.
+  - `docs/SETUP-HUB.md`: ghi rõ hub lưu ở `tasks/*.json` + auto-sync, và
+    cách xử lý khi hub trả 503.
+- **Kiểm chứng thực nghiệm (`./hub/test-local.sh`, 16/16 PASS, exit 0):**
+  (a) test-local.sh PASS — /health, /tasks thấy 087+088 open, không liệt kê
+  `_template`; (b) claim 087 qua API → file `tasks/087-...json` đổi đúng
+  `claimed`/`muse-1`/`claimed_at`+`claim_expires_at` +07:00, đã push lên
+  remote (clone B pull thấy ngay); (c) heartbeat đổi sang `doing` + gia hạn,
+  complete qua `client.js` ghi đủ `result` (branch, notes, test validate/
+  device_test/install) vào file và lên remote; (d) task 088 claimed quá hạn
+  → gọi `/heartbeat` trả 409, file về `open`; (e) claim 088 qua hub rồi
+  `scripts/claim-task.sh` claim lại → từ chối đúng, exit 3, clone B sạch
+  không commit rác. Lỗi gặp lúc test (đã sửa trong script test, không phải
+  lỗi hub): clone B checkout `main` bị abort vì copy `claim-task.sh` vào
+  trước, và grep `"ok":true` không khớp JSON pretty-print của client.js.
+- **Lưu ý:** làm trong worktree riêng `/tmp/mt-hub-f04` (branch
+  `fix/hub-2027-f04` từ main 705c625) vì checkout chính đang ở branch
+  `fix/claim-2027-f02-f03` của agent khác (đang sửa `scripts/claim-task.sh`,
+  có thay đổi chưa commit) — không động vào file của nhau. `.gitignore` vẫn
+  giữ dòng `hub/data/` (thư mục không còn dùng, không cần xóa gấp). Trong lúc
+  làm, main đã có thêm merge F-02/F-03 (cd1b8db) — branch này không sửa
+  `scripts/` hay `tasks/` nên merge sau không xung đột.
+

@@ -6,7 +6,10 @@
 #   HUB=http://100.85.79.92:8787 AGENT=muse-1 ./hub/client.sh poll
 #   HUB=http://100.85.79.92:8787 AGENT=muse-1 ./hub/client.sh claim 087-novelnext-retest
 #   HUB=http://100.85.79.92:8787 AGENT=muse-1 ./hub/client.sh heartbeat 087-novelnext-retest
-#   HUB=http://100.85.79.92:8787 AGENT=muse-1 ./hub/client.sh complete 087-novelnext-retest
+#   HUB=http://100.85.79.92:8787 AGENT=muse-1 ./hub/client.sh complete 087-novelnext-retest --branch feature/novelnext --validate PASS --device-test 0 --install 200 --notes "ch.1 đọc đủ"
+# complete nhận thêm --branch/--notes/--validate/--device-test/--install hoặc
+# --result-json '<json>' để gửi đủ result (vá F-04: trước đây complete không
+# gửi result nên hub làm rơi kết quả test).
 # Nếu không đặt HUB/AGENT, script hỏi lại (không đoán IP).
 set -euo pipefail
 cd "$(dirname "$0")/.."
