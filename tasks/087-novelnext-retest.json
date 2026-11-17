@@ -12,20 +12,20 @@
   "created_at": "2026-11-16T21:45:00+07:00",
   "created_by": "muse-main",
   "id": "087-novelnext-retest",
-  "notes": "Nguồn: ROADMAP vBook #87 novelnext.me (EN, NovelNext v1). Ch.1 từng đọc đầy đủ trên điện thoại; các chương discovery bị HTTP 429. Retest tối 16/11 vẫn 429 sau thời gian lặng. Quy tắc Anh đã dặn: 1 lần retest duy nhất sau thời gian lặng dài (sang ngày 17/11), rồi quyết định merge-or-hold. Extension base bị mã hoá, cần test máy + viết mới; lọc thể loại Adult, nsfw: true. GÁN CHO muse-1 — quyết định 2026-11-16 22:22, Anh ủy quyền Muse tự quyết theo kết quả review Antigravity: muse-1 claim task này khi bắt đầu; các agent khác không claim.\n\nmuse-main retest 1 chương duy nhất 17/11 22:20:37 +07 qua điện thoại Anh (forwarder đã chạy lại, /connect OK HONOR PTP-AN10, app vBook foreground): code 1, VẪN HTTP 429 — cùng thông báo chặn vì gửi request quá nhanh, thử lại sau ~60 phút. Đây là lần 429 thứ 3 liên tiếp sau thời gian lặng (15/11 23:12, 16/11 21:15, 17/11 22:20). VM của muse-1 retest cùng chương lúc 21:27 cùng ngày: HTTP 200 FULL — block chỉ dính IP mạng điện thoại. MERGE VẪN GIỮ (HOLD), KHÔNG retest liên tục. Chờ Anh quyết: (a) giữ lại, (b) merge dù throttle, (c) đổi mạng điện thoại WiFi ↔ 5G để đổi IP rồi test lại ĐÚNG 1 lần.",
+  "notes": "Nguồn: ROADMAP vBook #87 novelnext.me (EN, NovelNext v1). Ch.1 từng đọc đầy đủ trên điện thoại; các chương discovery bị HTTP 429. Retest tối 16/11 vẫn 429 sau thời gian lặng. Quy tắc Anh đã dặn: 1 lần retest duy nhất sau thời gian lặng dài (sang ngày 17/11), rồi quyết định merge-or-hold. Extension base bị mã hoá, cần test máy + viết mới; lọc thể loại Adult, nsfw: true. GÁN CHO muse-1 — quyết định 2026-11-16 22:22, Anh ủy quyền Muse tự quyết theo kết quả review Antigravity: muse-1 claim task này khi bắt đầu; các agent khác không claim.\n\nmuse-main retest 1 chương duy nhất 17/11 22:20:37 +07 qua điện thoại Anh (forwarder đã chạy lại, /connect OK HONOR PTP-AN10, app vBook foreground): code 1, VẪN HTTP 429 — cùng thông báo chặn vì gửi request quá nhanh, thử lại sau ~60 phút. Đây là lần 429 thứ 3 liên tiếp sau thời gian lặng (15/11 23:12, 16/11 21:15, 17/11 22:20). VM của muse-1 retest cùng chương lúc 21:27 cùng ngày: HTTP 200 FULL — block chỉ dính IP mạng điện thoại. MERGE VẪN GIỮ (HOLD), KHÔNG retest liên tục. Chờ Anh quyết: (a) giữ lại, (b) merge dù throttle, (c) đổi mạng điện thoại WiFi ↔ 5G để đổi IP rồi test lại ĐÚNG 1 lần.\n\nKẾT: MERGED 2026-11-17 22:26 (main 0dfdadb, registry 114, validate PASS 114) và Anh xác nhận GIỮ lúc 22:49 trong chat Vbook (ảnh chụp reader 21:13 + 'Được rồi nhé' là quyết định của Anh). Task đóng theo quyết định này. Lưu ý: chương có thể 429 khi fetch dồn dập từ IP điện thoại; đọc từng chương chậm thì được.",
   "preferred_assignee": "muse-1",
   "priority": "high",
   "repo": "Qsang_vbook",
   "result": {
     "branch": "feature/novelnext",
-    "notes": "Retest ch.1 2026-11-17 21:27:52 +07: HTTP 200, doc day du — #chr-content 134 <p>, mo dau 'Chapter 1 A World of Danger', ket '(End of this chapter)', chua 'Gao Yi' + 'Donghai News' (khop golden test.json). Validate PASS (91 nguon, 0 canh bao). Install: plugin.zip tren branch feature/novelnext tra HTTP 200 (31876 B, 16 file); URL registry main se 200 sau khi merge. Device test de trong cho muse-main test tren dien thoai anh. Khong doi code Qsang_vbook (branch da co san commit 5a925dd).",
+    "notes": "Retest ch.1 2026-11-17 21:27:52 +07: HTTP 200, doc day du — #chr-content 134 <p>, mo dau 'Chapter 1 A World of Danger', ket '(End of this chapter)', chua 'Gao Yi' + 'Donghai News' (khop golden test.json). Validate PASS (91 nguon, 0 canh bao). Install: plugin.zip tren branch feature/novelnext tra HTTP 200 (31876 B, 16 file); URL registry main se 200 sau khi merge. Device test de trong cho muse-main test tren dien thoai anh. Khong doi code Qsang_vbook (branch da co san commit 5a925dd). | ĐÃ MERGE 22:26 + Anh xác nhận GIỮ 22:49.",
     "test": {
       "device_test": "",
       "install": "200",
       "validate": "PASS"
     }
   },
-  "status": "blocked",
+  "status": "done",
   "title": "Retest 1 chương novelnext.me sau thời gian lặng dài, quyết định merge hay giữ",
   "type": "vbook-extension"
 }
