@@ -1,5 +1,5 @@
 {
-  "assignee": "",
+  "assignee": "muse-2",
   "branch": "",
   "checklist": [
     "Quét các fork vbook-extensions (giống rescan #12): 109 host lần trước, chỉ lấy host mới/chưa quét",
@@ -8,8 +8,8 @@
     "Viết báo cáo FORK-SCAN-2026-11-17.md vào Qsang_vbook/work/ext-review/, liệt kê host build-ready (VM-verified) + host dự phòng",
     "Cập nhật task sang review kèm danh sách host tìm được"
   ],
-  "claim_expires_at": "",
-  "claimed_at": "",
+  "claim_expires_at": "2026-11-17T23:54:27+07:00",
+  "claimed_at": "2026-11-17T21:54:27+07:00",
   "created_at": "2026-11-16T21:45:00+07:00",
   "created_by": "muse-main",
   "id": "088-fork-rescan-13",
@@ -26,7 +26,7 @@
       "validate": ""
     }
   },
-  "status": "open",
+  "status": "claimed",
   "title": "Rescan fork lần 13: tìm nguồn truyện mới chưa có trong Qsang_vbook",
   "type": "research"
 }
