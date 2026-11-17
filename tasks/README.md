@@ -54,6 +54,10 @@ Các script (`new-task.sh`, `claim-task.sh`, `sweep-expired.sh`,
 mục con. Task ở thư mục con vẫn dùng cùng schema và vòng đời
 open → claimed → doing → review → done.
 
+- **Task hiện có (087, 088) CHƯA di chuyển** — vẫn ở `tasks/` tầng trên, để
+  không gãy đường claim của muse-1/muse-2. Sharding áp dụng cho task mới khi
+  số lượng tăng (theo review: khi > 100 task).
+
 ## Task mẫu đang mở
 
 - `087-novelnext-retest.json` — retest 1 chương novelnext.me sau thời gian lặng
@@ -72,15 +76,3 @@ open → claimed → doing → review → done.
   `python3 -m json.tool tasks/<id>.json`.
 - **Xem bảng trạng thái:** `./scripts/status-board.sh` (thêm `--status open`
   để chỉ xem task mở).
-
-## Bố cục thư mục (sharding P2.2, 2026-11-17 — theo review qsang2027 §4.3)
-
-- `tasks/vbook/` — task build/fix extension; `tasks/research/` — scan fork,
-  phân tích API nguồn; `tasks/infra/` — cải tiến toolchain/script;
-  `tasks/archive/` — task đã hoàn thành (`status: "done"`, thêm thư mục con
-  theo năm: `tasks/archive/2026/`).
-- **Task hiện có (087, 088) CHƯA di chuyển** — vẫn ở `tasks/` tầng trên, để
-  không gãy đường claim của muse-1/muse-2. Sharding áp dụng cho task mới khi
-  số lượng tăng (theo review: khi > 100 task).
-- `claim-task.sh`, `hub/server.js` và `status-board.sh` tìm task ở cả 2 tầng
-  (`tasks/*.json` và `tasks/*/*.json`, 1 tầng con).

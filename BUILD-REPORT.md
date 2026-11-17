@@ -262,3 +262,23 @@ lúc vá file này chưa lên GitHub được, làm theo tóm tắt review):
   làm, main đã có thêm merge F-02/F-03 (cd1b8db) — branch này không sửa
   `scripts/` hay `tasks/` nên merge sau không xung đột.
 
+
+## 10. Áp dụng P1 (2026-11-17 ~20:30, branch `fix/p1-2027`, merge `ad12e2b`)
+
+Theo review qsang2027 §4.2, Anh quyết "theo em, làm luôn P1, P2" (20:26). 2 agent làm song song trên cùng 1 cây làm việc (không dùng worktree riêng) — lần sau chia worktree riêng để tránh checkout dở dang của nhau.
+
+- P1.1 — `scripts/new-task.sh`: `git pull --rebase --autostash` TRƯỚC khi quét ID lớn nhất (vá F-06 race trùng ID); `created_by` từ `$MUSE_AGENT_ID` (mặc định muse-main); file task mới có sẵn `"preferred_assignee": ""`; quét ID đệ quy `tasks/**/*.json` (sẵn sàng sharding P2.2).
+- P1.2 — 3 script CLI mới cho kênh GitHub-only (vá F-05 deadlock): `sweep-expired.sh` (thu hồi task claimed/doing quá hạn 2h về open), `heartbeat-task.sh` (gia hạn 2h, sang doing, ghi chú tiến độ), `complete-task.sh` (sang review, ghi branch + notes, cờ `--validate/--device-test/--install` merge nông 1 cấp vào `result.test`). Cải tiến so với bản đề xuất: cả 3 đều rollback `git reset --hard HEAD~1` + khôi phục file task byte-exact khi push thất bại (chống toxic commit F-01); heartbeat/complete chỉ đúng assignee mới được chạy.
+- `tasks/README.md`: thêm `preferred_assignee` vào bảng schema (bù phần còn thiếu từ đợt vá F-03) + tài liệu CLI mới + layout thư mục con.
+- Test (subagent, remote bare local /tmp): 30/30 PASS — new-task ID tăng đúng (089, 090), 2 clone cùng tạo không trùng ID; sweep thu hồi đúng task quá hạn, không động task chưa hết hạn; heartbeat/complete đúng/sai assignee; push thất bại (pre-receive hook chặn) → không commit rác, file nguyên vẹn từng byte (so sha256). 2 lỗi harness đã sửa trong lúc test (khôi phục file bằng `$(cat)` làm mất newline cuối → đổi sang `mktemp` + `cp`; grep ID nhầm output của git pull).
+- Sự cố: agent P1 tạo nhầm commit `c2b0915 "seed p1 test"` (author test@test) trên main local — CHƯA push (origin/main vẫn 90e64fc). muse-main đã `git reset --hard 90e64fc` để dọn main trước khi merge; commit này không lên GitHub.
+
+## 11. Áp dụng P2 (2026-11-17 ~20:30, branch `fix/p2-2027`, merge `5c7971d`)
+
+Theo review qsang2027 §4.3.
+
+- P2.1 — `scripts/status-board.sh` mới: bảng trạng thái console (mã, status, priority, assignee, thời hạn còn lại/QUÁ HẠN, tiêu đề), đọc `tasks/*.json` + `tasks/*/*.json`, bỏ qua `_template.json`/`000-template.json`, cờ `--status <s>` để lọc.
+- P2.2 — Sharding: tạo `tasks/vbook/`, `tasks/research/`, `tasks/infra/`, `tasks/archive/` (`.gitkeep`). Task 087/088 KHÔNG di chuyển (vẫn ở tầng trên, không gãy đường claim). `claim-task.sh` tìm file ở tầng trên rồi 1 tầng con; `hub/server.js` `taskFiles()` + `taskFile()` đọc/ghi đúng vị trí thật của task trong thư mục con (không ghi nhầm ra tầng trên gây trùng).
+- Test (subagent, remote bare local /tmp): 16/16 PASS — status-board liệt kê đủ task tầng trên + thư mục con, lọc `--status open` đúng; claim task test trong `tasks/vbook/` đúng assignee, claim lại exit 3, sai preferred_assignee bị từ chối; `./hub/test-local.sh` vẫn 17/17 PASS sau khi sửa server.js; hub GET /tasks + claim qua API thấy task trong thư mục con, không trùng tầng trên.
+- Gộp 2 mục sharding trùng nhau trong `tasks/README.md` thành 1 mục khi merge (P1 và P2 mỗi bên thêm 1 mục).
+- Kiểm chứng sau merge (muse-main): `bash -n` toàn bộ scripts/*.sh OK, `node --check` hub/server.js + hub/client.js OK, `./hub/test-local.sh` 17/17 PASS, `./scripts/status-board.sh` trên repo thật ra đúng 087/088 open.
