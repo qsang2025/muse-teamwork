@@ -7,7 +7,7 @@
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "medium",
-  "status": "review",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-17T22:12:33+07:00",
   "claimed_at": "2026-11-17T22:22:59+07:00",
@@ -15,11 +15,11 @@
   "result": {
     "branch": "feature/089-rescan-fork-lan-14",
     "test": {
-      "validate": "",
-      "device_test": "",
-      "install": ""
+      "validate": "PASS 114 nguon, 0 canh bao (tren main da merge 9403d67)",
+      "device_test": "N/A — task research, khong build extension",
+      "install": "N/A — task research, khong build extension"
     },
-    "notes": "Rescan #14 xong 2026-11-17 ~23:05+07. Quet 223 host novel-type (task ghi 222, thuc te 223 do them eng_novel): HTTP 200: 94, 403: 24, ERR: 99. Ch.1 doc day du VM-verified: 3 host build-ready — zhenhunxiaoshuo.com (Tran Hon ch.1 ~4.927 ky tu), kyhuyen.com (ch.1 ~10.272 ky tu), jjwxc.net (ch.1 ~10.589 ky tu, GBK + can JS, can test ky tren dien thoai). Loai sau kiem chung tay: truyendich.vn (site da dong, chi con thong bao chia tay), metruyenchuvn.org (mirror cua metruyenchu da co trong repo). xianqihaotiami.org (ung vien #13) nay mat lien lac tu VM (ProxyError) — chua chac chan, can kiem chung lai tren dien thoai truoc khi build. Bao cao: Qsang_vbook/work/ext-review/FORK-SCAN-2026-11-18.md + results JSON, branch feature/089-rescan-fork-lan-14. Research only, khong build extension."
+    "notes": "Rescan #14 xong 2026-11-17 ~23:05+07. Quet 223 host novel-type (task ghi 222, thuc te 223 do them eng_novel): HTTP 200: 94, 403: 24, ERR: 99. Ch.1 doc day du VM-verified: 3 host build-ready — zhenhunxiaoshuo.com (Tran Hon ch.1 ~4.927 ky tu), kyhuyen.com (ch.1 ~10.272 ky tu), jjwxc.net (ch.1 ~10.589 ky tu, GBK + can JS, can test ky tren dien thoai). Loai sau kiem chung tay: truyendich.vn (site da dong, chi con thong bao chia tay), metruyenchuvn.org (mirror cua metruyenchu da co trong repo). xianqihaotiami.org (ung vien #13) nay mat lien lac tu VM (ProxyError) — chua chac chan, can kiem chung lai tren dien thoai truoc khi build. Bao cao: Qsang_vbook/work/ext-review/FORK-SCAN-2026-11-18.md + results JSON, branch feature/089-rescan-fork-lan-14. Research only, khong build extension. | KIEM CHUNG muse-main 18/11 ~00:35: branch feature/089-rescan-fork-lan-14 chi 1 commit truoc main, 2 file docs (FORK-SCAN-2026-11-18.md + results JSON 223 host); so lieu JSON khop bao cao (200:94, 403:24, ERR:99, ch1 full:32); kiem chung lai tu VM: zhenhunxiaoshuo.com/1.html HTTP 200, dung chuong 1 Tran Hon ~4.927 ky tu; kyhuyen.com homepage HTTP 200; 3 host chua co trong repo. DA MERGE len main Qsang_vbook 9403d67 (merge --no-ff, push OK), validate tren main PASS 114, registry khong doi 114. ROADMAP.md local cap nhat."
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
