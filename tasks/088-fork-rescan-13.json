@@ -13,7 +13,7 @@
   "created_at": "2026-11-16T21:45:00+07:00",
   "created_by": "muse-main",
   "id": "088-fork-rescan-13",
-  "notes": "Nguồn: ROADMAP vBook — rescan #12 xong 2026-11-16 (109 host): kho build-ready kiểm chứng được từ VM đã CẠN HẲN, không còn ứng viên novel-type nào đạt 200 + ch.1 đầy đủ + base đọc được. Danh sách chờ hiện chỉ còn #10 shuhaige (để nguyên) + #87 novelnext. Lần rescan này chỉ ưu tiên host MỚI xuất hiện trong fork sau 16/11. Trước khi liệt kê bất kỳ host nào, kiểm tra ROADMAP mục đã đóng/đã merge — KHÔNG đề xuất lại site đã có trong repo hoặc đã đóng. GÁN CHO muse-2 — quyết định 2026-11-16 22:22, Anh ủy quyền Muse tự quyết theo kết quả review Antigravity: muse-2 claim task này khi bắt đầu; các agent khác không claim.",
+  "notes": "Nguồn: ROADMAP vBook — rescan #12 xong 2026-11-16 (109 host): kho build-ready kiểm chứng được từ VM đã CẠN HẲN, không còn ứng viên novel-type nào đạt 200 + ch.1 đầy đủ + base đọc được. Danh sách chờ hiện chỉ còn #10 shuhaige (để nguyên) + #87 novelnext. Lần rescan này chỉ ưu tiên host MỚI xuất hiện trong fork sau 16/11. Trước khi liệt kê bất kỳ host nào, kiểm tra ROADMAP mục đã đóng/đã merge — KHÔNG đề xuất lại site đã có trong repo hoặc đã đóng. GÁN CHO muse-2 — quyết định 2026-11-16 22:22, Anh ủy quyền Muse tự quyết theo kết quả review Antigravity: muse-2 claim task này khi bắt đầu; các agent khác không claim.\n\nTiến độ 2026-11-17 ~22:15+07 (muse-2): đã quét 19 catalog cộng đồng (repository.json) + 86 fork Darkrai9x + fork của 18 repo còn lại; chỉ 3 repo/fork có push sau 16/11 (kychitoge, duongden/vbook, BaoBao + 2 fork sync của duongden). Extension mới duy nhất sau 16/11 là kychi vbook_hdsd (type ai, tài liệu GitBook — không phải host truyện). Đang kiểm chứng các host ngoài registry còn sống (xianqihaotiami.org đã PASS 200 + ch.1 đầy đủ; duahau 404; taonovel API lỗi app id).",
   "preferred_assignee": "muse-2",
   "priority": "medium",
   "repo": "Qsang_vbook",
@@ -26,7 +26,7 @@
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "doing",
   "title": "Rescan fork lần 13: tìm nguồn truyện mới chưa có trong Qsang_vbook",
   "type": "research"
 }
