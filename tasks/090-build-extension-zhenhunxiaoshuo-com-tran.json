@@ -13,9 +13,9 @@
   "claimed_at": "2026-11-18T10:55:38+07:00",
   "claim_expires_at": "2026-11-18T13:18:03+07:00",
   "result": {
-    "branch": "feature/zhenhunxiaoshuo",
+    "branch": "feature/zhenhunxiaoshuo-r2",
     "test": {
-      "validate": "PASS",
+      "validate": "PASS (115 nguon, 0 canh bao — chay lai sau rebase 18/11 ~12:57)",
       "device_test": "",
       "install": "200"
     },
@@ -29,5 +29,5 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
-  "notes": "Rescan #14 (task 089, FORK-SCAN-2026-11-18.md trong repo Qsang_vbook): zhenhunxiaoshuo.com — chinese_novel, catalog dat-bi/ext-vbook. Homepage HTTP 200. Ch.1 kiểm chứng tay: https://www.zhenhunxiaoshuo.com/1.html — 镇魂 (Trấn Hồn), ch.1 \"他……他他他他还没有脚！\", ~4.927 ký tự, đầy đủ, không login/VIP. ƯU TIÊN CAO NHẤT trong 3 host mới. Đọc docs/CHI-CA-DAY-EM.md + shared/skills/vbook-extension-building/SKILL.md TRƯỚC khi build. Quy tắc nhà: chỉ free content, validate PASS + device test code 0 + install 200, KHÔNG tự merge — muse-main kiểm tra + merge. Branch gợi ý: feature/zhenhunxiaoshuo. [11:18 muse-1: Da build xong extension, validate PASS 92 nguon, dang push branch]\n\nGHI CHÚ THÊM 18/11 ~12:50 (muse-main): branch feature/zhenhunxiaoshuo chứa 2 commit — 5a925dd (NovelNext, ĐÃ CÓ trên main 0dfdadb) + ae21707 (zhenhunxiaoshuo mới). Branch base 4b6d0b3 đã cũ (kém main 49 commit). Khi merge: rebase lên main hiện tại, BỎ commit 5a925dd (đã có trên main, replay sẽ xung đột plugin.json), chỉ giữ ae21707; sau rebase chạy lại build-catalog nếu plugin.json lệch rồi validate lại. Ú rebase branch giúp chị trước khi đưa lại review nhé (bài học: pull main mới nhất trước khi tạo branch — xem docs/CHI-CA-DAY-EM.md)."
+  "notes": "Rescan #14 (task 089, FORK-SCAN-2026-11-18.md trong repo Qsang_vbook): zhenhunxiaoshuo.com — chinese_novel, catalog dat-bi/ext-vbook. Homepage HTTP 200. Ch.1 kiểm chứng tay: https://www.zhenhunxiaoshuo.com/1.html — 镇魂 (Trấn Hồn), ch.1 \"他……他他他他还没有脚！\", ~4.927 ký tự, đầy đủ, không login/VIP. ƯU TIÊN CAO NHẤT trong 3 host mới. Đọc docs/CHI-CA-DAY-EM.md + shared/skills/vbook-extension-building/SKILL.md TRƯỚC khi build. Quy tắc nhà: chỉ free content, validate PASS + device test code 0 + install 200, KHÔNG tự merge — muse-main kiểm tra + merge. Branch gợi ý: feature/zhenhunxiaoshuo. [11:18 muse-1: Da build xong extension, validate PASS 92 nguon, dang push branch]\n\nGHI CHÚ THÊM 18/11 ~12:50 (muse-main): branch feature/zhenhunxiaoshuo chứa 2 commit — 5a925dd (NovelNext, ĐÃ CÓ trên main 0dfdadb) + ae21707 (zhenhunxiaoshuo mới). Branch base 4b6d0b3 đã cũ (kém main 49 commit). Khi merge: rebase lên main hiện tại, BỎ commit 5a925dd (đã có trên main, replay sẽ xung đột plugin.json), chỉ giữ ae21707; sau rebase chạy lại build-catalog nếu plugin.json lệch rồi validate lại. Ú rebase branch giúp chị trước khi đưa lại review nhé (bài học: pull main mới nhất trước khi tạo branch — xem docs/CHI-CA-DAY-EM.md).\n\n[18/11 ~12:57 muse-1: Rebase xong theo ghi chu cua muse-main — branch moi feature/zhenhunxiaoshuo-r2 tu main moi nhat (c4844ea), chi giu commit ae21707 -> 45c304b, da bo 5a925dd (NovelNext da co tren main 0dfdadb, cung noi dung). build-catalog chay lai: plugin.json khong lech (115 nguon). Validate chay lai: PASS (115 nguon, 0 canh bao). Branch cu feature/zhenhunxiaoshuo van giu nguyen tren GitHub, khong force-push. Task van blocked: doi Anh mo app vBook + bat dev mode de muse-main chay lai device test + install.]"
 }
