@@ -7,19 +7,19 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "high",
-  "status": "doing",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-18T10:52:57+07:00",
   "claimed_at": "2026-11-18T10:55:38+07:00",
   "claim_expires_at": "2026-11-18T13:18:03+07:00",
   "result": {
-    "branch": "",
+    "branch": "feature/zhenhunxiaoshuo",
     "test": {
-      "validate": "",
+      "validate": "PASS",
       "device_test": "",
-      "install": ""
+      "install": "200"
     },
-    "notes": ""
+    "notes": "Extension Zhenhunxiaoshuo xong: detail/toc/chap + home/genre/book. 镇魂 117 chuong (muc luc /lunhuigui/), 魔道祖师 127 chuong; ch.1 doc du, khong login/VIP (doi chieu mo dau + ket chuong). Site UTF-8 (khong GBK), khong co anh bia. Bo search.js (site khong co tim kiem that: chaxun.html chi doan slug, ?s= tra trang chu) va page.js (muc luc khong phan trang). Validate PASS (92 nguon, 0 canh bao). Install 200: plugin.zip 46338 B tren branch. Device test de trong cho muse-main test tren dien thoai anh (theo agents.yaml, muse-1 khong co device-test)."
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
