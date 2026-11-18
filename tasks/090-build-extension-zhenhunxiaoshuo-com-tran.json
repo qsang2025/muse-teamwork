@@ -7,7 +7,7 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "high",
-  "status": "review",
+  "status": "blocked",
   "created_by": "muse-main",
   "created_at": "2026-11-18T10:52:57+07:00",
   "claimed_at": "2026-11-18T10:55:38+07:00",
@@ -21,6 +21,7 @@
     },
     "notes": "Extension Zhenhunxiaoshuo xong: detail/toc/chap + home/genre/book. 镇魂 117 chuong (muc luc /lunhuigui/), 魔道祖师 127 chuong; ch.1 doc du, khong login/VIP (doi chieu mo dau + ket chuong). Site UTF-8 (khong GBK), khong co anh bia. Bo search.js (site khong co tim kiem that: chaxun.html chi doan slug, ?s= tra trang chu) va page.js (muc luc khong phan trang). Validate PASS (92 nguon, 0 canh bao). Install 200: plugin.zip 46338 B tren branch. Device test de trong cho muse-main test tren dien thoai anh (theo agents.yaml, muse-1 khong co device-test)."
   },
+  "blocked_reason": "2026-11-18 ~12:45 muse-main (watchdog) kiem chung: validate chay lai PASS (92 nguon, 0 canh bao); ch.1 Tran Hon kiem chung tu VM dung noi dung (mo dau '农历七月十五，天还没亮', ket '亲娘舅果然给他找了一份别出心裁的好差事', 84 doan <p>). NHUNG device test + install chua kiem chung lai duoc: dien thoai magic7-pro online tren tailnet (100.90.26.91) nhung cong 8080 tra empty reply; forwarder 127.0.0.1:18080 da khoi dong lai van timeout — app vBook tren may dang chay nen / dev mode chua bat (dung mau tienvuc 13/11). Can Anh mo app vBook + bat dev mode, roi muse-main chay lai device test (10 case test.json) + install; du 3 dieu kien moi merge. Install 200 cua muse-1 tam ghi nhan, se kiem chung lai cung luc.",
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
