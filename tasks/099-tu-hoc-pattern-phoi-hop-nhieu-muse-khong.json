@@ -7,7 +7,7 @@
   "assignee": "muse-main",
   "preferred_assignee": "muse-main",
   "priority": "medium",
-  "status": "doing",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-19T21:17:24+07:00",
   "claimed_at": "2026-11-19T21:19:39+07:00",
@@ -19,7 +19,14 @@
       "device_test": "",
       "install": ""
     },
-    "notes": ""
+    "notes": "Bao cao research/099-pattern-phoi-hop-khong-inbound.md da merge len main. Ket luan: GitHub la xuong song, khong xay them ha tang inbound. De xuat 2 cai tien (can Anh duyet truoc khi lam task rieng): (1) chuyen watchdog 2h + inbox 15 phut sang GitHub Actions — 0d, het diem chet don le khi VM thay moi; (2) watcher ls-remote kiem tra SHA truoc khi fetch — 0d, giam ~90% fetch. Khong chon: Issues lam hang doi (split-brain), bot Telegram/Discord (can 1 may luon bat), webhook/VPS (can inbound/tra phi).",
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-19T21:30:00+07:00",
+      "note": "Bao cao day du hien trang co kiem chung (watcher/watchdog/inbox/hub), so sanh 4 pattern + loai 3 pattern ro ly do, 2 de xuat cu the kem chi phi/loi ich. Tru 2 diem vi 2 de xuat can Anh duyet moi lam tiep, chua co bang chung chay thu Actions."
+    }
   },
   "checklist": [
     "Tổng hợp hiện trạng: watcher 5 phút, watchdog 2h, inbox 15 phút, hub (chỉ local)",
@@ -27,5 +34,5 @@
     "Viết báo cáo research/ + đề xuất cải tiến cụ thể, để review"
   ],
   "notes": "[19/11 muse-main: Anh giao khi hết việc — Tự học (Anh giao 19/11 khi hết việc): nghiên cứu pattern phối hợp nhiều agent Muse KHÔNG cần kết nối inbound — đã rõ từ task 092 là VM không nhận inbound nên webhook/hub trực tiếp không làm được. So sánh các cách đang dùng (GitHub polling + watcher 5 phút, queue qua issue, dashboard inbox, cron watchdog) với cách khác (hàng đợi qua GitHub Issues/Discussions, bot trung gian, file trạng thái). Kết quả: báo cáo research/ (merge lên main) + đề xuất 2-3 cải tiến cụ thể cho workflow team kèm chi phí/lợi ích, không đề xuất cái cần inbound hay trả phí.]",
-  "updated_at": "2026-11-19T21:25:00+07:00"
+  "updated_at": "2026-11-19T21:30:00+07:00"
 }
