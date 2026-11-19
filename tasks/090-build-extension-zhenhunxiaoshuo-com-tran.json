@@ -1,27 +1,7 @@
 {
-  "id": "090-build-extension-zhenhunxiaoshuo-com-tran",
-  "title": "Build extension zhenhunxiaoshuo.com (Trấn Hồn)",
-  "type": "vbook-extension",
-  "repo": "Qsang_vbook",
-  "branch": "",
   "assignee": "muse-1",
-  "preferred_assignee": "muse-1",
-  "priority": "high",
-  "status": "blocked",
-  "created_by": "muse-main",
-  "created_at": "2026-11-18T10:52:57+07:00",
-  "claimed_at": "2026-11-18T10:55:38+07:00",
-  "claim_expires_at": "2026-11-18T13:18:03+07:00",
-  "result": {
-    "branch": "feature/zhenhunxiaoshuo-r2",
-    "test": {
-      "validate": "PASS (115 nguon, 0 canh bao — chay lai sau rebase 18/11 ~12:57)",
-      "device_test": "",
-      "install": "200"
-    },
-    "notes": "Extension Zhenhunxiaoshuo xong: detail/toc/chap + home/genre/book. 镇魂 117 chuong (muc luc /lunhuigui/), 魔道祖师 127 chuong; ch.1 doc du, khong login/VIP (doi chieu mo dau + ket chuong). Site UTF-8 (khong GBK), khong co anh bia. Bo search.js (site khong co tim kiem that: chaxun.html chi doan slug, ?s= tra trang chu) va page.js (muc luc khong phan trang). Validate PASS (92 nguon, 0 canh bao). Install 200: plugin.zip 46338 B tren branch. Device test de trong cho muse-main test tren dien thoai anh (theo agents.yaml, muse-1 khong co device-test)."
-  },
-  "blocked_reason": "2026-11-18 ~12:45 muse-main (watchdog) kiem chung: validate chay lai PASS (92 nguon, 0 canh bao); ch.1 Tran Hon kiem chung tu VM dung noi dung (mo dau '农历七月十五，天还没亮', ket '亲娘舅果然给他找了一份别出心裁的好差事', 84 doan <p>). NHUNG device test + install chua kiem chung lai duoc: dien thoai magic7-pro online tren tailnet (100.90.26.91) nhung cong 8080 tra empty reply; forwarder 127.0.0.1:18080 da khoi dong lai van timeout — app vBook tren may dang chay nen / dev mode chua bat (dung mau tienvuc 13/11). Can Anh mo app vBook + bat dev mode, roi muse-main chay lai device test (10 case test.json) + install; du 3 dieu kien moi merge. Install 200 cua muse-1 tam ghi nhan, se kiem chung lai cung luc.",
+  "blocked_reason": "",
+  "branch": "",
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
@@ -29,5 +9,32 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
-  "notes": "Rescan #14 (task 089, FORK-SCAN-2026-11-18.md trong repo Qsang_vbook): zhenhunxiaoshuo.com — chinese_novel, catalog dat-bi/ext-vbook. Homepage HTTP 200. Ch.1 kiểm chứng tay: https://www.zhenhunxiaoshuo.com/1.html — 镇魂 (Trấn Hồn), ch.1 \"他……他他他他还没有脚！\", ~4.927 ký tự, đầy đủ, không login/VIP. ƯU TIÊN CAO NHẤT trong 3 host mới. Đọc docs/CHI-CA-DAY-EM.md + shared/skills/vbook-extension-building/SKILL.md TRƯỚC khi build. Quy tắc nhà: chỉ free content, validate PASS + device test code 0 + install 200, KHÔNG tự merge — muse-main kiểm tra + merge. Branch gợi ý: feature/zhenhunxiaoshuo. [11:18 muse-1: Da build xong extension, validate PASS 92 nguon, dang push branch]\n\nGHI CHÚ THÊM 18/11 ~12:50 (muse-main): branch feature/zhenhunxiaoshuo chứa 2 commit — 5a925dd (NovelNext, ĐÃ CÓ trên main 0dfdadb) + ae21707 (zhenhunxiaoshuo mới). Branch base 4b6d0b3 đã cũ (kém main 49 commit). Khi merge: rebase lên main hiện tại, BỎ commit 5a925dd (đã có trên main, replay sẽ xung đột plugin.json), chỉ giữ ae21707; sau rebase chạy lại build-catalog nếu plugin.json lệch rồi validate lại. Ú rebase branch giúp chị trước khi đưa lại review nhé (bài học: pull main mới nhất trước khi tạo branch — xem docs/CHI-CA-DAY-EM.md).\n\n[18/11 ~12:57 muse-1: Rebase xong theo ghi chu cua muse-main — branch moi feature/zhenhunxiaoshuo-r2 tu main moi nhat (c4844ea), chi giu commit ae21707 -> 45c304b, da bo 5a925dd (NovelNext da co tren main 0dfdadb, cung noi dung). build-catalog chay lai: plugin.json khong lech (115 nguon). Validate chay lai: PASS (115 nguon, 0 canh bao). Branch cu feature/zhenhunxiaoshuo van giu nguyen tren GitHub, khong force-push. Task van blocked: doi Anh mo app vBook + bat dev mode de muse-main chay lai device test + install.]"
+  "claim_expires_at": "2026-11-18T13:18:03+07:00",
+  "claimed_at": "2026-11-18T10:55:38+07:00",
+  "created_at": "2026-11-18T10:52:57+07:00",
+  "created_by": "muse-main",
+  "id": "090-build-extension-zhenhunxiaoshuo-com-tran",
+  "notes": "Rescan #14 (task 089, FORK-SCAN-2026-11-18.md trong repo Qsang_vbook): zhenhunxiaoshuo.com — chinese_novel, catalog dat-bi/ext-vbook. Homepage HTTP 200. Ch.1 kiểm chứng tay: https://www.zhenhunxiaoshuo.com/1.html — 镇魂 (Trấn Hồn), ch.1 \"他……他他他他还没有脚！\", ~4.927 ký tự, đầy đủ, không login/VIP. ƯU TIÊN CAO NHẤT trong 3 host mới. Đọc docs/CHI-CA-DAY-EM.md + shared/skills/vbook-extension-building/SKILL.md TRƯỚC khi build. Quy tắc nhà: chỉ free content, validate PASS + device test code 0 + install 200, KHÔNG tự merge — muse-main kiểm tra + merge. Branch gợi ý: feature/zhenhunxiaoshuo. [11:18 muse-1: Da build xong extension, validate PASS 92 nguon, dang push branch]\n\nGHI CHÚ THÊM 18/11 ~12:50 (muse-main): branch feature/zhenhunxiaoshuo chứa 2 commit — 5a925dd (NovelNext, ĐÃ CÓ trên main 0dfdadb) + ae21707 (zhenhunxiaoshuo mới). Branch base 4b6d0b3 đã cũ (kém main 49 commit). Khi merge: rebase lên main hiện tại, BỎ commit 5a925dd (đã có trên main, replay sẽ xung đột plugin.json), chỉ giữ ae21707; sau rebase chạy lại build-catalog nếu plugin.json lệch rồi validate lại. Ú rebase branch giúp chị trước khi đưa lại review nhé (bài học: pull main mới nhất trước khi tạo branch — xem docs/CHI-CA-DAY-EM.md).\n\n[18/11 ~12:57 muse-1: Rebase xong theo ghi chu cua muse-main — branch moi feature/zhenhunxiaoshuo-r2 tu main moi nhat (c4844ea), chi giu commit ae21707 -> 45c304b, da bo 5a925dd (NovelNext da co tren main 0dfdadb, cung noi dung). build-catalog chay lai: plugin.json khong lech (115 nguon). Validate chay lai: PASS (115 nguon, 0 canh bao). Branch cu feature/zhenhunxiaoshuo van giu nguyen tren GitHub, khong force-push. Task van blocked: doi Anh mo app vBook + bat dev mode de muse-main chay lai device test + install.]",
+  "preferred_assignee": "muse-1",
+  "priority": "high",
+  "repo": "Qsang_vbook",
+  "result": {
+    "branch": "feature/zhenhunxiaoshuo-r2",
+    "notes": "Extension Zhenhunxiaoshuo xong: detail/toc/chap + home/genre/book. 镇魂 117 chuong (muc luc /lunhuigui/), 魔道祖师 127 chuong; ch.1 doc du, khong login/VIP (doi chieu mo dau + ket chuong). Site UTF-8 (khong GBK), khong co anh bia. Bo search.js (site khong co tim kiem that: chaxun.html chi doan slug, ?s= tra trang chu) va page.js (muc luc khong phan trang). Validate PASS (92 nguon, 0 canh bao). Install 200: plugin.zip 46338 B tren branch. Device test de trong cho muse-main test tren dien thoai anh (theo agents.yaml, muse-1 khong co device-test).\n\n[19/11 ~14:47 muse-main: MERGED len main 09a4379 — registry 115 nguon. 3 dieu kien du: validate PASS (115, 0 canh bao), device test 10/10 code 0, install 200. Rebase r2 len main 9c19785 truoc merge (base cu c4844ea); merge bang push FF branch:main vi main dang checkout o worktree quykhu (khong checkout duoc o clone chinh); worktree main da FF len 09a4379 sau merge.]",
+    "review": {
+      "at": "2026-11-19T14:47:10+07:00",
+      "by": "muse-main",
+      "note": "Dat (8/10). Build tot: 10/10 case device test, validate PASS, install 200. Tru 2 diem: review phat hien loi that — chap.js lay tieu de chuong tu h1.focusbox-title da khong con tren site (data2 rong), muse-main da sua sang h1.article-title + fallback, bump version 1->2, rebuild zip, test lai 10/10 moi merge. Bai hoc cho muse-1: kiem chung selector tren trang that truoc khi viet test.json (xem docs/CHI-CA-DAY-EM.md).",
+      "rounds": 1,
+      "score": 8
+    },
+    "test": {
+      "device_test": "10/10 PASS (code 0 — 2026-11-19 ~14:42, chay lai sau fix chap.js)",
+      "install": "200 (2026-11-19 ~14:43, HONOR PTP-AN10)",
+      "validate": "PASS (115 nguon, 115 registry, 0 canh bao — 2026-11-19 ~14:45, sau fix chap.js + rebuild zip)"
+    }
+  },
+  "status": "done",
+  "title": "Build extension zhenhunxiaoshuo.com (Trấn Hồn)",
+  "type": "vbook-extension"
 }
