@@ -1,0 +1,32 @@
+{
+  "id": "111-nghien-cuu-port-loai-extension-forum-tu-",
+  "title": "Nghiên cứu port loại extension forum từ Darkrai9x về Qsang_vbook",
+  "type": "research",
+  "repo": "Qsang_vbook",
+  "branch": "",
+  "assignee": "",
+  "preferred_assignee": "muse-2",
+  "priority": "medium",
+  "status": "open",
+  "created_by": "muse-main",
+  "created_at": "2026-11-20T00:01:39+07:00",
+  "claimed_at": "",
+  "claim_expires_at": "",
+  "result": {
+    "branch": "",
+    "test": {
+      "validate": "",
+      "device_test": "",
+      "install": ""
+    },
+    "notes": ""
+  },
+  "checklist": [
+    "Đọc template + API doc của loại forum bên upstream (commit 5df84a4 + 211fc62)",
+    "Đối chiếu Qsang_vbook: skill/templates/API/CLI/validate/build-catalog/registry — liệt kê chỗ phải đổi",
+    "Gợi ý 2–3 site free phù hợp, kiểm chứng live 200",
+    "Ghi rõ cách kiểm chứng app điện thoại có hỗ trợ loại này (không tự test)",
+    "Báo cáo research + kết luận NÊN/KHÔNG NÊN/ĐỂ SAU + task sang review"
+  ],
+  "notes": "Anh DUYỆT 20/11 00:01 (chat Vbook): giao Ú + Vịt nghiên cứu xem 2 loại extension mới của Darkrai9x (news + forum) có đáng port về Qsang_vbook không. CHỈ NGHIÊN CỨU — KHÔNG sửa Qsang_vbook, KHÔNG merge.\n\nNGUỒN ĐỌC (upstream đã đồng bộ):\n- Fork nhà: https://github.com/qsang2025/vbook-extensions_Darkrai9x (master 211fc62, đã sync với Darkrai9x) — clone về máy mình mà đọc, hoặc đọc qua GitHub. Bản local trên máy muse-main: ~/workspace/vbook/vbook-extensions (chỉ tham khảo, không sửa).\n- Trọng tâm: .agents/skills/vbook-extensions/templates/forum/ + extension-api.md mục \"News & forum extensions\" + diff 2 commit 5df84a4 (\"Sync extension API: news and forum types...\") và 211fc62 (\"Show forum page numbers, explore tabs...\").\n- LƯU Ý: upstream CHƯA CÓ extension mẫu nào thuộc 2 loại này (không plugin.json nào type news/forum) — chỉ có template + hợp đồng API. Nghiên cứu dựa trên template + API doc, không có extension thật để đối chiếu.\n\nVIỆC LÀM:\n1. Đọc kỹ template + hợp đồng API của loại này: script nào bắt buộc (news: article + ít nhất 1 list source; forum: posts + ít nhất 1 list source), không có detail/toc/chap, section types mới (news_hero/news_list/thread_list/board_list), item mở thẳng reader.\n2. Đối chiếu với Qsang_vbook: skill + templates + extension-api.md (2 bản copy), scripts/cli.js, validate, build-catalog, registry plugin.json — liệt kê CHÍNH XÁC những chỗ phải đổi/thêm để hỗ trợ loại này (kể cả chỗ nào đã hỗ trợ sẵn).\n3. Nhu cầu: gợi ý 2–3 site free phù hợp loại này (kiểm chứng live site trả 200), có đáng làm không — Anh đọc tin/diễn đàn nào không, hay chỉ là \"có thì tốt\".\n4. Rủi ro: app vBook trên điện thoại Anh có hỗ trợ loại này không — GHI RÕ cách kiểm chứng (cài probe template tối thiểu qua dev mode), KHÔNG tự cài/test trên máy Anh trong task này.\n5. Kết luận: NÊN PORT / KHÔNG NÊN / ĐỂ SAU + các bước cụ thể nếu port (kể cả ước lượng độ lớn).\n\nBÀN GIAO: research/<id>-forum-port.md + task sang review. Không đụng Qsang_vbook."
+}
