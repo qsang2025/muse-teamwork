@@ -1,33 +1,33 @@
 {
-  "id": "096-cai-watcher-5-phut-tren-may-muse-2",
-  "title": "Cài watcher 5 phút trên máy muse-2",
-  "type": "infra",
-  "repo": "muse-teamwork",
+ "id": "096-cai-watcher-5-phut-tren-may-muse-2",
+ "title": "Cài watcher 5 phút trên máy muse-2",
+ "type": "infra",
+ "repo": "muse-teamwork",
+ "branch": "",
+ "assignee": "muse-2",
+ "preferred_assignee": "muse-2",
+ "priority": "medium",
+ "status": "review",
+ "created_by": "muse-main",
+ "created_at": "2026-11-19T19:19:14+07:00",
+ "claimed_at": "2026-11-19T19:22:52+07:00",
+ "claim_expires_at": "2026-11-19T21:22:52+07:00",
+ "result": {
   "branch": "",
-  "assignee": "muse-2",
-  "preferred_assignee": "muse-2",
-  "priority": "medium",
-  "status": "review",
-  "created_by": "muse-main",
-  "created_at": "2026-11-19T19:19:14+07:00",
-  "claimed_at": "2026-11-19T19:22:52+07:00",
-  "claim_expires_at": "2026-11-19T21:22:52+07:00",
-  "result": {
-    "branch": "",
-    "test": {
-      "validate": "",
-      "device_test": "",
-      "install": ""
-    },
-    "notes": "Watcher 5 phut da cai tren may muse-2: script watch-tasks.sh da chep ve hook cua may. Dry-run silent (khoi tao baseline, 26 task). Live-run lan 1 silent (khoi tao baseline), lan 2 silent (khong co thay doi lien quan). Poll 300s, cam quet 1 phut. CON BƯỚC ENABLE: worker chay theo lich khong co cong cu hooks.enable / hooks.dry_run (khong co CLI hay schema definition trong VM) nen chua bat duoc hook chay dinh ky 5 phut — can chay enable tu chat chinh tren may nay roi xac nhan log. Ghi chu: sau moi lan VM bi thay moi thi cai lai hook (nhu service hub)."
+  "test": {
+   "validate": "",
+   "device_test": "",
+   "install": ""
   },
-  "checklist": [
-    "Pull repo, doc scripts/watch-tasks.sh (header ghi day du cach dung + luat)",
-    "Chep script ve hook cua may minh, tao hook quet moi 5 phut (poll 300s)",
-    "Dry-run: lan dau silent (khoi tao baseline), lan sau silent khi khong co thay doi",
-    "Enable hook, xac nhan dang chay (logs)",
-    "Ghi chu: sau moi lan VM bi thay moi thi cai lai hook (nhu service hub)"
-  ],
-  "notes": "[19/11 muse-main: Anh quyet doi sang watcher 5 phut thay cho tu kiem tra theo gio. Muc dich: rut luc nhan viec tu ~30 phut xuong ~2-3 phut. Script dung chung scripts/watch-tasks.sh trong repo; chi mo phien lam viec khi script bao co thay doi lien quan den minh. CAM quet moi 1 phut. Webhook khong lam duoc vi VM khong nhan inbound. muse-main da cai xong tren may minh (hook 5 phut, dry-run + live-run silent, da enable).]\n[19/11 19:24 muse-2: da cai script watch-tasks.sh ve hook may minh; dry-run silent (baseline, 26 task); live-run x2 silent. Con buoc enable hook 5 phut — worker khong co cong cu hooks.enable, can bat tu chat chinh tren may nay.]",
-  "updated_at": "2026-11-19T19:24:59+07:00"
+  "notes": "Watcher 5 phut da cai tren may muse-2: script watch-tasks.sh da chep ve hook cua may. Dry-run silent (khoi tao baseline, 26 task). Live-run lan 1 silent (khoi tao baseline), lan 2 silent (khong co thay doi lien quan). Poll 300s, cam quet 1 phut. ĐÃ ENABLE 19:27 từ chat chính: hook muse-teamwork-watch-muse-2, poll 300s, dry-run + live-run silent, log xác nhận, đang polling. Ghi chu: sau moi lan VM bi thay moi thi cai lai hook (nhu service hub). Hook id: muse-teamwork-watch-muse-2."
+ },
+ "checklist": [
+  "Pull repo, doc scripts/watch-tasks.sh (header ghi day du cach dung + luat)",
+  "Chep script ve hook cua may minh, tao hook quet moi 5 phut (poll 300s)",
+  "Dry-run: lan dau silent (khoi tao baseline), lan sau silent khi khong co thay doi",
+  "Enable hook, xac nhan dang chay (logs)",
+  "Ghi chu: sau moi lan VM bi thay moi thi cai lai hook (nhu service hub)"
+ ],
+ "notes": "[19/11 muse-main: Anh quyet doi sang watcher 5 phut thay cho tu kiem tra theo gio. Muc dich: rut luc nhan viec tu ~30 phut xuong ~2-3 phut. Script dung chung scripts/watch-tasks.sh trong repo; chi mo phien lam viec khi script bao co thay doi lien quan den minh. CAM quet moi 1 phut. Webhook khong lam duoc vi VM khong nhan inbound. muse-main da cai xong tren may minh (hook 5 phut, dry-run + live-run silent, da enable).]\n[19/11 19:24 muse-2: da cai script watch-tasks.sh ve hook may minh; dry-run silent (baseline, 26 task); live-run x2 silent. Con buoc enable hook 5 phut — worker khong co cong cu hooks.enable, can bat tu chat chinh tren may nay.]\n[19/11 19:27 muse-2: ĐÃ ENABLE hook 5 phút từ chat chính — hook id muse-teamwork-watch-muse-2, poll 300s, wrapper ~/hooks/scripts/watch-tasks-muse-2.sh (gọi watch-tasks.sh muse-2), dry-run silent + live-run silent (26 task, log xác nhận), hook đang polling. Task hoàn tất phía muse-2.]",
+ "updated_at": "2026-11-19T19:24:59+07:00"
 }
