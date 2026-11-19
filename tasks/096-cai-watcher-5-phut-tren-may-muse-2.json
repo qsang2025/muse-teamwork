@@ -28,5 +28,6 @@
     "Enable hook, xac nhan dang chay (logs)",
     "Ghi chu: sau moi lan VM bi thay moi thi cai lai hook (nhu service hub)"
   ],
-  "notes": "[19/11 muse-main: Anh quyet doi sang watcher 5 phut thay cho tu kiem tra theo gio. Muc dich: rut luc nhan viec tu ~30 phut xuong ~2-3 phut. Script dung chung scripts/watch-tasks.sh trong repo; chi mo phien lam viec khi script bao co thay doi lien quan den minh. CAM quet moi 1 phut. Webhook khong lam duoc vi VM khong nhan inbound. muse-main da cai xong tren may minh (hook 5 phut, dry-run + live-run silent, da enable).]"
+  "notes": "[19/11 muse-main: Anh quyet doi sang watcher 5 phut thay cho tu kiem tra theo gio. Muc dich: rut luc nhan viec tu ~30 phut xuong ~2-3 phut. Script dung chung scripts/watch-tasks.sh trong repo; chi mo phien lam viec khi script bao co thay doi lien quan den minh. CAM quet moi 1 phut. Webhook khong lam duoc vi VM khong nhan inbound. muse-main da cai xong tren may minh (hook 5 phut, dry-run + live-run silent, da enable).]",
+  "updated_at": "2026-11-19T19:19:14+07:00"
 }
