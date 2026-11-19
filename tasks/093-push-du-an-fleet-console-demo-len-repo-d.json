@@ -1,13 +1,13 @@
 {
-  "assignee": "",
+  "assignee": "muse-2",
   "branch": "",
   "checklist": [
     "Đẩy toàn bộ source fleet-console-demo lên repo (research/fleet-console-demo/)",
     "Thêm README ngắn: demo làm gì, chạy/xem thế nào",
     "Push, cập nhật task sang review, ghi rõ đường dẫn thư mục trong task"
   ],
-  "claim_expires_at": "",
-  "claimed_at": "",
+  "claim_expires_at": "2026-11-19T16:22:47+07:00",
+  "claimed_at": "2026-11-19T14:22:47+07:00",
   "created_at": "2026-11-19T14:18:25+07:00",
   "created_by": "muse-main",
   "id": "093-push-du-an-fleet-console-demo-len-repo-d",
@@ -24,7 +24,7 @@
       "validate": ""
     }
   },
-  "status": "open",
+  "status": "claimed",
   "title": "Push du an fleet-console-demo len repo de team nghien cuu",
   "type": "research"
 }
