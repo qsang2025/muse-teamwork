@@ -13,4 +13,4 @@
 - Đã đóng (cancelled): 16 mục (#14, #16, #22, #24, #30, #60, #61, #65, #67, #71, #74, #75, #76, #81, #108, #111) — không mở lại trừ khi Anh nói rõ
 - Chờ Anh quyết: #10 shuhaige (Anh đã quyết để sau, 14/11)
 - Sẵn sàng giao build: #69 wfxs (đã xác minh OK trên điện thoại 19/11 21:22, hết 403)
-- Lần kiểm chứng spec gần nhất: 19/11 21:41 — KHÔNG lệch (verify-spec.sh; chỉ còn WARN: 087 rebase, ref 093/098)
+- Lần kiểm chứng spec gần nhất: 19/11 21:48 — KHÔNG lệch (verify-spec.sh; chỉ còn WARN: 087 rebase, ref 093/098)
