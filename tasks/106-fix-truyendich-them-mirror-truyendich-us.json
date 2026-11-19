@@ -15,17 +15,17 @@
   "result": {
     "branch": "feature/106-fix-truyendich-them-mirror-truyendich-us",
     "test": {
-      "validate": "PASS (119 nguon, 119 registry, 0 canh bao — 2026-11-19 ~23:15, muse-1)",
-      "device_test": "CHUA chay — may muse-1 khong co vBook dev server (khong co servers.json)",
+      "validate": "PASS (119 nguon, 119 registry, 0 canh bao — 2026-11-19 ~23:20, muse-main chay lai tren branch feature/106)",
+      "device_test": "CHUA chay — dien thoai Anh khong tra loi: forwarder 127.0.0.1:18080 timeout, tailnet 100.90.26.91:8080 probe 000, IP public 166.32.143.61:8080 probe 000 (23:18-23:25). Can Anh mo app vBook + bat dev mode.",
       "install": "CHUA chay — doi device test"
     },
     "notes": "Fix TruyenDich.AI v2: them mirror https://truyendich.us vao DOMAIN values + regexp (space|store|ai|fit|us), giu mac dinh .space, bump version 1->2, rebuild zip 36582 bytes, build-catalog cap nhat registry. Kiem chung tu VM 19/11: truyendich.us trang chu/detail/chuong-1 (Tu Bao Tien Bon) cung backend TruyenDichAI, chuong doc day du khop fixture .space. Validate PASS (119 nguon, 0 canh bao). Device test + install CHUA chay (may muse-1 khong co vBook dev server/servers.json) — nho muse-main chay tren dien thoai Anh roi merge. Branch feature/106-fix-truyendich-them-mirror-truyendich-us commit 1fc2059.",
     "review": {
-      "score": "",
-      "rounds": 0,
-      "by": "",
-      "at": "",
-      "note": ""
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-19T23:26:00+07:00",
+      "note": "Fix gon, dung pham vi: them mirror .us vao DOMAIN + regexp, bump v1->v2, rebuild zip, registry cap nhat. Validate PASS chay lai OK; mirror .us kiem chung live tu VM (home + chuong-1 deu 200). Tru 2 diem vi device test + install chua chay (may muse-1 khong co dev server; dien thoai Anh hien khong tra loi) nen chua du 3 dieu kien merge."
     }
   },
   "checklist": [
@@ -35,6 +35,6 @@
     "Validate PASS + device test (muse-main chạy trên điện thoại Anh) + install 200",
     "Push branch, cập nhật task sang review"
   ],
-  "notes": "Mirror mới từ rescan #15 (task 097, FORK-SCAN-2026-11-19.md §4): truyendich.us homepage 200, cùng title/backend TruyenDichAI, cùng pattern /doc-truyen/<slug>/chuong-1 như .space (fork tuannq98hn đã chuyển domain sang .us 18/11 + xử lý rate-limit download). Extension hiện có: novel/truyendich, source truyendich.space. Việc: thêm https://truyendich.us vào DOMAIN values + regexp (space|store|ai|fit|us), test lại, bump version + rebuild zip. Không build mới. [23:11 muse-1: Da kiem chung truyendich.us live: trang chu/detail/chuong-1 cung backend TruyenDichAI, doc day du. Dang tao branch va sua plugin.json.]",
-  "updated_at": "2026-11-19T23:16:06+07:00"
+  "notes": "Mirror mới từ rescan #15 (task 097, FORK-SCAN-2026-11-19.md §4): truyendich.us homepage 200, cùng title/backend TruyenDichAI, cùng pattern /doc-truyen/<slug>/chuong-1 như .space (fork tuannq98hn đã chuyển domain sang .us 18/11 + xử lý rate-limit download). Extension hiện có: novel/truyendich, source truyendich.space. Việc: thêm https://truyendich.us vào DOMAIN values + regexp (space|store|ai|fit|us), test lại, bump version + rebuild zip. Không build mới. [23:11 muse-1: Da kiem chung truyendich.us live: trang chu/detail/chuong-1 cung backend TruyenDichAI, doc day du. Dang tao branch va sua plugin.json.]\n[19/11 23:26 muse-main: Review vong 1, 8/10. Validate chay lai PASS (119 nguon, 0 canh bao); .us live 200 (home + chuong-1). Device test + install CHUA chay — dien thoai khong tra loi ca 2 dau (tailnet 100.90.26.91:8080 + public 166.32.143.61:8080). Can Anh mo vBook + bat dev mode roi bao lai de chay device test 13 case + install, moi du dieu kien merge.]",
+  "updated_at": "2026-11-19T23:26:00+07:00"
 }
