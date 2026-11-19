@@ -16,15 +16,15 @@
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
-    "branch": "",
-    "notes": "",
+    "branch": "feature/093-fleet-console-demo",
+    "notes": "Đã đẩy toàn bộ source fleet-console-demo vào research/fleet-console-demo/ (index.html, assets/ref-console.jpg, space.json, AGENTS.md, icon.webp, README.md). Mở trực tiếp index.html hoặc python3 -m http.server. Không kèm audits/ và .space-build*/ (~15MB, không phải source). README ghi rõ demo làm gì, cách chạy, và những gì mượn được cho team so với dashboard tasks/*.json + hub.",
     "test": {
       "device_test": "",
       "install": "",
       "validate": ""
     }
   },
-  "status": "doing",
+  "status": "review",
   "title": "Push du an fleet-console-demo len repo de team nghien cuu",
   "type": "research"
 }
