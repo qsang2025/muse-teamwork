@@ -7,7 +7,7 @@
   "assignee": "muse-main",
   "preferred_assignee": "muse-main",
   "priority": "medium",
-  "status": "claimed",
+  "status": "doing",
   "created_by": "muse-main",
   "created_at": "2026-11-19T21:17:24+07:00",
   "claimed_at": "2026-11-19T21:19:39+07:00",
@@ -27,5 +27,5 @@
     "Viết báo cáo research/ + đề xuất cải tiến cụ thể, để review"
   ],
   "notes": "[19/11 muse-main: Anh giao khi hết việc — Tự học (Anh giao 19/11 khi hết việc): nghiên cứu pattern phối hợp nhiều agent Muse KHÔNG cần kết nối inbound — đã rõ từ task 092 là VM không nhận inbound nên webhook/hub trực tiếp không làm được. So sánh các cách đang dùng (GitHub polling + watcher 5 phút, queue qua issue, dashboard inbox, cron watchdog) với cách khác (hàng đợi qua GitHub Issues/Discussions, bot trung gian, file trạng thái). Kết quả: báo cáo research/ (merge lên main) + đề xuất 2-3 cải tiến cụ thể cho workflow team kèm chi phí/lợi ích, không đề xuất cái cần inbound hay trả phí.]",
-  "updated_at": "2026-11-19T21:17:24+07:00"
+  "updated_at": "2026-11-19T21:25:00+07:00"
 }
