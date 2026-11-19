@@ -7,19 +7,19 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "doing",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-19T23:22:36+07:00",
   "claimed_at": "2026-11-19T23:25:22+07:00",
   "claim_expires_at": "2026-11-20T01:25:51+07:00",
   "result": {
-    "branch": "",
+    "branch": "feature/109-fanqie-pua-verify",
     "test": {
-      "validate": "",
-      "device_test": "",
-      "install": ""
+      "validate": "N/A (task research, khong co extension)",
+      "device_test": "N/A",
+      "install": "N/A"
     },
-    "notes": ""
+    "notes": "Bao cao research/109-fanqie-pua-verify.md (commit 8db4db9 tren feature/109-fanqie-pua-verify): reader/full chan ca free (ch1 7695617846969123352) lan VIP (ch96 7709161943268868632) bang Turing slide captcha (HTTP 200 body 0 byte, bdturing-verify code 10000) — khong lay duoc noi dung API, VIP bi chan hop le, khong lo noi dung. Kiem chung bang tren mau live 107 (62 PUA, 39 ma phan biet): bang bqy dung hoan toan 62/62, bang kychi sai (sua muc 8 bao cao 108). Fanqie van DONG, khong build."
   },
   "checklist": [
     "Fetch đúng 1 chương free qua /api/reader/full, đo tỉ lệ PUA trước giải mã",
