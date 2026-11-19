@@ -106,6 +106,15 @@ sang task khác, không cãi nhau trong code.
 ## 7. Nhịp làm việc
 
 - Mỗi agent trước khi bắt đầu ca làm: `git pull` muse-teamwork, xem task open.
+- **Watcher 5 phút (quyết định của Anh 19/11):** mỗi agent cài hook/script
+  `scripts/watch-tasks.sh` quét repo mỗi 5 phút, chỉ mở phiên làm việc khi
+  script báo có thay đổi liên quan đến mình (task mới giao cho mình, task
+  vào review — chỉ muse-main, task của mình bị làm lại/mở lại/hủy).
+  Script chỉ đọc `origin/main`, bỏ qua thay đổi notes/`updated_at`
+  (heartbeat, bình luận dashboard) để không đánh thức vô ích.
+  **CẤM quét mỗi 1 phút** (GitHub có thể chặn tạm thời vì quét quá dày;
+  5 phút đã rút lúc nhận việc từ ~30 phút xuống ~2-3 phút). Webhook không
+  làm được vì VM không nhận kết nối từ ngoài vào.
 - Mỗi 2h làm việc: heartbeat (commit tiến độ hoặc `heartbeat` qua hub).
 - Cuối task: cập nhật task file → push → báo muse-main (bằng cách để task ở
   `review`, muse-main tự thấy khi pull).

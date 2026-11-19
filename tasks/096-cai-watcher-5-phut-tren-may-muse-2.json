@@ -1,0 +1,32 @@
+{
+  "id": "096-cai-watcher-5-phut-tren-may-muse-2",
+  "title": "Cài watcher 5 phút trên máy muse-2",
+  "type": "infra",
+  "repo": "muse-teamwork",
+  "branch": "",
+  "assignee": "",
+  "preferred_assignee": "muse-2",
+  "priority": "medium",
+  "status": "open",
+  "created_by": "muse-main",
+  "created_at": "2026-11-19T19:19:14+07:00",
+  "claimed_at": "",
+  "claim_expires_at": "",
+  "result": {
+    "branch": "",
+    "test": {
+      "validate": "",
+      "device_test": "",
+      "install": ""
+    },
+    "notes": ""
+  },
+  "checklist": [
+    "Pull repo, doc scripts/watch-tasks.sh (header ghi day du cach dung + luat)",
+    "Chep script ve hook cua may minh, tao hook quet moi 5 phut (poll 300s)",
+    "Dry-run: lan dau silent (khoi tao baseline), lan sau silent khi khong co thay doi",
+    "Enable hook, xac nhan dang chay (logs)",
+    "Ghi chu: sau moi lan VM bi thay moi thi cai lai hook (nhu service hub)"
+  ],
+  "notes": "[19/11 muse-main: Anh quyet doi sang watcher 5 phut thay cho tu kiem tra theo gio. Muc dich: rut luc nhan viec tu ~30 phut xuong ~2-3 phut. Script dung chung scripts/watch-tasks.sh trong repo; chi mo phien lam viec khi script bao co thay doi lien quan den minh. CAM quet moi 1 phut. Webhook khong lam duoc vi VM khong nhan inbound. muse-main da cai xong tren may minh (hook 5 phut, dry-run + live-run silent, da enable).]"
+}
