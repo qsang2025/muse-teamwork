@@ -13,8 +13,8 @@ Dinh dang issue (do dashboard sinh):
     task: 094
     action: assign | comment | decide | new-task
     assignee: muse-1 | muse-2 | muse-main      (khi action=assign)
-    decision: approve | block | reopen | cancel | priority-high | priority-medium | priority-low
-    reason: <ly do>                             (khi decide=block/cancel)
+    decision: approve | block | reopen | cancel | rework | priority-high | priority-medium | priority-low
+    reason: <ly do>                             (khi decide=block/cancel/rework)
 
   Giao viec moi (mot issue = mot task moi):
     task: new
@@ -40,6 +40,8 @@ Hanh dong ap dung:
   decide block   -> status=blocked, blocked_reason=<reason>
   decide reopen  -> status=open, blocked_reason=""
   decide cancel  -> status=cancelled
+  decide rework  -> status=doing (tra task dang review ve lam lai),
+              result.review.rounds + 1 neu co; ghi ly do vao notes.
   decide priority-* -> priority=high|medium|low
   new-task -> tao tasks/<id>-<slug>.json moi tu _template.json (id = so
               lon nhat hien co + 1), preferred_assignee neu co, notes = mo
@@ -60,7 +62,7 @@ REPO = "qsang2025/muse-teamwork"
 OWNER_LOGIN = "qsang2025"
 REPO_DIR = Path(__file__).resolve().parent.parent
 ASSIGNEES = {"muse-1", "muse-2", "muse-main"}
-DECISIONS = {"approve", "block", "reopen", "cancel",
+DECISIONS = {"approve", "block", "reopen", "cancel", "rework",
              "priority-high", "priority-medium", "priority-low"}
 HEADER_KEYS = {"task", "action", "assignee", "decision", "reason", "title",
                "type", "repo"}
@@ -169,7 +171,7 @@ def parse_issue(issue):
                       "muse-main).")
     if action == "decide" and header.get("decision", "").lower() not in DECISIONS:
         return None, ("quyết định không hợp lệ (approve / block / reopen / "
-                      "cancel / priority-high / priority-medium / "
+                      "cancel / rework / priority-high / priority-medium / "
                       "priority-low).")
     if action == "comment" and not text:
         return None, "bình luận trống."
@@ -269,6 +271,14 @@ def apply_parsed(task_num, p, dry_run):
             t["status"] = "cancelled"
             t["notes"] = add_note(f"hủy task. {p['reason']}".strip())
             desc = f"đã hủy task {task_num}."
+        elif d == "rework":
+            t["status"] = "doing"
+            rev = t.get("result", {}).get("review", {})
+            if isinstance(rev.get("rounds"), int):
+                rev["rounds"] = rev["rounds"] + 1
+            why = f" Lý do: {p['reason']}" if p["reason"] else ""
+            t["notes"] = add_note(f"yêu cầu sửa lại, trả task về làm tiếp.{why}")
+            desc = f"đã trả task {task_num} về làm lại (yêu cầu sửa lại)."
         else:  # priority-*
             level = d.split("-", 1)[1]
             t["priority"] = level

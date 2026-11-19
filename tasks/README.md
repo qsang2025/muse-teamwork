@@ -89,10 +89,11 @@ open → claimed → doing → review → done.
 - Cron `muse-teamwork-dashboard-inbox` (15 phút/lần, muse-main) chạy
   `scripts/apply-dashboard-issues.py`: đọc các issue `[dashboard]` đang mở,
   áp dụng vào file task (giao việc → `preferred_assignee`; bình luận/quyết
-  định → ghi vào `notes`; chặn → `status=blocked`; hủy → `cancelled`; đổi ưu
-  tiên; giao việc mới → tạo `tasks/<id>-<slug>.json` mới), commit + push, rồi
-  đóng issue kèm xác nhận. Chỉ issue do Anh (qsang2025) mở mới được áp dụng.
-  Một issue = một thao tác.
+  định → ghi vào `notes`; chặn → `status=blocked`; hủy → `cancelled`; yêu cầu
+  sửa lại → `status=doing`, `result.review.rounds` + 1; đổi ưu tiên; giao việc
+  mới → tạo `tasks/<id>-<slug>.json` mới), commit + push, rồi đóng issue kèm
+  xác nhận. Chỉ issue do Anh (qsang2025) mở mới được áp dụng. Một issue = một
+  thao tác.
 - Quyết định "DUYỆT" trên task đang review chỉ ghi nhận ý Anh vào notes —
   việc merge vẫn do muse-main/watchdog làm khi đủ 3 điều kiện (validate +
   device test + install).
