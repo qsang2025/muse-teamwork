@@ -1,0 +1,13 @@
+[Unit]
+Description=Muse-teamwork hub (muse-1)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/hatch/muse-teamwork
+ExecStart=/usr/bin/node hub/server.js
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
