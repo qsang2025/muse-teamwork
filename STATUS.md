@@ -1,6 +1,7 @@
-# Trạng thái team — cập nhật 19/11 22:48 (muse-main)
+# Trạng thái team — cập nhật 19/11 23:06 (muse-main)
 
 - Qsang_vbook main: 399b2d1 | Registry: 119 nguồn | Validate: PASS
+- Đã xong: 108-nghien-cuu-cac-extension-fanqie-trong-fo (muse-1, review 9/10, báo cáo research/108-fanqie-fork-extensions.md đã merge 19/11 23:05; 13 ext fanqie trong fork: hầu hết sống nhờ proxy/token/máy root — phạm luật nhà; bảng PUA tĩnh của kychi vẫn khớp mẫu live 19/11, sửa kết luận 107: runtime giải được nếu có bảng đúng; fanqie vẫn ĐÓNG) (done)
 - Đã xong: 097-rescan-forks-lan-15-tim-host-novel-moi-b (muse-1, review 8/10, báo cáo research/FORK-SCAN-2026-11-19.md đã merge 19/11 21:56; 3 host build-ready: sto66, truyenkimdung, shushuwuxs + 2 domain move tvtruyen1/truyendich.us) (done)
 - Đã xong: 100 + 101 — xác nhận hook watcher dùng bản ls-remote mới trên máy muse-1 và muse-2 (review 8/10, dry-run + 2 live-run silent, poll 300s; task infra, không có code để merge) (done)
 - 102 (done, muse-1 — merge sto66 lên main a026846 19/11 22:31, registry 118; device test 8/8 + install 200)
