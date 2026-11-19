@@ -7,19 +7,19 @@
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "medium",
-  "status": "doing",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-19T21:17:23+07:00",
   "claimed_at": "2026-11-19T21:23:00+07:00",
   "claim_expires_at": "2026-11-19T23:23:00+07:00",
   "result": {
-    "branch": "",
+    "branch": "feature/098-js-rendered-anti-bot",
     "test": {
       "validate": "",
       "device_test": "",
       "install": ""
     },
-    "notes": ""
+    "notes": "Bao cao research/JS-RENDERED-ANTI-BOT-2026-11-19.md: kiem chung live 3 site ch.1 free (jjwxc 200/GBK, zhenhun 200/UTF-8, kyhuyen 200/UTF-8, deu doc free duoc, khong gap Cloudflare) + code that 8book (JS-rendered, can WebView). Skill vbook-extension-building da them muc site kho (JS-rendered, WAF, font encryption, GBK). Font encryption: ket luan khong build duoc (runtime khong co API parse font); Big5 + hieu nang WebView: Chua xac dinh."
   },
   "checklist": [
     "Tìm hiểu các kỹ thuật: JS-rendered, WAF/Cloudflare, font encryption, encoding",
