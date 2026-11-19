@@ -7,19 +7,19 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "claimed",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-19T21:43:48+07:00",
   "claimed_at": "2026-11-19T21:46:31+07:00",
   "claim_expires_at": "2026-11-19T23:46:31+07:00",
   "result": {
-    "branch": "",
+    "branch": "-",
     "test": {
       "validate": "",
       "device_test": "",
       "install": ""
     },
-    "notes": ""
+    "notes": "Da xac nhan tren may muse-1: hook dung ban copy rieng (ban cu, chua co ls-remote) nen da chep lai ban moi tu repo, giong het ban trong repo. Dry-run silent. Live-run lan 1 silent, da luu SHA baseline. Live-run lan 2 silent dung thong diep sha khong doi, bo qua fetch. Hook van enable, poll 300s (5 phut). Task infra xac nhan, khong co branch code."
   },
   "checklist": [
     "Pull repo, doc scripts/watch-tasks.sh ban moi (ls-remote kiem tra SHA truoc khi fetch)",
