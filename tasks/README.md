@@ -98,10 +98,11 @@ open → claimed → doing → review → done.
   `scripts/apply-dashboard-issues.py`: đọc các issue `[dashboard]` đang mở,
   áp dụng vào file task (giao việc → `preferred_assignee`; bình luận/quyết
   định → ghi vào `notes`; chặn → `status=blocked`; hủy → `cancelled`; yêu cầu
-  sửa lại → `status=doing`, `result.review.rounds` + 1; đổi ưu tiên; giao việc
-  mới → tạo `tasks/<id>-<slug>.json` mới), commit + push, rồi đóng issue kèm
+  sửa lại → `status=doing`, `result.review.rounds` + 1; đổi ưu tiên; mở lại →
+  `status=open`, kể cả task đã đóng dạng `closed-NNN` — ghi số NNN là đủ;
+  giao việc mới → tạo `tasks/<id>-<slug>.json` mới), commit + push, rồi đóng issue kèm
   xác nhận. Chỉ issue do Anh (qsang2025) mở mới được áp dụng. Một issue = một
-  thao tác.
+  thao tác; cùng một issue chỉ áp dụng một lần (chống trùng lệnh).
 - Quyết định "DUYỆT" trên task đang review chỉ ghi nhận ý Anh vào notes —
   việc merge vẫn do muse-main/watchdog làm khi đủ 3 điều kiện (validate +
   device test + install).

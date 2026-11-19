@@ -117,4 +117,5 @@ sang task khác, không cãi nhau trong code.
 - `notes` là nhật ký thêm vào cuối, không sửa mục cũ. Mỗi mục 1 sự kiện, tối đa 5 dòng, định dạng `[DD/MM HH:MM tên-agent: nội dung]`. Chỉ ghi khi có: kết quả mới, quyết định mới, blocker mới, hoặc gotcha cho người sau.
 - **Heartbeat không được ghi vào notes.** Tiến độ lặp lại (hub sống/chết, poll ok) thuộc về log heartbeat / file riêng, không thuộc task.
 - Nếu `notes` dài quá ~8.000 ký tự: chuyển các mục cũ sang `tasks/archive/<id>-log.md`, để lại trong notes 1 dòng trỏ tới file đó.
+- **Không ghi IP, port, mẫu máy, đường dẫn local vào `notes`** (repo public, dashboard hiển thị công khai — chi tiết hạ tầng để trong file log riêng, notes chỉ ghi kết quả + link). File archive đã ghi rồi thì để nguyên văn, không sửa lại lịch sử.
 - `branch` cấp ngoài và `result.branch` phải giống nhau — chỉ ghi một chỗ, chỗ kia copy y hệt, không để một chỗ trống.

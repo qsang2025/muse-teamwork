@@ -11,6 +11,8 @@ Dinh dang issue (do dashboard sinh):
   Tieu de: [dashboard] 094: giao cho muse-2
   Body:
     task: 094
+    (task da dong: chi can ghi so, vd task: 014 — script tu tim file
+    closed-014-*.json; ghi 'task: closed-014' cung duoc.)
     action: assign | comment | decide | new-task
     assignee: muse-1 | muse-2 | muse-main      (khi action=assign)
     decision: approve | block | reopen | cancel | rework | priority-high | priority-medium | priority-low
@@ -33,12 +35,15 @@ tieu de (giao cho / binh luan / duyet / chan / mo lai / huy / uu tien).
 Hanh dong ap dung:
   assign   -> preferred_assignee = X (claim-task.sh ton trong truong nay);
               khong doi assignee (quyen claim cua agent).
-  comment  -> them dong vao notes: [Dashboard - Anh, dd/mm HH:MM] <text>
+  comment  -> them dong vao notes: [Dashboard #N — Anh, dd/mm HH:MM] <text>
+              (stamp co so issue de chong ap dung trung; stamp cu khong
+              so van doc duoc)
   decide approve -> ghi nhan "Anh DUYET" vao notes; viec merge van do
               muse-main/watchdog lam khi du 3 dieu kien (validate +
               device test + install), khong doi status o day.
   decide block   -> status=blocked, blocked_reason=<reason>
-  decide reopen  -> status=open, blocked_reason=""
+  decide reopen  -> status=open, blocked_reason="" (ca task cancelled:
+              mo lai tu closed-*)
   decide cancel  -> status=cancelled
   decide rework  -> status=doing (tra task dang review ve lam lai),
               result.review.rounds + 1 neu co; ghi ly do vao notes.
@@ -143,6 +148,12 @@ def parse_issue(issue):
     if action == "comment" and not text:
         text = title_rest
 
+    if task and task.lower() != "new":
+        # Chap nhan ca '014' va 'closed-014' (task da dong, Living Spec
+        # buoc 5); chuan hoa ve so 3 chu so de find_task_file tim duoc.
+        mnum = re.match(r"(?:closed-)?(\d{2,3})$", task.strip(), re.I)
+        if mnum:
+            task = mnum.group(1).zfill(3)
     if not task or (not task.isdigit() and task.lower() != "new"):
         return None, "không đọc được số task (thiếu dòng 'task: NNN')."
     if action not in ("assign", "comment", "decide", "new-task"):
@@ -183,7 +194,10 @@ def parse_issue(issue):
 
 
 def find_task_file(task_num):
+    # Task da dong co file dang closed-NNN-*.json (Living Spec buoc 5).
     hits = sorted(glob(str(REPO_DIR / "tasks" / f"{task_num}-*.json")))
+    if not hits:
+        hits = sorted(glob(str(REPO_DIR / "tasks" / f"closed-{task_num}-*.json")))
     return Path(hits[0]) if hits else None
 
 
@@ -229,7 +243,7 @@ def apply_new_task(p, dry_run):
                   f"(ưu tiên {p['priority']}).")
 
 
-def apply_parsed(task_num, p, dry_run):
+def apply_parsed(task_num, p, dry_run, issue_num=None):
     """Ap dung vao file task. Tra ve (changed_bool, mo_ta_tieng_Viet)."""
     path = find_task_file(task_num)
     if path is None:
@@ -237,10 +251,17 @@ def apply_parsed(task_num, p, dry_run):
     t = json.loads(path.read_text(encoding="utf-8"))
     stamp = now_stamp()
     notes = t.get("notes") or ""
+    # Chong ap dung trung: cung 1 issue chi ap dung 1 lan (truoc day 2 issue
+    # giong nhau #7/#8 deu "mo lai task" deu bi ap dung, ghi 2 dong giong
+    # nhau vao notes cua 094). Stamp trong notes mang so issue lam dau.
+    if issue_num is not None and f"[Dashboard #{issue_num} " in notes:
+        return False, (f"issue #{issue_num} đã áp dụng trước đó rồi "
+                       f"(trùng lệnh), bỏ qua.")
+    tag = f"#{issue_num} " if issue_num is not None else ""
 
     def add_note(line):
-        return (notes + f"\n\n[Dashboard — Anh, {stamp}] {line}"
-                if notes else f"[Dashboard — Anh, {stamp}] {line}")
+        return (notes + f"\n\n[Dashboard {tag}— Anh, {stamp}] {line}"
+                if notes else f"[Dashboard {tag}— Anh, {stamp}] {line}")
 
     if p["action"] == "assign":
         t["preferred_assignee"] = p["assignee"]
@@ -321,7 +342,8 @@ def main():
             continue
         changed, desc = apply_new_task(parsed, dry_run) \
             if parsed["action"] == "new-task" \
-            else apply_parsed(parsed["task"], parsed, dry_run)
+            else apply_parsed(parsed["task"], parsed, dry_run,
+                              issue_num=num)
         if not changed:
             msg = f"Không áp dụng được: {desc}"
             print(f"#{num}: {msg}")
