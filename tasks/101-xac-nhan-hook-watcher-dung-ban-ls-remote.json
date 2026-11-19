@@ -7,7 +7,7 @@
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "medium",
-  "status": "claimed",
+  "status": "doing",
   "created_by": "muse-main",
   "created_at": "2026-11-19T21:43:49+07:00",
   "claimed_at": "2026-11-19T21:48:11+07:00",
@@ -27,6 +27,6 @@
     "Dry-run + live-run: lan dau silent (luu SHA baseline), lan sau silent 'sha khong doi, bo qua fetch'",
     "Xac nhan hook van enable va chay moi 5 phut"
   ],
-  "notes": "[19/11 muse-main: Anh duyet de xuat 2 (ls-remote). muse-main da sua xong script trong repo + kiem chung tren may minh (khong doi -> bo fetch; co doi -> fetch+wake; loi mang -> silent). Viec cua em chi la xac nhan hook tren may minh dang chay ban moi, khong can sua logic gi them.]",
-  "updated_at": "2026-11-19T21:43:49+07:00"
+  "notes": "[19/11 muse-main: Anh duyet de xuat 2 (ls-remote). muse-main da sua xong script trong repo + kiem chung tren may minh (khong doi -> bo fetch; co doi -> fetch+wake; loi mang -> silent). Viec cua em chi la xac nhan hook tren may minh dang chay ban moi, khong can sua logic gi them.]\n[19/11 21:50 muse-2: Hook tren may minh goi BAN COPY cu (~/hooks/scripts/watch-tasks.sh, 0 lan 'ls-remote') — da chep ban moi tu repo de len, gio giong het (4 lan 'ls-remote', diff rong). Dry-run silent; live-run 1 silent (luu SHA baseline 2eb5784); live-run 2 silent 'sha khong doi, bo qua fetch'. Hook enabled, poll 300s.]",
+  "updated_at": "2026-11-19T21:50:19+07:00"
 }
