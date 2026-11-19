@@ -1,19 +1,20 @@
-# Trạng thái team — cập nhật 20/11 00:32 (muse-main)
+# Trạng thái team — cập nhật 20/11 00:55 (muse-main)
 
-- Qsang_vbook main: d89c324 | Registry: 120 nguồn | Validate: PASS
+- Qsang_vbook main: 9cc9f0a | Registry: 120 nguồn | Validate: PASS
+- 105 (done, muse-1 — fix TruyenTV sang tvtruyen1.com, review vòng 1 8/10, đã merge lên main 9cc9f0a 20/11 ~00:55; validate PASS 120 nguồn; device test 15/15 code 0 + install 200 trên điện thoại Anh)
 - 110 (done, muse-1 — nghiên cứu port loại extension news từ Darkrai9x, review 9/10, báo cáo research/110-news-port.md đã merge 20/11 00:24; kết luận: ĐỂ SAU — port được về kỹ thuật, chi phí hạ tầng thấp, nhưng chưa có nhu cầu thật + chưa kiểm chứng app điện thoại Anh hỗ trợ type news; bổ sung kiểm chứng muse-main: fork duongden/vbook đã có 3 ext news thật (baikebaidu v2, sohu v3, viblo v6) nên hợp đồng news đã được dùng thật, vẫn cần probe trên máy Anh; site đạt: VnExpress, CafeF, Genk (200); CHỜ Anh: Anh có muốn đọc/nghe tin trong vBook không + khi nào sẵn sàng cài probe news)
 - 111 (done, muse-2 — nghiên cứu port loại extension forum từ Darkrai9x, review 9/10, báo cáo research/111-nghien-cuu-port-loai-extension-forum-tu--forum-port.md đã merge 20/11 00:20; kết luận: NÊN PORT có điều kiện — chỉ port sau khi probe điện thoại Anh xác nhận app hỗ trợ loại forum; chặn duy nhất phía repo là validate.js TYPES thiếu news/forum; site đạt: tinhte.vn, otofun.net.vn (200); voz.vn 403, tangthuvien.vn timeout từ VM — cần phone test; CHỜ Anh: Anh có đọc diễn đàn nào không + khi nào sẵn sàng cài probe)
 
-- Qsang_vbook main: d89c324 | Registry: 120 nguồn | Validate: PASS
+- Qsang_vbook main: 9cc9f0a | Registry: 120 nguồn | Validate: PASS
 - 109 (done, muse-1 — kiểm chứng bảng PUA fanqie trên 1 chương; báo cáo research/109-fanqie-pua-verify.md đã merge 19/11 23:31; reader/full chặn cả free lẫn VIP bằng Turing slide captcha — HTTP 200 body 0 byte; bảng bqy đúng 62/62 trên mẫu live 107, bảng kychi sai — SỬA kết luận 108; fanqie vẫn ĐÓNG, không build)
 - Đã xong: 108-nghien-cuu-cac-extension-fanqie-trong-fo (muse-1, review 9/10, báo cáo research/108-fanqie-fork-extensions.md đã merge 19/11 23:05; 13 ext fanqie trong fork: hầu hết sống nhờ proxy/token/máy root — phạm luật nhà; bảng PUA đúng là bqy (sửa bởi 109), không phải kychi; fanqie vẫn ĐÓNG) (done)
 - Đã xong: 097-rescan-forks-lan-15-tim-host-novel-moi-b (muse-1, review 8/10, báo cáo research/FORK-SCAN-2026-11-19.md đã merge 19/11 21:56; 3 host build-ready: sto66, truyenkimdung, shushuwuxs + 2 domain move tvtruyen1/truyendich.us) (done)
 - Đã xong: 100 + 101 — xác nhận hook watcher dùng bản ls-remote mới trên máy muse-1 và muse-2 (review 8/10, dry-run + 2 live-run silent, poll 300s; task infra, không có code để merge) (done)
 - 102 (done, muse-1 — merge sto66 lên main a026846 19/11 22:31, registry 118; device test 8/8 + install 200)
-- 103 (doing, muse-2 — build shushuwuxs, cần page.js)
+- 103 (done, muse-2 — build shushuwuxs, đã merge lên main d89c324 20/11 00:32, review vòng 2 8/10; device test 10/10 + install 200)
 - 104 (done, muse-main — merge truyenkimdung lên main 399b2d1, registry 119; device test 7/7 + install 200)
 - 107 (done, muse-1 — mẫu live font encryption fanqie; báo cáo research/FONT-ENCRYPTION-LIVE-2026-11-19.md đã merge 19/11 22:48; fanqie live: 150 PUA, font subset SourceHanSansSC 362 glyph, cmap không chứa Unicode gốc; kết luận: vBook runtime không giải được font encryption — pattern nhận biết PUA ratio + báo lỗi rõ trong chap.js; skill đã cập nhật)
-- 105 (review — fix TruyenTV sang tvtruyen1.com)
+- 105 (done, muse-1 — fix TruyenTV sang tvtruyen1.com, đã merge lên main 9cc9f0a 20/11 ~00:55; device test 15/15 + install 200)
 - 106 (done, muse-main — merge mirror truyendich.us lên main ead9038; device test 13/13 + install 200 sau khi Anh đổi sang 5G)
 - Đã xong: 095-cai-watcher-5-phut-tren-may-muse-1 (muse-1, review 8/10, hook muse-teamwork-watch-muse-1, poll 300s, dry-run + live-run silent) + 096-cai-watcher-5-phut-tren-may-muse-2 (muse-2, review 8/10, hook muse-teamwork-watch-muse-2, poll 300s, dry-run + live-run silent) (done)
 - Đã xong: 098-tu-hoc-ky-thuat-xu-ly-site-js-rendered-v (muse-2, review 8/10, báo cáo research/JS-RENDERED-ANTI-BOT-2026-11-19.md đã merge 19/11 21:41; skill vbook-extension-building đã thêm mục site khó) (done)

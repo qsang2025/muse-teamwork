@@ -7,7 +7,7 @@
   "assignee": "muse-1",
   "preferred_assignee": "",
   "priority": "medium",
-  "status": "review",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-19T21:57:00+07:00",
   "claimed_at": "2026-11-19T22:25:29+07:00",
@@ -15,17 +15,17 @@
   "result": {
     "branch": "feature/105-fix-truyentv-domain-tvtruyen1-com",
     "test": {
-      "validate": "PASS (117 nguon, 117 registry, 0 canh bao — 2026-11-19 ~22:40, muse-1)",
-      "device_test": "CHUA chay — may muse-1 khong co vBook dev server (khong co servers.json)",
-      "install": "CHUA chay — doi device test"
+      "validate": "PASS (120 nguon, 120 registry, 0 canh bao) — chay lai boi muse-main tren branch sau rebase (tip 9cc9f0a)",
+      "device_test": "PASS 15/15 tren dien thoai Anh (HONOR PTP-AN10), log ext-review/truyentv-105-device-test.log: home 3 tab; genre 199; gen dung (tu-hai-nhi, ngon-tinh); search 'tu-hai-nhi' co ket qua; detail dung ten/bia 2 truyen; toc 50 chuong (tu-hai-nhi, chuong 1-48) + 11 chuong (gio-ben-canh-le); page 25 trang tvtruyen1.com; chap that 4.942/5.476/6.706 ky tu; comment that",
+      "install": "200 OK (cai lai tu branch, plugin.zip v2)"
     },
     "notes": "Fix TruyenTV v2: doi domain mac dinh www.tvtruyen.space -> www.tvtruyen1.com (source + DOMAIN default/values, giu space/cc/vip), regexp them tvtruyen1.com, config.js BASE_URL + MIRROR_LIST, helper.js normalizeUrl viet lai host cu ve BASE_URL. Kiem chung tu VM 19/11: .space 301 -> tvtruyen1.com; trang chu/the-loai/tim-kiem/detail/toc/chap tren domain moi deu 200, selector cu van khop (pattern chuong moi /<slug>/chuong-<n> khong .html, #chapter-content + .signature con nguyen, .custom-pagination-list ?page=N con nguyen). Build zip 41850 bytes. Device test + install CHUA chay (may muse-1 khong co vBook dev server/servers.json) — nho muse-main chay tren dien thoai Anh roi merge. Branch feature/105-fix-truyentv-domain-tvtruyen1-com commit 30e2cd2.",
     "review": {
-      "score": "",
-      "rounds": 0,
-      "by": "",
-      "at": "",
-      "note": ""
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-20T00:55:00+07:00",
+      "note": "Dat (8/10): doi domain mac dinh sang tvtruyen1.com dung — 15/15 case code 0 tren may that, noi dung that, toc/chap/page deu chay tren domain moi; install 200. Da merge len main 9cc9f0a, registry 120 nguon."
     }
   },
   "checklist": [
@@ -35,6 +35,6 @@
     "Validate PASS + device test (muse-main chạy trên điện thoại Anh) + install 200",
     "Push branch, cập nhật task sang review"
   ],
-  "notes": "Domain move từ rescan #15 (task 097, FORK-SCAN-2026-11-19.md §4): www.tvtruyen.space 301 → www.tvtruyen1.com (muse-main kiểm chứng lại 19/11); chương 1 trên domain mới đọc đầy đủ (/nam-toi-len-sau/chuong-1, ~8.800 ký tự). Extension hiện có: novel/tvtruyen, source www.tvtruyen.space. Việc: cập nhật DOMAIN mặc định + values + regexp thêm tvtruyen1.com, kiểm chứng lại toc/chap selector trên domain mới (chap pattern mới /<slug>/chuong-1, khác pattern cũ /<slug>/chuong-<n>.html), bump version + rebuild zip + test thiết bị. KHÔNG tạo extension TruyenTV thứ hai.",
-  "updated_at": "2026-11-19T22:37:00+07:00"
+  "notes": "Domain move từ rescan #15 (task 097, FORK-SCAN-2026-11-19.md §4): www.tvtruyen.space 301 → www.tvtruyen1.com (muse-main kiểm chứng lại 19/11); chương 1 trên domain mới đọc đầy đủ (/nam-toi-len-sau/chuong-1, ~8.800 ký tự). Extension hiện có: novel/tvtruyen, source www.tvtruyen.space. Việc: cập nhật DOMAIN mặc định + values + regexp thêm tvtruyen1.com, kiểm chứng lại toc/chap selector trên domain mới (chap pattern mới /<slug>/chuong-1, khác pattern cũ /<slug>/chuong-<n>.html), bump version + rebuild zip + test thiết bị. KHÔNG tạo extension TruyenTV thứ hai.\n[20/11 00:55 muse-main: Review vong 1 — diem 8/10, DAT. Validate PASS (120 nguon, 0 canh bao) chay lai tren branch sau rebase. Device test 15/15 code 0 tren dien thoai Anh (log ext-review/truyentv-105-device-test.log) + install 200. Da merge fast-forward len main 9cc9f0a, validate tren main da merge PASS, registry 120 nguon (TruyenTV v2, source tvtruyen1.com). ROADMAP.md da cap nhat.]",
+  "updated_at": "2026-11-20T00:55:00+07:00"
 }
