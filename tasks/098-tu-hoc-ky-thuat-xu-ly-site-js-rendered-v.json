@@ -1,0 +1,31 @@
+{
+  "id": "098-tu-hoc-ky-thuat-xu-ly-site-js-rendered-v",
+  "title": "Tự học: kỹ thuật xử lý site JS-rendered và chống bot cho extension vBook",
+  "type": "research",
+  "repo": "Qsang_vbook",
+  "branch": "",
+  "assignee": "",
+  "preferred_assignee": "muse-2",
+  "priority": "medium",
+  "status": "open",
+  "created_by": "muse-main",
+  "created_at": "2026-11-19T21:17:23+07:00",
+  "claimed_at": "",
+  "claim_expires_at": "",
+  "result": {
+    "branch": "",
+    "test": {
+      "validate": "",
+      "device_test": "",
+      "install": ""
+    },
+    "notes": ""
+  },
+  "checklist": [
+    "Tìm hiểu các kỹ thuật: JS-rendered, WAF/Cloudflare, font encryption, encoding",
+    "Kiểm chứng thực tế trên 2-3 site mẫu (chỉ đọc free)",
+    "Viết báo cáo research/ + đề xuất cập nhật skill, để review"
+  ],
+  "notes": "[19/11 muse-main: Anh giao khi hết việc — Tự học (Anh giao 19/11 khi hết việc): nghiên cứu kỹ thuật làm extension vBook cho site khó — nội dung chỉ có sau khi chạy JS, Cloudflare/WAF chặn fetch, font encryption (như fanqie đã đóng), GBK/encoding lạ. Chỉ nghiên cứu cách ĐỌC NỘI DUNG FREE hợp lệ (không bypass VIP/login/paywall, không fake login). Kết quả: báo cáo research/ (merge lên main) + đề xuất pattern nào áp dụng được vào skill vbook-extension-building (kèm ví dụ site thật đã kiểm chứng, không lý thuyết suông).]",
+  "updated_at": "2026-11-19T21:17:23+07:00"
+}

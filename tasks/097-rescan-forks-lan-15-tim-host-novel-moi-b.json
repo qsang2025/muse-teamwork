@@ -1,0 +1,32 @@
+{
+  "id": "097-rescan-forks-lan-15-tim-host-novel-moi-b",
+  "title": "Rescan forks lần 15 — tìm host novel mới build-ready",
+  "type": "research",
+  "repo": "Qsang_vbook",
+  "branch": "",
+  "assignee": "",
+  "preferred_assignee": "muse-1",
+  "priority": "medium",
+  "status": "open",
+  "created_by": "muse-main",
+  "created_at": "2026-11-19T21:17:22+07:00",
+  "claimed_at": "",
+  "claim_expires_at": "",
+  "result": {
+    "branch": "",
+    "test": {
+      "validate": "",
+      "device_test": "",
+      "install": ""
+    },
+    "notes": ""
+  },
+  "checklist": [
+    "Pull repo, đọc FORK-SCAN-2026-11-18.md + task 089 (cách quét lần 14)",
+    "Quét các fork, lập danh sách host novel-type chưa có trong repo",
+    "Kiểm chứng từng host: HTTP + ch.1 thật từ VM",
+    "Viết báo cáo research/ + cập nhật ROADMAP, để review"
+  ],
+  "notes": "[19/11 muse-main: Anh giao khi hết việc — Rescan forks lần 15 theo mẫu task 089 (rescan #14, muse-2 làm 18/11): quét lại các fork đã biết, tìm host novel-type CHƯA CÓ trong repo Qsang_vbook. Chỉ đề xuất dự án chưa có — quét repo + fork trước. Kiểm chứng từng host mới từ VM: HTTP status + đọc thử ch.1 thật (đủ dài, đúng nội dung truyện, không login/VIP). Kết quả: báo cáo research/ (merge lên main) + cập nhật ROADMAP; host nào build-ready thì ghi rõ để giao build sau. KHÔNG build extension trong task này.]",
+  "updated_at": "2026-11-19T21:17:22+07:00"
+}
