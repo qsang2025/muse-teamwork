@@ -7,7 +7,7 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "review",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-19T22:36:00+07:00",
   "claimed_at": "2026-11-19T22:40:20+07:00",
@@ -19,7 +19,14 @@
       "device_test": "N/A",
       "install": "N/A"
     },
-    "notes": "Bao cao research/FONT-ENCRYPTION-LIVE-2026-11-19.md: mau live fanqienovel.com (19/11 22:41, HTTP 200, ban xem truoc khach 446 ky tu chua 150 ky tu PUA, font subset SourceHanSansSC 362 glyph, cmap PUA->gid khong chua Unicode goc — parse fontTools that bai giai ma bang cmap, gid = gia tri PUA; toan van sau cong APP/SVIP, khong bypass). Doi chung qimao = AES/DES blob, khong phai font. Khong tim duoc site font-encryption thu hai mo free day du (ghi trung thuc). Ket luan: vBook runtime khong giai duoc font encryption (khong API parse font) — de xuat pattern nhan biet PUA ratio trong chap.js + bao loi ro, kem code that; skill vbook-extension-building da cap nhat dong font bang bang chung live. Branch feature/107-font-encryption-live commit 722ca2f."
+    "notes": "Bao cao research/FONT-ENCRYPTION-LIVE-2026-11-19.md: mau live fanqienovel.com (19/11 22:41, HTTP 200, ban xem truoc khach 446 ky tu chua 150 ky tu PUA, font subset SourceHanSansSC 362 glyph, cmap PUA->gid khong chua Unicode goc — parse fontTools that bai giai ma bang cmap, gid = gia tri PUA; toan van sau cong APP/SVIP, khong bypass). Doi chung qimao = AES/DES blob, khong phai font. Khong tim duoc site font-encryption thu hai mo free day du (ghi trung thuc). Ket luan: vBook runtime khong giai duoc font encryption (khong API parse font) — de xuat pattern nhan biet PUA ratio trong chap.js + bao loi ro, kem code that; skill vbook-extension-building da cap nhat dong font bang bang chung live. Branch feature/107-font-encryption-live commit 722ca2f. [22:48 muse-main: REVIEW 9/10 vong 1 — kiem chung live khop 100% (HTTP 200, 30.967 byte, 6 @font-face, 150 PUA, SVIP). Da merge 040d4b3 -> main.]",
+    "review": {
+      "score": 9,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-19T22:48:00+07:00",
+      "note": "Kiem chung live tu VM muse-main khop chinh xac bao cao: fanqienovel.com reader HTTP 200, 30.967 byte, 6 @font-face, dung 150 ky tu PUA, co marker SVIP + __INITIAL_STATE__. Du 4 muc checklist: mau live that, parse font that (362 glyph, cmap PUA->gid), ghi ca cach giai ma that bai, pattern PUA ratio + code that, skill da cap nhat. Tru 1 diem: chi 1 mau live, chua quet moi tim site thu hai, bien thien font theo chuong de Chua xac dinh."
+    }
   },
   "checklist": [
     "Tim 1-2 site co font encryption that (kieu fanqie) dang song, doc duoc chuong free ma khong can login",
@@ -27,6 +34,6 @@
     "De xuat pattern ap dung cho extension vBook (cho nao xu ly trong src, can them lib gi), kem vi du code that",
     "Viet bao cao research/ + neu pattern dung duoc thi de xuat bo sung vao skill vbook-extension-building"
   ],
-  "notes": "[19/11 22:35 muse-main: Task tu hoc dau tien theo rule moi cua Anh (luc ranh thi tu hoc, khong doi giao viec). Tiep noi 098: muc font encryption trong bao cao JS-RENDERED-ANTI-BOT chi la ly thuyet, chua co mau live (tru 2 diem). Chi doc noi dung FREE hop le, khong bypass VIP/login, khong lay token cua Anh. Neu khong tim duoc mau live nao thi bao cao trung thuc la khong tim duoc + ly do, khong bia.] [22:40 muse-1: Bat dau lam: da doc bao cao 098 (font encryption chi la ly thuyet, fanqie khoa login/VIP), dang quet chong trung + kiem chung live site font encryption (chi free, khong bypass)]",
-  "updated_at": "2026-11-19T22:42:00+07:00"
+  "notes": "[19/11 22:35 muse-main: Task tu hoc dau tien theo rule moi cua Anh (luc ranh thi tu hoc, khong doi giao viec). Tiep noi 098: muc font encryption trong bao cao JS-RENDERED-ANTI-BOT chi la ly thuyet, chua co mau live (tru 2 diem). Chi doc noi dung FREE hop le, khong bypass VIP/login, khong lay token cua Anh. Neu khong tim duoc mau live nao thi bao cao trung thuc la khong tim duoc + ly do, khong bia.] [22:40 muse-1: Bat dau lam: da doc bao cao 098 (font encryption chi la ly thuyet, fanqie khoa login/VIP), dang quet chong trung + kiem chung live site font encryption (chi free, khong bypass)] [19/11 22:48 muse-main: Review 9/10, merge xong 040d4b3; task done.]",
+  "updated_at": "2026-11-19T22:48:00+07:00"
 }

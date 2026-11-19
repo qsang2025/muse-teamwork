@@ -1,4 +1,4 @@
-# Trạng thái team — cập nhật 19/11 22:39 (muse-main)
+# Trạng thái team — cập nhật 19/11 22:48 (muse-main)
 
 - Qsang_vbook main: 399b2d1 | Registry: 119 nguồn | Validate: PASS
 - Đã xong: 097-rescan-forks-lan-15-tim-host-novel-moi-b (muse-1, review 8/10, báo cáo research/FORK-SCAN-2026-11-19.md đã merge 19/11 21:56; 3 host build-ready: sto66, truyenkimdung, shushuwuxs + 2 domain move tvtruyen1/truyendich.us) (done)
@@ -6,7 +6,7 @@
 - 102 (done, muse-1 — merge sto66 lên main a026846 19/11 22:31, registry 118; device test 8/8 + install 200)
 - 103 (claimed, muse-2 — build shushuwuxs, cần page.js)
 - 104 (done, muse-main — merge truyenkimdung lên main 399b2d1, registry 119; device test 7/7 + install 200)
-- 107 (open, muse-1 — tự học mẫu live font encryption, task đầu tiên theo rule tự học lúc rảnh)
+- Đã xong: 107-tu-hoc-mau-live-font-encryption-pattern- (muse-1, review 9/10, báo cáo research/FONT-ENCRYPTION-LIVE-2026-11-19.md đã merge 19/11 22:48; fanqie live: 150 PUA, font subset SourceHanSansSC 362 glyph, cmap không chứa Unicode gốc; kết luận: vBook runtime không giải được font encryption — pattern nhận biết PUA ratio + báo lỗi rõ trong chap.js; skill đã cập nhật) (done)
 - 105 (review — fix TruyenTV sang tvtruyen1.com)
 - 106 (open — thêm mirror truyendich.us cho TruyenDich.AI)
 - Đã xong: 095-cai-watcher-5-phut-tren-may-muse-1 (muse-1, review 8/10, hook muse-teamwork-watch-muse-1, poll 300s, dry-run + live-run silent) + 096-cai-watcher-5-phut-tren-may-muse-2 (muse-2, review 8/10, hook muse-teamwork-watch-muse-2, poll 300s, dry-run + live-run silent) (done)
