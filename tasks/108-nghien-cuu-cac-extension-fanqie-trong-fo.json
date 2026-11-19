@@ -7,19 +7,19 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "doing",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-19T22:51:38+07:00",
   "claimed_at": "2026-11-19T22:55:34+07:00",
   "claim_expires_at": "2026-11-20T00:59:56+07:00",
   "result": {
-    "branch": "",
+    "branch": "feature/108-fanqie-fork-extensions",
     "test": {
-      "validate": "",
-      "device_test": "",
-      "install": ""
+      "validate": "N/A (task research, khong co extension)",
+      "device_test": "N/A",
+      "install": "N/A"
     },
-    "notes": ""
+    "notes": "Bao cao research/108-fanqie-fork-extensions.md: quet 11 repo fork, doc code 10 ext fanqie doc duoc (+3 ext ma hoa/host ngoai chi danh gia qua metadata). 4 nhom cach lam: proxy ben thu ba, API ByteDance truc tiep, server local FQWeb may root, token sign server. Font: chi 3 ext giai PUA bang bang tinh 372 muc; bang bqy xung khac hoan toan voi bang kychi (0/372 trung) nen mapping khong on dinh — bo sung task 107. Khong ext nao xu ly captcha. Theo luat nha: proxy/token/root khong dat; API truc tiep + API web/bang PUA chua du bang chung live. Ket luan: fanqie van DONG, de xuat test live 1 chuong free co Anh duyet truoc khi ban build. Branch feature/108-fanqie-fork-extensions commit e41349b."
   },
   "checklist": [
     "Quét fork + kho extension, liệt kê đủ 11 ext fanqie (kể cả 4 cái dưới nếp gấp)",
