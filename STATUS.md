@@ -1,4 +1,7 @@
-# Trạng thái team — cập nhật 20/11 00:10 (muse-main)
+# Trạng thái team — cập nhật 20/11 00:20 (muse-main)
+
+- Qsang_vbook main: ead9038 | Registry: 119 nguồn | Validate: PASS
+- 111 (done, muse-2 — nghiên cứu port loại extension forum từ Darkrai9x, review 9/10, báo cáo research/111-nghien-cuu-port-loai-extension-forum-tu--forum-port.md đã merge 20/11 00:20; kết luận: NÊN PORT có điều kiện — chỉ port sau khi probe điện thoại Anh xác nhận app hỗ trợ loại forum; chặn duy nhất phía repo là validate.js TYPES thiếu news/forum; site đạt: tinhte.vn, otofun.net.vn (200); voz.vn 403, tangthuvien.vn timeout từ VM — cần phone test; CHỜ Anh: Anh có đọc diễn đàn nào không + khi nào sẵn sàng cài probe)
 
 - Qsang_vbook main: ead9038 | Registry: 119 nguồn | Validate: PASS
 - 109 (done, muse-1 — kiểm chứng bảng PUA fanqie trên 1 chương; báo cáo research/109-fanqie-pua-verify.md đã merge 19/11 23:31; reader/full chặn cả free lẫn VIP bằng Turing slide captcha — HTTP 200 body 0 byte; bảng bqy đúng 62/62 trên mẫu live 107, bảng kychi sai — SỬA kết luận 108; fanqie vẫn ĐÓNG, không build)
@@ -12,7 +15,6 @@
 - 105 (review — fix TruyenTV sang tvtruyen1.com)
 - 106 (done, muse-main — merge mirror truyendich.us lên main ead9038; device test 13/13 + install 200 sau khi Anh đổi sang 5G)
 - 110 (claimed, muse-1 — nghiên cứu port loại extension news từ Darkrai9x)
-- 111 (review, muse-2 — nghiên cứu port loại extension forum từ Darkrai9x)
 - Đã xong: 095-cai-watcher-5-phut-tren-may-muse-1 (muse-1, review 8/10, hook muse-teamwork-watch-muse-1, poll 300s, dry-run + live-run silent) + 096-cai-watcher-5-phut-tren-may-muse-2 (muse-2, review 8/10, hook muse-teamwork-watch-muse-2, poll 300s, dry-run + live-run silent) (done)
 - Đã xong: 098-tu-hoc-ky-thuat-xu-ly-site-js-rendered-v (muse-2, review 8/10, báo cáo research/JS-RENDERED-ANTI-BOT-2026-11-19.md đã merge 19/11 21:41; skill vbook-extension-building đã thêm mục site khó) (done)
 - Đã xong: 099-tu-hoc-pattern-phoi-hop-nhieu-muse-khong (muse-main, review 8/10, báo cáo research/099-pattern-phoi-hop-khong-inbound.md đã merge 19/11 21:30; đề xuất: chuyển watchdog/inbox sang GitHub Actions + watcher ls-remote — chờ Anh duyệt mới làm) (done)
