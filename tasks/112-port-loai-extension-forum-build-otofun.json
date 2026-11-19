@@ -1,0 +1,36 @@
+{
+  "id": "112-port-loai-extension-forum-build-otofun",
+  "title": "Port loại extension forum + build Otofun",
+  "type": "vbook-extension",
+  "repo": "Qsang_vbook",
+  "branch": "",
+  "assignee": "",
+  "preferred_assignee": "muse-2",
+  "priority": "high",
+  "status": "open",
+  "created_by": "muse-main",
+  "created_at": "2026-11-20T00:32:52+07:00",
+  "claimed_at": "",
+  "claim_expires_at": "",
+  "result": {
+    "branch": "",
+    "test": {
+      "validate": "",
+      "device_test": "",
+      "install": ""
+    },
+    "notes": ""
+  },
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch từ main tip",
+    "Hạ tầng: thêm 'forum' vào TYPES trong tools/cli/validate.js:51",
+    "Copy templates/forum/ từ upstream Darkrai9x (6 file: plugin.json, config.js, genre.js, home.js, posts.js, search.js) vào Qsang_vbook, chỉnh theo quy ước nhà",
+    "Đồng bộ extension-api.md (cả 2 bản, md5 giống nhau) + SKILL.md + type-contracts.md với mục forum",
+    "Build extension thật extensions/forum/otofun/ từ probe, sửa 3 lỗi probe đã biết (xem notes)",
+    "validate PASS + device test code 0 + install 200 trên điện thoại Anh, báo cáo đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "notes": "Gate đã qua (probe 2026-11-20 00:29, Anh xác nhận bằng ảnh chụp 00:31): app vBook NHẬN type forum — install probe OK 200; home 2 tab, genre 62 board, search list 31 thread/trang (phân trang list bằng ?page= CHẠY, p2 chỉ trùng thread ghim), posts đọc được nội dung thật; trong app hiện đúng danh sách (ghim/khóa, tác giả, lượt trả lời/xem) và trang đọc bài (huy hiệu OP, số tầng #1/#2). Chi tiết probe: ~/workspace/vbook/work/ext-review/FORUM-PROBE-OTOFUN.md; log: otfun-probe-device-test.log; worktree probe: ~/workspace/vbook/work/forum-probe-otofun (branch probe/otofun-forum — CHỈ copy code từ đó, KHÔNG merge branch probe; extension thật đặt tên 'Otofun', author MuseAi).\n3 lỗi probe phải sửa khi build thật: (1) Tìm từ khóa /search?q= trả 0 kết quả — search XenForo thật là POST; làm search chạy được hoặc bỏ search.js theo pattern aztruyen/17k (ghi rõ trong báo cáo). (2) Phân trang bài trong thread chưa kiểm chứng — thread mẫu chỉ có 1 bài, ?page=2 trả lại bài cũ; XenForo chuẩn dùng /page-N — kiểm chứng trên thread nhiều trang rồi chọn cách đúng. (3) Giờ trong danh sách hiện dạng ISO thô '2010-09-18T14:11:12+0700' — dùng text hiển thị thay vì attr datetime.\nPHẠM VI: chỉ forum. News KHÔNG làm trong task này (task 110 kết luận ĐỂ SAU — Anh chưa chốt muốn đọc tin trong vBook; KHÔNG thêm 'news' vào TYPES).\nQuy trình nhà: branch từ main tip; validate PASS + device test code 0 + install 200 do builder tự kiểm chứng; merge chỉ do muse-main thực hiện sau khi kiểm tra lại. Nguồn probe 'Otofun Probe' đang cài trên máy Anh — extension thật cài thành nguồn riêng; Anh sẽ tự xóa probe trong app sau (không có API gỡ)."
+}
