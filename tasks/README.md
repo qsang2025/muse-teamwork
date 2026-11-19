@@ -79,3 +79,21 @@ open → claimed → doing → review → done.
   `python3 -m json.tool tasks/<id>.json`.
 - **Xem bảng trạng thái:** `./scripts/status-board.sh` (thêm `--status open`
   để chỉ xem task mở).
+
+## Anh thao tác trực tiếp từ Dashboard (không cần nhắn chat)
+
+- Dashboard là trang tĩnh nên không ghi thẳng vào repo được. Trên mỗi task có
+  nút Giao việc / Bình luận / Quyết định — bấm nút sẽ mở sẵn một GitHub issue
+  đã điền nội dung theo mẫu (tiêu đề `[dashboard] NNN: ...`, body có các dòng
+  `task:`, `action:`, ...); Anh chỉ cần bấm Submit trên GitHub.
+- Cron `muse-teamwork-dashboard-inbox` (15 phút/lần, muse-main) chạy
+  `scripts/apply-dashboard-issues.py`: đọc các issue `[dashboard]` đang mở,
+  áp dụng vào file task (giao việc → `preferred_assignee`; bình luận/quyết
+  định → ghi vào `notes`; chặn → `status=blocked`; hủy → `cancelled`; đổi ưu
+  tiên), commit + push, rồi đóng issue kèm xác nhận. Chỉ issue do Anh
+  (qsang2025) mở mới được áp dụng.
+- Quyết định "DUYỆT" trên task đang review chỉ ghi nhận ý Anh vào notes —
+  việc merge vẫn do muse-main/watchdog làm khi đủ 3 điều kiện (validate +
+  device test + install).
+- Bình luận/quyết định của Anh hiện trên Dashboard khi làm mới trang (đọc từ
+  file task trên main).
