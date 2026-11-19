@@ -1,26 +1,7 @@
 {
-  "id": "091-build-extension-kyhuyen-com",
-  "title": "Build extension kyhuyen.com",
-  "type": "vbook-extension",
-  "repo": "Qsang_vbook",
-  "branch": "",
   "assignee": "muse-2",
-  "preferred_assignee": "muse-2",
-  "priority": "medium",
-  "status": "blocked",
-  "created_by": "muse-main",
-  "created_at": "2026-11-18T10:53:19+07:00",
-  "claimed_at": "2026-11-18T11:07:58+07:00",
-  "claim_expires_at": "2026-11-18T13:07:58+07:00",
-  "result": {
-    "branch": "feature/kyhuyen",
-    "test": {
-      "validate": "PASS (115/115 nguon, 115 muc registry, 0 canh bao)",
-      "device_test": "chua chay — link dien thoai chet (xem notes)",
-      "install": "chua chay — cho device test"
-    },
-    "notes": "Extension build xong, validate PASS. Device test + install chua chay duoc: khong ket noi duoc toi vBook dev server tren dien thoai Anh (magic7-pro 100.90.26.91:8080) qua tailnet — curl /connect timeout (HTTP 000) ca IP lan ten DNS, 2 lan thu 11:33 va 12:36 18/11. 2 yeu cau duyet tunnel dang cho Anh duyet (Read 100.90.26.91 va Read magic7-pro, cho cron Muse Teamwork Task Poll)."
-  },
+  "blocked_reason": "",
+  "branch": "",
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
@@ -28,5 +9,32 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
-  "notes": "Rescan #14 (task 089, FORK-SCAN-2026-11-18.md trong repo Qsang_vbook): kyhuyen.com — novel, catalog kychitoge/vbook-ext. Homepage HTTP 200. Ch.1 kiểm chứng tay: truyện \"Còn Có Thể Cử Đi Học Quái Vật Chức Nghiệp Học Viện?\", ch.1 \"trọng sinh, nhưng thời gian không đối\", ~10.272 ký tự, đầy đủ, không login/VIP. Đọc docs/CHI-CA-DAY-EM.md + shared/skills/vbook-extension-building/SKILL.md TRƯỚC khi build. Quy tắc nhà: chỉ free content, validate PASS + device test code 0 + install 200, KHÔNG tự merge — muse-main kiểm tra + merge. Branch gợi ý: feature/kyhuyen.\n\nTiến độ 2026-11-18 ~11:40+07 (muse-2): build xong extension extensions/novel/kyhuyen (branch feature/kyhuyen, commit a972842, da push). Quet trung: repo chua co kyhuyen (114 ext), khong task nao trung (090 la zhenhunxiaoshuo cua muse-1); ROADMAP.md local khong con tren VM nay (mat khi VM thay 18/11) nen khong doi chieu duoc — rescan #14 xac nhan kyhuyen la ung vien build moi. Khao sat live: homepage 200; truyen mau \"Con Co The Cu Di Hoc Quai Vat Chuc Nghiep Hoc Vien?\" 879 chuong (thieu chuong 71 phia site), ch.1 ~10.272 ky tu doc du, khong login/VIP; base port tu kychi_kyhuyen (kychitoge/vbook-ext) — sua 2 loi cua base: regexp cu khong khop URL chi tiet /truyen/<slug>, input the loai tac gia thieu tham so page. Validate PASS 115/115, 0 canh bao (registry 115 sau build-catalog).\n\nBLOCKED: device test + install chua chay — khong toi duoc vBook dev server tren dien thoai Anh (magic7-pro 100.90.26.91:8080) qua tailnet: curl /connect timeout (HTTP 000) ca bang IP lan ten DNS, 2 lan thu 11:33 va 12:36 18/11. 2 yeu cau duyet tunnel dang cho Anh duyet (Read 100.90.26.91, Read magic7-pro). CAN ANH: (1) duyet 2 yeu cau tunnel dang cho, (2) mo app vBook tren dien thoai, bat che do debug/dev mode de dev server chay, roi bao lai de test tiep (device test code 0 + install 200). Khong merge truoc khi du 3 dieu kien."
+  "claim_expires_at": "2026-11-18T13:07:58+07:00",
+  "claimed_at": "2026-11-18T11:07:58+07:00",
+  "created_at": "2026-11-18T10:53:19+07:00",
+  "created_by": "muse-main",
+  "id": "091-build-extension-kyhuyen-com",
+  "notes": "Rescan #14 (task 089, FORK-SCAN-2026-11-18.md trong repo Qsang_vbook): kyhuyen.com — novel, catalog kychitoge/vbook-ext. Homepage HTTP 200. Ch.1 kiểm chứng tay: truyện \"Còn Có Thể Cử Đi Học Quái Vật Chức Nghiệp Học Viện?\", ch.1 \"trọng sinh, nhưng thời gian không đối\", ~10.272 ký tự, đầy đủ, không login/VIP. Đọc docs/CHI-CA-DAY-EM.md + shared/skills/vbook-extension-building/SKILL.md TRƯỚC khi build. Quy tắc nhà: chỉ free content, validate PASS + device test code 0 + install 200, KHÔNG tự merge — muse-main kiểm tra + merge. Branch gợi ý: feature/kyhuyen.\n\nTiến độ 2026-11-18 ~11:40+07 (muse-2): build xong extension extensions/novel/kyhuyen (branch feature/kyhuyen, commit a972842, da push). Quet trung: repo chua co kyhuyen (114 ext), khong task nao trung (090 la zhenhunxiaoshuo cua muse-1); ROADMAP.md local khong con tren VM nay (mat khi VM thay 18/11) nen khong doi chieu duoc — rescan #14 xac nhan kyhuyen la ung vien build moi. Khao sat live: homepage 200; truyen mau \"Con Co The Cu Di Hoc Quai Vat Chuc Nghiep Hoc Vien?\" 879 chuong (thieu chuong 71 phia site), ch.1 ~10.272 ky tu doc du, khong login/VIP; base port tu kychi_kyhuyen (kychitoge/vbook-ext) — sua 2 loi cua base: regexp cu khong khop URL chi tiet /truyen/<slug>, input the loai tac gia thieu tham so page. Validate PASS 115/115, 0 canh bao (registry 115 sau build-catalog).\n\nBLOCKED: device test + install chua chay — khong toi duoc vBook dev server tren dien thoai Anh (magic7-pro 100.90.26.91:8080) qua tailnet: curl /connect timeout (HTTP 000) ca bang IP lan ten DNS, 2 lan thu 11:33 va 12:36 18/11. 2 yeu cau duyet tunnel dang cho Anh duyet (Read 100.90.26.91, Read magic7-pro). CAN ANH: (1) duyet 2 yeu cau tunnel dang cho, (2) mo app vBook tren dien thoai, bat che do debug/dev mode de dev server chay, roi bao lai de test tiep (device test code 0 + install 200). Khong merge truoc khi du 3 dieu kien.",
+  "preferred_assignee": "muse-2",
+  "priority": "medium",
+  "repo": "Qsang_vbook",
+  "result": {
+    "branch": "feature/kyhuyen",
+    "notes": "Extension build xong, validate PASS. Device test + install chua chay duoc: khong ket noi duoc toi vBook dev server tren dien thoai Anh (magic7-pro 100.90.26.91:8080) qua tailnet — curl /connect timeout (HTTP 000) ca IP lan ten DNS, 2 lan thu 11:33 va 12:36 18/11. 2 yeu cau duyet tunnel dang cho Anh duyet (Read 100.90.26.91 va Read magic7-pro, cho cron Muse Teamwork Task Poll).\n\n[19/11 ~14:55 muse-main: MERGED len main 5de3801 — registry 116 nguon (zhenhun + kyhuyen). 3 dieu kien du: validate PASS, device test 9/9 code 0, install 200. Rebase len main 09a4379 truoc merge (base cu c4844ea); merge bang push FF branch:main vi main dang checkout o worktree quykhu; worktree main da FF len 5de3801 sau merge.]",
+    "review": {
+      "at": "2026-11-19T14:56:01+07:00",
+      "by": "muse-main",
+      "note": "Dat (7/10). Build tot: 9/9 case device test, validate PASS, install 200; detail/toc/home/genre/gen/search deu chay dung. Tru 3 diem: (1) chap.js khong tra tieu de chuong (data2 rong) — muse-main da sua lay tu h1.header-page + fallback <title>; (2) test.json co 2 ky vong loi thoi — so chuong 879 da cu (truyen dang ra, 880 luc 19/11) va gen cats=2 doi \"Vong du\" trong khi item list khong mang truong the loai — da sua ky vong theo du lieu live. Bai hoc cho muse-2: kiem chung tieu de chuong qua data2 va chi viet ky vong dua tren du lieu that payload tra ve (xem docs/CHI-CA-DAY-EM.md).",
+      "rounds": 1,
+      "score": 7
+    },
+    "test": {
+      "device_test": "9/9 PASS (code 0 — 2026-11-19 ~14:50, chay lai sau fix chap.js)",
+      "install": "200 (2026-11-19 ~14:50, HONOR PTP-AN10)",
+      "validate": "PASS (115 nguon, 115 registry, 0 canh bao — 2026-11-19 ~14:55, tren branch truoc rebase; sau rebase catalog=116, kiem tra tay catalog=disc)"
+    }
+  },
+  "status": "done",
+  "title": "Build extension kyhuyen.com",
+  "type": "vbook-extension"
 }
