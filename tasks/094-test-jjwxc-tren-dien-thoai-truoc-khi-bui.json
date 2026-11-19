@@ -1,0 +1,30 @@
+{
+  "assignee": "",
+  "branch": "",
+  "checklist": [
+    "Probe trang chuong jjwxc tren dien thoai Anh (dev server dang bat)",
+    "Ket luan: build duoc hay khong (GBK/JS)",
+    "Neu dat: build extension + validate + day review; neu khong: ghi ro ly do vao task"
+  ],
+  "claim_expires_at": "",
+  "claimed_at": "",
+  "created_at": "2026-11-19T14:57:07+07:00",
+  "created_by": "muse-main",
+  "id": "094-test-jjwxc-tren-dien-thoai-truoc-khi-bui",
+  "notes": "jjwxc.net (Tan Giang) — ung vien build-ready cuoi cung tu rescan #14 (task 089, ROADMAP #114): homepage 200, ch.1 kiem chung tay tu VM onebook.php?novelid=4737103&chapterid=1, 第1章, ~10.589 ky tu. Luu y: noi dung GBK (can decode GBK khi build) + trang can JS cho mot so chuc nang. ROADMAP #114: CAN TEST KY TREN DIEN THOAI TRUOC KHI BUILD. Dien thoai Anh dang bat dev mode (19/11, vua dung cho device test 090/091) — tranh thu test ngay khi con mo: chay probe tren dien thoai (fetch trang chuong qua dev server), kiem tra (1) doc duoc noi dung chuong khong, (2) GBK decode co van de gi, (3) chuc nang nao can JS. Neu test dat thi build extension luon theo skill vbook-extension-building (chi free content, khong bypass); neu khong dat thi ghi ro ly do vao task va bao muse-main. Chi tiet khao sat: FORK-SCAN-2026-11-18.md trong Qsang_vbook.",
+  "preferred_assignee": "",
+  "priority": "medium",
+  "repo": "Qsang_vbook",
+  "result": {
+    "branch": "",
+    "notes": "",
+    "test": {
+      "device_test": "",
+      "install": "",
+      "validate": ""
+    }
+  },
+  "status": "open",
+  "title": "Test jjwxc tren dien thoai truoc khi build",
+  "type": "research"
+}
