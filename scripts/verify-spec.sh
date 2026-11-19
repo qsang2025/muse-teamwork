@@ -34,11 +34,60 @@ else
   drift "thiếu STATUS.md ở gốc repo"
 fi
 
+# --- 1b. STATUS.md: trạng thái từng task khớp tasks/*.json (vá D8, QA dashboard 19/11) ---
+# STATUS.md nhắc trạng thái task theo 3 dạng: "NNN (doing, ...)", "087, 088, ... (done)"
+# ở cuối dòng, và "#14, #16, ... (cancelled)". So với file task thật; lệch nào
+# cũng là DRIFT (trường hợp 094: STATUS.md ghi doing trong khi file đã review).
+SPEC_ROOT="$ROOT" python3 - "$ROOT" <<'PYEOF' || DRIFT=1
+import json, glob, os, re, sys
+root = sys.argv[1]
+st = open(os.path.join(root, "STATUS.md"), encoding="utf-8").read()
+claimed = {}
+for line in st.splitlines():
+    if "(cancelled)" in line:
+        for n in re.findall(r"#(\d{2,3})", line):
+            claimed[n.zfill(3)] = "cancelled"
+        continue
+    m = re.search(r"\((open|claimed|doing|review|done|blocked|cancelled)\)\s*$", line)
+    if m:
+        for n in re.findall(r"\b(\d{3})\b", line[:m.start()]):
+            claimed[n] = m.group(1)
+        continue
+    m2 = re.search(r"\b(\d{3}) \((open|claimed|doing|review|done|blocked|cancelled)\b", line)
+    if m2:
+        claimed[m2.group(1)] = m2.group(2)
+errs = []
+seen = set()
+for f in sorted(glob.glob(os.path.join(root, "tasks", "*.json"))):
+    if os.path.basename(f) == "_template.json":
+        continue
+    d = json.load(open(f, encoding="utf-8"))
+    tid = str(d.get("id", ""))
+    m = re.match(r"(?:closed-)?(\d{2,3})", tid)
+    if not m:
+        continue
+    num = m.group(1).zfill(3)
+    seen.add(num)
+    actual = d.get("status", "")
+    if num not in claimed:
+        errs.append(f"task {tid} (status={actual}) không được nhắc trong STATUS.md")
+    elif claimed[num] != actual:
+        errs.append(f"STATUS.md ghi {num} ({claimed[num]}) nhưng file {tid} là {actual}")
+for num in sorted(claimed):
+    if num not in seen:
+        errs.append(f"STATUS.md nhắc {num} ({claimed[num]}) nhưng không có file task tương ứng")
+if errs:
+    for e in errs:
+        print(f"DRIFT: {e}")
+    sys.exit(1)
+print(f"OK: STATUS.md khớp trạng thái của {len(seen)} task trong tasks/*.json")
+PYEOF
+
 # --- 2. Task JSON: updated_at, branch trùng, notes quá dài, claim hết hạn ---
 for f in "$ROOT"/tasks/*.json; do
   [ "$(basename "$f")" = "_template.json" ] && continue
   id=$(python3 -c "import json,sys; print(json.load(open(sys.argv[1])).get('id','?'))" "$f")
-  python3 - "$f" <<'PYEOF'
+  python3 - "$f" <<'PYEOF' || DRIFT=1
 import json, sys, re
 from datetime import datetime, timezone
 f = sys.argv[1]
@@ -63,6 +112,7 @@ if len(str(d.get("notes", ""))) > 8000:
     errs.append(f"notes dài {len(str(d['notes']))} ký tự (>8000, cần archive)")
 for e in errs:
     print(f"DRIFT: task {d.get('id')}: {e}")
+sys.exit(1 if errs else 0)
 PYEOF
 done
 # (không có DRIFT in ra ở vòng này = các task đều đạt 3 mục trên)
