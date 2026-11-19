@@ -11,20 +11,20 @@
   "created_at": "2026-11-19T14:57:07+07:00",
   "created_by": "muse-main",
   "id": "094-test-jjwxc-tren-dien-thoai-truoc-khi-bui",
-  "notes": "jjwxc.net (Tan Giang) — ung vien build-ready cuoi cung tu rescan #14 (task 089, ROADMAP #114): homepage 200, ch.1 kiem chung tay tu VM onebook.php?novelid=4737103&chapterid=1, 第1章, ~10.589 ky tu. Luu y: noi dung GBK (can decode GBK khi build) + trang can JS cho mot so chuc nang. ROADMAP #114: CAN TEST KY TREN DIEN THOAI TRUOC KHI BUILD. Dien thoai Anh dang bat dev mode (19/11, vua dung cho device test 090/091) — tranh thu test ngay khi con mo: chay probe tren dien thoai (fetch trang chuong qua dev server), kiem tra (1) doc duoc noi dung chuong khong, (2) GBK decode co van de gi, (3) chuc nang nao can JS. Neu test dat thi build extension luon theo skill vbook-extension-building (chi free content, khong bypass); neu khong dat thi ghi ro ly do vao task va bao muse-main. Chi tiet khao sat: FORK-SCAN-2026-11-18.md trong Qsang_vbook.",
+  "notes": "jjwxc.net (Tan Giang) — ung vien build-ready cuoi cung tu rescan #14 (task 089, ROADMAP #114): homepage 200, ch.1 kiem chung tay tu VM onebook.php?novelid=4737103&chapterid=1, 第1章, ~10.589 ky tu. Luu y: noi dung GBK (can decode GBK khi build) + trang can JS cho mot so chuc nang. ROADMAP #114: CAN TEST KY TREN DIEN THOAI TRUOC KHI BUILD. Dien thoai Anh dang bat dev mode (19/11, vua dung cho device test 090/091) — tranh thu test ngay khi con mo: chay probe tren dien thoai (fetch trang chuong qua dev server), kiem tra (1) doc duoc noi dung chuong khong, (2) GBK decode co van de gi, (3) chuc nang nao can JS. Neu test dat thi build extension luon theo skill vbook-extension-building (chi free content, khong bypass); neu khong dat thi ghi ro ly do vao task va bao muse-main. Chi tiet khao sat: FORK-SCAN-2026-11-18.md trong Qsang_vbook.\n\n[19/11 ~15:15 muse-1: KET QUA PROBE TU VM (xong) — CHO PHONE PROBE TU MUSE-MAIN]\n- Chong trung (PROTOCOL §3): repo Qsang_vbook chua co extension jjwxc (grep chi thay FORK-SCAN); khong task claimed/doing/review nao trung jjwxc (093 la fleet-console cua muse-2, 092 la hub infra); FORK-SCAN #114 ghi jjwxc la ung vien build moi, KHONG bi dong theo loi Anh. -> Khong trung, duoc phep build neu phone test dat.\n- Probe VM 19/11 15:14 (requests, UA Chrome): https://www.jjwxc.net/onebook.php?novelid=4737103&chapterid=1 -> HTTP 200, 116.708 bytes. Charset GBK/gb18030. Co 第1章. Noi dung chuong NAM TRONG HTML TINH (khong can JS de lay text): doan van ban chuong ~3.396 ky tu/segment, tong text ~10.589 ky tu (khop rescan #14). GBK decode bang requests encoding='gbk' doc dung, khong mojibake. 'Can JS' chi la chuc nang phu tren trang (chon/select, bookmark, quang cao) — khong anh huong noi dung chuong.\n- KET LUAN VM: BUILD DUOC ve mat ky thuat (GBK decode + HTML tinh). Con thieu BUOC 1 tren dien thoai Anh theo checklist.\n- BLOCKED LY DO: muse-1 KHONG co device-test (agents.yaml: chi muse-main device-test tren dien thoai Anh). Can muse-main chay probe tren dien thoai Anh ngay khi dev mode con mo (19/11, vua dung cho 090/091): fetch trang chuong qua dev server, kiem tra (1) doc duoc noi dung chuong khong, (2) GBK decode co van de gi tren app khong, (3) chuc nang nao can JS. Neu dat -> tra task ve doing cho muse-1 build extension theo skill vbook-extension-building (chi free content, khong bypass); neu khong dat -> ghi ro ly do vao task.]",
   "preferred_assignee": "",
   "priority": "medium",
   "repo": "Qsang_vbook",
   "result": {
     "branch": "",
-    "notes": "",
+    "notes": "Probe VM PASS: HTTP 200, GBK decode OK, chuong 1 (~10.589 ky tu) trong HTML tinh, khong can JS. Cho muse-main probe tren dien thoai Anh (dev mode 19/11) truoc khi build.",
     "test": {
       "device_test": "",
       "install": "",
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "blocked",
   "title": "Test jjwxc tren dien thoai truoc khi build",
   "type": "research"
 }
