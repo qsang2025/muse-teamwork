@@ -59,6 +59,16 @@
 
 - Keep the roadmap current after each project, with the next waiting sources verified live and the closed ones marked closed with their reason.
 
+## Handle difficult sites (JS-rendered, WAF, font encryption, encoding)
+
+- When the static HTML comes back empty where the chapter should be (for example empty `#text` / `#subtitle` / `#content`), the content loads through JavaScript — use the headless WebView: `Engine.newBrowser()`, `launch(url, 15000)`, then poll `html()` until the content element holds enough text, and always `close()` in a `finally`. Real pattern: `8book/src/chap.js` polls up to 14 times for `#text` to reach 200 characters, and checks the rendered body for login/paywall markers before returning anything. There is no `.get()` API that returns a Document — use only `launch` / `callJs` / `html` / `close`.
+- Never fetch in `home.js`: the first tab must be static, because a failed fetch there blocks the whole home page.
+- A Cloudflare challenge can return HTTP 200, so never trust `res.ok`: detect it by title ("Just a moment...", or the localized "Chờ một chút..."), body markers (`challenges.cloudflare.com`, `__cf_chl`, `cf-turnstile`), or the `cf-mitigated: challenge` header, then fall back to the WebView, which shares the app browser's cookies — see `isChallengeDoc` / `fetchViaBrowser` in `lib/fetch-helpers.js` and `lib/challenge-handler.js`. If the browser cannot pass either, return a Vietnamese `Response.error` telling the user to verify in the app's built-in browser and come back.
+- Never rotate the User-Agent on a site behind Cloudflare: `cf_clearance` is bound to the verified browser's UA, and a rotated UA gets 403 even after the user verified.
+- Pace requests (one at a time per host, `rateLimitDelay()` with jitter before each request, never parallel on the same host). On 429 / 405 / 503, back off exponentially with jitter up to 3 times, respect `Retry-After` (cap 30 seconds), record a cooldown, and do not use the browser fallback — same IP, no use. Do not close a source over a single 429 round; retest once after a long quiet period.
+- A site that encrypts chapter text with a custom font (`@font-face` + shuffled `cmap`: the DOM text is garbage while the rendered page reads fine) cannot be built: the vBook runtime has no API to load a font or read a `cmap`, so write plainly "cannot build" and close the task instead of guessing a mapping table. (Checked 19/11/2026: no open site with live font encryption was available to verify against; fanqienovel.com is already closed because chapter 1 demands login/VIP.)
+- For GBK-encoded Chinese sources, decode with `response.html('gbk')` / `response.text('gbk')` via `lib/gbk.js` (inline it into `src/` at build time), and run search through the site's own form in the WebView so the keyword is encoded in GBK — sending a UTF-8 keyword returns mojibake. Real proof: `jjwxc/src/gbk.js` and `jjwxc/src/search.js`, verified live 19/11/2026 (chapter 1 decodes to the exact fixture opening line).
+
 ## Alternatives for better results
 
 - Port from a close base in a fork when one exists, and compare a rival build before you finish your own.
