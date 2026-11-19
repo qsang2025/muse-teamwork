@@ -7,11 +7,11 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "high",
-  "status": "claimed",
+  "status": "doing",
   "created_by": "muse-main",
   "created_at": "2026-11-20T01:48:29+07:00",
   "claimed_at": "2026-11-20T01:52:13+07:00",
-  "claim_expires_at": "2026-11-20T03:52:13+07:00",
+  "claim_expires_at": "2026-11-20T04:42:01+07:00",
   "result": {
     "branch": "",
     "test": {
@@ -30,5 +30,5 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
-  "notes": "Anh chọn làm trước (01:48, roadmap #117). Site: https://hhtq.press/ — phim 3D Trung Quốc vietsub, live HTTP 200 (kiểm chứng 20/11 từ VM, 2 lần), free, không VIP/paywall. Chi tiết: ~/workspace/vbook/work/ext-review/VIDEO-SITES-SCAN-2026-11-20.md §3.\nBUILD MỚI TỪ ĐẦU: base Darkrai9x hhtqvietsub v11 BỊ MÃ HOÁ toàn bộ src/*.js (không có function execute, không đọc được) — KHÔNG dùng được code, chỉ chứng minh site làm được extension. Khảo sát lại cấu trúc HTML/API của site rồi viết script theo hợp đồng hiện tại. Tham khảo extension video sẵn trong repo (extensions/video/hoathinh3d — qua API phimapi; hoathinh_ai — qua Dailymotion) để theo đúng mẫu loại video, đặc biệt track.js (nguồn phát) — phải kiểm chứng phát lại được trên máy thật, không chỉ lấy được link.\nQuy trình nhà: branch từ main tip; validate PASS + device test code 0 + install 200 do builder tự kiểm chứng (qua forwarder VBOOK_SERVER=http://127.0.0.1:18080, kiểm tra /connect trước mỗi lượt test); merge chỉ do muse-main thực hiện sau khi kiểm tra lại. Chỉ nội dung free — không bypass VIP/paywall, không login/token. Lưu ý: site có thể có Cloudflare/player JS — kiểm chứng trang xem phim + track trên điện thoại Anh lúc build, báo rõ nếu phát lại không chạy được trong app."
+  "notes": "Anh chọn làm trước (01:48, roadmap #117). Site: https://hhtq.press/ — phim 3D Trung Quốc vietsub, live HTTP 200 (kiểm chứng 20/11 từ VM, 2 lần), free, không VIP/paywall. Chi tiết: ~/workspace/vbook/work/ext-review/VIDEO-SITES-SCAN-2026-11-20.md §3.\nBUILD MỚI TỪ ĐẦU: base Darkrai9x hhtqvietsub v11 BỊ MÃ HOÁ toàn bộ src/*.js (không có function execute, không đọc được) — KHÔNG dùng được code, chỉ chứng minh site làm được extension. Khảo sát lại cấu trúc HTML/API của site rồi viết script theo hợp đồng hiện tại. Tham khảo extension video sẵn trong repo (extensions/video/hoathinh3d — qua API phimapi; hoathinh_ai — qua Dailymotion) để theo đúng mẫu loại video, đặc biệt track.js (nguồn phát) — phải kiểm chứng phát lại được trên máy thật, không chỉ lấy được link.\nQuy trình nhà: branch từ main tip; validate PASS + device test code 0 + install 200 do builder tự kiểm chứng (qua forwarder VBOOK_SERVER=http://127.0.0.1:18080, kiểm tra /connect trước mỗi lượt test); merge chỉ do muse-main thực hiện sau khi kiểm tra lại. Chỉ nội dung free — không bypass VIP/paywall, không login/token. Lưu ý: site có thể có Cloudflare/player JS — kiểm chứng trang xem phim + track trên điện thoại Anh lúc build, báo rõ nếu phát lại không chạy được trong app. [02:42 muse-1: Da khao sat xong hhtq.press: HalimMovies, player.php tra iframe embed, AJAX halim_episode_pagination lay danh sach tap. Dang viet extension video/hhtqvietsub.]"
 }
