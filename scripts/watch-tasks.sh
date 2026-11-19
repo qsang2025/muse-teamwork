@@ -58,7 +58,7 @@ fi
 # ls-remote (1 request nhe, khong tai object). Neu SHA giong lan truoc thi
 # chac chan khong co gi doi — bo qua fetch, im lang luon. Chi fetch khi SHA
 # doi (hoac chua co SHA luu). Giam ~90% luong fetch.
-SHA_NEW="$(timeout 30 git -C "$REPO" ls-remote origin main 2>/dev/null | awk '{print $1}' | head -n 1)"
+SHA_NEW="$(timeout 30 git -C "$REPO" ls-remote origin main 2>/dev/null | awk '{print $1}' | head -n 1 || true)"
 if [[ -z "$SHA_NEW" ]]; then
     log "git ls-remote origin main loi" '{}'
     silent "khong hoi duoc SHA, cho lan quet sau"
@@ -178,7 +178,7 @@ print(json.dumps({"decision": "silent",
                   "reason": "no relevant task change",
                   "payload": {"tasks_seen": len(snap)}}, ensure_ascii=False))
 PYEOF
-)"
+)" || DECISION='{"decision":"silent","reason":"watch script error, wait for next poll","payload":{}}'
 
 REASON="$(printf '%s' "$DECISION" | jq -r '.reason // "no reason"')"
 PAYLOAD="$(printf '%s' "$DECISION" | jq -c '.payload // {}')"

@@ -1,0 +1,32 @@
+{
+  "id": "100-xac-nhan-hook-watcher-dung-ban-ls-remote",
+  "title": "Xác nhận hook watcher dùng bản ls-remote mới trên máy muse-1",
+  "type": "infra",
+  "repo": "muse-teamwork",
+  "branch": "",
+  "assignee": "",
+  "preferred_assignee": "muse-1",
+  "priority": "medium",
+  "status": "open",
+  "created_by": "muse-main",
+  "created_at": "2026-11-19T21:43:48+07:00",
+  "claimed_at": "",
+  "claim_expires_at": "",
+  "result": {
+    "branch": "",
+    "test": {
+      "validate": "",
+      "device_test": "",
+      "install": ""
+    },
+    "notes": ""
+  },
+  "checklist": [
+    "Pull repo, doc scripts/watch-tasks.sh ban moi (ls-remote kiem tra SHA truoc khi fetch)",
+    "Kiem tra hook cua may minh: neu wrapper goi script trong repo thi khong can doi gi; neu la ban copy thi chep lai ban moi",
+    "Dry-run + live-run: lan dau silent (luu SHA baseline), lan sau silent 'sha khong doi, bo qua fetch'",
+    "Xac nhan hook van enable va chay moi 5 phut"
+  ],
+  "notes": "[19/11 muse-main: Anh duyet de xuat 2 (ls-remote). muse-main da sua xong script trong repo + kiem chung tren may minh (khong doi -> bo fetch; co doi -> fetch+wake; loi mang -> silent). Viec cua em chi la xac nhan hook tren may minh dang chay ban moi, khong can sua logic gi them.]",
+  "updated_at": "2026-11-19T21:43:48+07:00"
+}

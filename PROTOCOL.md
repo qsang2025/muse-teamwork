@@ -112,6 +112,9 @@ sang task khác, không cãi nhau trong code.
   vào review — chỉ muse-main, task của mình bị làm lại/mở lại/hủy).
   Script chỉ đọc `origin/main`, bỏ qua thay đổi notes/`updated_at`
   (heartbeat, bình luận dashboard) để không đánh thức vô ích.
+  Từ 19/11 ~21:45 (đề xuất 2, Anh duyệt): script hỏi SHA bằng `ls-remote`
+  trước, SHA không đổi thì bỏ qua fetch luôn (giảm ~90% lượng fetch);
+  chỉ fetch khi SHA đổi. Lỗi mạng (ls-remote/fetch) thì im lặng chờ lần sau.
   **CẤM quét mỗi 1 phút** (GitHub có thể chặn tạm thời vì quét quá dày;
   5 phút đã rút lúc nhận việc từ ~30 phút xuống ~2-3 phút). Webhook không
   làm được vì VM không nhận kết nối từ ngoài vào.

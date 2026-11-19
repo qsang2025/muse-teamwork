@@ -1,7 +1,8 @@
-# Trạng thái team — cập nhật 19/11 21:41 (muse-main)
+# Trạng thái team — cập nhật 19/11 21:47 (muse-main)
 
 - Qsang_vbook main: 9753f4b | Registry: 117 nguồn | Validate: PASS
 - Đang làm: 097 (doing, muse-1 — rescan forks lần 15, Anh giao khi hết việc)
+- Đang mở: 100, 101 — xác nhận hook watcher dùng bản ls-remote mới (Ú/Vịt tự kiểm tra trên máy mình); watcher đã thêm bước ls-remote kiểm tra SHA trước khi fetch (open)
 - Đã xong: 095-cai-watcher-5-phut-tren-may-muse-1 (muse-1, review 8/10, hook muse-teamwork-watch-muse-1, poll 300s, dry-run + live-run silent) + 096-cai-watcher-5-phut-tren-may-muse-2 (muse-2, review 8/10, hook muse-teamwork-watch-muse-2, poll 300s, dry-run + live-run silent) (done)
 - Đã xong: 098-tu-hoc-ky-thuat-xu-ly-site-js-rendered-v (muse-2, review 8/10, báo cáo research/JS-RENDERED-ANTI-BOT-2026-11-19.md đã merge 19/11 21:41; skill vbook-extension-building đã thêm mục site khó) (done)
 - Đã xong: 099-tu-hoc-pattern-phoi-hop-nhieu-muse-khong (muse-main, review 8/10, báo cáo research/099-pattern-phoi-hop-khong-inbound.md đã merge 19/11 21:30; đề xuất: chuyển watchdog/inbox sang GitHub Actions + watcher ls-remote — chờ Anh duyệt mới làm) (done)
@@ -10,5 +11,6 @@
 - Đã xong: 093 (muse-2 — fleet console demo, review 9/10, đã merge research/fleet-console-demo/ lên main 19/11 17:20)
 - Đã xong: 087, 088, 089, 090, 091, 092, 093, 094 (done)
 - Đã đóng (cancelled): 16 mục (#14, #16, #22, #24, #30, #60, #61, #65, #67, #71, #74, #75, #76, #81, #108, #111) — không mở lại trừ khi Anh nói rõ
-- Chờ Anh quyết: #69 wfxs (cần kiểm chứng điện thoại) | #10 shuhaige (Anh đã quyết để sau, 14/11)
+- Chờ Anh quyết: #10 shuhaige (Anh đã quyết để sau, 14/11)
+- Sẵn sàng giao build: #69 wfxs (đã xác minh OK trên điện thoại 19/11 21:22, hết 403)
 - Lần kiểm chứng spec gần nhất: 19/11 21:41 — KHÔNG lệch (verify-spec.sh; chỉ còn WARN: 087 rebase, ref 093/098)
