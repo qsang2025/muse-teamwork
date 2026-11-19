@@ -7,7 +7,7 @@
   "assignee": "muse-1",
   "preferred_assignee": "",
   "priority": "medium",
-  "status": "review",
+  "status": "blocked",
   "created_by": "muse-main",
   "created_at": "2026-11-19T21:57:00+07:00",
   "claimed_at": "2026-11-19T22:10:44+07:00",
@@ -15,17 +15,17 @@
   "result": {
     "branch": "feature/104-build-truyenkimdung-net",
     "test": {
-      "validate": "PASS",
-      "device_test": "",
-      "install": ""
+      "validate": "PASS (118 nguon, 118 registry, 0 canh bao — 2026-11-19 ~22:20, muse-main chay lai tren branch feature/104-build-truyenkimdung-net)",
+      "device_test": "CHUA chay — khong toi duoc vBook dev server tren dien thoai Anh (servers.json: 100.90.26.91:8080 + 166.32.143.61:8080, ca 2 socket hang up, thu 2 lan 22:20)",
+      "install": "CHUA chay — doi device test"
     },
-    "notes": "Build xong Truyện Kim Dung v1 (truyenkimdung.net, novel, vi_VN): home/genre/gen/search/detail/toc/chap + config, icon 200x200 từ logo site, test.json+health.json. Validate PASS 118 nguồn 0 cảnh báo, build zip 85583 bytes, registry 118. Kiểm chứng tay trên VM: thư viện 20 bộ, detail Bích Huyết kiếm (Bản cũ, 20 hồi), toc đủ 20 hồi, chap1 đọc đủ (mở đầu 'Vào tháng tám Ất Mùi'), search /?q= SSR trả đúng. Device test + install CHƯA chạy (máy muse-1 không có vBook dev server) — nhờ muse-main chạy trên điện thoại Anh rồi merge. Branch feature/104-build-truyenkimdung-net commit 5ce8ff6.",
+    "notes": "Build xong Truyện Kim Dung v1 (truyenkimdung.net, novel, vi_VN): home/genre/gen/search/detail/toc/chap + config, icon 200x200 từ logo site, test.json+health.json. Validate PASS 118 nguồn 0 cảnh báo, build zip 85583 bytes, registry 118. Kiểm chứng tay trên VM: thư viện 20 bộ, detail Bích Huyết kiếm (Bản cũ, 20 hồi), toc đủ 20 hồi, chap1 đọc đủ (mở đầu 'Vào tháng tám Ất Mùi'), search /?q= SSR trả đúng. Device test + install CHƯA chạy (máy muse-1 không có vBook dev server) — nhờ muse-main chạy trên điện thoại Anh rồi merge. Branch feature/104-build-truyenkimdung-net commit 5ce8ff6. | muse-main 22:20: validate PASS chay lai OK (118 nguon, 0 canh bao). Device test + install CHUA chay: ca 2 server trong servers.json deu socket hang up (thu 2 lan). Can Anh mo vBook tren dien thoai va bat dev mode, roi bao lai de muse-main chay device test + install roi merge. Cung blocker nhu task 102.",
     "review": {
-      "score": "",
-      "rounds": 0,
-      "by": "",
-      "at": "",
-      "note": ""
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-19T22:20:00+07:00",
+      "note": "Build day du (home/genre/search/detail/toc/chap + config), validate PASS chay lai OK, muse-1 da kiem chung tay tren VM (20 bo, detail/toc/chap1/search SSR). Chua merge duoc vi thieu device test + install — loi o dev server dien thoai, khong phai o build."
     }
   },
   "checklist": [
@@ -36,5 +36,5 @@
     "Push branch, cập nhật task sang review"
   ],
   "notes": "truyenkimdung.net — ứng viên build mới từ rescan #15 (task 097, FORK-SCAN-2026-11-19.md §3.2): thư viện võ hiệp Kim Dung, SSR, catalog nhỏ trọn 20 bộ tại /muc-luc. Chương 1 kiểm chứng tay: /truyen/bich-huyet-kiem/hoi-01-duong-loan-day-nguy-hiem-vua-tu-huy-truong-thanh — Bích Huyết kiếm Hồi 01, nội dung đầy đủ, 'Đăng nhập' chỉ để bình luận, không khóa đọc. Pattern đều: /truyen/<slug>/hoi-<n>-<slug-chuong>. Lưu ý: tìm kiếm qua API riêng /tracuu/api/stories + /api/search (trang /tracuu/ là công cụ JS) — search.js nên gọi API hoặc lọc trên danh sách 20 bộ. Meo đã có extension Truyện Kim Dung v2 (novel/truyenkimdung). Ưu tiên thấp hơn sto66/shushuwuxs vì kho chỉ 20 bộ.",
-  "updated_at": "2026-11-19T21:57:00+07:00"
+  "updated_at": "2026-11-19T22:20:00+07:00"
 }
