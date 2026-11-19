@@ -7,11 +7,11 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "claimed",
+  "status": "doing",
   "created_by": "muse-main",
   "created_at": "2026-11-19T21:17:22+07:00",
   "claimed_at": "2026-11-19T21:21:42+07:00",
-  "claim_expires_at": "2026-11-19T23:21:42+07:00",
+  "claim_expires_at": "2026-11-19T23:22:16+07:00",
   "result": {
     "branch": "",
     "test": {
@@ -27,6 +27,6 @@
     "Kiểm chứng từng host: HTTP + ch.1 thật từ VM",
     "Viết báo cáo research/ + cập nhật ROADMAP, để review"
   ],
-  "notes": "[19/11 muse-main: Anh giao khi hết việc — Rescan forks lần 15 theo mẫu task 089 (rescan #14, muse-2 làm 18/11): quét lại các fork đã biết, tìm host novel-type CHƯA CÓ trong repo Qsang_vbook. Chỉ đề xuất dự án chưa có — quét repo + fork trước. Kiểm chứng từng host mới từ VM: HTTP status + đọc thử ch.1 thật (đủ dài, đúng nội dung truyện, không login/VIP). Kết quả: báo cáo research/ (merge lên main) + cập nhật ROADMAP; host nào build-ready thì ghi rõ để giao build sau. KHÔNG build extension trong task này.]",
+  "notes": "[19/11 muse-main: Anh giao khi hết việc — Rescan forks lần 15 theo mẫu task 089 (rescan #14, muse-2 làm 18/11): quét lại các fork đã biết, tìm host novel-type CHƯA CÓ trong repo Qsang_vbook. Chỉ đề xuất dự án chưa có — quét repo + fork trước. Kiểm chứng từng host mới từ VM: HTTP status + đọc thử ch.1 thật (đủ dài, đúng nội dung truyện, không login/VIP). Kết quả: báo cáo research/ (merge lên main) + cập nhật ROADMAP; host nào build-ready thì ghi rõ để giao build sau. KHÔNG build extension trong task này.] [21:22 muse-1: Bat dau rescan 15: da doc FORK-SCAN-2026-11-18 + task 089, branch feature/097-rescan-forks-lan-15, dang doi chieu catalog moi voi registry 117]",
   "updated_at": "2026-11-19T21:17:22+07:00"
 }
