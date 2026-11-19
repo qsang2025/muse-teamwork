@@ -265,8 +265,9 @@ def apply_parsed(task_num, p, dry_run):
         elif d == "reopen":
             t["status"] = "open"
             t["blocked_reason"] = ""
-            t["notes"] = add_note("mở lại task.")
-            desc = f"đã mở lại task {task_num}."
+            why = f" {p['reason']}" if p["reason"] else ""
+            t["notes"] = add_note(f"mở lại task.{why}")
+            desc = f"đã mở lại task {task_num}.{why}"
         elif d == "cancel":
             t["status"] = "cancelled"
             t["notes"] = add_note(f"hủy task. {p['reason']}".strip())
