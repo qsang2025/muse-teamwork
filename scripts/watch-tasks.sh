@@ -25,7 +25,17 @@
 #   - task chuyen sang review (chi danh thuc muse-main)
 #   - task cua A chuyen sang doing (tu review/blocked — lam lai / go ket),
 #     sang open (tu blocked/review/doing — mo lai), sang cancelled (dung viec)
-# Lan chay dau (chua co state): ghi baseline, silent, khong danh thuc.
+#   - WATCHDOG (task 115, quyet 20/11 — sau vu task 112 ket 1h43 vi worker
+#     chet ma khong de lai commit): task o "claimed" ma qua 30 phut ke tu
+#     claimed_at van chua co commit/heartbeat moi thi danh thuc agent duoc
+#     gan (va muse-main nhu luoi an toan). Chi ap dung status "claimed"
+#     (task "doing" da co commit dau tien; build dai khong commit la binh
+#     thuong). Moi claim chi bao 1 lan; claim moi (claimed_at doi) hoac
+#     task roi "claimed" thi dat lai. Kiem tra ca khi SHA khong doi, tren
+#     snapshot da luu — vi task ket thi SHA khong doi la dung truong hop
+#     can bat. Thoi gian claim giu 2h (khong giam xuong 1h).
+# Lan chay dau (chua co state): ghi baseline, silent, khong danh thuc
+# (tru watchdog: task claimed qua 30 phut van bao, vi do la ket that).
 # Fetch loi: log + silent (khong ket luan duoc thi im lang).
 # Dry-run (HATCH_HOOK_DRY_RUN=1): KHONG ghi state.
 set -euo pipefail
@@ -56,8 +66,10 @@ fi
 
 # Buoc nhe truoc (de xuat 2, Anh duyet 19/11): hoi SHA cua origin/main bang
 # ls-remote (1 request nhe, khong tai object). Neu SHA giong lan truoc thi
-# chac chan khong co gi doi — bo qua fetch, im lang luon. Chi fetch khi SHA
-# doi (hoac chua co SHA luu). Giam ~90% luong fetch.
+# chac chan khong co gi doi — bo qua fetch, nhung VAN chay watchdog tren
+# snapshot da luu (task claimed bi ket thi SHA khong doi — dung truong hop
+# watchdog can bat). Chi fetch khi SHA doi (hoac chua co SHA luu).
+# Giam ~90% luong fetch.
 SHA_NEW="$(timeout 30 git -C "$REPO" ls-remote origin main 2>/dev/null | awk '{print $1}' | head -n 1 || true)"
 if [[ -z "$SHA_NEW" ]]; then
     log "git ls-remote origin main loi" '{}'
@@ -65,115 +77,180 @@ if [[ -z "$SHA_NEW" ]]; then
 fi
 OLD_SHA="$(jq -r '.sha // empty' "$STATE" 2>/dev/null || true)"
 if [[ -n "$OLD_SHA" && "$OLD_SHA" == "$SHA_NEW" ]]; then
-    silent "khong co thay doi (sha khong doi, bo qua fetch)" "{\"sha\":\"$SHA_NEW\"}"
+    MODE="watchdog"
+else
+    MODE="full"
+    if ! timeout 60 git -C "$REPO" fetch origin main --quiet 2>/dev/null; then
+        log "git fetch origin main loi" '{}'
+        silent "khong fetch duoc repo, cho lan quet sau"
+    fi
 fi
 
-if ! timeout 60 git -C "$REPO" fetch origin main --quiet 2>/dev/null; then
-    log "git fetch origin main loi" '{}'
-    silent "khong fetch duoc repo, cho lan quet sau"
-fi
-
-# Doc snapshot tu origin/main bang python3 (1 tien trinh duy nhat), so sanh
-# voi state, in ra quyet dinh JSON: {"decision":..., "reason":..., "payload":...}
-DECISION="$(python3 - "$REPO" "$STATE" "$AGENT" "$DRY" "$SHA_NEW" <<'PYEOF'
+# Doc snapshot (tu origin/main neu MODE=full, tu state da luu neu
+# MODE=watchdog) bang python3 (1 tien trinh duy nhat), so sanh voi state,
+# in ra quyet dinh JSON: {"decision":..., "reason":..., "payload":...}
+DECISION="$(python3 - "$REPO" "$STATE" "$AGENT" "$DRY" "$SHA_NEW" "$MODE" <<'PYEOF'
 import json, os, subprocess, sys
+from datetime import datetime, timezone, timedelta
 
 repo, state_path, agent, dry = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4] == "1"
 sha_new = sys.argv[5] if len(sys.argv) > 5 else ""
+mode = sys.argv[6] if len(sys.argv) > 6 else "full"
+
+WATCHDOG_STALL_MINUTES = 30
 
 def git(*args):
     r = subprocess.run(["git", "-C", repo] + list(args),
                        capture_output=True, text=True, timeout=30)
     return r.stdout if r.returncode == 0 else ""
 
-# Liet ke file task top-level tren origin/main (bo template + archive).
-files = []
-out = git("ls-tree", "-r", "--name-only", "origin/main", "tasks/")
-for line in out.splitlines():
-    line = line.strip()
-    if not line.startswith("tasks/") or line.count("/") != 1:
-        continue
-    name = line[len("tasks/"):]
-    if name in ("_template.json", "000-template.json"):
-        continue
-    if name.endswith(".json"):
-        files.append(line)
-
-snap = {}
-for path in files:
-    raw = git("show", f"origin/main:{path}")
-    if not raw:
-        continue
+def parse_ts(s):
+    if not s:
+        return None
     try:
-        t = json.loads(raw)
-    except Exception:
-        continue
-    tid = str(t.get("id", "") or "")
-    if not tid:
-        tid = os.path.basename(path).split("-")[0]
-    snap[tid] = {
-        "status": str(t.get("status", "")),
-        "assignee": str(t.get("assignee", "") or ""),
-        "preferred_assignee": str(t.get("preferred_assignee", "") or ""),
-        "file": path,
-    }
+        dt = datetime.fromisoformat(str(s).replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone(timedelta(hours=7)))
+    return dt
 
-old = {}
-if os.path.exists(state_path):
+def load_state():
     try:
-        old = json.load(open(state_path, encoding="utf-8")).get("tasks", {})
+        st = json.load(open(state_path, encoding="utf-8"))
     except Exception:
-        old = {}
+        return {}, {}
+    return st.get("tasks", {}) or {}, st.get("watchdog_alerted", {}) or {}
+
+old, alerted = load_state()
+
+if mode == "full":
+    # Liet ke file task top-level tren origin/main (bo template + archive).
+    files = []
+    out = git("ls-tree", "-r", "--name-only", "origin/main", "tasks/")
+    for line in out.splitlines():
+        line = line.strip()
+        if not line.startswith("tasks/") or line.count("/") != 1:
+            continue
+        name = line[len("tasks/"):]
+        if name in ("_template.json", "000-template.json"):
+            continue
+        if name.endswith(".json"):
+            files.append(line)
+
+    snap = {}
+    for path in files:
+        raw = git("show", f"origin/main:{path}")
+        if not raw:
+            continue
+        try:
+            t = json.loads(raw)
+        except Exception:
+            continue
+        tid = str(t.get("id", "") or "")
+        if not tid:
+            tid = os.path.basename(path).split("-")[0]
+        snap[tid] = {
+            "status": str(t.get("status", "")),
+            "assignee": str(t.get("assignee", "") or ""),
+            "preferred_assignee": str(t.get("preferred_assignee", "") or ""),
+            "claimed_at": str(t.get("claimed_at", "") or ""),
+            "updated_at": str(t.get("updated_at", "") or ""),
+            "file": path,
+        }
+else:
+    # SHA khong doi: khong co du lieu moi, dung snapshot da luu de chay
+    # watchdog (task ket thi SHA khong doi — dung truong hop can bat).
+    snap = old
 
 wakes = []
 
 def mine(t):
     return t.get("assignee") == agent or t.get("preferred_assignee") == agent
 
+# --- Danh thuc theo thay doi trang thai (chi MODE=full, co snapshot cu) ---
+if mode == "full" and old:
+    for tid, cur in snap.items():
+        prev = old.get(tid)
+        if prev is None:
+            if mine(cur) and cur["status"] not in ("done", "cancelled"):
+                wakes.append({"task": tid, "why": "new task assigned", "status": cur["status"]})
+            continue
+        if cur["status"] == prev.get("status"):
+            continue
+        old_status, new_status = prev.get("status", ""), cur["status"]
+        if new_status == "review" and agent == "muse-main":
+            wakes.append({"task": tid, "why": "entered review", "from": old_status, "to": new_status})
+        elif new_status == "doing" and mine(cur) and old_status in ("review", "blocked"):
+            wakes.append({"task": tid, "why": "rework/unblocked to doing", "from": old_status, "to": new_status})
+        elif new_status == "open" and mine(cur) and old_status in ("blocked", "review", "doing"):
+            wakes.append({"task": tid, "why": "reopened", "from": old_status, "to": new_status})
+        elif new_status == "cancelled" and mine(cur):
+            wakes.append({"task": tid, "why": "cancelled", "from": old_status, "to": new_status})
+
+# --- Watchdog: task "claimed" qua 30 phut khong commit/heartbeat moi ---
+# Chi ap dung status "claimed": worker chua co commit dau tien (quy tac
+# PROTOCOL §2: phai commit tien do trong 15 phut dau sau claim). Task
+# "doing" da co commit dau tien nen khong xet — build dai khong commit
+# la binh thuong. Moi claim chi bao 1 lan (danh dau theo claimed_at).
+now = datetime.now(timezone.utc)
+new_alerted = {}
 for tid, cur in snap.items():
-    prev = old.get(tid)
-    if prev is None:
-        if mine(cur) and cur["status"] not in ("done", "cancelled"):
-            wakes.append({"task": tid, "why": "new task assigned", "status": cur["status"]})
+    if cur.get("status") != "claimed":
         continue
-    if cur["status"] == prev.get("status"):
+    claimed_at = cur.get("claimed_at", "")
+    claimed = parse_ts(claimed_at)
+    if claimed is None:
         continue
-    old_status, new_status = prev.get("status", ""), cur["status"]
-    if new_status == "review" and agent == "muse-main":
-        wakes.append({"task": tid, "why": "entered review", "from": old_status, "to": new_status})
-    elif new_status == "doing" and mine(cur) and old_status in ("review", "blocked"):
-        wakes.append({"task": tid, "why": "rework/unblocked to doing", "from": old_status, "to": new_status})
-    elif new_status == "open" and mine(cur) and old_status in ("blocked", "review", "doing"):
-        wakes.append({"task": tid, "why": "reopened", "from": old_status, "to": new_status})
-    elif new_status == "cancelled" and mine(cur):
-        wakes.append({"task": tid, "why": "cancelled", "from": old_status, "to": new_status})
+    stalled = int((now - claimed).total_seconds() // 60)
+    if stalled < WATCHDOG_STALL_MINUTES:
+        continue
+    # Giu lai danh dau cho claim van con ket (de khong bao lap); claim
+    # moi (claimed_at doi) hoac task roi "claimed" thi tu dat lai.
+    if alerted.get(tid) == claimed_at:
+        new_alerted[tid] = claimed_at
+        continue
+    if agent != "muse-main" and cur.get("assignee") != agent:
+        continue
+    wakes.append({"task": tid, "why": "claimed stalled without progress commit",
+                  "status": "claimed", "claimed_at": claimed_at,
+                  "stalled_minutes": stalled,
+                  "assignee": cur.get("assignee", "")})
+    new_alerted[tid] = claimed_at
 
 wakes = wakes[:10]
 
-if not old:
-    if not dry:
-        os.makedirs(os.path.dirname(state_path) or ".", exist_ok=True)
-        with open(state_path, "w", encoding="utf-8") as f:
-            json.dump({"tasks": snap, "sha": sha_new}, f, ensure_ascii=False, indent=1)
-    print(json.dumps({"decision": "silent",
-                      "reason": "initialized baseline (first run)" if not dry else "would initialize baseline (dry-run, state not written)",
-                      "payload": {"tasks_seen": len(snap)}}, ensure_ascii=False))
+def write_state(tasks, sha):
+    if dry:
+        return
+    os.makedirs(os.path.dirname(state_path) or ".", exist_ok=True)
+    with open(state_path, "w", encoding="utf-8") as f:
+        json.dump({"tasks": tasks, "sha": sha,
+                   "watchdog_alerted": new_alerted}, f,
+                  ensure_ascii=False, indent=1)
+
+if mode == "full" and not old:
+    write_state(snap, sha_new)
+    if wakes:
+        # Baseline nhung watchdog van bao task ket that (khong phai wake
+        # theo thay doi trang thai — task claimed qua 30 phut la ket that).
+        print(json.dumps({"decision": "wake",
+                          "reason": "task change needs " + agent,
+                          "payload": {"changes": wakes}}, ensure_ascii=False))
+    else:
+        print(json.dumps({"decision": "silent",
+                          "reason": "initialized baseline (first run)" if not dry else "would initialize baseline (dry-run, state not written)",
+                          "payload": {"tasks_seen": len(snap)}}, ensure_ascii=False))
     sys.exit(0)
 
 if wakes:
-    if not dry:
-        os.makedirs(os.path.dirname(state_path) or ".", exist_ok=True)
-        with open(state_path, "w", encoding="utf-8") as f:
-            json.dump({"tasks": snap, "sha": sha_new}, f, ensure_ascii=False, indent=1)
+    write_state(snap, sha_new)
     print(json.dumps({"decision": "wake",
                       "reason": "task change needs " + agent,
                       "payload": {"changes": wakes}}, ensure_ascii=False))
     sys.exit(0)
 
-if not dry:
-    os.makedirs(os.path.dirname(state_path) or ".", exist_ok=True)
-    with open(state_path, "w", encoding="utf-8") as f:
-        json.dump({"tasks": snap, "sha": sha_new}, f, ensure_ascii=False, indent=1)
+write_state(snap, sha_new)
 print(json.dumps({"decision": "silent",
                   "reason": "no relevant task change",
                   "payload": {"tasks_seen": len(snap)}}, ensure_ascii=False))

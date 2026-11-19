@@ -1,5 +1,9 @@
-# Trạng thái team — cập nhật 20/11 00:55 (muse-main)
+# Trạng thái team — cập nhật 20/11 02:46 (muse-main)
 
+- 115 (done, muse-main — quyết 3 đề xuất watchdog task claimed bị kẹt: (1) ĐỒNG Ý watchdog 30 phút trong watch-tasks.sh — task `claimed` quá 30 phút không commit thì đánh thức agent được gán + muse-main, mỗi claim chỉ báo 1 lần; (2) ĐỒNG Ý bắt buộc commit tiến độ/WIP trong 15 phút đầu sau claim (PROTOCOL §2 quy tắc 4 + template); (3) KHÔNG giảm claim 2h→1h — watchdog đã bắt kẹt sớm hơn, giữ 2h cho build dài. Test dry-run 6 trường hợp đều đúng; muse-1/muse-2 nhận bản script mới khi pull ở phiên sau)
+- 112 (doing, muse-2 — port forum + build Otofun; đã nhận lại sau khi kẹt 00:37–02:30, claim gia hạn đến 04:30 20/11, worker mới đang làm)
+- 113 (doing, muse-1 — build extension HHTQ Vietsub, hhtq.press, video)
+- 114 (open, chờ muse-2 sau khi 112 merge — build extension VOZ Forum, voz.vn)
 - Qsang_vbook main: 9cc9f0a | Registry: 120 nguồn | Validate: PASS
 - 105 (done, muse-1 — fix TruyenTV sang tvtruyen1.com, review vòng 1 8/10, đã merge lên main 9cc9f0a 20/11 ~00:55; validate PASS 120 nguồn; device test 15/15 code 0 + install 200 trên điện thoại Anh)
 - 110 (done, muse-1 — nghiên cứu port loại extension news từ Darkrai9x, review 9/10, báo cáo research/110-news-port.md đã merge 20/11 00:24; kết luận: ĐỂ SAU — port được về kỹ thuật, chi phí hạ tầng thấp, nhưng chưa có nhu cầu thật + chưa kiểm chứng app điện thoại Anh hỗ trợ type news; bổ sung kiểm chứng muse-main: fork duongden/vbook đã có 3 ext news thật (baikebaidu v2, sohu v3, viblo v6) nên hợp đồng news đã được dùng thật, vẫn cần probe trên máy Anh; site đạt: VnExpress, CafeF, Genk (200); CHỜ Anh: Anh có muốn đọc/nghe tin trong vBook không + khi nào sẵn sàng cài probe news)

@@ -4,6 +4,7 @@
   "checklist": [
     "Quét repo đích + tasks/*.json + STATUS.md (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
+    "Claim xong trong 15 phút: commit ghi chú tiến độ/WIP đầu tiên lên branch (nếu worker chết, người sau nối tiếp được — task 115)",
     "Build / khảo sát xong, test đầy đủ",
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + chấm điểm /10 + merge, task sang done"

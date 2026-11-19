@@ -35,13 +35,20 @@ agent khác thấy liền.
    = giờ hiện tại + 2h, ghi `claimed_at`, commit + push.
 3. Đồng thời tạo branch làm việc trên repo đích (vd Qsang_vbook):
    `git checkout -b feature/<tên-task>` — branch là "bằng chứng" thứ hai.
-4. Trong vòng 2h phải có heartbeat: đổi status → `doing` (lần commit đầu tiên
+4. **Trong 15 phút đầu sau khi claim: commit tiến độ đầu tiên lên branch**
+   (ghi chú tiến độ hoặc commit WIP — kể cả mới khảo sát xong, chưa có code).
+   Mục đích: nếu worker chết giữa chừng (như task 112, 20/11 — worker làm
+   10 phút rồi chết, không để lại branch/commit nào), người nhận lại nối
+   tiếp được từ branch/commit đó thay vì làm lại từ đầu. Task ở `claimed`
+   quá 30 phút mà chưa có commit nào thì watchdog (§7) đánh thức lại agent
+   được gán.
+5. Trong vòng 2h phải có heartbeat: đổi status → `doing` (lần commit đầu tiên
    có code) hoặc chạy `node hub/client.js heartbeat <id>` (nếu có hub).
    **Hết hạn claim sau 2h không heartbeat:** qua hub thì task tự sweep trở lại
    `open`; qua GitHub (đường chính) thì không có gì tự chạy — muse-main dọn
    claim hết hạn mỗi lần chia việc, agent khác chỉ được claim sau khi muse-main
    đã dọn. Đừng ngồi chờ task "tự" mở lại khi làm qua GitHub.
-5. Không claim 2 task build cùng lúc. Làm xong 1 task mới claim task tiếp theo.
+6. Không claim 2 task build cùng lúc. Làm xong 1 task mới claim task tiếp theo.
 
 ## 3. Quy tắc chống trùng — đọc trước khi build
 
@@ -118,6 +125,17 @@ sang task khác, không cãi nhau trong code.
   **CẤM quét mỗi 1 phút** (GitHub có thể chặn tạm thời vì quét quá dày;
   5 phút đã rút lúc nhận việc từ ~30 phút xuống ~2-3 phút). Webhook không
   làm được vì VM không nhận kết nối từ ngoài vào.
+- **Watchdog task `claimed` bị kẹt (quyết định task 115, 20/11 — sau vụ task
+  112 kẹt 1h43 vì worker chết mà không để lại commit):** mỗi lần quét, kể cả
+  khi SHA không đổi (kiểm tra trên snapshot đã lưu — task kẹt thì SHA không
+  đổi, đúng trường hợp cần bắt), nếu task ở `claimed` mà quá 30 phút kể từ
+  `claimed_at` vẫn chưa có commit/heartbeat mới thì đánh thức agent được gán
+  (watcher của agent đó) và muse-main (lưới an toàn, bắt task của mọi agent).
+  Mỗi claim chỉ báo 1 lần; claim mới (`claimed_at` đổi) hoặc task rời
+  `claimed` thì đặt lại. Chỉ áp dụng status `claimed` (task `doing` đã có
+  commit đầu tiên — build dài không commit là bình thường). Thời gian claim
+  giữ 2h, không giảm xuống 1h (watchdog đã bắt kẹt sớm hơn; 2h để build dài /
+  device test không hết hạn giữa chừng).
 - Mỗi 2h làm việc: heartbeat (commit tiến độ hoặc `heartbeat` qua hub).
 - Cuối task: cập nhật task file → push → báo muse-main (bằng cách để task ở
   `review`, muse-main tự thấy khi pull).
