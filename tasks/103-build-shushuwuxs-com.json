@@ -7,19 +7,19 @@
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "medium",
-  "status": "doing",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-19T21:57:00+07:00",
   "claimed_at": "2026-11-19T21:58:47+07:00",
   "claim_expires_at": "2026-11-20T01:27:37+07:00",
   "result": {
-    "branch": "",
+    "branch": "feature/103-shushuwuxs",
     "test": {
-      "validate": "",
+      "validate": "PASS",
       "device_test": "",
       "install": ""
     },
-    "notes": "",
+    "notes": "Extension Shushuwuxs xong, validate PASS (120 nguon, 0 canh bao). Branch feature/103-shushuwuxs, commit 157c27e. Site SSR UTF-8, khong login/VIP. Truyen mau 问道章 (id 2066, 102万字, da hoan), muc luc 340 chuong tang dan, ch.1 2 trang noi lien mach. home 23 tab, genre 16 the loai, book: /dushi/ 65 muc (6 noi bat co bia + 60 moi cap nhat), /lastupdate/ 50 muc/trang + phan trang /N.html, /all/ 300 muc. Da kiem chung bang mo phong runtime vBook tai cho (Node+cheerio): detail/toc/chap/book deu chay dung, chap 1 noi du 2 trang (co 秦飞鱼 o trang 2, khong DMCA). LUU Y: (1) Khong co search.js — form search la Baidu CSE, POST /search.html tra ve vo rong, ket qua chi hien bang JS (tien le zhenhunxiaoshuo cung bo search). (2) Khong co page.js — muc luc 1 trang, khong phan trang; phan trang CHUONG xu ly trong chap.js theo a#pager_next (toi da 10 trang). Ghi chu trong task 'bat buoc co page.js' la hieu nham: page.js theo extension-api.md chi danh cho phan trang MUC LUC. (3) Tham khao extension dat-bi/ext-vbook: detail.js cua dat-bi da loi thoi (selector #fmimg/#info/#intro khong con khop template hien tai), toc/chap dung huong tiep can; attribution trong description, author van MuseAi. (4) Da sua 2 loi trong book.js: so sanh isPagedList sau khi bo dau '/' cuoi (app strip trailing slash) va parse them #newscontent (60 muc moi cap nhat tren trang the loai — luc dau chi thay 6 muc #hotcontent). Device test + install CHO muse-main chay tren dien thoai cua Anh (may nay khong co developer server).",
     "review": {
       "score": "",
       "rounds": 0,
