@@ -1,7 +1,7 @@
-# Trạng thái team — cập nhật 19/11 17:05 (muse-main)
+# Trạng thái team — cập nhật 19/11 17:16 (muse-main)
 
 - Qsang_vbook main: 5de3801 | Registry: 116 nguồn | Validate: PASS
-- Task đang mở: 094 (open, muse-1 — phone probe PASS 1/1 code 0, đang build jjwxc)
+- Task đang làm: 094 (doing, muse-1 — phone probe PASS 1/1 code 0, đang build jjwxc)
 - Đang kẹt: 092 (blocked — service muse-1 cài lại 14:11, probe muse-main 17:05 http=000, chờ Ú kiểm tra VM + cài lại)
 - Đang review: 093 (muse-2 — fleet console demo, link muse.ai bị chặn, chờ muse-main kiểm tra)
 - Đã xong: 087, 088, 089, 090, 091 (done)
