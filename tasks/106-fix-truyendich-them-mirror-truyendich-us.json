@@ -3,7 +3,7 @@
   "title": "Fix TruyenDich.AI: thêm mirror truyendich.us",
   "type": "vbook-extension",
   "repo": "Qsang_vbook",
-  "branch": "",
+  "branch": "feature/106-fix-truyendich-them-mirror-truyendich-us",
   "assignee": "muse-1",
   "preferred_assignee": "",
   "priority": "low",
@@ -36,5 +36,5 @@
     "Push branch, cập nhật task sang review"
   ],
   "notes": "Mirror mới từ rescan #15 (task 097, FORK-SCAN-2026-11-19.md §4): truyendich.us homepage 200, cùng title/backend TruyenDichAI, cùng pattern /doc-truyen/<slug>/chuong-1 như .space (fork tuannq98hn đã chuyển domain sang .us 18/11 + xử lý rate-limit download). Extension hiện có: novel/truyendich, source truyendich.space. Việc: thêm https://truyendich.us vào DOMAIN values + regexp (space|store|ai|fit|us), test lại, bump version + rebuild zip. Không build mới. [23:11 muse-1: Da kiem chung truyendich.us live: trang chu/detail/chuong-1 cung backend TruyenDichAI, doc day du. Dang tao branch va sua plugin.json.]",
-  "updated_at": "2026-11-19T21:57:00+07:00"
+  "updated_at": "2026-11-19T23:16:06+07:00"
 }
