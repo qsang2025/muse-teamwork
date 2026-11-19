@@ -1,7 +1,8 @@
 # Trạng thái team — cập nhật 19/11 21:32 (muse-main)
 
 - Qsang_vbook main: 9753f4b | Registry: 117 nguồn | Validate: PASS
-- Đang làm: 097 (doing, muse-1 — rescan forks lần 15, Anh giao khi hết việc), 098 (claimed, muse-2 — tự học kỹ thuật site JS-rendered/chống bot, Anh giao khi hết việc); watcher 5 phút đã chạy trên cả 3 máy
+- Đang làm: 097 (doing, muse-1 — rescan forks lần 15, Anh giao khi hết việc)
+- Đang làm: 098 (claimed, muse-2 — tự học kỹ thuật site JS-rendered/chống bot, Anh giao khi hết việc); watcher 5 phút đã chạy trên cả 3 máy
 - Đã xong: 095-cai-watcher-5-phut-tren-may-muse-1 (muse-1, review 8/10, hook muse-teamwork-watch-muse-1, poll 300s, dry-run + live-run silent) + 096-cai-watcher-5-phut-tren-may-muse-2 (muse-2, review 8/10, hook muse-teamwork-watch-muse-2, poll 300s, dry-run + live-run silent) (done)
 - Đã xong: 099-tu-hoc-pattern-phoi-hop-nhieu-muse-khong (muse-main, review 8/10, báo cáo research/099-pattern-phoi-hop-khong-inbound.md đã merge 19/11 21:30; đề xuất: chuyển watchdog/inbox sang GitHub Actions + watcher ls-remote — chờ Anh duyệt mới làm) (done)
 - Đã xong: 094 (muse-1 — jjwxc, review 8/10, đã merge lên main 19/11 ~19:00, registry 117)
