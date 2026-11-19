@@ -1,68 +1,116 @@
-# Nghiên cứu các extension fanqie trong fork — cách xử lý font encryption + captcha (task 108)
+# Nghiên cứu các extension fanqie trong fork — cách xử lý font encryption + captcha
 
-- Ngày nghiên cứu: 19/11/2026 ~23:00 +07:00 (muse-1) — Anh giao 19/11 22:50: tìm "fanqie" trong kho extension của app ra 11 kết quả, nghiên cứu xem các ext đó làm thế nào.
-- Phạm vi: CHỈ NGHIÊN CỨU, không build, không merge. Chỉ đọc code công khai; không gọi API bên thứ ba, không đăng nhập, không lấy token của Anh.
-- Bằng chứng: quét 19 catalog trong `repository.json` của Qsang_vbook (19/19 tải được bằng curl) + GitHub Search API; tải và đọc code 7 `plugin.zip` + 4 repo GitHub độc lập; đối chiếu bảng decode với mẫu live của task 107 bằng script.
+- Ngày nghiên cứu: 19/11/2026 (muse-1, task 108) — Anh giao 19/11 22:50 (chat Vbook): tìm "fanqie" trong kho extension của app ra 11 kết quả, giao nghiên cứu xem các extension đó làm thế nào.
+- Phạm vi: **chỉ nghiên cứu code, không build, không merge.** Không gọi API fanqie live trong đợt này (tránh dồn dập/captcha), không bypass VIP/login, không lấy token của Anh.
+- Bằng chứng: clone `--depth 1` 11 repo fork về máy muse-1 và đọc trực tiếp `plugin.json` (catalog + từng extension), `src/chap.js`, `src/config.js`, `src/toc.js`, `src/detail.js`, `src/search.js`; đối chiếu catalog `repository.json` (19 catalog) của Qsang_vbook; đọc hướng dẫn `duongden/vbook_news` mục Cà Chua; kiểm chứng catalog OpenLove live qua trình duyệt. Mọi khẳng định dưới đây đều trỏ về file code cụ thể.
 
-## 1. Danh sách extension fanqie tìm được
+## 0. Chống trùng (PROTOCOL §3)
 
-Ảnh chụp của Anh (tìm "fanqie" trong Tiện ích mở rộng) có 11 kết quả. Quét 19 catalog công khai + GitHub tìm thấy **11 codebase fanqie khác nhau**; trong đó 2 tên trong ảnh chụp (**Fanqie OpenLove — open-love** và **fanqieweb — TH03, localhost:9999**) **không xuất hiện trong 19 catalog công khai** và không tìm thấy bằng GitHub Search — khả năng là repo Anh tự thêm trong app ngoài `repository.json` (Chưa xác định repo gốc của 2 cái này). Ngược lại, quét công khai thấy thêm 3 cái không nằm trong 7 tên đã thấy ở ảnh chụp (Cà Chua Sói Xám, 5in1, và các repo độc lập) — nhiều khả năng nằm trong 4 kết quả "dưới nếp gấp".
+- **Repo đích Qsang_vbook:** chưa có extension fanqie trực tiếp (registry 119 nguồn, main `399b2d1`). Chỉ có đường gián tiếp qua Sáng Tác Việt APP (host `fanqie` trong `sangtacvietapp/src/chap.js` chỉ sửa ảnh/thẻ của bản convert STV, không fetch fanqienovel.com). Task này là research, không build nên không trùng.
+- **Tasks claimed/doing/review:** 103 (claimed, muse-2, shushuwuxs), 105 (review, muse-1, TruyenTV) — không trùng site/việc. Không có task research fanqie nào khác đang mở.
+- **STATUS.md + danh sách ĐÓNG:** fanqie vẫn ĐÓNG cho build (chương khóa login/VIP theo FORK-SCAN 18–19/11). Task 108 chỉ nghiên cứu cách fork làm, không mở lại build.
 
-| # | Tên (tác giả) | Repo / catalog | Nguồn dữ liệu chương | Xử lý font encryption |
+## 1. Liệt kê các extension fanqie tìm thấy
+
+Ảnh chụp của Anh thấy 7 tên; 4 tên dưới nếp gấp chưa thấy. Quét 11 repo + 19 catalog tìm thấy **13 extension liên quan fanqie** (kể cả bản sao trong kho gom `laodai123/vbook-plugins-collection`). Bảng dưới ghi bản gốc; bản sao "+1" trong kho gom không tính riêng.
+
+| # | Tên (theo catalog) | Tác giả / repo gốc | Source khai báo | Trong ảnh Anh? |
 |---|---|---|---|---|
-| 1 | Cà Chua (mizhm) v9 | mizhm/vbook-extensions | API bên thứ ba `http://101.35.133.34:5000/api` (có 3 host dự phòng trong comment) | Không — tin nội dung proxy trả về |
-| 2 | [Fanqie] Cà Chua C2 (kychi) v6 | kychitoge/vbook-ext (+ bản sao ở yae-miko-313) | Proxy mirror `https://gofq.52dns.cc/content?item_id=` | Bảng thay thế cố định 372 ký tự (`decodeText`) |
-| 3 | Cà Chua Sói Xám (kychi) v3 | kychitoge/vbook-ext | Proxy `https://v2.czyl.cf/content` (POST, cần cookie qttoken nếu đã đăng nhập Sói Xám) | Bảng thay thế cố định (gần giống C2) |
-| 4 | Sói Xám (Fanqie) (Will Sun) v24 | WillSun28/vbook-extensions | Server Sói Xám `http://219.154.201.122:5006` (mặc định), regexp còn nhận `*.czyl.cf`/`*.langge.cf` | Không đọc được — `encrypt: true`, code mã hoá |
-| 5 | Fanqienovel - LV (Nahona) v4 | SoulGodEve9x9/Vbook-ext (nhánh Nahona) | Metadata qua API app chính thức `api5-normal-lf.fqnovel.com` (aid=1967, iid hardcode); chương qua proxy `https://fqnovel.ceseet.me/content` | Không — trả thẳng nội dung proxy |
-| 6 | FQ Video (Đường đen) v3 | duongden/vbook | API video fanqie trực tiếp (type `video`, không phải truyện chữ) | Không liên quan (video); `encrypt: true` |
-| 7 | 5in1 (dat-bi) | dat-bi/ext-vbook | `api.langge.cf` / `api.doubi.tk` / `219.154.201.122:5006`, cần cookie thiết bị (`get_device()`), donate để tải | Không (có hàm decrypt1 zero-width đã comment-out) |
-| 8 | vbook-ext-fanqie (KyCtG) | GitHub độc lập | Server tự host trong LAN `192.168.x.x:9999` + API key | Server tự host xử lý (không thấy code server trong repo) |
-| 9 | fanqie_vbook (devanenWl) | GitHub độc lập | `http://localhost:9999` (server tự host) + dịch OpenAI tuỳ chọn | Server tự host xử lý |
-| 10 | vbook-fanqie (DHaiPhong) | GitHub độc lập | Trang chính thức fanqienovel.com cho vài chương đầu; chương sau qua proxy cấu hình được (mặc định `gofq.52dns.cc`) hoặc cookie đăng nhập | 2 bảng thay thế cố định (PAGE + LIST), dựng từ đối chiếu glyph font |
-| 11 | vbook-fanqie-ext (TekMonts) | GitHub độc lập | Server tự host (Express trên Vercel) fetch `fanqienovel.com/reader/<id>` rồi giải mã phía server | Bảng charset phía server (372 mục) |
+| 1 | [Fanqie] Cà Chua C2 v6 | kychi — `kychitoge/vbook-ext` | fanqienovel.com | Có |
+| 2 | Cà Chua Sói Xám v3 | kychi — `kychitoge/vbook-ext` | fanqienovel.com | Chưa xác định (ứng viên dưới nếp gấp) |
+| 3 | Cà Chua v9 | mizhm — `mizhm/vbook-extensions` | fanqienovel.com | Có |
+| 4 | Fanqienovel - LV v4 | Nahona — `SoulGodEve9x9/Vbook-ext` (nhánh Nahona, `Fanqienovel.zip`) | fanqienovel.com | Có |
+| 5 | Sói Xám (Fanqie) v24 | Will Sun — `WillSun28/vbook-extensions` (`zip/api.langge.cf.zip`) | api.langge.cf | Có |
+| 6 | fanqieweb v1 | TH03 — `TuanHai03/vbook-extensions` (`fqweb/`) | localhost:9999 | Có |
+| 7 | FQWeb Universal v3 | Chanhnh — `Chanhnh/vbook-ext` (`fqweb/`) | fanqienovel.com (API mặc định localhost:9999) | Chưa xác định (ứng viên dưới nếp gấp) |
+| 8 | [Fanqie] Cachua v38 | bqy — chỉ thấy bản sao trong `laodai123/vbook-plugins-collection` | fanqienovel.com (+ localhost:9999 trong regexp) | Chưa xác định (ứng viên dưới nếp gấp) |
+| 9 | Fanqie Novel v12 | Nhocconsr — `Cachkomuoi/vbook` (`fanqienovel/`) | fanqienovel.com | Chưa xác định (ứng viên dưới nếp gấp) |
+| 10 | Fanqie v1 | TuanHai03 — `TuanHai03/vbook-extensions` (`fq/`) | fanqienovel.com | Chưa xác định (có thể là 1 trong 4, hoặc không hiện vì khác bộ catalog trên máy Anh) |
+| 11 | Fanqie OpenLove v20 | open-love — ngoài GitHub (`vb-source.open-love.app`, kiểm chứng live 19/11) | fanqienovel.com | Có |
+| 12 | FQ Video v3 (type video) | Đường đen — `duongden/vbook` (zip host ngoài repo) | fanqienovel.com | Có |
+| 13 | 5in1 v70 (fanqie là 1/5 nguồn) + Langgee v7 (fanqie là 1/~30 nguồn) | B — `dat-bi/ext-vbook`; Đường đen — `duongden/vbook` | IP thô / v5.langge.uk | Chưa xác định (tên không chứa "fanqie", có thể không khớp tìm kiếm của app) |
 
-Chưa xác định: repo gốc của **Fanqie OpenLove (open-love)** và **fanqieweb (TH03)** trong ảnh chụp. Mẫu "localhost:9999" của fanqieweb trùng mẫu server tự host của KyCtG/devanenWl (số 8, 9) — tức extension chỉ là vỏ gọi server chạy trên máy/điện thoại của người dùng, không tự lấy được nội dung.
+Ghi chú trung thực: **4 tên dưới nếp gấp là suy luận từ catalog, chưa xác định chắc chắn** — muốn chắc phải xem lại màn hình kho extension trên máy Anh. Dù vậy, 13 extension trên đã bao phủ mọi cách làm fanqie đang có trong fork.
 
-## 2. Ba rào cản và cách từng ext xử lý
+Kết quả âm tính quan trọng: **`Darkrai9x/vbook-extensions` (repo gốc của hầu hết fork) không có extension fanqie nào** (grep `fanqie` trong toàn repo ra rỗng). Mọi extension fanqie đều là của fork cộng đồng, không phải bản chính thức.
 
-### 2.1 Font encryption — GIẢI ĐƯỢC bằng bảng thay thế cố định (điểm mới so với task 107)
+## 2. Từng extension lấy chương thế nào
 
-Task 107 kết luận: vBook runtime không parse được font/cmap nên không giải được font encryption. Kết luận đó đúng về *parse font*, nhưng các ext fork cho thấy một đường khác không cần parse font: **ánh xạ PUA → chữ thật là cố định trên toàn site** (một "codebook" 372 mục, dải U+E3E8 = 58344 đến 58715), nên chỉ cần nhúng bảng thay thế vào JS thuần là decode được trong extension.
+### Nhóm A — Proxy bên thứ ba (server trung gian lấy + giải mã sẵn)
 
-- kychi C2 và Cà Chua Sói Xám: hàm `decodeText` với `CODE_ST = 58344, CODE_ED = 58715`, bảng 372 ký tự.
-- DHaiPhong: ghi rõ cách dựng bảng — đối chiếu glyph của font `awesome-font/c/dc027189e0ba4cd.woff2` (đúng file font task 107 đã parse) với font CJK chuẩn + đối chiếu `charset.json` của dự án cộng đồng ying-ck/fanqienovel-downloader, khớp 344/362 glyph; có 2 bảng riêng: `CHARSET_PAGE` (trang truyện/chương) và `CHARSET_LIST` (API thư viện), 13 vị trí chưa gặp mẫu để dấu □.
-- TekMonts: cùng bảng 372 mục nhưng chạy phía server tự host.
+**1. [Fanqie] Cà Chua C2 (kychi).** Mọi thao tác đều gọi proxy `https://gofq.52dns.cc` (`/detail`, `/catalog`, `/search`, `/content?item_id=` trong `config.js`/`chap.js`). Proxy trả JSON chứa text còn ký tự PUA; extension tự giải mã bằng bảng tĩnh `decodeText` (xem mục 3). Không gọi fanqienovel.com trực tiếp để lấy chương.
 
-**Kiểm chứng của muse-1:** chạy bảng decode của kychi C2 lên mẫu live trong báo cáo task 107 (bản xem trước 446 ký tự, 150 ký tự PUA) → ra câu tiếng Trung có nghĩa ("任把支…块牌天，只写"使营副食销售"，价两…毛钱…串。"), khớp ngữ cảnh chương "买糖葫芦了" (mua kẹo hồ lô, "一毛钱一串"). Còn vài ký tự lệch (một chữ thành "d", chữ "一" thành "觉") — bảng chưa hoàn hảo 100% và 2 bảng của DHaiPhong còn khác nhau theo ngữ cảnh (PAGE vs LIST), nhưng về nguyên tắc **font encryption của fanqie giải được bằng JS thuần trong vBook runtime**, không cần API parse font. Đây là phần cần sửa lại kết luận task 107 (pattern nhận biết PUA vẫn đúng, nhưng "không giải được" thì chưa đủ — giải được nếu chấp nhận bảng cố định và sai số nhỏ).
+**2. Cà Chua Sói Xám (kychi).** Gọi proxy `https://v2.czyl.cf` (POST `/content`, kèm cookie `qttoken` nếu đã đăng nhập Sói Xám qua trình duyệt trong app). Khách ẩn danh bị giới hạn **3 chương/ngày** (code nhận diện thông báo giới hạn và hiện hướng dẫn đăng nhập `v2.czyl.cf/login`). Cũng dùng bảng `decodeText` như C2.
 
-### 2.2 Captcha ByteDance Turing + chữ ký a_bogus — KHÔNG ext nào giải trong extension
+**3. Cà Chua (mizhm).** Trộn hai đường: mục lục/tìm kiếm gọi API chính thức của fanqie (`/api/reader/directory/detail`, `/api/author/search/search_book/v0`), nhưng **nội dung chương gọi API bên thứ ba** `http://101.35.133.34:5000/api/content?item_id=` (config còn liệt kê 3 API dự phòng khác đã comment). `chap.js` không giải mã gì — tin hoàn toàn text proxy trả về.
 
-- DHaiPhong ghi thẳng trong `search.js`: "API tìm kiếm của trang cần chữ ký (a_bogus) nên script không gọi được" → thay bằng quét thư viện + lọc từ khoá, hoặc dán link/ID truyện.
-- Nahona né web API bằng API app chính thức `api5-normal-lf.fqnovel.com` với `aid=1967`, `iid` và cookie `novel_web_id` hardcode (giả lập client app) — không có cơ chế giải captcha, chỉ đổi đường gọi.
-- Các ext còn lại (mizhm, kychi, Will Sun, dat-bi) đẩy hết việc gọi fanqie sang **server proxy bên thứ ba** (gofq.52dns.cc, v2.czyl.cf, api.langge.cf, api.doubi.tk, 101.35.133.34:5000, 219.154.201.122:5006, fqnovel.ceseet.me) — captcha/phiên đăng nhập do server đó gánh, extension không thấy và không kiểm soát được.
+**4. Fanqienovel - LV (Nahona).** Chi tiết/tìm kiếm gọi API app ByteDance (`api5-normal-lf.fqnovel.com/reading/bookapi/...` với `aid=1967`, `iid` giả lập), mục lục gọi `/api/reader/directory/detail`, nhưng **chương gọi proxy** `https://fqnovel.ceseet.me/content?item_id=`. Kèm cookie cứng `novel_web_id=...` trong code. Không giải mã phía client.
 
-### 2.3 Cổng APP/SVIP — vẫn là rào cản thật
+**5. Sói Xám (Fanqie) (Will Sun).** Code bị **mã hoá toàn bộ** (`encrypt: true`, mọi file `src/*.js` là chuỗi mã hoá không đọc được) nên không đọc được logic. Metadata cho thấy source là `api.langge.cf` / IP `219.154.201.122:5006`, regexp nhận cả link fanqienovel.com và sangtacviet, mô tả yêu cầu đăng nhập trang nguồn. Hướng dẫn cộng đồng (`vbook_news`) xếp vào nhóm "Free + Pre", bán VIP/SVIP tại `api.langge.cf`.
 
-- DHaiPhong: "Khách chỉ đọc đủ vài chương đầu của mỗi truyện; chương sau cần phiên đăng nhập" — hoặc dán cookie đăng nhập của chính người dùng vào cài đặt, hoặc dùng proxy. Không có cách free hợp lệ cho toàn văn.
-- Cà Chua Sói Xám: khách ẩn danh bị giới hạn **3 chương/ngày** (ghi trong description + code nhận diện thông báo giới hạn), muốn đọc tiếp phải đăng nhập tài khoản Sói Xám tại v2.czyl.cf.
-- dat-bi 5in1: phải vào `api.langge.cf/login` tạo tài khoản; muốn **tải** truyện thì donate tại `api.doubi.tk/coffee`.
-- Will Sun: description ghi "Vui lòng vào trang nguồn đăng nhập để sử dụng".
+**13a. 5in1 (B).** Chương fanqie gọi lần lượt 3 host proxy (`api.langge.cf`, `api.doubi.tk`, IP `219.154.201.122:5006`) kèm cookie thiết bị lấy từ `api.langge.cf/user` (`get_device()` trong `config.js`). Code phải **lọc bỏ watermark/quảng cáo proxy chèn vào text** (nhiều regex xoá dòng "本书源属于..." + ký tự zero-width) — bằng chứng proxy trung gian có sửa nội dung.
 
-## 3. Đánh giá theo luật nhà
+**13b. Langgee (Đường đen).** Code cũng mã hoá (`encrypt: true`). Là nguồn gộp ~30 site (fanqie chỉ là 1 lựa chọn trong `source_filter`), server `v2`–`v10.langge.uk`, bắt buộc nhập `qttoken` (VIP/SVIP/hội viên) trong Cài đặt.
 
-| Cách làm | Ext tiêu biểu | Đạt luật nhà? | Lý do |
-|---|---|---|---|
-| Bảng thay thế PUA cố định (JS thuần) | kychi C2, Sói Xám, DHaiPhong, TekMonts | **Đạt về kỹ thuật** | Chạy được trong runtime, không cần token/trả phí; nhưng chỉ giải được nội dung *đã lấy được* — không tự mở cổng SVIP |
-| Proxy bên thứ ba (gofq.52dns.cc, v2.czyl.cf, api.langge.cf, api.doubi.tk, IP:5000/5006, fqnovel.ceseet.me) | mizhm, kychi, Will Sun, dat-bi, Nahona (chương) | **Không đạt** | API bên thứ ba không rõ chủ, có cái cần tài khoản/donate để tải; phụ thuộc server lạ, dễ chết/đổi; vi phạm nguyên tắc không gọi API bên thứ ba đáng ngờ |
-| API app chính thức với iid/cookie hardcode | Nahona | **Không đạt** | Giả lập client app bằng định danh hardcode của người khác; không phải API công khai cho bên thứ ba |
-| Server tự host localhost:9999 | KyCtG, devanenWl, fanqieweb (TH03) | **Không đạt cho repo nhà** | Cần người dùng tự chạy server + API key; devanenWl còn chứa API key dịch vụ trả phí hardcode trong repo công khai (không ghi giá trị ở đây) |
-| Cookie đăng nhập của chính người dùng | DHaiPhong (tuỳ chọn) | **Không đạt** | Luật nhà: không lấy token/mật khẩu của Anh; chỉ đọc nội dung FREE công khai |
-| FQ Video | Đường đen | Ngoài phạm vi | Type video, không phải truyện chữ; code mã hoá (`encrypt: true`) |
+### Nhóm B — Gọi thẳng API ByteDance (không qua proxy)
 
-## 4. Kết luận
+**9. Fanqie Novel (Nhocconsr, 2023).** Mục lục gọi `api5-normal-lf.fqnovel.com/reading/bookapi/directory/all_infos/v/` (kèm `iid`/`aid` giả lập app), chương gọi `novel.snssdk.com/api/novel/book/reader/full/v1/`. Trả `data.content` nguyên văn, không giải mã PUA, không xử lý captcha/SVIP.
 
-1. **Font encryption không còn là lý do đóng fanqie**: bảng thay thế PUA cố định (372 mục, dải 58344–58715) giải được trong JS thuần của vBook runtime — đã kiểm chứng trên mẫu live task 107. Kết luận task 107 cần được hiểu lại: đúng là runtime không parse được font, nhưng không cần parse font nếu dùng codebook cố định (chấp nhận sai số nhỏ, 2 bảng PAGE/LIST khác nhau).
-2. **Rào cản còn lại mới là rào cản quyết định**: toàn văn chương nằm sau cổng APP/SVIP + API tìm kiếm cần chữ ký a_bogus/captcha. Mọi ext fork đọc được toàn văn đều dựa vào một trong ba thứ vi phạm luật nhà: proxy bên thứ ba (có nơi cần tài khoản/donate), định danh app hardcode, hoặc cookie đăng nhập của người dùng. Không ext nào đọc được toàn văn fanqie bằng nội dung FREE công khai thuần tuý.
-3. **Khuyến nghị: fanqie vẫn ĐÓNG** như cũ. Nếu sau này Anh muốn xét lại, hướng duy nhất hợp lệ để kiểm chứng tiếp (không tự build) là: extension chỉ đọc **vài chương đầu free công khai** trên trang chính thức + bảng decode PUA — cần Anh duyệt rõ phạm vi đó và kiểm chứng live xem "vài chương đầu" có thật sự mở đầy đủ cho khách không (DHaiPhong khẳng định có, task 107 thấy bản xem trước bị cắt + mời SVIP — hai bằng chứng chưa khớp nhau, Chưa xác định).
-4. Đề xuất cập nhật skill `vbook-extension-building` (muse-main quyết khi review): bổ sung ghi chú "font encryption kiểu fanqie giải được bằng bảng thay thế PUA cố định nếu site dùng codebook cố định — kiểm chứng bằng cách decode mẫu live; vẫn phải xét cổng login/SVIP riêng". Không sửa skill trong task này (chỉ nghiên cứu).
+**10. Fanqie (TuanHai03).** Chương gọi `novel.snssdk.com/api/novel/reader/full/v1/?item_id=`, trả nguyên văn. Regexp còn nhận link qua các API lạ (`api-fanqienovel.sunianyun.live`, `list.fqapi.jilulu.cn`) và link sangtacviet. Mô tả "Hỗ trợ đọc truyện bị gỡ trên fanqie".
+
+**8. [Fanqie] Cachua (bqy).** Chương gọi **API web chính thức** `https://fanqienovel.com/api/reader/full?itemId=` kèm cookie cứng `novel_web_id=...`, rồi tự giải mã PUA bằng bảng tĩnh `r_content` (xem mục 3). Regexp đồng thời nhận link `localhost:9999` (chế độ server local ở Nhóm C).
+
+### Nhóm C — Server local FQWeb (app Fanqie thật trên máy root làm trung gian)
+
+**6. fanqieweb (TH03)** và **7. FQWeb Universal (Chanhnh)** không tự lấy nội dung từ fanqie: chúng gọi `http://localhost:9999/content?item_id=` (Chanhnh cho cấu hình `api_url` trong Cài đặt, mặc định localhost:9999). Cổng 9999 là **FQWeb** — module Xposed hook vào app Fanqie trên điện thoại Android đã root, dùng chính phiên đăng nhập của app để lấy chương rồi serve HTTP local. Hướng dẫn cộng đồng xếp nhóm này là "Free tự host — yêu cầu Android đã root". Extension chỉ là vỏ mỏng; font/captcha/SVIP do app thật xử lý.
+
+### Nhóm D — Token / sign server
+
+**11. Fanqie OpenLove (open-love).** Catalog live ghi "API chính chủ, giải mã tại máy", nhưng bắt buộc lấy **token** từ `vb-app.open-love.app/claim` (Sign Server) điền vào Cài đặt. Code chỉ có dạng `plugin.zip` trên server của họ, không có trong fork GitHub nào đã quét nên **chưa đọc được code** — chi tiết giải mã "tại máy" là **Chưa xác định**.
+
+### Nhóm E — Video (ngoài phạm vi truyện chữ)
+
+**12. FQ Video (Đường đen).** Type `video` (phim ngắn/hoạt hình Fanqie), mô tả "API trực tiếp và phát native; không cần root". Zip host trên `workers.dev` ngoài repo nên **chưa đọc được code**. Không liên quan tới đọc chương truyện chữ.
+
+## 3. Font encryption: 3 extension giải mã bằng bảng tĩnh, còn lại né bằng API/proxy
+
+Đây là phát hiện chính, bổ sung cho task 107:
+
+- **Chỉ 3 extension giải mã PUA ngay trong extension**, đều bằng **bảng ánh xạ tĩnh** `CODE_ST = 58344` (U+E3E8) đến `CODE_ED = 58715`, 372 mục, 10 mục chưa biết: kychi C2, kychi Sói Xám, bqy. Không extension nào parse font/cmap (khớp task 107: runtime không có API font).
+- **Hai bảng của kychi thực chất là một** (250/371 vị trí giống hệt; khác biệt là chữ giản thể vs phồn thể, vd 员/員, 给/給). **Bảng của bqy khác hoàn toàn: 0/372 vị trí trùng với kychi.** Tức trong fork đang tồn tại ít nhất hai phép ánh xạ PUA→chữ không tương thích nhau. Hệ quả: ánh xạ không phải hằng số phổ quát — hoặc fanqie đã đổi mapping theo đợt subset font (bảng cũ hết hạn), hoặc mỗi endpoint trả một phép xáo khác nhau. **Bảng nào (nếu có) còn đúng với fanqie hôm nay là Chưa xác định** vì đợt này không test live.
+- **Mọi extension còn lại né font encryption** bằng cách không đọc HTML trang web: chúng lấy text từ API app/proxy/server local vốn đã là chữ thường (server phía kia đã giải mã). Font chỉ là rào cản của đường web reader mà task 107 đã kiểm chứng.
+
+Đối chiếu task 107: kết luận "runtime không parse được font/cmap" **vẫn đúng**, nhưng cần nói chính xác hơn — runtime **giải mã được nếu có bảng tĩnh đúng**, vì đó chỉ là tra bảng bằng JS thuần. Cái task 107 chưa xác định (font/mapping có đổi theo chương không) nay có thêm bằng chứng gián tiếp là **có đổi hoặc không thống nhất** (hai bảng xung khắc). Bảng tĩnh là cách làm mong manh: fanqie đổi subset là bảng sai hàng loạt mà extension không tự phát hiện được (trừ khi áp thêm pattern nhận biết tỉ lệ PUA của task 107 để báo lỗi thay vì trả rác).
+
+## 4. Captcha Turing + cổng APP/SVIP
+
+- **Captcha:** grep `captcha|turing|turnstile` trong code của cả 10 extension đọc được đều **rỗng**. Không extension nào giải captcha. Chúng né captcha bằng cách dùng API app/proxy/phiên app thật. Nếu ByteDance bật Turing cho các API đó, code hiện tại chỉ trả lỗi chung ("Kiểm tra lại app Fanqie") — không có đường lui.
+- **SVIP/login:** không extension nào chứa code bypass tường minh. Thay vào đó: (a) proxy Sói Xám/Langge tự dựng cổng riêng (3 chương/ngày cho khách, qttoken/VIP trả phí); (b) FQWeb dùng phiên app thật trên máy root; (c) nhóm API trực tiếp (Nhocconsr/TuanHai03/bqy) gửi request không xác thực — **code không cho biết chúng nhận được chương VIP đầy đủ hay chỉ bản xem trước**. Task 107 đã chứng minh đường web khóa toàn văn sau APP/SVIP; nếu các API app này trả toàn văn VIP không cần auth thì dùng chúng là bypass, nếu chỉ trả chương free thì hợp lệ. Phân biệt hai khả năng này bắt buộc phải test live 1 chương free + quan sát chương VIP bị chặn thế nào — đợt này chưa làm theo đúng phạm vi "chỉ nghiên cứu".
+
+## 5. Đánh giá theo luật nhà (free, không bypass, không token, không trả phí, không API bên thứ ba đáng ngờ)
+
+| Cách làm | Extension | Kết luận |
+|---|---|---|
+| Proxy bên thứ ba (gofq, czyl, langge, ceseet, IP thô) | kychi C2, kychi Sói Xám, mizhm, Nahona, Will Sun, 5in1, Langgee | **Không đạt.** API trung gian không rõ nguồn gốc, có thể chết/chèn nội dung (5in1 phải lọc watermark), nhiều cái kèm đăng nhập/token/bán VIP. |
+| Server local FQWeb trên máy root | TH03, Chanhnh, (bqy chế độ local) | **Không đạt.** Cần root + hook app Fanqie, không phải extension vBook thuần; dựa vào phiên app để qua cổng. |
+| Token sign server | OpenLove | **Không đạt.** Bắt buộc token bên thứ ba; code không công khai để kiểm chứng. |
+| API app ByteDance trực tiếp, giả lập aid/iid | Nhocconsr, TuanHai03 | **Chưa xác định.** Không token/trả phí trong code, nhưng là endpoint app không chính thức + giả lập thiết bị; chưa chứng minh chỉ lấy nội dung free và không dính captcha. |
+| API web chính thức + bảng PUA tĩnh | bqy | **Gần nhất với luật nhà nhưng chưa đủ bằng chứng.** Không proxy/token/trả phí trong code (trừ cookie `novel_web_id` cứng), nhưng bảng giải mã xung khắc với bảng kychi và chưa test live; vẫn phải chứng minh không qua cổng SVIP. |
+| Video | FQ Video | Ngoài phạm vi (không phải truyện chữ); code chưa đọc được. |
+
+## 6. Kết luận + bước kiểm chứng tiếp theo (không tự build)
+
+**Chưa có cách nào hợp lệ đã được chứng minh chỉ bằng đọc code để đọc fanqie trong vBook.** Phần lớn fork sống nhờ proxy/token/máy root — đều phạm luật nhà. Hai hướng duy nhất không phạm ngay từ code (API ByteDance trực tiếp; API web + bảng PUA) đều thiếu bằng chứng live về 3 điểm: bảng PUA còn đúng không, API có trả chương VIP không, captcha có chặn không.
+
+Nếu Anh muốn đi tiếp, bước kiểm chứng tối thiểu (cần Anh duyệt trước, vẫn không build): fetch **đúng 1 chương free** qua `fanqienovel.com/api/reader/full` như bqy, đo tỉ lệ PUA trước/sau khi áp cả hai bảng (kychi và bqy), và ghi lại phản ứng của API với 1 chương VIP (phải bị chặn mới hợp lệ). Dừng ngay nếu gặp captcha/login. Chỉ khi cả ba điểm đều đạt mới bàn tới build; **fanqie vẫn ĐÓNG cho tới khi Anh duyệt hướng mới.**
+
+## 7. Chưa xác định (không đoán)
+
+- 4 tên dưới nếp gấp trong ảnh của Anh (mục 1).
+- Code của OpenLove, FQ Video, Will Sun, Langgee (mã hoá/host ngoài repo — chỉ đánh giá qua metadata + hướng dẫn cộng đồng).
+- Bảng PUA nào còn đúng, mapping có đổi theo chương/ngày không, API app có trả VIP/captcha không (cần test live có duyệt).
+- Các proxy còn sống không (đợt này không gọi thử để tránh dồn dập; FORK-SCAN 18/11 ghi `api.langge.cf` lỗi kết nối từ VM).
+
+## 8. Bổ sung kiểm chứng (lượt hook 19/11 ~23:00, muse-1)
+
+Một lượt muse-1 thứ hai (hook watcher) chạy song song đã kiểm chứng độc lập điểm "bảng PUA nào còn đúng" ở mục 7 bằng cách áp bảng `decodeText` của kychi C2 (372 mục, 58344–58715) lên mẫu live trong báo cáo task 107 (bản xem trước 446 ký tự, 150 ký tự PUA, fetch 19/11 22:41): kết quả ra câu tiếng Trung có nghĩa khớp ngữ cảnh chương ("…块牌…只写"使营副食销售"，价两…毛钱…串。"), còn vài ký tự lệch (một chữ thành "d", chữ "一" thành "觉"). Tức bảng kychi **vẫn khớp phần lớn** với font subset live ngày 19/11 — bằng chứng gián tiếp cho thấy mapping không đổi theo từng chương trong ngày, nhưng chưa đủ để khẳng định ổn định dài hạn, và vẫn chưa giải thích được vì sao bảng bqy xung khắc hoàn toàn (0/372). Lượt này cũng đọc thêm 4 repo GitHub độc lập ngoài 19 catalog (KyCtG, devanenWl, DHaiPhong, TekMonts): DHaiPhong ghi rõ bảng dựng từ đối chiếu glyph font `dc027189e0ba4cd.woff2` với font CJK chuẩn + `charset.json` của ying-ck/fanqienovel-downloader (khớp 344/362 glyph), có 2 bảng PAGE/LIST; search của DHaiPhong ghi thẳng API tìm kiếm cần chữ ký a_bogus nên không gọi được. Kết luận chung không đổi: fanqie vẫn ĐÓNG.
