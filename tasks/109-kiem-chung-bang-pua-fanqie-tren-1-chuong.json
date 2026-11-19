@@ -7,11 +7,11 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "claimed",
+  "status": "doing",
   "created_by": "muse-main",
   "created_at": "2026-11-19T23:22:36+07:00",
   "claimed_at": "2026-11-19T23:25:22+07:00",
-  "claim_expires_at": "2026-11-20T01:25:22+07:00",
+  "claim_expires_at": "2026-11-20T01:25:51+07:00",
   "result": {
     "branch": "",
     "test": {
@@ -27,5 +27,5 @@
     "Gọi API 1 lần với 1 chương VIP, ghi phản ứng (phải bị chặn mới hợp lệ)",
     "Báo cáo research/109-fanqie-pua-verify.md (hoặc thêm mục vào 108) + task sang review"
   ],
-  "notes": "Anh DUYỆT 19/11 23:22 (chat Vbook, sau báo cáo task 108). Bước kiểm chứng tối thiểu, nối tiếp 107 + 108. VẪN KHÔNG BUILD, KHÔNG MERGE — chỉ kiểm chứng.\n\nVIỆC LÀM (đúng phạm vi Anh duyệt, không thêm):\n1. Fetch ĐÚNG 1 chương FREE qua fanqienovel.com/api/reader/full (chọn chương free công khai, ghi rõ book_id/item_id + URL đầy đủ). Không đăng nhập, không token, không vượt captcha — nếu API đòi sign/captcha thì dừng ở đó và ghi rõ.\n2. Đo tỉ lệ ký tự rác (PUA) trong nội dung trả về TRƯỚC khi giải mã.\n3. Áp lần lượt CẢ HAI bảng PUA tĩnh từ task 108 (kychi + bqy) lên cùng chương đó, đo tỉ lệ ký tự rác SAU khi áp mỗi bảng + đọc thử xem câu có nghĩa không. Kết luận bảng nào (nếu có) còn đúng với fanqie hôm nay.\n4. Gọi API với 1 chương VIP (chỉ 1 lần, không đăng nhập): ghi nguyên phản ứng trả về (mã lỗi/thông báo). Hợp lệ = BỊ CHẶN (không đọc được nội dung). Nếu API trả nội dung VIP free thì DỪNG NGAY, không dùng, báo lại muse-main — đó là lỗ hổng phía server, không phải đường hợp lệ.\n\nGIỚI HẠN: tối đa 1 chương free + 1 lần gọi VIP (chỉ để ghi phản ứng, không lấy nội dung). Không gọi dồn dập (tránh 429/captcha). Không dùng proxy/token/sign server của fork. Không đụng tài khoản của Anh.\n\nBÀN GIAO: ghi kết quả vào research/108-fanqie-fork-extensions.md (thêm mục kiểm chứng live) hoặc research/109-fanqie-pua-verify.md + task sang review. Nếu cả hai bảng đều sai: kết luận rõ là bảng PUA không ổn định, fanqie vẫn ĐÓNG. Nếu 1 bảng đúng: nêu rõ bảng nào + bằng chứng, CHƯA build — chờ Anh quyết tiếp."
+  "notes": "Anh DUYỆT 19/11 23:22 (chat Vbook, sau báo cáo task 108). Bước kiểm chứng tối thiểu, nối tiếp 107 + 108. VẪN KHÔNG BUILD, KHÔNG MERGE — chỉ kiểm chứng.\n\nVIỆC LÀM (đúng phạm vi Anh duyệt, không thêm):\n1. Fetch ĐÚNG 1 chương FREE qua fanqienovel.com/api/reader/full (chọn chương free công khai, ghi rõ book_id/item_id + URL đầy đủ). Không đăng nhập, không token, không vượt captcha — nếu API đòi sign/captcha thì dừng ở đó và ghi rõ.\n2. Đo tỉ lệ ký tự rác (PUA) trong nội dung trả về TRƯỚC khi giải mã.\n3. Áp lần lượt CẢ HAI bảng PUA tĩnh từ task 108 (kychi + bqy) lên cùng chương đó, đo tỉ lệ ký tự rác SAU khi áp mỗi bảng + đọc thử xem câu có nghĩa không. Kết luận bảng nào (nếu có) còn đúng với fanqie hôm nay.\n4. Gọi API với 1 chương VIP (chỉ 1 lần, không đăng nhập): ghi nguyên phản ứng trả về (mã lỗi/thông báo). Hợp lệ = BỊ CHẶN (không đọc được nội dung). Nếu API trả nội dung VIP free thì DỪNG NGAY, không dùng, báo lại muse-main — đó là lỗ hổng phía server, không phải đường hợp lệ.\n\nGIỚI HẠN: tối đa 1 chương free + 1 lần gọi VIP (chỉ để ghi phản ứng, không lấy nội dung). Không gọi dồn dập (tránh 429/captcha). Không dùng proxy/token/sign server của fork. Không đụng tài khoản của Anh.\n\nBÀN GIAO: ghi kết quả vào research/108-fanqie-fork-extensions.md (thêm mục kiểm chứng live) hoặc research/109-fanqie-pua-verify.md + task sang review. Nếu cả hai bảng đều sai: kết luận rõ là bảng PUA không ổn định, fanqie vẫn ĐÓNG. Nếu 1 bảng đúng: nêu rõ bảng nào + bằng chứng, CHƯA build — chờ Anh quyết tiếp. [23:25 muse-1: Da trich 2 bang PUA (kychi + bqy), dang chon chuong free/VIP de goi /api/reader/full (toi da 1+1 lan)]"
 }
