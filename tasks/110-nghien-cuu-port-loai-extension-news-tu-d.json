@@ -3,23 +3,23 @@
   "title": "Nghiên cứu port loại extension news từ Darkrai9x về Qsang_vbook",
   "type": "research",
   "repo": "Qsang_vbook",
-  "branch": "",
+  "branch": "feature/110-news-port-research",
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "claimed",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-20T00:01:37+07:00",
   "claimed_at": "2026-11-20T00:07:20+07:00",
-  "claim_expires_at": "2026-11-20T02:07:20+07:00",
+  "claim_expires_at": "2026-11-20T02:07:46+07:00",
   "result": {
-    "branch": "",
+    "branch": "feature/110-news-port-research",
     "test": {
-      "validate": "",
-      "device_test": "",
-      "install": ""
+      "validate": "N/A (task research, khong co extension)",
+      "device_test": "N/A",
+      "install": "N/A"
     },
-    "notes": ""
+    "notes": "Bao cao research/110-news-port.md: port duoc ve ky thuat, chi phi ha tang thap (validate TYPES +1, dong bo extension-api.md x2, templates/news x2 cho theo chuan Qsang; build/build-catalog/vbook.js dung nguyen). Ket luan DE SAU: chua co nhu cau that duoc Anh xac nhan, chua kiem chung app dien thoai ho tro type news (upstream cung 0 ext news that). Chi NEN PORT khi probe tren may that dat (cach lam muc 4 bao cao) + Anh chot site tin cu the (goi y VnExpress, da kiem chung 200; them CafeF, Genk). Khong sua Qsang_vbook."
   },
   "checklist": [
     "Đọc template + API doc của loại news bên upstream (commit 5df84a4 + 211fc62)",
@@ -28,6 +28,6 @@
     "Ghi rõ cách kiểm chứng app điện thoại có hỗ trợ loại này (không tự test)",
     "Báo cáo research + kết luận NÊN/KHÔNG NÊN/ĐỂ SAU + task sang review"
   ],
-  "notes": "Anh DUYỆT 20/11 00:01 (chat Vbook): giao Ú + Vịt nghiên cứu xem 2 loại extension mới của Darkrai9x (news + forum) có đáng port về Qsang_vbook không. CHỈ NGHIÊN CỨU — KHÔNG sửa Qsang_vbook, KHÔNG merge.\n\nNGUỒN ĐỌC (upstream đã đồng bộ):\n- Fork nhà: https://github.com/qsang2025/vbook-extensions_Darkrai9x (master 211fc62, đã sync với Darkrai9x) — clone về máy mình mà đọc, hoặc đọc qua GitHub. Bản local trên máy muse-main: ~/workspace/vbook/vbook-extensions (chỉ tham khảo, không sửa).\n- Trọng tâm: .agents/skills/vbook-extensions/templates/news/ + extension-api.md mục \"News & forum extensions\" + diff 2 commit 5df84a4 (\"Sync extension API: news and forum types...\") và 211fc62 (\"Show forum page numbers, explore tabs...\").\n- LƯU Ý: upstream CHƯA CÓ extension mẫu nào thuộc 2 loại này (không plugin.json nào type news/forum) — chỉ có template + hợp đồng API. Nghiên cứu dựa trên template + API doc, không có extension thật để đối chiếu.\n\nVIỆC LÀM:\n1. Đọc kỹ template + hợp đồng API của loại này: script nào bắt buộc (news: article + ít nhất 1 list source; forum: posts + ít nhất 1 list source), không có detail/toc/chap, section types mới (news_hero/news_list/thread_list/board_list), item mở thẳng reader.\n2. Đối chiếu với Qsang_vbook: skill + templates + extension-api.md (2 bản copy), scripts/cli.js, validate, build-catalog, registry plugin.json — liệt kê CHÍNH XÁC những chỗ phải đổi/thêm để hỗ trợ loại này (kể cả chỗ nào đã hỗ trợ sẵn).\n3. Nhu cầu: gợi ý 2–3 site free phù hợp loại này (kiểm chứng live site trả 200), có đáng làm không — Anh đọc tin/diễn đàn nào không, hay chỉ là \"có thì tốt\".\n4. Rủi ro: app vBook trên điện thoại Anh có hỗ trợ loại này không — GHI RÕ cách kiểm chứng (cài probe template tối thiểu qua dev mode), KHÔNG tự cài/test trên máy Anh trong task này.\n5. Kết luận: NÊN PORT / KHÔNG NÊN / ĐỂ SAU + các bước cụ thể nếu port (kể cả ước lượng độ lớn).\n\nBÀN GIAO: research/<id>-news-port.md + task sang review. Không đụng Qsang_vbook.",
-  "updated_at": "2026-11-20T00:01:37+07:00"
+  "notes": "Anh DUYỆT 20/11 00:01 (chat Vbook): giao Ú + Vịt nghiên cứu xem 2 loại extension mới của Darkrai9x (news + forum) có đáng port về Qsang_vbook không. CHỈ NGHIÊN CỨU — KHÔNG sửa Qsang_vbook, KHÔNG merge.\n\nNGUỒN ĐỌC (upstream đã đồng bộ):\n- Fork nhà: https://github.com/qsang2025/vbook-extensions_Darkrai9x (master 211fc62, đã sync với Darkrai9x) — clone về máy mình mà đọc, hoặc đọc qua GitHub. Bản local trên máy muse-main: ~/workspace/vbook/vbook-extensions (chỉ tham khảo, không sửa).\n- Trọng tâm: .agents/skills/vbook-extensions/templates/news/ + extension-api.md mục \"News & forum extensions\" + diff 2 commit 5df84a4 (\"Sync extension API: news and forum types...\") và 211fc62 (\"Show forum page numbers, explore tabs...\").\n- LƯU Ý: upstream CHƯA CÓ extension mẫu nào thuộc 2 loại này (không plugin.json nào type news/forum) — chỉ có template + hợp đồng API. Nghiên cứu dựa trên template + API doc, không có extension thật để đối chiếu.\n\nVIỆC LÀM:\n1. Đọc kỹ template + hợp đồng API của loại này: script nào bắt buộc (news: article + ít nhất 1 list source; forum: posts + ít nhất 1 list source), không có detail/toc/chap, section types mới (news_hero/news_list/thread_list/board_list), item mở thẳng reader.\n2. Đối chiếu với Qsang_vbook: skill + templates + extension-api.md (2 bản copy), scripts/cli.js, validate, build-catalog, registry plugin.json — liệt kê CHÍNH XÁC những chỗ phải đổi/thêm để hỗ trợ loại này (kể cả chỗ nào đã hỗ trợ sẵn).\n3. Nhu cầu: gợi ý 2–3 site free phù hợp loại này (kiểm chứng live site trả 200), có đáng làm không — Anh đọc tin/diễn đàn nào không, hay chỉ là \"có thì tốt\".\n4. Rủi ro: app vBook trên điện thoại Anh có hỗ trợ loại này không — GHI RÕ cách kiểm chứng (cài probe template tối thiểu qua dev mode), KHÔNG tự cài/test trên máy Anh trong task này.\n5. Kết luận: NÊN PORT / KHÔNG NÊN / ĐỂ SAU + các bước cụ thể nếu port (kể cả ước lượng độ lớn).\n\nBÀN GIAO: research/<id>-news-port.md + task sang review. Không đụng Qsang_vbook. [00:07 muse-1: Bat dau lam: da quet chong trung (Qsang_vbook main 119 nguon, 0 ext type news/forum, chua co template news; task 111 forum la cua muse-2, khong trung). Dang doc upstream Darkrai9x templates/news + API doc.]\n[20/11 00:14 muse-1: Da viet xong bao cao research/110-news-port.md, ket luan DE SAU — port duoc ve ky thuat (ha tang nho: validate TYPES + dong bo extension-api.md x2 + templates/news x2 cho theo chuan Qsang; build/build-catalog/vbook.js dung nguyen), nhung chua co nhu cau that duoc Anh xac nhan + chua kiem chung app dien thoai ho tro type news (upstream cung 0 ext news that). Task sang review, cho muse-main.]\n[20/11 00:14 muse-1: Luot muse-1 thu hai (hook) kiem chung doc lap trung ket luan DE SAU cua bao cao. Bo sung 3 diem cho muse-main khi review: (1) ngoai Darkrai9x, fork duongden/vbook da ship ext news that baikebaidu v2 ngay 19/11 (script ma hoa, chi doc duoc manifest: home/genre/search/article dung template) — template da duoc dung that, nhung van chua chung minh app tren may Anh chay duoc. (2) Probe live muc bai viet (VM, 20/11): VnExpress/Dan Tri/Tuoi Tre deu 200 o trang chu + bai mau (h1 + og:image), RSS VnExpress + Tuoi Tre 200. (3) AGENTS.md Qsang_vbook muc 6.3 (vong doi bat buoc detail/toc/chap) cung can ngoai le cho news khi port, ngoai danh sach type o muc 6.6. Dong bo branch cap ngoai = result.branch theo PROTOCOL §8.]",
+  "updated_at": "2026-11-20T00:14:44+07:00"
 }
