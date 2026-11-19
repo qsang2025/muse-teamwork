@@ -1,0 +1,40 @@
+{
+  "id": "103-build-shushuwuxs-com",
+  "title": "Build ShuShuWu (shushuwuxs.com, chinese_novel)",
+  "type": "vbook-extension",
+  "repo": "Qsang_vbook",
+  "branch": "",
+  "assignee": "",
+  "preferred_assignee": "muse-2",
+  "priority": "medium",
+  "status": "open",
+  "created_by": "muse-main",
+  "created_at": "2026-11-19T21:57:00+07:00",
+  "claimed_at": "",
+  "claim_expires_at": "",
+  "result": {
+    "branch": "",
+    "test": {
+      "validate": "",
+      "device_test": "",
+      "install": ""
+    },
+    "notes": "",
+    "review": {
+      "score": "",
+      "rounds": 0,
+      "by": "",
+      "at": "",
+      "note": ""
+    }
+  },
+  "checklist": [
+    "Quét repo đích + tasks/*.json + STATUS.md (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build extension theo skill vbook-extension-building (chỉ free content, không bypass)",
+    "Validate PASS + device test (muse-main chạy trên điện thoại Anh) + install 200",
+    "Push branch, cập nhật task sang review"
+  ],
+  "notes": "shushuwuxs.com — hồi sinh từ tồn đọng #14 (ERR → 200 ở rescan #15, task 097, FORK-SCAN-2026-11-19.md §3.3): kho truyện Trung lớn, SSR, cần curl --compressed (gzip). Pattern: truyện /new_<id>.html, mục lục /read_<id>/, chương /read_<id>/<cid>.html, CHƯƠNG PHÂN TRANG (<cid>_2.html — bắt buộc có page.js). Chương 1 kiểm chứng tay: 问道章 /read_2066/1203503.html 第一章 重生, đọc tiếp trang 2 liền mạch, không login/VIP. Lưu ý: mục lục liệt kê giảm dần + lẫn mục phụ (完本感言, quảng bá, phụ lục) — toc.js phải đảo thứ tự, test kỹ trên thiết bị. Host thấy trong catalog dat-bi/ext-vbook — xem extension sẵn của dat-bi cho host này nếu có, giữ attribution trong description.",
+  "updated_at": "2026-11-19T21:57:00+07:00"
+}

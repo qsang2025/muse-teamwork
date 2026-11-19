@@ -3,11 +3,11 @@
   "title": "Rescan forks lần 15 — tìm host novel mới build-ready",
   "type": "research",
   "repo": "Qsang_vbook",
-  "branch": "",
+  "branch": "feature/097-rescan-forks-lan-15",
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "review",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-19T21:17:22+07:00",
   "claimed_at": "2026-11-19T21:21:42+07:00",
@@ -16,10 +16,17 @@
     "branch": "feature/097-rescan-forks-lan-15",
     "test": {
       "validate": "PASS 117 nguon, 0 canh bao",
-      "device_test": "N/A — task research, khong build extension",
+      "device_test": "N/A — task research, không build extension",
       "install": "N/A — task research, khong build extension"
     },
-    "notes": "Rescan #15 xong 19/11: catalog tuoi 481 host, 7 moi; 3 host build-ready VM-verified ch1 full: sto66.com, truyenkimdung.net, shushuwuxs.com (hoi sinh tu ERR #14). 2 domain move can fix (tvtruyen1.com, truyendich.us), xianqihaotiami.org van Empty reply lan 3. Re-probe 210 host ton dong: 200:97, 000:76, 403:27. Bao cao Qsang_vbook/work/ext-review/FORK-SCAN-2026-11-19.md + results JSON, branch feature/097-rescan-forks-lan-15 (363d464). Research only, khong build extension."
+    "notes": "Rescan #15 xong 19/11: catalog tuoi 481 host, 7 moi; 3 host build-ready VM-verified ch1 full: sto66.com, truyenkimdung.net, shushuwuxs.com (hoi sinh tu ERR #14). 2 domain move can fix (tvtruyen1.com, truyendich.us), xianqihaotiami.org van Empty reply lan 3. Re-probe 210 host ton dong: 200:97, 000:76, 403:27. Bao cao Qsang_vbook/work/ext-review/FORK-SCAN-2026-11-19.md + results JSON, branch feature/097-rescan-forks-lan-15 (363d464). Research only, khong build extension.",
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-19T21:56:00+07:00",
+      "note": "Đạt (8/10). Báo cáo đầy đủ, trung thực về giới hạn: 481 host catalog, 7 mới, 3 build-ready VM-verified ch1 thật, 2 domain move, re-probe 210 host tồn đọng; không khẳng định lại 27 host 'full' của #14 khi chưa kiểm tay; ghi rõ comnguoinovel đã đóng không mở lại. muse-main kiểm chứng lại: validate PASS 117 nguồn 0 cảnh báo; sto66 ch1 200 nội dung thật (~2.400 ký tự), truyenkimdung ch1 200, shushuwuxs ch1 200, tvtruyen.space 301 → tvtruyen1.com. Merge fast-forward lên main 363d464. Trừ 2 điểm: re-probe chỉ đo homepage nên 47 host not_found vẫn chưa có kết luận chương 1 — để dành đợt sau cùng task 098."
+    }
   },
   "checklist": [
     "Pull repo, đọc FORK-SCAN-2026-11-18.md + task 089 (cách quét lần 14)",
@@ -27,6 +34,6 @@
     "Kiểm chứng từng host: HTTP + ch.1 thật từ VM",
     "Viết báo cáo research/ + cập nhật ROADMAP, để review"
   ],
-  "notes": "[19/11 muse-main: Anh giao khi hết việc — Rescan forks lần 15 theo mẫu task 089 (rescan #14, muse-2 làm 18/11): quét lại các fork đã biết, tìm host novel-type CHƯA CÓ trong repo Qsang_vbook. Chỉ đề xuất dự án chưa có — quét repo + fork trước. Kiểm chứng từng host mới từ VM: HTTP status + đọc thử ch.1 thật (đủ dài, đúng nội dung truyện, không login/VIP). Kết quả: báo cáo research/ (merge lên main) + cập nhật ROADMAP; host nào build-ready thì ghi rõ để giao build sau. KHÔNG build extension trong task này.] [21:22 muse-1: Bat dau rescan 15: da doc FORK-SCAN-2026-11-18 + task 089, branch feature/097-rescan-forks-lan-15, dang doi chieu catalog moi voi registry 117] [21:29 muse-1: Catalog diff xong: 481 host, 7 moi (3 novel that: truyenkimdung.net, sto66.com, tvtruyen1.com=domain move); ch1 ca 3 doc du; dang re-probe 210 host ton dong bang curl]",
-  "updated_at": "2026-11-19T21:17:22+07:00"
+  "notes": "[19/11 muse-main: Anh giao khi hết việc — Rescan forks lần 15 theo mẫu task 089 (rescan #14, muse-2 làm 18/11): quét lại các fork đã biết, tìm host novel-type CHƯA CÓ trong repo Qsang_vbook. Chỉ đề xuất dự án chưa có — quét repo + fork trước. Kiểm chứng từng host mới từ VM: HTTP status + đọc thử ch.1 thật (đủ dài, đúng nội dung truyện, không login/VIP). Kết quả: báo cáo research/ (merge lên main) + cập nhật ROADMAP; host nào build-ready thì ghi rõ để giao build sau. KHÔNG build extension trong task này.] [21:22 muse-1: Bat dau rescan 15: da doc FORK-SCAN-2026-11-18 + task 089, branch feature/097-rescan-forks-lan-15, dang doi chieu catalog moi voi registry 117] [21:29 muse-1: Catalog diff xong: 481 host, 7 moi (3 novel that: truyenkimdung.net, sto66.com, tvtruyen1.com=domain move); ch1 ca 3 doc du; dang re-probe 210 host ton dong bang curl]\n\n[19/11 21:56 muse-main: MERGED lên main 363d464 — review 8/10 (vòng 1). Kiểm chứng lại: validate PASS 117 nguồn, 0 cảnh báo (chạy lại trên branch); sto66 ch1 200 đọc thật, truyenkimdung ch1 200, shushuwuxs ch1 200, tvtruyen.space 301 → tvtruyen1.com. Device test/install N/A — research only, theo mẫu rescan #14. Merge fast-forward 9753f4b → 363d464, đã push. Task build tiếp theo: 102 sto66 (ưu tiên cao nhất), 103 shushuwuxs, 104 truyenkimdung, 105 fix TruyenTV domain, 106 thêm mirror truyendich.us.]",
+  "updated_at": "2026-11-19T21:56:00+07:00"
 }

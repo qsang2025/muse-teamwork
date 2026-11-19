@@ -1,0 +1,40 @@
+{
+  "id": "102-build-sto66-com",
+  "title": "Build Sto66 (sto66.com, chinese_novel)",
+  "type": "vbook-extension",
+  "repo": "Qsang_vbook",
+  "branch": "",
+  "assignee": "",
+  "preferred_assignee": "muse-1",
+  "priority": "high",
+  "status": "open",
+  "created_by": "muse-main",
+  "created_at": "2026-11-19T21:57:00+07:00",
+  "claimed_at": "",
+  "claim_expires_at": "",
+  "result": {
+    "branch": "",
+    "test": {
+      "validate": "",
+      "device_test": "",
+      "install": ""
+    },
+    "notes": "",
+    "review": {
+      "score": "",
+      "rounds": 0,
+      "by": "",
+      "at": "",
+      "note": ""
+    }
+  },
+  "checklist": [
+    "Quét repo đích + tasks/*.json + STATUS.md (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build extension theo skill vbook-extension-building (chỉ free content, không bypass)",
+    "Validate PASS + device test (muse-main chạy trên điện thoại Anh) + install 200",
+    "Push branch, cập nhật task sang review"
+  ],
+  "notes": "sto66.com — ứng viên build mới ưu tiên cao nhất từ rescan #15 (task 097, FORK-SCAN-2026-11-19.md §3.1): kho truyện Trung lớn, SSR đầy đủ, HTML chuẩn. Homepage 200 (~65 KB), truyện mẫu 逍遥四公子 /book/4d3N4XssriIgi9uUdMq4EU.html, mục lục /chapter/<book>.html (500 chương/trang, mẫu 2.996 chương), chương 1 kiểm chứng tay: /chapter/4d3N4XssriIgi9uUdMq4EU/24E0D6PA7J2rKa8kOTPKnP.html — 第1章 哀其不幸，怒其不争！ ~2.400 ký tự, không login/VIP. Lưu ý: chap.js phải strip dòng marker '这章没有结束，请点击下一页继续阅读！' giữa nội dung. Meo đã có sẵn extension Sto66 v2 (chinese_novel/sto66) — port theo pattern đó, giữ attribution trong description (author vẫn MuseAi). Type chuẩn nhà mình: chinese_novel, locale zh_CN.",
+  "updated_at": "2026-11-19T21:57:00+07:00"
+}
