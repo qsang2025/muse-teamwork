@@ -11,10 +11,20 @@ Dinh dang issue (do dashboard sinh):
   Tieu de: [dashboard] 094: giao cho muse-2
   Body:
     task: 094
-    action: assign | comment | decide
+    action: assign | comment | decide | new-task
     assignee: muse-1 | muse-2 | muse-main      (khi action=assign)
     decision: approve | block | reopen | cancel | priority-high | priority-medium | priority-low
     reason: <ly do>                             (khi decide=block/cancel)
+
+  Giao viec moi (mot issue = mot task moi):
+    task: new
+    action: new-task
+    title: <ten viec>
+    assignee: muse-1 | muse-2 | muse-main      (thanh preferred_assignee)
+    priority: high | medium | low             (mac dinh medium)
+    type: vbook-extension | research | ...     (mac dinh vbook-extension)
+    repo: Qsang_vbook | muse-teamwork          (mac dinh Qsang_vbook)
+    <mo ta viec>
     <noi dung binh luan tu do>                  (khi action=comment)
 
 Neu body thieu khoi header, script thu doc so task + tu khoa tieng Viet tu
@@ -31,6 +41,9 @@ Hanh dong ap dung:
   decide reopen  -> status=open, blocked_reason=""
   decide cancel  -> status=cancelled
   decide priority-* -> priority=high|medium|low
+  new-task -> tao tasks/<id>-<slug>.json moi tu _template.json (id = so
+              lon nhat hien co + 1), preferred_assignee neu co, notes = mo
+              ta. Chi Anh moi tao duoc task qua dashboard.
 
 Cach dung:  python3 scripts/apply-dashboard-issues.py [--dry-run]
   --dry-run: chi in ra se lam gi, khong sua file, khong dong issue.
@@ -49,7 +62,8 @@ REPO_DIR = Path(__file__).resolve().parent.parent
 ASSIGNEES = {"muse-1", "muse-2", "muse-main"}
 DECISIONS = {"approve", "block", "reopen", "cancel",
              "priority-high", "priority-medium", "priority-low"}
-HEADER_KEYS = {"task", "action", "assignee", "decision", "reason"}
+HEADER_KEYS = {"task", "action", "assignee", "decision", "reason", "title",
+               "type", "repo"}
 
 VN_TZ = timezone(timedelta(hours=7))
 
@@ -88,8 +102,8 @@ def parse_issue(issue):
 
     header, free_lines = {}, []
     for line in body.splitlines():
-        hm = re.match(r"^(task|action|assignee|decision|reason)\s*:\s*(.*)$",
-                      line.strip(), re.I)
+        hm = re.match(r"^(task|action|assignee|decision|reason|title|type|"
+                      r"repo|priority)\s*:\s*(.*)$", line.strip(), re.I)
         if hm:
             header[hm.group(1).lower()] = hm.group(2).strip()
         else:
@@ -127,11 +141,29 @@ def parse_issue(issue):
     if action == "comment" and not text:
         text = title_rest
 
-    if not task or not task.isdigit():
+    if not task or (not task.isdigit() and task.lower() != "new"):
         return None, "không đọc được số task (thiếu dòng 'task: NNN')."
-    if action not in ("assign", "comment", "decide"):
+    if action not in ("assign", "comment", "decide", "new-task"):
         return None, ("không đọc được hành động (cần action: assign / "
-                      "comment / decide).")
+                      "comment / decide / new-task).")
+    if action == "new-task":
+        title_text = header.get("title") or title_rest
+        if not title_text:
+            return None, "giao việc mới cần có tên việc (dòng 'title: ...')."
+        if header.get("assignee", "").lower() not in ASSIGNEES | {""}:
+            return None, ("người nhận không hợp lệ (chỉ muse-1, muse-2, "
+                          "muse-main).")
+        prio = header.get("priority", "medium").lower()
+        if prio not in ("high", "medium", "low"):
+            return None, "ưu tiên không hợp lệ (chỉ high / medium / low)."
+        return {"task": "new", "action": "new-task",
+                "assignee": header.get("assignee", "").lower(),
+                "decision": "", "reason": "",
+                "title": title_text,
+                "priority": prio,
+                "type": header.get("type", "vbook-extension"),
+                "repo": header.get("repo", "Qsang_vbook"),
+                "text": text}, None
     if action == "assign" and header.get("assignee", "").lower() not in ASSIGNEES:
         return None, ("người nhận không hợp lệ (chỉ muse-1, muse-2, "
                       "muse-main).")
@@ -151,6 +183,48 @@ def parse_issue(issue):
 def find_task_file(task_num):
     hits = sorted(glob(str(REPO_DIR / "tasks" / f"{task_num}-*.json")))
     return Path(hits[0]) if hits else None
+
+
+def slugify(text):
+    import unicodedata
+    s = unicodedata.normalize("NFD", text)
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn")
+    s = s.replace("đ", "d").replace("Đ", "D").lower()
+    s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")
+    return s[:50] or "task-moi"
+
+
+def apply_new_task(p, dry_run):
+    """Tao tasks/<id>-<slug>.json moi. Tra ve (True, mo_ta)."""
+    nums = []
+    for f in glob(str(REPO_DIR / "tasks" / "[0-9]*-*.json")):
+        m = re.match(r"(\d+)-", Path(f).name)
+        if m:
+            nums.append(int(m.group(1)))
+    new_id = (max(nums) + 1) if nums else 1
+    slug = slugify(p["title"])
+    fname = f"{new_id:03d}-{slug}.json"
+    template = json.loads((REPO_DIR / "tasks" / "_template.json")
+                          .read_text(encoding="utf-8"))
+    template.update({
+        "id": f"{new_id:03d}-{slug}",
+        "title": p["title"],
+        "status": "open",
+        "type": p["type"],
+        "repo": p["repo"],
+        "priority": p["priority"],
+        "preferred_assignee": p["assignee"],
+        "notes": p["text"],
+        "created_at": datetime.now(VN_TZ).strftime("%Y-%m-%dT%H:%M:%S+07:00"),
+        "created_by": "Anh (dashboard)",
+    })
+    if not dry_run:
+        (REPO_DIR / "tasks" / fname).write_text(
+            json.dumps(template, ensure_ascii=False, indent=2,
+                       sort_keys=True) + "\n", encoding="utf-8")
+    who = f", giao cho {p['assignee']}" if p["assignee"] else ""
+    return True, (f"đã tạo task mới {new_id:03d} '{p['title']}'{who} "
+                  f"(ưu tiên {p['priority']}).")
 
 
 def apply_parsed(task_num, p, dry_run):
@@ -234,7 +308,9 @@ def main():
             if not dry_run:
                 gh_issue_close(num, msg)
             continue
-        changed, desc = apply_parsed(parsed["task"], parsed, dry_run)
+        changed, desc = apply_new_task(parsed, dry_run) \
+            if parsed["action"] == "new-task" \
+            else apply_parsed(parsed["task"], parsed, dry_run)
         if not changed:
             msg = f"Không áp dụng được: {desc}"
             print(f"#{num}: {msg}")
