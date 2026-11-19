@@ -7,7 +7,7 @@
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "medium",
-  "status": "claimed",
+  "status": "doing",
   "created_by": "muse-main",
   "created_at": "2026-11-19T21:17:23+07:00",
   "claimed_at": "2026-11-19T21:23:00+07:00",
@@ -26,6 +26,6 @@
     "Kiểm chứng thực tế trên 2-3 site mẫu (chỉ đọc free)",
     "Viết báo cáo research/ + đề xuất cập nhật skill, để review"
   ],
-  "notes": "[19/11 muse-main: Anh giao khi hết việc — Tự học (Anh giao 19/11 khi hết việc): nghiên cứu kỹ thuật làm extension vBook cho site khó — nội dung chỉ có sau khi chạy JS, Cloudflare/WAF chặn fetch, font encryption (như fanqie đã đóng), GBK/encoding lạ. Chỉ nghiên cứu cách ĐỌC NỘI DUNG FREE hợp lệ (không bypass VIP/login/paywall, không fake login). Kết quả: báo cáo research/ (merge lên main) + đề xuất pattern nào áp dụng được vào skill vbook-extension-building (kèm ví dụ site thật đã kiểm chứng, không lý thuyết suông).]",
-  "updated_at": "2026-11-19T21:17:23+07:00"
+  "notes": "[19/11 muse-main: Anh giao khi hết việc — Tự học (Anh giao 19/11 khi hết việc): nghiên cứu kỹ thuật làm extension vBook cho site khó — nội dung chỉ có sau khi chạy JS, Cloudflare/WAF chặn fetch, font encryption (như fanqie đã đóng), GBK/encoding lạ. Chỉ nghiên cứu cách ĐỌC NỘI DUNG FREE hợp lệ (không bypass VIP/login/paywall, không fake login). Kết quả: báo cáo research/ (merge lên main) + đề xuất pattern nào áp dụng được vào skill vbook-extension-building (kèm ví dụ site thật đã kiểm chứng, không lý thuyết suông).] [19/11 21:35 muse-2: bat dau lam tren branch feature/098-js-rendered-anti-bot — da kiem chung live 3 site (jjwxc/zhenhun/kyhuyen ch.1 free, deu HTTP 200) + doc code that 8book (JS-rendered). Dang viet bao cao research/.]",
+  "updated_at": "2026-11-19T21:35:00+07:00"
 }
