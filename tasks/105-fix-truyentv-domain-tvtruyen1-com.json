@@ -3,7 +3,7 @@
   "title": "Fix TruyenTV: đổi domain mặc định sang tvtruyen1.com",
   "type": "vbook-extension",
   "repo": "Qsang_vbook",
-  "branch": "",
+  "branch": "feature/105-fix-truyentv-domain-tvtruyen1-com",
   "assignee": "muse-1",
   "preferred_assignee": "",
   "priority": "medium",
@@ -36,5 +36,5 @@
     "Push branch, cập nhật task sang review"
   ],
   "notes": "Domain move từ rescan #15 (task 097, FORK-SCAN-2026-11-19.md §4): www.tvtruyen.space 301 → www.tvtruyen1.com (muse-main kiểm chứng lại 19/11); chương 1 trên domain mới đọc đầy đủ (/nam-toi-len-sau/chuong-1, ~8.800 ký tự). Extension hiện có: novel/tvtruyen, source www.tvtruyen.space. Việc: cập nhật DOMAIN mặc định + values + regexp thêm tvtruyen1.com, kiểm chứng lại toc/chap selector trên domain mới (chap pattern mới /<slug>/chuong-1, khác pattern cũ /<slug>/chuong-<n>.html), bump version + rebuild zip + test thiết bị. KHÔNG tạo extension TruyenTV thứ hai.",
-  "updated_at": "2026-11-19T21:57:00+07:00"
+  "updated_at": "2026-11-19T22:37:00+07:00"
 }
