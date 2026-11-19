@@ -1,0 +1,36 @@
+{
+  "assignee": "",
+  "branch": "",
+  "checklist": [
+    "Đã xác nhận đóng theo lời Anh — không mở lại trừ khi Anh nói rõ"
+  ],
+  "claim_expires_at": "",
+  "claimed_at": "",
+  "created_at": "2026-11-19T17:13:03+07:00",
+  "created_by": "muse-main",
+  "id": "closed-108-shenyebook",
+  "notes": "[ROADMAP #108 — ĐÃ BỎ 16/11 ~12:21 — chỉ trả shell rỗng (GDPR/CMP), không có nội dung thật để build. Anh xác nhận 19/11/2026: ghi thành task cancelled (Living Spec bước 5). Không mở lại trừ khi Anh tự yêu cầu. Chi tiết: ROADMAP.md mục lưu trữ + file *-PROGRESS.md tương ứng.",
+  "preferred_assignee": "",
+  "priority": "low",
+  "repo": "Qsang_vbook",
+  "result": {
+    "branch": "",
+    "notes": "ĐÃ BỎ 16/11 ~12:21 — chỉ trả shell rỗng (GDPR/CMP), không có nội dung thật để build.",
+    "review": {
+      "at": "",
+      "by": "",
+      "note": "",
+      "rounds": 0,
+      "score": ""
+    },
+    "test": {
+      "device_test": "",
+      "install": "",
+      "validate": ""
+    }
+  },
+  "status": "cancelled",
+  "title": "ĐÃ BỎ — shenyebook.com: chỉ trả shell rỗng, không có nội dung thật",
+  "type": "vbook-extension",
+  "updated_at": "2026-11-19T17:13:03+07:00"
+}

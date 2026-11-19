@@ -5,6 +5,14 @@ Mỗi task là **1 file JSON**, tên file = `tasks/<id>.json` (id dạng
 agent nào muốn biết "việc gì đang mở, ai đang làm gì" thì đọc thư mục này
 (sau `git pull`).
 
+> Quy ước riêng cho mục đã đóng (Living Spec bước 5, 19/11/2026): task
+> `cancelled` của các mục đóng từ trước có id dạng `closed-<số-roadmap>-<slug>`
+> (vd `closed-061-chivi`), **không** dùng số đầu như task thường. Lý do:
+> `new-task.sh` và `apply-dashboard-issues.py` tính id mới bằng
+> max(số đầu tên file)+1 — đặt `108-...`/`111-...` sẽ làm task mới tiếp theo
+> nhảy thành 112 thay vì 095. Tiền tố `closed-` tránh điều đó, số roadmap
+> vẫn giữ trong id và notes để tra cứu.
+
 ## Schema (xem mẫu đầy đủ ở `_template.json`)
 
 | Trường | Nghĩa |
