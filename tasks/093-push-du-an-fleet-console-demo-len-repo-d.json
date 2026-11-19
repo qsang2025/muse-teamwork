@@ -11,7 +11,7 @@
   "created_at": "2026-11-19T14:18:25+07:00",
   "created_by": "muse-main",
   "id": "093-push-du-an-fleet-console-demo-len-repo-d",
-  "notes": "Vịt (muse-2) làm mô hình fleet console demo và chia sẻ link muse.ai: https://muse.ai/s/fleet-console-demo-lj6xibxrxg9h7h/Z_IqQB1fTT7GpBkvKQaSQfIbVPiBQkS6pCuF4mYj5PI — muse-main đã thử mở link nhưng bị chặn (control_plane_destination_blocked), không xem được, nên team chưa nghiên cứu được từ link. Anh dặn: Vịt đẩy cả dự án lên repo để team cùng nghiên cứu. Đẩy toàn bộ source vào muse-teamwork, thư mục research/fleet-console-demo/ (nếu Vịt thấy chỗ khác hợp hơn thì ghi rõ đường dẫn vào task). Kèm README ngắn: demo làm gì, chạy/xem thế nào, có gì mượn được cho team (đặc biệt so với dashboard tasks/*.json hiện có và hub). Xong thì cập nhật task sang review, ghi rõ đường dẫn thư mục. [sweep 19/11 16:25: hết hạn 2h từ muse-2, tự động trả về open]",
+  "notes": "Vịt (muse-2) làm mô hình fleet console demo và chia sẻ link muse.ai: https://muse.ai/s/fleet-console-demo-lj6xibxrxg9h7h/Z_IqQB1fTT7GpBkvKQaSQfIbVPiBQkS6pCuF4mYj5PI — muse-main đã thử mở link nhưng bị chặn (control_plane_destination_blocked), không xem được, nên team chưa nghiên cứu được từ link. Anh dặn: Vịt đẩy cả dự án lên repo để team cùng nghiên cứu. Đẩy toàn bộ source vào muse-teamwork, thư mục research/fleet-console-demo/ (nếu Vịt thấy chỗ khác hợp hơn thì ghi rõ đường dẫn vào task). Kèm README ngắn: demo làm gì, chạy/xem thế nào, có gì mượn được cho team (đặc biệt so với dashboard tasks/*.json hiện có và hub). Xong thì cập nhật task sang review, ghi rõ đường dẫn thư mục. [sweep 19/11 16:25: hết hạn 2h từ muse-2, tự động trả về open]\n\n[19/11 ~17:20 muse-main: REVIEW 9/10, rounds 1 — DONE]\n- Kiem chung tren branch feature/093-fleet-console-demo: du 6 file (index.html 92KB, 1137 dong, mo dau <!doctype html> ket thuc </html>; README 5,4KB; space.json; AGENTS.md; icon.webp; assets/ref-console.jpg). index.html co du 3 goc nhin (inbox x27, nhat ky x16, pubkey x10, @scout/@forge/@sentry/@herald, 'Phat lenh mau', Backlog).\n- README tot: mo ta demo, cach chay (mo truc tiep index.html hoac python3 -m http.server), bang 5 y muon duoc (danh tinh agent theo phong, nhat ky su kien co chu ky, task = phong rieng, hop thu duyet bat dong bo, 3 goc nhin cung du lieu) + so sanh thang than voi dashboard tasks/*.json + hub (demo chi la giao dien mo phong, khong co du lieu that).\n- Da merge vao main (commit research tu branch). Huong dung tiep: khi cai tien dashboard, co the muon bo cuc 3 tab (phong lenh / hop thu duyet / nhat ky) + y tuong hop thu duyet cho vong review.",
   "preferred_assignee": "muse-2",
   "priority": "medium",
   "repo": "muse-teamwork",
@@ -22,9 +22,15 @@
       "device_test": "",
       "install": "",
       "validate": ""
+    },
+    "review": {
+      "score": 9,
+      "rounds": 1,
+      "by": "muse-main",
+      "note": "Du 6 file nhu mo ta (index.html 92KB/1137 dong, README 5,4KB, space.json, AGENTS.md, icon, anh mau); README day du + that tha (mo phong, chua co backend); bang muon duoc 5 y + so sanh dashboard/hub ro rang. Tru 1 diem vi code nam tren branch, can muse-main merge tay len main. Da merge vao main."
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Push du an fleet-console-demo len repo de team nghien cuu",
   "type": "research",
   "updated_at": "2026-11-19T17:05:10+07:00"
