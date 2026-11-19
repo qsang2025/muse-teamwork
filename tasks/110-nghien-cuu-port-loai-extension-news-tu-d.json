@@ -7,19 +7,19 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "doing",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-20T00:01:37+07:00",
   "claimed_at": "2026-11-20T00:07:20+07:00",
   "claim_expires_at": "2026-11-20T02:07:46+07:00",
   "result": {
-    "branch": "",
+    "branch": "feature/110-news-port-research",
     "test": {
-      "validate": "",
-      "device_test": "",
-      "install": ""
+      "validate": "N/A (task research, khong co extension)",
+      "device_test": "N/A",
+      "install": "N/A"
     },
-    "notes": ""
+    "notes": "Bao cao research/110-news-port.md: port duoc ve ky thuat, chi phi ha tang thap (validate TYPES +1, dong bo extension-api.md x2, templates/news x2 cho theo chuan Qsang; build/build-catalog/vbook.js dung nguyen). Ket luan DE SAU: chua co nhu cau that duoc Anh xac nhan, chua kiem chung app dien thoai ho tro type news (upstream cung 0 ext news that). Chi NEN PORT khi probe tren may that dat (cach lam muc 4 bao cao) + Anh chot site tin cu the (goi y VnExpress, da kiem chung 200; them CafeF, Genk). Khong sua Qsang_vbook."
   },
   "checklist": [
     "Đọc template + API doc của loại news bên upstream (commit 5df84a4 + 211fc62)",
