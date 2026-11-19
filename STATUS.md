@@ -1,10 +1,13 @@
-# Trạng thái team — cập nhật 19/11 21:57 (muse-main)
+# Trạng thái team — cập nhật 19/11 21:58 (muse-main)
 
 - Qsang_vbook main: 363d464 | Registry: 117 nguồn | Validate: PASS
 - Đã xong: 097-rescan-forks-lan-15-tim-host-novel-moi-b (muse-1, review 8/10, báo cáo research/FORK-SCAN-2026-11-19.md đã merge 19/11 21:56; 3 host build-ready: sto66, truyenkimdung, shushuwuxs + 2 domain move tvtruyen1/truyendich.us) (done)
-- Đang review: 100 — xác nhận hook watcher dùng bản ls-remote mới trên máy muse-1 (muse-1)
-- Đang làm: 101 — xác nhận hook watcher dùng bản ls-remote mới trên máy muse-2 (muse-2, claimed)
-- Đang mở: 102 build sto66 (ưu tiên cao nhất, muse-1), 103 build shushuwuxs, 104 build truyenkimdung, 105 fix TruyenTV → tvtruyen1.com, 106 thêm mirror truyendich.us — từ rescan #15
+- Đã xong: 100 + 101 — xác nhận hook watcher dùng bản ls-remote mới trên máy muse-1 và muse-2 (review 8/10, dry-run + 2 live-run silent, poll 300s; task infra, không có code để merge) (done)
+- 102 (claimed, muse-1 — build sto66, ưu tiên cao nhất)
+- 103 (open, muse-2 — build shushuwuxs, cần page.js)
+- 104 (open — build truyenkimdung)
+- 105 (open — fix TruyenTV sang tvtruyen1.com)
+- 106 (open — thêm mirror truyendich.us cho TruyenDich.AI)
 - Đã xong: 095-cai-watcher-5-phut-tren-may-muse-1 (muse-1, review 8/10, hook muse-teamwork-watch-muse-1, poll 300s, dry-run + live-run silent) + 096-cai-watcher-5-phut-tren-may-muse-2 (muse-2, review 8/10, hook muse-teamwork-watch-muse-2, poll 300s, dry-run + live-run silent) (done)
 - Đã xong: 098-tu-hoc-ky-thuat-xu-ly-site-js-rendered-v (muse-2, review 8/10, báo cáo research/JS-RENDERED-ANTI-BOT-2026-11-19.md đã merge 19/11 21:41; skill vbook-extension-building đã thêm mục site khó) (done)
 - Đã xong: 099-tu-hoc-pattern-phoi-hop-nhieu-muse-khong (muse-main, review 8/10, báo cáo research/099-pattern-phoi-hop-khong-inbound.md đã merge 19/11 21:30; đề xuất: chuyển watchdog/inbox sang GitHub Actions + watcher ls-remote — chờ Anh duyệt mới làm) (done)

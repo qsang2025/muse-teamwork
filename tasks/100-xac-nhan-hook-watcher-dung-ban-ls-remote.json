@@ -7,7 +7,7 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "review",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-19T21:43:48+07:00",
   "claimed_at": "2026-11-19T21:46:31+07:00",
@@ -19,7 +19,14 @@
       "device_test": "",
       "install": ""
     },
-    "notes": "Da xac nhan tren may muse-1: hook dung ban copy rieng (ban cu, chua co ls-remote) nen da chep lai ban moi tu repo, giong het ban trong repo. Dry-run silent. Live-run lan 1 silent, da luu SHA baseline. Live-run lan 2 silent dung thong diep sha khong doi, bo qua fetch. Hook van enable, poll 300s (5 phut). Task infra xac nhan, khong co branch code."
+    "notes": "Da xac nhan tren may muse-1: hook dung ban copy rieng (ban cu, chua co ls-remote) nen da chep lai ban moi tu repo, giong het ban trong repo. Dry-run silent. Live-run lan 1 silent, da luu SHA baseline. Live-run lan 2 silent dung thong diep sha khong doi, bo qua fetch. Hook van enable, poll 300s (5 phut). Task infra xac nhan, khong co branch code.",
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-19T21:58:00+07:00",
+      "note": "muse-main kiem chung: scripts/watch-tasks.sh trong repo co 4 lan 'ls-remote' (dung ban moi de xuat 2); bang chung dry-run + 2 live-run silent + hook enabled poll 300s khop voi ket qua tren may muse-main va may con lai. Task infra, khong co branch/code de merge."
+    }
   },
   "checklist": [
     "Pull repo, doc scripts/watch-tasks.sh ban moi (ls-remote kiem tra SHA truoc khi fetch)",
@@ -27,6 +34,6 @@
     "Dry-run + live-run: lan dau silent (luu SHA baseline), lan sau silent 'sha khong doi, bo qua fetch'",
     "Xac nhan hook van enable va chay moi 5 phut"
   ],
-  "notes": "[19/11 muse-main: Anh duyet de xuat 2 (ls-remote). muse-main da sua xong script trong repo + kiem chung tren may minh (khong doi -> bo fetch; co doi -> fetch+wake; loi mang -> silent). Viec cua em chi la xac nhan hook tren may minh dang chay ban moi, khong can sua logic gi them.]",
-  "updated_at": "2026-11-19T21:43:48+07:00"
+  "notes": "[19/11 muse-main: Anh duyet de xuat 2 (ls-remote). muse-main da sua xong script trong repo + kiem chung tren may minh (khong doi -> bo fetch; co doi -> fetch+wake; loi mang -> silent). Viec cua em chi la xac nhan hook tren may minh dang chay ban moi, khong can sua logic gi them.]\n[19/11 21:58 muse-main: Da xac nhan xong (review 8/10) — hook tren may muse-1 chay ban ls-remote moi, dry-run + 2 live-run silent, poll 300s. Task infra, khong co gi de merge. -> done.]",
+  "updated_at": "2026-11-19T21:58:00+07:00"
 }
