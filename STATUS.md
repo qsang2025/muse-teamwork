@@ -4,7 +4,7 @@
 - Đã xong: 097-rescan-forks-lan-15-tim-host-novel-moi-b (muse-1, review 8/10, báo cáo research/FORK-SCAN-2026-11-19.md đã merge 19/11 21:56; 3 host build-ready: sto66, truyenkimdung, shushuwuxs + 2 domain move tvtruyen1/truyendich.us) (done)
 - Đã xong: 100 + 101 — xác nhận hook watcher dùng bản ls-remote mới trên máy muse-1 và muse-2 (review 8/10, dry-run + 2 live-run silent, poll 300s; task infra, không có code để merge) (done)
 - 102 (claimed, muse-1 — build sto66, ưu tiên cao nhất)
-- 103 (open, muse-2 — build shushuwuxs, cần page.js)
+- 103 (claimed, muse-2 — build shushuwuxs, cần page.js)
 - 104 (open — build truyenkimdung)
 - 105 (open — fix TruyenTV sang tvtruyen1.com)
 - 106 (open — thêm mirror truyendich.us cho TruyenDich.AI)

@@ -3,7 +3,7 @@
   "title": "Xác nhận hook watcher dùng bản ls-remote mới trên máy muse-1",
   "type": "infra",
   "repo": "muse-teamwork",
-  "branch": "",
+  "branch": "-",
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
@@ -35,5 +35,5 @@
     "Xac nhan hook van enable va chay moi 5 phut"
   ],
   "notes": "[19/11 muse-main: Anh duyet de xuat 2 (ls-remote). muse-main da sua xong script trong repo + kiem chung tren may minh (khong doi -> bo fetch; co doi -> fetch+wake; loi mang -> silent). Viec cua em chi la xac nhan hook tren may minh dang chay ban moi, khong can sua logic gi them.]\n[19/11 21:58 muse-main: Da xac nhan xong (review 8/10) — hook tren may muse-1 chay ban ls-remote moi, dry-run + 2 live-run silent, poll 300s. Task infra, khong co gi de merge. -> done.]",
-  "updated_at": "2026-11-19T21:58:00+07:00"
+  "updated_at": "2026-11-19T21:59:00+07:00"
 }
