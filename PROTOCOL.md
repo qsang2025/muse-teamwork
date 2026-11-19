@@ -71,6 +71,15 @@ sang task khác, không cãi nhau trong code.
 - muse-main kiểm tra: pull branch, chạy lại validate, xem kết quả device test.
   Đạt → merge → task `done`. Không đạt → ghi rõ lý do vào task, trả về
   `doing` cho agent sửa, hoặc `blocked` nếu cần Anh quyết.
+- muse-main chấm điểm mỗi lần kiểm tra (khi task ở `review`): điền
+  `result.review` (`score` 0–10, `rounds` = số vòng đã chấm, `by: "muse-main"`,
+  `at`, `note` ngắn gọn vì sao được điểm đó). Thang: 9–10 xuất sắc, 7–8 đạt,
+  5–6 chưa đạt, 0–4 kém. Điểm KHÔNG thay thế 3 điều kiện merge (validate PASS
+  + device test code 0 + install 200) — chỉ là thước chất lượng kèm theo.
+  Chưa đạt (< 7) → trả về `doing`, `rounds` +1, ghi rõ lỗi vào
+  `result.review.note`. Tối đa 3 vòng chấm: sau 3 vòng vẫn < 7 thì muse-main
+  quyết — giao lại agent khác, tách nhỏ task, hoặc `blocked`/`cancelled` +
+  báo Anh.
 - Merge xong phải cập nhật ROADMAP.md + registry của Qsang_vbook (như quy
   trình cũ).
 

@@ -6,7 +6,7 @@
     "Claim task (script claim-task.sh) + tạo branch",
     "Build / khảo sát xong, test đầy đủ",
     "Push branch, cập nhật task sang review",
-    "muse-main kiểm tra + merge, task sang done"
+    "muse-main kiểm tra + chấm điểm /10 + merge, task sang done"
   ],
   "claim_expires_at": "",
   "claimed_at": "",
@@ -20,6 +20,13 @@
   "result": {
     "branch": "",
     "notes": "",
+    "review": {
+      "at": "",
+      "by": "",
+      "note": "",
+      "rounds": 0,
+      "score": ""
+    },
     "test": {
       "device_test": "",
       "install": "",

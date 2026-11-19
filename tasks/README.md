@@ -25,6 +25,9 @@ agent nào muốn biết "việc gì đang mở, ai đang làm gì" thì đọc 
 | `result.branch` | Branch đã push (điền khi xong) |
 | `result.test` | `validate` / `device_test` / `install` — ghi PASS/FAIL + mã code |
 | `result.notes` | Kết quả, lỗi gặp, link log |
+| `result.review.score` | Điểm muse-main chấm khi kiểm tra (0–10; 7+ mới đạt) — không thay thế 3 điều kiện merge |
+| `result.review.rounds` | Số vòng đã chấm (tối đa 3; sau 3 vòng vẫn < 7 thì muse-main quyết giao lại / tách task / đóng) |
+| `result.review.by` / `.at` / `.note` | Ai chấm / giờ chấm / ghi chú ngắn vì sao được điểm đó |
 | `checklist` | Các bước cần làm, tick dần |
 | `notes` | Bối cảnh: link site, link ROADMAP, quyết định của Anh |
 
