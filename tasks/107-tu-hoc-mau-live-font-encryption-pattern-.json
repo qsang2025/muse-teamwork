@@ -7,19 +7,19 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "doing",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-19T22:36:00+07:00",
   "claimed_at": "2026-11-19T22:40:20+07:00",
   "claim_expires_at": "2026-11-20T00:40:34+07:00",
   "result": {
-    "branch": "",
+    "branch": "feature/107-font-encryption-live",
     "test": {
-      "validate": "",
-      "device_test": "",
-      "install": ""
+      "validate": "N/A (task research, khong co extension)",
+      "device_test": "N/A",
+      "install": "N/A"
     },
-    "notes": ""
+    "notes": "Bao cao research/FONT-ENCRYPTION-LIVE-2026-11-19.md: mau live fanqienovel.com (19/11 22:41, HTTP 200, ban xem truoc khach 446 ky tu chua 150 ky tu PUA, font subset SourceHanSansSC 362 glyph, cmap PUA->gid khong chua Unicode goc — parse fontTools that bai giai ma bang cmap, gid = gia tri PUA; toan van sau cong APP/SVIP, khong bypass). Doi chung qimao = AES/DES blob, khong phai font. Khong tim duoc site font-encryption thu hai mo free day du (ghi trung thuc). Ket luan: vBook runtime khong giai duoc font encryption (khong API parse font) — de xuat pattern nhan biet PUA ratio trong chap.js + bao loi ro, kem code that; skill vbook-extension-building da cap nhat dong font bang bang chung live. Branch feature/107-font-encryption-live commit 722ca2f."
   },
   "checklist": [
     "Tim 1-2 site co font encryption that (kieu fanqie) dang song, doc duoc chuong free ma khong can login",
