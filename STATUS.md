@@ -1,6 +1,7 @@
-# Trạng thái team — cập nhật 20/11 00:20 (muse-main)
+# Trạng thái team — cập nhật 20/11 00:24 (muse-main)
 
 - Qsang_vbook main: ead9038 | Registry: 119 nguồn | Validate: PASS
+- 110 (done, muse-1 — nghiên cứu port loại extension news từ Darkrai9x, review 9/10, báo cáo research/110-news-port.md đã merge 20/11 00:24; kết luận: ĐỂ SAU — port được về kỹ thuật, chi phí hạ tầng thấp, nhưng chưa có nhu cầu thật + chưa kiểm chứng app điện thoại Anh hỗ trợ type news; bổ sung kiểm chứng muse-main: fork duongden/vbook đã có 3 ext news thật (baikebaidu v2, sohu v3, viblo v6) nên hợp đồng news đã được dùng thật, vẫn cần probe trên máy Anh; site đạt: VnExpress, CafeF, Genk (200); CHỜ Anh: Anh có muốn đọc/nghe tin trong vBook không + khi nào sẵn sàng cài probe news)
 - 111 (done, muse-2 — nghiên cứu port loại extension forum từ Darkrai9x, review 9/10, báo cáo research/111-nghien-cuu-port-loai-extension-forum-tu--forum-port.md đã merge 20/11 00:20; kết luận: NÊN PORT có điều kiện — chỉ port sau khi probe điện thoại Anh xác nhận app hỗ trợ loại forum; chặn duy nhất phía repo là validate.js TYPES thiếu news/forum; site đạt: tinhte.vn, otofun.net.vn (200); voz.vn 403, tangthuvien.vn timeout từ VM — cần phone test; CHỜ Anh: Anh có đọc diễn đàn nào không + khi nào sẵn sàng cài probe)
 
 - Qsang_vbook main: ead9038 | Registry: 119 nguồn | Validate: PASS
@@ -14,7 +15,6 @@
 - 107 (done, muse-1 — mẫu live font encryption fanqie; báo cáo research/FONT-ENCRYPTION-LIVE-2026-11-19.md đã merge 19/11 22:48; fanqie live: 150 PUA, font subset SourceHanSansSC 362 glyph, cmap không chứa Unicode gốc; kết luận: vBook runtime không giải được font encryption — pattern nhận biết PUA ratio + báo lỗi rõ trong chap.js; skill đã cập nhật)
 - 105 (review — fix TruyenTV sang tvtruyen1.com)
 - 106 (done, muse-main — merge mirror truyendich.us lên main ead9038; device test 13/13 + install 200 sau khi Anh đổi sang 5G)
-- 110 (claimed, muse-1 — nghiên cứu port loại extension news từ Darkrai9x)
 - Đã xong: 095-cai-watcher-5-phut-tren-may-muse-1 (muse-1, review 8/10, hook muse-teamwork-watch-muse-1, poll 300s, dry-run + live-run silent) + 096-cai-watcher-5-phut-tren-may-muse-2 (muse-2, review 8/10, hook muse-teamwork-watch-muse-2, poll 300s, dry-run + live-run silent) (done)
 - Đã xong: 098-tu-hoc-ky-thuat-xu-ly-site-js-rendered-v (muse-2, review 8/10, báo cáo research/JS-RENDERED-ANTI-BOT-2026-11-19.md đã merge 19/11 21:41; skill vbook-extension-building đã thêm mục site khó) (done)
 - Đã xong: 099-tu-hoc-pattern-phoi-hop-nhieu-muse-khong (muse-main, review 8/10, báo cáo research/099-pattern-phoi-hop-khong-inbound.md đã merge 19/11 21:30; đề xuất: chuyển watchdog/inbox sang GitHub Actions + watcher ls-remote — chờ Anh duyệt mới làm) (done)
