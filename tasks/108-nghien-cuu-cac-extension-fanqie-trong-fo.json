@@ -3,7 +3,7 @@
   "title": "Nghiên cứu các extension fanqie trong fork — cách xử lý font encryption + captcha",
   "type": "research",
   "repo": "Qsang_vbook",
-  "branch": "",
+  "branch": "feature/108-fanqie-fork-extensions",
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
