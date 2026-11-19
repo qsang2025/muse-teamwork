@@ -131,3 +131,4 @@ sang task khác, không cãi nhau trong code.
 - Nếu `notes` dài quá ~8.000 ký tự: chuyển các mục cũ sang `tasks/archive/<id>-log.md`, để lại trong notes 1 dòng trỏ tới file đó.
 - **Không ghi IP, port, mẫu máy, đường dẫn local vào `notes`** (repo public, dashboard hiển thị công khai — chi tiết hạ tầng để trong file log riêng, notes chỉ ghi kết quả + link). File archive đã ghi rồi thì để nguyên văn, không sửa lại lịch sử.
 - `branch` cấp ngoài và `result.branch` phải giống nhau — chỉ ghi một chỗ, chỗ kia copy y hệt, không để một chỗ trống.
+- **Commit chỉ add đúng file của task mình — KHÔNG `git add -A` trong clone dùng chung** (19/11: commit a8e48cc merge 098 đã cuốn nhầm `scripts/watch-tasks.sh` chưa commit của đề xuất 2; bản đúng phải đẩy lại ở 88e9e3a).
