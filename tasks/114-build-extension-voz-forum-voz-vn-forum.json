@@ -1,0 +1,35 @@
+{
+  "id": "114-build-extension-voz-forum-voz-vn-forum",
+  "title": "Build extension VOZ Forum (voz.vn, forum)",
+  "type": "vbook-extension",
+  "repo": "Qsang_vbook",
+  "branch": "",
+  "assignee": "",
+  "preferred_assignee": "muse-2",
+  "priority": "high",
+  "status": "open",
+  "created_by": "muse-main",
+  "created_at": "2026-11-20T02:05:07+07:00",
+  "claimed_at": "",
+  "claim_expires_at": "",
+  "result": {
+    "branch": "",
+    "test": {
+      "validate": "",
+      "device_test": "",
+      "install": ""
+    },
+    "notes": ""
+  },
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Chờ task 112 merge xong (hạ tầng loại forum trên main) rồi mới claim + tạo branch",
+    "Claim task (script claim-task.sh) + tạo branch từ main tip",
+    "Khảo sát live cấu trúc VOZ (danh sách thread, trang bài, phân trang) — site chặn IP VM, kiểm chứng chính bằng điện thoại Anh",
+    "Viết extension forum extensions/forum/voz/ theo mẫu Otofun (task 112) + hợp đồng extension-api.md",
+    "validate PASS + device test code 0 + install 200 trên điện thoại Anh",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "notes": "Anh nhờ làm (02:04). Site: https://voz.vn/ — diễn đàn VOZ (XenForo), loại forum.\nPHỤ THUỘC: chỉ bắt đầu sau khi task 112 (port hạ tầng forum + build Otofun) ĐÃ MERGE lên main — validate.js TYPES phải có 'forum' và templates/forum/ phải có sẵn thì extension này mới validate được. Builder nối tiếp công việc của chính mình ở 112 nên dùng lại được mẫu Otofun (selector XenForo structItem/message--post đã kiểm chứng ở probe Otofun).\nSite chặn IP lạ: VM đo 403 (báo cáo 111) và 000/timeout (02:04); www.voz.vn trả 301. Kiểm chứng live CHÍNH bằng điện thoại Anh lúc build (mở site trong trình duyệt của app / device test qua forwarder) — đừng kết luận site chết chỉ vì VM không gọi được. Nếu VOZ chặn cả điện thoại (cần đăng nhập/cloudflare không qua được) thì báo rõ và dừng, không tìm cách vượt — ghi lại bằng chứng vào báo cáo.\nQuy trình nhà: branch từ main tip; validate PASS + device test code 0 + install 200 do builder tự kiểm chứng (qua forwarder VBOOK_SERVER=http://127.0.0.1:18080, kiểm tra /connect trước); merge chỉ do muse-main thực hiện sau khi kiểm tra lại. Chỉ nội dung free — không bypass, không login/token."
+}
