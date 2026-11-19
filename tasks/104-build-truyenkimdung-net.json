@@ -7,19 +7,19 @@
   "assignee": "muse-1",
   "preferred_assignee": "",
   "priority": "medium",
-  "status": "claimed",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-19T21:57:00+07:00",
   "claimed_at": "2026-11-19T22:10:44+07:00",
   "claim_expires_at": "2026-11-20T00:10:44+07:00",
   "result": {
-    "branch": "",
+    "branch": "feature/104-build-truyenkimdung-net",
     "test": {
-      "validate": "",
+      "validate": "PASS",
       "device_test": "",
       "install": ""
     },
-    "notes": "",
+    "notes": "Build xong Truyện Kim Dung v1 (truyenkimdung.net, novel, vi_VN): home/genre/gen/search/detail/toc/chap + config, icon 200x200 từ logo site, test.json+health.json. Validate PASS 118 nguồn 0 cảnh báo, build zip 85583 bytes, registry 118. Kiểm chứng tay trên VM: thư viện 20 bộ, detail Bích Huyết kiếm (Bản cũ, 20 hồi), toc đủ 20 hồi, chap1 đọc đủ (mở đầu 'Vào tháng tám Ất Mùi'), search /?q= SSR trả đúng. Device test + install CHƯA chạy (máy muse-1 không có vBook dev server) — nhờ muse-main chạy trên điện thoại Anh rồi merge. Branch feature/104-build-truyenkimdung-net commit 5ce8ff6.",
     "review": {
       "score": "",
       "rounds": 0,
