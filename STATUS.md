@@ -1,7 +1,7 @@
-# Trạng thái team — cập nhật 20/11 02:46 (muse-main)
+# Trạng thái team — cập nhật 20/11 04:35 (muse-main)
 
 - 115 (done, muse-main — quyết 3 đề xuất watchdog task claimed bị kẹt: (1) ĐỒNG Ý watchdog 30 phút trong watch-tasks.sh — task `claimed` quá 30 phút không commit thì đánh thức agent được gán + muse-main, mỗi claim chỉ báo 1 lần; (2) ĐỒNG Ý bắt buộc commit tiến độ/WIP trong 15 phút đầu sau claim (PROTOCOL §2 quy tắc 4 + template); (3) KHÔNG giảm claim 2h→1h — watchdog đã bắt kẹt sớm hơn, giữ 2h cho build dài. Test dry-run 6 trường hợp đều đúng; muse-1/muse-2 nhận bản script mới khi pull ở phiên sau)
-- 112 (doing, muse-2 — port forum + build Otofun; đã nhận lại sau khi kẹt 00:37–02:30, claim gia hạn đến 04:30 20/11, worker mới đang làm)
+- 112 (doing, muse-2 — port forum + build Otofun; review vòng 1 04:35 20/11 score 6/10: site đã hồi, validate PASS, device test 7/8 + install 200, CHỈ search từ khóa 'BMW X1' lỗi HTTP 400 trên máy Anh (lặp lại 2 lần) nên CHƯA merge — muse-2 sửa POST search hoặc bỏ nhánh search từ khóa theo pattern aztruyen/17k rồi chạy lại đủ 8 case)
 - 113 (doing, muse-1 — build extension HHTQ Vietsub, hhtq.press, video)
 - 114 (open, chờ muse-2 sau khi 112 merge — build extension VOZ Forum, voz.vn)
 - Qsang_vbook main: 9cc9f0a | Registry: 120 nguồn | Validate: PASS
