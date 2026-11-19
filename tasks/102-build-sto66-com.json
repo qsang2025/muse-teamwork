@@ -7,7 +7,7 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "high",
-  "status": "review",
+  "status": "blocked",
   "created_by": "muse-main",
   "created_at": "2026-11-19T21:57:00+07:00",
   "claimed_at": "2026-11-19T21:56:48+07:00",
@@ -15,17 +15,17 @@
   "result": {
     "branch": "feature/102-build-sto66-com",
     "test": {
-      "validate": "PASS",
-      "device_test": "",
-      "install": ""
+      "validate": "PASS (118 nguon, 118 registry, 0 canh bao — 2026-11-19 ~22:05, muse-main chay lai tren branch feature/102-build-sto66-com)",
+      "device_test": "CHUA chay — khong toi duoc vBook dev server tren dien thoai Anh (servers.json: 100.90.26.91:8080 + 166.32.143.61:8080, ca 2 socket hang up, thu 2 lan 22:05)",
+      "install": "CHUA chay — doi device test"
     },
     "notes": "Build xong Sto66 v1 (sto66.com/www, chinese_novel, zh_CN): home/genre/search/detail/page/toc/chap + config, icon 200x200 tu app-icon site, test.json+health.json. Validate PASS 118 nguon 0 canh bao, build zip 50103 bytes, registry 118. Kiem chung tay tren VM: detail 逍遥四公子/修果, toc 500 chuong/trang (2996 chuong, 6 trang), chap1 doc du + strip marker 这章没有结束. Device test + install CHUA chay (may muse-1 khong co vBook dev server) — nho muse-main chay tren dien thoai Anh roi merge. Branch feature/102-build-sto66-com commit 1e48541.",
     "review": {
-      "score": "",
-      "rounds": 0,
-      "by": "",
-      "at": "",
-      "note": ""
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-19T22:05:00+07:00",
+      "note": "Code sach: strip marker chuong, pacing + cooldown 429/405, loi tieng Viet, Rhino ES6, attribution Meo trong description, author MuseAi. Validate PASS 118/118. Site kiem chung tay tu VM: homepage + chuong mau deu 200, dung noi dung fixture. Branch sach tren main tip 363d464, khong can rebase. Tru 2 diem vi device test + install chua chay (do dev server, khong phai loi code). Khong merge truoc khi du 3 dieu kien."
     }
   },
   "checklist": [
@@ -35,6 +35,6 @@
     "Validate PASS + device test (muse-main chạy trên điện thoại Anh) + install 200",
     "Push branch, cập nhật task sang review"
   ],
-  "notes": "sto66.com — ứng viên build mới ưu tiên cao nhất từ rescan #15 (task 097, FORK-SCAN-2026-11-19.md §3.1): kho truyện Trung lớn, SSR đầy đủ, HTML chuẩn. Homepage 200 (~65 KB), truyện mẫu 逍遥四公子 /book/4d3N4XssriIgi9uUdMq4EU.html, mục lục /chapter/<book>.html (500 chương/trang, mẫu 2.996 chương), chương 1 kiểm chứng tay: /chapter/4d3N4XssriIgi9uUdMq4EU/24E0D6PA7J2rKa8kOTPKnP.html — 第1章 哀其不幸，怒其不争！ ~2.400 ký tự, không login/VIP. Lưu ý: chap.js phải strip dòng marker '这章没有结束，请点击下一页继续阅读！' giữa nội dung. Meo đã có sẵn extension Sto66 v2 (chinese_novel/sto66) — port theo pattern đó, giữ attribution trong description (author vẫn MuseAi). Type chuẩn nhà mình: chinese_novel, locale zh_CN.",
-  "updated_at": "2026-11-19T21:57:00+07:00"
+  "notes": "sto66.com — ứng viên build mới ưu tiên cao nhất từ rescan #15 (task 097, FORK-SCAN-2026-11-19.md §3.1): kho truyện Trung lớn, SSR đầy đủ, HTML chuẩn. Homepage 200 (~65 KB), truyện mẫu 逍遥四公子 /book/4d3N4XssriIgi9uUdMq4EU.html, mục lục /chapter/<book>.html (500 chương/trang, mẫu 2.996 chương), chương 1 kiểm chứng tay: /chapter/4d3N4XssriIgi9uUdMq4EU/24E0D6PA7J2rKa8kOTPKnP.html — 第1章 哀其不幸，怒其不争！ ~2.400 ký tự, không login/VIP. Lưu ý: chap.js phải strip dòng marker '这章没有结束，请点击下一页继续阅读！' giữa nội dung. Meo đã có sẵn extension Sto66 v2 (chinese_novel/sto66) — port theo pattern đó, giữ attribution trong description (author vẫn MuseAi). Type chuẩn nhà mình: chinese_novel, locale zh_CN.\n[19/11 22:05 muse-main: Review xong task 102 (Sto66 v1, muse-1). Validate PASS 118 nguon 0 canh bao; site song, chuong mau 200 dung fixture. BLOCKED: device test + install chua chay — khong toi duoc dev server dien thoai Anh (ca 2 IP trong servers.json socket hang up, thu 2 lan). CAN ANH: mo app vBook, bat che do debug/dev mode, roi bao lai de chay device test + install roi merge. Khong merge truoc khi du 3 dieu kien.]",
+  "updated_at": "2026-11-19T22:05:00+07:00"
 }
