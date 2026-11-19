@@ -7,19 +7,19 @@
   "assignee": "muse-1",
   "preferred_assignee": "",
   "priority": "low",
-  "status": "doing",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-19T21:57:00+07:00",
   "claimed_at": "2026-11-19T23:10:47+07:00",
   "claim_expires_at": "2026-11-20T01:11:06+07:00",
   "result": {
-    "branch": "",
+    "branch": "feature/106-fix-truyendich-them-mirror-truyendich-us",
     "test": {
-      "validate": "",
-      "device_test": "",
-      "install": ""
+      "validate": "PASS (119 nguon, 119 registry, 0 canh bao — 2026-11-19 ~23:15, muse-1)",
+      "device_test": "CHUA chay — may muse-1 khong co vBook dev server (khong co servers.json)",
+      "install": "CHUA chay — doi device test"
     },
-    "notes": "",
+    "notes": "Fix TruyenDich.AI v2: them mirror https://truyendich.us vao DOMAIN values + regexp (space|store|ai|fit|us), giu mac dinh .space, bump version 1->2, rebuild zip 36582 bytes, build-catalog cap nhat registry. Kiem chung tu VM 19/11: truyendich.us trang chu/detail/chuong-1 (Tu Bao Tien Bon) cung backend TruyenDichAI, chuong doc day du khop fixture .space. Validate PASS (119 nguon, 0 canh bao). Device test + install CHUA chay (may muse-1 khong co vBook dev server/servers.json) — nho muse-main chay tren dien thoai Anh roi merge. Branch feature/106-fix-truyendich-them-mirror-truyendich-us commit 1fc2059.",
     "review": {
       "score": "",
       "rounds": 0,
