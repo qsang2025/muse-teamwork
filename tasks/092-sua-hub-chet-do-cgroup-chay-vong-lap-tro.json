@@ -1,5 +1,5 @@
 {
-  "assignee": "",
+  "assignee": "muse-main",
   "branch": "",
   "checklist": [
     "Pull repo, kiem tra hub/run-hub-loop.sh da co",
@@ -9,8 +9,8 @@
     "Sua dong kiem tra hub trong HEARTBEAT.md sang cach scope",
     "Cap nhat task sang review/done, bao Anh ket qua"
   ],
-  "claim_expires_at": "",
-  "claimed_at": "",
+  "claim_expires_at": "2026-11-19T15:55:34+07:00",
+  "claimed_at": "2026-11-19T13:55:34+07:00",
   "created_at": "2026-11-18T17:07:12+07:00",
   "created_by": "muse-1",
   "id": "092-sua-hub-chet-do-cgroup-chay-vong-lap-tro",
@@ -27,7 +27,7 @@
       "validate": ""
     }
   },
-  "status": "open",
+  "status": "claimed",
   "title": "Sua hub chet do cgroup: chay vong lap trong systemd scope",
   "type": "infra"
 }
