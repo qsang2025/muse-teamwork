@@ -3,11 +3,11 @@
   "title": "Tự học: kỹ thuật xử lý site JS-rendered và chống bot cho extension vBook",
   "type": "research",
   "repo": "Qsang_vbook",
-  "branch": "",
+  "branch": "feature/098-js-rendered-anti-bot",
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "medium",
-  "status": "review",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-19T21:17:23+07:00",
   "claimed_at": "2026-11-19T21:23:00+07:00",
@@ -19,13 +19,20 @@
       "device_test": "",
       "install": ""
     },
-    "notes": "Bao cao research/JS-RENDERED-ANTI-BOT-2026-11-19.md: kiem chung live 3 site ch.1 free (jjwxc 200/GBK, zhenhun 200/UTF-8, kyhuyen 200/UTF-8, deu doc free duoc, khong gap Cloudflare) + code that 8book (JS-rendered, can WebView). Skill vbook-extension-building da them muc site kho (JS-rendered, WAF, font encryption, GBK). Font encryption: ket luan khong build duoc (runtime khong co API parse font); Big5 + hieu nang WebView: Chua xac dinh."
+    "notes": "Bao cao research/JS-RENDERED-ANTI-BOT-2026-11-19.md: kiem chung live 3 site ch.1 free (jjwxc 200/GBK, zhenhun 200/UTF-8, kyhuyen 200/UTF-8, deu doc free duoc, khong gap Cloudflare) + code that 8book (JS-rendered, can WebView). Skill vbook-extension-building da them muc site kho (JS-rendered, WAF, font encryption, GBK). Font encryption: ket luan khong build duoc (runtime khong co API parse font); Big5 + hieu nang WebView: Chua xac dinh.",
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-19T21:41:00+07:00",
+      "note": "Kiểm chứng live lại 3 site ch.1 free (jjwxc GBK 200, câu mở đầu khớp fixture; zhenhun 200; kyhuyen 200; 0 marker Cloudflare) + dẫn chứng code thật (8book chap.js WebView, jjwxc search form8, lib fetch-helpers/rate-limit/challenge-handler, gbk.js). Trừ 2 điểm: mục font encryption chỉ là lý thuyết, chưa có mẫu live; muse-2 đẩy review thẳng lên main song song với branch + còn branch rỗng feature/098-js-rendered-chong-bot — chỉ merge branch anti-bot, không merge branch kia."
+    }
   },
   "checklist": [
     "Tìm hiểu các kỹ thuật: JS-rendered, WAF/Cloudflare, font encryption, encoding",
     "Kiểm chứng thực tế trên 2-3 site mẫu (chỉ đọc free)",
     "Viết báo cáo research/ + đề xuất cập nhật skill, để review"
   ],
-  "notes": "[19/11 muse-main: Anh giao khi hết việc — Tự học (Anh giao 19/11 khi hết việc): nghiên cứu kỹ thuật làm extension vBook cho site khó — nội dung chỉ có sau khi chạy JS, Cloudflare/WAF chặn fetch, font encryption (như fanqie đã đóng), GBK/encoding lạ. Chỉ nghiên cứu cách ĐỌC NỘI DUNG FREE hợp lệ (không bypass VIP/login/paywall, không fake login). Kết quả: báo cáo research/ (merge lên main) + đề xuất pattern nào áp dụng được vào skill vbook-extension-building (kèm ví dụ site thật đã kiểm chứng, không lý thuyết suông).] [19/11 21:35 muse-2: bat dau lam tren branch feature/098-js-rendered-anti-bot — da kiem chung live 3 site (jjwxc/zhenhun/kyhuyen ch.1 free, deu HTTP 200) + doc code that 8book (JS-rendered). Dang viet bao cao research/.] [19/11 21:35 muse-2: da nop review tu branch feature/098-js-rendered-anti-bot; luu y co branch song song feature/098-js-rendered-chong-bot (commit d485cdb, cung doi 098 sang doing luc 21:26) — muse-main chon 1 branch de merge, tranh trung viec.]",
-  "updated_at": "2026-11-19T21:35:39+07:00"
+  "notes": "[19/11 muse-main: Anh giao khi hết việc — Tự học (Anh giao 19/11 khi hết việc): nghiên cứu kỹ thuật làm extension vBook cho site khó — nội dung chỉ có sau khi chạy JS, Cloudflare/WAF chặn fetch, font encryption (như fanqie đã đóng), GBK/encoding lạ. Chỉ nghiên cứu cách ĐỌC NỘI DUNG FREE hợp lệ (không bypass VIP/login/paywall, không fake login). Kết quả: báo cáo research/ (merge lên main) + đề xuất pattern nào áp dụng được vào skill vbook-extension-building (kèm ví dụ site thật đã kiểm chứng, không lý thuyết suông).] [19/11 21:35 muse-2: bat dau lam tren branch feature/098-js-rendered-anti-bot — da kiem chung live 3 site (jjwxc/zhenhun/kyhuyen ch.1 free, deu HTTP 200) + doc code that 8book (JS-rendered). Dang viet bao cao research/.] [19/11 21:35 muse-2: da nop review tu branch feature/098-js-rendered-anti-bot; luu y co branch song song feature/098-js-rendered-chong-bot (commit d485cdb, cung doi 098 sang doing luc 21:26) — muse-main chon 1 branch de merge, tranh trung viec.] [19/11 21:41 muse-main: review 8/10, da merge research + skill len main (chi lay branch feature/098-js-rendered-anti-bot; branch song song feature/098-js-rendered-chong-bot rong, khong merge). Validate/device/install: N/A — task research, khong co extension.]",
+  "updated_at": "2026-11-19T21:41:00+07:00"
 }

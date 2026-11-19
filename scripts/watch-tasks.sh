@@ -13,10 +13,12 @@
 #   repo-dir mac dinh: ~/workspace/muse-teamwork
 #   state-file mac dinh: ~/hooks/state/muse-teamwork-watch-<agent>.json
 #
-# Co che: git fetch origin main (khong dong vao working tree), doc task
-# tu origin/main, so sanh (id, status, assignee, preferred_assignee) voi
-# state lan truoc. Bo qua thay doi notes/updated_at (heartbeat, binh luan
-# dashboard) de khong danh thuc vo ich.
+# Co che: hoi SHA cua origin/main bang ls-remote truoc (1 request nhe);
+# SHA khong doi thi bo qua fetch luon (de xuat 2, Anh duyet 19/11 — giam
+# ~90% luong fetch). SHA doi thi git fetch origin main (khong dong vao
+# working tree), doc task tu origin/main, so sanh (id, status, assignee,
+# preferred_assignee) voi state lan truoc. Bo qua thay doi notes/updated_at
+# (heartbeat, binh luan dashboard) de khong danh thuc vo ich.
 #
 # Dieu kien danh thuc agent A:
 #   - task moi xuat hien, giao cho A (preferred/assignee == A, chua done/cancelled)
@@ -52,6 +54,20 @@ if [[ "$AGENT" != "muse-main" && "$AGENT" != "muse-1" && "$AGENT" != "muse-2" ]]
     silent "agent id khong hop le, bo qua lan quet nay"
 fi
 
+# Buoc nhe truoc (de xuat 2, Anh duyet 19/11): hoi SHA cua origin/main bang
+# ls-remote (1 request nhe, khong tai object). Neu SHA giong lan truoc thi
+# chac chan khong co gi doi — bo qua fetch, im lang luon. Chi fetch khi SHA
+# doi (hoac chua co SHA luu). Giam ~90% luong fetch.
+SHA_NEW="$(timeout 30 git -C "$REPO" ls-remote origin main 2>/dev/null | awk '{print $1}' | head -n 1)"
+if [[ -z "$SHA_NEW" ]]; then
+    log "git ls-remote origin main loi" '{}'
+    silent "khong hoi duoc SHA, cho lan quet sau"
+fi
+OLD_SHA="$(jq -r '.sha // empty' "$STATE" 2>/dev/null || true)"
+if [[ -n "$OLD_SHA" && "$OLD_SHA" == "$SHA_NEW" ]]; then
+    silent "khong co thay doi (sha khong doi, bo qua fetch)" "{\"sha\":\"$SHA_NEW\"}"
+fi
+
 if ! timeout 60 git -C "$REPO" fetch origin main --quiet 2>/dev/null; then
     log "git fetch origin main loi" '{}'
     silent "khong fetch duoc repo, cho lan quet sau"
@@ -59,10 +75,11 @@ fi
 
 # Doc snapshot tu origin/main bang python3 (1 tien trinh duy nhat), so sanh
 # voi state, in ra quyet dinh JSON: {"decision":..., "reason":..., "payload":...}
-DECISION="$(python3 - "$REPO" "$STATE" "$AGENT" "$DRY" <<'PYEOF'
+DECISION="$(python3 - "$REPO" "$STATE" "$AGENT" "$DRY" "$SHA_NEW" <<'PYEOF'
 import json, os, subprocess, sys
 
 repo, state_path, agent, dry = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4] == "1"
+sha_new = sys.argv[5] if len(sys.argv) > 5 else ""
 
 def git(*args):
     r = subprocess.run(["git", "-C", repo] + list(args),
@@ -137,7 +154,7 @@ if not old:
     if not dry:
         os.makedirs(os.path.dirname(state_path) or ".", exist_ok=True)
         with open(state_path, "w", encoding="utf-8") as f:
-            json.dump({"tasks": snap}, f, ensure_ascii=False, indent=1)
+            json.dump({"tasks": snap, "sha": sha_new}, f, ensure_ascii=False, indent=1)
     print(json.dumps({"decision": "silent",
                       "reason": "initialized baseline (first run)" if not dry else "would initialize baseline (dry-run, state not written)",
                       "payload": {"tasks_seen": len(snap)}}, ensure_ascii=False))
@@ -147,7 +164,7 @@ if wakes:
     if not dry:
         os.makedirs(os.path.dirname(state_path) or ".", exist_ok=True)
         with open(state_path, "w", encoding="utf-8") as f:
-            json.dump({"tasks": snap}, f, ensure_ascii=False, indent=1)
+            json.dump({"tasks": snap, "sha": sha_new}, f, ensure_ascii=False, indent=1)
     print(json.dumps({"decision": "wake",
                       "reason": "task change needs " + agent,
                       "payload": {"changes": wakes}}, ensure_ascii=False))
@@ -156,7 +173,7 @@ if wakes:
 if not dry:
     os.makedirs(os.path.dirname(state_path) or ".", exist_ok=True)
     with open(state_path, "w", encoding="utf-8") as f:
-        json.dump({"tasks": snap}, f, ensure_ascii=False, indent=1)
+        json.dump({"tasks": snap, "sha": sha_new}, f, ensure_ascii=False, indent=1)
 print(json.dumps({"decision": "silent",
                   "reason": "no relevant task change",
                   "payload": {"tasks_seen": len(snap)}}, ensure_ascii=False))
