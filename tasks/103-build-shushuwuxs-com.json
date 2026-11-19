@@ -3,11 +3,11 @@
   "title": "Build ShuShuWu (shushuwuxs.com, chinese_novel)",
   "type": "vbook-extension",
   "repo": "Qsang_vbook",
-  "branch": "",
+  "branch": "feature/103-shushuwuxs",
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "medium",
-  "status": "review",
+  "status": "doing",
   "created_by": "muse-main",
   "created_at": "2026-11-19T21:57:00+07:00",
   "claimed_at": "2026-11-19T21:58:47+07:00",
@@ -16,16 +16,16 @@
     "branch": "feature/103-shushuwuxs",
     "test": {
       "validate": "PASS",
-      "device_test": "",
-      "install": ""
+      "device_test": "8/10 PASS — toc.js 2 case FAIL (TypeError: not a function, code 403); home/genre/book/detail/chap deu 200",
+      "install": "200 OK"
     },
     "notes": "Extension Shushuwuxs xong, validate PASS (120 nguon, 0 canh bao). Branch feature/103-shushuwuxs, commit 157c27e. Site SSR UTF-8, khong login/VIP. Truyen mau 问道章 (id 2066, 102万字, da hoan), muc luc 340 chuong tang dan, ch.1 2 trang noi lien mach. home 23 tab, genre 16 the loai, book: /dushi/ 65 muc (6 noi bat co bia + 60 moi cap nhat), /lastupdate/ 50 muc/trang + phan trang /N.html, /all/ 300 muc. Da kiem chung bang mo phong runtime vBook tai cho (Node+cheerio): detail/toc/chap/book deu chay dung, chap 1 noi du 2 trang (co 秦飞鱼 o trang 2, khong DMCA). LUU Y: (1) Khong co search.js — form search la Baidu CSE, POST /search.html tra ve vo rong, ket qua chi hien bang JS (tien le zhenhunxiaoshuo cung bo search). (2) Khong co page.js — muc luc 1 trang, khong phan trang; phan trang CHUONG xu ly trong chap.js theo a#pager_next (toi da 10 trang). Ghi chu trong task 'bat buoc co page.js' la hieu nham: page.js theo extension-api.md chi danh cho phan trang MUC LUC. (3) Tham khao extension dat-bi/ext-vbook: detail.js cua dat-bi da loi thoi (selector #fmimg/#info/#intro khong con khop template hien tai), toc/chap dung huong tiep can; attribution trong description, author van MuseAi. (4) Da sua 2 loi trong book.js: so sanh isPagedList sau khi bo dau '/' cuoi (app strip trailing slash) va parse them #newscontent (60 muc moi cap nhat tren trang the loai — luc dau chi thay 6 muc #hotcontent). Device test + install CHO muse-main chay tren dien thoai cua Anh (may nay khong co developer server).",
     "review": {
-      "score": "",
-      "rounds": 0,
-      "by": "",
-      "at": "",
-      "note": ""
+      "score": 5,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-20T00:05:00+07:00",
+      "note": "Chua dat (<7): toc.js loi tren may that ca 2 case — TypeError: not a function (code 403). Nguyen nhan: runtime vBook Element KHONG co children()/tagName()/parent() (chi text/html/attr/select/remove, xem extension-api.md + toc.js cua shuhaige), toc.js dung dl.children() + kid.tagName() nen chet tren may; mo phong Node+cheerio cua muse-2 khong phat hien vi cheerio co cac ham nay. Huong sua: viet lai toc.js theo pattern shuhaige — doc.select(\"dl dd a\") + dedupe giu lan xuat hien CUOI (khoi duoi la danh sach day du tang dan), loc link chuong theo /read_<id>/<cid>.html de loai muc phu/quang ba (新书已发). Sau sua: chay lai validate + device test du 10 case tren dien thoai Anh roi day review lai. Validate PASS (120 nguon, 0 canh bao), install 200 OK, chap.js noi dung 2 trang (co 秦飞鱼)."
     }
   },
   "checklist": [
@@ -35,6 +35,6 @@
     "Validate PASS + device test (muse-main chạy trên điện thoại Anh) + install 200",
     "Push branch, cập nhật task sang review"
   ],
-  "notes": "shushuwuxs.com — hồi sinh từ tồn đọng #14 (ERR → 200 ở rescan #15, task 097, FORK-SCAN-2026-11-19.md §3.3): kho truyện Trung lớn, SSR, cần curl --compressed (gzip). Pattern: truyện /new_<id>.html, mục lục /read_<id>/, chương /read_<id>/<cid>.html, CHƯƠNG PHÂN TRANG (<cid>_2.html — bắt buộc có page.js). Chương 1 kiểm chứng tay: 问道章 /read_2066/1203503.html 第一章 重生, đọc tiếp trang 2 liền mạch, không login/VIP. Lưu ý: mục lục liệt kê giảm dần + lẫn mục phụ (完本感言, quảng bá, phụ lục) — toc.js phải đảo thứ tự, test kỹ trên thiết bị. Host thấy trong catalog dat-bi/ext-vbook — xem extension sẵn của dat-bi cho host này nếu có, giữ attribution trong description. [23:27 muse-2: Bat dau build extension shushuwuxs]",
-  "updated_at": "2026-11-19T21:57:00+07:00"
+  "notes": "shushuwuxs.com — hồi sinh từ tồn đọng #14 (ERR → 200 ở rescan #15, task 097, FORK-SCAN-2026-11-19.md §3.3): kho truyện Trung lớn, SSR, cần curl --compressed (gzip). Pattern: truyện /new_<id>.html, mục lục /read_<id>/, chương /read_<id>/<cid>.html, CHƯƠNG PHÂN TRANG (<cid>_2.html — bắt buộc có page.js). Chương 1 kiểm chứng tay: 问道章 /read_2066/1203503.html 第一章 重生, đọc tiếp trang 2 liền mạch, không login/VIP. Lưu ý: mục lục liệt kê giảm dần + lẫn mục phụ (完本感言, quảng bá, phụ lục) — toc.js phải đảo thứ tự, test kỹ trên thiết bị. Host thấy trong catalog dat-bi/ext-vbook — xem extension sẵn của dat-bi cho host này nếu có, giữ attribution trong description. [23:27 muse-2: Bat dau build extension shushuwuxs]\n[20/11 00:05 muse-main: Review vong 1 — diem 5/10, tra ve doing. Validate PASS (120 nguon, 0 canh bao). Device test 8/10: toc.js FAIL ca 2 case (TypeError: not a function, code 403) do dung dl.children()/kid.tagName() — runtime vBook khong co 2 ham nay (chi text/html/attr/select/remove). Chap.js OK, noi du 2 trang; install 200 OK. Chua merge. Huong sua theo pattern toc.js shuhaige: select \"dl dd a\" + dedupe giu lan cuoi.]",
+  "updated_at": "2026-11-20T00:05:00+07:00"
 }
