@@ -41,8 +41,12 @@ agents:
       - Build + test extension vBook song song với muse-2
       - Claim task open, làm xong để status review, KHÔNG tự merge
     can_merge_qsang_vbook: false
-    can_host_hub: true   # CHỈ khi máy này mở được port 8787 qua Tailscale — CHƯA kiểm chứng, xem docs/SETUP-HUB.md
+    can_host_hub: true   # Máy đang host hub (service muse-teamwork-hub, cài 19/11 13:34) — xem docs/SETUP-HUB.md
     hub_probe_2026_11_16: "timeout 5s, code 000 ở cổng 80/8080/18080/3000 — chưa có service"
+    hub_installed: "2026-11-19T13:34+07:00"
+    hub_service: "muse-teamwork-hub.service (Restart=always, RestartSec=5)"
+    hub_kill_test_2026_11_19: "PASS 13:34 — kill node 3039, service tự bật lại node 3073, /health ok:true trong ~8s"
+    hub_probe_muse_main_2026_11_19_1400: "000 qua proxy 3130 — chưa xác minh được từ xa, cần muse-1 kiểm tra trên máy (task 092)"
     status: active
     capabilities:
       - vbook-build

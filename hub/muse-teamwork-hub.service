@@ -1,6 +1,37 @@
+# muse-teamwork-hub.service — chạy hub muse-teamwork (hub/server.js) bền qua systemd.
+#
+# Mẫu mượn từ niclydon/muse-mcp (muse-mcp.service + restart-policy.conf):
+#  - StartLimitIntervalSec=0: không để giới hạn số lần restart biến một lần
+#    outage dài thành trạng thái `failed` vĩnh viễn (Restart=always cũng
+#    không thoát được failed). Bản nháp đầu của muse-1 (13:34 19/11) THIẾU
+#    dòng này — node crash dồn dập là service rơi vào failed và nằm im.
+#  - RestartSteps=6 + RestartMaxDelaySec=300: backoff mũ, lần đầu retry
+#    sau 5s, giãn dần tới 300s. Cần systemd >= 254 (máy muse-main: 255);
+#    systemd cũ hơn chỉ cảnh báo key lạ, vẫn load unit bình thường.
+#  - Log ra journal (journalctl -u muse-teamwork-hub) thay vì file hub.log.
+#
+# Cài trên máy HOST hub (muse-1 hoặc muse-2 — máy nhận được inbound qua
+# Tailscale). KHÔNG cài trên VM muse-main: VM đó Tailscale client-only,
+# chỉ gọi ra, không nhận inbound — cài cũng không ai nối được (xem đầu file
+# hub/server.js, docs/SETUP-HUB.md, agents.yaml can_host_hub: false).
+#   sudo cp hub/muse-teamwork-hub.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now muse-teamwork-hub
+#   curl -m 5 http://127.0.0.1:8787/health   # phải trả {"ok":true,...}
+#   ss -tlnp | grep 8787                        # phải thấy 0.0.0.0:8787
+# LƯU Ý: /etc/systemd/system KHÔNG sống qua lần thay VM (chỉ thư mục home
+# mới giữ) — file unit này nằm trong repo để cài lại được sau khi VM thay.
+# (VM muse-1 đã bị thay mới 19/11 13:35, đúng 1 phút sau khi cài service —
+# /etc bị xóa sạch, service mất theo; xem commit c9206b0.)
+#
+# WorkingDirectory: đổi theo đường dẫn clone repo trên máy host.
+#   muse-1: /home/hatch/muse-teamwork
+#   muse-2: (đường dẫn clone trên máy muse-2)
 [Unit]
-Description=Muse-teamwork hub (muse-1)
-After=network.target
+Description=muse-teamwork hub — live task board (port 8787)
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=0
 
 [Service]
 Type=simple
@@ -8,6 +39,15 @@ WorkingDirectory=/home/hatch/muse-teamwork
 ExecStart=/usr/bin/node hub/server.js
 Restart=always
 RestartSec=5
+RestartSteps=6
+RestartMaxDelaySec=300
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=muse-teamwork-hub
+ProtectSystem=full
+PrivateTmp=true
+NoNewPrivileges=true
+ReadWritePaths=/home/hatch/muse-teamwork
 
 [Install]
 WantedBy=multi-user.target
