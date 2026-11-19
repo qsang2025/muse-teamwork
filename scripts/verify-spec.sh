@@ -58,7 +58,20 @@ for line in st.splitlines():
         claimed[m2.group(1)] = m2.group(2)
 errs = []
 seen = set()
-for f in sorted(glob.glob(os.path.join(root, "tasks", "*.json"))):
+files = sorted(glob.glob(os.path.join(root, "tasks", "*.json")))
+# So task song (khong tinh closed-*/_template): file closed-* chi duoc tinh
+# khi so cua no CHUA dung lai cho task song (108/111 da dung lai tu 19/11).
+live_nums = set()
+for f in files:
+    if os.path.basename(f) == "_template.json":
+        continue
+    if os.path.basename(f).startswith("closed-"):
+        continue
+    d = json.load(open(f, encoding="utf-8"))
+    m = re.match(r"(\d{2,3})", str(d.get("id", "")))
+    if m:
+        live_nums.add(m.group(1).zfill(3))
+for f in files:
     if os.path.basename(f) == "_template.json":
         continue
     d = json.load(open(f, encoding="utf-8"))
@@ -67,6 +80,8 @@ for f in sorted(glob.glob(os.path.join(root, "tasks", "*.json"))):
     if not m:
         continue
     num = m.group(1).zfill(3)
+    if os.path.basename(f).startswith("closed-") and num in live_nums:
+        continue  # so da dung lai cho task song, bo qua lich su archive
     seen.add(num)
     actual = d.get("status", "")
     if num not in claimed:
