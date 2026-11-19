@@ -14,3 +14,4 @@ credentials*.json
 Thumbs.db
 *.log
 node_modules/
+scripts/__pycache__/
