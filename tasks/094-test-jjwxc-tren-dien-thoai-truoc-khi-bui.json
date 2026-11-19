@@ -1,7 +1,7 @@
 {
   "assignee": "muse-1",
   "blocked_reason": "",
-  "branch": "",
+  "branch": "feature/jjwxc",
   "checklist": [
     "Probe trang chuong jjwxc tren dien thoai Anh (dev server dang bat)",
     "Ket luan: build duoc hay khong (GBK/JS)",
@@ -28,5 +28,5 @@
   "status": "review",
   "title": "Test jjwxc tren dien thoai truoc khi build",
   "type": "research",
-  "updated_at": "2026-11-19T17:10:23+07:00"
+  "updated_at": "2026-11-19T17:16:28+07:00"
 }
