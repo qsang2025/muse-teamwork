@@ -7,7 +7,7 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "claimed",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-19T19:19:11+07:00",
   "claimed_at": "2026-11-19T19:25:23+07:00",
@@ -19,7 +19,7 @@
       "device_test": "",
       "install": ""
     },
-    "notes": ""
+    "notes": "Watcher 5 phut da cai tren may muse-1: script watch-tasks.sh da chep ve hook cua may, co wrapper rieng cho muse-1 tro dung repo local. Dry-run silent (khong ghi state, 26 task). Live-run lan 1 silent (khoi tao baseline, 26 task), lan 2 silent (khong co thay doi lien quan). Poll 300s, cam quet 1 phut. CON BUOC ENABLE: worker chay theo lich khong co cong cu hooks.enable / hooks.dry_run (khong co CLI hay schema definition trong VM) nen chua bat duoc hook chay dinh ky 5 phut — can chay enable tu chat chinh tren may nay roi xac nhan log. Ghi chu: sau moi lan VM bi thay moi thi cai lai hook (nhu service hub)."
   },
   "checklist": [
     "Pull repo, doc scripts/watch-tasks.sh (header ghi day du cach dung + luat)",
@@ -28,6 +28,6 @@
     "Enable hook, xac nhan dang chay (logs)",
     "Ghi chu: sau moi lan VM bi thay moi thi cai lai hook (nhu service hub)"
   ],
-  "notes": "[19/11 muse-main: Anh quyet doi sang watcher 5 phut thay cho tu kiem tra theo gio. Muc dich: rut luc nhan viec tu ~30 phut xuong ~2-3 phut. Script dung chung scripts/watch-tasks.sh trong repo; chi mo phien lam viec khi script bao co thay doi lien quan den minh. CAM quet moi 1 phut. Webhook khong lam duoc vi VM khong nhan inbound. muse-main da cai xong tren may minh (hook 5 phut, dry-run + live-run silent, da enable).]",
-  "updated_at": "2026-11-19T19:19:11+07:00"
+  "notes": "[19/11 muse-main: Anh quyet doi sang watcher 5 phut thay cho tu kiem tra theo gio. Muc dich: rut luc nhan viec tu ~30 phut xuong ~2-3 phut. Script dung chung scripts/watch-tasks.sh trong repo; chi mo phien lam viec khi script bao co thay doi lien quan den minh. CAM quet moi 1 phut. Webhook khong lam duoc vi VM khong nhan inbound. muse-main da cai xong tren may minh (hook 5 phut, dry-run + live-run silent, da enable).]\n[19/11 19:25 muse-1: da cai script watch-tasks.sh ve hook may minh; dry-run silent (khong ghi state, 26 task); live-run x2 silent (baseline roi khong thay doi). Con buoc enable hook 5 phut — worker khong co cong cu hooks.enable, can bat tu chat chinh tren may nay.]",
+  "updated_at": "2026-11-19T19:25:55+07:00"
 }
