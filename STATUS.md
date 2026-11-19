@@ -1,10 +1,10 @@
-# Trạng thái team — cập nhật 20/11 00:24 (muse-main)
+# Trạng thái team — cập nhật 20/11 00:32 (muse-main)
 
-- Qsang_vbook main: ead9038 | Registry: 119 nguồn | Validate: PASS
+- Qsang_vbook main: d89c324 | Registry: 120 nguồn | Validate: PASS
 - 110 (done, muse-1 — nghiên cứu port loại extension news từ Darkrai9x, review 9/10, báo cáo research/110-news-port.md đã merge 20/11 00:24; kết luận: ĐỂ SAU — port được về kỹ thuật, chi phí hạ tầng thấp, nhưng chưa có nhu cầu thật + chưa kiểm chứng app điện thoại Anh hỗ trợ type news; bổ sung kiểm chứng muse-main: fork duongden/vbook đã có 3 ext news thật (baikebaidu v2, sohu v3, viblo v6) nên hợp đồng news đã được dùng thật, vẫn cần probe trên máy Anh; site đạt: VnExpress, CafeF, Genk (200); CHỜ Anh: Anh có muốn đọc/nghe tin trong vBook không + khi nào sẵn sàng cài probe news)
 - 111 (done, muse-2 — nghiên cứu port loại extension forum từ Darkrai9x, review 9/10, báo cáo research/111-nghien-cuu-port-loai-extension-forum-tu--forum-port.md đã merge 20/11 00:20; kết luận: NÊN PORT có điều kiện — chỉ port sau khi probe điện thoại Anh xác nhận app hỗ trợ loại forum; chặn duy nhất phía repo là validate.js TYPES thiếu news/forum; site đạt: tinhte.vn, otofun.net.vn (200); voz.vn 403, tangthuvien.vn timeout từ VM — cần phone test; CHỜ Anh: Anh có đọc diễn đàn nào không + khi nào sẵn sàng cài probe)
 
-- Qsang_vbook main: ead9038 | Registry: 119 nguồn | Validate: PASS
+- Qsang_vbook main: d89c324 | Registry: 120 nguồn | Validate: PASS
 - 109 (done, muse-1 — kiểm chứng bảng PUA fanqie trên 1 chương; báo cáo research/109-fanqie-pua-verify.md đã merge 19/11 23:31; reader/full chặn cả free lẫn VIP bằng Turing slide captcha — HTTP 200 body 0 byte; bảng bqy đúng 62/62 trên mẫu live 107, bảng kychi sai — SỬA kết luận 108; fanqie vẫn ĐÓNG, không build)
 - Đã xong: 108-nghien-cuu-cac-extension-fanqie-trong-fo (muse-1, review 9/10, báo cáo research/108-fanqie-fork-extensions.md đã merge 19/11 23:05; 13 ext fanqie trong fork: hầu hết sống nhờ proxy/token/máy root — phạm luật nhà; bảng PUA đúng là bqy (sửa bởi 109), không phải kychi; fanqie vẫn ĐÓNG) (done)
 - Đã xong: 097-rescan-forks-lan-15-tim-host-novel-moi-b (muse-1, review 8/10, báo cáo research/FORK-SCAN-2026-11-19.md đã merge 19/11 21:56; 3 host build-ready: sto66, truyenkimdung, shushuwuxs + 2 domain move tvtruyen1/truyendich.us) (done)

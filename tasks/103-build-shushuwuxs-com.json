@@ -7,7 +7,7 @@
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "medium",
-  "status": "review",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-19T21:57:00+07:00",
   "claimed_at": "2026-11-19T21:58:47+07:00",
@@ -15,17 +15,17 @@
   "result": {
     "branch": "feature/103-shushuwuxs",
     "test": {
-      "validate": "PASS (120 nguon, 0 canh bao)",
-      "device_test": "CHO CHAY LAI — toc.js moi, can muse-main chay du 10 case tren dien thoai Anh",
-      "install": "CHO CAI LAI — plugin.zip moi (v2), can muse-main cai lai tu branch"
+      "validate": "PASS (120 nguon, 0 canh bao) — chay lai boi muse-main tren branch sau rebase",
+      "device_test": "PASS 10/10 tren dien thoai Anh (HONOR PTP-AN10), log ext-review/shushuwuxs-103-device-test.log: home/genre code 0; book 65/50/300 item; detail 问道章 day du (tac gia 文抄公, da hoan thanh, 102 van chu); toc 338 chuong tang dan ca 2 case (read_2066/ + new_2066.html), bo het quang ba 新书已发; chap 1 noi du 2 trang (co 秦飞鱼)",
+      "install": "200 OK (cai lai tu branch, plugin.zip v2)"
     },
     "notes": "Sua toc.js vong 2: viet lai theo pattern shuhaige, bo children()/tagName() (nguyen nhan loi vong 1). Mo phong runtime nghiem ngat: toc 338 chuong tang dan (bo 2 quang ba 新书已发), chap 1 noi du 2 trang. Validate PASS (120 nguon, 0 canh bao), version 2, commit c8e12fe. Device test + install cho muse-main chay lai tren dien thoai Anh.",
     "review": {
-      "score": 5,
-      "rounds": 1,
+      "score": 8,
+      "rounds": 2,
       "by": "muse-main",
-      "at": "2026-11-20T00:05:00+07:00",
-      "note": "Chua dat (<7): toc.js loi tren may that ca 2 case — TypeError: not a function (code 403). Nguyen nhan: runtime vBook Element KHONG co children()/tagName()/parent() (chi text/html/attr/select/remove, xem extension-api.md + toc.js cua shuhaige), toc.js dung dl.children() + kid.tagName() nen chet tren may; mo phong Node+cheerio cua muse-2 khong phat hien vi cheerio co cac ham nay. Huong sua: viet lai toc.js theo pattern shuhaige — doc.select(\"dl dd a\") + dedupe giu lan xuat hien CUOI (khoi duoi la danh sach day du tang dan), loc link chuong theo /read_<id>/<cid>.html de loai muc phu/quang ba (新书已发). Sau sua: chay lai validate + device test du 10 case tren dien thoai Anh roi day review lai. Validate PASS (120 nguon, 0 canh bao), install 200 OK, chap.js noi dung 2 trang (co 秦飞鱼)."
+      "at": "2026-11-20T00:32:00+07:00",
+      "note": "Dat (8/10): toc.js viet lai dung pattern shuhaige, chay dung tren may that ca 2 case — 338 chuong tang dan, bo quang ba 新书已发; chap noi du 2 trang; 10/10 case code 0 + install 200. Da merge len main d89c324, registry 120 nguon."
     }
   },
   "checklist": [
@@ -35,6 +35,6 @@
     "Validate PASS + device test (muse-main chạy trên điện thoại Anh) + install 200",
     "Push branch, cập nhật task sang review"
   ],
-  "notes": "shushuwuxs.com — hồi sinh từ tồn đọng #14 (ERR → 200 ở rescan #15, task 097, FORK-SCAN-2026-11-19.md §3.3): kho truyện Trung lớn, SSR, cần curl --compressed (gzip). Pattern: truyện /new_<id>.html, mục lục /read_<id>/, chương /read_<id>/<cid>.html, CHƯƠNG PHÂN TRANG (<cid>_2.html — bắt buộc có page.js). Chương 1 kiểm chứng tay: 问道章 /read_2066/1203503.html 第一章 重生, đọc tiếp trang 2 liền mạch, không login/VIP. Lưu ý: mục lục liệt kê giảm dần + lẫn mục phụ (完本感言, quảng bá, phụ lục) — toc.js phải đảo thứ tự, test kỹ trên thiết bị. Host thấy trong catalog dat-bi/ext-vbook — xem extension sẵn của dat-bi cho host này nếu có, giữ attribution trong description. [23:27 muse-2: Bat dau build extension shushuwuxs]\n[20/11 00:05 muse-main: Review vong 1 — diem 5/10, tra ve doing. Validate PASS (120 nguon, 0 canh bao). Device test 8/10: toc.js FAIL ca 2 case (TypeError: not a function, code 403) do dung dl.children()/kid.tagName() — runtime vBook khong co 2 ham nay (chi text/html/attr/select/remove). Chap.js OK, noi du 2 trang; install 200 OK. Chua merge. Huong sua theo pattern toc.js shuhaige: select \"dl dd a\" + dedupe giu lan cuoi.]\n[20/11 00:25 muse-2: Sua xong toc.js theo huong review vong 1 — viet lai theo pattern shuhaige (select \"dl dd a\" + loc /read_<id>/<cid>.html + bo quang ba 新书已发 + dedupe giu lan cuoi), bo children()/tagName(). Mo phong runtime nghiem ngat (khong co 2 ham nay): toc 338 chuong tang dan, chap 1 noi du 2 trang (3600 ky tu, co 秦飞鱼). Validate PASS (120 nguon, 0 canh bao). Version 1 -> 2, zip rebuild, commit c8e12fe. Device test + install cho muse-main chay lai tren dien thoai Anh.]",
-  "updated_at": "2026-11-20T00:18:58+07:00"
+  "notes": "shushuwuxs.com — hồi sinh từ tồn đọng #14 (ERR → 200 ở rescan #15, task 097, FORK-SCAN-2026-11-19.md §3.3): kho truyện Trung lớn, SSR, cần curl --compressed (gzip). Pattern: truyện /new_<id>.html, mục lục /read_<id>/, chương /read_<id>/<cid>.html, CHƯƠNG PHÂN TRANG (<cid>_2.html — bắt buộc có page.js). Chương 1 kiểm chứng tay: 问道章 /read_2066/1203503.html 第一章 重生, đọc tiếp trang 2 liền mạch, không login/VIP. Lưu ý: mục lục liệt kê giảm dần + lẫn mục phụ (完本感言, quảng bá, phụ lục) — toc.js phải đảo thứ tự, test kỹ trên thiết bị. Host thấy trong catalog dat-bi/ext-vbook — xem extension sẵn của dat-bi cho host này nếu có, giữ attribution trong description. [23:27 muse-2: Bat dau build extension shushuwuxs]\n[20/11 00:05 muse-main: Review vong 1 — diem 5/10, tra ve doing. Validate PASS (120 nguon, 0 canh bao). Device test 8/10: toc.js FAIL ca 2 case (TypeError: not a function, code 403) do dung dl.children()/kid.tagName() — runtime vBook khong co 2 ham nay (chi text/html/attr/select/remove). Chap.js OK, noi du 2 trang; install 200 OK. Chua merge. Huong sua theo pattern toc.js shuhaige: select \"dl dd a\" + dedupe giu lan cuoi.]\n[20/11 00:25 muse-2: Sua xong toc.js theo huong review vong 1 — viet lai theo pattern shuhaige (select \"dl dd a\" + loc /read_<id>/<cid>.html + bo quang ba 新书已发 + dedupe giu lan cuoi), bo children()/tagName(). Mo phong runtime nghiem ngat (khong co 2 ham nay): toc 338 chuong tang dan, chap 1 noi du 2 trang (3600 ky tu, co 秦飞鱼). Validate PASS (120 nguon, 0 canh bao). Version 1 -> 2, zip rebuild, commit c8e12fe. Device test + install cho muse-main chay lai tren dien thoai Anh.]\n[20/11 00:32 muse-main: Review vong 2 — PASS 8/10, merge len main d89c324 (registry 120). Validate PASS (120 nguon, 0 canh bao) chay lai sau rebase; device test 10/10 code 0 tren dien thoai Anh: toc 338 chuong tang dan ca 2 case, chap 1 noi du 2 trang; install 200. Task done.]",
+  "updated_at": "2026-11-20T00:32:00+07:00"
 }
