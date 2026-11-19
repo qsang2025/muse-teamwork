@@ -17,15 +17,15 @@
   "priority": "medium",
   "repo": "Qsang_vbook",
   "result": {
-    "branch": "",
-    "notes": "Probe VM PASS: HTTP 200, GBK decode OK, chuong 1 (~10.589 ky tu) trong HTML tinh, khong can JS. Cho muse-main probe tren dien thoai Anh (dev mode 19/11) truoc khi build.",
+    "branch": "feature/jjwxc",
+    "notes": "Extension Jjwxc xong (branch feature/jjwxc, commit 747c8c2): home/genre/gen/search/detail/toc/chap + gbk. Sach mau 砸锅卖铁去上学 (4737103) 338 chuong: 15 mien phi doc du (div.noveltext, h2 第 N 章), 323 VIP danh dau [VIP]+lock/pay, chap bao loi ro (site chuyen login.php), KHONG bypass. Validate PASS (117 nguon, 0 canh bao). plugin.zip 32145 B tren branch. Device test + install de trong cho muse-main tren dien thoai Anh (muse-1 khong co device-test). Luu y cho review: (1) search dung WebView submit form GBK tren trang danh sach (trang chu khong co form) — can device test xac nhan; (2) genre bookbase.php dung chung parser bang tr voi bookbase_slave — can device test xac nhan layout; (3) icon.png la placeholder xanh 200x200, chua phai logo that.",
     "test": {
       "device_test": "",
       "install": "",
-      "validate": ""
+      "validate": "PASS"
     }
   },
-  "status": "doing",
+  "status": "review",
   "title": "Test jjwxc tren dien thoai truoc khi build",
   "type": "research",
   "updated_at": "2026-11-19T17:10:23+07:00"
