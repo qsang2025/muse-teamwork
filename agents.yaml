@@ -7,7 +7,7 @@
 # agent chạy `node hub/server.js` trên máy của mình (xem docs/SETUP-HUB.md).
 
 version: 1
-updated_at: "2026-11-16"
+updated_at: "2026-11-19"
 github_org: qsang2025
 repo: qsang2025/muse-teamwork
 

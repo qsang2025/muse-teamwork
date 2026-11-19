@@ -1,26 +1,6 @@
 {
-  "id": "089-rescan-fork-lan-14-quet-222-host-novel-t",
-  "title": "Rescan fork lần 14: quét 222 host novel-type chưa có trong registry",
-  "type": "research",
-  "repo": "Qsang_vbook",
-  "branch": "",
   "assignee": "muse-2",
-  "preferred_assignee": "muse-2",
-  "priority": "medium",
-  "status": "done",
-  "created_by": "muse-main",
-  "created_at": "2026-11-17T22:12:33+07:00",
-  "claimed_at": "2026-11-17T22:22:59+07:00",
-  "claim_expires_at": "2026-11-18T00:22:59+07:00",
-  "result": {
-    "branch": "feature/089-rescan-fork-lan-14",
-    "test": {
-      "validate": "PASS 114 nguon, 0 canh bao (tren main da merge 9403d67)",
-      "device_test": "N/A — task research, khong build extension",
-      "install": "N/A — task research, khong build extension"
-    },
-    "notes": "Rescan #14 xong 2026-11-17 ~23:05+07. Quet 223 host novel-type (task ghi 222, thuc te 223 do them eng_novel): HTTP 200: 94, 403: 24, ERR: 99. Ch.1 doc day du VM-verified: 3 host build-ready — zhenhunxiaoshuo.com (Tran Hon ch.1 ~4.927 ky tu), kyhuyen.com (ch.1 ~10.272 ky tu), jjwxc.net (ch.1 ~10.589 ky tu, GBK + can JS, can test ky tren dien thoai). Loai sau kiem chung tay: truyendich.vn (site da dong, chi con thong bao chia tay), metruyenchuvn.org (mirror cua metruyenchu da co trong repo). xianqihaotiami.org (ung vien #13) nay mat lien lac tu VM (ProxyError) — chua chac chan, can kiem chung lai tren dien thoai truoc khi build. Bao cao: Qsang_vbook/work/ext-review/FORK-SCAN-2026-11-18.md + results JSON, branch feature/089-rescan-fork-lan-14. Research only, khong build extension. | KIEM CHUNG muse-main 18/11 ~00:35: branch feature/089-rescan-fork-lan-14 chi 1 commit truoc main, 2 file docs (FORK-SCAN-2026-11-18.md + results JSON 223 host); so lieu JSON khop bao cao (200:94, 403:24, ERR:99, ch1 full:32); kiem chung lai tu VM: zhenhunxiaoshuo.com/1.html HTTP 200, dung chuong 1 Tran Hon ~4.927 ky tu; kyhuyen.com homepage HTTP 200; 3 host chua co trong repo. DA MERGE len main Qsang_vbook 9403d67 (merge --no-ff, push OK), validate tren main PASS 114, registry khong doi 114. ROADMAP.md local cap nhat."
-  },
+  "branch": "feature/089-rescan-fork-lan-14",
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
@@ -28,5 +8,26 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
-  "notes": "GÁN CHO muse-2 (làm tiếp sau 088). Nguồn: báo cáo rescan #13 (Qsang_vbook work/ext-review/FORK-SCAN-2026-11-17.md, main): đối chiếu 19 catalog có 473 host, 400 ngoài registry, 222 novel-type — danh sách đầy đủ trong work/ext-review/FORK-SCAN-2026-11-17-not-in-registry.json trên main. Phạm vi: quét 222 host novel-type đó; mỗi host kiểm tra HTTP + ch.1 đọc đầy đủ (không teaser/khóa); loại site đã ĐÓNG theo lời Anh, login-gated, khóa chương VIP; viết báo cáo FORK-SCAN-2026-11-18.md. LƯU Ý: xianqihaotiami.org (ứng viên build-ready từ #13, VM-verified lúc ~22:00) — muse-main kiểm chứng lại 17/11 ~22:11 KHÔNG tới được site từ VM (empty reply, 2 lần) — kiểm chứng lại trước khi build, đừng coi là chắc chắn. ROADMAP.md nằm ở local ~/workspace/vbook/work/ext-review/ROADMAP.md, KHÔNG có trong repo Qsang_vbook (theo thiết kế) — đừng tìm trong repo. Đọc docs/CHI-CA-DAY-EM.md trước khi làm.\n\nTiến độ 2026-11-17 22:24+07 (muse-2): claimed, branch feature/089-rescan-fork-lan-14. Danh sách thực tế 223 host novel-type (118 chinese_novel + 104 novel + 1 eng_novel), task ghi 222 — quét cả 223. Chia 4 nhóm, đang probe HTTP homepage + ch.1 từng host."
+  "claim_expires_at": "2026-11-18T00:22:59+07:00",
+  "claimed_at": "2026-11-17T22:22:59+07:00",
+  "created_at": "2026-11-17T22:12:33+07:00",
+  "created_by": "muse-main",
+  "id": "089-rescan-fork-lan-14-quet-222-host-novel-t",
+  "notes": "GÁN CHO muse-2 (làm tiếp sau 088). Nguồn: báo cáo rescan #13 (Qsang_vbook work/ext-review/FORK-SCAN-2026-11-17.md, main): đối chiếu 19 catalog có 473 host, 400 ngoài registry, 222 novel-type — danh sách đầy đủ trong work/ext-review/FORK-SCAN-2026-11-17-not-in-registry.json trên main. Phạm vi: quét 222 host novel-type đó; mỗi host kiểm tra HTTP + ch.1 đọc đầy đủ (không teaser/khóa); loại site đã ĐÓNG theo lời Anh, login-gated, khóa chương VIP; viết báo cáo FORK-SCAN-2026-11-18.md. LƯU Ý: xianqihaotiami.org (ứng viên build-ready từ #13, VM-verified lúc ~22:00) — muse-main kiểm chứng lại 17/11 ~22:11 KHÔNG tới được site từ VM (empty reply, 2 lần) — kiểm chứng lại trước khi build, đừng coi là chắc chắn. ROADMAP.md nằm ở local ~/workspace/vbook/work/ext-review/ROADMAP.md, KHÔNG có trong repo Qsang_vbook (theo thiết kế) — đừng tìm trong repo. Đọc docs/CHI-CA-DAY-EM.md trước khi làm.\n\nTiến độ 2026-11-17 22:24+07 (muse-2): claimed, branch feature/089-rescan-fork-lan-14. Danh sách thực tế 223 host novel-type (118 chinese_novel + 104 novel + 1 eng_novel), task ghi 222 — quét cả 223. Chia 4 nhóm, đang probe HTTP homepage + ch.1 từng host.",
+  "preferred_assignee": "muse-2",
+  "priority": "medium",
+  "repo": "Qsang_vbook",
+  "result": {
+    "branch": "feature/089-rescan-fork-lan-14",
+    "notes": "Rescan #14 xong 2026-11-17 ~23:05+07. Quet 223 host novel-type (task ghi 222, thuc te 223 do them eng_novel): HTTP 200: 94, 403: 24, ERR: 99. Ch.1 doc day du VM-verified: 3 host build-ready — zhenhunxiaoshuo.com (Tran Hon ch.1 ~4.927 ky tu), kyhuyen.com (ch.1 ~10.272 ky tu), jjwxc.net (ch.1 ~10.589 ky tu, GBK + can JS, can test ky tren dien thoai). Loai sau kiem chung tay: truyendich.vn (site da dong, chi con thong bao chia tay), metruyenchuvn.org (mirror cua metruyenchu da co trong repo). xianqihaotiami.org (ung vien #13) nay mat lien lac tu VM (ProxyError) — chua chac chan, can kiem chung lai tren dien thoai truoc khi build. Bao cao: Qsang_vbook/work/ext-review/FORK-SCAN-2026-11-18.md + results JSON, branch feature/089-rescan-fork-lan-14. Research only, khong build extension. | KIEM CHUNG muse-main 18/11 ~00:35: branch feature/089-rescan-fork-lan-14 chi 1 commit truoc main, 2 file docs (FORK-SCAN-2026-11-18.md + results JSON 223 host); so lieu JSON khop bao cao (200:94, 403:24, ERR:99, ch1 full:32); kiem chung lai tu VM: zhenhunxiaoshuo.com/1.html HTTP 200, dung chuong 1 Tran Hon ~4.927 ky tu; kyhuyen.com homepage HTTP 200; 3 host chua co trong repo. DA MERGE len main Qsang_vbook 9403d67 (merge --no-ff, push OK), validate tren main PASS 114, registry khong doi 114. ROADMAP.md local cap nhat.",
+    "test": {
+      "device_test": "N/A — task research, khong build extension",
+      "install": "N/A — task research, khong build extension",
+      "validate": "PASS 114 nguon, 0 canh bao (tren main da merge 9403d67)"
+    }
+  },
+  "status": "done",
+  "title": "Rescan fork lần 14: quét 222 host novel-type chưa có trong registry",
+  "type": "research",
+  "updated_at": "2026-11-19T17:05:10+07:00"
 }

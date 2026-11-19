@@ -2,7 +2,7 @@
   "assignee": "",
   "branch": "",
   "checklist": [
-    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Quét repo đích + tasks/*.json + STATUS.md (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
     "Build / khảo sát xong, test đầy đủ",
     "Push branch, cập nhật task sang review",
@@ -35,5 +35,6 @@
   },
   "status": "open",
   "title": "Tiêu đề task ngắn gọn, nói rõ làm gì",
-  "type": "vbook-extension"
+  "type": "vbook-extension",
+  "updated_at": "2026-11-19T17:05:10+07:00"
 }

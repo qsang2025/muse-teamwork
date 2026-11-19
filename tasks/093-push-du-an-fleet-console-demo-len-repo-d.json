@@ -1,6 +1,6 @@
 {
   "assignee": "muse-2",
-  "branch": "",
+  "branch": "feature/093-fleet-console-demo",
   "checklist": [
     "Đẩy toàn bộ source fleet-console-demo lên repo (research/fleet-console-demo/)",
     "Thêm README ngắn: demo làm gì, chạy/xem thế nào",
@@ -26,5 +26,6 @@
   },
   "status": "review",
   "title": "Push du an fleet-console-demo len repo de team nghien cuu",
-  "type": "research"
+  "type": "research",
+  "updated_at": "2026-11-19T17:05:10+07:00"
 }

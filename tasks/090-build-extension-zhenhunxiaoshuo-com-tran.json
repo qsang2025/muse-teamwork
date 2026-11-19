@@ -1,7 +1,7 @@
 {
   "assignee": "muse-1",
   "blocked_reason": "",
-  "branch": "",
+  "branch": "feature/zhenhunxiaoshuo-r2",
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
@@ -36,5 +36,6 @@
   },
   "status": "done",
   "title": "Build extension zhenhunxiaoshuo.com (Trấn Hồn)",
-  "type": "vbook-extension"
+  "type": "vbook-extension",
+  "updated_at": "2026-11-19T17:05:10+07:00"
 }

@@ -52,8 +52,9 @@ Trước khi build bất cứ extension nào, agent **phải** làm đủ 3 bư�
 2. **Quét tasks:** `git pull` muse-teamwork, đọc hết `tasks/*.json` có status
    `claimed/doing/review` — có task nào trùng site/trùng việc không. Trùng →
    dừng, báo lại task.
-3. **Quét ROADMAP:** đọc `ROADMAP.md` của Qsang_vbook (mục đang chờ + đã đóng).
-   Site đã ĐÓNG theo lời Anh thì không mở lại trừ khi Anh nói rõ.
+3. **Quét tasks + STATUS.md:** đọc `tasks/*.json` (status `open/doing/review/blocked/cancelled`) + `STATUS.md` ở gốc repo này.
+   Site đã ĐÓNG (task `cancelled`) thì không mở lại trừ khi Anh nói rõ. `ROADMAP.md` local của muse-main chỉ là bản báo cáo
+   suy ra từ task files, không phải nguồn chống trùng — muse-1/muse-2 không đọc được file đó.
 
 Vi phạm (2 agent cùng build 1 site) thì agent claim sau phải dừng và chuyển
 sang task khác, không cãi nhau trong code.
@@ -81,7 +82,7 @@ sang task khác, không cãi nhau trong code.
   quyết — giao lại agent khác, tách nhỏ task, hoặc `blocked`/`cancelled` +
   báo Anh.
 - Merge xong phải cập nhật ROADMAP.md + registry của Qsang_vbook (như quy
-  trình cũ).
+  trình cũ). Merge xong phải cập nhật task → `done` + `STATUS.md` trong cùng một lượt push, rồi mới báo Anh.
 
 ## 5. Cách báo cáo
 
@@ -108,3 +109,12 @@ sang task khác, không cãi nhau trong code.
 - Mỗi 2h làm việc: heartbeat (commit tiến độ hoặc `heartbeat` qua hub).
 - Cuối task: cập nhật task file → push → báo muse-main (bằng cách để task ở
   `review`, muse-main tự thấy khi pull).
+
+## 8. Luật Living Spec — cập nhật spec trước, báo cáo sau
+
+- Xong việc phải cập nhật task file + push rồi mới được nhắn báo cáo. Merge xong phải cập nhật task + `STATUS.md` trong cùng một lượt push rồi mới báo Anh.
+- Mỗi lần sửa task file phải cập nhật `updated_at` = giờ hiện tại. Task `doing` mà `updated_at` quá 48h thì coi như spec có thể cũ — kiểm chứng lại trước khi tin.
+- `notes` là nhật ký thêm vào cuối, không sửa mục cũ. Mỗi mục 1 sự kiện, tối đa 5 dòng, định dạng `[DD/MM HH:MM tên-agent: nội dung]`. Chỉ ghi khi có: kết quả mới, quyết định mới, blocker mới, hoặc gotcha cho người sau.
+- **Heartbeat không được ghi vào notes.** Tiến độ lặp lại (hub sống/chết, poll ok) thuộc về log heartbeat / file riêng, không thuộc task.
+- Nếu `notes` dài quá ~8.000 ký tự: chuyển các mục cũ sang `tasks/archive/<id>-log.md`, để lại trong notes 1 dòng trỏ tới file đó.
+- `branch` cấp ngoài và `result.branch` phải giống nhau — chỉ ghi một chỗ, chỗ kia copy y hệt, không để một chỗ trống.
