@@ -1,6 +1,6 @@
-# Trạng thái team — cập nhật 19/11 23:31 (muse-main)
+# Trạng thái team — cập nhật 20/11 00:10 (muse-main)
 
-- Qsang_vbook main: 399b2d1 | Registry: 119 nguồn | Validate: PASS
+- Qsang_vbook main: ead9038 | Registry: 119 nguồn | Validate: PASS
 - Đã xong: 109-kiem-chung-bang-pua-fanqie-tren-1-chuong (muse-1, review 9/10, báo cáo research/109-fanqie-pua-verify.md đã merge 19/11 23:31; reader/full chặn cả free lẫn VIP bằng Turing slide captcha — HTTP 200 body 0 byte, muse-main kiểm chứng độc lập khớp; bảng bqy đúng 62/62 trên mẫu live 107, bảng kychi sai — SỬA kết luận 108; fanqie vẫn ĐÓNG, không build) (done)
 - Đã xong: 108-nghien-cuu-cac-extension-fanqie-trong-fo (muse-1, review 9/10, báo cáo research/108-fanqie-fork-extensions.md đã merge 19/11 23:05; 13 ext fanqie trong fork: hầu hết sống nhờ proxy/token/máy root — phạm luật nhà; bảng PUA đúng là bqy (sửa bởi 109), không phải kychi; fanqie vẫn ĐÓNG) (done)
 - Đã xong: 097-rescan-forks-lan-15-tim-host-novel-moi-b (muse-1, review 8/10, báo cáo research/FORK-SCAN-2026-11-19.md đã merge 19/11 21:56; 3 host build-ready: sto66, truyenkimdung, shushuwuxs + 2 domain move tvtruyen1/truyendich.us) (done)
@@ -10,7 +10,7 @@
 - 104 (done, muse-main — merge truyenkimdung lên main 399b2d1, registry 119; device test 7/7 + install 200)
 - Đã xong: 107-tu-hoc-mau-live-font-encryption-pattern- (muse-1, review 9/10, báo cáo research/FONT-ENCRYPTION-LIVE-2026-11-19.md đã merge 19/11 22:48; fanqie live: 150 PUA, font subset SourceHanSansSC 362 glyph, cmap không chứa Unicode gốc; kết luận: vBook runtime không giải được font encryption — pattern nhận biết PUA ratio + báo lỗi rõ trong chap.js; skill đã cập nhật) (done)
 - 105 (review — fix TruyenTV sang tvtruyen1.com)
-- 106 (open — thêm mirror truyendich.us cho TruyenDich.AI)
+- 106 (done, muse-main — merge mirror truyendich.us lên main ead9038; device test 13/13 + install 200 sau khi Anh đổi sang 5G)
 - Đã xong: 095-cai-watcher-5-phut-tren-may-muse-1 (muse-1, review 8/10, hook muse-teamwork-watch-muse-1, poll 300s, dry-run + live-run silent) + 096-cai-watcher-5-phut-tren-may-muse-2 (muse-2, review 8/10, hook muse-teamwork-watch-muse-2, poll 300s, dry-run + live-run silent) (done)
 - Đã xong: 098-tu-hoc-ky-thuat-xu-ly-site-js-rendered-v (muse-2, review 8/10, báo cáo research/JS-RENDERED-ANTI-BOT-2026-11-19.md đã merge 19/11 21:41; skill vbook-extension-building đã thêm mục site khó) (done)
 - Đã xong: 099-tu-hoc-pattern-phoi-hop-nhieu-muse-khong (muse-main, review 8/10, báo cáo research/099-pattern-phoi-hop-khong-inbound.md đã merge 19/11 21:30; đề xuất: chuyển watchdog/inbox sang GitHub Actions + watcher ls-remote — chờ Anh duyệt mới làm) (done)
@@ -21,4 +21,4 @@
 - Đã đóng (cancelled): 16 mục (#14, #16, #22, #24, #30, #60, #61, #65, #67, #71, #74, #75, #76, #81, #108, #111) — không mở lại trừ khi Anh nói rõ
 - Chờ Anh quyết: #10 shuhaige (Anh đã quyết để sau, 14/11)
 - Sẵn sàng giao build: #69 wfxs (đã xác minh OK trên điện thoại 19/11 21:22, hết 403)
-- Lần kiểm chứng spec gần nhất: 19/11 22:40 — KHÔNG lệch (verify-spec.sh; chỉ còn WARN: 087 rebase, ref 093/098)
+- Lần kiểm chứng spec gần nhất: 20/11 00:12 — KHÔNG lệch (verify-spec.sh; chỉ còn WARN: 087 rebase, ref 093/098)
