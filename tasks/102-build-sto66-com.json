@@ -3,7 +3,7 @@
   "title": "Build Sto66 (sto66.com, chinese_novel)",
   "type": "vbook-extension",
   "repo": "Qsang_vbook",
-  "branch": "",
+  "branch": "feature/102-build-sto66-com",
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "high",
