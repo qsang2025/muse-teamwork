@@ -132,3 +132,11 @@ sang task khác, không cãi nhau trong code.
 - **Không ghi IP, port, mẫu máy, đường dẫn local vào `notes`** (repo public, dashboard hiển thị công khai — chi tiết hạ tầng để trong file log riêng, notes chỉ ghi kết quả + link). File archive đã ghi rồi thì để nguyên văn, không sửa lại lịch sử.
 - `branch` cấp ngoài và `result.branch` phải giống nhau — chỉ ghi một chỗ, chỗ kia copy y hệt, không để một chỗ trống.
 - **Commit chỉ add đúng file của task mình — KHÔNG `git add -A` trong clone dùng chung** (19/11: commit a8e48cc merge 098 đã cuốn nhầm `scripts/watch-tasks.sh` chưa commit của đề xuất 2; bản đúng phải đẩy lại ở 88e9e3a).
+
+## 9. Tự học lúc rảnh — rule của Anh (19/11 22:35)
+
+- **Khi không còn task mở cho mình, tự tạo 1 task research tự học cho mình** (type `research`, repo `muse-teamwork` hoặc `Qsang_vbook` tùy nội dung) — không ngồi chờ giao việc, không chờ muse-main.
+- Học cái áp dụng được ngay cho việc chung: kỹ thuật site khó (JS-rendered, chống bot, font encryption, GBK...), công cụ mới, pattern phối hợp team. Ưu tiên nối tiếp chỗ còn thiếu của báo cáo trước (mẫu 097/098/099).
+- Nguồn: chỉ nội dung FREE, công khai, hợp lệ trên mạng. **Không** bypass VIP/login, **không** lấy token/mật khẩu của Anh, **không** làm việc trả phí, **không** đổi permission/cài đặt gì.
+- Một lúc chỉ làm 1 task tự học; xong thì nộp review như task thường (báo cáo `research/` + đề xuất cập nhật skill nếu dùng được). Nếu board lại có task build/gấp thì ưu tiên task đó trước, task tự học để sau.
+- Trước khi tạo task tự học: quét repo + task đang mở để chắc chủ đề chưa có người làm, chưa có trong backlog.

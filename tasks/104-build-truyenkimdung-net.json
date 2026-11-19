@@ -4,10 +4,10 @@
   "type": "vbook-extension",
   "repo": "Qsang_vbook",
   "branch": "",
-  "assignee": "muse-1",
+  "assignee": "muse-main",
   "preferred_assignee": "",
   "priority": "medium",
-  "status": "blocked",
+  "status": "doing",
   "created_by": "muse-main",
   "created_at": "2026-11-19T21:57:00+07:00",
   "claimed_at": "2026-11-19T22:10:44+07:00",
@@ -35,6 +35,6 @@
     "Validate PASS + device test (muse-main chạy trên điện thoại Anh) + install 200",
     "Push branch, cập nhật task sang review"
   ],
-  "notes": "truyenkimdung.net — ứng viên build mới từ rescan #15 (task 097, FORK-SCAN-2026-11-19.md §3.2): thư viện võ hiệp Kim Dung, SSR, catalog nhỏ trọn 20 bộ tại /muc-luc. Chương 1 kiểm chứng tay: /truyen/bich-huyet-kiem/hoi-01-duong-loan-day-nguy-hiem-vua-tu-huy-truong-thanh — Bích Huyết kiếm Hồi 01, nội dung đầy đủ, 'Đăng nhập' chỉ để bình luận, không khóa đọc. Pattern đều: /truyen/<slug>/hoi-<n>-<slug-chuong>. Lưu ý: tìm kiếm qua API riêng /tracuu/api/stories + /api/search (trang /tracuu/ là công cụ JS) — search.js nên gọi API hoặc lọc trên danh sách 20 bộ. Meo đã có extension Truyện Kim Dung v2 (novel/truyenkimdung). Ưu tiên thấp hơn sto66/shushuwuxs vì kho chỉ 20 bộ.",
-  "updated_at": "2026-11-19T22:20:00+07:00"
+  "notes": "truyenkimdung.net — ứng viên build mới từ rescan #15 (task 097, FORK-SCAN-2026-11-19.md §3.2): thư viện võ hiệp Kim Dung, SSR, catalog nhỏ trọn 20 bộ tại /muc-luc. Chương 1 kiểm chứng tay: /truyen/bich-huyet-kiem/hoi-01-duong-loan-day-nguy-hiem-vua-tu-huy-truong-thanh — Bích Huyết kiếm Hồi 01, nội dung đầy đủ, 'Đăng nhập' chỉ để bình luận, không khóa đọc. Pattern đều: /truyen/<slug>/hoi-<n>-<slug-chuong>. Lưu ý: tìm kiếm qua API riêng /tracuu/api/stories + /api/search (trang /tracuu/ là công cụ JS) — search.js nên gọi API hoặc lọc trên danh sách 20 bộ. Meo đã có extension Truyện Kim Dung v2 (novel/truyenkimdung). Ưu tiên thấp hơn sto66/shushuwuxs vì kho chỉ 20 bộ.\n\n[19/11 22:33 muse-main: Block da go — khong phai loi dien thoai Anh. Forwarder tailnet tren VM muse-main da chet, muse-main khoi dong lai, /connect OK (HONOR PTP-AN10). Device test 7/7 code 0 + install code 200 chay qua forwarder. Validate nhanh PASS 118/118. Da rebase len main a026846 (tmp-104 399b2d1), merge local xong, dang validate main da merge truoc khi push.]",
+  "updated_at": "2026-11-19T22:35:00+07:00"
 }

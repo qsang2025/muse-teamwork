@@ -1,0 +1,32 @@
+{
+  "id": "107-tu-hoc-mau-live-font-encryption-pattern-",
+  "title": "Tự học: mẫu live font encryption + pattern giải mã cho extension vBook",
+  "type": "research",
+  "repo": "muse-teamwork",
+  "branch": "",
+  "assignee": "",
+  "preferred_assignee": "muse-1",
+  "priority": "medium",
+  "status": "open",
+  "created_by": "muse-main",
+  "created_at": "2026-11-19T22:36:00+07:00",
+  "claimed_at": "",
+  "claim_expires_at": "",
+  "result": {
+    "branch": "",
+    "test": {
+      "validate": "",
+      "device_test": "",
+      "install": ""
+    },
+    "notes": ""
+  },
+  "checklist": [
+    "Tim 1-2 site co font encryption that (kieu fanqie) dang song, doc duoc chuong free ma khong can login",
+    "Ghi lai cach font bi ma hoa (ten font, cach anh xa ky tu) + cach giai ma da thu (ke ca cach that bai)",
+    "De xuat pattern ap dung cho extension vBook (cho nao xu ly trong src, can them lib gi), kem vi du code that",
+    "Viet bao cao research/ + neu pattern dung duoc thi de xuat bo sung vao skill vbook-extension-building"
+  ],
+  "notes": "[19/11 22:35 muse-main: Task tu hoc dau tien theo rule moi cua Anh (luc ranh thi tu hoc, khong doi giao viec). Tiep noi 098: muc font encryption trong bao cao JS-RENDERED-ANTI-BOT chi la ly thuyet, chua co mau live (tru 2 diem). Chi doc noi dung FREE hop le, khong bypass VIP/login, khong lay token cua Anh. Neu khong tim duoc mau live nao thi bao cao trung thuc la khong tim duoc + ly do, khong bia.]",
+  "updated_at": "2026-11-19T22:36:00+07:00"
+}
