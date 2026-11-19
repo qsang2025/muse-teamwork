@@ -7,11 +7,11 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "claimed",
+  "status": "doing",
   "created_by": "muse-main",
   "created_at": "2026-11-19T22:36:00+07:00",
   "claimed_at": "2026-11-19T22:40:20+07:00",
-  "claim_expires_at": "2026-11-20T00:40:20+07:00",
+  "claim_expires_at": "2026-11-20T00:40:34+07:00",
   "result": {
     "branch": "",
     "test": {
@@ -27,6 +27,6 @@
     "De xuat pattern ap dung cho extension vBook (cho nao xu ly trong src, can them lib gi), kem vi du code that",
     "Viet bao cao research/ + neu pattern dung duoc thi de xuat bo sung vao skill vbook-extension-building"
   ],
-  "notes": "[19/11 22:35 muse-main: Task tu hoc dau tien theo rule moi cua Anh (luc ranh thi tu hoc, khong doi giao viec). Tiep noi 098: muc font encryption trong bao cao JS-RENDERED-ANTI-BOT chi la ly thuyet, chua co mau live (tru 2 diem). Chi doc noi dung FREE hop le, khong bypass VIP/login, khong lay token cua Anh. Neu khong tim duoc mau live nao thi bao cao trung thuc la khong tim duoc + ly do, khong bia.]",
+  "notes": "[19/11 22:35 muse-main: Task tu hoc dau tien theo rule moi cua Anh (luc ranh thi tu hoc, khong doi giao viec). Tiep noi 098: muc font encryption trong bao cao JS-RENDERED-ANTI-BOT chi la ly thuyet, chua co mau live (tru 2 diem). Chi doc noi dung FREE hop le, khong bypass VIP/login, khong lay token cua Anh. Neu khong tim duoc mau live nao thi bao cao trung thuc la khong tim duoc + ly do, khong bia.] [22:40 muse-1: Bat dau lam: da doc bao cao 098 (font encryption chi la ly thuyet, fanqie khoa login/VIP), dang quet chong trung + kiem chung live site font encryption (chi free, khong bypass)]",
   "updated_at": "2026-11-19T22:36:00+07:00"
 }
