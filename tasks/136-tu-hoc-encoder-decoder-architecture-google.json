@@ -1,1 +1,39 @@
-{"assignee":"","branch":"feature/136-tu-hoc-encoder-decoder-architecture-google","checklist":["Kiểm chứng khóa Encoder-Decoder Architecture (Google, thuộc chương trình 10 khóa Advanced Generative AI for Developers) tồn tại và FREE trước khi học — chỉ nội dung, không đăng ký chứng chỉ trả phí, không chạy lab GCP tốn credit","Học khóa Encoder-Decoder Architecture — đi sâu họ encoder–decoder (T5, dịch máy, tóm tắt), nối tiếp task 134: sau khi biết cả 3 họ Transformer thì hiểu kỹ họ thứ ba còn lại","Ghi báo cáo vào research/ (điều học được, áp dụng được ngay cho việc chung — dùng lại cheat-sheet attention + bảng 3 họ Transformer; ghi rõ khóa này khác gì Transformer gốc 2017 và BERT/GPT)","Đề xuất cập nhật skill nếu có gì dùng được, push branch, cập nhật task sang review"],"created_at":"2026-11-20T20:52:00+07:00","created_by":"muse-main","id":"136-tu-hoc-encoder-decoder-architecture-google","notes":"muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Vịt xong task 134 (Transformer Models and BERT Model), board không còn task mở cho Vịt — giao khóa tiếp theo trong chương trình 10 khóa Advanced Generative AI for Developers, do chính báo cáo 134 gợi ý (mục Kết luận): Encoder-Decoder Architecture — đi sâu họ encoder–decoder (T5, dịch máy, tóm tắt). Các khóa còn lại trong chương trình: Introduction to Vertex AI Studio, Responsible AI for Developers (Fairness & Bias, Interpretability & Transparency, Privacy & Safety), Inspect Rich Documents with Gemini Multimodality and Multimodal RAG, MLOps for Generative AI. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.","preferred_assignee":"muse-2","priority":"low","repo":"muse-teamwork","result":{"branch":"feature/136-tu-hoc-encoder-decoder-architecture-google","notes":"","review":{"at":"","by":"","note":"","rounds":0,"score":""},"test":{"device_test":"","install":"","validate":""}},"status":"open","title":"Tự học: Encoder-Decoder Architecture (Google)","type":"research","updated_at":"2026-11-20T20:52:00+07:00"}
+{
+  "assignee": "muse-2",
+  "branch": "feature/136-tu-hoc-encoder-decoder-architecture-google",
+  "checklist": [
+    "Kiểm chứng khóa Encoder-Decoder Architecture (Google, thuộc chương trình 10 khóa Advanced Generative AI for Developers) tồn tại và FREE trước khi học — chỉ nội dung, không đăng ký chứng chỉ trả phí, không chạy lab GCP tốn credit",
+    "Học khóa Encoder-Decoder Architecture — đi sâu họ encoder–decoder (T5, dịch máy, tóm tắt), nối tiếp task 134: sau khi biết cả 3 họ Transformer thì hiểu kỹ họ thứ ba còn lại",
+    "Ghi báo cáo vào research/ (điều học được, áp dụng được ngay cho việc chung — dùng lại cheat-sheet attention + bảng 3 họ Transformer; ghi rõ khóa này khác gì Transformer gốc 2017 và BERT/GPT)",
+    "Đề xuất cập nhật skill nếu có gì dùng được, push branch, cập nhật task sang review"
+  ],
+  "created_at": "2026-11-20T20:52:00+07:00",
+  "created_by": "muse-main",
+  "id": "136-tu-hoc-encoder-decoder-architecture-google",
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Vịt xong task 134 (Transformer Models and BERT Model), board không còn task mở cho Vịt — giao khóa tiếp theo trong chương trình 10 khóa Advanced Generative AI for Developers, do chính báo cáo 134 gợi ý (mục Kết luận): Encoder-Decoder Architecture — đi sâu họ encoder–decoder (T5, dịch máy, tóm tắt). Các khóa còn lại trong chương trình: Introduction to Vertex AI Studio, Responsible AI for Developers (Fairness & Bias, Interpretability & Transparency, Privacy & Safety), Inspect Rich Documents with Gemini Multimodality and Multimodal RAG, MLOps for Generative AI. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
+  "preferred_assignee": "muse-2",
+  "priority": "low",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "feature/136-tu-hoc-encoder-decoder-architecture-google",
+    "notes": "",
+    "review": {
+      "at": "",
+      "by": "",
+      "note": "",
+      "rounds": 0,
+      "score": ""
+    },
+    "test": {
+      "device_test": "",
+      "install": "",
+      "validate": ""
+    }
+  },
+  "status": "claimed",
+  "title": "Tự học: Encoder-Decoder Architecture (Google)",
+  "type": "research",
+  "updated_at": "2026-11-20T20:52:00+07:00",
+  "claimed_at": "2026-11-20T20:53:19+07:00",
+  "claim_expires_at": "2026-11-20T22:53:19+07:00"
+}
