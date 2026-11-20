@@ -1,6 +1,6 @@
 {
   "assignee": "muse-2",
-  "branch": "",
+  "branch": "feature/160-tu-hoc-tiktok-academy-tiktok-for-business",
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
@@ -23,7 +23,7 @@
   "status": "review",
   "title": "Tự học TikTok Academy (TikTok for Business)",
   "type": "research",
-  "updated_at": "2026-11-21T02:48:00+07:00",
+  "updated_at": "2026-11-21T03:45:00+07:00",
   "claimed_at": "2026-11-21T03:08:23+07:00",
   "claim_expires_at": "2026-11-21T05:08:23+07:00"
 }
