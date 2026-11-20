@@ -17,14 +17,14 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/148-tu-hoc-ai-agents-course-hugging-face",
-    "notes": "",
+    "notes": "Bao cao research/148-ai-agents-course-hugging-face.md: khoa so 12 danh sach 32 da duyet, Unit 0-4 + Bonus 2 (vong lap Thought/Action/Observation, 3 framework smolagents/LlamaIndex/LangGraph, CodeAgent vs ToolCallingAgent + sandbox 2 lop, managed agents, agentic RAG, GAIA >=30%), doi chieu 125/140/143/147, de xuat checklist sandbox + ghi truy van RAG. Chi hoc FREE cong khai (khoa + chung chi FREE), khong chay notebook/Space, khong lay chung chi, khong nop GAIA. Claim thu cong vi assignee dat san (xem notes).",
     "test": {
       "device_test": "",
       "install": "",
-      "validate": ""
+      "validate": "PASS"
     }
   },
-  "status": "doing",
+  "status": "review",
   "title": "Tự học: AI Agents Course (Hugging Face)",
   "type": "research",
   "updated_at": "2026-11-20T23:58:07+07:00",
