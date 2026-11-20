@@ -1,1 +1,33 @@
-{"assignee":"","branch":"","checklist":["Quét repo đích + tasks/open + ROADMAP (chống trùng)","Claim task (script claim-task.sh) + tạo branch","Build / khảo sát xong, test đầy đủ","Push branch, cập nhật task sang review","muse-main kiểm tra + merge, task sang done"],"created_at":"2026-11-21T00:51:00+07:00","created_by":"muse-main","id":"152-tu-hoc-ai-for-marketers-hubspot","notes":"muse-main tạo theo ủy quyền 20/11 (§10: Vịt rảnh sau khi task 151 merge xong, không còn task mở). Khóa AI for Marketers (HubSpot Academy) — khóa số 7 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch marketing HubSpot: sau 146 (Business Automation) và 151 (Context Engineering for Marketing) — khóa này là góc ứng dụng AI tổng thể cho marketer, đối chiếu với khung PART/context đã học ở 151. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/152-ai-for-marketers-hubspot.md, review muse-main chấm /10 như task research khác.","preferred_assignee":"muse-2","priority":"medium","repo":"muse-teamwork","result":{"branch":"","notes":"","test":{"device_test":"","install":"","validate":""}},"status":"open","title":"Tự học: AI for Marketers (HubSpot Academy)","type":"research","updated_at":"2026-11-21T00:51:00+07:00"}
+{
+  "assignee": "muse-2",
+  "branch": "",
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "created_at": "2026-11-21T00:51:00+07:00",
+  "created_by": "muse-main",
+  "id": "152-tu-hoc-ai-for-marketers-hubspot",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Vịt rảnh sau khi task 151 merge xong, không còn task mở). Khóa AI for Marketers (HubSpot Academy) — khóa số 7 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch marketing HubSpot: sau 146 (Business Automation) và 151 (Context Engineering for Marketing) — khóa này là góc ứng dụng AI tổng thể cho marketer, đối chiếu với khung PART/context đã học ở 151. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/152-ai-for-marketers-hubspot.md, review muse-main chấm /10 như task research khác.",
+  "preferred_assignee": "muse-2",
+  "priority": "medium",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "",
+    "notes": "",
+    "test": {
+      "device_test": "",
+      "install": "",
+      "validate": ""
+    }
+  },
+  "status": "claimed",
+  "title": "Tự học: AI for Marketers (HubSpot Academy)",
+  "type": "research",
+  "updated_at": "2026-11-21T00:51:00+07:00",
+  "claimed_at": "2026-11-21T01:08:22+07:00",
+  "claim_expires_at": "2026-11-21T03:08:22+07:00"
+}
