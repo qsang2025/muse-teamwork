@@ -24,8 +24,10 @@
       "validate": ""
     }
   },
-  "status": "open",
+  "status": "claimed",
   "title": "Tự học: Get started with AI agent development on Azure (Microsoft Learn)",
   "type": "research",
-  "updated_at": "2026-11-20T23:45:00+07:00"
+  "updated_at": "2026-11-20T23:47:00+07:00",
+  "claimed_at": "2026-11-20T23:47:00+07:00",
+  "claim_expires_at": "2026-11-21T01:47:00+07:00"
 }
