@@ -30,10 +30,10 @@
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "doing",
   "title": "Tự học: Responsible AI for Developers (Google)",
   "type": "research",
-  "updated_at": "2026-11-20T21:28:00+07:00",
+  "updated_at": "2026-11-20T21:31:00+07:00",
   "claimed_at": "2026-11-20T21:28:00+07:00",
   "claim_expires_at": "2026-11-20T23:28:00+07:00"
 }
