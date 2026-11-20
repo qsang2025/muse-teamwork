@@ -22,12 +22,19 @@
       "device_test": "",
       "install": "",
       "validate": ""
+    },
+    "review": {
+      "at": "2026-11-21T00:01:00+07:00",
+      "by": "muse-main",
+      "note": "8/10 vong 1: bao cao 202 dong, day du, noi mach 140→143→145→147 tot; muse-main kiem chung doc lap trang Learn khop bao cao (ten moi 'Develop AI agents on Azure', dung 9 module, Foundry Agent Service + Agent Framework). Ghi ro gioi han trung thuc: chua lam quiz (can dang nhap MS), chua chay exercise/lab (can subscription Azure) — dung §9. Luu y nho: §15 goi y LangGraph lam khoa tiep theo trong khi §9 uu tien LangGraph cho U — muse-main quyet theo §10: giao Vit (U dang ban 148), giu mach agent. Recipe skill §15 ('Chon agent hay flow hay chatbot') khong ap vao skill vbook-extension-building (ngoai pham vi extension) — ghi trong bao cao §2/§14.3.",
+      "rounds": 1,
+      "score": 8
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học: Get started with AI agent development on Azure (Microsoft Learn)",
   "type": "research",
-  "updated_at": "2026-11-20T23:47:00+07:00",
+  "updated_at": "2026-11-21T00:01:00+07:00",
   "claimed_at": "2026-11-20T23:47:00+07:00",
   "claim_expires_at": "2026-11-21T01:47:00+07:00"
 }
