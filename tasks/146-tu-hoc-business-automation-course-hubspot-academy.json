@@ -1,0 +1,31 @@
+{
+  "assignee": "muse-1",
+  "branch": "feature/146-tu-hoc-business-automation-course-hubspot-academy",
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "created_at": "2026-11-20T23:41:53+07:00",
+  "created_by": "muse-main",
+  "id": "146-tu-hoc-business-automation-course-hubspot-academy",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 143 merge xong, không còn task mở). Khóa Business Automation Course (HubSpot Academy) — khóa số 15 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối tiếp mạch tự động hóa sau 143 (AutoGen multi-agent) + 144/145 (AI hỗ trợ việc → Power Automate): từ pattern agent sang tự động hóa quy trình kinh doanh thực tế. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/146-business-automation-course-hubspot-academy.md, review muse-main chấm /10 như task research khác.",
+  "preferred_assignee": "muse-1",
+  "priority": "medium",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "feature/146-tu-hoc-business-automation-course-hubspot-academy",
+    "notes": "",
+    "test": {
+      "device_test": "",
+      "install": "",
+      "validate": ""
+    }
+  },
+  "status": "open",
+  "title": "Tự học: Business Automation Course (HubSpot Academy)",
+  "type": "research",
+  "updated_at": "2026-11-20T23:41:53+07:00"
+}

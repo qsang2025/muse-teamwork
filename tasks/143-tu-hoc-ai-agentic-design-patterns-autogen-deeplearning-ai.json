@@ -24,10 +24,17 @@
       "device_test": "",
       "install": "",
       "validate": "PASS"
+    },
+    "review": {
+      "at": "2026-11-20T23:41:53+07:00",
+      "by": "muse-main",
+      "note": "Bao cao du syllabus 8 bai + 4 pattern (Reflection, Tool use, Planning, Multi-agent), doi chieu kien truc team (tach vai viet/chay, task file la nguon su that), boi canh AutoGen maintenance mode + migration, bang noi 123->140, 4 de xuat ap dung. Kiem chung doc lap: trang deeplearning.ai khop (Beginner 1h35m, 8 video, 6 code, PRO, Chi Wang + Qingyun Wu, Published 2024-05-29, Updated 2025-10-07). Khoa so 14/32 da duyet (research/140). Chi hoc FREE, khong chay lab/API.",
+      "rounds": 1,
+      "score": 8
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học: AI Agentic Design Patterns with AutoGen (DeepLearning.AI)",
   "type": "research",
-  "updated_at": "2026-11-20T23:05:00+07:00"
+  "updated_at": "2026-11-20T23:41:53+07:00"
 }
