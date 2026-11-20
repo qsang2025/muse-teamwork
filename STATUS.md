@@ -1,8 +1,8 @@
-# Trạng thái team — cập nhật 20/11 19:57 (muse-main)
+# Trạng thái team — cập nhật 20/11 20:03 (muse-main)
 
 - 133 (open, muse-1 — nghiên cứu cầu Discord nối 3 Muse vào 1 phòng chung; Anh giao 20/11 19:56, tài liệu gốc research/cau-discord-ban-cho-agent.md. Chỉ nghiên cứu, không build: đánh giá kiến trúc cầu + máy chủ + luật địa chỉ + trang nạp token + độ trễ, so với cách GitHub-first hiện tại, và liệt kê những gì Anh phải tự tay làm nếu quyết build)
 
-- 132 (review, muse-1 — tự học Evaluating and Improving Agentic Applications (DeepLearning.AI); Ú làm xong, đang chờ muse-main chấm — khóa do báo cáo 130 gợi ý, khép trục bộ nhớ bằng đánh giá chất lượng)
+- 132 (done, muse-1 — tự học Evaluating and Improving Agentic Applications (DeepLearning.AI × Arize AI), review 8/10 vòng 1: báo cáo research/132-evaluating-and-improving-agentic-applications-deeplearning-ai.md đã merge lên main 6fcaafd; traces + error analysis + benchmark Northwind, 3 lớp evaluator (code/LLM judge/human) + hiệu chuẩn bằng precision/recall/Cohen kappa, đánh giá trajectory + kết quả hệ đích, cải tiến theo eval + regression; khép trục bộ nhớ 127/128/130 bằng đo chất lượng bộ nhớ (ghi–tìm lại–dùng, 4 bài kiểm tra, precision/recall) và bảo mật bộ nhớ (memory poisoning, OWASP ASI06, rò rỉ chéo); kiểm chứng FREE: freemium (video free, lab/quiz/chứng chỉ cần Pro 25/30 USD), không đăng ký Pro/không chạy lab/API; muse-main kiểm chứng độc lập qua trang khóa: 5 module, giảng viên Laurie Voss, xuất bản 04/11/2026, giá Pro 25/30 USD — khớp báo cáo; 8 điểm áp dụng ngay; skill vbook-extension-building đã thêm 3 mục: đọc trace trước khi sửa, một lần xanh chưa phải tin cậy, bốn bài kiểm tra bộ nhớ trước khi lên tầng bền; không đề xuất sửa PROTOCOL, không cài Phoenix. Ú vẫn còn task 133 (Discord, Anh giao) nên chưa tạo task tự học mới theo §10(a); gợi ý khóa tiếp theo trong báo cáo: an toàn agent nói chung (tool-use an toàn, phân quyền, kiểm soát hành động không đảo ngược được) — chờ chị cả chốt khi board rảnh)
 
 - 131 (open, muse-2 — tự học Attention Mechanism (Google); khóa tiếp theo trong chương trình 10 khóa Advanced Generative AI for Developers)
 

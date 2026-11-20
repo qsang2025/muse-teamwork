@@ -9,19 +9,19 @@
   "created_at": "2026-11-20T19:45:00+07:00",
   "created_by": "muse-main",
   "id": "132-tu-hoc-evaluating-and-improving-agentic-applications-deeplearning-ai",
-  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 130 (LLMs as Operating Systems), board không còn task mở cho Ú — giao khóa do chính báo cáo 130 gợi ý (mục Khóa tiếp theo): Evaluating and Improving Agentic Applications (DeepLearning.AI) — mảng còn trống sau ba khóa bộ nhớ (127 framework, 128 hạ tầng, 130 quản lý context): đánh giá chất lượng bộ nhớ (đo được thì mới biết bộ nhớ đang giúp hay đang hại) và bảo mật bộ nhớ. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước. [19:56 muse-1: Da kiem chung FREE (freemium), WIP f8e7a97 tren branch, dang hoc 5 module qua tai lieu FREE]",
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 130 (LLMs as Operating Systems), board không còn task mở cho Ú — giao khóa do chính báo cáo 130 gợi ý (mục Khóa tiếp theo): Evaluating and Improving Agentic Applications (DeepLearning.AI) — mảng còn trống sau ba khóa bộ nhớ (127 framework, 128 hạ tầng, 130 quản lý context): đánh giá chất lượng bộ nhớ (đo được thì mới biết bộ nhớ đang giúp hay đang hại) và bảo mật bộ nhớ. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước. [19:56 muse-1: Da kiem chung FREE (freemium), WIP f8e7a97 tren branch, dang hoc 5 module qua tai lieu FREE] [20/11 20:03 muse-main: review 8/10 vong 1, merge 6fcaafd (bao cao + skill +3 muc). Task research, khong ap dung validate/device test/install. Ú van con task 133 (Discord, Anh giao) nen chua tao task tu hoc moi theo §10(a).]",
   "preferred_assignee": "muse-1",
   "priority": "low",
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/132-evaluating-and-improving-agentic-applications-deeplearning-ai",
-    "notes": "Bao cao research/132-evaluating-and-improving-agentic-applications-deeplearning-ai.md: traces + error analysis + benchmark Northwind, 3 lop evaluator (code/LLM judge/human) + hieu chuan bang precision/recall/Cohen kappa, danh gia trajectory + ket qua he dich, cai tien theo eval + regression; khep truc bo nho 127/128/130 bang do chat luong bo nho (ghi-tim lai-dung, 4 bai kiem tra, precision/recall) va bao mat bo nho (memory poisoning, OWASP ASI06, ro ri cheo); kiem chung FREE: freemium (video free, lab/quiz/cert can Pro 25/30 USD), khong dang ky Pro/khong chay lab/API; de xuat 3 muc skill. Task research, khong ap dung validate/device test/install.",
+    "notes": "Bao cao research/132-evaluating-and-improving-agentic-applications-deeplearning-ai.md: traces + error analysis + benchmark Northwind, 3 lop evaluator (code/LLM judge/human) + hieu chuan bang precision/recall/Cohen kappa, danh gia trajectory + ket qua he dich, cai tien theo eval + regression; khep truc bo nho 127/128/130 bang do chat luong bo nho (ghi-tim lai-dung, 4 bai kiem tra, precision/recall) va bao mat bo nho (memory poisoning, OWASP ASI06, ro ri cheo); kiem chung FREE: freemium (video free, lab/quiz/cert can Pro 25/30 USD), khong dang ky Pro/khong chay lab/API; de xuat 3 muc skill. Task research, khong ap dung validate/device test/install. muse-main review 8/10 vong 1, merge len main 6fcaafd 20/11 20:03; skill +3 muc.",
     "review": {
-      "at": "",
-      "by": "",
-      "note": "",
-      "rounds": 0,
-      "score": ""
+      "at": "2026-11-20T20:03:00+07:00",
+      "by": "muse-main",
+      "note": "Review vong 1 score 8/10: bao cao research/132-evaluating-and-improving-agentic-applications-deeplearning-ai.md (132 dong) day du — traces + error analysis + benchmark Northwind, 3 lop evaluator (code/LLM judge/human) + hieu chuan bang precision/recall/Cohen kappa, danh gia trajectory + ket qua he dich, cai tien theo eval + regression; khep truc bo nho 127/128/130 bang do chat luong bo nho (ghi-tim lai-dung, 4 bai kiem tra, precision/recall) va bao mat bo nho (memory poisoning, OWASP ASI06, ro ri cheo); kiem chung FREE: freemium (video free, lab/quiz/cert can Pro 25/30 USD), khong dang ky Pro/khong chay lab/API; muse-main kiem chung doc lap qua trang khoa: 5 module, giang vien Laurie Voss, xuat ban 04/11/2026, gia Pro 25/30 USD — khop bao cao; 8 diem ap dung ngay + 3 de xuat skill da them vao vbook-extension-building (doc trace truoc khi sua, mot lan xanh chua phai tin cay, bon bai kiem tra bo nho truoc khi len tang ben). Khong de xuat sua PROTOCOL, khong cai Phoenix. Task research, khong ap dung 3 dieu kien validate/device test/install cua build extension.",
+      "rounds": 1,
+      "score": 8
     },
     "test": {
       "device_test": "",
@@ -29,10 +29,10 @@
       "validate": ""
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học: Evaluating and Improving Agentic Applications (DeepLearning.AI)",
   "type": "research",
-  "updated_at": "2026-11-20T19:45:00+07:00",
+  "updated_at": "2026-11-20T20:03:00+07:00",
   "claimed_at": "2026-11-20T19:55:19+07:00",
   "claim_expires_at": "2026-11-20T21:56:15+07:00"
 }
