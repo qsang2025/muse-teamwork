@@ -13,21 +13,28 @@
   "created_at": "2026-11-21T05:16:00+07:00",
   "created_by": "muse-main",
   "id": "170-tu-hoc-get-started-with-microsoft-data-analytics-microsoft-learn",
-  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 169 merge xong, không còn task mở). Khóa Get started with Microsoft data analytics — Microsoft Learn — khóa số 32, khóa CUỐI trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main (dòng 63) — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch đo lường sau 169 (Customer Analytics: thang mô tả–dự đoán–kê đơn, phân khúc/CLV ở tầng khái niệm) + 168 (GA4 đang học: đo hành vi thật trên web): khóa này dạy phân tích dữ liệu bằng hệ Microsoft (Power BI) ở tầng thực hành ra sao, chỗ nào bổ sung cho thang ba tầng của 169 (đo lường mô tả/dự đoán bằng công cụ cụ thể), chỗ nào trùng với GA4/SEO, và áp dụng cho đo lường mô tả nguồn vBook / bài viết team ra sao. Delegation: giao Ú học + viết báo cáo; muse-main giữ review + merge; Anh giữ quyết định có dùng công cụ phân tích dữ liệu thật / gắn tracking vào site nào hay không. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy chiến dịch quảng cáo thật, không nạp tiền, không gắn tracking thật vào site nào, không mua Power BI Pro. Báo cáo viết vào research/170-get-started-with-microsoft-data-analytics-microsoft-learn.md, review muse-main chấm /10 như task research khác. [05:25 muse-1: Đã claim, đang học qua Microsoft Learn, đối chiếu 169/168/144/145/147] [21/11 05:29 muse-1: Đã nộp review; báo cáo 4 module trên branch feature, chờ muse-main chấm.]",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 169 merge xong, không còn task mở). Khóa Get started with Microsoft data analytics — Microsoft Learn — khóa số 32, khóa CUỐI trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main (dòng 63) — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch đo lường sau 169 (Customer Analytics: thang mô tả–dự đoán–kê đơn, phân khúc/CLV ở tầng khái niệm) + 168 (GA4 đang học: đo hành vi thật trên web): khóa này dạy phân tích dữ liệu bằng hệ Microsoft (Power BI) ở tầng thực hành ra sao, chỗ nào bổ sung cho thang ba tầng của 169 (đo lường mô tả/dự đoán bằng công cụ cụ thể), chỗ nào trùng với GA4/SEO, và áp dụng cho đo lường mô tả nguồn vBook / bài viết team ra sao. Delegation: giao Ú học + viết báo cáo; muse-main giữ review + merge; Anh giữ quyết định có dùng công cụ phân tích dữ liệu thật / gắn tracking vào site nào hay không. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy chiến dịch quảng cáo thật, không nạp tiền, không gắn tracking thật vào site nào, không mua Power BI Pro. Báo cáo viết vào research/170-get-started-with-microsoft-data-analytics-microsoft-learn.md, review muse-main chấm /10 như task research khác. [05:25 muse-1: Đã claim, đang học qua Microsoft Learn, đối chiếu 169/168/144/145/147] [21/11 05:29 muse-1: Đã nộp review; báo cáo 4 module trên branch feature, chờ muse-main chấm.] [21/11 05:35 muse-main: review 8/10 vòng 1 — ĐÃ MERGE lên main; khóa 32/32, danh sách 32 khóa đã hết.]",
   "preferred_assignee": "muse-1",
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/170-get-started-with-microsoft-data-analytics-microsoft-learn",
     "notes": "Bao cao research/170-get-started-with-microsoft-data-analytics-microsoft-learn.md (4 module, path 1/5 PL-300): 5 loai analytics mo rong thang 169, 5 vai tro + chu trinh 5 tac vu, semantic model dinh nghia dung chung, Fabric/OneLake, Copilot + Prep data for AI; doi chieu 169/168/144/145/147/154-156/159-162/163/165/166/158/167; chi hoc FREE cong khai qua unit chinh thuc, khong dang nhap/quiz/chung chi/Pro/Fabric/tracking.",
+    "review": {
+      "at": "2026-11-21T05:35:00+07:00",
+      "by": "muse-main",
+      "note": "8/10 vong 1: bao cao day du 4 module, mo rong thang 169 len 5 loai analytics, chu trinh 5 tac vu + semantic model + Prep data for AI, doi chieu 14 bao cao truoc, gioi han trung thuc (khong dang nhap/quiz/thuc hanh/Pro/Fabric/Copilot, tong thoi luong Chua xac dinh), de xuat §8 co dieu kien, nguon 3 lop. muse-main kiem chung doc lap: khoa #32 dung danh sach 32 (research/140 dong 63); trang Microsoft Learn chinh thuc khop bao cao (4 module: analytics process / Power BI / Fabric / Copilot in Power BI); cac file doi chieu 144/145/147/154-169 deu co tren main. Diem tru nho: chi doc unit chinh thuc, khong thuc hanh tay (dung §9); ranh gioi capacity Copilot F2/P1 dua vao huong dan doc lap, khong phai doc chinh thuc. Research task: validate PASS, device test + install n/a. De xuat §8 CHUA duyet — de danh lan cham skill toi, gop cung 163 §9.1/§9.2/§9.3 + 165 §8.2 + 166 §10.1/§10.2/§10.3 + 167 §9.1.",
+      "rounds": 1,
+      "score": 8
+    },
     "test": {
       "device_test": "n/a",
       "install": "n/a",
       "validate": "PASS"
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học Get started with Microsoft data analytics (Microsoft Learn)",
   "type": "research",
-  "updated_at": "2026-11-21T05:29:12+07:00"
+  "updated_at": "2026-11-21T05:35:00+07:00"
 }
