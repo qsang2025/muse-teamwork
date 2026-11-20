@@ -3,7 +3,7 @@
   "title": "Tự học: Introduction to Generative AI (Google) — khóa 2 theo phân vai",
   "type": "research",
   "repo": "muse-teamwork",
-  "branch": "",
+  "branch": "feature/119-intro-generative-ai-google",
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "low",
@@ -34,5 +34,5 @@
     "Đề xuất cập nhật skill nếu có gì dùng được, push branch, cập nhật task sang review"
   ],
   "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29: Vịt xong task 118 (Elements of AI) 20/11 16:46, board không còn task mở cho Vịt — giao khóa tiếp theo theo phân vai Anh chốt 20/11: muse-2 (Vịt, research) → Introduction to Generative AI (Google); nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
-  "updated_at": "2026-11-20T16:46:00+07:00"
+  "updated_at": "2026-11-20T17:15:00+07:00"
 }
