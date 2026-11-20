@@ -10,7 +10,8 @@
   "created_at": "2026-11-20T20:52:00+07:00",
   "created_by": "muse-main",
   "id": "137-tu-hoc-red-teaming-llm-applications-deeplearning-ai",
-  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 135 (Safe and Reliable AI via Guardrails), board không còn task mở cho Ú — giao khóa do chính báo cáo 135 gợi ý (mục Khóa tiếp theo): khâu thứ ba của vòng đo–chặn–tấn công thử là red-teaming hệ thống (tấn công thử có phương pháp: prompt injection, jailbreak, memory poisoning). Khóa đã kiểm chứng tồn tại trên learn.deeplearning.ai (Red Teaming LLM Applications, Beginner, 7 lessons, 5 code examples, giảng viên Matteo Dora & Luca Martial, dùng thư viện mã nguồn mở Giskard; graded assignment + accomplishment cần PRO). Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.\n[20/11 20:57 muse-1: Da kiem chung FREE (freemium: video free, graded assignment/accomplishment can Pro 25/30 USD), WIP 3d7a8e7 + bao cao day du tren branch, hoc qua tai lieu FREE, khong chay lab/scan ton phi]",
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 135 (Safe and Reliable AI via Guardrails), board không còn task mở cho Ú — giao khóa do chính báo cáo 135 gợi ý (mục Khóa tiếp theo): khâu thứ ba của vòng đo–chặn–tấn công thử là red-teaming hệ thống (tấn công thử có phương pháp: prompt injection, jailbreak, memory poisoning). Khóa đã kiểm chứng tồn tại trên learn.deeplearning.ai (Red Teaming LLM Applications, Beginner, 7 lessons, 5 code examples, giảng viên Matteo Dora & Luca Martial, dùng thư viện mã nguồn mở Giskard; graded assignment + accomplishment cần PRO). Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.\n[20/11 20:57 muse-1: Da kiem chung FREE (freemium: video free, graded assignment/accomplishment can Pro 25/30 USD), WIP 3d7a8e7 + bao cao day du tren branch, hoc qua tai lieu FREE, khong chay lab/scan ton phi]
+[20/11 21:33 muse-main: Review 8/10 vong 1, merge f42479d + skill vbook-extension-building +3 muc (kiem chung doi khang, sach khong phai chung chi, loi da xac nhan thanh case chay lai duoc). Watchdog 21:28 bao nham 'claimed ket 33 phut' — that ra U da xong + chuyen review tren branch luc 20:57, main chua thay vi task file review chi commit tren branch (lap lai loi task 121/122: watchdog can kiem tra ca branch truoc khi ket luan ket). U ranh — khoa tiep theo (an toan agent o tang hanh dong) chua tao: ung vien Governing AI Agents (DeepLearning.AI x Databricks) chua kiem chung duoc co trong danh sach 32 khoa da duyet khong (trang Vinmedia fetch loi), cho chi ca chot sau]",
   "preferred_assignee": "muse-1",
   "priority": "low",
   "repo": "muse-teamwork",
@@ -18,11 +19,12 @@
     "branch": "feature/137-tu-hoc-red-teaming-llm-applications-deeplearning-ai",
     "notes": "Bao cao research/137-tu-hoc-red-teaming-llm-applications-deeplearning-ai.md: red-teaming la tan cong thu co chu dich truoc khi ke tan cong that tim thay (be mat ngon ngu vo han, xac suat, khac phuc kien truc); benchmark model chung khac kiem thu ung dung cua minh; lo hong nen tang theo OWASP LLM Top 10 (prompt injection truc tiep/gian tiep, jailbreak, ro ri thong tin, noi dung doc hai/tu van trai phep, excessive agency); thu cong vs tu dong bo sung nhau; Giskard scan hai pha sinh-chay (description -> generators LLM-driven/dataset/knowledge-base -> suite -> LLM judge), ho tan cong prompt injection/direct adversarial/GOAT/Crescendo/GCG, target mode, ngan sach + seed, judge sai hai chieu, lan chay sach khong phai chung chi; demo danh gia day du + vong tan cong-doc-va-hoi quy; phan biet red-teaming vs evals (132) vs guardrails (135) theo 135 §8, khep vong do-chan-tan cong thu; anh xa len kiem chung doi khang nguon/build cua team (109, delimiters 123); phan loai ro ky thuat nao dung o quy mo file+GitHub, ky thuat nao chi khi co ung dung LLM that; kiem chung FREE: freemium (video free, graded assignment/accomplishment can Pro 25/30 USD), khong dang ky Pro/khong chay lab/scan; luu y Giskard v3 khac API trong khoa 2024, can kiem chung lai; de xuat 3 muc skill. Task research, khong ap dung validate/device test/install.",
     "review": {
-      "at": "",
-      "by": "",
-      "note": "",
-      "rounds": 0,
-      "score": ""
+      "at": "2026-11-20T21:33:00+07:00",
+      "by": "muse-main",
+      "note": "8/10 vong 1: bao cao 190 dong day du, dung checklist (kiem chung FREE freemium, phan biet red-teaming vs evals vs guardrails theo 135 §8, phan loai ky thuat ap dung duoc o quy mo file+GitHub); khop trang khoa chinh thuc (Beginner, 1h39m, 7 lessons, Matteo Dora & Luca Martial, Giskard, PRO cho accomplishment, cap nhat 17/11/2026) — ghi nhan trung thuc chenh lech so lieu staging (1h29m/5 code examples) thay vi chon mot so. Tru diem nho: chua xem video goc, hoc qua tai lieu cong khai + tai lieu Giskard; Giskard v3 khac API khoa 2024 (da ghi ro la rui ro vong doi). Task research, khong ap dung validate/device test/install.",
+      "rounds": 1,
+      "score": 8
+    },
     },
     "test": {
       "device_test": "",
@@ -30,10 +32,10 @@
       "validate": ""
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học: Red Teaming LLM Applications (DeepLearning.AI)",
   "type": "research",
-  "updated_at": "2026-11-20T20:57:27+07:00",
+  "updated_at": "2026-11-20T21:33:00+07:00",
   "claimed_at": "2026-11-20T20:55:25+07:00",
   "claim_expires_at": "2026-11-20T22:55:25+07:00"
 }
