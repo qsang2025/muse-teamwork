@@ -16,11 +16,15 @@
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
-    "branch": "",
-    "notes": "",
-    "test": {}
+    "branch": "feature/166-social-media-marketing-hubspot-academy",
+    "notes": "Bao cao research/166-social-media-marketing-certification-hubspot-academy.md (157 dong): 10 bai/38 video/29 quiz/5h18, Crystal King + Mari Smith; doi chieu 163/164/153/154-156/151/152/158/159-162; checklist 4 diem trong skill dung vung, khong can sua; de xuat: listening vs monitoring cho rescan, SLA noi bo cho vong review, crisis plan mini cho extension loi hang loat.",
+    "test": {
+      "validate": "PASS",
+      "device_test": "n/a",
+      "install": "n/a"
+    }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học Social Media Marketing Certification (HubSpot Academy)",
   "type": "research",
   "updated_at": "2026-11-21T04:35:00+07:00",
