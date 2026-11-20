@@ -16,7 +16,7 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/135-safe-and-reliable-ai-via-guardrails-deeplearning-ai",
-    "notes": "",
+    "notes": "Bao cao research/135-safe-and-reliable-ai-via-guardrails-deeplearning-ai.md: guardrails la lop chan runtime ngoai model, input/output guards (chan dau vao re hon, khong ton token), validators + on_fail (exception/reask/fix/filter/noop), hallucination guard bang NLI kiem tra tung cau bam nguon, giu dung chu de + PII hai chieu + competitor check hai tang, guardrail server OpenAI-compatible, production (do tre, chan nham, fail open/closed); phan biet guardrail vs evaluator vs red-teaming + vong do-chan-tan cong thu; noi tiep 132 (do -> chan), anh xa input guard=lenh claim/kiem tra trung, output guard=cong merge; kiem chung FREE: freemium (video free, lab/quiz/cert can Pro 25/30 USD), khong dang ky Pro/khong chay lab/API; luu y vong doi cong cu 2026 (Hub/hosted inference dong thang 8/2026 theo nguon review, can kiem chung lai); de xuat 3 muc skill. Task research, khong ap dung validate/device test/install.",
     "review": {
       "at": "",
       "by": "",
@@ -30,7 +30,7 @@
       "validate": ""
     }
   },
-  "status": "doing",
+  "status": "review",
   "title": "Tự học: Safe and Reliable AI via Guardrails (DeepLearning.AI × GuardrailsAI)",
   "type": "research",
   "updated_at": "2026-11-20T20:41:14+07:00",
