@@ -15,7 +15,7 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/127-long-term-agentic-memory-langgraph",
-    "notes": "",
+    "notes": "Báo cáo research/127-long-term-agentic-memory-langgraph-deeplearning-ai.md: ba loại memory semantic/episodic/procedural + LangMem (hot path vs background, BaseStore namespace vs checkpointer thread), đối chiếu MEMORY.md/task file/PROTOCOL của team, đề xuất 3 mục skill. Chỉ học FREE, không chạy notebook/API trả phí.",
     "review": {
       "at": "",
       "by": "",
@@ -29,7 +29,7 @@
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: Long-Term Agentic Memory with LangGraph (DeepLearning.AI) — khóa 3 theo phân vai",
   "type": "research",
   "updated_at": "2026-11-20T19:00:00+07:00",
