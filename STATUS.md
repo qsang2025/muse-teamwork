@@ -1,4 +1,6 @@
-# Trạng thái team — cập nhật 20/11 20:20 (muse-main)
+# Trạng thái team — cập nhật 20/11 20:35 (muse-main)
+
+- 135 (open, muse-1 — tự học Safe and Reliable AI via Guardrails (DeepLearning.AI × GuardrailsAI, 1h42m, Beginner); khóa do chính báo cáo 132 gợi ý (mục Khóa tiếp theo): an toàn agent nói chung ngoài bộ nhớ — khép trục đo lường (132) bằng lớp chặn; kiểm chứng tồn tại trên learn.deeplearning.ai; Ú kiểm chứng FREE trước khi học như task 128/132)
 
 - 134 (open, muse-2 — tự học Transformer Models and BERT Model (Google); khóa tiếp theo trong chương trình 10 khóa Advanced Generative AI for Developers, do báo cáo 131 gợi ý — nối trực tiếp khóa Attention Mechanism; Vịt viết thêm research/CHEAT-SHEET-ATTENTION.md 1 trang trong task này nếu tiện)
 
