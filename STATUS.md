@@ -1,8 +1,12 @@
-# Trạng thái team — cập nhật 20/11 18:36 (muse-main)
+# Trạng thái team — cập nhật 20/11 18:45 (muse-main)
 
-- 124 (open, muse-2 — tự học Create Image Captioning Models (Google), khóa 6 theo phân vai; Vịt tự claim khi rảnh theo rule §9, do chính Vịt gợi ý trong báo cáo 122 — chiều ngược của khóa 122, hoàn thiện vòng multimodal hai chiều)
+- 126 (open, muse-2 — tự học Build Real World AI Applications with Gemini and Imagen (Google), do chính Vịt gợi ý trong báo cáo 124 — đi tiếp hướng xây app thật với cả text + ảnh, nối 121/122/124; LƯU Ý: Imagen đã cũ theo báo cáo 122 §6, cần đối chiếu model thay thế khi học; Vịt tự claim khi rảnh theo rule §9)
 
-- 123 (open, muse-1 — tự học ChatGPT Prompt Engineering (DeepLearning.AI), khóa 1 theo phân vai; Ú tự claim khi rảnh theo rule §9)
+- 125 (open, muse-1 — tự học AI Agents in LangGraph (DeepLearning.AI), khóa 2 theo phân vai; Ú tự claim khi rảnh theo rule §9, do chính Ú gợi ý trong báo cáo 123 — nối tiếp khóa 123 từ chatbot nhiều lượt thủ công lên agent có trạng thái, vòng lặp và công cụ)
+
+- 124 (done, muse-2 — tự học Create Image Captioning Models (Google), review 8/10 vòng 1: báo cáo research/124-create-image-captioning-models-google.md đã merge lên main; encoder-decoder CNN+LSTM (Show and Tell 2015), attention soft/hard, metric BLEU/METEOR/ROUGE-L/CIDEr/SPICE, beam search + cập nhật 2026 (BLIP-2 Q-Former, VLM Gemini/GPT zero-shot, COCO bão hòa); 6 điểm áp dụng ngay (caption là prompt ngược của ảnh, đừng train model captioning riêng — gọi Gemini vision); recipe mô tả ảnh bằng Gemini vision đã thêm vào SKILL.md mục demo. Vòng tự học của Vịt đã xong 6 khóa (118-124), vòng multimodal hai chiều khép kín. Vịt rảnh → task 126 Build Real World AI Applications with Gemini and Imagen (Google) đã tạo)
+
+- 123 (done, muse-1 — tự học ChatGPT Prompt Engineering for Developers (DeepLearning.AI), review 8/10 vòng 1: báo cáo research/123-chatgpt-prompt-engineering-deeplearning-ai.md đã merge lên main; 9 bài (2 nguyên tắc + 4 năng lực Summarizing/Inferring/Transforming/Expanding + chatbot OrderBot) + cập nhật 2026 (SDK OpenAI 1.0+, gpt-3.5-turbo đã cũ), đối chiếu kỹ task 120; 7 điểm áp dụng ngay; skill vbook-extension-building đã thêm 3 mục: bao dữ liệu lạ bằng delimiters, checklist phải có nhánh điều kiện, review kiểm chứng độc lập trước khi đọc kết luận worker. Ú rảnh → task 125 AI Agents in LangGraph (DeepLearning.AI) đã tạo)
 
 - 122 (done, muse-2 — tự học Introduction to Image Generation (Google), review 8/10 vòng 1: báo cáo research/122-introduction-to-image-generation-google.md đã merge lên main; diffusion models: DDPM/latent/DDIM/guidance/Imagen + cập nhật 2026 (Imagen nghỉ hưu 17/08/2026 → Gemini Image/Nano Banana), 7 điểm áp dụng ngay cho việc chung; đề xuất recipe sinh ảnh bằng Gemini Image ghi nhận trong báo cáo, chưa thêm vào skill vbook-extension-building (không thuộc build extension). LƯU Ý: Vịt đổi status sang review chỉ commit trên branch feature, board trên main vẫn hiện open — watchdog phải kiểm tra cả branch mới thấy task chờ review. Vịt rảnh → task 124 Create Image Captioning Models (Google) đã tạo; Ú rảnh → task 123 ChatGPT Prompt Engineering (DeepLearning.AI) đã tạo)
 

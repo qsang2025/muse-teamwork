@@ -7,7 +7,7 @@
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "low",
-  "status": "review",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-20T18:36:00+07:00",
   "claimed_at": "2026-11-20T18:38:57+07:00",
@@ -19,13 +19,13 @@
       "device_test": "",
       "install": ""
     },
-    "notes": "Da hoc xong khoa Create Image Captioning Models (Google, 30 phut): encoder-decoder CNN+LSTM, attention, BLEU/METEOR/ROUGE-L/CIDEr/SPICE, beam search; cap nhat 2026 BLIP-2/VLM Gemini. Bao cao research/124-create-image-captioning-models-google.md.",
+    "notes": "Học xong khóa Create Image Captioning Models (Google, Skills Boost 30 phút / Coursera 1h, 1 module). Báo cáo research/124-create-image-captioning-models-google.md: encoder-decoder CNN+LSTM (Show and Tell 2015, BLEU-4 27.7 COCO), attention soft/hard (Show Attend and Tell 2015), chuẩn bị dữ liệu (tokenize, <start>/<end>, teacher forcing + exposure bias), train (negative log-likelihood) và evaluate (BLEU/METEOR/ROUGE-L/CIDEr/SPICE), inference beam search; cập nhật 2026 (BLIP-2 Q-Former, VLM Gemini/GPT làm captioning zero-shot, COCO bão hòa CIDEr 145+, tín hiệu thật chuyển sang NoCaps/hallucination); 6 điểm áp dụng ngay (caption là prompt ngược của ảnh, đừng train model captioning riêng — gọi Gemini vision, tab mô tả ảnh ghép với tab sinh ảnh task 122, đọc metric theo bộ, phân biệt lỗi theo tầng encoder/decoder/cầu nối); đề xuất recipe mô tả ảnh bằng Gemini vision cho skill chung. Không lab GCP, không chứng chỉ trả phí. Vòng tự học của Vịt đã xong 6 khóa (118-124), vòng multimodal hai chiều khép kín.",
     "review": {
-      "at": "",
-      "by": "",
-      "note": "",
-      "rounds": 0,
-      "score": ""
+      "at": "2026-11-20T18:45:00+07:00",
+      "by": "muse-main",
+      "note": "Bao cao du syllabus + dao sau paper goc (Show and Tell, Show Attend and Tell), bang metric day du, cap nhat 2026 (BLIP-2, VLM, COCO bao hoa), 8 cau tu kiem tra quiz, 6 diem ap dung + de xuat recipe Gemini vision; recipe da them vao SKILL.md muc demo. Tru diem nhe: khong lam quiz (sau dang nhap) va so lieu leaderboard 2026 (GPT-5.2 CIDEr 150+) lay tu trang tong hop thu cap, da ghi nguon.",
+      "rounds": 1,
+      "score": 8
     }
   },
   "checklist": [
@@ -34,5 +34,5 @@
     "Đề xuất cập nhật skill nếu có gì dùng được, push branch, cập nhật task sang review"
   ],
   "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29: Vịt xong task 122 (Introduction to Image Generation) 20/11 18:36, board không còn task mở cho Vịt — giao khóa tiếp theo theo phân vai Anh chốt 20/11: muse-2 (Vịt, research). Khóa này do chính Vịt gợi ý trong báo cáo 122 + muse-main quyết theo §10(a): Create Image Captioning Models là chiều ngược lại của khóa 122 (ảnh → text thay vì text → ảnh), hoàn thiện vòng multimodal hai chiều sau khi đã học sinh text (118–119), viết prompt (120), đóng thành app (121) và sinh ảnh (122). Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
-  "updated_at": "2026-11-20T18:36:00+07:00"
+  "updated_at": "2026-11-20T18:45:00+07:00"
 }

@@ -7,7 +7,7 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "low",
-  "status": "review",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-20T18:36:00+07:00",
   "claimed_at": "2026-11-20T18:38:38+07:00",
@@ -21,11 +21,11 @@
     },
     "notes": "Hoc xong khoa ChatGPT Prompt Engineering for Developers (DeepLearning.AI, Isa Fulford + Andrew Ng, 9 bai + 7 code example, ~1h40): hai loai LLM (base/instruction-tuned + RLHF), 2 nguyen tac (ro rang/cu the: delimiters chong prompt injection, structured output, kiem tra dieu kien, few-shot; cho model thoi gian suy nghi: chi dinh cac buoc, tu giai truoc khi ket luan), hallucination + trich doan giam ao giac, quy trinh lap (thu-phan tich-lam ro-kiem tra tren lo vi du), 4 nang luc Summarizing/Inferring/Transforming/Expanding + temperature, chatbot nhieu luot (system/user/assistant, OrderBot, stateless), cap nhat 2026 (SDK OpenAI 1.0+, gpt-3.5-turbo da cu), doi chieu task 120 (Google). Bao cao research/123-chatgpt-prompt-engineering-deeplearning-ai.md (192 dong): 7 diem ap dung ngay + 3 de xuat skill cho muse-main. Chi hoc noi dung FREE, khong dang ky chung chi tra phi (khoa khong cap chung chi), khong chay notebook OpenAI API (can API key tinh phi), khong dang nhap lam quiz. Khoa tiep theo trong track: AI Agents/LangGraph.",
     "review": {
-      "at": "",
-      "by": "",
-      "note": "",
-      "rounds": 0,
-      "score": ""
+      "at": "2026-11-20T18:45:00+07:00",
+      "by": "muse-main",
+      "note": "Bao cao du 9 bai + cap nhat 2026 (SDK 1.0+, gpt-3.5-turbo da cu), doi chieu ky task 120, 7 diem ap dung + 3 de xuat skill; skill da ap dung ca 3 muc vao SKILL.md. Tru diem nhe: khong chay notebook (can API key tra phi, dung theo checklist) va khong lam quiz (sau dang nhap).",
+      "rounds": 1,
+      "score": 8
     }
   },
   "checklist": [
@@ -34,5 +34,5 @@
     "Đề xuất cập nhật skill nếu có gì dùng được, push branch, cập nhật task sang review"
   ],
   "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29: Ú xong task 117 (VnExpress news, đã merge 18:25), board không còn task mở cho Ú — giao khóa đầu tiên theo phân vai Anh chốt 20/11: muse-1 (Ú, build) → ChatGPT Prompt Engineering (DeepLearning.AI); khóa tiếp theo trong track của Ú là AI Agents/LangGraph. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
-  "updated_at": "2026-11-20T18:36:00+07:00"
+  "updated_at": "2026-11-20T18:45:00+07:00"
 }
