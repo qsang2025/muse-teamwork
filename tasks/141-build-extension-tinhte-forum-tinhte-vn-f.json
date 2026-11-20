@@ -19,7 +19,7 @@
       "device_test": "",
       "install": ""
     },
-    "notes": "Anh yeu cau truc tiep (chon 'Lam extension Tinhte tiep' tren widget 22:08 20/11). Tinhte.vn da kiem chung live 200 o task 111; Anh doc Tinhte. Site XenForo — du kien browse-only, KHONG tim kiem tu khoa (cung gioi han xf_csrf nhu Otofun v4 / VOZ: vBook runtime khong doc duoc cookie CSRF cua XenForo). Build theo loai forum, dung board that tu trang chu, icon that tu favicon."
+    "notes": ""
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
@@ -28,5 +28,5 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
-  "notes": ""
+  "notes": "Anh yeu cau truc tiep (chon 'Lam extension Tinhte tiep' tren widget 22:08 20/11). Tinhte.vn da kiem chung live 200 o task 111; Anh doc Tinhte. Site XenForo — du kien browse-only, KHONG tim kiem tu khoa (cung gioi han xf_csrf nhu Otofun v4 / VOZ: vBook runtime khong doc duoc cookie CSRF cua XenForo). Build theo loai forum, dung board that tu trang chu, icon that tu favicon."
 }
