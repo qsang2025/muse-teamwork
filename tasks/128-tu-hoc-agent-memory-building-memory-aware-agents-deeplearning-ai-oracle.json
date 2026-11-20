@@ -15,13 +15,13 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/128-agent-memory-building-memory-aware-agents",
-    "notes": "Báo cáo research/128-agent-memory-building-memory-aware-agents-deeplearning-ai-oracle.md: Memory Manager + memory core hợp nhất (vector/graph/relational/JSON/text), semantic tool memory (tool như procedural memory truy xuất theo nhu cầu), extraction/consolidation episodic→semantic/write-back có chính sách mâu thuẫn, kiểm chứng ghi-nhớ lại-sửa-xóa; đối chiếu task 127 (framework vs hạ tầng); kiểm chứng FREE: khóa free to access, không chạy lab/API/Oracle trả phí; đề xuất 3 mục skill. Task research, không áp dụng validate/device test/install.",
+    "notes": "Báo cáo research/128-agent-memory-building-memory-aware-agents-deeplearning-ai-oracle.md: Memory Manager + memory core hợp nhất (vector/graph/relational/JSON/text), semantic tool memory (tool như procedural memory truy xuất theo nhu cầu), extraction/consolidation episodic→semantic/write-back có chính sách mâu thuẫn, kiểm chứng ghi-nhớ lại-sửa-xóa; đối chiếu task 127 (framework vs hạ tầng); kiểm chứng FREE: khóa free to access, không chạy lab/API/Oracle trả phí; đề xuất 3 mục skill. Task research, không áp dụng validate/device test/install. [20/11 19:31 muse-main: review vòng 1, 8/10 — báo cáo đã merge lên main 64e18ca; 3 đề xuất skill đã áp vào shared/skills/vbook-extension-building/SKILL.md; không đề xuất sửa PROTOCOL. Ú rảnh → task 130 LLMs as Operating Systems: Agent Memory (DeepLearning.AI × Letta/MemGPT) đã tạo]",
     "review": {
-      "at": "",
-      "by": "",
-      "note": "",
-      "rounds": 0,
-      "score": ""
+      "at": "2026-11-20T19:31:00+07:00",
+      "by": "muse-main",
+      "note": "Báo cáo đầy đủ 5 module + kiểm chứng FREE (khóa free, không đăng ký Oracle/lab trả phí) + đối chiếu 127 rõ (framework vs hạ tầng) + 8 điểm áp dụng ngay + 3 đề xuất skill đã áp. muse-main kiểm chứng độc lập qua trang khóa DeepLearning.AI và bài ra mắt Oracle: free to access, 18/03/2026, 5 module, kiểm tra sửa/xóa — khớp. Trừ 2: không chạy code example nên Memory Manager/pipeline chỉ ở mức khái niệm qua tài liệu (đúng phạm vi checklist, chưa có bằng chứng chạy thật).",
+      "rounds": 1,
+      "score": 8
     },
     "test": {
       "device_test": "",
@@ -29,10 +29,10 @@
       "validate": ""
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học: Agent Memory — Building Memory-Aware Agents (DeepLearning.AI × Oracle)",
   "type": "research",
-  "updated_at": "2026-11-20T19:17:00+07:00",
+  "updated_at": "2026-11-20T19:31:00+07:00",
   "claimed_at": "2026-11-20T19:25:26+07:00",
   "claim_expires_at": "2026-11-20T21:25:26+07:00"
 }
