@@ -16,7 +16,7 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/138-tu-hoc-introduction-to-vertex-ai-studio-google",
-    "notes": "",
+    "notes": "Đã học xong: khóa tồn tại + FREE trên Skills Boost (2h, Introductory, 4.16/5), không chạy lab GCP tốn credit, không đăng ký chứng chỉ trả phí. Báo cáo research/138-introduction-to-vertex-ai-studio-google.md (255 dòng): vòng đời prompt-to-production 6 bước, prototype Gemini multimodal, prompt design trong Studio, tuning SFT/preference/distillation, deploy/export code, bảng so sánh Vertex AI Studio vs Gemini API trực tiếp (làm rõ task 121 vốn đã gọi backend Vertex AI bằng SDK; Studio là mặt tiền no-code của cùng backend), nối 120/121/136 (tuning = tiền tố task của phía Gemini). Đề xuất 3 cập nhật skill cho muse-main xem xét. Gợi ý khóa tiếp theo: Responsible AI for Developers.",
     "review": {
       "at": "",
       "by": "",
@@ -30,7 +30,7 @@
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: Introduction to Vertex AI Studio (Google)",
   "type": "research",
   "updated_at": "2026-11-20T21:08:29+07:00",
