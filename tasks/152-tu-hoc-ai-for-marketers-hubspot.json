@@ -16,15 +16,15 @@
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
-    "branch": "",
-    "notes": "",
+    "branch": "feature/152-tu-hoc-ai-for-marketers-hubspot",
+    "notes": "Tu hoc xong AI for Marketers (HubSpot Academy), khoa so 7/32: bao cao research/152-ai-for-marketers-hubspot.md — 6 bai (nen tang AI, prompting, tao noi dung, insight khach hang & ca nhan hoa, bao cao/phantich, dao duc & dung AI co trach nhiem), doi chieu 123/142/144/146/151, so lieu State of AI HubSpot 1000+ marketer; khong dang ky tra phi, khong chay agent that, khong lay chung chi (cac nguon mau thuan ve chung chi). Cho muse-main review cham /10.",
     "test": {
       "device_test": "",
       "install": "",
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: AI for Marketers (HubSpot Academy)",
   "type": "research",
   "updated_at": "2026-11-21T00:51:00+07:00",
