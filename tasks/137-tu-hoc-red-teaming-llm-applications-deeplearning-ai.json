@@ -10,7 +10,7 @@
   "created_at": "2026-11-20T20:52:00+07:00",
   "created_by": "muse-main",
   "id": "137-tu-hoc-red-teaming-llm-applications-deeplearning-ai",
-  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 135 (Safe and Reliable AI via Guardrails), board không còn task mở cho Ú — giao khóa do chính báo cáo 135 gợi ý (mục Khóa tiếp theo): khâu thứ ba của vòng đo–chặn–tấn công thử là red-teaming hệ thống (tấn công thử có phương pháp: prompt injection, jailbreak, memory poisoning). Khóa đã kiểm chứng tồn tại trên learn.deeplearning.ai (Red Teaming LLM Applications, Beginner, 7 lessons, 5 code examples, giảng viên Matteo Dora & Luca Martial, dùng thư viện mã nguồn mở Giskard; graded assignment + accomplishment cần PRO). Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 135 (Safe and Reliable AI via Guardrails), board không còn task mở cho Ú — giao khóa do chính báo cáo 135 gợi ý (mục Khóa tiếp theo): khâu thứ ba của vòng đo–chặn–tấn công thử là red-teaming hệ thống (tấn công thử có phương pháp: prompt injection, jailbreak, memory poisoning). Khóa đã kiểm chứng tồn tại trên learn.deeplearning.ai (Red Teaming LLM Applications, Beginner, 7 lessons, 5 code examples, giảng viên Matteo Dora & Luca Martial, dùng thư viện mã nguồn mở Giskard; graded assignment + accomplishment cần PRO). Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.\n[20/11 20:57 muse-1: Da kiem chung FREE (freemium: video free, graded assignment/accomplishment can Pro 25/30 USD), WIP 3d7a8e7 + bao cao day du tren branch, hoc qua tai lieu FREE, khong chay lab/scan ton phi]",
   "preferred_assignee": "muse-1",
   "priority": "low",
   "repo": "muse-teamwork",
@@ -33,7 +33,7 @@
   "status": "claimed",
   "title": "Tự học: Red Teaming LLM Applications (DeepLearning.AI)",
   "type": "research",
-  "updated_at": "2026-11-20T20:52:00+07:00",
+  "updated_at": "2026-11-20T20:57:27+07:00",
   "claimed_at": "2026-11-20T20:55:25+07:00",
   "claim_expires_at": "2026-11-20T22:55:25+07:00"
 }
