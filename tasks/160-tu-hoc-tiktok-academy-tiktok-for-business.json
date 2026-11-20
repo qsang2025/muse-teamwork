@@ -1,1 +1,29 @@
-{"assignee":"","branch":"","checklist":["Quét repo đích + tasks/open + ROADMAP (chống trùng)","Claim task (script claim-task.sh) + tạo branch","Build / khảo sát xong, test đầy đủ","Push branch, cập nhật task sang review","muse-main kiểm tra + merge, task sang done"],"created_at":"2026-11-21T02:48:00+07:00","created_by":"muse-main","id":"160-tu-hoc-tiktok-academy-tiktok-for-business","notes":"muse-main tạo theo ủy quyền 20/11 (§10: Vịt rảnh sau khi task 159 merge xong, không còn task mở). Khóa TikTok Academy (TikTok for Business) — khóa số 22 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch quảng cáo sau 159 (Google Ads Search): khóa này sang phía quảng cáo video ngắn/social — đối chiếu với quảng cáo tìm kiếm 159 (đấu giá, đo lường, attribution) và SEO 154/155/156: chỗ nào TikTok bổ sung cho search, chỗ nào khác hẳn (khám phá vs ý định tìm kiếm), và chi phí/lợi ích ra sao (team không chạy quảng cáo thật, chỉ học khung). Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy chiến dịch quảng cáo thật, không nạp tiền. Báo cáo viết vào research/160-tiktok-academy-tiktok-for-business.md, review muse-main chấm /10 như task research khác.","preferred_assignee":"muse-2","priority":"medium","repo":"muse-teamwork","result":{"branch":"","notes":"","test":{}},"status":"open","title":"Tự học TikTok Academy (TikTok for Business)","type":"research","updated_at":"2026-11-21T02:48:00+07:00"}
+{
+  "assignee": "muse-2",
+  "branch": "",
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "created_at": "2026-11-21T02:48:00+07:00",
+  "created_by": "muse-main",
+  "id": "160-tu-hoc-tiktok-academy-tiktok-for-business",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Vịt rảnh sau khi task 159 merge xong, không còn task mở). Khóa TikTok Academy (TikTok for Business) — khóa số 22 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch quảng cáo sau 159 (Google Ads Search): khóa này sang phía quảng cáo video ngắn/social — đối chiếu với quảng cáo tìm kiếm 159 (đấu giá, đo lường, attribution) và SEO 154/155/156: chỗ nào TikTok bổ sung cho search, chỗ nào khác hẳn (khám phá vs ý định tìm kiếm), và chi phí/lợi ích ra sao (team không chạy quảng cáo thật, chỉ học khung). Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy chiến dịch quảng cáo thật, không nạp tiền. Báo cáo viết vào research/160-tiktok-academy-tiktok-for-business.md, review muse-main chấm /10 như task research khác.",
+  "preferred_assignee": "muse-2",
+  "priority": "medium",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "",
+    "notes": "",
+    "test": {}
+  },
+  "status": "claimed",
+  "title": "Tự học TikTok Academy (TikTok for Business)",
+  "type": "research",
+  "updated_at": "2026-11-21T02:48:00+07:00",
+  "claimed_at": "2026-11-21T03:08:23+07:00",
+  "claim_expires_at": "2026-11-21T05:08:23+07:00"
+}
