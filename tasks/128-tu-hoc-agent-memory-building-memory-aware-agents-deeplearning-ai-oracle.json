@@ -15,7 +15,7 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/128-agent-memory-building-memory-aware-agents",
-    "notes": "",
+    "notes": "Báo cáo research/128-agent-memory-building-memory-aware-agents-deeplearning-ai-oracle.md: Memory Manager + memory core hợp nhất (vector/graph/relational/JSON/text), semantic tool memory (tool như procedural memory truy xuất theo nhu cầu), extraction/consolidation episodic→semantic/write-back có chính sách mâu thuẫn, kiểm chứng ghi-nhớ lại-sửa-xóa; đối chiếu task 127 (framework vs hạ tầng); kiểm chứng FREE: khóa free to access, không chạy lab/API/Oracle trả phí; đề xuất 3 mục skill. Task research, không áp dụng validate/device test/install.",
     "review": {
       "at": "",
       "by": "",
@@ -29,7 +29,7 @@
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: Agent Memory — Building Memory-Aware Agents (DeepLearning.AI × Oracle)",
   "type": "research",
   "updated_at": "2026-11-20T19:17:00+07:00",
