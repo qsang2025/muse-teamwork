@@ -7,7 +7,7 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "low",
-  "status": "claimed",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-20T18:36:00+07:00",
   "claimed_at": "2026-11-20T18:38:38+07:00",
@@ -19,7 +19,7 @@
       "device_test": "",
       "install": ""
     },
-    "notes": "",
+    "notes": "Hoc xong khoa ChatGPT Prompt Engineering for Developers (DeepLearning.AI, Isa Fulford + Andrew Ng, 9 bai + 7 code example, ~1h40): hai loai LLM (base/instruction-tuned + RLHF), 2 nguyen tac (ro rang/cu the: delimiters chong prompt injection, structured output, kiem tra dieu kien, few-shot; cho model thoi gian suy nghi: chi dinh cac buoc, tu giai truoc khi ket luan), hallucination + trich doan giam ao giac, quy trinh lap (thu-phan tich-lam ro-kiem tra tren lo vi du), 4 nang luc Summarizing/Inferring/Transforming/Expanding + temperature, chatbot nhieu luot (system/user/assistant, OrderBot, stateless), cap nhat 2026 (SDK OpenAI 1.0+, gpt-3.5-turbo da cu), doi chieu task 120 (Google). Bao cao research/123-chatgpt-prompt-engineering-deeplearning-ai.md (192 dong): 7 diem ap dung ngay + 3 de xuat skill cho muse-main. Chi hoc noi dung FREE, khong dang ky chung chi tra phi (khoa khong cap chung chi), khong chay notebook OpenAI API (can API key tinh phi), khong dang nhap lam quiz. Khoa tiep theo trong track: AI Agents/LangGraph.",
     "review": {
       "at": "",
       "by": "",
