@@ -115,6 +115,12 @@
 
 - Sự kiện bền phải có ngày hết hiệu lực: khi ghi một sự kiện/quyết định vào skill hoặc đề xuất lên MEMORY.md, ghi kèm ngày ghi và điều kiện để nó hết đúng (site đóng, domain đổi, luật đã thay). Bộ nhớ không có ngày hết hạn sẽ thành bộ nhớ sai mà vẫn được tin. (Task 127, Long-Term Agentic Memory §7.)
 
+- Truy xuất skill/tool theo nhu cầu: trước khi build, chỉ đọc mục skill khớp loại việc đang làm (site khó / test-merge / demo) thay vì nạp cả file — nạp toàn bộ là "nhồi mọi tool vào prompt", tốn context mà không thêm quyết định. Khi đề xuất thêm mục skill mới, mở đầu bằng tình huống kích hoạt cụ thể để worker sau tìm thấy bằng từ khóa của tình huống đó. Mục skill không tìm được thì coi như không tồn tại. (Task 128, Agent Memory §3 — tool như procedural memory, truy xuất theo nhu cầu.)
+
+- Bản chưng cất phải trỏ về bằng chứng gốc: mọi kết luận rút vào skill/STATUS từ một task phải ghi mã task nguồn; khi kết luận mới thay kết luận cũ, ghi rõ "thay thế kết luận ở task X" và giữ nguyên mục cũ trong notes (không sửa lịch sử). Bản chưng cất không trỏ về được bằng chứng gốc thì không kiểm chứng lại được khi nó bị nghi ngờ. (Task 128, Agent Memory §4 — consolidation giữ `summary_id` truy vết.)
+
+- Kiểm tra sửa + xóa trước khi ghi sự kiện bền: trước khi đề xuất một sự kiện/quy tắc vào skill hoặc MEMORY.md, trả lời được ba câu: phiên sau tìm lại bằng từ khóa nào, khi nó hết đúng thì sửa ở đâu, khi cần bỏ thì còn bản sao nào khác không. Không trả lời được thì ghi vào task file, chưa lên tầng bền. (Task 128, Agent Memory §5 — kiểm chứng ghi–nhớ lại–sửa–xóa trước khi tin.)
+
 ## Demo a research result quickly (Streamlit + Gemini API)
 
 - When the user needs to see a research result live instead of reading a description, demo it with Streamlit + Gemini API (free tier via AI Studio, no card): minimum 3 files — `app.py` (tabs/UI), `response_utils.py` (the single place that calls the model: config, safety settings, streaming, retry on 429), `requirements.txt` (`streamlit`, `google-genai`) — plus a Dockerfile and 3 deploy commands to Cloud Run (Artifact Registry → build/push → `gcloud run deploy`, scale-to-zero). Cache the Gemini client with `@st.cache_resource`, and always add a Prompt tab showing the raw prompt next to each result so the input can be verified, not just the output. (Task 121, Develop Gen AI Apps with Gemini and Streamlit §4–§6.)
