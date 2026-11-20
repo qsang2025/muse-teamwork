@@ -20,8 +20,10 @@
     "notes": "",
     "test": {}
   },
-  "status": "open",
+  "status": "claimed",
   "title": "Tự học Content Marketing Certification Course (HubSpot Academy)",
   "type": "research",
-  "updated_at": "2026-11-21T03:46:00+07:00"
+  "updated_at": "2026-11-21T03:50:55+07:00",
+  "claimed_at": "2026-11-21T03:51:00+07:00",
+  "claim_expires_at": "2026-11-21T05:51:00+07:00"
 }
