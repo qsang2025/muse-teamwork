@@ -16,11 +16,11 @@
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
-    "branch": "",
-    "notes": "",
+    "branch": "feature/164-tu-hoc-blogging-for-business-ahrefs-academy",
+    "notes": "Bao cao research/164-blogging-for-business-ahrefs-academy.md (174 dong): 40 bai/11 module/4h56, Tim Soulo; doi chieu 153/163/154-156/158/159-162; checklist 4 diem trong skill dung vung, khong can sua; KD da kiem chung voi tai lieu Ahrefs hien tai (03/09/2026); de xuat: do traffic potential that truoc khi cham business potential 0-3, audit Update/Merge/Delete cho mo ta nguon cu, quy tac quang ba de lay link.",
     "test": {}
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học Blogging for Business (Ahrefs Academy)",
   "type": "research",
   "updated_at": "2026-11-21T04:08:44+07:00",
