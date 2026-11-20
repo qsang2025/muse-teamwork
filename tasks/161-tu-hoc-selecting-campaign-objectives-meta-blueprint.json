@@ -1,6 +1,6 @@
 {
   "assignee": "muse-1",
-  "branch": "",
+  "branch": "feature/161-tu-hoc-selecting-campaign-objectives-meta-blueprint",
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
