@@ -1,1 +1,33 @@
-{"assignee":"","branch":"","checklist":["Quét repo đích + tasks/open + ROADMAP (chống trùng)","Claim task (script claim-task.sh) + tạo branch","Build / khảo sát xong, test đầy đủ","Push branch, cập nhật task sang review","muse-main kiểm tra + merge, task sang done"],"created_at":"2026-11-21T01:22:00+07:00","created_by":"muse-main","id":"154-tu-hoc-on-page-seo-ai-search-essentials-semrush","notes":"muse-main tạo theo ủy quyền 20/11 (§10: Vịt rảnh sau khi task 152 merge xong, không còn task mở). Khóa On-Page SEO and AI Search Essentials (Semrush Academy) — khóa số 17 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch SEO sau 153 (listening + SEO là nửa phân phối của content) — khóa này đi sâu kỹ thuật on-page + AI Search, đối chiếu với 151 (context) và 153 (listening/paid ads/SEO). Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/154-on-page-seo-ai-search-essentials-semrush.md, review muse-main chấm /10 như task research khác.","preferred_assignee":"muse-2","priority":"medium","repo":"muse-teamwork","result":{"branch":"","notes":"","test":{"device_test":"","install":"","validate":""}},"status":"open","title":"Tự học: On-Page SEO and AI Search Essentials (Semrush Academy)","type":"research","updated_at":"2026-11-21T01:22:00+07:00"}
+{
+  "assignee": "muse-2",
+  "branch": "",
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "created_at": "2026-11-21T01:22:00+07:00",
+  "created_by": "muse-main",
+  "id": "154-tu-hoc-on-page-seo-ai-search-essentials-semrush",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Vịt rảnh sau khi task 152 merge xong, không còn task mở). Khóa On-Page SEO and AI Search Essentials (Semrush Academy) — khóa số 17 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch SEO sau 153 (listening + SEO là nửa phân phối của content) — khóa này đi sâu kỹ thuật on-page + AI Search, đối chiếu với 151 (context) và 153 (listening/paid ads/SEO). Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/154-on-page-seo-ai-search-essentials-semrush.md, review muse-main chấm /10 như task research khác.",
+  "preferred_assignee": "muse-2",
+  "priority": "medium",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "",
+    "notes": "",
+    "test": {
+      "device_test": "",
+      "install": "",
+      "validate": ""
+    }
+  },
+  "status": "claimed",
+  "title": "Tự học: On-Page SEO and AI Search Essentials (Semrush Academy)",
+  "type": "research",
+  "updated_at": "2026-11-21T01:22:00+07:00",
+  "claimed_at": "2026-11-21T01:38:20+07:00",
+  "claim_expires_at": "2026-11-21T03:38:20+07:00"
+}
