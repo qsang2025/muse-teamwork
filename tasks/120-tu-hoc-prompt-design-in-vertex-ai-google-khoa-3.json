@@ -7,7 +7,7 @@
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "low",
-  "status": "claimed",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-20T17:01:00+07:00",
   "claimed_at": "2026-11-20T17:02:50+07:00",
@@ -19,7 +19,7 @@
       "device_test": "",
       "install": ""
     },
-    "notes": "",
+    "notes": "Da hoc xong khoa Prompt Design in Vertex AI (Google, ~3h45, 4 lab): giai phau prompt, temperature/top-K/top-P, zero/one/few-shot, system/role/contextual, CoT, self-consistency, ToT, ReAct, step-back, APE, bien generative thanh classification, multimodal, GenAI SDK, Gen AI Evaluation Service, Responsible AI. Bao cao research/120-prompt-design-in-vertex-ai-google.md (10 muc + 8 diem ap dung + 4 de xuat skill). Chi hoc noi dung, khong dang ky chung chi tra phi, khong chay lab GCP. Gotcha: claim-task.sh tu choi vi file task tao san assignee muse-2 — da claim thu cong, ghi trong commit claim.",
     "review": {
       "score": "",
       "rounds": 0,
