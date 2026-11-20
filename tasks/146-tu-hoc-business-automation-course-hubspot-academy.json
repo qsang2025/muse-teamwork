@@ -24,10 +24,10 @@
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "doing",
   "title": "Tự học: Business Automation Course (HubSpot Academy)",
   "type": "research",
-  "updated_at": "2026-11-20T23:43:53+07:00",
+  "updated_at": "2026-11-20T23:45:00+07:00",
   "claimed_at": "2026-11-20T23:43:53+07:00",
   "claim_expires_at": "2026-11-21T01:43:53+07:00"
 }
