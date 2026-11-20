@@ -7,7 +7,7 @@
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "high",
-  "status": "doing",
+  "status": "review",
   "created_by": "muse-2",
   "created_at": "2026-11-20T22:08:46+07:00",
   "claimed_at": "2026-11-20T22:09:21+07:00",
@@ -15,11 +15,11 @@
   "result": {
     "branch": "feature/141-tinhte-forum",
     "test": {
-      "validate": "",
-      "device_test": "",
-      "install": ""
+      "validate": "PASS (127 nguon, 0 canh bao)",
+      "device_test": "7/7 code 0 (muse-2, 20/11, tren dien thoai Anh: home 2 tab; genre 12 board; list 796 p1 21 thread, p2 20 thread; list 802 p1 25 thread; posts p1 30 bai #1 OP, p2 3 bai #31-33; keyword tra loi tieng Viet)",
+      "install": "200 OK (muse-2, 20/11)"
     },
-    "notes": "Khao sat xong (20/11 22:30): tinhte.vn live 200. XenForo 1.x + Next.js lai: /forums/ la XenForo co dien (12 board that, dung /forums/<slug>.<id>/); trang board dung .discussionListItem, phan trang /page-N (p2: 20 bai, 0 ghim); trang thread la Next.js — bai viet doc tu JSON __NEXT_DATA__ (job posts, 30 bai/trang, is_op = post_is_first_post), khong phai .message XenForo. /find-new/threads chi tra 303 vong lap timestamp (can cookie tt_session) — BO, khong lam tab 'Moi nhat'. /whats-new/posts/ 404. Khong tim kiem tu khoa (xf_csrf). Icon tu apple-touch-icon.png 180px -> 200x200. Scaffold + code day du da commit e90a1b9 tren Qsang_vbook, dang cho validate + device test."
+    "notes": "Tinhte Forum xong: validate PASS 127 nguon 0 canh bao; device test 7/7 code 0 (home 2 tab, genre 12 board, list 796 p1 21 + p2 20, list 802 p1 25, posts p1 30 bai #1 OP + p2 3 bai #31-33); install 200. Browse-only, khong tim kiem tu khoa (xf_csrf). Board /forums/<slug>.<id>/ (12 that); thread /thread/<slug>.<id>/, phan trang /page-N. Trang thread la Next.js — posts doc JSON __NEXT_DATA__ (job posts), 30 bai/trang, is_op = post_is_first_post. /find-new/ chi tra 303 vong lap (BO tab Moi nhat); /whats-new 404. Icon tu apple-touch-icon 180px -> 200x200. Zip 33692 bytes."
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
