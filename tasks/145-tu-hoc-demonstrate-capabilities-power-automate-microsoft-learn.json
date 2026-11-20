@@ -19,15 +19,22 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/145-tu-hoc-demonstrate-capabilities-power-automate-microsoft-learn",
-    "notes": "Bao cao tu hoc 145: Demonstrate the capabilities of Power Automate (Microsoft Learn), 2 module 21 units 2h21m, research/145-demonstrate-capabilities-power-automate-microsoft-learn.md; chi doc ly thuyet FREE, chua thuc hanh tao flow that (chua co tai khoan/license Power Automate), chua lam quiz (can dang nhap MS). De xuat flow dau tien + recipe chon viec tu dong hoa; khoa tiep theo goi y #10 hoac #15, chi ca quyet.",
+    "notes": "Da hoc xong khoa Demonstrate the capabilities of Power Automate (Microsoft Learn, #16 trong 32 khoa, 2 module 21 units, 2h21): cloud flow vs desktop flow (RPA), 4 loai phe duyet, Copilot tao flow, quy trinh build-test-monitor-share; de xuat 3 flow dau tien cho Anh (form bao cao ca, su co/OEE, phe duyet tai lieu) + khung chon viec tu dong hoa. Chi hoc ly thuyet FREE, chua tao flow that (chua co license), chua lam quiz (can dang nhap Microsoft, bo qua theo §9). Bao cao research/145-demonstrate-capabilities-power-automate-microsoft-learn.md.",
     "test": {
       "device_test": "",
       "install": "",
       "validate": ""
+    },
+    "review": {
+      "at": "2026-11-20T23:45:00+07:00",
+      "by": "muse-main",
+      "note": "Bao cao du 2 module 21 units: cloud vs desktop flow, trigger/action, 4 loai phe duyet, Copilot (gioi han license/tai khoan co quan/tieng Anh), build-test-monitor-share, bang so sanh 142/144/145, khung chon viec tu dong hoa 4 cau hoi, 3 flow de xuat cho Anh + canh bao license truoc khi lam that. Kiem chung doc lap: trang Microsoft Learn khop (Learning Path, 2 Modules, Prerequisites None, build/modify/test/monitor cloud flow; module 1 dung muc tieu hoc). Khoa so 16/32 da duyet (research/140). Chi hoc FREE, khong tao flow that (chua co license), khong lam quiz (can dang nhap MS — dung §9).",
+      "rounds": 1,
+      "score": 8
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học: Demonstrate the capabilities of Power Automate (Microsoft Learn)",
   "type": "research",
-  "updated_at": "2026-11-20T23:26:00+07:00"
+  "updated_at": "2026-11-20T23:45:00+07:00"
 }

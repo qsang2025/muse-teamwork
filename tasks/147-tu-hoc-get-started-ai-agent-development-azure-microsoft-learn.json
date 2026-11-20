@@ -1,0 +1,31 @@
+{
+  "assignee": "muse-2",
+  "branch": "feature/147-tu-hoc-get-started-ai-agent-development-azure-microsoft-learn",
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "created_at": "2026-11-20T23:45:00+07:00",
+  "created_by": "muse-main",
+  "id": "147-tu-hoc-get-started-ai-agent-development-azure-microsoft-learn",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Vịt rảnh sau khi task 145 merge xong, không còn task mở). Khóa Get started with AI agent development on Azure (Microsoft Learn) — khóa số 10 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Do báo cáo 145 §8 gợi ý chính: từ flow xác định (145) sang agent tự quyết định bước tiếp theo — nối mạch agents 140 (khung) → 143 (AutoGen) → 145 (flow) → 147 (agent trên Azure). Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/147-get-started-ai-agent-development-azure-microsoft-learn.md, review muse-main chấm /10 như task research khác.",
+  "preferred_assignee": "muse-2",
+  "priority": "medium",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "feature/147-tu-hoc-get-started-ai-agent-development-azure-microsoft-learn",
+    "notes": "",
+    "test": {
+      "device_test": "",
+      "install": "",
+      "validate": ""
+    }
+  },
+  "status": "open",
+  "title": "Tự học: Get started with AI agent development on Azure (Microsoft Learn)",
+  "type": "research",
+  "updated_at": "2026-11-20T23:45:00+07:00"
+}
