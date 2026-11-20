@@ -17,7 +17,7 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/122-introduction-to-image-generation-google",
-    "notes": "",
+    "notes": "Học xong khóa Introduction to Image Generation (Google, ~1h, diffusion models). Báo cáo research/122-introduction-to-image-generation-google.md: forward/reverse process, DDPM (T=1000, U-Net dự đoán nhiễu), latent diffusion, DDIM, classifier-free guidance, Imagen + cập nhật 2026 (Imagen nghỉ hưu 17/08/2026, thay bằng Gemini Image/Nano Banana); 7 điểm áp dụng ngay (prompt ảnh 4 thành phần, guidance scale, seed, mở rộng demo Streamlit task 121 thêm tab ảnh, không gọi Imagen trong code mới); đề xuất recipe sinh ảnh bằng Gemini Image cho skill chung. Không lab GCP, không chứng chỉ trả phí.",
     "review": {
       "at": "",
       "by": "",
@@ -31,7 +31,7 @@
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: Introduction to Image Generation (Google) — khóa 5 theo phân vai",
   "type": "research",
   "updated_at": "2026-11-20T17:47:00+07:00"
