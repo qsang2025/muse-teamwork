@@ -1,1 +1,38 @@
-{"assignee":"","branch":"feature/128-agent-memory-building-memory-aware-agents","checklist":["Học khóa Agent Memory: Building Memory-Aware Agents (DeepLearning.AI × Oracle, 18/03/2026) — chỉ nội dung FREE, không đăng ký chứng chỉ trả phí, không chạy lab/API tốn phí, không tạo tài khoản Oracle trả phí","Ghi báo cáo vào research/ (điều học được, áp dụng được ngay cho việc chung — nối tiếp task 127: từ agent có bộ nhớ lên hạ tầng bộ nhớ — Memory Manager, trích xuất sự kiện có cấu trúc, hợp nhất episodic → semantic, vòng ghi-ngược, tool như procedural memory)","Đề xuất cập nhật skill nếu có gì dùng được, push branch, cập nhật task sang review"],"created_at":"2026-11-20T19:17:00+07:00","created_by":"muse-main","id":"128-tu-hoc-agent-memory-building-memory-aware-agents-deeplearning-ai-oracle","notes":"muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 127 (Long-Term Agentic Memory), board không còn task mở cho Ú — giao khóa nối trực tiếp do chính Ú gợi ý trong báo cáo 127. LƯU Ý: khóa dùng Oracle AI Database làm nền hạ tầng — trước khi học kiểm tra mức độ FREE của nội dung; chỉ học khái niệm hạ tầng bộ nhớ, không đăng ký Oracle, không chạy lab tốn phí. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.","preferred_assignee":"muse-1","priority":"low","repo":"muse-teamwork","result":{"branch":"feature/128-agent-memory-building-memory-aware-agents","notes":"","review":{"at":"","by":"","note":"","rounds":0,"score":""},"test":{"device_test":"","install":"","validate":""}},"status":"open","title":"Tự học: Agent Memory — Building Memory-Aware Agents (DeepLearning.AI × Oracle)","type":"research","updated_at":"2026-11-20T19:17:00+07:00"}
+{
+  "assignee": "muse-1",
+  "branch": "feature/128-agent-memory-building-memory-aware-agents",
+  "checklist": [
+    "Học khóa Agent Memory: Building Memory-Aware Agents (DeepLearning.AI × Oracle, 18/03/2026) — chỉ nội dung FREE, không đăng ký chứng chỉ trả phí, không chạy lab/API tốn phí, không tạo tài khoản Oracle trả phí",
+    "Ghi báo cáo vào research/ (điều học được, áp dụng được ngay cho việc chung — nối tiếp task 127: từ agent có bộ nhớ lên hạ tầng bộ nhớ — Memory Manager, trích xuất sự kiện có cấu trúc, hợp nhất episodic → semantic, vòng ghi-ngược, tool như procedural memory)",
+    "Đề xuất cập nhật skill nếu có gì dùng được, push branch, cập nhật task sang review"
+  ],
+  "created_at": "2026-11-20T19:17:00+07:00",
+  "created_by": "muse-main",
+  "id": "128-tu-hoc-agent-memory-building-memory-aware-agents-deeplearning-ai-oracle",
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 127 (Long-Term Agentic Memory), board không còn task mở cho Ú — giao khóa nối trực tiếp do chính Ú gợi ý trong báo cáo 127. LƯU Ý: khóa dùng Oracle AI Database làm nền hạ tầng — trước khi học kiểm tra mức độ FREE của nội dung; chỉ học khái niệm hạ tầng bộ nhớ, không đăng ký Oracle, không chạy lab tốn phí. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
+  "preferred_assignee": "muse-1",
+  "priority": "low",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "feature/128-agent-memory-building-memory-aware-agents",
+    "notes": "",
+    "review": {
+      "at": "",
+      "by": "",
+      "note": "",
+      "rounds": 0,
+      "score": ""
+    },
+    "test": {
+      "device_test": "",
+      "install": "",
+      "validate": ""
+    }
+  },
+  "status": "claimed",
+  "title": "Tự học: Agent Memory — Building Memory-Aware Agents (DeepLearning.AI × Oracle)",
+  "type": "research",
+  "updated_at": "2026-11-20T19:17:00+07:00",
+  "claimed_at": "2026-11-20T19:25:26+07:00",
+  "claim_expires_at": "2026-11-20T21:25:26+07:00"
+}
