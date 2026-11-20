@@ -11,7 +11,7 @@
   "created_at": "2026-11-20T17:15:00+07:00",
   "created_by": "muse-main",
   "id": "121-tu-hoc-develop-gen-ai-apps-with-gemini-and-streamlit-google-khoa-4",
-  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29: Vịt xong task 120 (Prompt Design in Vertex AI) 20/11 17:15, board không còn task mở cho Vịt — giao khóa tiếp theo theo phân vai Anh chốt 20/11: muse-2 (Vịt, research) → Develop Gen AI Apps with Gemini and Streamlit (Google); khóa này là bước nối tiếp tự nhiên của task 120 (đưa prompt thành ứng dụng thật bằng Streamlit + Gemini API/Python SDK, function calling, deploy Cloud Run), do chính Vịt gợi ý trong báo cáo 120 và muse-main quyết theo §10(a). Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29: Vịt xong task 120 (Prompt Design in Vertex AI) 20/11 17:15, board không còn task mở cho Vịt — giao khóa tiếp theo theo phân vai Anh chốt 20/11: muse-2 (Vịt, research) → Develop Gen AI Apps with Gemini and Streamlit (Google); khóa này là bước nối tiếp tự nhiên của task 120 (đưa prompt thành ứng dụng thật bằng Streamlit + Gemini API/Python SDK, function calling, deploy Cloud Run), do chính Vịt gợi ý trong báo cáo 120 và muse-main quyết theo §10(a). Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.\n[20/11 17:46 muse-main: review 8/10 vòng 1, merge. LƯU Ý QUY TRÌNH: Vịt làm xong chỉ trong ~3 phút (WIP 17:12:33, báo cáo 17:15:19, review 17:15:27) nhưng đổi status sang review chỉ commit trên branch feature, không commit lên main — nên watchdog 17:43 báo nhầm là 'claimed kẹt 31 phút không commit'. Lần sau đổi status phải commit + push lên main ngay theo PROTOCOL §1, không để status mới chỉ nằm trên branch.]",
   "preferred_assignee": "muse-2",
   "priority": "low",
   "repo": "muse-teamwork",
@@ -19,11 +19,11 @@
     "branch": "feature/121-develop-gen-ai-apps-gemini-streamlit-google",
     "notes": "Da hoc xong khoa Develop Gen AI Apps with Gemini and Streamlit (Google Cloud Skills Boost, Intermediate, 45 phut): 4 lab huong dan (cURL Gemini API, Function Calling, Gen AI SDK, Streamlit app 4 tab + deploy Cloud Run) + challenge lab GSP517 app AI Chef. Bao cao day du research/121-develop-gen-ai-apps-with-gemini-and-streamlit-google.md: co che function calling (model chi de xuat, app moi thuc thi), kien truc app mau, Dockerfile + Cloud Run, 8 diem ap dung ngay, 2 de xuat cap nhat skill cho muse-main. Chi hoc noi dung, khong dang ky chung chi tra phi, khong chay lab GCP. Day la khoa thu 4 cua phan vai (118-121); goi y khoa tiep: Introduction to Image Generation hoac Build Real World AI Applications with Gemini and Imagen — muse-main quyet theo PROTOCOL §10.",
     "review": {
-      "at": "",
-      "by": "",
-      "note": "",
-      "rounds": 0,
-      "score": ""
+      "at": "2026-11-20T17:46:00+07:00",
+      "by": "muse-main",
+      "note": "Báo cáo research/121-develop-gen-ai-apps-with-gemini-and-streamlit-google.md (172 dòng) đủ cả 5 phần khóa: cURL REST, Gen AI SDK (google-genai), function calling (model chỉ đề xuất, app thực thi), Streamlit 4 tab + Cloud Run, challenge lab GSP517 AI Chef; 8 điểm áp dụng ngay cho việc chung, 2 đề xuất skill (đã áp dụng), nguồn đầy đủ. Chỉ học nội dung, không đăng ký chứng chỉ trả phí, không chạy lab GCP — đúng checklist. Trừ 2 điểm: lab không chạy thật trên GCP nên phần deploy chỉ là đọc recipe, và báo cáo chưa đối chiếu lại với app demo thật của team.",
+      "rounds": 1,
+      "score": 8
     },
     "test": {
       "device_test": "",
@@ -34,5 +34,5 @@
   "status": "review",
   "title": "Tự học: Develop Gen AI Apps with Gemini and Streamlit (Google) — khóa 4 theo phân vai",
   "type": "research",
-  "updated_at": "2026-11-20T17:15:00+07:00"
+  "updated_at": "2026-11-20T17:46:00+07:00"
 }
