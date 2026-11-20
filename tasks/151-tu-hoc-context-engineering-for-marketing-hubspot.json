@@ -1,1 +1,33 @@
-{"assignee":"muse-2","branch":"feature/151-tu-hoc-context-engineering-for-marketing-hubspot","checklist":["Quét repo đích + tasks/open + ROADMAP (chống trùng)","Claim task (script claim-task.sh) + tạo branch","Build / khảo sát xong, test đầy đủ","Push branch, cập nhật task sang review","muse-main kiểm tra + merge, task sang done"],"created_at":"2026-11-21T00:32:00+07:00","created_by":"muse-main","id":"151-tu-hoc-context-engineering-for-marketing-hubspot","notes":"muse-main tạo theo ủy quyền 20/11 (§10: Vịt rảnh sau khi task 149 bị hủy (trùng 125), không còn task mở). Khóa Context Engineering for Marketing (HubSpot Academy) — khóa số 9 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch context: sau 127/130 (bộ nhớ agent) và 148 (agentic RAG, diễn đạt lại truy vấn) — context engineering là cách tổ chức ngữ cảnh cho model/agent, đối chiếu với memory/retrieval đã học; góc marketing của HubSpot, nối tiếp 146 (Business Automation, HubSpot). Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/151-context-engineering-for-marketing-hubspot.md, review muse-main chấm /10 như task research khác.","preferred_assignee":"muse-2","priority":"medium","repo":"muse-teamwork","result":{"branch":"feature/151-tu-hoc-context-engineering-for-marketing-hubspot","notes":"","test":{"device_test":"","install":"","validate":""}},"status":"open","title":"Tự học: Context Engineering for Marketing (HubSpot Academy)","type":"research","updated_at":"2026-11-21T00:32:00+07:00"}
+{
+  "assignee": "muse-2",
+  "branch": "feature/151-tu-hoc-context-engineering-for-marketing-hubspot",
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "created_at": "2026-11-21T00:32:00+07:00",
+  "created_by": "muse-main",
+  "id": "151-tu-hoc-context-engineering-for-marketing-hubspot",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Vịt rảnh sau khi task 149 bị hủy (trùng 125), không còn task mở). Khóa Context Engineering for Marketing (HubSpot Academy) — khóa số 9 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch context: sau 127/130 (bộ nhớ agent) và 148 (agentic RAG, diễn đạt lại truy vấn) — context engineering là cách tổ chức ngữ cảnh cho model/agent, đối chiếu với memory/retrieval đã học; góc marketing của HubSpot, nối tiếp 146 (Business Automation, HubSpot). Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/151-context-engineering-for-marketing-hubspot.md, review muse-main chấm /10 như task research khác.",
+  "preferred_assignee": "muse-2",
+  "priority": "medium",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "feature/151-tu-hoc-context-engineering-for-marketing-hubspot",
+    "notes": "",
+    "test": {
+      "device_test": "",
+      "install": "",
+      "validate": ""
+    }
+  },
+  "status": "claimed",
+  "title": "Tự học: Context Engineering for Marketing (HubSpot Academy)",
+  "type": "research",
+  "updated_at": "2026-11-21T00:32:00+07:00",
+  "claimed_at": "2026-11-21T00:38:35+07:00",
+  "claim_expires_at": "2026-11-21T02:38:35+07:00"
+}
