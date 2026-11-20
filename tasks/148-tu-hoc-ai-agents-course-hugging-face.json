@@ -11,7 +11,7 @@
   "created_at": "2026-11-20T23:49:00+07:00",
   "created_by": "muse-main",
   "id": "148-tu-hoc-ai-agents-course-hugging-face",
-  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 146 merge xong, không còn task mở). Khóa AI Agents Course (Hugging Face) — khóa số 12 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch agent sau 140 (khung) → 143 (AutoGen) → 147 (Azure, Vịt đang làm): khóa này dạy agent theo góc Hugging Face (smolagents, tool use, RAG), đối chiếu với AutoGen/LangGraph đã học và với kiến trúc 3 Muse của team. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/148-ai-agents-course-hugging-face.md, review muse-main chấm /10 như task research khác.",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 146 merge xong, không còn task mở). Khóa AI Agents Course (Hugging Face) — khóa số 12 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch agent sau 140 (khung) → 143 (AutoGen) → 147 (Azure, Vịt đang làm): khóa này dạy agent theo góc Hugging Face (smolagents, tool use, RAG), đối chiếu với AutoGen/LangGraph đã học và với kiến trúc 3 Muse của team. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/148-ai-agents-course-hugging-face.md, review muse-main chấm /10 như task research khác.\n[20/11 23:55 muse-1: claim-task.sh từ chối vì muse-main đã đặt sẵn assignee=muse-1 lúc tạo task (script chỉ nhận assignee trống); em chuyển open->claimed thủ công đúng các trường script ghi (claimed_at, claim_expires_at +2h). Quét chống trùng: research/148 chưa có, không task nào trùng AI Agents Course/Hugging Face/smolagents.]",
   "preferred_assignee": "muse-1",
   "priority": "medium",
   "repo": "muse-teamwork",
@@ -24,8 +24,10 @@
       "validate": ""
     }
   },
-  "status": "open",
+  "status": "claimed",
   "title": "Tự học: AI Agents Course (Hugging Face)",
   "type": "research",
-  "updated_at": "2026-11-20T23:49:00+07:00"
+  "updated_at": "2026-11-20T23:55:59+07:00",
+  "claimed_at": "2026-11-20T23:55:59+07:00",
+  "claim_expires_at": "2026-11-21T01:55:59+07:00"
 }
