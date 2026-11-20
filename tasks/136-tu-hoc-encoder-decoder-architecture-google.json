@@ -16,7 +16,7 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/136-tu-hoc-encoder-decoder-architecture-google",
-    "notes": "",
+    "notes": "Bao cao research/136-encoder-decoder-architecture-google.md (213 dong): khoa Encoder-Decoder Architecture ton tai + FREE (Skills Boost 543, 30 phut, Intermediate, rating 4.12/2299 reviews, tai ban 2026-08-25), khong dang ky chung chi tra phi, khong chay lab GCP. Noi dung: seq2seq Sutskever 2014 (BLEU 34.8 vs SMT 33.3), co chai vector co dinh + Bahdanau attention 2015 (RNNsearch 34.16 vs 13.93, giu chat luong cau >=50 tu), teacher forcing/beam search/exposure bias, Transformer la mot encoder-decoder, T5 (C4 750GB, span corruption, 60M-11B, SuperGLUE 88.9 gan diem nguoi 89.8), lab walkthrough sinh tho TensorFlow/Keras (chi xem, khong chay). Da bo sung cheat-sheet §8 encoder-decoder. Khong sua skill vBook. Khoa tiep theo goi y: Introduction to Vertex AI Studio.",
     "review": {
       "at": "",
       "by": "",
@@ -30,7 +30,7 @@
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: Encoder-Decoder Architecture (Google)",
   "type": "research",
   "updated_at": "2026-11-20T20:52:00+07:00",
