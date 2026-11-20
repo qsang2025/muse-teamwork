@@ -13,21 +13,28 @@
   "created_at": "2026-11-20T23:07:00+07:00",
   "created_by": "muse-main",
   "id": "144-tu-hoc-work-smarter-with-ai-microsoft-learn",
-  "notes": "muse-main tạo theo ủy quyền 20/11 (§10a: Vịt rảnh sau khi task 142 merge xong, không còn task mở). Khóa Work smarter with AI (Microsoft Learn) — khóa số 4 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); Ú đã đọc đủ 32 tên bằng browser thật 20/11 21:57, bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Khóa do báo cáo 142 gợi ý: ngắn, thực hành, nối trực tiếp 142 (dùng AI trong công việc hàng ngày — tự động hóa tác vụ theo quy tắc 1 giây). Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/144-work-smarter-with-ai-microsoft-learn.md, review muse-main chấm /10 như task research khác.",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10a: Vịt rảnh sau khi task 142 merge xong, không còn task mở). Khóa Work smarter with AI (Microsoft Learn) — khóa số 4 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); Ú đã đọc đủ 32 tên bằng browser thật 20/11 21:57, bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Khóa do báo cáo 142 gợi ý: ngắn, thực hành, nối trực tiếp 142 (dùng AI trong công việc hàng ngày — tự động hóa tác vụ theo quy tắc 1 giây). Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/144-work-smarter-with-ai-microsoft-learn.md, review muse-main chấm /10 như task research khác. [20/11 23:26 muse-main: review 8/10 vòng 1 — ĐÃ MERGE báo cáo lên main; Vịt rảnh → task 145 Power Automate đã tạo.]",
   "preferred_assignee": "muse-2",
   "priority": "low",
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/144-tu-hoc-work-smarter-with-ai-microsoft-learn",
-    "notes": "Da hoc xong khoa Work smarter with AI (Microsoft Learn AI-3025, 42 phut, 6 bai + bai tap): checklist 5 cau hoi review ban AI soan + khung 5 buoc Ask-review-verify-decide-act; noi 142 (GenAI vuot quy tac 1 giay, quyet dinh van thuoc ve nguoi). Bao cao research/144-work-smarter-with-ai-microsoft-learn.md. Quiz cuoi chua lam vi can dang nhap Microsoft — khong dang nhap theo §9.",
+    "notes": "Da hoc xong module Work smarter with AI (Microsoft Learn, AI-3025, 42 phut, 1 module, 9 muc): bao cao research/144-work-smarter-with-ai-microsoft-learn.md — grounding, agent, khung Ask-review-verify-decide-act, bai tap bay On Track. Khoa so 4/32 da duyet (bang chung research/140). Khong dang ky tra phi/chung chi, khong lam quiz cuoi module (can dang nhap MS account). De xuat khoa tiep: #16 Power Automate.",
+    "review": {
+      "at": "2026-11-20T23:26:00+07:00",
+      "by": "muse-main",
+      "note": "Bao cao du 6 bai + bai tap bay On Track, grounding + khung Ask-review-verify-decide-act, noi 142/140/143, 5 diem ap dung cho Anh + de xuat skill va khoa tiep. Kiem chung doc lap: trang module Microsoft Learn khop muc tieu hoc; khoa so 4/32 da duyet (research/140). Chua lam quiz cuoi (can dang nhap MS — dung §9).",
+      "rounds": 1,
+      "score": 8
+    },
     "test": {
       "device_test": "",
       "install": "",
       "validate": ""
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học: Work smarter with AI (Microsoft Learn)",
   "type": "research",
-  "updated_at": "2026-11-20T23:07:00+07:00"
+  "updated_at": "2026-11-20T23:26:00+07:00"
 }

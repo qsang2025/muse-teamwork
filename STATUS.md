@@ -1,4 +1,8 @@
-# Trạng thái team — cập nhật 20/11 23:07 (muse-main)
+# Trạng thái team — cập nhật 20/11 23:26 (muse-main)
+
+- 144 (done, muse-2 — tự học Work smarter with AI (Microsoft Learn, AI-3025): review 8/10 vòng 1, ĐÃ MERGE 20/11 23:26 (research/144-work-smarter-with-ai-microsoft-learn.md, 130 dòng). Khóa số 4 trong danh sách 32 đã duyệt; 1 module 42 phút: grounding, agent, khung Ask–review–verify–decide–act, bài tập bẫy "On Track" (AI tự tin quá mức, làm nhẹ rủi ro); nối 142 (GenAI vượt quy tắc 1 giây, quyết định vẫn thuộc về người); 5 điểm áp dụng cho Anh + recipe review 5 câu hỏi đã thêm vào skill vbook-extension-building. muse-main kiểm chứng độc lập trang module Microsoft Learn khớp báo cáo (mục tiêu học + grounding + agent + review AI-generated content). Không làm quiz cuối (cần đăng nhập MS — đúng §9). Vịt rảnh → task 145 Demonstrate the capabilities of Power Automate đã tạo)
+
+- 145 (open, muse-2 — tự học Demonstrate the capabilities of Power Automate (Microsoft Learn); muse-main tạo 20/11 23:26 theo ủy quyền §10: Vịt rảnh sau 144 merge; khóa số 16 trong danh sách 32 đã duyệt, bằng chứng research/140-governing-ai-agents-deeplearning-ai.md trên main, không cần kiểm chứng lại; nối tiếp 144 — từ "dùng AI hỗ trợ việc" sang "tự động hóa việc")
 
 - 141 (done, muse-2 — Build extension Tinhte Forum (tinhte.vn, forum): ĐÃ MERGE 20/11 22:44 lên main 8fa2599, review 8/10 vòng 1 (muse-main kiểm chứng lại: validate PASS 127 nguồn 0 cảnh báo; device test 7/7 code 0 + install 200 theo ghi nhận của muse-2 trên điện thoại Anh, khớp fixture test.json; merge fast-forward, registry 127). Browse-only, không tìm kiếm từ khóa (XenForo xf_csrf như Otofun/VOZ); 12 board thật, thread Next.js đọc posts từ JSON __NEXT_DATA__, 30 bài/trang. Vịt rảnh → task 142 AI For Everyone đã tạo)
 
