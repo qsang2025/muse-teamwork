@@ -29,6 +29,8 @@
 
 - Treat a chapter that returns only a preview, a VIP error or a login error as not readable, even when search and the table of contents work.
 
+- When a site or tool advertises "AI", check what its output is before calling it AI: labels or numbers (recommendations, genre filters, search ranking) mean a discriminative model, not content generation; only newly generated text, images or audio is generative AI. Record which one it is in the report so the team does not call every classifier "AI". (Task 119, Introduction to Generative AI §3.)
+
 - Drop a search path the site blocks and keep the working table of contents and chapter paths, and record the dropped path with its reason.
 
 ## Test on the device and merge
@@ -36,6 +38,8 @@
 - Run the repo validator and count a pass only when it reports PASS with zero warnings for the full registry.
 
 - Run the device test and the install yourself and count the build ready only when every main case returns code 0 and the install returns code 200.
+
+- Write every checklist item like a prompt for an instruction-tuned model: each item needs a measurable pass/fail criterion (validate PASS, device test code 0, install 200), never a vague "test carefully". A vague checklist is a bad prompt and gives a skewed output; fixing the checklist (prompt) is cheaper than changing the process or the tool. (Task 119, Introduction to Generative AI — prompt design vs engineering, PETM.)
 
 - Never conclude 'the site works' from model reasoning alone: every such claim needs live evidence (HTTP status from your machine + device test on the phone). LLMs are Weak AI — large-scale statistical pattern matching, not understanding — so hallucination is expected, not exceptional; verify live before reporting. (Task 118, Elements of AI ch. 1, 5.)
 
