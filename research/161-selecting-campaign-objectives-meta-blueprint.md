@@ -4,7 +4,7 @@
 - **Học viên:** muse-1 (Ú) — vai build, theo phân vai Anh chốt 20/11 (PROTOCOL §9/§10)
 - **Ngày học:** 21/11/2026
 - **Trạng thái:** đã học xong, nộp review
-- **Bối cảnh task:** muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 158 merge xong, không còn task mở). Đây là **khóa số 23 trong danh sách 32 khóa AI miễn phí đã duyệt** (Vinmedia Global, Anh chốt 20/11); bằng chứng trong `research/140-governing-ai-agents-deeplearning-ai.md` trên main (dòng 54) — không kiểm chứng lại từ đầu theo chỉ dẫn task. Nối mạch quảng cáo sau 159 (Google Ads Search, muse-2, đã merge 21/11 02:48) → 160 (TikTok Academy, muse-2, đang claimed từ 03:08 cùng ngày, chưa có báo cáo merge): khóa này sang **phía Meta — quảng cáo theo người (audience/feed) thay vì theo truy vấn**, trọng tâm là **chọn mục tiêu chiến dịch + cài đặt chuyển đổi**, đối chiếu với đấu giá/Ad Rank/attribution của 159 và khám phá vs ý định tìm kiếm của 160: chỗ nào Meta bổ sung, chỗ nào khác hẳn, và chi phí/lợi ích ra sao (team không chạy quảng cáo thật, chỉ học khung).
+- **Bối cảnh task:** muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 158 merge xong, không còn task mở). Đây là **khóa số 23 trong danh sách 32 khóa AI miễn phí đã duyệt** (Vinmedia Global, Anh chốt 20/11); bằng chứng trong `research/140-governing-ai-agents-deeplearning-ai.md` trên main (dòng 54) — không kiểm chứng lại từ đầu theo chỉ dẫn task. Nối mạch quảng cáo sau 159 (Google Ads Search, muse-2, đã merge 21/11 02:48) → 160 (TikTok Academy, muse-2, đã merge 21/11 03:21, review 8/10): khóa này sang **phía Meta — quảng cáo theo người (audience/feed) thay vì theo truy vấn**, trọng tâm là **chọn mục tiêu chiến dịch + cài đặt chuyển đổi**, đối chiếu với đấu giá/Ad Rank/attribution của 159 và khám phá vs ý định tìm kiếm của 160: chỗ nào Meta bổ sung, chỗ nào khác hẳn, và chi phí/lợi ích ra sao (team không chạy quảng cáo thật, chỉ học khung).
 - **Hình thức:** chỉ học nội dung FREE công khai; không đăng nhập Meta Blueprint/Ads Manager, không đăng ký trả phí/chứng chỉ, không chạy chiến dịch quảng cáo thật, không nạp tiền (quy tắc tự học §9).
 
 ## Kiểm chứng danh sách 32 khóa (checklist mục 1) — ĐÃ XÁC NHẬN
@@ -71,23 +71,24 @@ Cấu trúc tài khoản Meta 3 cấp (đối chiếu 159): **campaign (objectiv
 
 ## 6. Đối chiếu với 159 (Google Ads Search) và 160 (TikTok Academy) — bổ sung, khác hẳn, chi phí/lợi ích
 
-Đây là yêu cầu đối chiếu trực tiếp của task 161. Cơ sở: 159 đã merge (báo cáo đầy đủ trên main); **160 đang claimed bởi muse-2 từ 03:08 21/11, mới có commit WIP, chưa có báo cáo merge** — phần đối chiếu TikTok dưới đây ở **mức khung theo ghi chú task 160** (khám phá vs ý định tìm kiếm) + dữ kiện cửa sổ attribution TikTok đã kiểm chứng chéo 11/2026, ghi rõ giới hạn này; khi báo cáo 160 merge, muse-main có thể đối chiếu sâu hơn.
+Đây là yêu cầu đối chiếu trực tiếp của task 161. Cơ sở: **cả 159 và 160 đều đã merge** (159 merge 21/11 02:48; 160 merge 21/11 03:21, review 8/10, báo cáo 206 dòng `research/160-tiktok-academy-tiktok-for-business.md`) — phần đối chiếu TikTok dưới đây dùng **báo cáo đầy đủ của 160** (đấu giá eCPM giá thứ hai, learning phase ~25 kết quả/7 ngày, 4 bid types + Maximum Delivery/Cost Cap, creative hook 3s/6s + Spark Ads, attribution mặc định 7-day click/1-day view), không còn là mức khung.
 
 ### 6.1 Khác hẳn: ý định tìm kiếm (159) vs khám phá theo người (161) vs khám phá theo nội dung (160)
 
-|  | Google Ads Search (159) | Meta (khóa này) | TikTok (160, mức khung) |
+|  | Google Ads Search (159) | Meta (khóa này) | TikTok (160, đã merge) |
 |---|---|---|---|
-| Tín hiệu gốc | **Truy vấn** người dùng gõ — ý định có sẵn, đang tìm | **Người** — hồ sơ/hành vi trên Facebook/Instagram/Messenger, quảng cáo chen vào feed | **Nội dung video ngắn** — người xem đang khám phá, chưa có ý định mua |
-| Đơn vị chọn | Từ khóa + match type | Objective + audience + performance goal | Video/creative + mục tiêu chiến dịch |
-| Cơ chế thắng | Đấu giá từng lượt tìm kiếm, Ad Rank 6 yếu tố, giá thứ hai | Hệ phân phối tìm người dễ thực hiện hành động của objective trong ngân sách | Hệ đề xuất phân phối video theo mức giữ chân/tương tác (khung task 160) |
-| Đo chuyển đổi | Conversion tracking + DDA/Last-Click | Dataset/Pixel + CAPI, cửa sổ 7/1/1 Standard | Attribution window (mặc định cũng 7-day click/1-day view theo Voluum 11/2026) |
-| Câu hỏi trả lời | "Ai đang tìm thứ này ngay bây giờ?" | "Ai giống người sẽ làm việc này?" | "Nội dung nào giữ được người xem đủ lâu để nảy ý định?" |
+| Tín hiệu gốc | **Truy vấn** người dùng gõ — ý định có sẵn, đang tìm | **Người** — hồ sơ/hành vi trên Facebook/Instagram/Messenger, quảng cáo chen vào feed | **Nội dung video ngắn** trong For You feed — người xem đang khám phá, chưa có ý định mua (160 §1) |
+| Đơn vị chọn | Từ khóa + match type | Objective + audience + performance goal | Video/creative + mục tiêu chiến dịch (160 §2: campaign → ad group → ad, không có tầng từ khóa) |
+| Cơ chế thắng | Đấu giá từng lượt tìm kiếm, Ad Rank 6 yếu tố, giá thứ hai | Hệ phân phối tìm người dễ thực hiện hành động của objective trong ngân sách | Đấu giá eCPM = Bid × Estimated Action Rate × Ad Quality, giá thứ hai; learning phase ~25 kết quả/7 ngày (160 §3) |
+| Đo chuyển đổi | Conversion tracking + DDA/Last-Click | Dataset/Pixel + CAPI, cửa sổ 7/1/1 Standard | Pixel + Events API (khử trùng event_id), Attribution Manager mặc định 7-day click/1-day view (160 §7) |
+| Câu hỏi trả lời | "Ai đang tìm thứ này ngay bây giờ?" | "Ai giống người sẽ làm việc này?" | "Nội dung nào giữ được người xem đủ lâu để nảy ý định?" (hook 3s/6s, Spark Ads — 160 §5) |
 
 ### 6.2 Chỗ nào Meta bổ sung cho 159/160
 
 - **Bổ sung phía "chưa có ý định":** Google Search chỉ bắt được người **đã** gõ truy vấn; Meta (và TikTok ở 160) tiếp cận người **chưa** tìm — đây là tầng tạo nhu cầu mà SEO 154/155/156 và Search 159 đều không chạm tới. Trong ngôn ngữ phễu cũ: 159 mạnh ở Conversion, Meta phủ cả Awareness → Sales trong một hệ mục tiêu.
 - **Bổ sung cơ chế đo server-side:** CAPI của Meta là mẫu rõ nhất của bài học chung "đo lường phía trình duyệt đang mòn dần" (ad blocker, giới hạn cookie) — 159 đã chạm ở tầng conversion tracking/DDA, khóa này cho **kiến trúc hai đường + chống trùng event_id** cụ thể để hiểu vì sao số liệu hai nền tảng lệch nhau.
 - **Bổ sung kỷ luật "mục tiêu khóa cứng":** 159 dạy đấu thầu đổi được (Smart Bidding); Meta dạy quyết định **không đảo ngược được** (objective) phải ra trước và ra đúng — hai nửa của cùng một kỷ luật ra quyết định: việc nào không sửa được thì nghĩ kỹ nhất.
+- **TikTok 160 cho thấy nền tảng khám phá cũng phải xây lớp ý định:** Search Ads Toggle + Keyword-based Search Ads (160 §6) chứng minh ngay cả For You feed cũng cần một lớp bắt truy vấn có chủ đích bên trong — Meta không có lớp từ khóa tương đương trong khóa này, nên phía "ý định rõ ràng" của Meta vẫn phải mượn từ Google/TikTok Search; ngược lại, Spark Ads của TikTok (mượn uy tín video organic, 160 §5) là cơ chế Meta không có trong phạm vi khóa 161 — hai nền tảng khám phá bổ sung cho nhau ở creative, không thay thế nhau.
 
 ### 6.3 Chi phí / lợi ích — bảng đối chiếu
 
@@ -110,7 +111,7 @@ Cấu trúc tài khoản Meta 3 cấp (đối chiếu 159): **campaign (objectiv
 ## 8. Giới hạn của khóa — đọc kỹ trước khi áp dụng
 
 - **Không đăng nhập Meta Blueprint/Ads Manager, không làm quiz, không lấy chứng chỉ** — đúng §9; học qua mô tả Meta Business Help được trích dẫn + hướng dẫn độc lập 2026 đối chiếu chéo, không xem từng bài giảng video của khóa. Chi tiết trong bài giảng có thể sâu hơn phần tóm tắt.
-- **160 chưa có báo cáo merge** (claimed 03:08 21/11, mới WIP) — đối chiếu TikTok ở §6 là mức khung theo ghi chú task 160 + dữ kiện attribution đã kiểm chứng; không suy diễn nội dung báo cáo 160.
+- **160 đã merge 21/11 03:21 (review 8/10)** — đối chiếu TikTok ở §6 dùng báo cáo đầy đủ `research/160-tiktok-academy-tiktok-for-business.md`; số liệu chi phí/case trong 160 là nguồn thứ cấp (đã ghi rõ trong báo cáo 160), nên §6 chỉ dùng khung cơ chế của 160, không dùng số chi phí của 160 làm dự toán.
 - **Nhãn giao diện Meta đổi thường xuyên:** engage-through đổi tên 03/2026, cửa sổ view bị gỡ 01/2026, qualified leads đổi điều kiện 04/2026 — tài liệu trước các mốc này dùng tên/điều kiện cũ; khi áp dụng phải kiểm chứng bằng Meta Business Help hiện tại.
 - **Số 17,8% của Meta (§3) là số do Meta công bố qua nguồn thứ cấp, không có phương pháp công khai** — chỉ dùng để hiểu hướng lợi ích của CAPI, không dùng làm dự toán.
 
@@ -126,4 +127,4 @@ Cấu trúc tài khoản Meta 3 cấp (đối chiếu 159): **campaign (objectiv
 - Madgicx — How to Set Up the Conversions API (cùng Pixel ID, event_id chống trùng, Test Events): https://madgicx.com/answers/how-to-set-up-the-conversions-api
 - Apzom — How to Set Up the Meta Pixel and Conversions API (dataset = Pixel, 4 đường CAPI, số 17,8% của Meta 04/2026): https://apzom.com/meta-pixel-and-conversions-api-setup/
 - Variafy — Facebook lead campaign performance goals (qualified leads cần CAPI từ 04/2026): https://www.variafy.com/guides/facebook-lead-ads-performance-goal
-- Đối chiếu: `research/159-google-ads-search-certification-google-skillshop.md` (đã merge); task 160 `tasks/160-tu-hoc-tiktok-academy-tiktok-for-business.json` (đang claimed, chưa merge — chỉ đối chiếu mức khung)
+- Đối chiếu: `research/159-google-ads-search-certification-google-skillshop.md` (đã merge); `research/160-tiktok-academy-tiktok-for-business.md` (đã merge 21/11 03:21, review 8/10 — eCPM giá thứ hai, learning phase, Spark Ads, Search Ads, attribution 7-day click/1-day view)

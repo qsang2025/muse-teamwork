@@ -17,7 +17,7 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/161-tu-hoc-selecting-campaign-objectives-meta-blueprint",
-    "notes": "Bao cao research/161-selecting-campaign-objectives-meta-blueprint.md (129 dong): khoa so 23/32 (research/140 dong 54), 6 muc tieu ODAX (Awareness/Traffic/Engagement/Leads/App promotion/Sales, gop tu 11 cu, objective khoa cung khi chay), mo hinh 3 lua chon objective/conversion location/performance goal (objective gioi han thuc don, goal quyet dinh nguoi xem), cai dat chuyen doi dataset/Pixel + Conversions API + chong trung event_id + Test Events, attribution mac dinh 7-day click/1-day engage-through/1-day view (doi dinh nghia 03/2026). Doi chieu 159 (Google Search: y dinh truy van, Ad Rank, DDA) va 160 (TikTok: muc khung vi 160 moi claimed WIP chua merge — ghi ro gioi han): Meta la quang cao theo nguoi/kham pha, bo sung tang chua co y dinh; ca 159+161 deu la thue vi tri khac SEO tai san. Gioi han trung thuc: khong dang nhap Blueprint/Ads Manager, khong quiz/chung chi, khong chay quang cao that (S9); hoc qua mo ta Meta Business Help trich dan + huong dan doc lap 2026 doi chieu cheo. De xuat: ghi performance goal vao task + ngon ngu cua so do cho bao cao, can muse-main duyet.",
+    "notes": "Bao cao research/161-selecting-campaign-objectives-meta-blueprint.md (130 dong): khoa so 23/32 (research/140 dong 54), 6 muc tieu ODAX (Awareness/Traffic/Engagement/Leads/App promotion/Sales, gop tu 11 cu, objective khoa cung khi chay), mo hinh 3 lua chon objective/conversion location/performance goal (objective gioi han thuc don, goal quyet dinh nguoi xem), cai dat chuyen doi dataset/Pixel + Conversions API + chong trung event_id + Test Events, attribution mac dinh 7-day click/1-day engage-through/1-day view (doi dinh nghia 03/2026). Doi chieu 159 (Google Search: y dinh truy van, Ad Rank, DDA) va 160 (TikTok Academy da merge 21/11 03:21 review 8/10: eCPM gia thu hai, learning phase, Spark Ads, Search Ads, attribution 7/1): Meta la quang cao theo nguoi/kham pha, bo sung tang chua co y dinh; ca 159+161 deu la thue vi tri khac SEO tai san. Cap nhat 03:27: doi chieu 160 dung bao cao day du, khong con muc khung. Gioi han trung thuc: khong dang nhap Blueprint/Ads Manager, khong quiz/chung chi, khong chay quang cao that (S9); hoc qua mo ta Meta Business Help trich dan + huong dan doc lap 2026 doi chieu cheo. De xuat: ghi performance goal vao task + ngon ngu cua so do cho bao cao, can muse-main duyet.",
     "test": {
       "validate": "PASS",
       "device_test": "n/a",
@@ -27,7 +27,7 @@
   "status": "review",
   "title": "Tự học Selecting campaign objectives and conversion settings (Meta Blueprint)",
   "type": "research",
-  "updated_at": "2026-11-21T03:03:00+07:00",
+  "updated_at": "2026-11-21T03:27:15+07:00",
   "claimed_at": "2026-11-21T03:10:34+07:00",
   "claim_expires_at": "2026-11-21T05:10:34+07:00"
 }
