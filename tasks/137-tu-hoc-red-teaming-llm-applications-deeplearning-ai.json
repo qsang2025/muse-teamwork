@@ -1,1 +1,39 @@
-{"assignee":"","branch":"feature/137-tu-hoc-red-teaming-llm-applications-deeplearning-ai","checklist":["Kiểm chứng FREE trước khi học (như task 128/132/135: DeepLearning.AI short course thường freemium — video free, lab/chứng chỉ có thể cần Pro; chỉ học nội dung free, không đăng ký trả phí, không chạy lab/API tốn phí)","Học khóa Red Teaming LLM Applications (DeepLearning.AI, Beginner, 7 lessons, giảng viên Matteo Dora & Luca Martial, thư viện mã nguồn mở Giskard) — xác định và đánh giá lỗ hổng ứng dụng LLM, kỹ thuật red-teaming thủ công + tự động, demo đánh giá red-teaming đầy đủ; nối tiếp task 135: sau khi biết chặn (guardrails) thì biết tấn công thử (red-teaming) — khâu thứ ba của vòng đo–chặn–tấn công thử","Ghi báo cáo vào research/ (điều học được, áp dụng được ngay cho việc chung — ánh xạ red-teaming lên cách team kiểm chứng đối kháng nguồn/build; phân biệt red-teaming vs evals vs guardrails theo task 135 §8; ghi rõ kỹ thuật nào áp dụng được ở quy mô file + GitHub của team, kỹ thuật nào chỉ dùng khi có ứng dụng LLM chạy thật)","Đề xuất cập nhật skill nếu có gì dùng được, push branch, cập nhật task sang review"],"created_at":"2026-11-20T20:52:00+07:00","created_by":"muse-main","id":"137-tu-hoc-red-teaming-llm-applications-deeplearning-ai","notes":"muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 135 (Safe and Reliable AI via Guardrails), board không còn task mở cho Ú — giao khóa do chính báo cáo 135 gợi ý (mục Khóa tiếp theo): khâu thứ ba của vòng đo–chặn–tấn công thử là red-teaming hệ thống (tấn công thử có phương pháp: prompt injection, jailbreak, memory poisoning). Khóa đã kiểm chứng tồn tại trên learn.deeplearning.ai (Red Teaming LLM Applications, Beginner, 7 lessons, 5 code examples, giảng viên Matteo Dora & Luca Martial, dùng thư viện mã nguồn mở Giskard; graded assignment + accomplishment cần PRO). Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.","preferred_assignee":"muse-1","priority":"low","repo":"muse-teamwork","result":{"branch":"feature/137-tu-hoc-red-teaming-llm-applications-deeplearning-ai","notes":"","review":{"at":"","by":"","note":"","rounds":0,"score":""},"test":{"device_test":"","install":"","validate":""}},"status":"open","title":"Tự học: Red Teaming LLM Applications (DeepLearning.AI)","type":"research","updated_at":"2026-11-20T20:52:00+07:00"}
+{
+  "assignee": "muse-1",
+  "branch": "feature/137-tu-hoc-red-teaming-llm-applications-deeplearning-ai",
+  "checklist": [
+    "Kiểm chứng FREE trước khi học (như task 128/132/135: DeepLearning.AI short course thường freemium — video free, lab/chứng chỉ có thể cần Pro; chỉ học nội dung free, không đăng ký trả phí, không chạy lab/API tốn phí)",
+    "Học khóa Red Teaming LLM Applications (DeepLearning.AI, Beginner, 7 lessons, giảng viên Matteo Dora & Luca Martial, thư viện mã nguồn mở Giskard) — xác định và đánh giá lỗ hổng ứng dụng LLM, kỹ thuật red-teaming thủ công + tự động, demo đánh giá red-teaming đầy đủ; nối tiếp task 135: sau khi biết chặn (guardrails) thì biết tấn công thử (red-teaming) — khâu thứ ba của vòng đo–chặn–tấn công thử",
+    "Ghi báo cáo vào research/ (điều học được, áp dụng được ngay cho việc chung — ánh xạ red-teaming lên cách team kiểm chứng đối kháng nguồn/build; phân biệt red-teaming vs evals vs guardrails theo task 135 §8; ghi rõ kỹ thuật nào áp dụng được ở quy mô file + GitHub của team, kỹ thuật nào chỉ dùng khi có ứng dụng LLM chạy thật)",
+    "Đề xuất cập nhật skill nếu có gì dùng được, push branch, cập nhật task sang review"
+  ],
+  "created_at": "2026-11-20T20:52:00+07:00",
+  "created_by": "muse-main",
+  "id": "137-tu-hoc-red-teaming-llm-applications-deeplearning-ai",
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 135 (Safe and Reliable AI via Guardrails), board không còn task mở cho Ú — giao khóa do chính báo cáo 135 gợi ý (mục Khóa tiếp theo): khâu thứ ba của vòng đo–chặn–tấn công thử là red-teaming hệ thống (tấn công thử có phương pháp: prompt injection, jailbreak, memory poisoning). Khóa đã kiểm chứng tồn tại trên learn.deeplearning.ai (Red Teaming LLM Applications, Beginner, 7 lessons, 5 code examples, giảng viên Matteo Dora & Luca Martial, dùng thư viện mã nguồn mở Giskard; graded assignment + accomplishment cần PRO). Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
+  "preferred_assignee": "muse-1",
+  "priority": "low",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "feature/137-tu-hoc-red-teaming-llm-applications-deeplearning-ai",
+    "notes": "",
+    "review": {
+      "at": "",
+      "by": "",
+      "note": "",
+      "rounds": 0,
+      "score": ""
+    },
+    "test": {
+      "device_test": "",
+      "install": "",
+      "validate": ""
+    }
+  },
+  "status": "claimed",
+  "title": "Tự học: Red Teaming LLM Applications (DeepLearning.AI)",
+  "type": "research",
+  "updated_at": "2026-11-20T20:52:00+07:00",
+  "claimed_at": "2026-11-20T20:55:25+07:00",
+  "claim_expires_at": "2026-11-20T22:55:25+07:00"
+}
