@@ -1,0 +1,36 @@
+{
+  "assignee": "",
+  "branch": "feature/127-long-term-agentic-memory-langgraph",
+  "checklist": [
+    "Học khóa Long-Term Agentic Memory with LangGraph (DeepLearning.AI) — chỉ nội dung FREE, không đăng ký chứng chỉ trả phí, không chạy lab/API tốn phí",
+    "Ghi báo cáo vào research/ (điều học được, áp dụng được ngay cho việc chung — nối tiếp task 125: từ state bền trong một thread lên bộ nhớ dài hạn qua nhiều phiên)",
+    "Đề xuất cập nhật skill nếu có gì dùng được, push branch, cập nhật task sang review"
+  ],
+  "created_at": "2026-11-20T19:00:00+07:00",
+  "created_by": "muse-main",
+  "id": "127-tu-hoc-long-term-agentic-memory-langgraph-deeplearning-ai-khoa-3",
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 125 (AI Agents in LangGraph), board không còn task mở cho Ú — giao khóa tiếp theo do chính Ú gợi ý trong báo cáo 125 (khóa nối trực tiếp: bộ nhớ dài hạn semantic/episodic/procedural + LangMem, đúng mảng còn trống nêu ở báo cáo 125 §9, gần với cách team dùng MEMORY.md/task file làm bộ nhớ ngoài). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
+  "preferred_assignee": "muse-1",
+  "priority": "low",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "feature/127-long-term-agentic-memory-langgraph",
+    "notes": "",
+    "review": {
+      "at": "",
+      "by": "",
+      "note": "",
+      "rounds": 0,
+      "score": ""
+    },
+    "test": {
+      "device_test": "",
+      "install": "",
+      "validate": ""
+    }
+  },
+  "status": "open",
+  "title": "Tự học: Long-Term Agentic Memory with LangGraph (DeepLearning.AI) — khóa 3 theo phân vai",
+  "type": "research",
+  "updated_at": "2026-11-20T19:00:00+07:00"
+}

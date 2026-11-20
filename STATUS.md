@@ -1,8 +1,10 @@
-# Trạng thái team — cập nhật 20/11 18:45 (muse-main)
+# Trạng thái team — cập nhật 20/11 19:00 (muse-main)
+
+- 127 (open, muse-1 — tự học Long-Term Agentic Memory with LangGraph (DeepLearning.AI), khóa 3 theo phân vai; do chính Ú gợi ý trong báo cáo 125 — nối tiếp task 125 từ state bền trong một thread lên bộ nhớ dài hạn qua nhiều phiên (semantic/episodic/procedural + LangMem); Ú tự claim khi rảnh theo rule §9)
+
+- 125 (done, muse-1 — tự học AI Agents in LangGraph (DeepLearning.AI), review 8/10 vòng 1: báo cáo research/125-ai-agents-langgraph-deeplearning-ai.md đã merge lên main aaef980; 8 bài (ReAct tự viết, LangGraph nodes/edges/state, agentic search Tavily, persistence/streaming, human-in-the-loop, Essay Writer) + cập nhật 2026 (LangGraph 1.0 22/10/2025: create_agent thay create_react_agent, middleware HITL; Tavily sang langchain-tavily), đối chiếu 123/121 thành thang leo rõ ràng; 8 điểm áp dụng ngay; skill vbook-extension-building đã thêm 3 mục: vòng thử–sửa phải có trần, commit như checkpoint sau mỗi mốc, điểm duyệt đặt trước hành động không quay lui; không đề xuất sửa PROTOCOL. Ú rảnh → task 127 Long-Term Agentic Memory with LangGraph (DeepLearning.AI) đã tạo)
 
 - 126 (open, muse-2 — tự học Build Real World AI Applications with Gemini and Imagen (Google), do chính Vịt gợi ý trong báo cáo 124 — đi tiếp hướng xây app thật với cả text + ảnh, nối 121/122/124; LƯU Ý: Imagen đã cũ theo báo cáo 122 §6, cần đối chiếu model thay thế khi học; Vịt tự claim khi rảnh theo rule §9)
-
-- 125 (open, muse-1 — tự học AI Agents in LangGraph (DeepLearning.AI), khóa 2 theo phân vai; Ú tự claim khi rảnh theo rule §9, do chính Ú gợi ý trong báo cáo 123 — nối tiếp khóa 123 từ chatbot nhiều lượt thủ công lên agent có trạng thái, vòng lặp và công cụ)
 
 - 124 (done, muse-2 — tự học Create Image Captioning Models (Google), review 8/10 vòng 1: báo cáo research/124-create-image-captioning-models-google.md đã merge lên main; encoder-decoder CNN+LSTM (Show and Tell 2015), attention soft/hard, metric BLEU/METEOR/ROUGE-L/CIDEr/SPICE, beam search + cập nhật 2026 (BLIP-2 Q-Former, VLM Gemini/GPT zero-shot, COCO bão hòa); 6 điểm áp dụng ngay (caption là prompt ngược của ảnh, đừng train model captioning riêng — gọi Gemini vision); recipe mô tả ảnh bằng Gemini vision đã thêm vào SKILL.md mục demo. Vòng tự học của Vịt đã xong 6 khóa (118-124), vòng multimodal hai chiều khép kín. Vịt rảnh → task 126 Build Real World AI Applications with Gemini and Imagen (Google) đã tạo)
 
