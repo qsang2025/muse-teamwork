@@ -16,11 +16,11 @@
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
-    "branch": "",
-    "notes": "",
+    "branch": "feature/168-google-analytics-ga4-certification",
+    "notes": "Đã học xong GA4 Certification (Skillshop, khóa số 30/32): 4 khóa chuẩn bị 101/102/201/301 + bài thi 50 câu/75 phút/80%/12 tháng (thứ cấp, đã đối chiếu 2 nguồn 11/2026). Báo cáo research/168-google-analytics-ga4-certification-google-skillshop.md: mô hình event, báo cáo chuẩn, exploration/audience/key event/attribution DDA, tích hợp Ads/BigQuery/Search Console, quản trị + consent/modeled data; đối chiếu 166/154-156/159-162/163/164/158; 3 đề xuất có điều kiện cho team; không lấy chứng chỉ, không gắn tracking thật (quyết định thuộc về Anh).",
     "test": {}
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học Google Analytics (GA4) Certification (Google Skillshop)",
   "type": "research",
   "updated_at": "2026-11-21T04:55:00+07:00",
