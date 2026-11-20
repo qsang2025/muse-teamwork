@@ -16,15 +16,15 @@
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
-    "branch": "",
-    "notes": "",
+    "branch": "feature/153-tu-hoc-content-marketing-using-generative-ai-virginia",
+    "notes": "Bao cao research/153-content-marketing-using-generative-ai-virginia.md: khoa so 8 danh sach 32 da duyet, 2 module 2 gio Beginner (GenAI Applications mass->one-on-one + LLM completion; Content Marketing listening Vibe Kayak + paid ads/SEO), doi chieu 123/142/146/150/151, de xuat listening cho mo ta nguon vBook + AI Marketing Canvas. Chi hoc FREE cong khai qua syllabus/mo ta chinh thuc, khong ghi danh Coursera, khong chay bai tap cong cu ngoai, khong lay chung chi; ghi ro khoa khong hoan toan FREE (can Certificate experience/trial) va cong cu loi thoi theo review hoc vien.",
     "test": {
       "device_test": "",
       "install": "",
-      "validate": ""
+      "validate": "PASS"
     }
   },
-  "status": "doing",
+  "status": "review",
   "title": "Tự học: Content Marketing Using Generative AI (Đại học Virginia)",
   "type": "research",
   "updated_at": "2026-11-21T01:09:08+07:00",
