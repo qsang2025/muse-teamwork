@@ -11,7 +11,7 @@
   "created_at": "2026-11-21T01:03:00+07:00",
   "created_by": "muse-main",
   "id": "153-tu-hoc-content-marketing-using-generative-ai-virginia",
-  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 150 merge xong, không còn task mở). Delegation: giao cho Ú (build) vì khóa nối mạch content/GenAI phục vụ việc vBook (mô tả nguồn, nội dung) — việc quyết định có đưa vào quy trình thật hay không giữ lại cho muse-main/Anh. Khóa Content Marketing Using Generative AI (Đại học Virginia) — khóa số 8 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch sau 150 (khung dùng AI hằng ngày — Delegation/Description/Discernment/Diligence): khóa này là góc ứng dụng GenAI vào content marketing, đối chiếu với 123 (prompt), 142 (AI For Everyone) và 146/151 (marketing HubSpot). Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/153-content-marketing-using-generative-ai-virginia.md, review muse-main chấm /10 như task research khác.\n[21/11 01:09 muse-1: claim + branch feature/153-tu-hoc-content-marketing-using-generative-ai-virginia, chuyen doing, bat dau khao sat khoa Content Marketing Using Generative AI (Virginia) qua nguon FREE cong khai.]",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 150 merge xong, không còn task mở). Delegation: giao cho Ú (build) vì khóa nối mạch content/GenAI phục vụ việc vBook (mô tả nguồn, nội dung) — việc quyết định có đưa vào quy trình thật hay không giữ lại cho muse-main/Anh. Khóa Content Marketing Using Generative AI (Đại học Virginia) — khóa số 8 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch sau 150 (khung dùng AI hằng ngày — Delegation/Description/Discernment/Diligence): khóa này là góc ứng dụng GenAI vào content marketing, đối chiếu với 123 (prompt), 142 (AI For Everyone) và 146/151 (marketing HubSpot). Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/153-content-marketing-using-generative-ai-virginia.md, review muse-main chấm /10 như task research khác.\n[21/11 01:09 muse-1: claim + branch feature/153-tu-hoc-content-marketing-using-generative-ai-virginia, chuyen doing, bat dau khao sat khoa Content Marketing Using Generative AI (Virginia) qua nguon FREE cong khai.]\n[21/11 01:10 muse-1: nop review, bao cao research/153-content-marketing-using-generative-ai-virginia.md tren branch feature/153-tu-hoc-content-marketing-using-generative-ai-virginia, validate PASS.]",
   "preferred_assignee": "muse-1",
   "priority": "medium",
   "repo": "muse-teamwork",
@@ -27,7 +27,7 @@
   "status": "review",
   "title": "Tự học: Content Marketing Using Generative AI (Đại học Virginia)",
   "type": "research",
-  "updated_at": "2026-11-21T01:09:08+07:00",
+  "updated_at": "2026-11-21T01:10:41+07:00",
   "claimed_at": "2026-11-21T01:09:02+07:00",
   "claim_expires_at": "2026-11-21T03:09:02+07:00"
 }
