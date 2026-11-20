@@ -1,1 +1,29 @@
-{"assignee":"","branch":"","checklist":["Quét repo đích + tasks/open + ROADMAP (chống trùng)","Claim task (script claim-task.sh) + tạo branch","Build / khảo sát xong, test đầy đủ","Push branch, cập nhật task sang review","muse-main kiểm tra + merge, task sang done"],"created_at":"2026-11-21T04:43:00+07:00","created_by":"muse-main","id":"167-tu-hoc-graphic-design-basics-canva-design-school","notes":"muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 165 merge xong, không còn task mở). Khóa Graphic Design Basics — Canva Design School — khóa số 29 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main (dòng 60) — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch thiết kế sau 163 (Content Marketing: nội dung cần trình bày thị giác) + 165 (Inbound: attract bằng nội dung/trải nghiệm có giá trị) + 166 (Social Media Marketing: social cần hình ảnh/thumbnail) — đối chiếu với Content Marketing của 163 (hình ảnh trong hệ thống content), TikTok Academy 160 (hook thị giác 3 giây đầu, creative), AEO 158 (hình ảnh/trích dẫn trong kết quả AI) và mạch quảng cáo 159/161/162 (creative quảng cáo): chỗ nào Canva bổ sung (nguyên tắc thiết kế cơ bản cho người không chuyên), chỗ nào trùng, và áp dụng cho thumbnail/mô tả nguồn vBook, ảnh bìa bài viết team ra sao. Delegation: giao Ú học + viết báo cáo; muse-main giữ review + merge; Anh giữ quyết định có dùng Canva Pro/trả phí hay chạy quảng cáo thật không. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy chiến dịch quảng cáo thật, không nạp tiền. Báo cáo viết vào research/167-graphic-design-basics-canva-design-school.md, review muse-main chấm /10 như task research khác.","preferred_assignee":"muse-1","priority":"medium","repo":"muse-teamwork","result":{"branch":"","notes":"","test":{}},"status":"open","title":"Tự học Graphic Design Basics (Canva Design School)","type":"research","updated_at":"2026-11-21T04:43:00+07:00"}
+{
+  "assignee": "muse-1",
+  "branch": "",
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "created_at": "2026-11-21T04:43:00+07:00",
+  "created_by": "muse-main",
+  "id": "167-tu-hoc-graphic-design-basics-canva-design-school",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 165 merge xong, không còn task mở). Khóa Graphic Design Basics — Canva Design School — khóa số 29 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main (dòng 60) — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch thiết kế sau 163 (Content Marketing: nội dung cần trình bày thị giác) + 165 (Inbound: attract bằng nội dung/trải nghiệm có giá trị) + 166 (Social Media Marketing: social cần hình ảnh/thumbnail) — đối chiếu với Content Marketing của 163 (hình ảnh trong hệ thống content), TikTok Academy 160 (hook thị giác 3 giây đầu, creative), AEO 158 (hình ảnh/trích dẫn trong kết quả AI) và mạch quảng cáo 159/161/162 (creative quảng cáo): chỗ nào Canva bổ sung (nguyên tắc thiết kế cơ bản cho người không chuyên), chỗ nào trùng, và áp dụng cho thumbnail/mô tả nguồn vBook, ảnh bìa bài viết team ra sao. Delegation: giao Ú học + viết báo cáo; muse-main giữ review + merge; Anh giữ quyết định có dùng Canva Pro/trả phí hay chạy quảng cáo thật không. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy chiến dịch quảng cáo thật, không nạp tiền. Báo cáo viết vào research/167-graphic-design-basics-canva-design-school.md, review muse-main chấm /10 như task research khác.",
+  "preferred_assignee": "muse-1",
+  "priority": "medium",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "",
+    "notes": "",
+    "test": {}
+  },
+  "status": "claimed",
+  "title": "Tự học Graphic Design Basics (Canva Design School)",
+  "type": "research",
+  "updated_at": "2026-11-21T04:43:00+07:00",
+  "claimed_at": "2026-11-21T04:55:31+07:00",
+  "claim_expires_at": "2026-11-21T06:55:31+07:00"
+}
