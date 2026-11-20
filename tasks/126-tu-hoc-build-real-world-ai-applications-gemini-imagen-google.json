@@ -17,7 +17,7 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/126-build-real-world-ai-applications",
-    "notes": "",
+    "notes": "Da hoc xong 4 lab (nhan dien anh Gemini, sinh anh Imagen, chat Gemini, challenge lab bouquet multimodal). Bao cao research/126-build-real-world-ai-applications-gemini-imagen-google.md: chi tiet tung lab + cap nhat 2026 — Imagen shutdown 17/08/2026 (thay bang Gemini Image/Nano Banana), Vertex AI SDK cu bi go 24/06/2026 (dich sang google-genai), Vertex AI doi ten Agent Platform. Chi hoc noi dung, khong dang ky chung chi tra phi, khong chay lab GCP. De xuat skill: recipe app multimodal (sinh anh + mo ta anh + chat) qua google-genai.",
     "review": {
       "at": "",
       "by": "",
@@ -31,7 +31,7 @@
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: Build Real World AI Applications with Gemini and Imagen (Google)",
   "type": "research",
   "updated_at": "2026-11-20T18:45:00+07:00"
