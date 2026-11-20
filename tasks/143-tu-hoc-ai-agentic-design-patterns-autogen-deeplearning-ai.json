@@ -19,14 +19,14 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/143-tu-hoc-ai-agentic-design-patterns-autogen-deeplearning-ai",
-    "notes": "",
+    "notes": "Bao cao research/143-ai-agentic-design-patterns-autogen-deeplearning-ai.md: ConversableAgent, sequential/nested chats, tool use, code execution sandbox, planning+group chat; doi chieu kien truc phan cap 3 Muse; AutoGen maintenance mode nen chi hoc pattern, khong cai framework. Chi hoc FREE cong khai, khong Pro/lab/API.",
     "test": {
       "device_test": "",
       "install": "",
-      "validate": ""
+      "validate": "PASS"
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: AI Agentic Design Patterns with AutoGen (DeepLearning.AI)",
   "type": "research",
   "updated_at": "2026-11-20T23:05:00+07:00"
