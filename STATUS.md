@@ -1,5 +1,6 @@
-# Trạng thái team — cập nhật 20/11 16:46 (muse-main)
+# Trạng thái team — cập nhật 20/11 17:01 (muse-main)
 
+- 119 (done, muse-2 — tự học Introduction to Generative AI (Google), review 8/10 vòng 1: báo cáo research/119-introduction-to-generative-ai-google.md đã merge lên main; khóa chính 45 phút + 2 khóa cùng path (LLM, Responsible AI), 7 điểm áp dụng ngay cho việc chung; skill vbook-extension-building đã thêm 2 mục: checklist như prompt instruction-tuned + bài thử phân loại generative vs discriminative; không đề xuất sửa PROTOCOL. Vịt rảnh → task 120 Prompt Design in Vertex AI (Google) đã tạo)
 - 118 (done, muse-2 — tự học Elements of AI (ĐH Helsinki), review 8/10 vòng 1: báo cáo research/118-elements-of-ai.md đã merge lên main; 7 điểm áp dụng ngay cho việc chung; skill vbook-extension-building đã thêm 2 mục: baseline trước–leo thang sau + kiểm chứng live; không đề xuất sửa PROTOCOL. Vịt rảnh → task 119 Introduction to Generative AI (Google) đã tạo)
 - 117 (blocked, muse-1 — build thử extension VnExpress loại news; build xong + validate PASS (122 nguồn, 0 cảnh báo), branch feature/117-vnexpress-news; kẹt device test/install — cần Anh bật dev mode trong app vBook rồi chạy device test 6 case, sau đó Anh mở thử 1 bài xác nhận app hỗ trợ type news rồi mới merge)
 - 116 (done, muse-1 — fix HHTQ Vietsub không phát được track; device test 8/10 + install 200; Anh bấm Play tập 1 12:18, hình chạy 00:14/22:45 — webview PLAYS)

@@ -7,7 +7,7 @@
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "low",
-  "status": "review",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-20T16:46:00+07:00",
   "claimed_at": "2026-11-20T16:52:28+07:00",
@@ -21,11 +21,11 @@
     },
     "notes": "Da hoc xong khoa Introduction to Generative AI (Google, 45 phut, video 22 phut + doc + quiz) + doc them 2 khoa cung path (LLM, Responsible AI). Bao cao research/119-introduction-to-generative-ai-google.md: tom tat 6 muc khoa chinh (generative vs discriminative, foundation model, PaLM/LaMDA, cong cu Vertex AI), 2 khoa mo rong (3 loai LLM, prompt design vs engineering, PETM, 7 nguyen tac AI Google), 7 diem ap dung ngay cho viec chung, 2 de xuat cap nhat skill vbook-extension-building (viet checklist nhu prompt instruction-tuned; bai thu phan loai generative/discriminative). Khong de xuat sua PROTOCOL. Khong dang ky chung chi tra phi.",
     "review": {
-      "score": "",
-      "rounds": 0,
-      "by": "",
-      "at": "",
-      "note": ""
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-20T17:01:00+07:00",
+      "note": "Báo cáo đầy đủ khóa chính + 2 khóa cùng path, đối chiếu đúng trang chính thức cloudskillsboost.google/course_templates/536 (45 phút, Introductory, rating 4,3/5 với 5.109 đánh giá — khớp báo cáo). 7 điểm áp dụng gắn với thực tế team (bài thử Y là số/nhãn hay nội dung, checklist như prompt, PETM). 2 đề xuất skill cụ thể, đã áp dụng vào shared/skills/vbook-extension-building/SKILL.md; không đề xuất sửa PROTOCOL. Trừ 2 điểm: hoàn thành khóa là tự báo cáo, không kiểm chứng độc lập được phần video/quiz. Task research nên validate/device test/install N/A (không có code)."
     }
   },
   "checklist": [
@@ -33,6 +33,6 @@
     "Ghi báo cáo vào research/ (điều học được, áp dụng được ngay cho việc chung)",
     "Đề xuất cập nhật skill nếu có gì dùng được, push branch, cập nhật task sang review"
   ],
-  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29: Vịt xong task 118 (Elements of AI) 20/11 16:46, board không còn task mở cho Vịt — giao khóa tiếp theo theo phân vai Anh chốt 20/11: muse-2 (Vịt, research) → Introduction to Generative AI (Google); nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
-  "updated_at": "2026-11-20T17:15:00+07:00"
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29: Vịt xong task 118 (Elements of AI) 20/11 16:46, board không còn task mở cho Vịt — giao khóa tiếp theo theo phân vai Anh chốt 20/11: muse-2 (Vịt, research) → Introduction to Generative AI (Google); nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.\n[20/11 17:01 muse-main: review 8/10 vòng 1 — báo cáo khớp trang chính thức Cloud Skills Boost (45 phút, rating 4,3/5, 5.109 đánh giá), 7 điểm áp dụng gắn thực tế team; merge branch feature/119-intro-generative-ai-google lên main (2100c2d); 2 đề xuất skill đã áp dụng vào shared/skills/vbook-extension-building/SKILL.md; task done. Vịt rảnh → tạo task 120 (Prompt Design in Vertex AI, Google) theo §10(a).]",
+  "updated_at": "2026-11-20T17:01:00+07:00"
 }
