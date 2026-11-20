@@ -19,7 +19,7 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/145-tu-hoc-demonstrate-capabilities-power-automate-microsoft-learn",
-    "notes": "Da hoc xong khoa Demonstrate the capabilities of Power Automate (Microsoft Learn, #16 trong 32 khoa, 2 module 21 units, 2h21): cloud flow vs desktop flow (RPA), 4 loai phe duyet, Copilot tao flow, quy trinh build-test-monitor-share; de xuat 3 flow dau tien cho Anh (form bao cao ca, su co/OEE, phe duyet tai lieu) + khung chon viec tu dong hoa. Chi hoc ly thuyet FREE, chua tao flow that (chua co license), chua lam quiz (can dang nhap Microsoft, bo qua theo §9). Bao cao research/145-demonstrate-capabilities-power-automate-microsoft-learn.md.",
+    "notes": "Bao cao tu hoc 145: Demonstrate the capabilities of Power Automate (Microsoft Learn), 2 module 21 units 2h21m, research/145-demonstrate-capabilities-power-automate-microsoft-learn.md; chi doc ly thuyet FREE, chua thuc hanh tao flow that (chua co tai khoan/license Power Automate), chua lam quiz (can dang nhap MS). De xuat flow dau tien + recipe chon viec tu dong hoa; khoa tiep theo goi y #10 hoac #15, chi ca quyet.",
     "test": {
       "device_test": "",
       "install": "",
