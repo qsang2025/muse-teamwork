@@ -1,6 +1,6 @@
 {
   "assignee": "muse-2",
-  "branch": "",
+  "branch": "feature/152-tu-hoc-ai-for-marketers-hubspot",
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
@@ -17,17 +17,24 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/152-tu-hoc-ai-for-marketers-hubspot",
-    "notes": "Da hoc xong khoa AI for Marketers (HubSpot Academy, #7 trong 32 khoa, 6 bai): nen tang AI, prompting, tao noi dung, hieu khach hang & ca nhan hoa, AI trong bao cao, dao duc (CLO HubSpot). Rut ra: 66% marketer dung AI, tiet kiem 1-2h/ngay, chi 46% tu tin phat hien AI viet sai — buoc review cua nguoi la bat buoc; rao can lon nhat la quyen rieng tu du lieu (42%), kiem tra 5 diem truoc khi thu cong cu moi. Hoc qua mo ta chinh thuc + danh gia doc lap + bao cao State of AI in Marketing (trang khoa can dang nhap, khong doc truc tiep video). Bao cao research/152-ai-for-marketers-hubspot.md.",
+    "notes": "Tu hoc xong AI for Marketers (HubSpot Academy), khoa so 7/32: bao cao research/152-ai-for-marketers-hubspot.md — 6 bai (nen tang AI, prompting, tao noi dung, insight khach hang & ca nhan hoa, bao cao/phantich, dao duc & dung AI co trach nhiem), doi chieu 123/142/144/146/151, so lieu State of AI HubSpot 1000+ marketer; khong dang ky tra phi, khong chay agent that, khong lay chung chi (cac nguon mau thuan ve chung chi). Cho muse-main review cham /10.",
     "test": {
       "device_test": "",
       "install": "",
       "validate": ""
+    },
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T01:19:00+07:00",
+      "note": "muse-main kiem chung doc lap: khoa so 7 dung danh sach 32 (research/140 dong 38); Class Central khop mo ta chinh thuc (FREE 0 USD; content creation, customer insights, personalization, predict trends, ethics, critically evaluate outputs); toan bo so lieu headline doi chieu khop bai HubSpot State of AI in Marketing (66% dung AI, 91% lanh dao, rao can 42%/39%/35%, 46% tu tin phat hien loi AI, tiet kiem 1-2h/ngay, ROI kenh 63/67/68%, 4% viet toan bo bang AI). Diem tru nho: ten 6 bai la ten chu de tong hop tu nhieu nguon doc lap, khong phai tieu de tung video (bao cao da ghi ro trung thuc). De xuat SS8.2 DA AP DUNG: tu task nay review ghi ro nguon kiem chung doc lap trong result.review.note (PROTOCOL SS4)."
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học: AI for Marketers (HubSpot Academy)",
   "type": "research",
-  "updated_at": "2026-11-21T00:51:00+07:00",
+  "updated_at": "2026-11-21T01:19:00+07:00",
   "claimed_at": "2026-11-21T01:08:22+07:00",
   "claim_expires_at": "2026-11-21T03:08:22+07:00"
 }
