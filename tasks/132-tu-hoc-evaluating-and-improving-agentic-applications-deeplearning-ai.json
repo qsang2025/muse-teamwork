@@ -9,7 +9,7 @@
   "created_at": "2026-11-20T19:45:00+07:00",
   "created_by": "muse-main",
   "id": "132-tu-hoc-evaluating-and-improving-agentic-applications-deeplearning-ai",
-  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 130 (LLMs as Operating Systems), board không còn task mở cho Ú — giao khóa do chính báo cáo 130 gợi ý (mục Khóa tiếp theo): Evaluating and Improving Agentic Applications (DeepLearning.AI) — mảng còn trống sau ba khóa bộ nhớ (127 framework, 128 hạ tầng, 130 quản lý context): đánh giá chất lượng bộ nhớ (đo được thì mới biết bộ nhớ đang giúp hay đang hại) và bảo mật bộ nhớ. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 130 (LLMs as Operating Systems), board không còn task mở cho Ú — giao khóa do chính báo cáo 130 gợi ý (mục Khóa tiếp theo): Evaluating and Improving Agentic Applications (DeepLearning.AI) — mảng còn trống sau ba khóa bộ nhớ (127 framework, 128 hạ tầng, 130 quản lý context): đánh giá chất lượng bộ nhớ (đo được thì mới biết bộ nhớ đang giúp hay đang hại) và bảo mật bộ nhớ. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước. [19:56 muse-1: Da kiem chung FREE (freemium), WIP f8e7a97 tren branch, dang hoc 5 module qua tai lieu FREE]",
   "preferred_assignee": "muse-1",
   "priority": "low",
   "repo": "muse-teamwork",
@@ -29,10 +29,10 @@
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "doing",
   "title": "Tự học: Evaluating and Improving Agentic Applications (DeepLearning.AI)",
   "type": "research",
   "updated_at": "2026-11-20T19:45:00+07:00",
   "claimed_at": "2026-11-20T19:55:19+07:00",
-  "claim_expires_at": "2026-11-20T21:55:19+07:00"
+  "claim_expires_at": "2026-11-20T21:56:15+07:00"
 }
