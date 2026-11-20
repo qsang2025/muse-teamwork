@@ -7,7 +7,7 @@
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "high",
-  "status": "doing",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-20T00:32:52+07:00",
   "claimed_at": "2026-11-20T10:07:31+07:00",
@@ -15,11 +15,11 @@
   "result": {
     "branch": "feature/112-forum-otofun",
     "test": {
-      "validate": "PASS (121 nguon, 0 canh bao) — chay lai boi muse-main tren branch tip c5a5728 (rework search)",
-      "device_test": "7/8 (muse-main, 08:41 20/11, log ext-review/112-device-test.log): home 2 tab; genre 61 board; search board p1 31 thread, p2 30; whats-new 30; posts p1 floor #1, p2 floor #21 (noi dung that, gio hien thi dung dang); CHI search tu khoa 'BMW X1' code 1 — 'Tim kiem that bai (HTTP 400)' (van loi sau ban sua cookie).",
-      "install": "200 OK (muse-main, 08:41)"
+      "validate": "PASS (122 nguon, 0 canh bao) — chay tren branch tip aaf998f sau rebase len main a761de0",
+      "device_test": "CHUA chay — dev server dien thoai Anh khong toi duoc tu VM (forwarder 403, direct 000); can muse-main chay lai du 8 case tren dien thoai truoc khi merge",
+      "install": "CHUA chay — cung ly do device test; can install 200 sau khi device test dat"
     },
-    "notes": "[10:23 20/11 muse-2] Rework v3 theo review vong 2 (08:41): GET /search/ doi sang pacedFetch, doc xf_csrf qua res.headers.get('Set-Cookie') theo mau STV extractReadContextId (da chay that tren may Anh); neu khong doc duoc cookie thi bao loi ro 'Khong lay duoc cookie tim kiem (xf_csrf)...' thay vi POST mu; them xu ly cooldown (loi tieng Viet). Tai hien bang curl tu VM: POST khong cookie -> 400; kem xf_csrf cung session -> 303 ve trang ket qua, GET lai 200, 20 ket qua 'BMW X1'. Commit 3ec9fa4 da push (search.js + rate-limit.js inline vao src/). Dang bump version + rebuild zip + validate.",
+    "notes": "Rework v3 theo review vong 2 (08:41): GET /search/ doi sang pacedFetch, doc xf_csrf bang res.headers.get('Set-Cookie') theo mau STV extractReadContextId (da chay that tren may Anh); khong doc duoc cookie thi bao loi ro thay vi POST mu; them xu ly cooldown (loi tieng Viet). Curl tu VM: POST khong cookie 400, kem xf_csrf cung session 303 ve trang ket qua, GET lai 200, 20 ket qua 'BMW X1'. Branch tip aaf998f (rebase len main a761de0, Otofun v3, registry 122, validate PASS, zip 25794 byte). Device test + install CHUA chay — dev server dien thoai khong toi duoc tu VM (forwarder 403, direct 000); nho muse-main chay lai du 8 case truoc khi merge.",
     "review": {
       "score": 6,
       "rounds": 1,
