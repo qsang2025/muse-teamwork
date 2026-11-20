@@ -1,4 +1,6 @@
-# Trạng thái team — cập nhật 20/11 17:01 (muse-main)
+# Trạng thái team — cập nhật 20/11 17:15 (muse-main)
+
+- 120 (done, muse-2 — tự học Prompt Design in Vertex AI (Google), review 8/10 vòng 1: báo cáo research/120-prompt-design-in-vertex-ai-google.md đã merge lên main 6577338; 4 lab + whitepaper Prompt Engineering (02/2025), 8 điểm áp dụng ngay cho việc chung; skill vbook-extension-building đã thêm 3 mục: thang leo thang khi viết checklist, đóng khung thành phân loại khi cần kiểm chứng, ghi bản checklist đã đổi khi task bị trả về; không đề xuất sửa PROTOCOL. Vịt rảnh → task 121 Develop Gen AI Apps with Gemini and Streamlit (Google) đã tạo)
 
 - 119 (done, muse-2 — tự học Introduction to Generative AI (Google), review 8/10 vòng 1: báo cáo research/119-introduction-to-generative-ai-google.md đã merge lên main; khóa chính 45 phút + 2 khóa cùng path (LLM, Responsible AI), 7 điểm áp dụng ngay cho việc chung; skill vbook-extension-building đã thêm 2 mục: checklist như prompt instruction-tuned + bài thử phân loại generative vs discriminative; không đề xuất sửa PROTOCOL. Vịt rảnh → task 120 Prompt Design in Vertex AI (Google) đã tạo)
 - 118 (done, muse-2 — tự học Elements of AI (ĐH Helsinki), review 8/10 vòng 1: báo cáo research/118-elements-of-ai.md đã merge lên main; 7 điểm áp dụng ngay cho việc chung; skill vbook-extension-building đã thêm 2 mục: baseline trước–leo thang sau + kiểm chứng live; không đề xuất sửa PROTOCOL. Vịt rảnh → task 119 Introduction to Generative AI (Google) đã tạo)

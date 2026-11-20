@@ -7,7 +7,7 @@
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "low",
-  "status": "review",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-20T17:01:00+07:00",
   "claimed_at": "2026-11-20T17:02:50+07:00",
@@ -21,11 +21,11 @@
     },
     "notes": "Da hoc xong khoa Prompt Design in Vertex AI (Google, ~3h45, 4 lab): giai phau prompt, temperature/top-K/top-P, zero/one/few-shot, system/role/contextual, CoT, self-consistency, ToT, ReAct, step-back, APE, bien generative thanh classification, multimodal, GenAI SDK, Gen AI Evaluation Service, Responsible AI. Bao cao research/120-prompt-design-in-vertex-ai-google.md (10 muc + 8 diem ap dung + 4 de xuat skill). Chi hoc noi dung, khong dang ky chung chi tra phi, khong chay lab GCP. Gotcha: claim-task.sh tu choi vi file task tao san assignee muse-2 — da claim thu cong, ghi trong commit claim.",
     "review": {
-      "score": "",
-      "rounds": 0,
-      "by": "",
-      "at": "",
-      "note": ""
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-20T17:15:00+07:00",
+      "note": "Báo cáo đầy đủ 4 lab + whitepaper Prompt Engineering (Google, 02/2025): giải phẫu prompt, temperature/top-K/top-P, thang leo thang zero→few-shot→CoT→self-consistency/ToT→ReAct, biến generative thành classification, multimodal, SDK, Gen AI Evaluation Service, Responsible AI. 8 điểm áp dụng gắn thực tế team (checklist leo thang, một task một việc, instruction thay constraint, chấm review thành phân loại, nhật ký checklist, device test nhiều case, PROTOCOL=system instruction, hỏi ảnh cụ thể). 3 đề xuất skill cụ thể, đã áp dụng vào shared/skills/vbook-extension-building/SKILL.md; không đề xuất sửa PROTOCOL. Trừ 2 điểm: lab GCP không chạy thật (đúng checklist — không đăng ký trả phí, không có project GCP), nội dung lab dựa vào tài liệu chính thức + ghi chép học viên đã hoàn thành. Task research nên validate/device test/install N/A (không có code)."
     }
   },
   "checklist": [
@@ -33,6 +33,6 @@
     "Ghi báo cáo vào research/ (điều học được, áp dụng được ngay cho việc chung)",
     "Đề xuất cập nhật skill nếu có gì dùng được, push branch, cập nhật task sang review"
   ],
-  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29: Vịt xong task 119 (Introduction to Generative AI) 20/11 17:01, board không còn task mở cho Vịt — giao khóa tiếp theo theo phân vai Anh chốt 20/11: muse-2 (Vịt, research) → Prompt Design in Vertex AI (Google); khóa này là bước nối tiếp tự nhiên của task 119 (prompt design/engineering + multimodal, dùng Gemini trong Vertex AI, ~3h45, cùng learning path Generative AI trên Cloud Skills Boost), do chính Vịt gợi ý trong báo cáo 119 và muse-main quyết theo §10(a). Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
-  "updated_at": "2026-11-20T17:02:50+07:00"
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29: Vịt xong task 119 (Introduction to Generative AI) 20/11 17:01, board không còn task mở cho Vịt — giao khóa tiếp theo theo phân vai Anh chốt 20/11: muse-2 (Vịt, research) → Prompt Design in Vertex AI (Google); khóa này là bước nối tiếp tự nhiên của task 119 (prompt design/engineering + multimodal, dùng Gemini trong Vertex AI, ~3h45, cùng learning path Generative AI trên Cloud Skills Boost), do chính Vịt gợi ý trong báo cáo 119 và muse-main quyết theo §10(a). Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.\n[20/11 17:15 muse-main: DONE review 8/10 vòng 1 — báo cáo research/120-prompt-design-in-vertex-ai-google.md đã merge lên main 6577338; 3 đề xuất skill đã áp dụng vào shared/skills/vbook-extension-building/SKILL.md (d3f4e86); không đề xuất sửa PROTOCOL. Vịt rảnh → task 121 Develop Gen AI Apps with Gemini and Streamlit (Google) đã tạo.]",
+  "updated_at": "2026-11-20T17:15:00+07:00"
 }
