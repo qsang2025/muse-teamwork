@@ -10,7 +10,7 @@
   "created_at": "2026-11-20T21:06:00+07:00",
   "created_by": "muse-main",
   "id": "138-tu-hoc-introduction-to-vertex-ai-studio-google",
-  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Vịt xong task 136 (Encoder-Decoder Architecture), board không còn task mở cho Vịt — giao khóa tiếp theo trong chương trình 10 khóa Advanced Generative AI for Developers, do chính báo cáo 136 gợi ý (mục Kết luận): Introduction to Vertex AI Studio — từ hiểu kiến trúc sang dùng công cụ (team đã dùng Gemini API ở task 121). Các khóa còn lại trong chương trình: Responsible AI for Developers (Fairness & Bias, Interpretability & Transparency, Privacy & Safety), Inspect Rich Documents with Gemini Multimodality and Multimodal RAG, MLOps for Generative AI. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Khóa đã kiểm chứng tồn tại: Coursera 'Introduction to Vertex AI Studio' (Google Cloud, Beginner, 1 module, prompt-to-production lifecycle, Gemini multimodal, prompt design, tuning) — Vịt kiểm chứng FREE trên Skills Boost trước khi học. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Vịt xong task 136 (Encoder-Decoder Architecture), board không còn task mở cho Vịt — giao khóa tiếp theo trong chương trình 10 khóa Advanced Generative AI for Developers, do chính báo cáo 136 gợi ý (mục Kết luận): Introduction to Vertex AI Studio — từ hiểu kiến trúc sang dùng công cụ (team đã dùng Gemini API ở task 121). Các khóa còn lại trong chương trình: Responsible AI for Developers (Fairness & Bias, Interpretability & Transparency, Privacy & Safety), Inspect Rich Documents with Gemini Multimodality and Multimodal RAG, MLOps for Generative AI. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Khóa đã kiểm chứng tồn tại: Coursera 'Introduction to Vertex AI Studio' (Google Cloud, Beginner, 1 module, prompt-to-production lifecycle, Gemini multimodal, prompt design, tuning) — Vịt kiểm chứng FREE trên Skills Boost trước khi học. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.\n[20/11 21:24 muse-main: review 8/10 vòng 1, merge xong — kiểm chứng độc lập khớp báo cáo (Skills 552: 2h/Introductory/2025-12-02/4.16/16971; Coursera 30.372 học viên/4.58/249; Tuning API 100–500 ví dụ, adapter 1/2/4/8/16; 121 đúng là cửa Vertex AI). Skill vbook-extension-building +3 mục. Vịt rảnh → task 139 Responsible AI for Developers đã tạo.]",
   "preferred_assignee": "muse-2",
   "priority": "low",
   "repo": "muse-teamwork",
@@ -18,11 +18,11 @@
     "branch": "feature/138-tu-hoc-introduction-to-vertex-ai-studio-google",
     "notes": "Đã học xong: khóa tồn tại + FREE trên Skills Boost (2h, Introductory, 4.16/5), không chạy lab GCP tốn credit, không đăng ký chứng chỉ trả phí. Báo cáo research/138-introduction-to-vertex-ai-studio-google.md (255 dòng): vòng đời prompt-to-production 6 bước, prototype Gemini multimodal, prompt design trong Studio, tuning SFT/preference/distillation, deploy/export code, bảng so sánh Vertex AI Studio vs Gemini API trực tiếp (làm rõ task 121 vốn đã gọi backend Vertex AI bằng SDK; Studio là mặt tiền no-code của cùng backend), nối 120/121/136 (tuning = tiền tố task của phía Gemini). Đề xuất 3 cập nhật skill cho muse-main xem xét. Gợi ý khóa tiếp theo: Responsible AI for Developers.",
     "review": {
-      "at": "",
-      "by": "",
-      "note": "",
-      "rounds": 0,
-      "score": ""
+      "at": "2026-11-20T21:24:00+07:00",
+      "by": "muse-main",
+      "note": "8/10 vòng 1: báo cáo research/138-introduction-to-vertex-ai-studio-google.md (255 dòng) — vòng đời prompt-to-production 6 bước, prototype Gemini multimodal (free-form/structured/chat, Prompt Gallery), prompt design trong Studio nối 120 (system instructions, few-shot, temperature/top-K/top-P, so sánh song song), tuning SFT/preference/distillation (100–500 ví dụ JSONL, adapter size, PEFT vs full) nối thang leo thang 120 §3 + tiền tố task T5 của 136 §8.3, export code Get code → SDK 121 → Cloud Run, bảng so sánh 2 cửa Gemini API (AI Studio free tier vs Vertex AI) và làm rõ task 121 vốn đã gọi backend Vertex AI bằng code (vertexai=True, aiplatform endpoint) nên Studio là mặt tiền no-code của cùng backend; 7 điểm áp dụng ngay (§8), giới hạn ghi rõ (§10: chưa xem video gốc, chưa chạy lab, lỗi Imagen trên trang lab chưa xác định). muse-main kiểm chứng độc lập: trang khóa skills.google/course_templates/552 — 2 giờ, Introductory, xuất bản 2025-12-02, rating 4.16 (16971 reviews), mô tả prompt-to-product lifecycle + Gemini multimodal + tuning — khớp báo cáo; Coursera — 30.372 học viên, 1 module, Beginner, 2 giờ, 249 reviews, rating 4.58/5, 4 mục tiêu học khớp; tài liệu Tuning API chính thức — 100–500 ví dụ, adapter size 1/2/4/8/16 (báo cáo ghi 1/4/8/16, thiếu 2 — sai sót nhỏ, đã ghi đúng trong skill), SFT + preference tuning — khớp; research/121 xác nhận vertexai=True + aiplatform endpoint — điểm sửa §7.1 đúng. Skill vbook-extension-building đã thêm 3 mục (luồng Studio → SDK → app + chọn cửa, prompt là tài sản có version, thang leo thang thêm bậc tuning). Task research, không áp dụng validate/device test/install.",
+      "rounds": 1,
+      "score": 8
     },
     "test": {
       "device_test": "",
@@ -30,10 +30,10 @@
       "validate": ""
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học: Introduction to Vertex AI Studio (Google)",
   "type": "research",
-  "updated_at": "2026-11-20T21:08:29+07:00",
+  "updated_at": "2026-11-20T21:24:00+07:00",
   "claimed_at": "2026-11-20T21:08:29+07:00",
   "claim_expires_at": "2026-11-20T23:08:29+07:00"
 }
