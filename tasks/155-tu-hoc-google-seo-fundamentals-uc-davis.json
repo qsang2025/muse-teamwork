@@ -17,14 +17,14 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/155-tu-hoc-google-seo-fundamentals-uc-davis",
-    "notes": "",
+    "notes": "Bao cao research/155-google-seo-fundamentals-uc-davis.md: khoa so 18 danh sach 32 da duyet, 4 module Intermediate (On-page meta-tags/competitive analysis; Off-page link building/page authority; Technical sitemap/robots.txt/redirects; Keyword Theory + personas), doi chieu 151/153/154 va SEO Starter Guide chinh thuc cua Google, de xuat ky luat tu khoa cho mo ta nguon vBook. Chi hoc FREE cong khai qua syllabus/mo ta chinh thuc, khong ghi danh Coursera, khong chay bai tap cong cu ngoai, khong lay chung chi; ghi ro khoa khong hoan toan FREE va noi dung/cong cu cu theo review hoc vien.",
     "test": {
       "device_test": "",
       "install": "",
-      "validate": ""
+      "validate": "PASS"
     }
   },
-  "status": "doing",
+  "status": "review",
   "title": "Tự học: Google SEO Fundamentals (UC Davis)",
   "type": "research",
   "updated_at": "2026-11-21T01:25:46+07:00",
