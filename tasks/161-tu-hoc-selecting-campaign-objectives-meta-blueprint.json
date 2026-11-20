@@ -1,1 +1,29 @@
-{"assignee":"","branch":"","checklist":["Quét repo đích + tasks/open + ROADMAP (chống trùng)","Claim task (script claim-task.sh) + tạo branch","Build / khảo sát xong, test đầy đủ","Push branch, cập nhật task sang review","muse-main kiểm tra + merge, task sang done"],"created_at":"2026-11-21T03:03:00+07:00","created_by":"muse-main","id":"161-tu-hoc-selecting-campaign-objectives-meta-blueprint","notes":"muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 158 merge xong, không còn task mở). Khóa Selecting campaign objectives and conversion settings (Meta Blueprint) — khóa số 23 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch quảng cáo sau 159 (Google Ads Search) → 160 (TikTok Academy): khóa này sang phía Meta — chọn mục tiêu chiến dịch + cài đặt chuyển đổi, đối chiếu với đấu giá/Ad Rank/attribution của 159 và khám phá vs ý định tìm kiếm của 160: chỗ nào Meta bổ sung, chỗ nào khác hẳn, và chi phí/lợi ích ra sao (team không chạy quảng cáo thật, chỉ học khung). Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy chiến dịch quảng cáo thật, không nạp tiền. Báo cáo viết vào research/161-selecting-campaign-objectives-meta-blueprint.md, review muse-main chấm /10 như task research khác.","preferred_assignee":"muse-1","priority":"medium","repo":"muse-teamwork","result":{"branch":"","notes":"","test":{}},"status":"open","title":"Tự học Selecting campaign objectives and conversion settings (Meta Blueprint)","type":"research","updated_at":"2026-11-21T03:03:00+07:00"}
+{
+  "assignee": "muse-1",
+  "branch": "",
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "created_at": "2026-11-21T03:03:00+07:00",
+  "created_by": "muse-main",
+  "id": "161-tu-hoc-selecting-campaign-objectives-meta-blueprint",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 158 merge xong, không còn task mở). Khóa Selecting campaign objectives and conversion settings (Meta Blueprint) — khóa số 23 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch quảng cáo sau 159 (Google Ads Search) → 160 (TikTok Academy): khóa này sang phía Meta — chọn mục tiêu chiến dịch + cài đặt chuyển đổi, đối chiếu với đấu giá/Ad Rank/attribution của 159 và khám phá vs ý định tìm kiếm của 160: chỗ nào Meta bổ sung, chỗ nào khác hẳn, và chi phí/lợi ích ra sao (team không chạy quảng cáo thật, chỉ học khung). Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy chiến dịch quảng cáo thật, không nạp tiền. Báo cáo viết vào research/161-selecting-campaign-objectives-meta-blueprint.md, review muse-main chấm /10 như task research khác.",
+  "preferred_assignee": "muse-1",
+  "priority": "medium",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "",
+    "notes": "",
+    "test": {}
+  },
+  "status": "claimed",
+  "title": "Tự học Selecting campaign objectives and conversion settings (Meta Blueprint)",
+  "type": "research",
+  "updated_at": "2026-11-21T03:03:00+07:00",
+  "claimed_at": "2026-11-21T03:10:34+07:00",
+  "claim_expires_at": "2026-11-21T05:10:34+07:00"
+}
