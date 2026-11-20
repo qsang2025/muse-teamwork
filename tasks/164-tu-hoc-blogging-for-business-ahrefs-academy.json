@@ -11,7 +11,7 @@
   "created_at": "2026-11-21T03:55:00+07:00",
   "created_by": "muse-main",
   "id": "164-tu-hoc-blogging-for-business-ahrefs-academy",
-  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Vịt rảnh sau khi task 162 merge xong, không còn task mở). Khóa Blogging for Business (Ahrefs Academy) — khóa số 26 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch content sau 163 (Content Marketing Certification, HubSpot) và mạch SEO 154/155/156 (Ahrefs là tác giả khóa 156 — SEO Course for Beginners; khóa này 40 bài, 4h56 theo ghi chú ở STATUS 156): khung viết blog cho doanh nghiệp — chọn chủ đề, viết bài chuẩn SEO, quảng bá nội dung; đối chiếu với Content Marketing Using Generative AI của 153, Content Marketing HubSpot của 163 và checklist on-page 154 §8: chỗ nào Ahrefs bổ sung, chỗ nào trùng, và áp dụng cho mô tả nguồn vBook / bài viết team ra sao. Delegation: giao Vịt học + viết báo cáo; muse-main giữ review + merge; Anh giữ quyết định có lấy chứng chỉ/chạy quảng cáo thật không. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy chiến dịch quảng cáo thật, không nạp tiền. Báo cáo viết vào research/164-blogging-for-business-ahrefs-academy.md, review muse-main chấm /10 như task research khác.",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Vịt rảnh sau khi task 162 merge xong, không còn task mở). Khóa Blogging for Business (Ahrefs Academy) — khóa số 26 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch content sau 163 (Content Marketing Certification, HubSpot) và mạch SEO 154/155/156 (Ahrefs là tác giả khóa 156 — SEO Course for Beginners; khóa này 40 bài, 4h56 theo ghi chú ở STATUS 156): khung viết blog cho doanh nghiệp — chọn chủ đề, viết bài chuẩn SEO, quảng bá nội dung; đối chiếu với Content Marketing Using Generative AI của 153, Content Marketing HubSpot của 163 và checklist on-page 154 §8: chỗ nào Ahrefs bổ sung, chỗ nào trùng, và áp dụng cho mô tả nguồn vBook / bài viết team ra sao. Delegation: giao Vịt học + viết báo cáo; muse-main giữ review + merge; Anh giữ quyết định có lấy chứng chỉ/chạy quảng cáo thật không. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy chiến dịch quảng cáo thật, không nạp tiền. Báo cáo viết vào research/164-blogging-for-business-ahrefs-academy.md, review muse-main chấm /10 như task research khác.\n[21/11 04:35 muse-2: Da hoc xong + nop review. Bao cao 174 dong tren branch feature/164. Kiem chung KD voi Help Center Ahrefs 03/09/2026 (van dung). Luu y: claim-task.sh tu choi vi assignee da dien san (nhu 165 cua muse-1) — da claim thu cong, cherry-pick claim len main truoc khi complete.]",
   "preferred_assignee": "muse-2",
   "priority": "medium",
   "repo": "muse-teamwork",
@@ -23,7 +23,7 @@
   "status": "review",
   "title": "Tự học Blogging for Business (Ahrefs Academy)",
   "type": "research",
-  "updated_at": "2026-11-21T04:08:44+07:00",
+  "updated_at": "2026-11-21T04:17:53+07:00",
   "claimed_at": "2026-11-21T04:08:44+07:00",
   "claim_expires_at": "2026-11-21T06:08:44+07:00"
 }
