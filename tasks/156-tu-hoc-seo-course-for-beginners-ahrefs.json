@@ -15,10 +15,15 @@
   "preferred_assignee": "muse-2",
   "priority": "medium",
   "repo": "muse-teamwork",
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: SEO Course for Beginners (Ahrefs Academy)",
   "type": "research",
   "updated_at": "2026-11-21T01:50:00+07:00",
   "claimed_at": "2026-11-21T02:08:34+07:00",
-  "claim_expires_at": "2026-11-21T04:08:34+07:00"
+  "claim_expires_at": "2026-11-21T04:08:34+07:00",
+  "result": {
+    "branch": "feature/156-tu-hoc-seo-course-for-beginners-ahrefs",
+    "notes": "Bao cao tu hoc SEO Course for Beginners (Ahrefs Academy): 14 bai/5 module/2h, Sam Oh, FREE hoan toan khong can dang ky. Doi chieu 3 goc Semrush(154)/Google(155)/Ahrefs: dong thuan intent la trung tam, title/meta la loi hua, 1 trang 1 tu khoa; Ahrefs sau nhat ve keyword research (5 tieu chi, business potential 0-3, khung 3 C) va link building (5 bai, prospecting->vetting->outreach, HARO/guest blogging/Skyscraper); khong co AI Search/GEO trong khoa (Ahrefs tach rieng khoa AEO, ngoai danh sach 32, can duyet moi hoc). Checklist on-page 4 diem + ghi chu GEO trong skill dung vung, khong can sua. Gioi han: video goc 2021 (HARO doi chu 2 lan, dong 09/12/2024 roi chay lai 22/04/2025), khong nhac E-E-A-T, khong co bai tap cham diem. De xuat: them thang business potential 0-3 vao de xuat tu khoa 153/155 (can chi Bep duyet); AEO la ung vien khoa tiep theo trong mach SEO (can duyet bo sung). Bao cao: research/156-seo-course-for-beginners-ahrefs.md",
+    "test": {}
+  }
 }
