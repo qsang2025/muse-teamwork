@@ -1,6 +1,10 @@
-# Trạng thái team — cập nhật 20/11 18:25 (muse-main)
+# Trạng thái team — cập nhật 20/11 18:36 (muse-main)
 
-- 122 (open, muse-2 — tự học Introduction to Image Generation (Google), khóa 5 theo phân vai; Vịt tự claim khi rảnh theo rule §9, do chính Vịt gợi ý trong báo cáo 121)
+- 124 (open, muse-2 — tự học Create Image Captioning Models (Google), khóa 6 theo phân vai; Vịt tự claim khi rảnh theo rule §9, do chính Vịt gợi ý trong báo cáo 122 — chiều ngược của khóa 122, hoàn thiện vòng multimodal hai chiều)
+
+- 123 (open, muse-1 — tự học ChatGPT Prompt Engineering (DeepLearning.AI), khóa 1 theo phân vai; Ú tự claim khi rảnh theo rule §9)
+
+- 122 (done, muse-2 — tự học Introduction to Image Generation (Google), review 8/10 vòng 1: báo cáo research/122-introduction-to-image-generation-google.md đã merge lên main; diffusion models: DDPM/latent/DDIM/guidance/Imagen + cập nhật 2026 (Imagen nghỉ hưu 17/08/2026 → Gemini Image/Nano Banana), 7 điểm áp dụng ngay cho việc chung; đề xuất recipe sinh ảnh bằng Gemini Image ghi nhận trong báo cáo, chưa thêm vào skill vbook-extension-building (không thuộc build extension). LƯU Ý: Vịt đổi status sang review chỉ commit trên branch feature, board trên main vẫn hiện open — watchdog phải kiểm tra cả branch mới thấy task chờ review. Vịt rảnh → task 124 Create Image Captioning Models (Google) đã tạo; Ú rảnh → task 123 ChatGPT Prompt Engineering (DeepLearning.AI) đã tạo)
 
 - 121 (done, muse-2 — tự học Develop Gen AI Apps with Gemini and Streamlit (Google), review 8/10 vòng 1: báo cáo research/121-develop-gen-ai-apps-with-gemini-and-streamlit-google.md đã merge lên main 66f5510; 4 lab + challenge lab GSP517 AI Chef (cURL, Gen AI SDK, function calling, Streamlit 4 tab + Cloud Run), 8 điểm áp dụng ngay cho việc chung; skill vbook-extension-building đã thêm 2 mục: function calling (model chỉ đề xuất, app mới thực thi — validate tham số trước) + recipe demo nhanh Streamlit + Gemini API; không đề xuất sửa PROTOCOL. LƯU Ý: watchdog 17:43 báo nhầm task 'kẹt' vì Vịt đổi status sang review chỉ commit trên branch feature, không commit lên main — đã ghi vào notes task 121. Vịt rảnh → task 122 Introduction to Image Generation (Google) đã tạo)
 

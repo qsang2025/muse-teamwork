@@ -1,29 +1,29 @@
 {
-  "assignee": "",
+  "assignee": "muse-2",
   "branch": "feature/122-introduction-to-image-generation-google",
   "checklist": [
     "Học khóa Introduction to Image Generation (Google Cloud Skills Boost, Generative AI learning path, ~1 giờ, diffusion models) — chỉ nội dung, không đăng ký chứng chỉ trả phí, không chạy lab GCP tốn credit",
     "Ghi báo cáo vào research/ (điều học được, áp dụng được ngay cho việc chung)",
     "Đề xuất cập nhật skill nếu có gì dùng được, push branch, cập nhật task sang review"
   ],
-  "claim_expires_at": "",
-  "claimed_at": "",
+  "claim_expires_at": "2026-11-20T20:08:07+07:00",
+  "claimed_at": "2026-11-20T18:08:07+07:00",
   "created_at": "2026-11-20T17:47:00+07:00",
   "created_by": "muse-main",
   "id": "122-tu-hoc-introduction-to-image-generation-google-khoa-5",
-  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29: Vịt xong task 121 (Develop Gen AI Apps with Gemini and Streamlit) 20/11 17:46, board không còn task mở cho Vịt — giao khóa tiếp theo theo phân vai Anh chốt 20/11: muse-2 (Vịt, research) → Introduction to Image Generation (Google); khóa này do chính Vịt gợi ý trong báo cáo 121 (cùng báo cáo 120) và muse-main quyết theo §10(a): mở rộng sang multimodal phía sinh ảnh (diffusion models) — phần còn thiếu sau khi đã học sinh text (118–119), viết prompt (120) và đóng thành app (121). Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29: Vịt xong task 121 (Develop Gen AI Apps with Gemini and Streamlit) 20/11 17:46, board không còn task mở cho Vịt — giao khóa tiếp theo theo phân vai Anh chốt 20/11: muse-2 (Vịt, research) → Introduction to Image Generation (Google); khóa này do chính Vịt gợi ý trong báo cáo 121 (cùng báo cáo 120) và muse-main quyết theo §10(a): mở rộng sang multimodal phía sinh ảnh (diffusion models) — phần còn thiếu sau khi đã học sinh text (118–119), viết prompt (120) và đóng thành app (121). Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.\n\n[20/11 18:36 muse-main: Review vong 1 8/10 -> done. Bao cao research/122-introduction-to-image-generation-google.md da merge len main (chi lay file bao cao + task file tu branch feature/122, khong lay file 117/STATUS.md cu tren branch). Vong tu hoc cua Vit da xong 5 khoa (118-122). Task 124 Create Image Captioning Models da tao cho Vit theo goi y trong bao cao.]",
   "preferred_assignee": "muse-2",
   "priority": "low",
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/122-introduction-to-image-generation-google",
-    "notes": "",
+    "notes": "Học xong khóa Introduction to Image Generation (Google, ~1h, diffusion models). Báo cáo research/122-introduction-to-image-generation-google.md: forward/reverse process, DDPM (T=1000, U-Net dự đoán nhiễu), latent diffusion, DDIM, classifier-free guidance, Imagen + cập nhật 2026 (Imagen nghỉ hưu 17/08/2026, thay bằng Gemini Image/Nano Banana); 7 điểm áp dụng ngay (prompt ảnh 4 thành phần, guidance scale, seed, mở rộng demo Streamlit task 121 thêm tab ảnh, không gọi Imagen trong code mới); đề xuất recipe sinh ảnh bằng Gemini Image cho skill chung. Không lab GCP, không chứng chỉ trả phí.",
     "review": {
-      "at": "",
-      "by": "",
-      "note": "",
-      "rounds": 0,
-      "score": ""
+      "at": "2026-11-20T18:36:00+07:00",
+      "by": "muse-main",
+      "note": "Vong 1: 8/10. Bao cao day du 4 phan khoa + dao sau DDPM (T=1000, U-Net doan nhieu)/latent diffusion/DDIM/classifier-free guidance/Imagen; cap nhat 2026 (Imagen nghi huu 17/08/2026 -> Gemini Image/Nano Banana, 5 tham so khong con tuong duong); 7 diem ap dung ngay (prompt anh 4 thanh phan, guidance scale, seed + so buoc, mo rong demo Streamlit task 121 them tab anh, khong goi Imagen trong code moi); 6 cau tu kiem tra thay quiz (khong dang nhap lam quiz, theo checklist). De xuat recipe sinh anh bang Gemini Image — ghi nhan trong bao cao, chua them vao skill vbook-extension-building vi khong thuoc build extension; dung khi co task demo/sinh anh. Khoa tiep theo goi y: Create Image Captioning Models (anh -> text, hoan thien vong multimodal hai chieu). Chi merge bao cao research/122 + task file nay; KHONG merge file 117/STATUS.md tren branch (cu, da co ban moi hon tren main).",
+      "rounds": 1,
+      "score": 8
     },
     "test": {
       "device_test": "",
@@ -31,8 +31,8 @@
       "validate": ""
     }
   },
-  "status": "open",
+  "status": "done",
   "title": "Tự học: Introduction to Image Generation (Google) — khóa 5 theo phân vai",
   "type": "research",
-  "updated_at": "2026-11-20T17:47:00+07:00"
+  "updated_at": "2026-11-20T18:36:00+07:00"
 }
