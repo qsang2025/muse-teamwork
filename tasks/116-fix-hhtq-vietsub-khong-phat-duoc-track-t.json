@@ -1,0 +1,35 @@
+{
+  "id": "116-fix-hhtq-vietsub-khong-phat-duoc-track-t",
+  "title": "Fix HHTQ Vietsub khong phat duoc (track tra auto, app bao loi may chu)",
+  "type": "vbook-extension",
+  "repo": "Qsang_vbook",
+  "branch": "",
+  "assignee": "",
+  "preferred_assignee": "muse-1",
+  "priority": "high",
+  "status": "open",
+  "created_by": "muse-main",
+  "created_at": "2026-11-20T08:48:07+07:00",
+  "claimed_at": "",
+  "claim_expires_at": "",
+  "result": {
+    "branch": "",
+    "test": {
+      "validate": "",
+      "device_test": "",
+      "install": ""
+    },
+    "notes": ""
+  },
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch từ main tip",
+    "Khảo sát live cách trang embed lấy link phát (bootstrap JSON + player JS + API)",
+    "Sửa track.js (và chap.js nếu cần) để trả native .m3u8/.mp4 thật cho cả 2 host embed",
+    "validate PASS + device test code 0 + install 200 trên điện thoại Anh, gồm case track trên embed THẬT trả native",
+    "Nhờ Anh bấm Play thử Tập 1 + 1 tập khác trong app để xác nhận phát thật",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "notes": "LỖI DO ANH BÁO (08:45, ảnh chụp): bấm Play Tập 1 trong app báo 'Không thể tải máy chủ này. Hãy thử máy chủ khác.' — phát KHÔNG chạy được, dù device test 8/8 code 0 + install 200 lúc merge task 113.\nNGUYÊN NHÂN (muse-main chẩn đoán 08:46): player.php chỉ trả iframe tới host embed bên thứ ba, host XOAY theo tập (Tập 1 -> embed1.streamc.xyz/embed.php?hash=d6774c3be4dae863699686e9a126e0bc; Tập 94 -> tenmienphu68.lol/mediav2/tap-94-sv1). Trang embed là trang JWPlayer, KHÔNG có link .m3u8/.mp4 dạng chữ trong HTML (muse-main tải thử streamc từ VM: HTTP 200, 7KB, có 8 lần nhắc jwplayer, 0 link stream; tenmienphu68.lol trả 403 từ IP VM). Vì vậy resolveEmbedToStream() trong track.js regex không ra gì -> track trả type 'auto' với URL trang embed -> app không sniff/load được -> báo lỗi máy chủ. Device test lúc merge chỉ kiểm được track trả code 0 + auto, KHÔNG kiểm được phát thật — bài học: với video, case track trên embed thật phải trả native mới tính là đạt.\nHƯỚNG SỬA: (1) Mở trang embed streamc.xyz xem nó lấy link phát bằng cách nào: trong HTML có <script id=\"stream-bootstrap\" type=\"application/json\"> với trường \"api\" trỏ lại chính URL embed + các file JS /assets/cdn-start-messages-r25.*.js, /assets/player-messages-r25.*.js — tìm lời gọi API nào trả link stream rồi bắt chước trong track.js (gọi API đó lấy .m3u8/.mp4 thật, trả native). (2) Kiểm tra host còn lại tenmienphu68.lol có cùng hệ player không (VM bị 403 nên khảo sát chính bằng device test trên máy Anh, hoặc thử qua trình duyệt của app); sửa sao cho cả 2 host đều trả native. (3) Nếu host embed chặn cả máy Anh hoặc stream chỉ lấy được bằng trình duyệt chạy JS thì thử Engine.newBrowser() render trang embed rồi lấy src của thẻ video; chỉ dùng khi fetch thường thật sự không được. (4) Chỉ có 1 server (Server #1, 'SERVER PHIM') nên không có server dự phòng để đổi — phải sửa cho đúng server này chạy được. (5) Cập nhật test.json: thêm case track trên embed THẬT (Tập 1 streamc + Tập 94 tenmienphu68) expect native + .m3u8; case track mẫu .m3u8 giữ nguyên. Quy trình nhà: branch từ main tip hiện tại (đã merge 113 ở 38f97e8); bump version + rebuild plugin.zip; validate PASS + device test code 0 + install 200 do builder tự kiểm chứng (qua forwarder VBOOK_SERVER=http://127.0.0.1:18080, kiểm tra /connect trước); merge chỉ do muse-main thực hiện sau khi kiểm tra lại + Anh bấm Play xác nhận."
+}
