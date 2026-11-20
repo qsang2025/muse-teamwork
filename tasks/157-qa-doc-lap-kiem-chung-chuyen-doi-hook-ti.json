@@ -7,7 +7,7 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "high",
-  "status": "doing",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-21T01:49:40+07:00",
   "claimed_at": "2026-11-21T01:56:04+07:00",
@@ -15,11 +15,11 @@
   "result": {
     "branch": "feature/157-qa-doc-lap-kiem-chung-chuyen-doi-hook-ti",
     "test": {
-      "validate": "",
+      "validate": "PASS",
       "device_test": "",
       "install": ""
     },
-    "notes": ""
+    "notes": "QA doc lap xong, bao cao day du: research/157-qa-doc-lap-kiem-chung-chuyen-doi-hook-ti.md (test gia trong /tmp/qa157, khong dung state live). PASS: inbox wake/rewake 2h/dong issue don state/loc PR+case/state hong wake an toan/dry-run khong ghi state; watchdog expired wake+dedup+rewake 2h (ke cached)/tz +07-Z-naive/state hong khong crash/review KHONG wake/tasks_seen 87 khop dem doc lap; sua rate-limit bang gh dung huong (do that: unauth 60/h con 52). FAIL CAO: W6 baseline/mat state nuot idle+blocked (ghi idle_alerted du chua wake, silent vinh vien). FAIL TRUNG BINH: blocked+idle khong rewake (loi 1 lan la mat toi luot 06:46); inbox chet im khi gh loi/thieu timeout (muse-1 gh chua auth -> silent). FAIL THAP: task open vo chu orphan (W5), cat payload 10 van danh dau alert (W11), per_page=100 khong phan trang, ghi state khong nguyen tu, README lech (auth/156-vs-157/06:00-vs-06:46). CHUA XAC THUC truc tiep (chi snapshot muse-main): dinh nghia live inbox/watchdog + prompt, cron 06:46, gh auth tren muse-main, tiet kiem token thuc te. Luu y van hanh: 155 het han 03:25 21/11 tren main trong khi branch da review — merge truoc han hoac sweep phai kiem tra branch."
   },
   "checklist": [
     "Đọc kỹ 2 script gate trong hooks/ + hooks/README.md + định nghĩa hook (prompt, poll, delivery)",
