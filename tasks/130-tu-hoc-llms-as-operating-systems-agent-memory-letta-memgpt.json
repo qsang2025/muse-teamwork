@@ -15,7 +15,7 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/130-llms-as-operating-systems-agent-memory-letta-memgpt",
-    "notes": "",
+    "notes": "Bao cao research/130-llms-as-operating-systems-agent-memory-letta-memgpt.md: virtual context management (main/external, queue manager canh bao 70%/flush 100%), self-editing memory + agentic RAG, Letta 3 tang core/recall/archival + memory blocks (label/description/value/limit, shared/read-only), sleep-time compute 2025; doi chieu 3 goc framework 127 vs ha tang 128 vs quan ly context 130; kiem chung FREE: khoa free (enroll for free, 0 USD), khong chay lab/API/Letta tra phi; de xuat 3 muc skill. Task research, khong ap dung validate/device test/install.",
     "review": {
       "at": "",
       "by": "",
@@ -29,7 +29,7 @@
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: LLMs as Operating Systems — Agent Memory (DeepLearning.AI × Letta/MemGPT)",
   "type": "research",
   "updated_at": "2026-11-20T19:31:00+07:00",
