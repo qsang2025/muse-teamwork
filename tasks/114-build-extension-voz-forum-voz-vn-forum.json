@@ -7,19 +7,19 @@
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "high",
-  "status": "claimed",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-20T02:05:07+07:00",
   "claimed_at": "2026-11-20T15:17:39+07:00",
   "claim_expires_at": "2026-11-20T17:17:39+07:00",
   "result": {
-    "branch": "",
+    "branch": "feature/114-voz-forum",
     "test": {
-      "validate": "",
-      "device_test": "",
-      "install": ""
+      "validate": "PASS (124 nguon, 0 canh bao)",
+      "device_test": "7/7 code 0 (muse-2, 20/11, tren dien thoai Anh: home 2 tab; genre 47 board; list f17 p1 23 thread, p2 21 thread; whats-new 20 thread; posts p1 20 bai #1 OP, p2 21 bai #21)",
+      "install": "200 OK (muse-2, 20/11)"
     },
-    "notes": ""
+    "notes": "VOZ Forum xong: validate PASS 124 nguon 0 canh bao; device test 7/7 code 0 (home 2 tab, genre 47 board, list f17 p1 23 + p2 21, whats-new 20, posts p1 20 #1 OP + p2 21 #21); install 200. Luu y: board dung /f/ (47 board live), /s/ cung tra danh sach nhung 'Chia se kien thuc' khong co trong danh sach board live; khong co tim kiem tu khoa (XenForo xf_csrf, nhu Otofun v4); is_op lay tu .p-description (VOZ khong danh dau OP trong tung bai)."
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
