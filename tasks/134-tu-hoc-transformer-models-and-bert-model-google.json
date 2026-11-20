@@ -14,8 +14,8 @@
   "priority": "low",
   "repo": "muse-teamwork",
   "result": {
-    "branch": "",
-    "notes": "",
+    "branch": "feature/134-tu-hoc-transformer-models-and-bert-model-google",
+    "notes": "Da hoc xong khoa Transformer Models and BERT Model (Google, ~45 phut): bao cao research/134-transformer-models-and-bert-model-google.md (241 dong) + research/CHEAT-SHEET-ATTENTION.md (1 trang, theo de xuat 131). Noi dung: Transformer 6+6 lop, multi-head 8 head, positional encoding sin/cos, BLEU 28.4 En-De / 41.8 En-Fr; BERT MLM 15% (80/10/10) + NSP, BASE 110M / LARGE 340M, GLUE 80.5%, SOTA 11 task; ban do 3 ho Transformer + 2 quy tac prompt. Khong dang ky chung chi tra phi, khong chay lab GCP. Khong sua skill vBook.",
     "review": {
       "at": "",
       "by": "",
@@ -29,7 +29,7 @@
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: Transformer Models and BERT Model (Google)",
   "type": "research",
   "updated_at": "2026-11-20T20:15:00+07:00",
