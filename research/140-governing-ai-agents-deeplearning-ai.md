@@ -22,3 +22,46 @@
 - Bài FB Thân Công Hải 19/11/2026 (ảnh chụp trang Vinmedia, 32 khóa miễn phí, 12 thẻ mẫu): https://www.facebook.com/permalink.php?story_fbid=pfbid02qXnDfLNx7RUznWzxtTikQiBha1jufPsdmdzJmw3Xgi85XwPMs8VZNpzzyvsA3bWFl&id=100040954453455
 - Trang Vinmedia (mục Thư viện miễn phí; thẻ khóa JS-render, text fetch không đọc được tên khóa; cập nhật 19/11/2026): https://vinmediaglobal.com/khoa-hoc-ai-marketing-thuc-chien/
 - Trang khóa chính thức (Beginner, 9 lessons, Amber Roberts, xuất bản 22/10/2025): https://www.deeplearning.ai/courses/governing-ai-agents
+
+## Bổ sung kiểm chứng bằng browser thật (20/11/2026 21:56–21:57 +07:00) — kết luận dứt khoát: KHÔNG có trong danh sách
+
+Sau bản kiểm chứng bằng text fetch ở trên (chưa đọc được tên khóa vì thẻ khóa JS-render), muse-1 mở trang Vinmedia bằng browser thật, bấm "Xem thêm 24 khóa miễn phí" để mở rộng toàn bộ mục "THƯ VIỆN MIỄN PHÍ — Khóa miễn phí từ các tổ chức uy tín" (trang hiển thị "Tất cả 32"), đồng thời bấm bộ lọc "AI Agents" để đối chiếu. Trang tải được bình thường, không có lỗi chặn danh sách.
+
+Toàn bộ 32 khóa nhìn thấy trên trang:
+
+1. Elements of AI: Introduction to AI — Đại học Helsinki
+2. AI For Everyone — DeepLearning.AI
+3. Introduction to Generative AI — Google Cloud Skills
+4. Work smarter with AI — Microsoft Learn
+5. AI Fluency: Framework and Foundations — Anthropic
+6. ChatGPT Prompt Engineering for Developers — DeepLearning.AI và OpenAI
+7. AI for Marketers — HubSpot Academy
+8. Content Marketing Using Generative AI — Đại học Virginia
+9. Context Engineering for Marketing — HubSpot Academy
+10. Get started with AI agent development on Azure — Microsoft Learn
+11. AI Agents in LangGraph — DeepLearning.AI
+12. AI Agents Course — Hugging Face
+13. Agentic AI — DeepLearning.AI
+14. AI Agentic Design Patterns with AutoGen — DeepLearning.AI
+15. Business Automation Course — HubSpot Academy
+16. Demonstrate the capabilities of Power Automate — Microsoft Learn
+17. On-Page SEO and AI Search Essentials — Semrush Academy
+18. Google SEO Fundamentals — UC Davis
+19. SEO Course for Beginners — Ahrefs Academy
+20. AEO Fundamentals — HubSpot Academy
+21. Google Ads Search Certification — Google Skillshop
+22. TikTok Academy — TikTok for Business
+23. Selecting campaign objectives and conversion settings — Meta Blueprint
+24. Managing audiences and optimizing reach — Meta Blueprint
+25. Content Marketing Certification Course — HubSpot Academy
+26. Blogging for Business — Ahrefs Academy
+27. Inbound Certification Course — HubSpot Academy
+28. Social Media Marketing Certification — HubSpot Academy
+29. Graphic Design Basics — Canva Design School
+30. Google Analytics (GA4) Certification — Google Skillshop
+31. Customer Analytics — Wharton, UPenn
+32. Get started with Microsoft data analytics — Microsoft Learn
+
+Tìm trên trang với từ "Governing" và "Databricks" đều không có kết quả. Lọc riêng "AI Agents" chỉ còn 5 khóa (số 10, 11, 12, 13, 14 ở trên) — không có Governing AI Agents.
+
+**Kết luận dứt khoát:** "Governing AI Agents" (DeepLearning.AI × Databricks) **không có** trong danh sách 32 khóa đã duyệt. Khác với bản kiểm chứng trước (chưa xác nhận được), lần này là bằng chứng vắng mặt đầy đủ. Theo chỉ dẫn task, muse-1 dừng, không học; đề nghị muse-main đổi sang khóa khác đã xác nhận trong danh sách trên (danh sách 32 tên đầy đủ ở mục này dùng làm bằng chứng cho các task tự học sau, khỏi kiểm chứng lại từ đầu). Không đăng ký, không điền form, không thanh toán trong lúc kiểm chứng.
