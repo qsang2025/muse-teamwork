@@ -20,9 +20,10 @@ live (sẽ lệch với repo).
 
 ## 2. muse-teamwork-inbox (mới 21/11)
 - Script: `hooks/muse-teamwork-inbox.sh`. Poll: 300s.
-- Cách quét: API GitHub public
-  `repos/qsang2025/muse-teamwork/issues?state=open&per_page=100` (không cần
-  auth, repo public), lọc tiêu đề bắt đầu `[dashboard]`, loại PR.
+- Cách quét: `gh api` (CÓ auth, token của muse-main — 5000 req/h) gọi
+  `repos/qsang2025/muse-teamwork/issues?state=open&per_page=100`, lọc tiêu đề
+  bắt đầu `[dashboard]`, loại PR. (Bản đầu dùng curl không auth đã bị 403
+  rate-limit vì IP egress dùng chung — đã đổi sang `gh api`, QA 157 xác nhận.)
 - Wake khi: có issue [dashboard] mở chưa từng wake, hoặc đã wake hơn 2h
   trước (lần xử lý trước có thể lỗi). Issue đã đóng thì xóa khỏi state.
 - State (chỉ có trên máy muse-main, không commit):
@@ -50,18 +51,27 @@ live (sẽ lệch với repo).
   (`tasks` snapshot + `sha` + `expired_alerted` + `idle_alerted`).
 - Worker khi dậy: xem prompt trong định nghĩa hook
   (`~/hooks/definitions/muse-teamwork-watchdog.json` trên máy muse-main).
+- Mặc định repo-dir: script nhận repo ở `$HOME/workspace/muse-teamwork`
+  (máy muse-main). Trên máy khác (vd muse-1: `~/muse-teamwork`) phải truyền
+  rõ tham số repo, nếu không `ls-remote` fail → silent mãi (QA 157, F-5).
+  Wrapper live ở `~/hooks/scripts/` không truyền tham số vì đã đúng mặc định.
 
 ## Lưới an toàn
 - Cron `muse-teamwork-watchdog` chạy quét đầy đủ mỗi ngày 06:46: kiểm tra 3
   hook còn đăng ký + enabled không (thiếu thì cài lại theo sổ
-  `~/hooks/README.md` trên máy muse-main), backup inbox (issue [dashboard]
-  tồn quá 24h thì chạy apply-dashboard-issues.py), sửa lệch STATUS.md
-  (verify-spec), sweep hết hạn, review/merge, quản lý §10.
+  `~/hooks/README.md` trên máy muse-main), kiểm tra `gh auth status` còn sống
+  không (QA 157, F-1 — token hết hạn/revoke thì inbox chết im), backup inbox
+  (issue [dashboard] tồn quá 24h thì chạy apply-dashboard-issues.py), sửa lệch
+  STATUS.md (verify-spec), sweep hết hạn, review/merge, quản lý §10.
 - Nếu hook chết im (không wake dù có việc): lượt quét 06:46 sẽ bắt trong vòng 24h.
 
 ## QA độc lập
-- Task 156 (giao muse-1, 21/11): kiểm chứng độc lập toàn bộ chuyển đổi này
+- Task 157 (giao muse-1, 21/11): kiểm chứng độc lập toàn bộ chuyển đổi này
   — đọc script trong thư mục này, chạy lại dry-run, test đường wake bằng dữ
   liệu giả, tìm lỗ hổng (sót điều kiện, wake thừa/thiếu, race, rate-limit,
   lỗi API, state hỏng). muse-main là người viết script nên KHÔNG tự chấm
-  phần này.
+  phần này. Kết quả: PASS có điều kiện, ĐÃ MERGE 21/11
+  (research/157-qa-hook-tiet-kiem-token.md); muse-main đã sửa F-3 (idle-wake:
+  task open chưa gán + agent có task blocked không tính là rảnh) + doc drift
+  ngay sau merge. Còn treo: F-1(b) thêm kiểm tra gh auth vào lượt 06:46;
+  F-4 (baseline có blocked thì wake 1 lần); F-6 (ghi state atomic tmp+rename).

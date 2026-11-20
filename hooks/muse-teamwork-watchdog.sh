@@ -11,7 +11,7 @@
 #   (c) muse-1/muse-2 khong con task mo — can giao 1 task tu hoc §9 (§10a).
 # KHONG wake khi task vao review: watch hook (muse-teamwork-watch) da goi
 # muse-main cho truong hop do, tranh 2 agent cung merge 1 task.
-# Luot quet day du moi ngay 06:00 (cron watchdog) la luoi an toan: bat lech
+# Luot quet day du moi ngay 06:46 (cron watchdog) la luoi an toan: bat lech
 # STATUS.md, review ton dong, hook chet.
 #
 # Co che: snapshot task (status, assignee, preferred_assignee, claimed_at,
@@ -179,11 +179,22 @@ if mode == "full" and old:
                           "from": (prev or {}).get("status", "")})
 
 # --- (c) Worker khong con task mo -> can giao task tu hoc §9 ---
+# Sua F-3 (QA 157): "ranh" phai tinh ca viec claimable + task blocked.
+# - Task open chua gan ai (khong assignee/preferred_assignee) la viec ma
+#   worker claim duoc theo luat poll -> khong coi la ranh.
+# - Agent dang co task blocked trong cung luot -> bo qua idle-wake (task
+#   blocked can phan loai §10(b) truoc, tranh giao task hoc chong len).
 for agent in WORKERS:
     busy = any(cur["status"] in OPEN_STATUSES and
                (cur.get("assignee") == agent or cur.get("preferred_assignee") == agent)
                for cur in snap.values())
-    if busy:
+    claimable = any(cur["status"] == "open" and
+                    not cur.get("assignee") and not cur.get("preferred_assignee")
+                    for cur in snap.values())
+    has_blocked = any(cur["status"] == "blocked" and
+                      (cur.get("assignee") == agent or cur.get("preferred_assignee") == agent)
+                      for cur in snap.values())
+    if busy or claimable or has_blocked:
         continue
     # Episode key: task done/cancelled gan nhat cua ban do (theo updated_at).
     done = [(parse_ts(c.get("updated_at", "")) or datetime.min.replace(tzinfo=timezone.utc), tid)
