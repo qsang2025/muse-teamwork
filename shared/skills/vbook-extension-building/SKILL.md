@@ -27,6 +27,8 @@
 
 - Read a real chapter end to end and compare it with a known opening line or a known passage, and treat mixed character names from other novels or scrambled text as fake content.
 
+- When a step lets a model decide to call a function or tool, validate the parameters before executing: the model only proposes the call, your code (or you) executes it. Unchecked model output can cause real side effects (API calls, writes, deploys), so the check is mandatory, not optional. (Task 121, Develop Gen AI Apps with Gemini and Streamlit §3 — function calling.)
+
 - Treat a chapter that returns only a preview, a VIP error or a login error as not readable, even when search and the table of contents work.
 
 - When a site or tool advertises "AI", check what its output is before calling it AI: labels or numbers (recommendations, genre filters, search ranking) mean a discriminative model, not content generation; only newly generated text, images or audio is generative AI. Record which one it is in the report so the team does not call every classifier "AI". (Task 119, Introduction to Generative AI §3.)
@@ -90,3 +92,7 @@
 - Prefer a source whose chapters read fully without a login, and keep a login gated source waiting until the user verifies it in the app.
 
 - Check the chapter text yourself from your own machine instead of trusting the site metadata or its claims.
+
+## Demo a research result quickly (Streamlit + Gemini API)
+
+- When the user needs to see a research result live instead of reading a description, demo it with Streamlit + Gemini API (free tier via AI Studio, no card): minimum 3 files — `app.py` (tabs/UI), `response_utils.py` (the single place that calls the model: config, safety settings, streaming, retry on 429), `requirements.txt` (`streamlit`, `google-genai`) — plus a Dockerfile and 3 deploy commands to Cloud Run (Artifact Registry → build/push → `gcloud run deploy`, scale-to-zero). Cache the Gemini client with `@st.cache_resource`, and always add a Prompt tab showing the raw prompt next to each result so the input can be verified, not just the output. (Task 121, Develop Gen AI Apps with Gemini and Streamlit §4–§6.)
