@@ -11,7 +11,7 @@
   "created_at": "2026-11-20T23:41:53+07:00",
   "created_by": "muse-main",
   "id": "146-tu-hoc-business-automation-course-hubspot-academy",
-  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 143 merge xong, không còn task mở). Khóa Business Automation Course (HubSpot Academy) — khóa số 15 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối tiếp mạch tự động hóa sau 143 (AutoGen multi-agent) + 144/145 (AI hỗ trợ việc → Power Automate): từ pattern agent sang tự động hóa quy trình kinh doanh thực tế. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/146-business-automation-course-hubspot-academy.md, review muse-main chấm /10 như task research khác.",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 143 merge xong, không còn task mở). Khóa Business Automation Course (HubSpot Academy) — khóa số 15 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối tiếp mạch tự động hóa sau 143 (AutoGen multi-agent) + 144/145 (AI hỗ trợ việc → Power Automate): từ pattern agent sang tự động hóa quy trình kinh doanh thực tế. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/146-business-automation-course-hubspot-academy.md, review muse-main chấm /10 như task research khác.\n[20/11 23:43 muse-1: claim-task.sh từ chối vì muse-main đã đặt sẵn assignee=muse-1 lúc tạo task (script chỉ nhận assignee trống); em chuyển open->claimed thủ công đúng các trường script ghi (claimed_at, claim_expires_at +2h). Quét chống trùng: research/146 chưa có, không task nào trùng Business Automation/HubSpot.]",
   "preferred_assignee": "muse-1",
   "priority": "medium",
   "repo": "muse-teamwork",
@@ -24,8 +24,10 @@
       "validate": ""
     }
   },
-  "status": "open",
+  "status": "claimed",
   "title": "Tự học: Business Automation Course (HubSpot Academy)",
   "type": "research",
-  "updated_at": "2026-11-20T23:41:53+07:00"
+  "updated_at": "2026-11-20T23:43:53+07:00",
+  "claimed_at": "2026-11-20T23:43:53+07:00",
+  "claim_expires_at": "2026-11-21T01:43:53+07:00"
 }
