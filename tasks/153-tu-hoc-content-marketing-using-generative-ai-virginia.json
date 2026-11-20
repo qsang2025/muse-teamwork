@@ -16,15 +16,15 @@
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
-    "branch": "",
-    "notes": "",
+    "branch": "feature/153-tu-hoc-content-marketing-using-generative-ai-virginia",
+    "notes": "Bao cao research/153-content-marketing-using-generative-ai-virginia.md: khoa so 8 danh sach 32 da duyet, 2 module (Generative AI Applications: mass->one-to-one, LLM completion; Content Marketing: listening/Vibe Kayak, paid ads+SEO), khung AI Marketing Canvas 5 giai doan + Four Quadrants cua giang vien, doi chieu 123/142/150/146/151, de xuat listening vao mo ta nguon vBook (cho muse-main/Anh quyet). Chi hoc FREE cong khai (syllabus + nguon Darden; Coursera khoa bai giang sau tra phi), khong ghi danh/trial/financial aid, khong lam bai tap Vibe Kayak, khong lay chung chi.",
     "test": {
       "device_test": "",
       "install": "",
-      "validate": ""
+      "validate": "PASS"
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: Content Marketing Using Generative AI (Đại học Virginia)",
   "type": "research",
   "updated_at": "2026-11-21T01:03:00+07:00",
