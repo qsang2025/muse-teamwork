@@ -1,6 +1,6 @@
 {
   "assignee": "muse-2",
-  "branch": "feature/156-tu-hoc-seo-course-for-beginners-ahrefs",
+  "branch": "",
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
@@ -18,7 +18,7 @@
   "status": "review",
   "title": "Tự học: SEO Course for Beginners (Ahrefs Academy)",
   "type": "research",
-  "updated_at": "2026-11-21T02:30:00+07:00",
+  "updated_at": "2026-11-21T01:50:00+07:00",
   "claimed_at": "2026-11-21T02:08:34+07:00",
   "claim_expires_at": "2026-11-21T04:08:34+07:00",
   "result": {
