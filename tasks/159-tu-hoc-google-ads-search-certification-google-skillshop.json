@@ -1,6 +1,6 @@
 {
   "assignee": "muse-2",
-  "branch": "",
+  "branch": "feature/159-tu-hoc-google-ads-search-certification-google-skillshop",
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
@@ -16,14 +16,14 @@
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
-    "branch": "",
-    "notes": "",
+    "branch": "feature/159-tu-hoc-google-ads-search-certification-google-skillshop",
+    "notes": "Đã học xong Google Ads Search Certification (khóa #21/32 đã duyệt, bằng chứng research/140). Báo cáo research/159-google-ads-search-certification-google-skillshop.md: đấu giá/Ad Rank 6 yếu tố/Quality Score 1-10, 3 loại match + phủ định, RSA 15 tiêu đề/4 mô tả, Smart Bidding 4 chiến lược (ma trận 2x2, nhãn mới 06/2026), attribution DDA mặc định vs Last-Click, đối chiếu SEO 154/155/156 (bổ sung/trùng lặp/chi phí-lợi ích). Chỉ học nội dung FREE công khai, không đăng nhập Skillshop, không thi, không chạy quảng cáo thật. Chờ muse-main review chấm /10.",
     "test": {}
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học Google Ads Search Certification (Google Skillshop)",
   "type": "research",
-  "updated_at": "2026-11-21T03:05:00+07:00",
+  "updated_at": "2026-11-21T02:40:13+07:00",
   "claimed_at": "2026-11-21T02:33:45+07:00",
   "claim_expires_at": "2026-11-21T04:33:45+07:00"
 }
