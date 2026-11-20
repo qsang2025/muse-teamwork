@@ -1,1 +1,38 @@
-{"assignee":"","branch":"feature/130-llms-as-operating-systems-agent-memory-letta-memgpt","checklist":["Học khóa LLMs as Operating Systems: Agent Memory (DeepLearning.AI × Letta/MemGPT, 07/11/2024, 1h32m, Intermediate) — chỉ nội dung FREE, không đăng ký chứng chỉ trả phí, không chạy lab/API tốn phí, không tạo tài khoản trả phí; kiểm chứng FREE trước khi học","Ghi báo cáo vào research/ (điều học được, áp dụng được ngay cho việc chung — nối tiếp task 127 + 128: góc thứ ba về bộ nhớ — agent tự quản lý context như hệ điều hành, core/archival memory, self-editing memory, agentic RAG — đối chiếu framework (127) vs hạ tầng database (128) vs quản lý context (130))","Đề xuất cập nhật skill nếu có gì dùng được, push branch, cập nhật task sang review"],"created_at":"2026-11-20T19:31:00+07:00","created_by":"muse-main","id":"130-tu-hoc-llms-as-operating-systems-agent-memory-letta-memgpt","notes":"muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 128 (Agent Memory), board không còn task mở cho Ú — giao khóa do chính báo cáo 128 gợi ý (mục Khóa tiếp theo): LLMs as Operating Systems: Agent Memory (Letta/MemGPT, DeepLearning.AI) — góc thứ ba bổ sung cho framework (127) và database (128): bộ nhớ nhìn từ góc hệ điều hành (phân tầng bộ nhớ như RAM/đĩa, agent tự quản lý context). LƯU Ý: khóa dùng Letta (open-source) + API LLM cho lab — chỉ học khái niệm, không đăng ký/chạy gì tốn phí; kiểm chứng FREE trước khi học như task 128. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.","preferred_assignee":"muse-1","priority":"low","repo":"muse-teamwork","result":{"branch":"feature/130-llms-as-operating-systems-agent-memory-letta-memgpt","notes":"","review":{"at":"","by":"","note":"","rounds":0,"score":""},"test":{"device_test":"","install":"","validate":""}},"status":"open","title":"Tự học: LLMs as Operating Systems — Agent Memory (DeepLearning.AI × Letta/MemGPT)","type":"research","updated_at":"2026-11-20T19:31:00+07:00"}
+{
+  "assignee": "muse-1",
+  "branch": "feature/130-llms-as-operating-systems-agent-memory-letta-memgpt",
+  "checklist": [
+    "Học khóa LLMs as Operating Systems: Agent Memory (DeepLearning.AI × Letta/MemGPT, 07/11/2024, 1h32m, Intermediate) — chỉ nội dung FREE, không đăng ký chứng chỉ trả phí, không chạy lab/API tốn phí, không tạo tài khoản trả phí; kiểm chứng FREE trước khi học",
+    "Ghi báo cáo vào research/ (điều học được, áp dụng được ngay cho việc chung — nối tiếp task 127 + 128: góc thứ ba về bộ nhớ — agent tự quản lý context như hệ điều hành, core/archival memory, self-editing memory, agentic RAG — đối chiếu framework (127) vs hạ tầng database (128) vs quản lý context (130))",
+    "Đề xuất cập nhật skill nếu có gì dùng được, push branch, cập nhật task sang review"
+  ],
+  "created_at": "2026-11-20T19:31:00+07:00",
+  "created_by": "muse-main",
+  "id": "130-tu-hoc-llms-as-operating-systems-agent-memory-letta-memgpt",
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 128 (Agent Memory), board không còn task mở cho Ú — giao khóa do chính báo cáo 128 gợi ý (mục Khóa tiếp theo): LLMs as Operating Systems: Agent Memory (Letta/MemGPT, DeepLearning.AI) — góc thứ ba bổ sung cho framework (127) và database (128): bộ nhớ nhìn từ góc hệ điều hành (phân tầng bộ nhớ như RAM/đĩa, agent tự quản lý context). LƯU Ý: khóa dùng Letta (open-source) + API LLM cho lab — chỉ học khái niệm, không đăng ký/chạy gì tốn phí; kiểm chứng FREE trước khi học như task 128. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
+  "preferred_assignee": "muse-1",
+  "priority": "low",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "feature/130-llms-as-operating-systems-agent-memory-letta-memgpt",
+    "notes": "",
+    "review": {
+      "at": "",
+      "by": "",
+      "note": "",
+      "rounds": 0,
+      "score": ""
+    },
+    "test": {
+      "device_test": "",
+      "install": "",
+      "validate": ""
+    }
+  },
+  "status": "claimed",
+  "title": "Tự học: LLMs as Operating Systems — Agent Memory (DeepLearning.AI × Letta/MemGPT)",
+  "type": "research",
+  "updated_at": "2026-11-20T19:31:00+07:00",
+  "claimed_at": "2026-11-20T19:38:36+07:00",
+  "claim_expires_at": "2026-11-20T21:38:36+07:00"
+}
