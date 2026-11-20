@@ -1,6 +1,6 @@
 {
   "assignee": "muse-2",
-  "branch": "",
+  "branch": "feature/134-tu-hoc-transformer-models-and-bert-model-google",
   "checklist": [
     "Học khóa Transformer Models and BERT Model (Google, thuộc chương trình 10 khóa Advanced Generative AI for Developers) — chỉ nội dung, không đăng ký chứng chỉ trả phí, không chạy lab GCP tốn credit",
     "Ghi báo cáo vào research/ (điều học được, áp dụng được ngay cho việc chung — nối tiếp task 131: xếp chồng self-attention thành encoder/decoder hoàn chỉnh + BERT; dùng lại cheat-sheet attention nếu đã viết)",
@@ -32,7 +32,7 @@
   "status": "review",
   "title": "Tự học: Transformer Models and BERT Model (Google)",
   "type": "research",
-  "updated_at": "2026-11-20T20:15:00+07:00",
+  "updated_at": "2026-11-20T20:43:09+07:00",
   "claimed_at": "2026-11-20T20:38:10+07:00",
   "claim_expires_at": "2026-11-20T22:38:10+07:00"
 }
