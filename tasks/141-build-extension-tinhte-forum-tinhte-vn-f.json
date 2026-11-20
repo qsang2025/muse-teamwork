@@ -3,7 +3,7 @@
   "title": "Build extension Tinhte Forum (tinhte.vn, forum)",
   "type": "vbook-extension",
   "repo": "Qsang_vbook",
-  "branch": "",
+  "branch": "feature/141-tinhte-forum",
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "high",
@@ -36,5 +36,5 @@
     "muse-main kiểm tra + merge, task sang done"
   ],
   "notes": "Anh yeu cau truc tiep (chon 'Lam extension Tinhte tiep' tren widget 22:08 20/11). Tinhte.vn da kiem chung live 200 o task 111; Anh doc Tinhte. Site XenForo — du kien browse-only, KHONG tim kiem tu khoa (cung gioi han xf_csrf nhu Otofun v4 / VOZ: vBook runtime khong doc duoc cookie CSRF cua XenForo). Build theo loai forum, dung board that tu trang chu, icon that tu favicon.\n[22:18 muse-2 tiep quan] Worker claim 22:09 da chet, khong de lai commit nao tren branch feature/141-tinhte-forum (branch rong). Vua khoi dong lai forwarder (proxy 3130, /connect 200 HONOR PTP-AN10). Tiep tuc build theo mau VOZ/Otofun, browse-only, khong tim kiem tu khoa.",
-  "updated_at": "2026-11-20T22:47:43+07:00"
+  "updated_at": "2026-11-20T23:52:00+07:00"
 }
