@@ -1,26 +1,6 @@
 {
-  "id": "142-tu-hoc-ai-for-everyone-deeplearning-ai",
-  "title": "Tự học: AI For Everyone (DeepLearning.AI)",
-  "type": "research",
-  "repo": "muse-teamwork",
-  "branch": "feature/142-tu-hoc-ai-for-everyone-deeplearning-ai",
   "assignee": "muse-2",
-  "preferred_assignee": "muse-2",
-  "priority": "low",
-  "status": "review",
-  "created_by": "muse-main",
-  "created_at": "2026-11-20T22:47:23+07:00",
-  "claimed_at": "2026-11-20T22:53:25+07:00",
-  "claim_expires_at": "2026-11-21T00:53:25+07:00",
-  "result": {
-    "branch": "feature/142-tu-hoc-ai-for-everyone-deeplearning-ai",
-    "test": {
-      "validate": "",
-      "device_test": "",
-      "install": ""
-    },
-    "notes": "Báo cáo research/142-ai-for-everyone-deeplearning-ai.md: khóa #2 trong danh sách 32 đã duyệt (Andrew Ng, 4 module, 7 giờ, 2.679.305 học viên, 4,79/5); nội dung 4 tuần + Playbook 5 bước + khung chọn dự án 3 vòng + áp dụng cho team (6 điểm); không trả phí chứng chỉ $49, không đăng ký Pro. Lưu ý: khóa tiền-LLM nên quy tắc 1 giây cần đọc kèm kiến thức GenAI 119/121."
-  },
+  "branch": "feature/142-tu-hoc-ai-for-everyone-deeplearning-ai",
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
@@ -28,6 +8,33 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
-  "notes": "muse-main tạo theo ủy quyền 20/11 (§10a: Vịt rảnh sau khi task 141 merge xong, không còn task mở). Khóa AI For Everyone (DeepLearning.AI, Andrew Ng) — khóa số 2 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); Ú đã đọc đủ 32 tên bằng browser thật 20/11 21:57, bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên branch feature/140-tu-hoc-governing-ai-agents-deeplearning-ai — KHÔNG cần kiểm chứng lại từ đầu. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/142-ai-for-everyone-deeplearning-ai.md, review muse-main chấm /10 như task research khác.",
-  "updated_at": "2026-11-20T23:01:32+07:00"
+  "claim_expires_at": "2026-11-21T00:53:25+07:00",
+  "claimed_at": "2026-11-20T22:53:25+07:00",
+  "created_at": "2026-11-20T22:47:23+07:00",
+  "created_by": "muse-main",
+  "id": "142-tu-hoc-ai-for-everyone-deeplearning-ai",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10a: Vịt rảnh sau khi task 141 merge xong, không còn task mở). Khóa AI For Everyone (DeepLearning.AI, Andrew Ng) — khóa số 2 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); Ú đã đọc đủ 32 tên bằng browser thật 20/11 21:57, bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên branch feature/140-tu-hoc-governing-ai-agents-deeplearning-ai — KHÔNG cần kiểm chứng lại từ đầu. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/142-ai-for-everyone-deeplearning-ai.md, review muse-main chấm /10 như task research khác.\n[20/11 23:07 muse-main: review 8/10 vong 1, merge e291154 len main; task done. Vit ranh -> task 144 Work smarter with AI (Microsoft Learn, khoa so 4) da tao theo uy quyen 20/11.]",
+  "preferred_assignee": "muse-2",
+  "priority": "low",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "feature/142-tu-hoc-ai-for-everyone-deeplearning-ai",
+    "notes": "Báo cáo research/142-ai-for-everyone-deeplearning-ai.md: khóa #2 trong danh sách 32 đã duyệt (Andrew Ng, 4 module, 7 giờ, 2.679.305 học viên, 4,79/5); nội dung 4 tuần + Playbook 5 bước + khung chọn dự án 3 vòng + áp dụng cho team (6 điểm); không trả phí chứng chỉ $49, không đăng ký Pro. Lưu ý: khóa tiền-LLM nên quy tắc 1 giây cần đọc kèm kiến thức GenAI 119/121.",
+    "review": {
+      "at": "2026-11-20T23:07:00+07:00",
+      "by": "muse-main",
+      "note": "Bao cao day du, dung chuan cac task tu hoc truoc: khoa so 2 trong danh sach 32 da duyet, 4 tuan + Playbook 5 buoc + khung chon du an 3 vong + 6 diem ap dung cho team (noi 120/132/137/139), de xuat skill, muc gioi han trung thuc (chua xem video goc, khoa tien-LLM, so McKinsey cu 2017-2018). muse-main kiem chung doc lap trang Coursera khop bao cao (2.679.305 hoc vien, 53.559 danh gia, 4,79/5, 81,85% 5 sao, 4 module, 7 gio, Beginner, Andrew Ng). Khong dang ky Pro/chung chi $49 — dung checklist FREE. 2 de xuat skill research giu trong bao cao (repo khong co file skill research rieng; khong sua vbook-extension-building/PROTOCOL.md theo dung de xuat).",
+      "rounds": 1,
+      "score": 8
+    },
+    "test": {
+      "device_test": "",
+      "install": "",
+      "validate": ""
+    }
+  },
+  "status": "done",
+  "title": "Tự học: AI For Everyone (DeepLearning.AI)",
+  "type": "research",
+  "updated_at": "2026-11-20T23:07:00+07:00"
 }
