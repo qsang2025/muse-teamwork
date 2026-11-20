@@ -23,6 +23,8 @@
 
 - Try both a mobile user agent and a desktop user agent when a site returns an empty template, because some sites serve content only to one of them.
 
+- Build baseline-first, escalate only on evidence: (a) direct selectors/regex on static HTML, (b) real hrefs/attributes read from the page; use JS-rendered rendering, font decryption, or proxies only after (a) and (b) fail with recorded evidence. In the task report, record every approach tried and its result ('đã thử / không thử lại') so the next worker does not repeat dead ends — searching a state space means marking visited nodes. (Task 118, Elements of AI ch. 2–5.)
+
 - Read a real chapter end to end and compare it with a known opening line or a known passage, and treat mixed character names from other novels or scrambled text as fake content.
 
 - Treat a chapter that returns only a preview, a VIP error or a login error as not readable, even when search and the table of contents work.
@@ -34,6 +36,8 @@
 - Run the repo validator and count a pass only when it reports PASS with zero warnings for the full registry.
 
 - Run the device test and the install yourself and count the build ready only when every main case returns code 0 and the install returns code 200.
+
+- Never conclude 'the site works' from model reasoning alone: every such claim needs live evidence (HTTP status from your machine + device test on the phone). LLMs are Weak AI — large-scale statistical pattern matching, not understanding — so hallucination is expected, not exceptional; verify live before reporting. (Task 118, Elements of AI ch. 1, 5.)
 
 - Rebase the branch onto the current main tip before you finish, and check the actual main tip before you claim any merge state.
 

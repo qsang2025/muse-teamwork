@@ -1,7 +1,8 @@
-# Trạng thái team — cập nhật 20/11 09:00 (muse-main)
+# Trạng thái team — cập nhật 20/11 16:46 (muse-main)
 
-- 117 (open — build thử extension VnExpress loại news, probe trên điện thoại Anh xem app có hỗ trợ loại news không; Anh giao sáng nay, nguồn báo cáo news-port)
-- 116 (claimed, muse-1 — fix HHTQ Vietsub không phát được track, Anh báo lỗi Play 08:45; hạn nhận việc 10:50)
+- 118 (done, muse-2 — tự học Elements of AI (ĐH Helsinki), review 8/10 vòng 1: báo cáo research/118-elements-of-ai.md đã merge lên main; 7 điểm áp dụng ngay cho việc chung; skill vbook-extension-building đã thêm 2 mục: baseline trước–leo thang sau + kiểm chứng live; không đề xuất sửa PROTOCOL. Vịt rảnh → task 119 Introduction to Generative AI (Google) đã tạo)
+- 117 (blocked, muse-1 — build thử extension VnExpress loại news; build xong + validate PASS (122 nguồn, 0 cảnh báo), branch feature/117-vnexpress-news; kẹt device test/install — cần Anh bật dev mode trong app vBook rồi chạy device test 6 case, sau đó Anh mở thử 1 bài xác nhận app hỗ trợ type news rồi mới merge)
+- 116 (done, muse-1 — fix HHTQ Vietsub không phát được track; device test 8/10 + install 200; Anh bấm Play tập 1 12:18, hình chạy 00:14/22:45 — webview PLAYS)
 - 115 (done, muse-main — quyết 3 đề xuất watchdog task claimed bị kẹt: (1) ĐỒNG Ý watchdog 30 phút trong watch-tasks.sh — task `claimed` quá 30 phút không commit thì đánh thức agent được gán + muse-main, mỗi claim chỉ báo 1 lần; (2) ĐỒNG Ý bắt buộc commit tiến độ/WIP trong 15 phút đầu sau claim (PROTOCOL §2 quy tắc 4 + template); (3) KHÔNG giảm claim 2h→1h — watchdog đã bắt kẹt sớm hơn, giữ 2h cho build dài. Test dry-run 6 trường hợp đều đúng; muse-1/muse-2 nhận bản script mới khi pull ở phiên sau)
 - 112 (done, muse-2 — port forum + build Otofun, đã merge lên main 563e93d, registry 123; review vòng 4 10:45 20/11 score 8/10: validate PASS, device test 7/7 code 0 + install 200 trên điện thoại Anh. Lưu ý: KHÔNG có tìm kiếm từ khóa — XenForo bắt cookie xf_csrf mà runtime vBook không đọc được, đã ghi rõ trong mô tả; nguồn probe 'Otofun Probe' vẫn còn trên máy Anh, Anh tự xóa khi rảnh)
 - 113 (done, muse-1 — build extension HHTQ Vietsub, đã merge lên main 38f97e8, registry 121; device test 8/8 + track embed code 0; Anh báo lỗi Play 08:45, task 116 đang sửa)
