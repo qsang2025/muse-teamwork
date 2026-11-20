@@ -16,7 +16,7 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/137-tu-hoc-red-teaming-llm-applications-deeplearning-ai",
-    "notes": "",
+    "notes": "Bao cao research/137-tu-hoc-red-teaming-llm-applications-deeplearning-ai.md: red-teaming la tan cong thu co chu dich truoc khi ke tan cong that tim thay (be mat ngon ngu vo han, xac suat, khac phuc kien truc); benchmark model chung khac kiem thu ung dung cua minh; lo hong nen tang theo OWASP LLM Top 10 (prompt injection truc tiep/gian tiep, jailbreak, ro ri thong tin, noi dung doc hai/tu van trai phep, excessive agency); thu cong vs tu dong bo sung nhau; Giskard scan hai pha sinh-chay (description -> generators LLM-driven/dataset/knowledge-base -> suite -> LLM judge), ho tan cong prompt injection/direct adversarial/GOAT/Crescendo/GCG, target mode, ngan sach + seed, judge sai hai chieu, lan chay sach khong phai chung chi; demo danh gia day du + vong tan cong-doc-va-hoi quy; phan biet red-teaming vs evals (132) vs guardrails (135) theo 135 §8, khep vong do-chan-tan cong thu; anh xa len kiem chung doi khang nguon/build cua team (109, delimiters 123); phan loai ro ky thuat nao dung o quy mo file+GitHub, ky thuat nao chi khi co ung dung LLM that; kiem chung FREE: freemium (video free, graded assignment/accomplishment can Pro 25/30 USD), khong dang ky Pro/khong chay lab/scan; luu y Giskard v3 khac API trong khoa 2024, can kiem chung lai; de xuat 3 muc skill. Task research, khong ap dung validate/device test/install.",
     "review": {
       "at": "",
       "by": "",
@@ -30,7 +30,7 @@
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: Red Teaming LLM Applications (DeepLearning.AI)",
   "type": "research",
   "updated_at": "2026-11-20T20:57:27+07:00",
