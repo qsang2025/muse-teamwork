@@ -22,12 +22,19 @@
       "validate": "PASS",
       "device_test": "n/a",
       "install": "n/a"
+    },
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T04:02:25+07:00",
+      "note": "Đạt 8/10 vòng 1: báo cáo 140 dòng, 14 bài/54 video/11 quiz/8h23, storytelling + inbound attract-engage-delight, content creation framework, chiến lược dài hạn + content audit, historical optimization, repurposing, topic cluster/pillar, guest blogging, quảng bá organic+paid, đo lường mục tiêu-trước-chỉ-số-sau + attribution; đối chiếu đầy đủ 153 + mạch SEO 154/155/156 + 151/152/158 + quảng cáo 159/160/161/162. Ghi rõ giới hạn trung thực: trang khóa chính thức fetch lỗi, học qua blog + study guide chính thức + syllabus 2026 đối chiếu chéo, không đăng nhập/quiz/thi/chứng chỉ, không chạy quảng cáo thật — đúng §9. muse-main kiểm chứng độc lập: khóa #25 đúng danh sách 32 (research/140 dòng 56); syllabus Opportunities Feed 2026 khớp báo cáo (14 bài, 54 video, 11 quiz, 8h23; thời lượng từng bài 9/31/31/37/23/52/38/44/46/33/44/56/48/11 cộng = 503 phút; 5 mục tiêu học khớp); chứng chỉ FREE, hiệu lực 2 năm. Điểm trừ nhỏ: ghi chú trung thực viết 'task 162 đang ở review' — 162 đã merge 03:55 trước khi báo cáo này xong, cùng mẫu lỗi thời như 162 ghi về 161, không sai lúc viết. Đề xuất §9.1/§9.2/§9.3 CHƯA duyệt — để dành lần chạm skill tới, gộp cùng 156 §8.1 + 159 §7.1 + 160 §9.1/§9.2/§9.3 + 161 §7.1/§7.2 + 162 §8.1/§8.2/§8.3."
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học Content Marketing Certification Course (HubSpot Academy)",
   "type": "research",
-  "updated_at": "2026-11-21T03:57:05+07:00",
+  "updated_at": "2026-11-21T04:02:25+07:00",
   "claimed_at": "2026-11-21T03:51:00+07:00",
-  "claim_expires_at": "2026-11-21T05:51:00+07:00"
+  "claim_expires_at": "2026-11-21T05:51:38+07:00"
 }
