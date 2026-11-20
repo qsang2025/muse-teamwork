@@ -1,6 +1,6 @@
 {
   "assignee": "muse-2",
-  "branch": "",
+  "branch": "feature/168-google-analytics-ga4-certification",
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
@@ -23,7 +23,7 @@
   "status": "review",
   "title": "Tự học Google Analytics (GA4) Certification (Google Skillshop)",
   "type": "research",
-  "updated_at": "2026-11-21T04:55:00+07:00",
+  "updated_at": "2026-11-21T05:30:00+07:00",
   "claimed_at": "2026-11-21T05:05:23+07:00",
   "claim_expires_at": "2026-11-21T07:05:23+07:00"
 }
