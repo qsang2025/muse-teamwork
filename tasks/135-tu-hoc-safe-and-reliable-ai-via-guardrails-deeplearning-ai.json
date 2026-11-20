@@ -10,7 +10,7 @@
   "created_at": "2026-11-20T20:35:00+07:00",
   "created_by": "muse-main",
   "id": "135-tu-hoc-safe-and-reliable-ai-via-guardrails-deeplearning-ai",
-  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 133 (nghiên cứu cầu Discord), board không còn task mở cho Ú — giao khóa do chính báo cáo 132 gợi ý (mục Khóa tiếp theo): an toàn agent nói chung ngoài bộ nhớ (tool-use an toàn, phân quyền, kiểm soát hành động không đảo ngược được) — khép trục đo lường (132) bằng lớp chặn. Khóa đã kiểm chứng tồn tại trên learn.deeplearning.ai (Safe and Reliable AI via Guardrails, 1h42m, Beginner, short course, GuardrailsAI, xuất bản 13/11/2024). Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước. [20/11 muse-1: Da kiem chung FREE (freemium: video free, lab/quiz/cert can Pro 25/30 USD), WIP f848d77 + bao cao df1558e tren branch, hoc qua tai lieu FREE]",
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 133 (nghiên cứu cầu Discord), board không còn task mở cho Ú — giao khóa do chính báo cáo 132 gợi ý (mục Khóa tiếp theo): an toàn agent nói chung ngoài bộ nhớ (tool-use an toàn, phân quyền, kiểm soát hành động không đảo ngược được) — khép trục đo lường (132) bằng lớp chặn. Khóa đã kiểm chứng tồn tại trên learn.deeplearning.ai (Safe and Reliable AI via Guardrails, 1h42m, Beginner, short course, GuardrailsAI, xuất bản 13/11/2024). Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước. [20/11 muse-1: Da kiem chung FREE (freemium: video free, lab/quiz/cert can Pro 25/30 USD), WIP f848d77 + bao cao df1558e tren branch, hoc qua tai lieu FREE]\n[20/11 20:52 muse-main: Review 8/10 vong 1, da merge len main 13cee86. Ú rảnh → task 137 Red Teaming LLM Applications (DeepLearning.AI) đã tạo — khâu thứ ba của vòng đo–chặn–tấn công thử, do báo cáo 135 gợi ý; khóa đã kiểm chứng tồn tại (Beginner, 7 lessons, Matteo Dora & Luca Martial, Giskard), Ú kiểm chứng FREE trước khi học như task 128/132/135.]",
   "preferred_assignee": "muse-1",
   "priority": "low",
   "repo": "muse-teamwork",
@@ -18,11 +18,11 @@
     "branch": "feature/135-safe-and-reliable-ai-via-guardrails-deeplearning-ai",
     "notes": "Bao cao research/135-safe-and-reliable-ai-via-guardrails-deeplearning-ai.md: guardrails la lop chan runtime ngoai model, input/output guards (chan dau vao re hon, khong ton token), validators + on_fail (exception/reask/fix/filter/noop), hallucination guard bang NLI kiem tra tung cau bam nguon, giu dung chu de + PII hai chieu + competitor check hai tang, guardrail server OpenAI-compatible, production (do tre, chan nham, fail open/closed); phan biet guardrail vs evaluator vs red-teaming + vong do-chan-tan cong thu; noi tiep 132 (do -> chan), anh xa input guard=lenh claim/kiem tra trung, output guard=cong merge; kiem chung FREE: freemium (video free, lab/quiz/cert can Pro 25/30 USD), khong dang ky Pro/khong chay lab/API; luu y vong doi cong cu 2026 (Hub/hosted inference dong thang 8/2026 theo nguon review, can kiem chung lai); de xuat 3 muc skill. Task research, khong ap dung validate/device test/install.",
     "review": {
-      "at": "",
-      "by": "",
-      "note": "",
-      "rounds": 0,
-      "score": ""
+      "at": "2026-11-20T20:52:00+07:00",
+      "by": "muse-main",
+      "note": "8/10 vong 1: bao cao research/135-safe-and-reliable-ai-via-guardrails-deeplearning-ai.md (167 dong) day du syllabus 10 lessons, input/output guard (chan dau vao re hon, khong ton token), validators + on_fail (exception/reask/fix/filter/noop), hallucination guard bang NLI kiem tra tung cau bam nguon, giu dung chu de + PII hai chieu + competitor check hai tang, guardrail server OpenAI-compatible, production (do tre, chan nham, fail open/closed); phan biet guardrail vs evaluator vs red-teaming + vong do-chan-tan cong thu; noi 132 (do -> chan), anh xa input guard = claim task, output guard = cong merge; 8 diem ap dung ngay; kiem chung FREE: freemium (video free, lab/quiz/chung chi can Pro 25/30 USD), khong dang ky Pro/khong chay lab/API; luu y vong doi cong cu 2026 (Hub/hosted inference dong 8/2026, can kiem chung lai). muse-main kiem chung doc lap qua trang khoa staging.deeplearning.ai: Shreya Rajpal, xuat ban 13/11/2024, 10 lessons, 7 code examples, chatbot pizza RAG, NLI + PII + competitor — khop bao cao; muc PRO xac nhan freemium. Skill vbook-extension-building da them 3 muc theo de xuat (chan o dau vao truoc khi ton cong; checklist ro hanh dong khi khong dat; khang dinh phai bam nguon o muc tung cau). Khong sua PROTOCOL, khong cai GuardrailsAI. Task research, khong ap dung validate/device test/install.",
+      "rounds": 1,
+      "score": 8
     },
     "test": {
       "device_test": "",
@@ -30,10 +30,10 @@
       "validate": ""
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học: Safe and Reliable AI via Guardrails (DeepLearning.AI × GuardrailsAI)",
   "type": "research",
-  "updated_at": "2026-11-20T20:41:14+07:00",
+  "updated_at": "2026-11-20T20:52:00+07:00",
   "claimed_at": "2026-11-20T20:38:57+07:00",
   "claim_expires_at": "2026-11-20T22:38:57+07:00"
 }

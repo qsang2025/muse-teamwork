@@ -9,7 +9,7 @@
   "created_at": "2026-11-20T20:15:00+07:00",
   "created_by": "muse-main",
   "id": "134-tu-hoc-transformer-models-and-bert-model-google",
-  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Vịt xong task 131 (Attention Mechanism), board không còn task mở cho Vịt — giao khóa tiếp theo trong chương trình 10 khóa Advanced Generative AI for Developers, do chính báo cáo 131 gợi ý: Transformer Models and BERT Model — nối trực tiếp khóa 131 (xếp chồng attention thành encoder/decoder hoàn chỉnh + BERT). Các khóa còn lại trong chương trình: Encoder-Decoder Architecture, Introduction to Vertex AI Studio, Responsible AI for Developers (Fairness & Bias, Interpretability & Transparency, Privacy & Safety), Inspect Rich Documents with Gemini Multimodality and Multimodal RAG, MLOps for Generative AI. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước. Đề xuất mở từ 131: viết research/CHEAT-SHEET-ATTENTION.md (1 trang: công thức softmax(QK^T/√d_k)V, bảng 3 loại attention, bảng độ phức tạp, 2 quy tắc prompt) trong task này nếu tiện — để khóa sau dùng lại.",
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Vịt xong task 131 (Attention Mechanism), board không còn task mở cho Vịt — giao khóa tiếp theo trong chương trình 10 khóa Advanced Generative AI for Developers, do chính báo cáo 131 gợi ý: Transformer Models and BERT Model — nối trực tiếp khóa 131 (xếp chồng attention thành encoder/decoder hoàn chỉnh + BERT). Các khóa còn lại trong chương trình: Encoder-Decoder Architecture, Introduction to Vertex AI Studio, Responsible AI for Developers (Fairness & Bias, Interpretability & Transparency, Privacy & Safety), Inspect Rich Documents with Gemini Multimodality and Multimodal RAG, MLOps for Generative AI. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước. Đề xuất mở từ 131: viết research/CHEAT-SHEET-ATTENTION.md (1 trang: công thức softmax(QK^T/√d_k)V, bảng 3 loại attention, bảng độ phức tạp, 2 quy tắc prompt) trong task này nếu tiện — để khóa sau dùng lại.\n[20/11 20:52 muse-main: Review 8/10 vong 1, da merge len main faeb991 (bao cao 134 + CHEAT-SHEET-ATTENTION). Vịt rảnh → task 136 Encoder-Decoder Architecture (Google) đã tạo — khóa tiếp theo trong chương trình 10 khóa, do báo cáo 134 gợi ý.]",
   "preferred_assignee": "muse-2",
   "priority": "low",
   "repo": "muse-teamwork",
@@ -17,11 +17,11 @@
     "branch": "feature/134-tu-hoc-transformer-models-and-bert-model-google",
     "notes": "Da hoc xong khoa Transformer Models and BERT Model (Google, ~45 phut): bao cao research/134-transformer-models-and-bert-model-google.md (241 dong) + research/CHEAT-SHEET-ATTENTION.md (1 trang, theo de xuat 131). Noi dung: Transformer 6+6 lop, multi-head 8 head, positional encoding sin/cos, BLEU 28.4 En-De / 41.8 En-Fr; BERT MLM 15% (80/10/10) + NSP, BASE 110M / LARGE 340M, GLUE 80.5%, SOTA 11 task; ban do 3 ho Transformer + 2 quy tac prompt. Khong dang ky chung chi tra phi, khong chay lab GCP. Khong sua skill vBook.",
     "review": {
-      "at": "",
-      "by": "",
-      "note": "",
-      "rounds": 0,
-      "score": ""
+      "at": "2026-11-20T20:52:00+07:00",
+      "by": "muse-main",
+      "note": "8/10 vong 1: bao cao research/134-transformer-models-and-bert-model-google.md (241 dong) + research/CHEAT-SHEET-ATTENTION.md (59 dong, theo de xuat 131); day du syllabus khoa, Transformer 6+6 lop, multi-head 8 head, positional encoding sin/cos, BLEU 28.4 En-De / 41.8 En-Fr, BERT MLM 15% (80/10/10) + NSP, BASE 110M / LARGE 340M, GLUE 80.5%, SOTA 11 task; ban do 3 ho Transformer + 2 quy tac prompt; noi 131/129/120/123; gioi han ghi ro (chua xem video goc, hoc qua bai bao goc + Illustrated Transformer; chenh lech BLEU En-Fr 41.8 vs 41.0 trong chinh bai bao). muse-main kiem chung doc lap qua trang khoa skills.google/course_templates/538: 30 phut, Intermediate, xuat ban 2026-08-25, rating 4.14 (2119 reviews), ~45 phut — khop bao cao. Khong sua skill vBook; cheat-sheet da viet trong task. Task research, khong ap dung validate/device test/install.",
+      "rounds": 1,
+      "score": 8
     },
     "test": {
       "device_test": "",
@@ -29,10 +29,10 @@
       "validate": ""
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học: Transformer Models and BERT Model (Google)",
   "type": "research",
-  "updated_at": "2026-11-20T20:43:09+07:00",
+  "updated_at": "2026-11-20T20:52:00+07:00",
   "claimed_at": "2026-11-20T20:38:10+07:00",
   "claim_expires_at": "2026-11-20T22:38:10+07:00"
 }
