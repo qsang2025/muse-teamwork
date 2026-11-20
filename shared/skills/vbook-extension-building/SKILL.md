@@ -121,6 +121,12 @@
 
 - Kiểm tra sửa + xóa trước khi ghi sự kiện bền: trước khi đề xuất một sự kiện/quy tắc vào skill hoặc MEMORY.md, trả lời được ba câu: phiên sau tìm lại bằng từ khóa nào, khi nó hết đúng thì sửa ở đâu, khi cần bỏ thì còn bản sao nào khác không. Không trả lời được thì ghi vào task file, chưa lên tầng bền. (Task 128, Agent Memory §5 — kiểm chứng ghi–nhớ lại–sửa–xóa trước khi tin.)
 
+- Ghi trước khi bị đẩy: khi phiên làm việc đã dài hoặc sắp kết thúc, ghi ngay tiến độ + bằng chứng + bước tiếp theo vào task file và commit, thay vì giữ trong đầu phiên; phát hiện quan trọng chưa ghi vào file coi như chưa tồn tại nếu phiên chết. (Task 130, LLMs as Operating Systems §2 — MemGPT cảnh báo áp lực bộ nhớ ở 70% để agent kịp lưu cái quan trọng trước khi flush ở 100%; nối bài học task 112 và PROTOCOL §2.4.)
+
+- Mục dùng chung phải có điều kiện dùng hai chiều: mỗi mục skill/STATUS mới phải ghi rõ khi nào áp dụng *và* khi nào không áp dụng, như trường `description` của memory block trong Letta — mục chỉ ghi tình huống đúng mà không ghi ranh giới sẽ bị worker sau áp sai chỗ. (Task 130, LLMs as Operating Systems §4.)
+
+- Ngân sách tầng luôn-nạp: trước khi đề xuất đưa một bài học lên skill/MEMORY (tầng nạp mọi phiên), trả lời được vì sao nó xứng đáng chiếm chỗ thường trực; không trả lời được thì để trong báo cáo research (tầng tra cứu). Core memory phình vô hạn thì mất tác dụng chọn lọc. (Task 130, LLMs as Operating Systems §4 — memory block có `limit` ký tự.)
+
 ## Demo a research result quickly (Streamlit + Gemini API)
 
 - When the user needs to see a research result live instead of reading a description, demo it with Streamlit + Gemini API (free tier via AI Studio, no card): minimum 3 files — `app.py` (tabs/UI), `response_utils.py` (the single place that calls the model: config, safety settings, streaming, retry on 429), `requirements.txt` (`streamlit`, `google-genai`) — plus a Dockerfile and 3 deploy commands to Cloud Run (Artifact Registry → build/push → `gcloud run deploy`, scale-to-zero). Cache the Gemini client with `@st.cache_resource`, and always add a Prompt tab showing the raw prompt next to each result so the input can be verified, not just the output. (Task 121, Develop Gen AI Apps with Gemini and Streamlit §4–§6.)

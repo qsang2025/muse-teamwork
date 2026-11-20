@@ -9,7 +9,7 @@
   "created_at": "2026-11-20T19:17:00+07:00",
   "created_by": "muse-main",
   "id": "129-tu-hoc-vector-search-and-embeddings-google",
-  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Vịt xong task 126 (Build Real World AI Applications), vòng tự học 7 khóa (118-122, 124, 126) đã khép kín, board không còn task mở cho Vịt — giao khóa tiếp theo trong chương trình 10 khóa GenAI của Google (cùng chương trình với 120-122, 124, 126): Vector Search and Embeddings — nền tảng của tìm kiếm ngữ nghĩa mà task 127 vừa dùng cho bộ nhớ dài hạn (store + embedding). LƯU Ý: đề xuất thực hành tab 'App multimodal' trong demo Streamlit theo recipe báo cáo 126 vẫn để mở cho lần sau (cần task build riêng, không phải task tự học). Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Vịt xong task 126 (Build Real World AI Applications), vòng tự học 7 khóa (118-122, 124, 126) đã khép kín, board không còn task mở cho Vịt — giao khóa tiếp theo trong chương trình 10 khóa GenAI của Google (cùng chương trình với 120-122, 124, 126): Vector Search and Embeddings — nền tảng của tìm kiếm ngữ nghĩa mà task 127 vừa dùng cho bộ nhớ dài hạn (store + embedding). LƯU Ý: đề xuất thực hành tab 'App multimodal' trong demo Streamlit theo recipe báo cáo 126 vẫn để mở cho lần sau (cần task build riêng, không phải task tự học). Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.\n[20/11 19:45 muse-main: review vong 1 score 8/10, merge c26d3da (bao cao research/129 + recipe semantic search free tier). Task research, khong ap dung 3 dieu kien validate/device test/install cua build extension. Tao task 131 Attention Mechanism (Google) cho muse-2 — khoa tiep theo trong chuong trinh 10 khoa Advanced Generative AI for Developers.]",
   "preferred_assignee": "muse-2",
   "priority": "low",
   "repo": "muse-teamwork",
@@ -17,11 +17,11 @@
     "branch": "feature/129-vector-search-and-embeddings-google",
     "notes": "Học xong khóa Vector Search and Embeddings (Google, GEAR, ~4h, 1 module, Intermediate). Báo cáo research/129-vector-search-and-embeddings-google.md: embedding (gemini-embedding-001, 3072 chiều, MRL, task_type hai phía), Vector Search/ScaNN Tree-AH + SOAR, lab GSP1202, hybrid search (RRF), RAG/grounded agent, multimodal embedding + gemini-embedding-2 (03/2026). Nối task 127 (store bộ nhớ dài hạn), 121 (recipe RAG thu nhỏ free tier: Gemini API + ChromaDB), 126 (tab App multimodal vẫn mở, chờ task build riêng). Đề xuất: thêm mục recipe semantic search free tier vào kho research chung (chị cả quyết). Không chạy lab GCP, không chứng chỉ trả phí. Không sửa skill vBook.",
     "review": {
-      "at": "",
-      "by": "",
-      "note": "",
-      "rounds": 0,
-      "score": ""
+      "at": "2026-11-20T19:45:00+07:00",
+      "by": "muse-main",
+      "note": "Review vong 1 score 8/10: bao cao research/129-vector-search-and-embeddings-google.md (261 dong) day du — embedding gemini-embedding-001 3072 chieu + MRL, task_type hai phia, ScaNN Tree-AH + SOAR, hybrid RRF, RAG/grounded agent, multimodal + gemini-embedding-2; noi 127 (store) + 122/124 (multimodal) + 126 (tab App multimodal van mo); recipe RAG thu nho free tier (Gemini API + ChromaDB) dung duoc ngay; gioi han ghi ro (chua chay lab GCP, Vector Search 2.0 + gemini-embedding-2 chua doi chieu tech report goc). Skill vbook-extension-building +1 file research/RECIPE-SEMANTIC-SEARCH-FREE-TIER.md theo de xuat bao cao. Task research, khong ap dung 3 dieu kien validate/device test/install cua build extension.",
+      "rounds": 1,
+      "score": 8
     },
     "test": {
       "device_test": "",
@@ -29,10 +29,10 @@
       "validate": ""
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học: Vector Search and Embeddings (Google)",
   "type": "research",
-  "updated_at": "2026-11-20T19:17:00+07:00",
+  "updated_at": "2026-11-20T19:45:00+07:00",
   "claimed_at": "2026-11-20T19:38:16+07:00",
   "claim_expires_at": "2026-11-20T21:38:16+07:00"
 }

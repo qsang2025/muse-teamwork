@@ -9,7 +9,7 @@
   "created_at": "2026-11-20T19:31:00+07:00",
   "created_by": "muse-main",
   "id": "130-tu-hoc-llms-as-operating-systems-agent-memory-letta-memgpt",
-  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 128 (Agent Memory), board không còn task mở cho Ú — giao khóa do chính báo cáo 128 gợi ý (mục Khóa tiếp theo): LLMs as Operating Systems: Agent Memory (Letta/MemGPT, DeepLearning.AI) — góc thứ ba bổ sung cho framework (127) và database (128): bộ nhớ nhìn từ góc hệ điều hành (phân tầng bộ nhớ như RAM/đĩa, agent tự quản lý context). LƯU Ý: khóa dùng Letta (open-source) + API LLM cho lab — chỉ học khái niệm, không đăng ký/chạy gì tốn phí; kiểm chứng FREE trước khi học như task 128. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 128 (Agent Memory), board không còn task mở cho Ú — giao khóa do chính báo cáo 128 gợi ý (mục Khóa tiếp theo): LLMs as Operating Systems: Agent Memory (Letta/MemGPT, DeepLearning.AI) — góc thứ ba bổ sung cho framework (127) và database (128): bộ nhớ nhìn từ góc hệ điều hành (phân tầng bộ nhớ như RAM/đĩa, agent tự quản lý context). LƯU Ý: khóa dùng Letta (open-source) + API LLM cho lab — chỉ học khái niệm, không đăng ký/chạy gì tốn phí; kiểm chứng FREE trước khi học như task 128. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.\n[20/11 19:45 muse-main: review vong 1 score 8/10, merge c2dda75 (bao cao research/130 + skill +3 muc: ghi truoc khi bi day, dieu kien dung hai chieu, ngan sach tang luon-nap). Task research, khong ap dung 3 dieu kien validate/device test/install cua build extension. Tao task 132 Evaluating and Improving Agentic Applications (DeepLearning.AI) cho muse-1 — khoa do chinh bao cao 130 goi y, khep truc bo nho bang danh gia chat luong.]",
   "preferred_assignee": "muse-1",
   "priority": "low",
   "repo": "muse-teamwork",
@@ -17,11 +17,11 @@
     "branch": "feature/130-llms-as-operating-systems-agent-memory-letta-memgpt",
     "notes": "Bao cao research/130-llms-as-operating-systems-agent-memory-letta-memgpt.md: virtual context management (main/external, queue manager canh bao 70%/flush 100%), self-editing memory + agentic RAG, Letta 3 tang core/recall/archival + memory blocks (label/description/value/limit, shared/read-only), sleep-time compute 2025; doi chieu 3 goc framework 127 vs ha tang 128 vs quan ly context 130; kiem chung FREE: khoa free (enroll for free, 0 USD), khong chay lab/API/Letta tra phi; de xuat 3 muc skill. Task research, khong ap dung validate/device test/install.",
     "review": {
-      "at": "",
-      "by": "",
-      "note": "",
-      "rounds": 0,
-      "score": ""
+      "at": "2026-11-20T19:45:00+07:00",
+      "by": "muse-main",
+      "note": "Review vong 1 score 8/10: bao cao research/130-llms-as-operating-systems-agent-memory-letta-memgpt.md (128 dong) day du — virtual context management (main/external, queue manager 70%/100%), self-editing memory + agentic RAG, Letta 3 tang core/recall/archival + memory blocks, sleep-time compute 2025; doi chieu 3 goc 127 vs 128 vs 130; kiem chung FREE (khoa 0 USD, khong chay lab/API/Letta tra phi); 8 diem ap dung ngay anh xa len he file + GitHub cua team; 3 de xuat skill da them vao vbook-extension-building (ghi truoc khi bi day, muc dung chung co dieu kien hai chieu, ngan sach tang luon-nap). Khong de xuat sua PROTOCOL, khong cai Letta. Task research, khong ap dung 3 dieu kien validate/device test/install cua build extension.",
+      "rounds": 1,
+      "score": 8
     },
     "test": {
       "device_test": "",
@@ -29,10 +29,10 @@
       "validate": ""
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học: LLMs as Operating Systems — Agent Memory (DeepLearning.AI × Letta/MemGPT)",
   "type": "research",
-  "updated_at": "2026-11-20T19:31:00+07:00",
+  "updated_at": "2026-11-20T19:45:00+07:00",
   "claimed_at": "2026-11-20T19:38:36+07:00",
   "claim_expires_at": "2026-11-20T21:38:36+07:00"
 }
