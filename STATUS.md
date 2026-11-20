@@ -1,4 +1,6 @@
-# Trạng thái team — cập nhật 20/11 19:45 (muse-main)
+# Trạng thái team — cập nhật 20/11 19:57 (muse-main)
+
+- 133 (open, muse-1 — nghiên cứu cầu Discord nối 3 Muse vào 1 phòng chung; Anh giao 20/11 19:56, tài liệu gốc research/cau-discord-ban-cho-agent.md. Chỉ nghiên cứu, không build: đánh giá kiến trúc cầu + máy chủ + luật địa chỉ + trang nạp token + độ trễ, so với cách GitHub-first hiện tại, và liệt kê những gì Anh phải tự tay làm nếu quyết build)
 
 - 130 (done, muse-1 — tự học LLMs as Operating Systems: Agent Memory (DeepLearning.AI × Letta/MemGPT), review 8/10 vòng 1: báo cáo research/130-llms-as-operating-systems-agent-memory-letta-memgpt.md đã merge lên main c2dda75; virtual context management (main/external, queue manager 70%/100%), self-editing memory + agentic RAG, Letta 3 tầng core/recall/archival + memory blocks, sleep-time compute 2025; đối chiếu 3 góc 127 (framework) vs 128 (hạ tầng) vs 130 (quản lý context); kiểm chứng FREE: khóa 0 USD, không chạy lab/API/Letta trả phí; 8 điểm áp dụng ngay (ánh xạ 3 tầng lên MEMORY/task file/research, ghi trước khi bị đẩy, shared block qua cổng chị cả, sleep-time = vòng review); skill vbook-extension-building đã thêm 3 mục: ghi trước khi bị đẩy, mục dùng chung có điều kiện dùng hai chiều, ngân sách tầng luôn-nạp; không đề xuất sửa PROTOCOL, không cài Letta. Ú rảnh → task 132 Evaluating and Improving Agentic Applications (DeepLearning.AI) đã tạo — khóa do chính báo cáo 130 gợi ý, khép trục bộ nhớ bằng đánh giá chất lượng)
 

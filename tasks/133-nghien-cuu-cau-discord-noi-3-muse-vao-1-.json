@@ -1,0 +1,33 @@
+{
+  "id": "133-nghien-cuu-cau-discord-noi-3-muse-vao-1-",
+  "title": "Nghiên cứu cầu Discord nối 3 Muse vào 1 phòng chung",
+  "type": "research",
+  "repo": "muse-teamwork",
+  "branch": "",
+  "assignee": "",
+  "preferred_assignee": "muse-1",
+  "priority": "medium",
+  "status": "open",
+  "created_by": "muse-main",
+  "created_at": "2026-11-20T19:56:59+07:00",
+  "claimed_at": "",
+  "claim_expires_at": "",
+  "result": {
+    "branch": "",
+    "test": {
+      "validate": "",
+      "device_test": "",
+      "install": ""
+    },
+    "notes": ""
+  },
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "notes": "Anh giao 20/11 19:56 (chat Team 3 Chi Em): '3 chi em nghien cuu du an nay, co ve hay'. Tai lieu goc Anh gui: research/cau-discord-ban-cho-agent.md (ban sao trong repo; ban goc o may muse-main). CHI NGHIEN CUU — khong build, khong tao bot Discord, khong cham token, khong dang ky tai khoan nao. Bao cao viet vao research/133-discord-bridge.md, ket luan ro: NEN / KHONG NEN / NEN NHUNG CO DIEU KIEN + buoc tiep theo cu the.\n\nDANH GIA:\n1. Kien truc cau (bot discord.py + Docker + inbox/outbox file + long-poll SSH tail -F): co dung voi cach 3 Muse van hanh khong? LUU Y: 3 VM Muse chay qua tunnel runtime, KHONG nhan inbound; agent SSH RA ngoai duoc (qua proxy 3130). Long-poll tail -F tu VM ra may chu cau co kha thi khong, bo canh song sot qua VM restart the nao (runtime thay VM thi process chet — can co che khoi dong lai)?\n2. May chu cau: can may luon bat co Docker + SSH. Hien team KHONG co may chu nha co dinh — chi co 3 VM runtime (muse-main/muse-1/muse-2) va dien thoai Anh. Danh gia cac lua chon: chay cau tren 1 trong 3 VM? VPS thue? NAS/mini PC nha Anh? Chi phi + do tin cay tung lua chon.\n3. Luat dia chi (\"ten + whitelist OWNER_ID + PEER_BOT_IDS + chot 8 tin bot-bot): du chong lap chua, co ke ho nao khong.\n4. Trang nap token (setup page): token khong qua chat — danh gia do an toan cua thiet ke nay, ai truy cap duoc trang do, token luu .env 600 co du khong.\n5. Do tre 6-10s/vong hoi-dap: co chap nhan duoc cho viec phoi hop team khong; so voi cach hien tai (GitHub tasks/*.json + watcher 5 phut).\n6. So sanh voi cach lam hien tai: GitHub-first da chay tot cho vBook (tasks, review, merge). Cau Discord giai quyet duoc van de gi ma GitHub chua giai quyet? Co dang doi khong, hay chi nen dung cho truong hop nao (vd: trao doi nhanh, goi nhau lam viec gap)?\n7. Liet ke ro nhung gi Anh phai tu tay lam neu quyet build (theo tai lieu: tao bot, bat MESSAGE CONTENT INTENT, moi bot quyen 68672, dan token) + nhung thong tin Anh phai cung cap (ten agent, server/kenh Discord, OWNER_ID, may chu cau).\n\nReview: muse-main cham /10 nhu task research khac (bao cao doi chieu duoc voi tai lieu goc + kiem chung duoc cac khang dinh ky thuat chinh).",
+  "updated_at": "2026-11-20T19:56:59+07:00"
+}
