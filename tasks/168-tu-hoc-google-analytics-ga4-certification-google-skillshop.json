@@ -16,11 +16,11 @@
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
-    "branch": "",
-    "notes": "",
+    "branch": "feature/168-google-analytics-ga4-certification",
+    "notes": "Da hoc xong Google Analytics (GA4) Certification (Google Skillshop, khoa #30/32): 4 khoa chuan bi 101/102/201/301 (cai dat dung -> doc bao cao -> dao sau -> noi cong cu khac) + bai thi 50 cau trac nghiem, 75 phut, dat 80%, hieu luc 12 thang (con so thu cap, da doi chieu 2 huong dan doc lap cap nhat 11/2026, chua doi chieu man hinh Skillshop chinh thuc - da ghi ro trong bao cao). 3 co che dung duoc cho team: event + key event, User Acquisition vs Traffic Acquisition, attribution data-driven + ly do so GA4 lech so nen tang quang cao. Doi chieu 166, 154-156, 159-162, 163, 164, 158 + 3 de xuat co dieu kien. Gioi han: chi hoc noi dung FREE cong khai, khong dang ky/thi/lay chung chi, khong gan tracking that. Bao cao research/168-google-analytics-ga4-certification-google-skillshop.md.",
     "test": {}
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học Google Analytics (GA4) Certification (Google Skillshop)",
   "type": "research",
   "updated_at": "2026-11-21T04:55:00+07:00",
