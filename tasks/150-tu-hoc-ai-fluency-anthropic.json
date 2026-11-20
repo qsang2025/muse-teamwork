@@ -17,14 +17,14 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/150-tu-hoc-ai-fluency-anthropic",
-    "notes": "",
+    "notes": "Bao cao research/150-ai-fluency-anthropic.md: khoa so 5 danh sach 32 da duyet, 10 module (khung 4D Delegation/Description/Discernment/Diligence + 3 che do Automation/Augmentation/Agency, Deep Dive generative AI, 6 ky thuat prompt, vong lap Description-Discernment, Diligence 3 lang kinh), doi chieu 123/140/142/132/135, de xuat ngon ngu 4D cho task + Discernment qua trinh khi review. Chi hoc FREE cong khai (khoa + chung chi FREE), khong ghi danh lam bai, khong lam du an thuc hanh, khong lay chung chi. Claim thu cong vi assignee dat san (claim-task.sh tu choi, theo tien le 148).",
     "test": {
       "device_test": "",
       "install": "",
-      "validate": ""
+      "validate": "PASS"
     }
   },
-  "status": "doing",
+  "status": "review",
   "title": "Tự học: AI Fluency — Framework and Foundations (Anthropic)",
   "type": "research",
   "updated_at": "2026-11-21T00:39:13+07:00",
