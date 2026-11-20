@@ -1,29 +1,40 @@
 {
-  "assignee": "muse-2",
+ "assignee": "muse-2",
+ "branch": "feature/164-tu-hoc-blogging-for-business-ahrefs-academy",
+ "checklist": [
+  "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+  "Claim task (script claim-task.sh) + tạo branch",
+  "Build / khảo sát xong, test đầy đủ",
+  "Push branch, cập nhật task sang review",
+  "muse-main kiểm tra + merge, task sang done"
+ ],
+ "created_at": "2026-11-21T03:55:00+07:00",
+ "created_by": "muse-main",
+ "id": "164-tu-hoc-blogging-for-business-ahrefs-academy",
+ "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Vịt rảnh sau khi task 162 merge xong, không còn task mở). Khóa Blogging for Business (Ahrefs Academy) — khóa số 26 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch content sau 163 (Content Marketing Certification, HubSpot) và mạch SEO 154/155/156 (Ahrefs là tác giả khóa 156 — SEO Course for Beginners; khóa này 40 bài, 4h56 theo ghi chú ở STATUS 156): khung viết blog cho doanh nghiệp — chọn chủ đề, viết bài chuẩn SEO, quảng bá nội dung; đối chiếu với Content Marketing Using Generative AI của 153, Content Marketing HubSpot của 163 và checklist on-page 154 §8: chỗ nào Ahrefs bổ sung, chỗ nào trùng, và áp dụng cho mô tả nguồn vBook / bài viết team ra sao. Delegation: giao Vịt học + viết báo cáo; muse-main giữ review + merge; Anh giữ quyết định có lấy chứng chỉ/chạy quảng cáo thật không. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy chiến dịch quảng cáo thật, không nạp tiền. Báo cáo viết vào research/164-blogging-for-business-ahrefs-academy.md, review muse-main chấm /10 như task research khác.\n[21/11 04:35 muse-2: Da hoc xong + nop review. Bao cao 174 dong tren branch feature/164. Kiem chung KD voi Help Center Ahrefs 03/09/2026 (van dung). Luu y: claim-task.sh tu choi vi assignee da dien san (nhu 165 cua muse-1) — da claim thu cong, cherry-pick claim len main truoc khi complete.]",
+ "preferred_assignee": "muse-2",
+ "priority": "medium",
+ "repo": "muse-teamwork",
+ "result": {
   "branch": "feature/164-tu-hoc-blogging-for-business-ahrefs-academy",
-  "checklist": [
-    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
-    "Claim task (script claim-task.sh) + tạo branch",
-    "Build / khảo sát xong, test đầy đủ",
-    "Push branch, cập nhật task sang review",
-    "muse-main kiểm tra + merge, task sang done"
-  ],
-  "created_at": "2026-11-21T03:55:00+07:00",
-  "created_by": "muse-main",
-  "id": "164-tu-hoc-blogging-for-business-ahrefs-academy",
-  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Vịt rảnh sau khi task 162 merge xong, không còn task mở). Khóa Blogging for Business (Ahrefs Academy) — khóa số 26 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch content sau 163 (Content Marketing Certification, HubSpot) và mạch SEO 154/155/156 (Ahrefs là tác giả khóa 156 — SEO Course for Beginners; khóa này 40 bài, 4h56 theo ghi chú ở STATUS 156): khung viết blog cho doanh nghiệp — chọn chủ đề, viết bài chuẩn SEO, quảng bá nội dung; đối chiếu với Content Marketing Using Generative AI của 153, Content Marketing HubSpot của 163 và checklist on-page 154 §8: chỗ nào Ahrefs bổ sung, chỗ nào trùng, và áp dụng cho mô tả nguồn vBook / bài viết team ra sao. Delegation: giao Vịt học + viết báo cáo; muse-main giữ review + merge; Anh giữ quyết định có lấy chứng chỉ/chạy quảng cáo thật không. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy chiến dịch quảng cáo thật, không nạp tiền. Báo cáo viết vào research/164-blogging-for-business-ahrefs-academy.md, review muse-main chấm /10 như task research khác.\n[21/11 04:35 muse-2: Da hoc xong + nop review. Bao cao 174 dong tren branch feature/164. Kiem chung KD voi Help Center Ahrefs 03/09/2026 (van dung). Luu y: claim-task.sh tu choi vi assignee da dien san (nhu 165 cua muse-1) — da claim thu cong, cherry-pick claim len main truoc khi complete.]",
-  "preferred_assignee": "muse-2",
-  "priority": "medium",
-  "repo": "muse-teamwork",
-  "result": {
-    "branch": "feature/164-tu-hoc-blogging-for-business-ahrefs-academy",
-    "notes": "Bao cao research/164-blogging-for-business-ahrefs-academy.md (174 dong): 40 bai/11 module/4h56, Tim Soulo; doi chieu 153/163/154-156/158/159-162; checklist 4 diem trong skill dung vung, khong can sua; KD da kiem chung voi tai lieu Ahrefs hien tai (03/09/2026); de xuat: do traffic potential that truoc khi cham business potential 0-3, audit Update/Merge/Delete cho mo ta nguon cu, quy tac quang ba de lay link.",
-    "test": {}
+  "notes": "Bao cao research/164-blogging-for-business-ahrefs-academy.md (174 dong): 40 bai/11 module/4h56, Tim Soulo; doi chieu 153/163/154-156/158/159-162; checklist 4 diem trong skill dung vung, khong can sua; KD da kiem chung voi tai lieu Ahrefs hien tai (03/09/2026); de xuat: do traffic potential that truoc khi cham business potential 0-3, audit Update/Merge/Delete cho mo ta nguon cu, quy tac quang ba de lay link.",
+  "test": {
+   "validate": "PASS",
+   "device_test": "n/a",
+   "install": "n/a"
   },
-  "status": "review",
-  "title": "Tự học Blogging for Business (Ahrefs Academy)",
-  "type": "research",
-  "updated_at": "2026-11-21T04:17:53+07:00",
-  "claimed_at": "2026-11-21T04:08:44+07:00",
-  "claim_expires_at": "2026-11-21T06:08:44+07:00"
+  "review": {
+   "score": 8,
+   "rounds": 1,
+   "by": "muse-main",
+   "at": "2026-11-21T04:35:00+07:00",
+   "note": "Đạt 8/10 vòng 1: báo cáo 174 dòng, 40 bài/11 module/4h56, Tim Soulo; spike of hope + compound effect, traffic potential thay search volume, KD phi tuyến (KD 70 ≈ 202 RD), business potential 0-3, intent = 80% tối ưu, audit 3 nhóm Update/Merge/Delete + 301, nội dung hay Quality/Looks/Uniqueness, quảng bá để lấy link không lấy view, link building (super fan/Best by links/Link Intersect/powerlinkers), outreach 3 nhóm prospect; đối chiếu đầy đủ 153 + 154 + 155 + 156 + 163 + 151/152/158 + quảng cáo 159/160/161/162, checklist on-page 4 điểm trong skill đứng vững (không cần sửa). Ghi rõ giới hạn trung thực: học qua trang khóa chính thức + syllabus Class Central + tóm tắt transcript + ghi chú học viên độc lập, không xem từng phút video, 3 phỏng vấn module 11 chỉ có tên bài, video gốc 2022 (HARO đổi chủ, không có AI Search/GenAI), không đăng nhập/chạy công cụ Ahrefs/quiz/chứng chỉ — đúng §9. muse-main kiểm chứng độc lập: khóa #26 đúng danh sách 32 (research/140 dòng 57); trang khóa chính thức khớp báo cáo (40 bài, 11 module, 4h56, 'No sign-up required, and absolutely free of charge', Tim Soulo CMO; AEO 12 bài/1h26, Advanced Link Building 15 bài/1h48, Affiliate 16 bài/1h49 khớp mục Nguồn); KD đã được worker kiểm chứng với Help Center Ahrefs 03/09/2026. Điểm trừ nhỏ: học qua tóm tắt transcript thay vì xem đủ video; 3 bài phỏng vấn khách mời chưa có nội dung chi tiết. Đề xuất §9.1/§9.2/§9.3/§9.4 CHƯA duyệt — để dành lần chạm skill tới, gộp cùng 156 §8.1 + 159 §7.1 + 160 §9.1/§9.2/§9.3 + 161 §7.1/§7.2 + 162 §8.1/§8.2/§8.3 + 163 §9.1/§9.2/§9.3."
+  }
+ },
+ "status": "done",
+ "title": "Tự học Blogging for Business (Ahrefs Academy)",
+ "type": "research",
+ "updated_at": "2026-11-21T04:35:00+07:00",
+ "claimed_at": "2026-11-21T04:08:44+07:00",
+ "claim_expires_at": "2026-11-21T06:08:44+07:00"
 }
