@@ -1,40 +1,48 @@
 {
-    "id": "117-build-thu-extension-vnexpress-loai-news",
-    "title": "Build thử extension VnExpress loại news",
-    "type": "vbook-extension",
-    "repo": "Qsang_vbook",
+  "id": "117-build-thu-extension-vnexpress-loai-news",
+  "title": "Build thử extension VnExpress loại news",
+  "type": "vbook-extension",
+  "repo": "Qsang_vbook",
+  "branch": "feature/117-vnexpress-news",
+  "assignee": "muse-1",
+  "preferred_assignee": "",
+  "priority": "high",
+  "status": "done",
+  "created_by": "muse-main",
+  "created_at": "2026-11-20T08:58:37+07:00",
+  "claimed_at": "2026-11-20T10:05:59+07:00",
+  "claim_expires_at": "2026-11-20T12:05:59+07:00",
+  "result": {
     "branch": "feature/117-vnexpress-news",
-    "assignee": "muse-1",
-    "preferred_assignee": "",
-    "priority": "high",
-    "status": "review",
-    "created_by": "muse-main",
-    "created_at": "2026-11-20T08:58:37+07:00",
-    "claimed_at": "2026-11-20T10:05:59+07:00",
-    "claim_expires_at": "2026-11-20T12:05:59+07:00",
-    "result": {
-        "branch": "feature/117-vnexpress-news",
-        "test": {
-            "validate": "PASS (122 nguon, 122 registry, 0 canh bao) — muse-main chay lai 20/11 sau khi sua article.js (commit d5955a0)",
-            "device_test": "PASS 6/6 code 0 — muse-main chay 20/11 17:41-18:00 qua forwarder tailnet (VBOOK_SERVER=http://127.0.0.1:18080): home 8, genre 16, search /thoi-su 22, /kinh-doanh 29, gia vang 24, article 1 (noi dung that: ten/tac gia Vu Tuan/gio/tags). 2 loi tim thay trong luc test, muse-main sua luon theo uy quyen 20/11 (commit d5955a0, version 1 -> 2): (1) el.tagName() khong co trong runtime (TypeError: not a function, code 403); (2) .first() cua runtime KHONG bao gio tra null nen moi p.Normal bi nhan nham thanh figure -> bai rong; sua bang .size() > 0. Luu y: luot test 6/6 PASS dau tien la PASS GIA (case article tra Response.error nhung fixture contains [VnExpress] khop ngay trong thong bao loi) — da kiem chung lai bang tay: bai doc du noi dung that.",
-            "install": "200 — muse-main chay 20/11 sau device test 6/6"
-        },
-        "notes": "Build xong + validate PASS, da push branch feature/117-vnexpress-news len Qsang_vbook. validate.js TYPES += news; templates/news/ o 2 cho (chuan Qsang); extensions/news/vnexpress (home/genre/search/article) theo cau truc live khao sat 20/11: danh sach article.art_item, phan trang -p<n>, tim kiem timkiem.vnexpress.net, bai viet .fck_detail (lead + p.Normal + figure), bai tra phi bao loi ro. BLOCKED cho device test + install tren dien thoai Anh de xac nhan app ho tro type news — chua toi duoc dev server o luot nay, khong tu merge.",
-        "review": {
-            "at": "2026-11-20T18:01:00+07:00",
-            "by": "muse-main",
-            "note": "Du 3 dieu kien ky thuat: validate PASS 122 nguon 0 canh bao; device test 6/6 code 0 tren dien thoai Anh (noi dung bai that, da kiem chung bang tay sau khi phat hien PASS gia o luot 1); install 200. Branch hien o d5955a0 (2 sua cua muse-main trong luc test). CHUA MERGE: con buoc Anh mo thu 1 bai trong app xac nhan app ho tro type news (doc + TTS) roi moi merge; luc merge rebase len main hien tai (c0f48f4, 124 nguon) -> registry 125, chay lai validate truoc khi push main.",
-            "rounds": 1,
-            "score": 8
-        }
+    "test": {
+      "validate": "PASS 125 nguon, 0 canh bao (chay lai tren branch sau rebase, tip 926db45)",
+      "device_test": "6/6 PASS exit 0 tren dien thoai Anh (truoc rebase; file extension khong doi sau rebase)",
+      "install": 200,
+      "app_check": "Anh mo thu 1 bai trong app 20/11 18:19: bai \"Cho phep lao dong cong ich thay tien phat...\" mo duoc, TTS \"Doc truc tiep\" dang chay (nut Pause hien, 02:59:53) — app ho tro type news"
     },
-    "checklist": [
-        "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
-        "Claim task (script claim-task.sh) + tạo branch",
-        "Build / khảo sát xong, test đầy đủ",
-        "Push branch, cập nhật task sang review",
-        "muse-main kiểm tra + merge, task sang done"
-    ],
-    "notes": "Anh giao 20/11 08:57 trong chat Team 3 Chi Em: lam thu extension VnExpress loai news. Nguon: research/110-news-port.md (task 110, review 9/10) — ket luan DE SAU chi vi thieu 2 dieu kien: (1) probe tren dien thoai Anh xac nhan app ho tro type news, (2) Anh chot muon doc it nhat 1 site tin cu the. Anh vua chot (2): VnExpress. Task nay lam (1) + build thu.\n\nViec lam: (a) them \"news\" vao TYPES trong tools/cli/validate.js:51 cua Qsang_vbook (hien chi co 8 loai: novel, comic, chinese_novel, video, audio, translate, tts, ai — khong co news/forum; tham khao cach task 112 dang lam cho forum); (b) build extension news/vnexpress cho vnexpress.net (home/danh muc bai viet/chi tiet bai; tham khao 3 ext news that trong fork duongden/vbook: baikebaidu v2, sohu v3, viblo v6); site da kiem chung 200 (task 110). (c) Device test + install tren dien thoai Anh (forwarder tailnet, VBOOK_SERVER=http://127.0.0.1:18080) de xac nhan app ho tro loai news — neu app khong hien/chay duoc type news thi bao ro, khong co chay.\n\nGia tri manh nhat neu chay duoc: nghe TTS khi lai xe. Quy tac nha: chi free content, validate PASS + device test code 0 + install 200, KHONG tu merge — muse-main kiem tra + merge. Doc shared/skills/vbook-extension-building/SKILL.md truoc khi build.\n[20/11 10:13 muse-1: build VnExpress news xong + validate PASS, da push branch; BLOCKED cho device test/install tren dien thoai Anh + Anh mo thu bai xac nhan app ho tro type news.]\n\n[20/11 18:00 muse-main: Anh bao test 117 (gui anh dev mode + Tailscale). Forwarder chet -> khoi dong lai, dien thoai tra loi. Device test luot 1: 5/6 PASS, case 6 article.js loi TypeError: not a function (code 403) do el.tagName(); sua xong chay lai thi 6/6 PASS nhung la PASS GIA (bai tra loi rong, fixture chi kiem contains VnExpress nen khop ca thong bao loi). Chan doan bang script tam diag/diag2/diag3 tren may that (da xoa): doc tai du (15 p.Normal), .first() khong bao gio tra null -> moi khoi bi nhan nham thanh figure. Sua article.js dung .size() > 0; bai doc du noi dung that. Validate PASS, device test 6/6 code 0, install 200. Task sang review 8/10. Con cho Anh mo thu 1 bai trong app roi merge.]",
-    "updated_at": "2026-11-20T18:01:00+07:00"
+    "notes": "Build xong + validate PASS, da push branch feature/117-vnexpress-news len Qsang_vbook. validate.js TYPES += news; templates/news/ o 2 cho (chuan Qsang); extensions/news/vnexpress (home/genre/search/article) theo cau truc live khao sat 20/11: danh sach article.art_item, phan trang -p<n>, tim kiem timkiem.vnexpress.net, bai viet .fck_detail (lead + p.Normal + figure), bai tra phi bao loi ro. BLOCKED cho device test + install tren dien thoai Anh de xac nhan app ho tro type news — chua toi duoc dev server o luot nay, khong tu merge.",
+    "review": {
+      "at": "2026-11-20T18:01:00+07:00",
+      "by": "muse-main",
+      "note": "Du 3 dieu kien ky thuat: validate PASS 122 nguon 0 canh bao; device test 6/6 code 0 tren dien thoai Anh (noi dung bai that, da kiem chung bang tay sau khi phat hien PASS gia o luot 1); install 200. Branch hien o d5955a0 (2 sua cua muse-main trong luc test). CHUA MERGE: con buoc Anh mo thu 1 bai trong app xac nhan app ho tro type news (doc + TTS) roi moi merge; luc merge rebase len main hien tai (c0f48f4, 124 nguon) -> registry 125, chay lai validate truoc khi push main.",
+      "rounds": 1,
+      "score": 8
+    },
+    "merge": {
+      "at": "2026-11-20T18:25:00+07:00",
+      "main_tip": "926db45",
+      "registry": 125,
+      "branch": "feature/117-vnexpress-news",
+      "rebase": "len origin/main c0f48f4; conflict plugin.json + validate.js TYPES (forum+news) — giai quyet, sinh lai catalog 125 nguon"
+    }
+  },
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "notes": "Anh giao 20/11 08:57 trong chat Team 3 Chi Em: lam thu extension VnExpress loai news. Nguon: research/110-news-port.md (task 110, review 9/10) — ket luan DE SAU chi vi thieu 2 dieu kien: (1) probe tren dien thoai Anh xac nhan app ho tro type news, (2) Anh chot muon doc it nhat 1 site tin cu the. Anh vua chot (2): VnExpress. Task nay lam (1) + build thu.\n\nViec lam: (a) them \"news\" vao TYPES trong tools/cli/validate.js:51 cua Qsang_vbook (hien chi co 8 loai: novel, comic, chinese_novel, video, audio, translate, tts, ai — khong co news/forum; tham khao cach task 112 dang lam cho forum); (b) build extension news/vnexpress cho vnexpress.net (home/danh muc bai viet/chi tiet bai; tham khao 3 ext news that trong fork duongden/vbook: baikebaidu v2, sohu v3, viblo v6); site da kiem chung 200 (task 110). (c) Device test + install tren dien thoai Anh (forwarder tailnet, VBOOK_SERVER=http://127.0.0.1:18080) de xac nhan app ho tro loai news — neu app khong hien/chay duoc type news thi bao ro, khong co chay.\n\nGia tri manh nhat neu chay duoc: nghe TTS khi lai xe. Quy tac nha: chi free content, validate PASS + device test code 0 + install 200, KHONG tu merge — muse-main kiem tra + merge. Doc shared/skills/vbook-extension-building/SKILL.md truoc khi build.\n[20/11 10:13 muse-1: build VnExpress news xong + validate PASS, da push branch; BLOCKED cho device test/install tren dien thoai Anh + Anh mo thu bai xac nhan app ho tro type news.]\n\n[20/11 18:00 muse-main: Anh bao test 117 (gui anh dev mode + Tailscale). Forwarder chet -> khoi dong lai, dien thoai tra loi. Device test luot 1: 5/6 PASS, case 6 article.js loi TypeError: not a function (code 403) do el.tagName(); sua xong chay lai thi 6/6 PASS nhung la PASS GIA (bai tra loi rong, fixture chi kiem contains VnExpress nen khop ca thong bao loi). Chan doan bang script tam diag/diag2/diag3 tren may that (da xoa): doc tai du (15 p.Normal), .first() khong bao gio tra null -> moi khoi bi nhan nham thanh figure. Sua article.js dung .size() > 0; bai doc du noi dung that. Validate PASS, device test 6/6 code 0, install 200. Task sang review 8/10. Con cho Anh mo thu 1 bai trong app roi merge.]\nMERGE 20/11 18:25 (muse-main): Anh xac nhan mo bai OK trong app 18:19 (TTS chay). Rebase len main c0f48f4, giai conflict (TYPES them ca forum + news; plugin.json sinh lai), validate lai PASS 125 nguon 0 canh bao, push branch:main -> tip 926db45, registry 125, VnExpress news v2. Task -> done.",
+  "updated_at": "2026-11-20T18:25:00+07:00"
 }
