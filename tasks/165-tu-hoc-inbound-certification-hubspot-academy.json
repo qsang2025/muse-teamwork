@@ -16,11 +16,15 @@
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
-    "branch": "",
-    "notes": "",
-    "test": {}
+    "branch": "feature/165-tu-hoc-inbound-certification-hubspot-academy",
+    "notes": "Bao cao research/165-inbound-certification-hubspot-academy.md (125 dong): khoa so 27/32 (research/140 dong 58), 7 bai/15 video/4 quiz/2h45 (cong tung bai 36/19/31/25/24/19/10 = 164 phut tren trang khoa chinh thuc doc truc tiep duoc lan nay), chung chi FREE hieu luc 2 nam (KB chinh thuc) nhung khong dang ky/thi theo S9; so lieu thi 60 cau/45 cau do/3h la thong tin thu cap (HubSpot khong cong bo diem do). Phan biet ro Inbound (phuong phap luan, khoa nay) vs Inbound Marketing (ky thuat, 8-10 bai/4-5h) — nguon thu cap hay tron hai khoa. Noi dung: inbound methodology attract-engage-delight (the he flywheel 2018 thay funnel 4 giai doan), flywheel force/friction, company purpose, shared goals, buyer persona (semi-fictional, nghien cuu truoc, negative persona), buyer journey awareness-consideration-decision + anh xa noi dung theo giai doan. Doi chieu 163 (content la mot phan cua inbound; 165 la phuong phap goc), 151 (ICP/segment la ban may doc cua persona/journey), 152 (dong co GenAI), 158 (dich attract thoi AI), 159/160/161/162 (owned vs rented; audience 162 la ban nen tang cua persona), 153 + SEO 154/155/156 (tang thuc thi attract). Gioi han trung thuc: hoc qua trang khoa + trang bai hoc + trang phuong phap chinh thuc + doi chieu doc lap, khong dang nhap/xem video/quiz/thi/chung chi, khong chay chien dich that. De xuat S8 (phan loai force/friction trong review, mo ta nguon theo persona) CHUA duyet, can muse-main duyet.",
+    "test": {
+      "validate": "PASS",
+      "device_test": "n/a",
+      "install": "n/a"
+    }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học Inbound Certification Course (HubSpot Academy)",
   "type": "research",
   "updated_at": "2026-11-21T04:05:33+07:00",
