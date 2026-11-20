@@ -107,8 +107,18 @@
 
 - Check the chapter text yourself from your own machine instead of trusting the site metadata or its claims.
 
+## Ghi đúng tầng bộ nhớ và viết báo cáo theo dạng tiền lệ
+
+- Ghi đúng tầng bộ nhớ: tiến độ và bằng chứng của một task ghi vào task file; bài học dùng lại được cho site khác đề xuất vào skill qua báo cáo research; sự kiện bền về Anh/công việc không ghi vào task file hay skill. Ghi sai tầng thì worker sau không tìm thấy dù đã ghi — tiến độ trong một task thì ghi vào task file, đừng ghi vào MEMORY.md. (Task 127, Long-Term Agentic Memory §3 — checkpointer = phiên worker, store = task file trên GitHub, MEMORY.md = tầng chưng cất.)
+
+- Viết báo cáo theo dạng tiền lệ: mỗi báo cáo research/build chứa ít nhất một tiền lệ bắt chước được (tình huống → quyết định → bằng chứng kiểm chứng) để worker sau truy xuất và làm theo, thay vì chỉ liệt kê việc đã làm — người sau cần ví dụ để bắt chước, không cần lịch sử để đọc. (Task 127, Long-Term Agentic Memory §4.2 — episodic memory; nối mục "ghi mọi cách đã thử / không thử lại" của task 118.)
+
+- Sự kiện bền phải có ngày hết hiệu lực: khi ghi một sự kiện/quyết định vào skill hoặc đề xuất lên MEMORY.md, ghi kèm ngày ghi và điều kiện để nó hết đúng (site đóng, domain đổi, luật đã thay). Bộ nhớ không có ngày hết hạn sẽ thành bộ nhớ sai mà vẫn được tin. (Task 127, Long-Term Agentic Memory §7.)
+
 ## Demo a research result quickly (Streamlit + Gemini API)
 
 - When the user needs to see a research result live instead of reading a description, demo it with Streamlit + Gemini API (free tier via AI Studio, no card): minimum 3 files — `app.py` (tabs/UI), `response_utils.py` (the single place that calls the model: config, safety settings, streaming, retry on 429), `requirements.txt` (`streamlit`, `google-genai`) — plus a Dockerfile and 3 deploy commands to Cloud Run (Artifact Registry → build/push → `gcloud run deploy`, scale-to-zero). Cache the Gemini client with `@st.cache_resource`, and always add a Prompt tab showing the raw prompt next to each result so the input can be verified, not just the output. (Task 121, Develop Gen AI Apps with Gemini and Streamlit §4–§6.)
 
 - Describe an image with Gemini vision through the same `google-genai` client — do not train a captioning model in 2026: upload the image, ask for a description structured by the same 4 parts as the image-generation prompt template (subject + style + light + composition), and the returned caption doubles as a near-exact prompt to recreate that image. Pair the image-generation tab (task 122) with an image-description tab so the loop closes: generate from a prompt → describe the image back → compare the caption with the original prompt to check whether the image followed it. (Task 124, Create Image Captioning Models §7.2.)
+
+- Build a multimodal app as a pipeline of three functions through the `google-genai` SDK: generate an image with Gemini Image (Nano Banana — Imagen shut down 17/08/2026) → describe/analyse that image with Gemini → chat/stream the result back with `generate_content_stream` (streaming is a UI requirement for chat, not an extra). Record the seed (image) or temperature (text) with every demo result so it can be reproduced exactly, keep one chat session per user and trim or summarise long histories, and never copy old lab code verbatim — code using the old Vertex AI SDK (`vertexai.generative_models`, removed 24/06/2026) must be translated to `google-genai` first, and Imagen parameters (negative prompt, image count, format, watermark, person generation) have no equivalent on Nano Banana. (Task 126, Build Real World AI Applications with Gemini and Imagen §4–§5.)
