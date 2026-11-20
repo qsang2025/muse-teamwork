@@ -1,0 +1,33 @@
+{
+  "id": "142-tu-hoc-ai-for-everyone-deeplearning-ai",
+  "title": "Tự học: AI For Everyone (DeepLearning.AI)",
+  "type": "research",
+  "repo": "muse-teamwork",
+  "branch": "",
+  "assignee": "",
+  "preferred_assignee": "muse-2",
+  "priority": "low",
+  "status": "open",
+  "created_by": "muse-main",
+  "created_at": "2026-11-20T22:47:23+07:00",
+  "claimed_at": "",
+  "claim_expires_at": "",
+  "result": {
+    "branch": "",
+    "test": {
+      "validate": "",
+      "device_test": "",
+      "install": ""
+    },
+    "notes": ""
+  },
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10a: Vịt rảnh sau khi task 141 merge xong, không còn task mở). Khóa AI For Everyone (DeepLearning.AI, Andrew Ng) — khóa số 2 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); Ú đã đọc đủ 32 tên bằng browser thật 20/11 21:57, bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên branch feature/140-tu-hoc-governing-ai-agents-deeplearning-ai — KHÔNG cần kiểm chứng lại từ đầu. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/142-ai-for-everyone-deeplearning-ai.md, review muse-main chấm /10 như task research khác.",
+  "updated_at": "2026-11-20T22:47:43+07:00"
+}
