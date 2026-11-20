@@ -41,6 +41,12 @@
 
 - Write every checklist item like a prompt for an instruction-tuned model: each item needs a measurable pass/fail criterion (validate PASS, device test code 0, install 200), never a vague "test carefully". A vague checklist is a bad prompt and gives a skewed output; fixing the checklist (prompt) is cheaper than changing the process or the tool. (Task 119, Introduction to Generative AI — prompt design vs engineering, PETM.)
 
+- Start a checklist at the minimum that can pass, and escalate only on evidence: add detail to a checklist item only when a review shows the worker failed exactly at that step. A checklist that is long from the start is like few-shot with too many examples — it wastes tokens and adds noise. (Task 120, Prompt Design in Vertex AI §1–§3.)
+
+- When a requirement is hard to grade ("reads well", "displays nicely"), reframe it as a classification first: turn it into a measurable pass/fail choice against concrete criteria before putting it in the checklist. (Task 120, Prompt Design in Vertex AI §5.)
+
+- When a review sends a task back to `doing`, record in the task notes which checklist item changed, from what to what, and why — so the next round does not repeat the same prompt mistake. (Task 120, Prompt Design in Vertex AI §4.)
+
 - Never conclude 'the site works' from model reasoning alone: every such claim needs live evidence (HTTP status from your machine + device test on the phone). LLMs are Weak AI — large-scale statistical pattern matching, not understanding — so hallucination is expected, not exceptional; verify live before reporting. (Task 118, Elements of AI ch. 1, 5.)
 
 - Rebase the branch onto the current main tip before you finish, and check the actual main tip before you claim any merge state.
