@@ -1,1 +1,38 @@
-{"assignee":"","branch":"feature/121-develop-gen-ai-apps-gemini-streamlit-google","checklist":["Học khóa Develop Gen AI Apps with Gemini and Streamlit (Google Cloud Skills Boost, Intermediate, 45 phút, course_templates/978) — chỉ nội dung, không đăng ký chứng chỉ trả phí, không chạy lab GCP tốn credit","Ghi báo cáo vào research/ (điều học được, áp dụng được ngay cho việc chung)","Đề xuất cập nhật skill nếu có gì dùng được, push branch, cập nhật task sang review"],"claim_expires_at":"","claimed_at":"","created_at":"2026-11-20T17:15:00+07:00","created_by":"muse-main","id":"121-tu-hoc-develop-gen-ai-apps-with-gemini-and-streamlit-google-khoa-4","notes":"muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29: Vịt xong task 120 (Prompt Design in Vertex AI) 20/11 17:15, board không còn task mở cho Vịt — giao khóa tiếp theo theo phân vai Anh chốt 20/11: muse-2 (Vịt, research) → Develop Gen AI Apps with Gemini and Streamlit (Google); khóa này là bước nối tiếp tự nhiên của task 120 (đưa prompt thành ứng dụng thật bằng Streamlit + Gemini API/Python SDK, function calling, deploy Cloud Run), do chính Vịt gợi ý trong báo cáo 120 và muse-main quyết theo §10(a). Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.","preferred_assignee":"muse-2","priority":"low","repo":"muse-teamwork","result":{"branch":"feature/121-develop-gen-ai-apps-gemini-streamlit-google","notes":"","review":{"at":"","by":"","note":"","rounds":0,"score":""},"test":{"device_test":"","install":"","validate":""}},"status":"open","title":"Tự học: Develop Gen AI Apps with Gemini and Streamlit (Google) — khóa 4 theo phân vai","type":"research","updated_at":"2026-11-20T17:15:00+07:00"}
+{
+  "assignee": "muse-2",
+  "branch": "feature/121-develop-gen-ai-apps-gemini-streamlit-google",
+  "checklist": [
+    "Học khóa Develop Gen AI Apps with Gemini and Streamlit (Google Cloud Skills Boost, Intermediate, 45 phút, course_templates/978) — chỉ nội dung, không đăng ký chứng chỉ trả phí, không chạy lab GCP tốn credit",
+    "Ghi báo cáo vào research/ (điều học được, áp dụng được ngay cho việc chung)",
+    "Đề xuất cập nhật skill nếu có gì dùng được, push branch, cập nhật task sang review"
+  ],
+  "claim_expires_at": "2026-11-20T19:12:25+07:00",
+  "claimed_at": "2026-11-20T17:12:25+07:00",
+  "created_at": "2026-11-20T17:15:00+07:00",
+  "created_by": "muse-main",
+  "id": "121-tu-hoc-develop-gen-ai-apps-with-gemini-and-streamlit-google-khoa-4",
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29: Vịt xong task 120 (Prompt Design in Vertex AI) 20/11 17:15, board không còn task mở cho Vịt — giao khóa tiếp theo theo phân vai Anh chốt 20/11: muse-2 (Vịt, research) → Develop Gen AI Apps with Gemini and Streamlit (Google); khóa này là bước nối tiếp tự nhiên của task 120 (đưa prompt thành ứng dụng thật bằng Streamlit + Gemini API/Python SDK, function calling, deploy Cloud Run), do chính Vịt gợi ý trong báo cáo 120 và muse-main quyết theo §10(a). Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
+  "preferred_assignee": "muse-2",
+  "priority": "low",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "feature/121-develop-gen-ai-apps-gemini-streamlit-google",
+    "notes": "",
+    "review": {
+      "at": "",
+      "by": "",
+      "note": "",
+      "rounds": 0,
+      "score": ""
+    },
+    "test": {
+      "device_test": "",
+      "install": "",
+      "validate": ""
+    }
+  },
+  "status": "claimed",
+  "title": "Tự học: Develop Gen AI Apps with Gemini and Streamlit (Google) — khóa 4 theo phân vai",
+  "type": "research",
+  "updated_at": "2026-11-20T17:15:00+07:00"
+}
