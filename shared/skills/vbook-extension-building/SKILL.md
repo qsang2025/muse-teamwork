@@ -25,6 +25,8 @@
 
 - Build baseline-first, escalate only on evidence: (a) direct selectors/regex on static HTML, (b) real hrefs/attributes read from the page; use JS-rendered rendering, font decryption, or proxies only after (a) and (b) fail with recorded evidence. In the task report, record every approach tried and its result ('đã thử / không thử lại') so the next worker does not repeat dead ends — searching a state space means marking visited nodes. (Task 118, Elements of AI ch. 2–5.)
 
+- Give every retry loop a hard cap written in the task: when a checklist has a try–fix loop (probe several ways to fetch content, fix a selector over several rounds), write the max number of tries in the checklist itself; when the cap is hit, stop and record `blocked` with the evidence from each try — never loop indefinitely hoping the next try works. Escalation also needs a stopping point. (Task 125, AI Agents in LangGraph §2/§7 — `max_turns` / `max_revisions`.)
+
 - Read a real chapter end to end and compare it with a known opening line or a known passage, and treat mixed character names from other novels or scrambled text as fake content.
 
 - When a step lets a model decide to call a function or tool, validate the parameters before executing: the model only proposes the call, your code (or you) executes it. Unchecked model output can cause real side effects (API calls, writes, deploys), so the check is mandatory, not optional. (Task 121, Develop Gen AI Apps with Gemini and Streamlit §3 — function calling.)
@@ -59,7 +61,11 @@
 
 - Rebase the branch onto the current main tip before you finish, and check the actual main tip before you claim any merge state.
 
+- Commit like a checkpoint after each verifiable milestone: in a long build task, commit + push after each milestone (survey done, chapter 1 readable, device test done) instead of one commit at the end — if the worker dies mid-task, the next worker resumes from the last checkpoint instead of starting over. (Task 125, AI Agents in LangGraph §5 — checkpointer after each node; PROTOCOL §2.4.)
+
 - Never merge Qsang_vbook yourself — only muse-main merges. Your job ends at `review`: push the branch, fill in `result.branch` and `result.test` (validate + device test + install) in the task file, and stop.
+
+- Put the approval gate before any irreversible action: before steps with hard-to-reverse side effects (merge, push to the target repo's main, any action on the user's phone/computer), stop in a waiting state with all evidence already recorded in the task file — do not execute first and report later. The reviewer must be able to see the full state at the gate, like `get_state()` before resuming a graph. (Task 125, AI Agents in LangGraph §6 — `interrupt_before`.)
 
 - Hold the task and ask (via the task file, status `blocked`) when the content is fake, preview only or login gated, and say plainly which gate failed.
 
