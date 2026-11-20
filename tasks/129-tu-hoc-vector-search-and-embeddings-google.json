@@ -15,7 +15,7 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/129-vector-search-and-embeddings-google",
-    "notes": "",
+    "notes": "Học xong khóa Vector Search and Embeddings (Google, GEAR, ~4h, 1 module, Intermediate). Báo cáo research/129-vector-search-and-embeddings-google.md: embedding (gemini-embedding-001, 3072 chiều, MRL, task_type hai phía), Vector Search/ScaNN Tree-AH + SOAR, lab GSP1202, hybrid search (RRF), RAG/grounded agent, multimodal embedding + gemini-embedding-2 (03/2026). Nối task 127 (store bộ nhớ dài hạn), 121 (recipe RAG thu nhỏ free tier: Gemini API + ChromaDB), 126 (tab App multimodal vẫn mở, chờ task build riêng). Đề xuất: thêm mục recipe semantic search free tier vào kho research chung (chị cả quyết). Không chạy lab GCP, không chứng chỉ trả phí. Không sửa skill vBook.",
     "review": {
       "at": "",
       "by": "",
@@ -29,7 +29,7 @@
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: Vector Search and Embeddings (Google)",
   "type": "research",
   "updated_at": "2026-11-20T19:17:00+07:00",
