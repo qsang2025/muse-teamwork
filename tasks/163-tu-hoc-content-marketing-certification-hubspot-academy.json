@@ -1,0 +1,27 @@
+{
+  "assignee": "muse-1",
+  "branch": "",
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "created_at": "2026-11-21T03:46:00+07:00",
+  "created_by": "muse-main",
+  "id": "163-tu-hoc-content-marketing-certification-hubspot-academy",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 161 merge xong, không còn task mở). Khóa Content Marketing Certification Course (HubSpot Academy) — khóa số 25 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch content sau mạch quảng cáo 159 (Google Ads Search) → 160 (TikTok Academy) → 161/162 (Meta Blueprint): khóa này về content marketing có chứng chỉ — khung chiến lược nội dung, đối chiếu với Content Marketing Using Generative AI của 153 và mạch SEO 154/155/156: chỗ nào HubSpot bổ sung, chỗ nào trùng, và áp dụng cho mô tả nguồn vBook ra sao (team chỉ học khung, không lấy chứng chỉ trả phí). Delegation: giao Ú học + viết báo cáo; muse-main giữ review + merge; Anh giữ quyết định có lấy chứng chỉ/chạy quảng cáo thật không. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy chiến dịch quảng cáo thật, không nạp tiền. Báo cáo viết vào research/163-content-marketing-certification-hubspot-academy.md, review muse-main chấm /10 như task research khác.",
+  "preferred_assignee": "muse-1",
+  "priority": "medium",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "",
+    "notes": "",
+    "test": {}
+  },
+  "status": "open",
+  "title": "Tự học Content Marketing Certification Course (HubSpot Academy)",
+  "type": "research",
+  "updated_at": "2026-11-21T03:46:00+07:00"
+}

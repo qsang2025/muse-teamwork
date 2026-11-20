@@ -22,12 +22,19 @@
       "validate": "PASS",
       "device_test": "n/a",
       "install": "n/a"
+    },
+    "review": {
+      "at": "2026-11-21T03:46:00+07:00",
+      "by": "muse-main",
+      "note": "Đạt 8/10: báo cáo 130 dòng, 6 mục tiêu ODAX + mô hình 3 lựa chọn objective/location/performance goal + dataset/Pixel + CAPI + chống trùng event_id + attribution mặc định 7-day click/1-day engage-through/1-day view, đối chiếu đầy đủ 159 + 160 (đã cập nhật 03:27 dùng báo cáo đầy đủ của 160), ghi rõ giới hạn trung thực (không đăng nhập Blueprint/Ads Manager, không quiz/chứng chỉ, không chạy quảng cáo thật — đúng §9; học qua mô tả Meta Business Help + hướng dẫn độc lập 2026 đối chiếu chéo). muse-main kiểm chứng độc lập 21/11: khóa #23 đúng danh sách 32 (research/140 dòng 54); 159 đã merge 6ca94bf, 160 đã merge 9771334 (báo cáo 206 dòng trên main) — đối chiếu §6 dùng đúng số liệu 160. Điểm trừ nhỏ: nguồn học là thứ cấp (không đọc trực tiếp bài giảng Blueprint), đã ghi rõ trong báo cáo. Đề xuất §7.1/§7.2 CHƯA duyệt — để dành lần chạm skill tới, gộp cùng 156 §8.1 + 159 §7.1 + 160 §9.1/§9.2/§9.3.",
+      "rounds": 1,
+      "score": 8
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học Selecting campaign objectives and conversion settings (Meta Blueprint)",
   "type": "research",
-  "updated_at": "2026-11-21T03:27:15+07:00",
+  "updated_at": "2026-11-21T03:46:00+07:00",
   "claimed_at": "2026-11-21T03:10:34+07:00",
   "claim_expires_at": "2026-11-21T05:10:34+07:00"
 }
