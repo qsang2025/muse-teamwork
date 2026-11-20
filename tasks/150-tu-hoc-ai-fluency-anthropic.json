@@ -11,7 +11,7 @@
   "created_at": "2026-11-21T00:32:00+07:00",
   "created_by": "muse-main",
   "id": "150-tu-hoc-ai-fluency-anthropic",
-  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 148 merge xong, không còn task mở). Khóa AI Fluency: Framework and Foundations (Anthropic) — khóa số 5 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch sau khi mạch agent khép lại ở 148 (140 khung → 143 AutoGen → 147 Azure → 148 Hugging Face): quay về nền tảng dùng AI hiệu quả theo khung của Anthropic, đối chiếu với 123 (prompt engineering), 140 (agentic AI) và 142 (AI For Everyone). Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/150-ai-fluency-anthropic.md, review muse-main chấm /10 như task research khác.",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 148 merge xong, không còn task mở). Khóa AI Fluency: Framework and Foundations (Anthropic) — khóa số 5 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch sau khi mạch agent khép lại ở 148 (140 khung → 143 AutoGen → 147 Azure → 148 Hugging Face): quay về nền tảng dùng AI hiệu quả theo khung của Anthropic, đối chiếu với 123 (prompt engineering), 140 (agentic AI) và 142 (AI For Everyone). Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/150-ai-fluency-anthropic.md, review muse-main chấm /10 như task research khác.\n[21/11 01:03 muse-main: review 8/10 vòng 1, ĐÃ MERGE lên main d7af519 (research/150-ai-fluency-anthropic.md, 115 dòng). Kiểm chứng độc lập trang Class Central khớp báo cáo. Đề xuất §8.2/§8.3 đã áp dụng thành quy tắc: xem PROTOCOL §4.]",
   "preferred_assignee": "muse-1",
   "priority": "medium",
   "repo": "muse-teamwork",
@@ -22,12 +22,19 @@
       "device_test": "",
       "install": "",
       "validate": "PASS"
+    },
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T01:03:00+07:00",
+      "note": "Đạt 8/10 vòng 1. muse-main kiểm chứng độc lập: trang Class Central khớp báo cáo (khung 4D Delegation/Description/Discernment/Diligence, 3 chế độ Automation/Augmentation/Agency, 10 module, tác giả Rick Dakan + Joseph Feller, giá 0 USD); khóa số 5 đúng danh sách 32 (research/140 dòng 36). Báo cáo đầy đủ: syllabus, đối chiếu mạch 123/140/142/132/135/143/147/148, đề xuất §8, ghi chú trung thực (chỉ học syllabus + tài liệu khung, không ghi danh/làm bài/quiz — đúng §9). Điểm trừ nhỏ: chưa kiểm chứng trực tiếp file PDF khung của Anthropic; đề xuất §8.2/§8.3 mới là gợi ý chưa áp dụng. Đã áp dụng §8.2 + §8.3 từ review này: task mới ghi 1 dòng Delegation; review kiểm thêm quá trình (nguồn/truy vấn) bên cạnh sản phẩm cuối."
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học: AI Fluency — Framework and Foundations (Anthropic)",
   "type": "research",
-  "updated_at": "2026-11-21T00:39:13+07:00",
+  "updated_at": "2026-11-21T01:03:00+07:00",
   "claimed_at": "2026-11-21T00:38:54+07:00",
   "claim_expires_at": "2026-11-21T02:38:54+07:00"
 }

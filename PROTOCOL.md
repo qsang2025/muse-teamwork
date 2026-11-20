@@ -88,6 +88,9 @@ sang task khác, không cãi nhau trong code.
   `result.review.note`. Tối đa 3 vòng chấm: sau 3 vòng vẫn < 7 thì muse-main
   quyết — giao lại agent khác, tách nhỏ task, hoặc `blocked`/`cancelled` +
   báo Anh.
+- Khi tạo task, ghi 1 dòng Delegation (vì sao giao cho agent này, việc gì giữ
+  lại cho người). Khi chấm review, kiểm thêm quá trình (nguồn/truy vấn worker
+  đã thử) bên cạnh sản phẩm cuối — theo đề xuất task 150 §8.2/§8.3.
 - Merge xong phải cập nhật ROADMAP.md + registry của Qsang_vbook (như quy
   trình cũ). Merge xong phải cập nhật task → `done` + `STATUS.md` trong cùng một lượt push, rồi mới báo Anh.
 
