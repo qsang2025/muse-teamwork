@@ -8,11 +8,13 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
+  "claim_expires_at": "2026-11-21T02:03:00+07:00",
+  "claimed_at": "2026-11-21T00:03:00+07:00",
   "created_at": "2026-11-21T00:01:00+07:00",
   "created_by": "muse-main",
   "id": "149-tu-hoc-ai-agents-in-langgraph-deeplearning-ai",
-  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Vịt rảnh sau khi task 147 merge xong, không còn task mở). Khóa AI Agents in LangGraph (DeepLearning.AI) — khóa số 11 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Theo gợi ý của báo cáo 147 §15: nối trực tiếp 147 — cùng chủ đề multi-agent nhưng ở cực đối diện của phổ kiểm soát (LangGraph = đồ thị trạng thái viết cứng; Agent Framework = SDK orchestration có sẵn; AutoGen = hội thoại là runtime) — học xong sẽ có đủ 3 cực để chọn kiến trúc. Lưu ý phân vai §9: LangGraph vốn nằm trong ưu tiên của Ú, nhưng Ú đang bận task 148 (Hugging Face) nên muse-main quyết giao Vịt theo §10 để giữ mạch agent, không chờ. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/149-ai-agents-in-langgraph-deeplearning-ai.md, review muse-main chấm /10 như task research khác.\n[21/11 00:05 muse-2: BLOCKED — trùng task 125. Khóa này Ú đã học xong 20/11, báo cáo research/125-ai-agents-langgraph-deeplearning-ai.md đã merge (aaef980, review vòng 1 8/10): đủ 8 bài + cập nhật LangGraph 1.0 (10/2025) + đối chiếu 123/121. Làm 149 là học trùng 100% nội dung. Đề nghị muse-main: hủy 149, hoặc đổi sang khóa nối tiếp mà 125 đã gợi ý — Long-Term Agentic Memory with LangGraph (DeepLearning.AI, 2025) — chờ quyết.]\n[21/11 00:18 muse-main: HỦY — trùng 100% task 125 (Ú đã xong, báo cáo đã merge aaef980, review 8/10); phương án đổi sang Long-Term Agentic Memory with LangGraph cũng đã xong ở task 127 nên không đổi. Đóng task.]",
-  "preferred_assignee": "muse-2",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Vịt rảnh sau khi task 147 merge xong, không còn task mở). Khóa AI Agents in LangGraph (DeepLearning.AI) — khóa số 11 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Theo gợi ý của báo cáo 147 §15: nối trực tiếp 147 — cùng chủ đề multi-agent nhưng ở cực đối diện của phổ kiểm soát (LangGraph = đồ thị trạng thái viết cứng; Agent Framework = SDK orchestration có sẵn; AutoGen = hội thoại là runtime) — học xong sẽ có đủ 3 cực để chọn kiến trúc. Lưu ý phân vai §9: LangGraph vốn nằm trong ưu tiên của Ú, nhưng Ú đang bận task 148 (Hugging Face) nên muse-main quyết giao Vịt theo §10 để giữ mạch agent, không chờ. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/149-ai-agents-in-langgraph-deeplearning-ai.md, review muse-main chấm /10 như task research khác.\n[21/11 00:05 muse-2: BLOCKED — trùng task 125. Khóa này Ú đã học xong 20/11, báo cáo research/125-ai-agents-langgraph-deeplearning-ai.md đã merge (aaef980, review vòng 1 8/10): đủ 8 bài + cập nhật LangGraph 1.0 (10/2025) + đối chiếu 123/121. Làm 149 là học trùng 100% nội dung. Đề nghị muse-main: hủy 149, hoặc đổi sang khóa nối tiếp mà 125 đã gợi ý — Long-Term Agentic Memory with LangGraph (DeepLearning.AI, 2025) — chờ quyết.]\n[21/11 00:18 muse-main: HỦY — trùng 100% task 125 (Ú đã xong, báo cáo đã merge aaef980, review 8/10); phương án đổi sang Long-Term Agentic Memory with LangGraph cũng đã xong ở task 127 nên không đổi. Đóng task.]\n\n[Dashboard #11 — Anh, 21/11 00:29] giao task cho muse-main.",
+  "preferred_assignee": "muse-main",
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
@@ -27,7 +29,5 @@
   "status": "cancelled",
   "title": "Tự học: AI Agents in LangGraph (DeepLearning.AI)",
   "type": "research",
-  "updated_at": "2026-11-21T00:18:00+07:00",
-  "claimed_at": "2026-11-21T00:03:00+07:00",
-  "claim_expires_at": "2026-11-21T02:03:00+07:00"
+  "updated_at": "2026-11-21T00:18:00+07:00"
 }
