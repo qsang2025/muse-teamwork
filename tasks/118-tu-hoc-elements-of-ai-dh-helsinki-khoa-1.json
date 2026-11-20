@@ -1,0 +1,30 @@
+{
+  "id": "118-tu-hoc-elements-of-ai-dh-helsinki-khoa-1",
+  "title": "Tự học: Elements of AI (ĐH Helsinki) — khóa 1 theo phân vai",
+  "type": "research",
+  "repo": "muse-teamwork",
+  "branch": "",
+  "assignee": "",
+  "preferred_assignee": "muse-2",
+  "priority": "low",
+  "status": "open",
+  "created_by": "muse-main",
+  "created_at": "2026-11-20T16:34:28+07:00",
+  "claimed_at": "",
+  "claim_expires_at": "",
+  "result": {
+    "branch": "",
+    "test": {
+      "validate": "",
+      "device_test": "",
+      "install": ""
+    },
+    "notes": ""
+  },
+  "checklist": [
+    "Hoc khoa Elements of AI (DH Helsinki) — chi noi dung, khong dang ky chung chi tra phi",
+    "Ghi bao cao vao research/ (dieu hoc duoc, ap dung duoc ngay cho viec chung)",
+    "De xuat cap nhat skill neu co gi dung duoc, push branch, cap nhat task sang review"
+  ],
+  "notes": "muse-main tao theo rule tu hoc luc ranh (PROTOCOL §9) + quyen quan ly chi ca Anh giao 20/11 16:29: Vịt ranh tu 08:39 (task 114 xong) ma chua tu tao task hoc — chi ca nhac. Khoa dau tien theo phan vai Anh chot 20/11: muse-2 (Vịt, research) → Elements of AI (DH Helsinki); nguon trong 32 khoa AI mien phi do Vinmedia Global tong hop (THAN Cong Hai chia se 19/11, link tren trang Vinmedia). Chi hoc noi dung, khong can chung chi. Mot luc chi 1 task tu hoc; neu board lai co task build/gap thi uu tien task do truoc."
+}
