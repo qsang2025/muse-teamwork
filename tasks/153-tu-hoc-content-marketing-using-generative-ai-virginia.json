@@ -1,6 +1,6 @@
 {
   "assignee": "muse-1",
-  "branch": "",
+  "branch": "feature/153-tu-hoc-content-marketing-using-generative-ai-virginia",
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
@@ -11,23 +11,30 @@
   "created_at": "2026-11-21T01:03:00+07:00",
   "created_by": "muse-main",
   "id": "153-tu-hoc-content-marketing-using-generative-ai-virginia",
-  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 150 merge xong, không còn task mở). Delegation: giao cho Ú (build) vì khóa nối mạch content/GenAI phục vụ việc vBook (mô tả nguồn, nội dung) — việc quyết định có đưa vào quy trình thật hay không giữ lại cho muse-main/Anh. Khóa Content Marketing Using Generative AI (Đại học Virginia) — khóa số 8 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch sau 150 (khung dùng AI hằng ngày — Delegation/Description/Discernment/Diligence): khóa này là góc ứng dụng GenAI vào content marketing, đối chiếu với 123 (prompt), 142 (AI For Everyone) và 146/151 (marketing HubSpot). Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/153-content-marketing-using-generative-ai-virginia.md, review muse-main chấm /10 như task research khác.",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 150 merge xong, không còn task mở). Delegation: giao cho Ú (build) vì khóa nối mạch content/GenAI phục vụ việc vBook (mô tả nguồn, nội dung) — việc quyết định có đưa vào quy trình thật hay không giữ lại cho muse-main/Anh. Khóa Content Marketing Using Generative AI (Đại học Virginia) — khóa số 8 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch sau 150 (khung dùng AI hằng ngày — Delegation/Description/Discernment/Diligence): khóa này là góc ứng dụng GenAI vào content marketing, đối chiếu với 123 (prompt), 142 (AI For Everyone) và 146/151 (marketing HubSpot). Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/153-content-marketing-using-generative-ai-virginia.md, review muse-main chấm /10 như task research khác.\n[21/11 01:09 muse-1: claim + branch feature/153-tu-hoc-content-marketing-using-generative-ai-virginia, chuyen doing, bat dau khao sat khoa Content Marketing Using Generative AI (Virginia) qua nguon FREE cong khai.]\n[21/11 01:10 muse-1: nop review, bao cao research/153-content-marketing-using-generative-ai-virginia.md tren branch feature/153-tu-hoc-content-marketing-using-generative-ai-virginia, validate PASS.]",
   "preferred_assignee": "muse-1",
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/153-tu-hoc-content-marketing-using-generative-ai-virginia",
-    "notes": "Bao cao research/153-content-marketing-using-generative-ai-virginia.md: khoa so 8 danh sach 32 da duyet, 2 module (Generative AI Applications: mass->one-to-one, LLM completion; Content Marketing: listening/Vibe Kayak, paid ads+SEO), khung AI Marketing Canvas 5 giai doan + Four Quadrants cua giang vien, doi chieu 123/142/150/146/151, de xuat listening vao mo ta nguon vBook (cho muse-main/Anh quyet). Chi hoc FREE cong khai (syllabus + nguon Darden; Coursera khoa bai giang sau tra phi), khong ghi danh/trial/financial aid, khong lam bai tap Vibe Kayak, khong lay chung chi.",
+    "notes": "Bao cao research/153-content-marketing-using-generative-ai-virginia.md: khoa so 8 danh sach 32 da duyet, 2 module 2 gio Beginner (GenAI Applications mass->one-on-one + LLM completion; Content Marketing listening Vibe Kayak + paid ads/SEO), doi chieu 123/142/146/150/151, de xuat listening cho mo ta nguon vBook + AI Marketing Canvas. Chi hoc FREE cong khai qua syllabus/mo ta chinh thuc, khong ghi danh Coursera, khong chay bai tap cong cu ngoai, khong lay chung chi; ghi ro khoa khong hoan toan FREE (can Certificate experience/trial) va cong cu loi thoi theo review hoc vien.",
     "test": {
       "device_test": "",
       "install": "",
       "validate": "PASS"
+    },
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T01:21:00+07:00",
+      "note": "muse-main kiem chung doc lap: khoa so 8 dung danh sach 32 (research/140 dong 39); trang Coursera khop toan bo (2 module, 2 gio, Beginner, 11.710 hoc vien, 3,99/5 voi 71 danh gia, phan bo sao khop tung %); FAQ Coursera xac nhan bai giang sau ghi danh tra phi — phat hien quan trong: khoa KHONG hoan toan FREE, bao cao xu ly dung SS9 (chi hoc syllabus cong khai); khung AI Marketing Canvas 5 giai doan + Four Quadrants khop bai Darden Report; phan biet ro syllabus khoa vs khung rong cua giang vien. Diem tru nho: link syllabus Class Central dung URL mirror cc-master run.app. De xuat SS5.2 (listening 3-5 tu khoa vao mo ta nguon) + SS5.3 (Canvas lam ngon ngu phan loai): muse-main duyet thu — ghi vao skill vbook-extension-building o lan cham skill toi, chua dua thanh buoc bat buoc trong PROTOCOL."
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học: Content Marketing Using Generative AI (Đại học Virginia)",
   "type": "research",
-  "updated_at": "2026-11-21T01:03:00+07:00",
+  "updated_at": "2026-11-21T01:21:00+07:00",
   "claimed_at": "2026-11-21T01:09:02+07:00",
   "claim_expires_at": "2026-11-21T03:09:02+07:00"
 }
