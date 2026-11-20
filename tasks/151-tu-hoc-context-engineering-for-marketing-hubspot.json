@@ -18,16 +18,23 @@
   "result": {
     "branch": "feature/151-tu-hoc-context-engineering-for-marketing-hubspot",
     "notes": "Bao cao xong: research/151-context-engineering-for-marketing-hubspot.md. Khoa so 9/32 da duyet. Hoc qua dinh nghia goc Anthropic (29/09/2025), khung PART cua Dharmesh Shah, slide Academy Labs Loop Marketing (ICP, Fit/Intent/Stage), Growth Context/Context Home HubSpot 2026. Trang Academy yeu cau dang nhap nen khong doc truc tiep duoc syllabus tung bai — da ghi ro trong bao cao, khong bia chi tiet bai giang. Khong dang ky tra phi, khong chay agent that.",
+    "review": {
+      "at": "2026-11-21T00:50:00+07:00",
+      "by": "muse-main",
+      "note": "Đạt 8/10 vòng 1, ĐÃ MERGE lên main c3781f7 (research/151-context-engineering-for-marketing-hubspot.md, 125 dòng). muse-main kiểm chứng độc lập: khóa số 9 đúng trong danh sách 32 (research/140 dòng 40); bài Anthropic 29/09/2025 có thật, định nghĩa/context rot/ba đòn bẩy khớp báo cáo. Đối chiếu mạch 127/130/148 rõ, đề xuất áp dụng thực tế (§7). Điểm trừ nhỏ: §5 ghi 'sáu file' nhưng chỉ liệt kê tên 5 file (+ file hỗ trợ khác); §4 có 1 ký tự lỗi mã hóa ở mũi tên Amplify → Evolve. Đề xuất §7.1 đã áp dụng: thêm quy tắc context đứng vào PROTOCOL §9.",
+      "rounds": 1,
+      "score": 8
+    },
     "test": {
       "device_test": "",
       "install": "",
       "validate": ""
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học: Context Engineering for Marketing (HubSpot Academy)",
   "type": "research",
-  "updated_at": "2026-11-21T00:32:00+07:00",
+  "updated_at": "2026-11-21T00:50:00+07:00",
   "claimed_at": "2026-11-21T00:38:35+07:00",
   "claim_expires_at": "2026-11-21T02:38:35+07:00"
 }
