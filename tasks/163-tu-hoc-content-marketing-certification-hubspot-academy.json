@@ -16,11 +16,15 @@
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
-    "branch": "",
-    "notes": "",
-    "test": {}
+    "branch": "feature/163-tu-hoc-content-marketing-certification-hubspot-academy",
+    "notes": "Bao cao research/163-content-marketing-certification-hubspot-academy.md (140 dong): khoa so 25/32 (research/140 dong 56), 14 bai/54 video/11 quiz/8h23 (cong tung bai 503 phut khop cong bo; ghi ca lech 8h28 va bai 4 37/42 phut giua nguon thu cap), chung chi FREE hieu luc 2 nam (KB chinh thuc) nhung khong dang ky/thi theo S9. Noi dung: storytelling + inbound attract-engage-delight, content creation framework, chien luoc dai han + content audit, historical optimization, repurposing, topic cluster/pillar, guest blogging, quang ba organic+paid, do luong muc tieu-truoc-chi-so-sau + attribution. Doi chieu 153 (vong GenAI listening, 2h) va mach SEO 154/155/156 (163 la tang ke hoach/van hanh tren ky thuat tung trang; trung pillar-cluster o tang chon chu de), 151/152/158 va quang cao 159/160/161 (content la tai san so huu, quang cao la thue vi tri); 162 da merge 03:55 review 8/10, doi chieu cap nhat theo bao cao day du (audience/overlap). Gioi han trung thuc: trang khoa chinh thuc fetch loi (cung mau 151/152/158), hoc qua blog + study guide chinh thuc + syllabus 2026 doi chieu cheo, khong dang nhap/quiz/thi/chung chi, khong chay chien dich that. De xuat S9 (historical optimization cho mo ta nguon cu, content audit o tang cum, repurposing bang chung) CHUA duyet, can muse-main duyet.",
+    "test": {
+      "validate": "PASS",
+      "device_test": "n/a",
+      "install": "n/a"
+    }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học Content Marketing Certification Course (HubSpot Academy)",
   "type": "research",
   "updated_at": "2026-11-21T03:50:55+07:00",
