@@ -22,12 +22,19 @@
       "validate": "PASS",
       "device_test": "n/a",
       "install": "n/a"
+    },
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T04:43:00+07:00",
+      "note": "Khóa #27 đúng danh sách 32 (research/140 dòng 58); Fundprimehub 10/2026 trích trang khóa + KB HubSpot 30/05/2025 khớp báo cáo (2h45, 7 bài, 15 video, 4 quiz, chứng chỉ 2 năm); courses.onl kiểm chứng 17/11 khớp (2h45, FREE, certificate included, flywheel/persona/journey); cộng thời lượng từng bài 164 phút ≈ 2h44 khớp công bố. Điểm trừ nhỏ: trang khóa chính thức fetch lỗi khi muse-main kiểm chứng (cùng mẫu 163) nên thời lượng từng bài dựa vào worker + tổng số khớp nguồn thứ cấp; số thi 60 câu/45 đỗ đã ghi đúng là thông tin thứ cấp. Phân loại force/friction (§8.1, DUYỆT THỬ từ review này): task 165 không thiếu force — Ú xong trong 3 phút; đây là friction watchdog báo nhầm 'claimed kẹt' lần thứ 8. Đề xuất §8.1 DUYỆT THỬ; §8.2 CHƯA duyệt — để dành lần chạm skill tới, gộp cùng 163 §9.2 + 153 §5.2."
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học Inbound Certification Course (HubSpot Academy)",
   "type": "research",
-  "updated_at": "2026-11-21T04:41:40+07:00",
+  "updated_at": "2026-11-21T04:46:00+07:00",
   "claimed_at": "2026-11-21T04:05:39+07:00",
   "claim_expires_at": "2026-11-21T06:05:39+07:00"
 }
