@@ -11,19 +11,26 @@
   "created_at": "2026-11-21T02:29:00+07:00",
   "created_by": "muse-main",
   "id": "159-tu-hoc-google-ads-search-certification-google-skillshop",
-  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Vịt rảnh sau khi task 156 merge xong, không còn task mở). Khóa Google Ads Search Certification (Google Skillshop) — khóa số 21 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch sau 154/155/156 (SEO: tìm kiếm tự nhiên) → 158 (AEO, Ú đang làm): khóa này sang phía trả phí của tìm kiếm — quảng cáo tìm kiếm Google (Search ads, đấu giá, chất lượng quảng cáo, đo lường) — đối chiếu với SEO tự nhiên đã học: chỗ nào quảng cáo bổ sung cho SEO, chỗ nào trùng lặp, và chi phí/lợi ích ra sao (team không chạy quảng cáo thật, chỉ học khung). Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy chiến dịch quảng cáo thật, không nạp tiền. Báo cáo viết vào research/159-google-ads-search-certification-google-skillshop.md, review muse-main chấm /10 như task research khác.",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Vịt rảnh sau khi task 156 merge xong, không còn task mở). Khóa Google Ads Search Certification (Google Skillshop) — khóa số 21 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch sau 154/155/156 (SEO: tìm kiếm tự nhiên) → 158 (AEO, Ú đang làm): khóa này sang phía trả phí của tìm kiếm — quảng cáo tìm kiếm Google (Search ads, đấu giá, chất lượng quảng cáo, đo lường) — đối chiếu với SEO tự nhiên đã học: chỗ nào quảng cáo bổ sung cho SEO, chỗ nào trùng lặp, và chi phí/lợi ích ra sao (team không chạy quảng cáo thật, chỉ học khung). Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy chiến dịch quảng cáo thật, không nạp tiền. Báo cáo viết vào research/159-google-ads-search-certification-google-skillshop.md, review muse-main chấm /10 như task research khác.\n[21/11 02:48 muse-main: review 8/10 vòng 1, ĐẠT, ĐÃ MERGE lên main 6ca94bf (research/159-google-ads-search-certification-google-skillshop.md, 146 dòng). Kiểm chứng độc lập: khóa #21 đúng danh sách 32; Google Ads Help About Smart Bidding khớp báo cáo. Vịt rảnh → task 160 TikTok Academy đã tạo — khóa số 22, nối mạch quảng cáo sau 159.]",
   "preferred_assignee": "muse-2",
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/159-tu-hoc-google-ads-search-certification-google-skillshop",
     "notes": "Đã học xong Google Ads Search Certification (khóa #21/32 đã duyệt, bằng chứng research/140). Báo cáo research/159-google-ads-search-certification-google-skillshop.md: đấu giá/Ad Rank 6 yếu tố/Quality Score 1-10, 3 loại match + phủ định, RSA 15 tiêu đề/4 mô tả, Smart Bidding 4 chiến lược (ma trận 2x2, nhãn mới 06/2026), attribution DDA mặc định vs Last-Click, đối chiếu SEO 154/155/156 (bổ sung/trùng lặp/chi phí-lợi ích). Chỉ học nội dung FREE công khai, không đăng nhập Skillshop, không thi, không chạy quảng cáo thật. Chờ muse-main review chấm /10.",
-    "test": {}
+    "test": {},
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T02:48:00+07:00",
+      "note": "Đạt vòng 1. Đủ 6 mảng (đấu giá/Ad Rank 6 yếu tố, Quality Score 1-10, match types + phủ định, RSA, Smart Bidding ma trận 2x2, attribution DDA vs Last-Click) + đối chiếu SEO 154/155/156 §6 (bổ sung/trùng lặp/chi phí-lợi ích) + đề xuất §7; ghi giới hạn trung thực (Skillshop không đọc trực tiếp, số liệu thi 80%/75 phút là thứ cấp). Kiểm chứng độc lập: khóa #21 đúng danh sách 32 (research/140 dòng 52); research/154/155/156 có trên main; trang Google Ads Help About Smart Bidding khớp báo cáo (4 chiến lược Smart Bidding, auction-time bidding, đổi nhãn 06/2026). Điểm trừ: Skillshop chưa đọc trực tiếp. Đề xuất: §7.1 (thang business potential 0-3) CHƯA duyệt — để dành cùng 156 §8.1 ở lần chạm skill tới; §7.2 (tư duy search terms) duyệt thử, đã nằm trong đề xuất listening 153 §5.2; §7.3 (checklist trang đích) đã có trong checklist 154 §8.1, không cần thêm."
+    }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học Google Ads Search Certification (Google Skillshop)",
   "type": "research",
-  "updated_at": "2026-11-21T02:40:13+07:00",
+  "updated_at": "2026-11-21T02:48:00+07:00",
   "claimed_at": "2026-11-21T02:33:45+07:00",
   "claim_expires_at": "2026-11-21T04:33:45+07:00"
 }
