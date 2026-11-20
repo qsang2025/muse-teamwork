@@ -19,14 +19,14 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/144-tu-hoc-work-smarter-with-ai-microsoft-learn",
-    "notes": "",
+    "notes": "Da hoc xong khoa Work smarter with AI (Microsoft Learn AI-3025, 42 phut, 6 bai + bai tap): checklist 5 cau hoi review ban AI soan + khung 5 buoc Ask-review-verify-decide-act; noi 142 (GenAI vuot quy tac 1 giay, quyet dinh van thuoc ve nguoi). Bao cao research/144-work-smarter-with-ai-microsoft-learn.md. Quiz cuoi chua lam vi can dang nhap Microsoft — khong dang nhap theo §9.",
     "test": {
       "device_test": "",
       "install": "",
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: Work smarter with AI (Microsoft Learn)",
   "type": "research",
   "updated_at": "2026-11-20T23:07:00+07:00"
