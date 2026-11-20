@@ -1,6 +1,6 @@
 {
   "assignee": "muse-2",
-  "branch": "",
+  "branch": "research/162-meta-blueprint-audiences-reach",
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
@@ -17,13 +17,24 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "research/162-meta-blueprint-audiences-reach",
-    "notes": "Da hoc xong khoa Managing audiences and optimizing reach (Meta Blueprint, #24 trong 32 khoa): 3 loai audience (core/custom/lookalike 1-10%, seed toi thieu 100, khuyen nghi 1000-5000), Advantage+ audience (chi location/tuoi toi thieu/ngon ngu/custom audience loai tru la gioi han cung; chi phi moi ket qua thap hon 14,8% Awareness / 9,7% Traffic-Leads / 7,2% Sales), dau gia Total Value, toi uu reach, Audience Overlap, attribution 7-day click / 1-day view / 1-day engaged view. Doi chieu 159/160/161 + 4 de xuat cho team. Gioi han: video sau dang nhap (khong xem truc tiep); bao cao 161 cua U chua merge nen doi chieu theo mo ta cong khai; 2 so ve Audience Overlap chua doi chieu duoc (nguong 1000 vs 10000; toi da 5 vs 10 audience). Bao cao research/162-managing-audiences-optimizing-reach-meta-blueprint.md (225 dong).",
-    "test": {}
+    "notes": "Bao cao 225 dong: khoa so 24, 27 phut/3 bai hoc (audience creation 15m, Advantage+ 7m, overlap 5m), rating 4.9. Noi dung chinh: 3 loai audience (core/custom/lookalike 1-10%, seed toi thieu 100, khuyen nghi 1000-5000), Advantage+ audience (goi y vs gioi han cung, so Meta 14.8/9.7/7.2%, Andromeda), dau gia Total Value, toi uu reach (Advantage+ placements/budget, Reach and Frequency buying, frequency), cong cu Audience Overlap + cach sua, attribution mac dinh 7-day click/1-day view/1-day engaged view. Doi chieu 159/160/161: Meta bo sung bang du lieu khach hang + retargeting co cau truc + Reach and Frequency; khac han: targeting thanh goi y, overlap la loi cau truc, reach tang bang mo pool. Gioi han trung thuc: video bai giang sau dang nhap (khong xem truc tiep), bao cao 161 chua merge nen doi chieu 161 theo mo ta cong khai, 2 con so overlap chua doi chieu duoc (1000 vs 10000 nguoi; toi da 5 vs 10 audience). Khong dang nhap/thi/chay quang cao that — dung §9.",
+    "test": {
+      "validate": "PASS",
+      "device_test": "n/a",
+      "install": "n/a"
+    },
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T03:55:00+07:00",
+      "note": "Đạt 8/10: báo cáo 225 dòng, 3 loại audience (core/custom/lookalike 1-10%, seed tối thiểu 100, khuyến nghị 1000-5000) + Advantage+ audience (gợi ý vs giới hạn cứng, số Meta 14,8/9,7/7,2%) + Andromeda + đấu giá Total Value + tối ưu reach (Advantage+ placements/budget, Reach and Frequency buying, frequency) + công cụ Audience Overlap + cách sửa + attribution mặc định 7-day click/1-day view/1-day engaged view, đối chiếu đầy đủ 159/160/161 + 4 đề xuất cho team, ghi rõ giới hạn trung thực (video sau đăng nhập, không đăng nhập/thi/chạy quảng cáo thật — đúng §9; số Meta đọc như tuyên bố nhà cung cấp, số 'giảm 32% CPA' không nguồn nên không dùng). muse-main kiểm chứng độc lập 21/11: khóa #24 đúng danh sách 32 (research/140 dòng 55); catalog Blueprint chính thức khớp báo cáo (27 phút, 3 bài học, Intermediate, 4.9/22 đánh giá, path 'Your guide to audience strategy'); số Advantage+ 14,8/9,7/7,2% khớp nhiều hướng dẫn độc lập 2026 dẫn lại trang Meta. Điểm trừ nhỏ: đối chiếu 161 dựa trên mô tả công khai (báo cáo 161 merge 03:46, sau khi báo cáo này viết xong 03:44 — ghi chú '161 chưa merge' đã lỗi thời lúc merge, không sai lúc viết); 2 con số overlap chưa đối chiếu được (ngưỡng 1000 vs 10000; tối đa 5 vs 10 audience) — đã ghi rõ trong báo cáo, cần kiểm chứng trong tài khoản thật trước khi dùng làm quy trình. Đề xuất §8.1/§8.2/§8.3 CHƯA duyệt — để dành lần chạm skill tới, gộp cùng 156 §8.1 + 159 §7.1 + 160 §9.1/§9.2/§9.3."
+    }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học Managing audiences and optimizing reach (Meta Blueprint)",
   "type": "research",
-  "updated_at": "2026-11-21T03:21:00+07:00",
+  "updated_at": "2026-11-21T03:55:00+07:00",
   "claimed_at": "2026-11-21T03:38:20+07:00",
   "claim_expires_at": "2026-11-21T05:38:20+07:00"
 }
