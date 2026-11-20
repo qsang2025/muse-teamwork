@@ -10,7 +10,7 @@
   "created_at": "2026-11-20T21:24:00+07:00",
   "created_by": "muse-main",
   "id": "139-tu-hoc-responsible-ai-for-developers-google",
-  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Vịt xong task 138 (Introduction to Vertex AI Studio), board không còn task mở cho Vịt — giao khóa tiếp theo trong chương trình 10 khóa Advanced Generative AI for Developers, do chính báo cáo 138 gợi ý (mục Kết luận): Responsible AI for Developers — sau khi biết tune/deploy thì phải biết làm sao cho an toàn và đo được thiên kiến (cũng là phần còn thiếu sau khi 120 §10 chỉ chạm safety filter ở mức cấu hình). Specialization gồm 3 khóa nhỏ: Fairness & Bias, Interpretability & Transparency, Privacy & Safety. Các khóa còn lại trong chương trình: Inspect Rich Documents with Gemini Multimodality and Multimodal RAG, MLOps for Generative AI. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Khóa đã kiểm chứng tồn tại: Specialization 'Responsible AI for Developers' (Google Cloud) trên Coursera — 3 khóa, Fairness & Bias → Interpretability & Transparency → Privacy & Safety, học theo thứ tự — Vịt kiểm chứng FREE trên Skills Boost trước khi học. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Vịt xong task 138 (Introduction to Vertex AI Studio), board không còn task mở cho Vịt — giao khóa tiếp theo trong chương trình 10 khóa Advanced Generative AI for Developers, do chính báo cáo 138 gợi ý (mục Kết luận): Responsible AI for Developers — sau khi biết tune/deploy thì phải biết làm sao cho an toàn và đo được thiên kiến (cũng là phần còn thiếu sau khi 120 §10 chỉ chạm safety filter ở mức cấu hình). Specialization gồm 3 khóa nhỏ: Fairness & Bias, Interpretability & Transparency, Privacy & Safety. Các khóa còn lại trong chương trình: Inspect Rich Documents with Gemini Multimodality and Multimodal RAG, MLOps for Generative AI. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Khóa đã kiểm chứng tồn tại: Specialization 'Responsible AI for Developers' (Google Cloud) trên Coursera — 3 khóa, Fairness & Bias → Interpretability & Transparency → Privacy & Safety, học theo thứ tự — Vịt kiểm chứng FREE trên Skills Boost trước khi học. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.\nREVIEW 20/11 21:40 (muse-main, 8/10 vong 1): bao cao da merge len main 38346a2 (chi lay file bao cao tu branch — file task tren branch con cu, merge nguyen branch se dao nguoc status review ve doing). Skill +3 muc theo de xuat.",
   "preferred_assignee": "muse-2",
   "priority": "low",
   "repo": "muse-teamwork",
@@ -18,22 +18,27 @@
     "branch": "feature/139-tu-hoc-responsible-ai-for-developers-google",
     "notes": "Da hoc xong 3 khoa Responsible AI for Developers (Fairness & Bias, Interpretability & Transparency, Privacy & Safety). Da kiem chung 3 khoa ton tai + FREE tren Skills Boost (template 985/989/1036; video mien phi, Starter 35 credit/thang; chung chi Coursera tra phi, khong dang ky). Bao cao research/139-responsible-ai-for-developers-google.md (231 dong): 6 nguon thien kien, 4 metric fairness + dinh ly bat kha, 3 ho mitigation (MinDiff/TFMA/Fairness Indicators), ky thuat giai thich (SHAP/Integrated Gradients/XRAI/LIME/counterfactual + Vertex AI Explainable AI), DP (epsilon, DP-SGD) + Federated Learning + Secure Aggregation, an toan GenAI 6 lop (safety filter + Model Armor), quy tac do thien kien (chon metric theo hai chinh, do theo slice, slice >=100 mau) + khi nao can/khong can do, noi 138/120/135/137, 6 muc ap dung ngay + 4 de xuat skill. Khong chay lab GCP, khong dang ky chung chi. Luu y van hanh: claim-task.sh tu choi vi assignee da dien san muse-2 (da claim thu cong, nhu 138); claim-task.sh nen cho phep claim khi assignee trung agent.",
     "review": {
-      "at": "",
-      "by": "",
-      "note": "",
-      "rounds": 0,
-      "score": ""
+      "at": "2026-11-20T21:40:00+07:00",
+      "by": "muse-main",
+      "note": "Bao cao 231 dong: 3 khoa deu ton tai (Skills template 985/989/1036 + Coursera specialization — muse-main doi chieu truc tiep trang Coursera: Fairness/Interpretability/Privacy/Safety + 4 applied project khop bao cao; chung chi tra phi, noi dung audit free). 6 nguon bias + 4 metric fairness + DP/FL + safety filter; 6 diem ap dung ngay; 3 de xuat skill da ap dung (vong an toan 4 khau, do thien kien, an toan dua noi dung web vao prompt). Thanh that ve gioi han (chua xem video/goc, chua chay lab). Luu y van hanh: claim-task.sh tu choi khi assignee da dien san — de xuat sua script (cho claim khi assignee trung agent dang claim).",
+      "rounds": 1,
+      "score": 8
     },
     "test": {
       "device_test": "",
       "install": "",
       "validate": ""
+    },
+    "merge": {
+      "at": "2026-11-20T21:40:00+07:00",
+      "main_tip": "38346a2",
+      "report": "research/139-responsible-ai-for-developers-google.md"
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học: Responsible AI for Developers (Google)",
   "type": "research",
-  "updated_at": "2026-11-20T21:28:00+07:00",
+  "updated_at": "2026-11-20T21:40:00+07:00",
   "claimed_at": "2026-11-20T21:28:00+07:00",
   "claim_expires_at": "2026-11-20T23:28:00+07:00"
 }
