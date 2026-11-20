@@ -3,23 +3,23 @@
   "title": "Tự học Customer Analytics (Wharton, UPenn)",
   "type": "research",
   "repo": "muse-teamwork",
-  "branch": "",
+  "branch": "feature/169-customer-analytics-wharton-upenn",
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "doing",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-21T05:07:45+07:00",
   "claimed_at": "2026-11-21T05:09:03+07:00",
   "claim_expires_at": "2026-11-21T07:09:26+07:00",
   "result": {
-    "branch": "",
+    "branch": "feature/169-customer-analytics-wharton-upenn",
     "test": {
-      "validate": "",
-      "device_test": "",
-      "install": ""
+      "validate": "PASS",
+      "device_test": "n/a",
+      "install": "n/a"
     },
-    "notes": ""
+    "notes": "Bao cao research/169-customer-analytics-wharton-upenn.md (5 module, ~10-11 gio): thang mo ta-du doan-ke don, nhan qua/tuong quan, phan khuc/CLV o tang khai niem (RFM tuan 3 theo Bridged), doi chieu 167/168/154-156/159-162/163/165/166/158; checklist ke don 5 ve; chi hoc FREE cong khai qua syllabus, khong ghi danh/quiz/chung chi/tracking."
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
@@ -28,5 +28,6 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
-  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 167 merge xong, không còn task mở). Khóa Customer Analytics — Wharton, UPenn — khóa số 31 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main (dòng 61) — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch đo lường sau 167 (thiết kế: thumbnail/ảnh bìa cần đo hiệu quả) + 168 (GA4 đang học: đo hành vi thật trên web) + 154/155/156 (SEO: đo organic traffic) + 159/161/162 (quảng cáo: attribution, đo hiệu quả chiến dịch) — đối chiếu với Content Marketing của 163 (đo lường mục tiêu-trước-chỉ-số-sau), Inbound 165 (đo hành trình khách hàng), Social 166 (đo ROI social, leading indicator) và AEO 158 (đo trích dẫn AI): chỗ nào Customer Analytics bổ sung (phân tích khách hàng: phân khúc, giá trị vòng đời, dự đoán hành vi), chỗ nào trùng với GA4/SEO, và áp dụng cho đo lường mô tả nguồn vBook / bài viết team ra sao. Delegation: giao Ú học + viết báo cáo; muse-main giữ review + merge; Anh giữ quyết định có dùng công cụ phân tích khách hàng thật / gắn tracking vào site nào hay không. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy chiến dịch quảng cáo thật, không nạp tiền, không gắn tracking thật vào site nào. Báo cáo viết vào research/169-customer-analytics-wharton-upenn.md, review muse-main chấm /10 như task research khác. [05:09 muse-1: Đã claim, đang học qua syllabus Wharton/Coursera, đối chiếu 167/168/154-156/159-162/163/165/166/158]"
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 167 merge xong, không còn task mở). Khóa Customer Analytics — Wharton, UPenn — khóa số 31 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main (dòng 61) — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch đo lường sau 167 (thiết kế: thumbnail/ảnh bìa cần đo hiệu quả) + 168 (GA4 đang học: đo hành vi thật trên web) + 154/155/156 (SEO: đo organic traffic) + 159/161/162 (quảng cáo: attribution, đo hiệu quả chiến dịch) — đối chiếu với Content Marketing của 163 (đo lường mục tiêu-trước-chỉ-số-sau), Inbound 165 (đo hành trình khách hàng), Social 166 (đo ROI social, leading indicator) và AEO 158 (đo trích dẫn AI): chỗ nào Customer Analytics bổ sung (phân tích khách hàng: phân khúc, giá trị vòng đời, dự đoán hành vi), chỗ nào trùng với GA4/SEO, và áp dụng cho đo lường mô tả nguồn vBook / bài viết team ra sao. Delegation: giao Ú học + viết báo cáo; muse-main giữ review + merge; Anh giữ quyết định có dùng công cụ phân tích khách hàng thật / gắn tracking vào site nào hay không. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy chiến dịch quảng cáo thật, không nạp tiền, không gắn tracking thật vào site nào. Báo cáo viết vào research/169-customer-analytics-wharton-upenn.md, review muse-main chấm /10 như task research khác. [05:09 muse-1: Đã claim, đang học qua syllabus Wharton/Coursera, đối chiếu 167/168/154-156/159-162/163/165/166/158] [21/11 05:13 muse-1: Đã nộp review; đồng bộ branch cấp ngoài + sửa test n/a theo mẫu research, chờ muse-main chấm.]",
+  "updated_at": "2026-11-21T05:13:35+07:00"
 }
