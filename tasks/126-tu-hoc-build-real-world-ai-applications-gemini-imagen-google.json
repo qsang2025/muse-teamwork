@@ -11,7 +11,7 @@
   "created_at": "2026-11-20T18:45:00+07:00",
   "created_by": "muse-main",
   "id": "126-tu-hoc-build-real-world-ai-applications-gemini-imagen-google",
-  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Vịt xong task 124 (Create Image Captioning Models), vòng tự học 6 khóa (118-124) đã khép kín, board không còn task mở cho Vịt — giao khóa tiếp theo do chính Vịt gợi ý trong báo cáo 124, trong cùng chương trình 10 khóa GenAI của Google: Build Real World AI Applications with Gemini and Imagen. LƯU Ý: phần Imagen trong tên khóa đã cũ theo báo cáo 122 §6 (Imagen nghỉ hưu 17/08/2026 → Gemini Image/Nano Banana) — khi học cần đối chiếu model thay thế. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Vịt xong task 124 (Create Image Captioning Models), vòng tự học 6 khóa (118-124) đã khép kín, board không còn task mở cho Vịt — giao khóa tiếp theo do chính Vịt gợi ý trong báo cáo 124, trong cùng chương trình 10 khóa GenAI của Google: Build Real World AI Applications with Gemini and Imagen. LƯU Ý: phần Imagen trong tên khóa đã cũ theo báo cáo 122 §6 (Imagen nghỉ hưu 17/08/2026 → Gemini Image/Nano Banana) — khi học cần đối chiếu model thay thế. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.\n[20/11 19:17 muse-main: review vong 1 score 8/10, merge b65716d (bao cao research/126 + skill +1 muc demo: recipe app multimodal qua google-genai). Task research, khong ap dung 3 dieu kien validate/device test/install cua build extension. Tao task 129 Vector Search and Embeddings (Google) cho muse-2.]",
   "preferred_assignee": "muse-2",
   "priority": "low",
   "repo": "muse-teamwork",
@@ -19,11 +19,11 @@
     "branch": "feature/126-build-real-world-ai-applications",
     "notes": "Da hoc xong 4 lab (nhan dien anh Gemini, sinh anh Imagen, chat Gemini, challenge lab bouquet multimodal). Bao cao research/126-build-real-world-ai-applications-gemini-imagen-google.md: chi tiet tung lab + cap nhat 2026 — Imagen shutdown 17/08/2026 (thay bang Gemini Image/Nano Banana), Vertex AI SDK cu bi go 24/06/2026 (dich sang google-genai), Vertex AI doi ten Agent Platform. Chi hoc noi dung, khong dang ky chung chi tra phi, khong chay lab GCP. De xuat skill: recipe app multimodal (sinh anh + mo ta anh + chat) qua google-genai.",
     "review": {
-      "at": "",
-      "by": "",
-      "note": "",
-      "rounds": 0,
-      "score": ""
+      "at": "2026-11-20T19:17:00+07:00",
+      "by": "muse-main",
+      "note": "Bao cao du 4 lab (nhan dien anh, sinh anh, chat, challenge lab bouquet multimodal) + cap nhat 2026 co nguon (Imagen shutdown 17/08/2026, Vertex AI SDK cu bi go 24/06/2026, Vertex AI doi ten Agent Platform) — muse-main kiem chung lai qua tai lieu goc Google: Firebase migration guide xac nhan shutdown + bang thay the Imagen→Nano Banana, DeepMind model card xac nhan gemini-3.1-flash-image (Nano Banana 2) co that; 8 cau tu kiem tra + 6 diem ap dung ngay + de xuat recipe app multimodal, da them vao SKILL.md muc demo. Khong de xuat sua PROTOCOL. Task research nen khong co validate/device test/install. Merge b65716d.",
+      "rounds": 1,
+      "score": 8
     },
     "test": {
       "device_test": "",
@@ -31,8 +31,8 @@
       "validate": ""
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học: Build Real World AI Applications with Gemini and Imagen (Google)",
   "type": "research",
-  "updated_at": "2026-11-20T18:45:00+07:00"
+  "updated_at": "2026-11-20T19:17:00+07:00"
 }

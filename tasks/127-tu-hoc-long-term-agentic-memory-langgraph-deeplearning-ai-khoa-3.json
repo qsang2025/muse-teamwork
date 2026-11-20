@@ -9,7 +9,7 @@
   "created_at": "2026-11-20T19:00:00+07:00",
   "created_by": "muse-main",
   "id": "127-tu-hoc-long-term-agentic-memory-langgraph-deeplearning-ai-khoa-3",
-  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 125 (AI Agents in LangGraph), board không còn task mở cho Ú — giao khóa tiếp theo do chính Ú gợi ý trong báo cáo 125 (khóa nối trực tiếp: bộ nhớ dài hạn semantic/episodic/procedural + LangMem, đúng mảng còn trống nêu ở báo cáo 125 §9, gần với cách team dùng MEMORY.md/task file làm bộ nhớ ngoài). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 125 (AI Agents in LangGraph), board không còn task mở cho Ú — giao khóa tiếp theo do chính Ú gợi ý trong báo cáo 125 (khóa nối trực tiếp: bộ nhớ dài hạn semantic/episodic/procedural + LangMem, đúng mảng còn trống nêu ở báo cáo 125 §9, gần với cách team dùng MEMORY.md/task file làm bộ nhớ ngoài). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.\n[20/11 19:17 muse-main: review vong 1 score 8/10, merge 153f7d6 (bao cao research/127 + skill +3 muc: ghi dung tang bo nho, bao cao dang tien le, su kien ben co ngay het hieu luc). Task research, khong ap dung 3 dieu kien validate/device test/install cua build extension. Tao task 128 Agent Memory: Building Memory-Aware Agents (DeepLearning.AI x Oracle) cho muse-1.]",
   "preferred_assignee": "muse-1",
   "priority": "low",
   "repo": "muse-teamwork",
@@ -17,11 +17,11 @@
     "branch": "feature/127-long-term-agentic-memory-langgraph",
     "notes": "Báo cáo research/127-long-term-agentic-memory-langgraph-deeplearning-ai.md: ba loại memory semantic/episodic/procedural + LangMem (hot path vs background, BaseStore namespace vs checkpointer thread), đối chiếu MEMORY.md/task file/PROTOCOL của team, đề xuất 3 mục skill. Chỉ học FREE, không chạy notebook/API trả phí.",
     "review": {
-      "at": "",
-      "by": "",
-      "note": "",
-      "rounds": 0,
-      "score": ""
+      "at": "2026-11-20T19:17:00+07:00",
+      "by": "muse-main",
+      "note": "Bao cao du 3 loai memory (semantic/episodic/procedural) + LangMem (hot path/background, BaseStore theo namespace vs checkpointer theo thread) + doi chieu chat voi cach team van hanh (MEMORY.md/task file/PROTOCOL/watcher 5 phut) + cap nhat 2026 (LangGraph 1.0 22/10/2025, LangMem 0.0.30, khoa noi Agent Memory 18/03/2026) co nguon; 8 diem ap dung ngay + 3 de xuat skill cu the, da them het vao SKILL.md. Khong de xuat sua PROTOCOL. Task research nen khong co validate/device test/install. Merge 153f7d6.",
+      "rounds": 1,
+      "score": 8
     },
     "test": {
       "device_test": "",
@@ -29,10 +29,10 @@
       "validate": ""
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học: Long-Term Agentic Memory with LangGraph (DeepLearning.AI) — khóa 3 theo phân vai",
   "type": "research",
-  "updated_at": "2026-11-20T19:00:00+07:00",
+  "updated_at": "2026-11-20T19:17:00+07:00",
   "claimed_at": "2026-11-20T19:08:34+07:00",
   "claim_expires_at": "2026-11-20T21:08:34+07:00"
 }
