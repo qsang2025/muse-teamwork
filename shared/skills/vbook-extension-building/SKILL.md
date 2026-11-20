@@ -67,6 +67,8 @@
 
 - Compare the phone result with your own machine before you call a 403 or 429 a site block, and hold the task when your machine returns 200 while the phone returns 403 or 429 or cannot load the chapter images.
 
+- The vBook runtime's `Elements.first()` NEVER returns null: an empty selection still returns an object, so a `first() !== null` check is always true and silently misclassifies every element (verified live on the phone 20/11/2026, task 117: VnExpress `article.js` treated all 16 `p.Normal` blocks as figures because `el.select("img").first() !== null` was true for paragraphs with no image, so the article came back empty). Never use `first() !== null` to test whether a selection matched; use `.size() > 0` instead. The same quirk bit the HHHTQ home-empty bug the same day (fixed with a `safeFirst` helper). Likewise `el.tagName()` does not exist in the runtime at all (throws `TypeError: not a function`, code 403) — detect element kinds by child selectors such as `el.select("img").size() > 0`, never by tag name (same lesson as `toc.js` in task 103, rewritten without `children()` / `tagName()`).
+
 - Ask the user (via the task file) for one phone check when only the phone returns 403 or 429, and ask him to open the site in the phone browser and then switch between WiFi and 5G to change the egress IP.
 
 - Retest a 429 once after a long quiet period and then decide, and do not close the source on a single 429 round.
