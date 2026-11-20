@@ -1,44 +1,44 @@
 {
- "id": "112-port-loai-extension-forum-build-otofun",
- "title": "Port loại extension forum + build Otofun",
- "type": "vbook-extension",
- "repo": "Qsang_vbook",
- "branch": "",
- "assignee": "muse-2",
- "preferred_assignee": "muse-2",
- "priority": "high",
- "status": "claimed",
- "created_by": "muse-main",
- "created_at": "2026-11-20T00:32:52+07:00",
- "claimed_at": "2026-11-20T06:57:42+07:00",
- "claim_expires_at": "2026-11-20T08:57:42+07:00",
- "result": {
-  "branch": "feature/112-forum-otofun",
-  "test": {
-   "validate": "PASS (121 nguon, 0 canh bao) — chay lai boi muse-main tren branch tip 9a4a69e, 04:32 20/11",
-   "device_test": "7/8 (muse-main, 04:32 20/11, chay lai du sau khi site hoi): home code 0; genre code 0; search board p1/p2 code 0; whats-new code 0; posts p1/p2 code 0 (noi dung that); CHI search tu khoa 'BMW X1' code 1 — 'Tim kiem that bai (HTTP 400)', lap lai 2 lan lien tiep tren may Anh (truoc do curl tu VM tra 200).",
-   "install": "200 OK (muse-main, 04:32 20/11)"
+  "id": "112-port-loai-extension-forum-build-otofun",
+  "title": "Port loại extension forum + build Otofun",
+  "type": "vbook-extension",
+  "repo": "Qsang_vbook",
+  "branch": "",
+  "assignee": "muse-2",
+  "preferred_assignee": "muse-2",
+  "priority": "high",
+  "status": "doing",
+  "created_by": "muse-main",
+  "created_at": "2026-11-20T00:32:52+07:00",
+  "claimed_at": "2026-11-20T06:57:42+07:00",
+  "claim_expires_at": "2026-11-20T08:57:42+07:00",
+  "result": {
+    "branch": "feature/112-forum-otofun",
+    "test": {
+      "validate": "PASS (121 nguon, 0 canh bao) — chay lai boi muse-main tren branch tip c5a5728 (rework search)",
+      "device_test": "7/8 (muse-main, 08:41 20/11, log ext-review/112-device-test.log): home 2 tab; genre 61 board; search board p1 31 thread, p2 30; whats-new 30; posts p1 floor #1, p2 floor #21 (noi dung that, gio hien thi dung dang); CHI search tu khoa 'BMW X1' code 1 — 'Tim kiem that bai (HTTP 400)' (van loi sau ban sua cookie).",
+      "install": "200 OK (muse-main, 08:41)"
+    },
+    "notes": "[Đính chính 08:15 20/11 — muse-2] Bản sửa search 400 đã commit 07:00 (0e8dbbd: search.js đọc xf_csrf từ Set-Cookie của GET rồi gửi kèm Cookie trong POST, version 2) và đã ĐẨY lên origin (tip c5a5728, gồm registry v2 + rebuild plugin.zip 19.406 byte). Ghi chú watchdog 07:33 (8feb43b) nói \"claim kẹt 36 phút không commit, branch vẫn tip 9a4a69e\" là SAI về bản chất — watchdog nhìn tip REMOTE nên bỏ sót commit 0e8dbbd đang nằm local chưa đẩy. Thực tế: code xong, chỉ kẹt ở bước đẩy + test thiết bị. Device test bản sửa CHƯA chạy (8 case, quyết định: search từ khóa \"BMW X1\" phải code 0). Review vòng 1 (muse-main, 04:32): 6/10 — validate PASS 121 nguồn, device 7/8 (chỉ search từ khóa HTTP 400, lặp 2 lần), install 200.",
+    "review": {
+      "score": 6,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-20T04:35:00+07:00",
+      "note": "Build tot: validate PASS, 7/8 device case + install 200, noi dung that da doc duoc. Chua dat vi search tu khoa POST tra HTTP 400 tren may Anh (tai lap 2 lan) — chua du dieu kien merge (can device test code 0 du 8 case). Tra ve doing: sua POST search tren device hoac bo nhanh search tu khoa theo pattern aztruyen/17k (giu search theo board + whats-new dang chay), cap nhat test.json, chay lai du device test."
+    }
   },
-  "notes": "[Đính chính 08:15 20/11 — muse-2] Bản sửa search 400 đã commit 07:00 (0e8dbbd: search.js đọc xf_csrf từ Set-Cookie của GET rồi gửi kèm Cookie trong POST, version 2) và đã ĐẨY lên origin (tip c5a5728, gồm registry v2 + rebuild plugin.zip 19.406 byte). Ghi chú watchdog 07:33 (8feb43b) nói \"claim kẹt 36 phút không commit, branch vẫn tip 9a4a69e\" là SAI về bản chất — watchdog nhìn tip REMOTE nên bỏ sót commit 0e8dbbd đang nằm local chưa đẩy. Thực tế: code xong, chỉ kẹt ở bước đẩy + test thiết bị. Device test bản sửa CHƯA chạy (8 case, quyết định: search từ khóa \"BMW X1\" phải code 0). Review vòng 1 (muse-main, 04:32): 6/10 — validate PASS 121 nguồn, device 7/8 (chỉ search từ khóa HTTP 400, lặp 2 lần), install 200.",
-  "review": {
-   "score": 6,
-   "rounds": 1,
-   "by": "muse-main",
-   "at": "2026-11-20T04:35:00+07:00",
-   "note": "Build tot: validate PASS, 7/8 device case + install 200, noi dung that da doc duoc. Chua dat vi search tu khoa POST tra HTTP 400 tren may Anh (tai lap 2 lan) — chua du dieu kien merge (can device test code 0 du 8 case). Tra ve doing: sua POST search tren device hoac bo nhanh search tu khoa theo pattern aztruyen/17k (giu search theo board + whats-new dang chay), cap nhat test.json, chay lai du device test."
-  }
- },
- "checklist": [
-  "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
-  "Claim task (script claim-task.sh) + tạo branch từ main tip",
-  "Hạ tầng: thêm 'forum' vào TYPES trong tools/cli/validate.js:51",
-  "Copy templates/forum/ từ upstream Darkrai9x (6 file: plugin.json, config.js, genre.js, home.js, posts.js, search.js) vào Qsang_vbook, chỉnh theo quy ước nhà",
-  "Đồng bộ extension-api.md (cả 2 bản, md5 giống nhau) + SKILL.md + type-contracts.md với mục forum",
-  "Build extension thật extensions/forum/otofun/ từ probe, sửa 3 lỗi probe đã biết (xem notes)",
-  "validate PASS + device test code 0 + install 200 trên điện thoại Anh, báo cáo đầy đủ",
-  "Push branch, cập nhật task sang review",
-  "muse-main kiểm tra + merge, task sang done"
- ],
- "notes": "Gate đã qua (probe 2026-11-20 00:29, Anh xác nhận bằng ảnh chụp 00:31): app vBook NHẬN type forum — install probe OK 200; home 2 tab, genre 62 board, search list 31 thread/trang (phân trang list bằng ?page= CHẠY, p2 chỉ trùng thread ghim), posts đọc được nội dung thật; trong app hiện đúng danh sách (ghim/khóa, tác giả, lượt trả lời/xem) và trang đọc bài (huy hiệu OP, số tầng #1/#2). Chi tiết probe: ~/workspace/vbook/work/ext-review/FORUM-PROBE-OTOFUN.md; log: otfun-probe-device-test.log; worktree probe: ~/workspace/vbook/work/forum-probe-otofun (branch probe/otofun-forum — CHỈ copy code từ đó, KHÔNG merge branch probe; extension thật đặt tên 'Otofun', author MuseAi).\n3 lỗi probe phải sửa khi build thật: (1) Tìm từ khóa /search?q= trả 0 kết quả — search XenForo thật là POST; làm search chạy được hoặc bỏ search.js theo pattern aztruyen/17k (ghi rõ trong báo cáo). (2) Phân trang bài trong thread chưa kiểm chứng — thread mẫu chỉ có 1 bài, ?page=2 trả lại bài cũ; XenForo chuẩn dùng /page-N — kiểm chứng trên thread nhiều trang rồi chọn cách đúng. (3) Giờ trong danh sách hiện dạng ISO thô '2010-09-18T14:11:12+0700' — dùng text hiển thị thay vì attr datetime.\nPHẠM VI: chỉ forum. News KHÔNG làm trong task này (task 110 kết luận ĐỂ SAU — Anh chưa chốt muốn đọc tin trong vBook; KHÔNG thêm 'news' vào TYPES).\nQuy trình nhà: branch từ main tip; validate PASS + device test code 0 + install 200 do builder tự kiểm chứng; merge chỉ do muse-main thực hiện sau khi kiểm tra lại. Nguồn probe 'Otofun Probe' đang cài trên máy Anh — extension thật cài thành nguồn riêng; Anh sẽ tự xóa probe trong app sau (không có API gỡ).\n[03:32 muse-main review: validate PASS tu chay lai; install 200 OK; device test 1/8 do site otofun 503 (ca may Anh lan VM). CHUA merge — cho site hoi roi chay lai device test du 8 case.]\n[04:35 20/11 muse-main review vong 1, score 6/10: site otofun da hoi (www 200), chay lai du device test 04:32 — 7/8 code 0, install 200, validate PASS. CHI search tu khoa 'BMW X1' code 1 (HTTP 400, lap lai 2 lan tren may Anh). CHUA merge. Tra ve doing cho muse-2: sua POST search tren device hoac bo nhanh search tu khoa theo pattern aztruyen/17k (giu search board + whats-new), cap nhat test.json + bao cao, chay lai du 8 case.]\n[04:45 20/11 muse-2 lam lai: CHAN DOAN BANG CURL (VM da truy cap lai duoc otofun.net.vn 200): POST /search/search kem token nhung KHONG kem cookie tra 400 (giong het loi tren device); kem cookie xf_csrf (lay tu GET /search/) tra 200 + trang ket qua; chi kem xf_session van 400. Nguyen nhan: _xfToken XenForo gan voi cookie xf_csrf cua session — app tren device khong mang cookie tu GET sang POST. Huong sua: doc xf_csrf tu phan hoi GET (localCookie.getCookie() / header Set-Cookie) roi gui kem thu cong qua header Cookie trong POST; giu thu lai 400. Neu device test van 400 thi roi ve phuong an du phong: bo search tu khoa theo pattern aztruyen/17k.]\n[sweep 20/11 04:40 da dua task ve open do claim het han 04:30 — nhung muse-main vua tra ve doing luc 04:35 de lam lai, hook da danh thuc muse-2 luc 04:37, nen sweep khong dung thuc te; muse-2 khoi phuc doing + claim moi toi 06:45.] [sweep 20/11 06:55: hết hạn 2h từ muse-2, tự động trả về open] [07:33 20/11 watchdog: claim muse-2 từ 06:57 quá 30 phút không commit/heartbeat (trễ quy tắc commit trong 15 phút đầu); muse-main kiểm chứng branch feature/112-forum-otofun vẫn tip 9a4a69e, không commit mới từ 06:57. Claim còn hiệu lực tới 08:57 — chờ muse-2 tự nối tiếp (watcher của nó đã đánh thức), chưa thu hồi claim, chưa báo Anh.",
- "updated_at": "2026-11-20T07:33:00+07:00"
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch từ main tip",
+    "Hạ tầng: thêm 'forum' vào TYPES trong tools/cli/validate.js:51",
+    "Copy templates/forum/ từ upstream Darkrai9x (6 file: plugin.json, config.js, genre.js, home.js, posts.js, search.js) vào Qsang_vbook, chỉnh theo quy ước nhà",
+    "Đồng bộ extension-api.md (cả 2 bản, md5 giống nhau) + SKILL.md + type-contracts.md với mục forum",
+    "Build extension thật extensions/forum/otofun/ từ probe, sửa 3 lỗi probe đã biết (xem notes)",
+    "validate PASS + device test code 0 + install 200 trên điện thoại Anh, báo cáo đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "notes": "Gate đã qua (probe 2026-11-20 00:29, Anh xác nhận bằng ảnh chụp 00:31): app vBook NHẬN type forum — install probe OK 200; home 2 tab, genre 62 board, search list 31 thread/trang (phân trang list bằng ?page= CHẠY, p2 chỉ trùng thread ghim), posts đọc được nội dung thật; trong app hiện đúng danh sách (ghim/khóa, tác giả, lượt trả lời/xem) và trang đọc bài (huy hiệu OP, số tầng #1/#2). Chi tiết probe: ~/workspace/vbook/work/ext-review/FORUM-PROBE-OTOFUN.md; log: otfun-probe-device-test.log; worktree probe: ~/workspace/vbook/work/forum-probe-otofun (branch probe/otofun-forum — CHỈ copy code từ đó, KHÔNG merge branch probe; extension thật đặt tên 'Otofun', author MuseAi).\n3 lỗi probe phải sửa khi build thật: (1) Tìm từ khóa /search?q= trả 0 kết quả — search XenForo thật là POST; làm search chạy được hoặc bỏ search.js theo pattern aztruyen/17k (ghi rõ trong báo cáo). (2) Phân trang bài trong thread chưa kiểm chứng — thread mẫu chỉ có 1 bài, ?page=2 trả lại bài cũ; XenForo chuẩn dùng /page-N — kiểm chứng trên thread nhiều trang rồi chọn cách đúng. (3) Giờ trong danh sách hiện dạng ISO thô '2010-09-18T14:11:12+0700' — dùng text hiển thị thay vì attr datetime.\nPHẠM VI: chỉ forum. News KHÔNG làm trong task này (task 110 kết luận ĐỂ SAU — Anh chưa chốt muốn đọc tin trong vBook; KHÔNG thêm 'news' vào TYPES).\nQuy trình nhà: branch từ main tip; validate PASS + device test code 0 + install 200 do builder tự kiểm chứng; merge chỉ do muse-main thực hiện sau khi kiểm tra lại. Nguồn probe 'Otofun Probe' đang cài trên máy Anh — extension thật cài thành nguồn riêng; Anh sẽ tự xóa probe trong app sau (không có API gỡ).\n[03:32 muse-main review: validate PASS tu chay lai; install 200 OK; device test 1/8 do site otofun 503 (ca may Anh lan VM). CHUA merge — cho site hoi roi chay lai device test du 8 case.]\n[04:35 20/11 muse-main review vong 1, score 6/10: site otofun da hoi (www 200), chay lai du device test 04:32 — 7/8 code 0, install 200, validate PASS. CHI search tu khoa 'BMW X1' code 1 (HTTP 400, lap lai 2 lan tren may Anh). CHUA merge. Tra ve doing cho muse-2: sua POST search tren device hoac bo nhanh search tu khoa theo pattern aztruyen/17k (giu search board + whats-new), cap nhat test.json + bao cao, chay lai du 8 case.]\n[04:45 20/11 muse-2 lam lai: CHAN DOAN BANG CURL (VM da truy cap lai duoc otofun.net.vn 200): POST /search/search kem token nhung KHONG kem cookie tra 400 (giong het loi tren device); kem cookie xf_csrf (lay tu GET /search/) tra 200 + trang ket qua; chi kem xf_session van 400. Nguyen nhan: _xfToken XenForo gan voi cookie xf_csrf cua session — app tren device khong mang cookie tu GET sang POST. Huong sua: doc xf_csrf tu phan hoi GET (localCookie.getCookie() / header Set-Cookie) roi gui kem thu cong qua header Cookie trong POST; giu thu lai 400. Neu device test van 400 thi roi ve phuong an du phong: bo search tu khoa theo pattern aztruyen/17k.]\n[sweep 20/11 04:40 da dua task ve open do claim het han 04:30 — nhung muse-main vua tra ve doing luc 04:35 de lam lai, hook da danh thuc muse-2 luc 04:37, nen sweep khong dung thuc te; muse-2 khoi phuc doing + claim moi toi 06:45.] [sweep 20/11 06:55: hết hạn 2h từ muse-2, tự động trả về open] [07:33 20/11 watchdog: claim muse-2 từ 06:57 quá 30 phút không commit/heartbeat (trễ quy tắc commit trong 15 phút đầu); muse-main kiểm chứng branch feature/112-forum-otofun vẫn tip 9a4a69e, không commit mới từ 06:57. Claim còn hiệu lực tới 08:57 — chờ muse-2 tự nối tiếp (watcher của nó đã đánh thức), chưa thu hồi claim, chưa báo Anh.\n[08:41 muse-main review vong 2 — CHUA DAT, tra lai sua: device test 7/8, chi search tu khoa van 400. Chan doan cua muse-main: ban sua dung (POST can cookie xf_csrf — curl chung minh khong cookie 400, kem cookie 200), nhung cach doc cookie trong code khong lay duoc cookie trong runtime cua app: (1) formRes.header(\"set-cookie\") co the tra rong (runtime khong de lo Set-Cookie qua accessor nay), (2) localCookie.getCookie() co the khong co xf_csrf (fetch cua runtime doc jar chu khong ghi vao jar — bang chung: truong hop mattreading chi doc duoc cf_clearance do trinh duyet cua app dat, khong phai do fetch dat). Code hien tai khong kiem tra csrf co lay duoc khong ma cu POST khong cookie -> 400 am tham. Huong sua: (a) doi GET /search/ sang pacedFetch (lib/rate-limit.js, inline theo quy tac nha) roi doc cookie qua res.headers.get(\"Set-Cookie\") — dung mau sangtacvietapp/src/chap.js extractReadContextId (da chay that tren may Anh); (b) neu van khong lay duoc cookie thi tra loi ro 'khong lay duoc cookie tim kiem' thay vi POST mu; (c) neu runtime that su khong cho doc cookie thi BO tim kiem tu khoa theo pham vi task (chi giu duyet board + doc thread, 7/8), ghi ro trong README/test.json, validate + test lai. Xong thi day branch, bao muse-main chay lai du 8 case truoc khi merge.]",
+  "updated_at": "2026-11-20T08:44:34+07:00"
 }
