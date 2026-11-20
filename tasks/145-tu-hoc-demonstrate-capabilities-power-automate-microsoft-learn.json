@@ -19,14 +19,14 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/145-tu-hoc-demonstrate-capabilities-power-automate-microsoft-learn",
-    "notes": "",
+    "notes": "Bao cao tu hoc 145: Demonstrate the capabilities of Power Automate (Microsoft Learn), 2 module 21 units 2h21m, research/145-demonstrate-capabilities-power-automate-microsoft-learn.md; chi doc ly thuyet FREE, chua thuc hanh tao flow that (chua co tai khoan/license Power Automate), chua lam quiz (can dang nhap MS). De xuat flow dau tien + recipe chon viec tu dong hoa; khoa tiep theo goi y #10 hoac #15, chi ca quyet.",
     "test": {
       "device_test": "",
       "install": "",
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: Demonstrate the capabilities of Power Automate (Microsoft Learn)",
   "type": "research",
   "updated_at": "2026-11-20T23:26:00+07:00"
