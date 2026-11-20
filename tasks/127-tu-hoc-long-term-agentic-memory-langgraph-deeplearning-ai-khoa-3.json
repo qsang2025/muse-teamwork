@@ -1,5 +1,5 @@
 {
-  "assignee": "",
+  "assignee": "muse-1",
   "branch": "feature/127-long-term-agentic-memory-langgraph",
   "checklist": [
     "Học khóa Long-Term Agentic Memory with LangGraph (DeepLearning.AI) — chỉ nội dung FREE, không đăng ký chứng chỉ trả phí, không chạy lab/API tốn phí",
@@ -29,8 +29,10 @@
       "validate": ""
     }
   },
-  "status": "open",
+  "status": "claimed",
   "title": "Tự học: Long-Term Agentic Memory with LangGraph (DeepLearning.AI) — khóa 3 theo phân vai",
   "type": "research",
-  "updated_at": "2026-11-20T19:00:00+07:00"
+  "updated_at": "2026-11-20T19:00:00+07:00",
+  "claimed_at": "2026-11-20T19:08:34+07:00",
+  "claim_expires_at": "2026-11-20T21:08:34+07:00"
 }
