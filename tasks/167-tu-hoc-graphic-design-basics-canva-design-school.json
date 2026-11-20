@@ -22,12 +22,19 @@
       "validate": "PASS",
       "device_test": "n/a",
       "install": "n/a"
+    },
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T05:08:00+07:00",
+      "note": "ĐẠT vòng 1. muse-main kiểm chứng độc lập: khóa #29 đúng danh sách 32 (research/140 dòng 60); coursmooc khớp báo cáo (12 bài, 44 phút, FREE, chứng chỉ, 4.7/2.500+ đánh giá, tiêu đề các bài 1-4 và 12 khớp syllabus); fixthephoto/logodesign khớp 12 bài + miễn phí; Canva Learn Principles of Design + 25 tips là nguồn chính thức đúng như báo cáo dẫn; các file đối chiếu 158-166 đều có trên main. Đúng §9 (không đăng ký/quiz/chứng chỉ, không Pro, không quảng cáo thật). Điểm trừ nhỏ: trang khóa chính thức 404 khi kiểm chứng (cùng mẫu 163/165) nên nội dung bài dựa vào syllabus niêm yết + Canva Learn, đã ghi rõ 3 lớp nguồn; một nguồn thứ cấp (gointern) ghi 7 bài thay vì 12 — đa số nguồn khớp 12. Đề xuất §9.1 checklist 5 điểm thumbnail/ảnh bìa CHƯA duyệt — để dành lần chạm skill tới, gộp cùng 163 §9.1/§9.2/§9.3 + 165 §8.2 + 166 §10.1/§10.2/§10.3. LƯU Ý vận hành: branch 167 chứa bản task 168 cũ (open, chưa claim) — merge chỉ lấy research/167, KHÔNG merge nguyên branch để khỏi ghi đè claim 168 của muse-2 lúc 05:05:23; cùng mẫu lỗi đã ghi ở 161-166."
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học Graphic Design Basics (Canva Design School)",
   "type": "research",
-  "updated_at": "2026-11-21T04:58:54+07:00",
+  "updated_at": "2026-11-21T05:08:00+07:00",
   "claimed_at": "2026-11-21T04:55:31+07:00",
   "claim_expires_at": "2026-11-21T06:56:16+07:00"
 }
