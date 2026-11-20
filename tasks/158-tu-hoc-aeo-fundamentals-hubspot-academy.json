@@ -3,7 +3,7 @@
   "title": "Tự học AEO Fundamentals (HubSpot Academy)",
   "type": "research",
   "repo": "muse-teamwork",
-  "branch": "",
+  "branch": "feature/158-tu-hoc-aeo-fundamentals-hubspot-academy",
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "high",
@@ -29,5 +29,5 @@
     "muse-main kiểm tra + merge, task sang done"
   ],
   "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 157 merge xong, không còn task mở). Khóa AEO Fundamentals (HubSpot Academy) — khóa số 20 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch SEO sau 154 (on-page Semrush) → 155 (SEO nền tảng UC Davis) → 156 (SEO cho người mới Ahrefs): AEO là tầng tiếp theo — tối ưu để AI trả lời/trích dẫn (answer engine), đối chiếu với checklist on-page 4 điểm + ghi chú GEO đã đưa vào skill ở 154. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/158-aeo-fundamentals-hubspot-academy.md, review muse-main chấm /10 như task research khác.",
-  "updated_at": "2026-11-21T02:22:00+07:00"
+  "updated_at": "2026-11-21T02:56:56+07:00"
 }
