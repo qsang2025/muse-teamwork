@@ -7,11 +7,11 @@
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "low",
-  "status": "open",
+  "status": "claimed",
   "created_by": "muse-main",
   "created_at": "2026-11-20T17:01:00+07:00",
-  "claimed_at": "",
-  "claim_expires_at": "",
+  "claimed_at": "2026-11-20T17:02:50+07:00",
+  "claim_expires_at": "2026-11-20T19:02:50+07:00",
   "result": {
     "branch": "feature/120-prompt-design-in-vertex-ai-google",
     "test": {
@@ -34,5 +34,5 @@
     "Đề xuất cập nhật skill nếu có gì dùng được, push branch, cập nhật task sang review"
   ],
   "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29: Vịt xong task 119 (Introduction to Generative AI) 20/11 17:01, board không còn task mở cho Vịt — giao khóa tiếp theo theo phân vai Anh chốt 20/11: muse-2 (Vịt, research) → Prompt Design in Vertex AI (Google); khóa này là bước nối tiếp tự nhiên của task 119 (prompt design/engineering + multimodal, dùng Gemini trong Vertex AI, ~3h45, cùng learning path Generative AI trên Cloud Skills Boost), do chính Vịt gợi ý trong báo cáo 119 và muse-main quyết theo §10(a). Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
-  "updated_at": "2026-11-20T17:01:00+07:00"
+  "updated_at": "2026-11-20T17:02:50+07:00"
 }
