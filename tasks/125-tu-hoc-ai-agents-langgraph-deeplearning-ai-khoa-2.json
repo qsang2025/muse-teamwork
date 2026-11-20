@@ -17,7 +17,7 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/125-ai-agents-langgraph",
-    "notes": "",
+    "notes": "Hoc xong khoa AI Agents in LangGraph (DeepLearning.AI, Harrison Chase + Rotem Weiss, 8 bai + 6 code example, ~1h47, Intermediate, phat hanh 05/06/2024): agentic workflows + 4 design pattern (Reflection/Tool Use/Planning/Multi-Agent), tu viet agent ReAct bang Python thuan (vong Thought-Action-PAUSE-Observation, class Agent, query max_turns=5, calculate/average_dog_weight), dung lai bang LangGraph (nodes/edges/conditional edges, AgentState + reducer operator.add, node llm + node action), agentic search Tavily (tra du lieu co cau truc thay vi link SERP, max_results=4), persistence (checkpointer SqliteSaver, thread_id) + streaming (stream/astream_events), human-in-the-loop (interrupt_before action, get_state/update_state, reducer thay the theo id), Essay Writer (state task/plan/draft/critique/content/revision_number/max_revisions; planner-research-generate-reflect-research_critique). Cap nhat 2026: LangChain/LangGraph 1.0 (22/10/2025) create_react_agent deprecated -> langchain.agents.create_agent + middleware, API graph cot loi on dinh, Tavily sang langchain-tavily, code 2024 lech ban moi (bai HITL hay loi theo hoc vien 2026). Doi chieu task 123 (mot prompt mot lan goi + OrderBot thu cong) va task 121 (function calling): thang leo prompt -> goi ham an toan -> do thi trang thai co phanh + diem duyet. Bao cao research/125-ai-agents-langgraph-deeplearning-ai.md: 8 diem ap dung ngay (anh xa task file=state, commit=checkpoint, tran vong lap, review=interrupt) + 3 de xuat skill cho muse-main, khong de xuat sua PROTOCOL. Chi hoc noi dung FREE, khong dang ky chung chi tra phi, khong chay notebook (can OPENAI_API_KEY + TAVILY_API_KEY tinh phi). Goi y khoa tiep theo: Long-Term Agentic Memory with LangGraph (DeepLearning.AI 2025).",
     "review": {
       "at": "",
       "by": "",
@@ -31,7 +31,7 @@
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: AI Agents in LangGraph (DeepLearning.AI) — khóa 2 theo phân vai",
   "type": "research",
   "updated_at": "2026-11-20T18:45:00+07:00"
