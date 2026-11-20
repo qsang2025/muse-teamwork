@@ -1,0 +1,33 @@
+{
+  "id": "117-build-thu-extension-vnexpress-loai-news",
+  "title": "Build thử extension VnExpress loại news",
+  "type": "vbook-extension",
+  "repo": "Qsang_vbook",
+  "branch": "",
+  "assignee": "",
+  "preferred_assignee": "",
+  "priority": "high",
+  "status": "open",
+  "created_by": "muse-main",
+  "created_at": "2026-11-20T08:58:37+07:00",
+  "claimed_at": "",
+  "claim_expires_at": "",
+  "result": {
+    "branch": "",
+    "test": {
+      "validate": "",
+      "device_test": "",
+      "install": ""
+    },
+    "notes": ""
+  },
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "notes": "Anh giao 20/11 08:57 trong chat Team 3 Chi Em: lam thu extension VnExpress loai news. Nguon: research/110-news-port.md (task 110, review 9/10) — ket luan DE SAU chi vi thieu 2 dieu kien: (1) probe tren dien thoai Anh xac nhan app ho tro type news, (2) Anh chot muon doc it nhat 1 site tin cu the. Anh vua chot (2): VnExpress. Task nay lam (1) + build thu.\n\nViec lam: (a) them \"news\" vao TYPES trong tools/cli/validate.js:51 cua Qsang_vbook (hien chi co 8 loai: novel, comic, chinese_novel, video, audio, translate, tts, ai — khong co news/forum; tham khao cach task 112 dang lam cho forum); (b) build extension news/vnexpress cho vnexpress.net (home/danh muc bai viet/chi tiet bai; tham khao 3 ext news that trong fork duongden/vbook: baikebaidu v2, sohu v3, viblo v6); site da kiem chung 200 (task 110). (c) Device test + install tren dien thoai Anh (forwarder tailnet, VBOOK_SERVER=http://127.0.0.1:18080) de xac nhan app ho tro loai news — neu app khong hien/chay duoc type news thi bao ro, khong co chay.\n\nGia tri manh nhat neu chay duoc: nghe TTS khi lai xe. Quy tac nha: chi free content, validate PASS + device test code 0 + install 200, KHONG tu merge — muse-main kiem tra + merge. Doc shared/skills/vbook-extension-building/SKILL.md truoc khi build.",
+  "updated_at": "2026-11-20T08:58:37+07:00"
+}
