@@ -7,24 +7,25 @@
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "low",
-  "status": "claimed",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-20T16:34:28+07:00",
   "claimed_at": "2026-11-20T16:37:32+07:00",
   "claim_expires_at": "2026-11-20T18:37:32+07:00",
   "result": {
-    "branch": "",
+    "branch": "research/118-elements-of-ai",
     "test": {
       "validate": "",
       "device_test": "",
       "install": ""
     },
-    "notes": ""
+    "notes": "Bao cao research/118-elements-of-ai.md: hoc xong 6 chuong Elements of AI (DH Helsinki) tu trang chinh, chi hoc noi dung, khong dang ky chung chi. 7 diem ap dung ngay cho viec chung (Bayes khi danh gia site, device test = tap kiem tra chong overfitting, baseline don gian truoc, ghi trang thai da thu, kiem chung live vi LLM la Weak AI, review cheo chong thien kien, goi dung ten phuong phap). De xuat 2 bo sung nho cho skill vbook-extension-building de chi ca quyet; khong de xuat sua PROTOCOL."
   },
   "checklist": [
     "Hoc khoa Elements of AI (DH Helsinki) — chi noi dung, khong dang ky chung chi tra phi",
     "Ghi bao cao vao research/ (dieu hoc duoc, ap dung duoc ngay cho viec chung)",
     "De xuat cap nhat skill neu co gi dung duoc, push branch, cap nhat task sang review"
   ],
-  "notes": "muse-main tao theo rule tu hoc luc ranh (PROTOCOL §9) + quyen quan ly chi ca Anh giao 20/11 16:29: Vịt ranh tu 08:39 (task 114 xong) ma chua tu tao task hoc — chi ca nhac. Khoa dau tien theo phan vai Anh chot 20/11: muse-2 (Vịt, research) → Elements of AI (DH Helsinki); nguon trong 32 khoa AI mien phi do Vinmedia Global tong hop (THAN Cong Hai chia se 19/11, link tren trang Vinmedia). Chi hoc noi dung, khong can chung chi. Mot luc chi 1 task tu hoc; neu board lai co task build/gap thi uu tien task do truoc."
+  "notes": "muse-main tao theo rule tu hoc luc ranh (PROTOCOL §9) + quyen quan ly chi ca Anh giao 20/11 16:29: Vịt ranh tu 08:39 (task 114 xong) ma chua tu tao task hoc — chi ca nhac. Khoa dau tien theo phan vai Anh chot 20/11: muse-2 (Vịt, research) → Elements of AI (DH Helsinki); nguon trong 32 khoa AI mien phi do Vinmedia Global tong hop (THAN Cong Hai chia se 19/11, link tren trang Vinmedia). Chi hoc noi dung, khong can chung chi. Mot luc chi 1 task tu hoc; neu board lai co task build/gap thi uu tien task do truoc.\n[20/11 16:39 muse-2: Hoc xong 6 chuong (18 muc) tu trang chinh + ban tom tat day du; bao cao research/118-elements-of-ai.md tren branch research/118-elements-of-ai. Ket luan chinh: quy trinh validate+device test+review cheo cua team khop dung khai niem overfitting/test-set/thien-kien; de xuat 2 bo sung nho cho skill vbook-extension-building (baseline truoc, kiem chung live) de chi ca quyet.]",
+  "updated_at": "2026-11-20T16:39:27.144626+07:00"
 }
