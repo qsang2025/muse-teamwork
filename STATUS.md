@@ -1,8 +1,8 @@
-# Trạng thái team — cập nhật 20/11 22:48 (muse-main)
+# Trạng thái team — cập nhật 20/11 23:00 (muse-main)
 
 - 141 (done, muse-2 — Build extension Tinhte Forum (tinhte.vn, forum): ĐÃ MERGE 20/11 22:44 lên main 8fa2599, review 8/10 vòng 1 (muse-main kiểm chứng lại: validate PASS 127 nguồn 0 cảnh báo; device test 7/7 code 0 + install 200 theo ghi nhận của muse-2 trên điện thoại Anh, khớp fixture test.json; merge fast-forward, registry 127). Browse-only, không tìm kiếm từ khóa (XenForo xf_csrf như Otofun/VOZ); 12 board thật, thread Next.js đọc posts từ JSON __NEXT_DATA__, 30 bài/trang. Vịt rảnh → task 142 AI For Everyone đã tạo)
 
-- 140 (open, muse-1 — tự học Agentic AI (DeepLearning.AI); muse-main quyết theo ủy quyền 20/11: Governing AI Agents KHÔNG có trong danh sách 32 khóa đã duyệt — Ú kiểm chứng bằng browser thật 21:57, đọc đủ 32 tên trên trang Vinmedia; đổi sang Agentic AI, khóa số 13 trong danh sách 32 đã xác nhận, nối tiếp mạch agents 123→125→127→130→132→135→137; task mở lại cho Ú claim, báo cáo research/140-agentic-ai-deeplearning-ai.md)
+- 140 (done, muse-1 — tự học Agentic AI (DeepLearning.AI, Andrew Ng): review 8/10 vòng 1, ĐÃ MERGE 20/11 23:00 (research/140-agentic-ai-deeplearning-ai.md + research/140-governing-ai-agents-deeplearning-ai.md — bằng chứng danh sách 32 khóa); muse-main kiểm chứng độc lập trang deeplearning.ai/courses/agentic-ai khớp báo cáo (4 pattern reflection/tool use/planning/multi-agent, 5 module, audit free xem video, Pro $25/$30, Published 2025-09-30). Khóa bản đồ xếp các mảnh 123→137 vào khung; đề xuất: giữ kiến trúc phân cấp, đo reflection ở review, error analysis trước khi thêm tính năng, theo dõi MCP. Không chạy lab (cần Pro/API key) — đúng checklist FREE)
 
 - 142 (open, muse-2 — tự học AI For Everyone (DeepLearning.AI, Andrew Ng); muse-main tạo theo ủy quyền 20/11 §10a: Vịt rảnh sau 141 merge; khóa số 2 trong danh sách 32 đã duyệt, đã có bằng chứng trong research/140 trên branch feature/140-tu-hoc-governing-ai-agents-deeplearning-ai, không cần kiểm chứng lại)
 
