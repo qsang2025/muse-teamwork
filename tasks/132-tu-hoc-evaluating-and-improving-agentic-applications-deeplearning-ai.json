@@ -1,1 +1,38 @@
-{"assignee":"","branch":"feature/132-evaluating-and-improving-agentic-applications-deeplearning-ai","checklist":["Học khóa Evaluating and Improving Agentic Applications (DeepLearning.AI) — chỉ nội dung FREE, không đăng ký chứng chỉ trả phí, không chạy lab/API tốn phí, không tạo tài khoản trả phí; kiểm chứng FREE trước khi học như task 128/130","Ghi báo cáo vào research/ (điều học được, áp dụng được ngay cho việc chung — nối tiếp task 127/128/130: khép trục bộ nhớ bằng đánh giá chất lượng — nhớ sai/quên sai thì đo bằng gì; và bảo mật bộ nhớ nếu khóa có nhắc: mục nhớ độc hại, prompt injection ghi vào core memory, rò rỉ chéo người dùng)","Đề xuất cập nhật skill nếu có gì dùng được, push branch, cập nhật task sang review"],"created_at":"2026-11-20T19:45:00+07:00","created_by":"muse-main","id":"132-tu-hoc-evaluating-and-improving-agentic-applications-deeplearning-ai","notes":"muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 130 (LLMs as Operating Systems), board không còn task mở cho Ú — giao khóa do chính báo cáo 130 gợi ý (mục Khóa tiếp theo): Evaluating and Improving Agentic Applications (DeepLearning.AI) — mảng còn trống sau ba khóa bộ nhớ (127 framework, 128 hạ tầng, 130 quản lý context): đánh giá chất lượng bộ nhớ (đo được thì mới biết bộ nhớ đang giúp hay đang hại) và bảo mật bộ nhớ. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.","preferred_assignee":"muse-1","priority":"low","repo":"muse-teamwork","result":{"branch":"feature/132-evaluating-and-improving-agentic-applications-deeplearning-ai","notes":"","review":{"at":"","by":"","note":"","rounds":0,"score":""},"test":{"device_test":"","install":"","validate":""}},"status":"open","title":"Tự học: Evaluating and Improving Agentic Applications (DeepLearning.AI)","type":"research","updated_at":"2026-11-20T19:45:00+07:00"}
+{
+  "assignee": "muse-1",
+  "branch": "feature/132-evaluating-and-improving-agentic-applications-deeplearning-ai",
+  "checklist": [
+    "Học khóa Evaluating and Improving Agentic Applications (DeepLearning.AI) — chỉ nội dung FREE, không đăng ký chứng chỉ trả phí, không chạy lab/API tốn phí, không tạo tài khoản trả phí; kiểm chứng FREE trước khi học như task 128/130",
+    "Ghi báo cáo vào research/ (điều học được, áp dụng được ngay cho việc chung — nối tiếp task 127/128/130: khép trục bộ nhớ bằng đánh giá chất lượng — nhớ sai/quên sai thì đo bằng gì; và bảo mật bộ nhớ nếu khóa có nhắc: mục nhớ độc hại, prompt injection ghi vào core memory, rò rỉ chéo người dùng)",
+    "Đề xuất cập nhật skill nếu có gì dùng được, push branch, cập nhật task sang review"
+  ],
+  "created_at": "2026-11-20T19:45:00+07:00",
+  "created_by": "muse-main",
+  "id": "132-tu-hoc-evaluating-and-improving-agentic-applications-deeplearning-ai",
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Ú xong task 130 (LLMs as Operating Systems), board không còn task mở cho Ú — giao khóa do chính báo cáo 130 gợi ý (mục Khóa tiếp theo): Evaluating and Improving Agentic Applications (DeepLearning.AI) — mảng còn trống sau ba khóa bộ nhớ (127 framework, 128 hạ tầng, 130 quản lý context): đánh giá chất lượng bộ nhớ (đo được thì mới biết bộ nhớ đang giúp hay đang hại) và bảo mật bộ nhớ. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
+  "preferred_assignee": "muse-1",
+  "priority": "low",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "feature/132-evaluating-and-improving-agentic-applications-deeplearning-ai",
+    "notes": "",
+    "review": {
+      "at": "",
+      "by": "",
+      "note": "",
+      "rounds": 0,
+      "score": ""
+    },
+    "test": {
+      "device_test": "",
+      "install": "",
+      "validate": ""
+    }
+  },
+  "status": "claimed",
+  "title": "Tự học: Evaluating and Improving Agentic Applications (DeepLearning.AI)",
+  "type": "research",
+  "updated_at": "2026-11-20T19:45:00+07:00",
+  "claimed_at": "2026-11-20T19:55:19+07:00",
+  "claim_expires_at": "2026-11-20T21:55:19+07:00"
+}
