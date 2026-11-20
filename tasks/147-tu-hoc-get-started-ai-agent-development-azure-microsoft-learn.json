@@ -17,14 +17,14 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/147-tu-hoc-get-started-ai-agent-development-azure-microsoft-learn",
-    "notes": "",
+    "notes": "Đã học xong khóa Get started with AI agent development on Azure (Microsoft Learn, #10 trong 32 khóa; nay đổi tên thành Develop AI agents on Azure, AI-3026, 9 module): Foundry Agent Service (3 loại agent prompt/voice/hosted + Responses API), Toolbox/MCP, Foundry IQ + Web IQ (RAG/citation), publish M365 + A2A, Foundry Workflows, Agent Framework SDK, 5 pattern orchestration (sequential/concurrent/handoff/group chat/Magentic, 1.0). Chỉ học lý thuyết FREE, chưa tạo agent thật (chưa có subscription Azure), chưa làm quiz (cần đăng nhập Microsoft, bỏ qua theo §9). Báo cáo research/147-get-started-ai-agent-development-azure-microsoft-learn.md.",
     "test": {
       "device_test": "",
       "install": "",
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: Get started with AI agent development on Azure (Microsoft Learn)",
   "type": "research",
   "updated_at": "2026-11-20T23:47:00+07:00",
