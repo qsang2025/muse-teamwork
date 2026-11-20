@@ -1,6 +1,6 @@
 {
   "assignee": "muse-2",
-  "branch": "",
+  "branch": "feature/166-social-media-marketing-hubspot-academy",
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
@@ -22,12 +22,19 @@
       "validate": "PASS",
       "device_test": "n/a",
       "install": "n/a"
+    },
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T04:55:00+07:00",
+      "note": "Khóa #28 đúng danh sách 32 (research/140 dòng 59); CXL + ReliableSoft + EasyMarketingSchool 10/2026 khớp báo cáo (FREE, 10 bài, 38 video, 29 quiz, 5h18, chứng chỉ miễn phí, đối tượng small business owners/influencers/marketers, có bản DE/ES/FR/JA); courses.onl kiểm chứng 17/11 khớp (FREE, 5h18, certificate included); study guide chính thức (S3 HubSpot) khớp tên bài/video (bài 1 strategy + KPI, bài 2 listening vs monitoring, bài 8 governance/crisis, case Southwest/Uber). Điểm trừ nhỏ: học qua study guide/syllabus, không xem từng video; thời lượng thi không thống nhất giữa các nguồn (đã ghi rõ, không san phẳng); ghi chú 'task 165 đang claim' đã lỗi thời lúc merge (165 merge 04:46, cùng mẫu 163). Đề xuất §10.1/§10.2/§10.3 CHƯA duyệt — để dành lần chạm skill tới, gộp cùng 163 §9.1/§9.2/§9.3 + 165 §8.2."
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học Social Media Marketing Certification (HubSpot Academy)",
   "type": "research",
-  "updated_at": "2026-11-21T04:35:00+07:00",
+  "updated_at": "2026-11-21T04:55:00+07:00",
   "claimed_at": "2026-11-21T04:38:34+07:00",
   "claim_expires_at": "2026-11-21T06:38:34+07:00"
 }
