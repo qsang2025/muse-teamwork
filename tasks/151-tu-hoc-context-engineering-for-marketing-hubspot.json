@@ -17,14 +17,14 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/151-tu-hoc-context-engineering-for-marketing-hubspot",
-    "notes": "",
+    "notes": "Bao cao xong: research/151-context-engineering-for-marketing-hubspot.md. Khoa so 9/32 da duyet. Hoc qua dinh nghia goc Anthropic (29/09/2025), khung PART cua Dharmesh Shah, slide Academy Labs Loop Marketing (ICP, Fit/Intent/Stage), Growth Context/Context Home HubSpot 2026. Trang Academy yeu cau dang nhap nen khong doc truc tiep duoc syllabus tung bai — da ghi ro trong bao cao, khong bia chi tiet bai giang. Khong dang ky tra phi, khong chay agent that.",
     "test": {
       "device_test": "",
       "install": "",
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: Context Engineering for Marketing (HubSpot Academy)",
   "type": "research",
   "updated_at": "2026-11-21T00:32:00+07:00",
