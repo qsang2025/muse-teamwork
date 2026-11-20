@@ -1,6 +1,6 @@
 {
   "assignee": "muse-1",
-  "branch": "",
+  "branch": "feature/167-graphic-design-basics-canva-design-school",
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
@@ -16,14 +16,18 @@
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
-    "branch": "",
-    "notes": "",
-    "test": {}
+    "branch": "feature/167-graphic-design-basics-canva-design-school",
+    "notes": "Bao cao research/167-graphic-design-basics-canva-design-school.md (12 bai/44 phut): hierarchy/contrast/alignment/typography/color/image/export; doi chieu 163/165/166/160/158/159-162; checklist 5 diem thumbnail/anh bia; trang khoa chinh thuc 404, hoc qua syllabus + Canva Learn chinh thuc, ghi ro 3 lop nguon.",
+    "test": {
+      "validate": "PASS",
+      "device_test": "n/a",
+      "install": "n/a"
+    }
   },
-  "status": "doing",
+  "status": "review",
   "title": "Tự học Graphic Design Basics (Canva Design School)",
   "type": "research",
-  "updated_at": "2026-11-21T04:58:39+07:00",
+  "updated_at": "2026-11-21T04:58:54+07:00",
   "claimed_at": "2026-11-21T04:55:31+07:00",
   "claim_expires_at": "2026-11-21T06:56:16+07:00"
 }
