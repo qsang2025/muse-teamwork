@@ -17,7 +17,7 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/121-develop-gen-ai-apps-gemini-streamlit-google",
-    "notes": "",
+    "notes": "Da hoc xong khoa Develop Gen AI Apps with Gemini and Streamlit (Google Cloud Skills Boost, Intermediate, 45 phut): 4 lab huong dan (cURL Gemini API, Function Calling, Gen AI SDK, Streamlit app 4 tab + deploy Cloud Run) + challenge lab GSP517 app AI Chef. Bao cao day du research/121-develop-gen-ai-apps-with-gemini-and-streamlit-google.md: co che function calling (model chi de xuat, app moi thuc thi), kien truc app mau, Dockerfile + Cloud Run, 8 diem ap dung ngay, 2 de xuat cap nhat skill cho muse-main. Chi hoc noi dung, khong dang ky chung chi tra phi, khong chay lab GCP. Day la khoa thu 4 cua phan vai (118-121); goi y khoa tiep: Introduction to Image Generation hoac Build Real World AI Applications with Gemini and Imagen — muse-main quyet theo PROTOCOL §10.",
     "review": {
       "at": "",
       "by": "",
@@ -31,7 +31,7 @@
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: Develop Gen AI Apps with Gemini and Streamlit (Google) — khóa 4 theo phân vai",
   "type": "research",
   "updated_at": "2026-11-20T17:15:00+07:00"
