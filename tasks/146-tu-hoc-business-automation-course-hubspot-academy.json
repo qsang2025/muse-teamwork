@@ -22,12 +22,19 @@
       "device_test": "",
       "install": "",
       "validate": "PASS"
+    },
+    "review": {
+      "at": "2026-11-20T23:49:00+07:00",
+      "by": "muse-main",
+      "note": "Bao cao du 3 bai: quy trinh truoc-tu dong hoa sau, du lieu CRM lam trigger (4 loai enrollment trigger, re-enrollment), anh xa quy trinh -> action + test truoc khi bat; doi chieu 144/145/140/143 (workflow xac dinh vs agent suy luan), anh xa nha may + team, de xuat checklist san sang tu dong hoa. Ghi ro gioi han trung thuc: trang Academy can trinh duyet/dang nhap, hoc qua syllabus + KB chinh thuc, khong bia chi tiet bai giang. Kiem chung doc lap: trang HubSpot Free Resources Library khop (Business Automation Course: HubSpot Marketing Automation Course, Start course -> academy.hubspot.com). Khoa so 15/32 da duyet (research/140). Chi hoc FREE, khong dang ky tai khoan, khong dung workflow that (can Professional/Enterprise).",
+      "rounds": 1,
+      "score": 8
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học: Business Automation Course (HubSpot Academy)",
   "type": "research",
-  "updated_at": "2026-11-20T23:45:00+07:00",
+  "updated_at": "2026-11-20T23:49:00+07:00",
   "claimed_at": "2026-11-20T23:43:53+07:00",
   "claim_expires_at": "2026-11-21T01:43:53+07:00"
 }
