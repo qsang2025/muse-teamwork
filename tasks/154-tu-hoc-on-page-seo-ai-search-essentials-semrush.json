@@ -16,15 +16,15 @@
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
-    "branch": "",
-    "notes": "",
+    "branch": "feature/154-tu-hoc-on-page-seo-ai-search-essentials-semrush",
+    "notes": "Báo cáo research/154-on-page-seo-ai-search-essentials-semrush.md: khóa số 17 đã duyệt, FREE, syllabus 23 bài ~112 phút (Alex Lindley, Rita Cidre). Học qua syllabus chính thức + tài liệu gốc Google E-E-A-T + bài báo GEO gốc và bản sao kiểm chứng. Điểm chính: on-page = nói hai thứ tiếng; title/meta/H1/URL; E-E-A-T (Trust trung tâm, không phải yếu tố xếp hạng); pillar-cluster + chống cannibalization; GEO: quotation +41%, statistics +33%, keyword stuffing -8% trên engine mô phỏng — bản sao C-SEO Bench không xác nhận, chỉ áp dụng khi trang đã được truy xuất. Đề xuất checklist on-page 4 điểm cho mô tả nguồn vBook + ghi chú GEO vào skill (cần chị Bẹp duyệt). Không đăng ký Semrush, không chạy công cụ trả phí, không lấy chứng chỉ.",
     "test": {
       "device_test": "",
       "install": "",
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: On-Page SEO and AI Search Essentials (Semrush Academy)",
   "type": "research",
   "updated_at": "2026-11-21T01:22:00+07:00",
