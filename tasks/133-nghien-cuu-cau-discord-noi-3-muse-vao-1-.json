@@ -7,19 +7,19 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "doing",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-20T19:56:59+07:00",
   "claimed_at": "2026-11-20T20:00:15+07:00",
   "claim_expires_at": "2026-11-20T22:10:53+07:00",
   "result": {
-    "branch": "",
+    "branch": "feature/133-discord-bridge",
     "test": {
       "validate": "",
       "device_test": "",
       "install": ""
     },
-    "notes": ""
+    "notes": "Bao cao research/133-discord-bridge.md: danh gia du 7 muc (kien truc cau + long-poll SSH, may chu cau, luat dia chi + chot 8 tin, trang nap token, do tre, so voi GitHub-first, viec Anh phai tu tay lam). Ket luan KHONG NEN build ngay — chua co may chu cau + co che tu thuc chua chung minh tren Muse + nhu cau chua xuat hien; 4 dieu kien mo lai + buoc tiep theo cu the. Kiem chung: quyen 68672 giai ma dung, MESSAGE CONTENT INTENT duoi nguong 10k users chi can toggle (tu 10/06/2026), rate limit Discord du thua, VM client-only khong inbound (092/099). Chi nghien cuu, khong build/bot/token."
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
