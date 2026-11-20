@@ -15,7 +15,7 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/132-evaluating-and-improving-agentic-applications-deeplearning-ai",
-    "notes": "",
+    "notes": "Bao cao research/132-evaluating-and-improving-agentic-applications-deeplearning-ai.md: traces + error analysis + benchmark Northwind, 3 lop evaluator (code/LLM judge/human) + hieu chuan bang precision/recall/Cohen kappa, danh gia trajectory + ket qua he dich, cai tien theo eval + regression; khep truc bo nho 127/128/130 bang do chat luong bo nho (ghi-tim lai-dung, 4 bai kiem tra, precision/recall) va bao mat bo nho (memory poisoning, OWASP ASI06, ro ri cheo); kiem chung FREE: freemium (video free, lab/quiz/cert can Pro 25/30 USD), khong dang ky Pro/khong chay lab/API; de xuat 3 muc skill. Task research, khong ap dung validate/device test/install.",
     "review": {
       "at": "",
       "by": "",
@@ -29,7 +29,7 @@
       "validate": ""
     }
   },
-  "status": "doing",
+  "status": "review",
   "title": "Tự học: Evaluating and Improving Agentic Applications (DeepLearning.AI)",
   "type": "research",
   "updated_at": "2026-11-20T19:45:00+07:00",
