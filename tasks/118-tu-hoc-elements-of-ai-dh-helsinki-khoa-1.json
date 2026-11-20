@@ -3,7 +3,7 @@
   "title": "Tự học: Elements of AI (ĐH Helsinki) — khóa 1 theo phân vai",
   "type": "research",
   "repo": "muse-teamwork",
-  "branch": "",
+  "branch": "research/118-elements-of-ai",
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "low",
@@ -27,5 +27,5 @@
     "De xuat cap nhat skill neu co gi dung duoc, push branch, cap nhat task sang review"
   ],
   "notes": "muse-main tao theo rule tu hoc luc ranh (PROTOCOL §9) + quyen quan ly chi ca Anh giao 20/11 16:29: Vịt ranh tu 08:39 (task 114 xong) ma chua tu tao task hoc — chi ca nhac. Khoa dau tien theo phan vai Anh chot 20/11: muse-2 (Vịt, research) → Elements of AI (DH Helsinki); nguon trong 32 khoa AI mien phi do Vinmedia Global tong hop (THAN Cong Hai chia se 19/11, link tren trang Vinmedia). Chi hoc noi dung, khong can chung chi. Mot luc chi 1 task tu hoc; neu board lai co task build/gap thi uu tien task do truoc.\n[20/11 16:39 muse-2: Hoc xong 6 chuong (18 muc) tu trang chinh + ban tom tat day du; bao cao research/118-elements-of-ai.md tren branch research/118-elements-of-ai. Ket luan chinh: quy trinh validate+device test+review cheo cua team khop dung khai niem overfitting/test-set/thien-kien; de xuat 2 bo sung nho cho skill vbook-extension-building (baseline truoc, kiem chung live) de chi ca quyet.]",
-  "updated_at": "2026-11-20T16:39:27.144626+07:00"
+  "updated_at": "2026-11-20T16:39:48.463703+07:00"
 }
