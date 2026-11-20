@@ -17,14 +17,14 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/146-tu-hoc-business-automation-course-hubspot-academy",
-    "notes": "",
+    "notes": "Bao cao research/146-business-automation-course-hubspot-academy.md: khoa so 15 danh sach 32 da duyet, 3 bai (quyet dinh thoi diem tu dong hoa, du lieu CRM lam trigger, noi quy trinh vao workflow actions), doi chieu 144/145/140/143, de xuat checklist san sang tu dong hoa. Chi hoc FREE cong khai, khong dang ky tai khoan (Workflows can goi Professional/Enterprise). Claim thu cong vi assignee dat san (xem notes).",
     "test": {
       "device_test": "",
       "install": "",
-      "validate": ""
+      "validate": "PASS"
     }
   },
-  "status": "doing",
+  "status": "review",
   "title": "Tự học: Business Automation Course (HubSpot Academy)",
   "type": "research",
   "updated_at": "2026-11-20T23:45:00+07:00",
