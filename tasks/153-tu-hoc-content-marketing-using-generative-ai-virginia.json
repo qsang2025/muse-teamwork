@@ -1,5 +1,5 @@
 {
-  "assignee": "",
+  "assignee": "muse-1",
   "branch": "",
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
@@ -24,8 +24,10 @@
       "validate": ""
     }
   },
-  "status": "open",
+  "status": "claimed",
   "title": "Tự học: Content Marketing Using Generative AI (Đại học Virginia)",
   "type": "research",
-  "updated_at": "2026-11-21T01:03:00+07:00"
+  "updated_at": "2026-11-21T01:03:00+07:00",
+  "claimed_at": "2026-11-21T01:09:02+07:00",
+  "claim_expires_at": "2026-11-21T03:09:02+07:00"
 }
