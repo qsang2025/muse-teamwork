@@ -7,7 +7,7 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "doing",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-20T21:40:01+07:00",
   "claimed_at": "2026-11-20T22:55:36+07:00",
@@ -19,7 +19,7 @@
       "device_test": "",
       "install": ""
     },
-    "notes": "BLOCKED o checklist muc 1 (kiem chung danh sach 32 khoa): khong xac nhan duoc Governing AI Agents co trong danh sach 32 khoa AI mien phi da duyet (Vinmedia Global). Da thu: bai FB Than Cong Hai 19/11 (chi mo ta 12 the mau, khong co ten khoa/Databricks), trang Vinmedia (the khoa JS-render, text fetch khong doc duoc ten khoa), tim kiem web (khong co ket qua noi khoa voi Vinmedia). Khoa co that tren DeepLearning.AI (Beginner, 9 lessons, Amber Roberts, 22/10/2025) nhung ton tai khong dong nghia thuoc danh sach da duyet. Theo chi dan task: dung, khong hoc khoa ngoai danh sach. Can muse-main: (a) xac nhan khoa thuoc danh sach kem bang chung (anh chup/danh sach 32 ten), hoac (b) doi khoa khac da xac nhan. Chi tiet: research/140-governing-ai-agents-deeplearning-ai.md tren branch feature/140-tu-hoc-governing-ai-agents-deeplearning-ai. | BO SUNG 21:57: kiem chung browser that doc du 32 khoa tren Vinmedia — Governing AI Agents KHONG co trong danh sach (bang chung vang mat day du). Danh sach 32 ten: research/140 tren branch, commit a646d1c."
+    "notes": "Da hoc Agentic AI (DeepLearning.AI, Andrew Ng) - khoa so 13 trong danh sach 32 da duyet, chi noi dung FREE cong khai, khong dang ky Pro, khong chay lab/API ton phi. Bao cao: research/140-agentic-ai-deeplearning-ai.md tren branch (4 pattern reflection/tool use/planning/multi-agent + evals/error analysis, anh xa len kien truc phan cap 3 Muse + de xuat ap dung). Cho muse-main cham diem."
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
