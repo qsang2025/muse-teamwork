@@ -34,6 +34,14 @@
 #     task roi "claimed" thi dat lai. Kiem tra ca khi SHA khong doi, tren
 #     snapshot da luu — vi task ket thi SHA khong doi la dung truong hop
 #     can bat. Thoi gian claim giu 2h (khong giam xuong 1h).
+#     VA 21/11 (sua bao nham lan 6-8): worker cap nhat status tren branch
+#     (doing/review) truoc khi dong bo len main, nen main van ghi claimed
+#     trong luc worker da lam xong. Truoc khi ket luan ket, kiem tra commit
+#     tren branch cua worker (branch trong task file, repo dich): neu co
+#     commit sau claimed_at thi worker da bat dau — KHONG bao. Chi bao khi
+#     khong co commit nao sau claimed_at, hoac khong kiem chung duoc branch
+#     (khong co branch, fetch loi, repo la — fail-safe, giu hanh vi cu).
+#     Task "doing" ket that van bi thu hoi o luot sweep 2h (sweep-expired.sh).
 # Lan chay dau (chua co state): ghi baseline, silent, khong danh thuc
 # (tru watchdog: task claimed qua 30 phut van bao, vi do la ket that).
 # Fetch loi: log + silent (khong ket luan duoc thi im lang).
@@ -157,6 +165,8 @@ if mode == "full":
             "claimed_at": str(t.get("claimed_at", "") or ""),
             "updated_at": str(t.get("updated_at", "") or ""),
             "file": path,
+            "branch": str(t.get("branch", "") or (t.get("result") or {}).get("branch", "") or ""),
+            "repo": str(t.get("repo", "") or "muse-teamwork"),
         }
 else:
     # SHA khong doi: khong co du lieu moi, dung snapshot da luu de chay
@@ -188,6 +198,53 @@ if mode == "full" and old:
         elif new_status == "cancelled" and mine(cur):
             wakes.append({"task": tid, "why": "cancelled", "from": old_status, "to": new_status})
 
+def resolve_branch_repo(cur):
+    """(branch, repo) cua task; state cu chua luu branch thi doc lai file
+    task tren origin/main (ref local, khong can mang)."""
+    branch = cur.get("branch", "") or ""
+    repo = cur.get("repo", "") or "muse-teamwork"
+    if branch:
+        return branch, repo
+    raw = git("show", f"origin/main:{cur.get('file', '')}") if cur.get("file") else ""
+    try:
+        t = json.loads(raw) if raw else {}
+    except Exception:
+        t = {}
+    if isinstance(t, dict):
+        branch = str(t.get("branch", "") or (t.get("result") or {}).get("branch", "") or "")
+        repo = str(t.get("repo", "") or "muse-teamwork")
+    return branch, repo
+
+CLONES = {"muse-teamwork": repo,
+          "Qsang_vbook": os.path.expanduser("~/workspace/vbook/Qsang_vbook")}
+
+def branch_has_progress(task_repo, branch, claimed_dt):
+    """True: branch co commit sau claimed_at (worker da bat dau lam).
+    False: khong co commit nao sau claimed_at.
+    None: khong kiem chung duoc (khong co branch, fetch loi, repo la) —
+    goi ham tra ve None thi giu hanh vi cu (bao)."""
+    if not branch or claimed_dt is None:
+        return None
+    clone = CLONES.get(task_repo or "muse-teamwork")
+    if not clone or not os.path.isdir(os.path.join(clone, ".git")):
+        return None
+    try:
+        r = subprocess.run(["git", "-C", clone, "fetch", "origin",
+                            f"+{branch}:refs/remotes/origin/{branch}"],
+                           capture_output=True, text=True, timeout=30)
+        if r.returncode != 0:
+            return None
+        epoch = int(claimed_dt.timestamp())
+        r = subprocess.run(["git", "-C", clone, "log",
+                            f"--since=@{epoch}", "--format=%H",
+                            f"origin/{branch}"],
+                           capture_output=True, text=True, timeout=30)
+        if r.returncode != 0:
+            return None
+        return bool(r.stdout.strip())
+    except Exception:
+        return None
+
 # --- Watchdog: task "claimed" qua 30 phut khong commit/heartbeat moi ---
 # Chi ap dung status "claimed": worker chua co commit dau tien (quy tac
 # PROTOCOL §2: phai commit tien do trong 15 phut dau sau claim). Task
@@ -209,6 +266,13 @@ for tid, cur in snap.items():
     # moi (claimed_at doi) hoac task roi "claimed" thi tu dat lai.
     if alerted.get(tid) == claimed_at:
         new_alerted[tid] = claimed_at
+        continue
+    # VA 21/11: kiem tra commit tren branch truoc khi ket luan ket —
+    # worker cap nhat status tren branch truoc khi dong bo len main.
+    # Co commit sau claimed_at => worker da bat dau, khong bao.
+    # None (khong kiem chung duoc) => giu hanh vi cu: bao.
+    branch, task_repo = resolve_branch_repo(cur)
+    if branch_has_progress(task_repo, branch, claimed):
         continue
     if agent != "muse-main" and cur.get("assignee") != agent:
         continue
