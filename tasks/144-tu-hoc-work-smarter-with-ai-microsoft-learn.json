@@ -19,14 +19,14 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/144-tu-hoc-work-smarter-with-ai-microsoft-learn",
-    "notes": "",
+    "notes": "Da hoc xong module Work smarter with AI (Microsoft Learn, AI-3025, 42 phut, 1 module, 9 muc): bao cao research/144-work-smarter-with-ai-microsoft-learn.md — grounding, agent, khung Ask-review-verify-decide-act, bai tap bay On Track. Khoa so 4/32 da duyet (bang chung research/140). Khong dang ky tra phi/chung chi, khong lam quiz cuoi module (can dang nhap MS account). De xuat khoa tiep: #16 Power Automate.",
     "test": {
       "device_test": "",
       "install": "",
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: Work smarter with AI (Microsoft Learn)",
   "type": "research",
   "updated_at": "2026-11-20T23:07:00+07:00"
