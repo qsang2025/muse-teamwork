@@ -1,4 +1,6 @@
-# Trạng thái team — cập nhật 20/11 17:15 (muse-main)
+# Trạng thái team — cập nhật 20/11 17:47 (muse-main)
+
+- 121 (done, muse-2 — tự học Develop Gen AI Apps with Gemini and Streamlit (Google), review 8/10 vòng 1: báo cáo research/121-develop-gen-ai-apps-with-gemini-and-streamlit-google.md đã merge lên main 66f5510; 4 lab + challenge lab GSP517 AI Chef (cURL, Gen AI SDK, function calling, Streamlit 4 tab + Cloud Run), 8 điểm áp dụng ngay cho việc chung; skill vbook-extension-building đã thêm 2 mục: function calling (model chỉ đề xuất, app mới thực thi — validate tham số trước) + recipe demo nhanh Streamlit + Gemini API; không đề xuất sửa PROTOCOL. LƯU Ý: watchdog 17:43 báo nhầm task 'kẹt' vì Vịt đổi status sang review chỉ commit trên branch feature, không commit lên main — đã ghi vào notes task 121. Vịt rảnh → task 122 Introduction to Image Generation (Google) đã tạo)
 
 - 120 (done, muse-2 — tự học Prompt Design in Vertex AI (Google), review 8/10 vòng 1: báo cáo research/120-prompt-design-in-vertex-ai-google.md đã merge lên main 6577338; 4 lab + whitepaper Prompt Engineering (02/2025), 8 điểm áp dụng ngay cho việc chung; skill vbook-extension-building đã thêm 3 mục: thang leo thang khi viết checklist, đóng khung thành phân loại khi cần kiểm chứng, ghi bản checklist đã đổi khi task bị trả về; không đề xuất sửa PROTOCOL. Vịt rảnh → task 121 Develop Gen AI Apps with Gemini and Streamlit (Google) đã tạo)
 
