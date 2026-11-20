@@ -1,6 +1,6 @@
-# Cheat-sheet: Attention → Transformer → BERT (1 trang)
+# Cheat-sheet: Attention → Transformer → BERT → Encoder–Decoder
 
-Dùng lại cho mọi khóa sau trong vòng tự học — viết trong task 134 theo đề xuất của báo cáo 131 §9. Nguồn chi tiết: `research/131-attention-mechanism-google.md` (§3, §7, §8.2) và `research/134-transformer-models-and-bert-model-google.md` (§2, §3, §5).
+Dùng lại cho mọi khóa sau trong vòng tự học — viết trong task 134 theo đề xuất của báo cáo 131 §9, bổ sung §8 trong task 136. Nguồn chi tiết: `research/131-attention-mechanism-google.md` (§3, §7, §8.2), `research/134-transformer-models-and-bert-model-google.md` (§2, §3, §5) và `research/136-encoder-decoder-architecture-google.md` (§1–§5).
 
 ## 1. Công thức gốc — self-attention
 
@@ -57,3 +57,14 @@ Self-attention đắt theo n² nhưng song song được và đường đi O(1).
 
 1. **Đặt thông tin quan trọng ở đầu/cuối, không chôn ở giữa** ("lost in the middle") — đặc biệt khi prompt dài hoặc RAG đưa nhiều chunk vào context.
 2. **Ngắn và một ý thì attention tập trung hơn** — prompt càng dài, trọng số softmax càng bị pha loãng trên nhiều token; một nhiệm vụ một lần.
+
+## 8. Encoder–decoder (khóa 136) — khung chung của cả 3 họ
+
+- **Khung seq2seq (Sutskever et al., 2014):** encoder nén chuỗi nguồn thành vector `c`, decoder sinh chuỗi đích từ `c`: `P(y|x) = Π P(y_t | y_<t, c)`. Ensemble 5 LSTM: BLEU 34.8 En–Fr (WMT'14), vượt SMT 33.3; đảo ngược câu nguồn: perplexity 5.8 → 4.7, BLEU 25.9 → 30.6.
+- **Cổ chai + Bahdanau (2015):** một vector cố định không chứa nổi câu dài → giữ một annotation `h_j` cho mỗi từ nguồn, mỗi bước sinh tính context riêng `c_i = Σ_j α_ij·h_j`, với `α_ij = softmax(a(s_{i-1}, h_j))`. RNNsearch-30: BLEU 34.16 vs encoder–decoder cố định 13.93; không sụt trên câu ≥ 50 từ. Đây là attention đầu tiên trong NLP; cross-attention của Transformer chính là bước này.
+- **Train/sinh:** train bằng **teacher forcing** (cho từ thật làm đầu vào bước sau); sinh bằng greedy hoặc **beam search** (giữ B giả thuyết tốt nhất, seq2seq dùng B=12). Lệch train/sinh gây **exposure bias** (lỗi tích lũy) — giảm bằng scheduled sampling.
+- **T5 (Raffel et al., 2019):** mọi task = text→text + tiền tố task (`"summarize: ..."`, `"translate English to German: ..."`); pre-train **span corruption** (mask đoạn ~3 token); dữ liệu **C4** ~750 GB; 5 cỡ 60M/220M/770M/3B/11B. T5-11B: GLUE 90.3, **SuperGLUE 88.9** (người: 89.8), SQuAD EM 91.26, CNN/DM ROUGE-2 21.55. BART: cùng họ, pre-train bằng làm nhiễu văn bản rồi khôi phục.
+- **Quy tắc chọn nhanh:** hiểu → encoder (BERT); sinh → decoder (Gemini/GPT); biến đổi chuỗi→chuỗi / input-output khác dạng → encoder–decoder (T5). Cần đầu ra đúng khuôn, lặp lại hàng loạt: fine-tune T5-small/base rẻ và ổn định hơn prompt model lớn.
+- **Lưu ý khi nhắc tới:** ghi rõ là họ kiến trúc hay model cụ thể (T5/BART/Transformer 2017); "context vector" là cố định (2014) hay động theo từng bước (Bahdanau trở đi).
+
+Nguồn chi tiết: `research/136-encoder-decoder-architecture-google.md`.
