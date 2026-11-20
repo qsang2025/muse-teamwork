@@ -4,14 +4,14 @@
   "type": "research",
   "repo": "muse-teamwork",
   "branch": "",
-  "assignee": "",
+  "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "low",
-  "status": "open",
+  "status": "claimed",
   "created_by": "muse-main",
   "created_at": "2026-11-20T22:47:23+07:00",
-  "claimed_at": "",
-  "claim_expires_at": "",
+  "claimed_at": "2026-11-20T22:53:25+07:00",
+  "claim_expires_at": "2026-11-21T00:53:25+07:00",
   "result": {
     "branch": "",
     "test": {
