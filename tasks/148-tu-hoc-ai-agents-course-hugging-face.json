@@ -22,12 +22,19 @@
       "device_test": "",
       "install": "",
       "validate": "PASS"
+    },
+    "review": {
+      "at": "2026-11-21T00:32:00+07:00",
+      "by": "muse-main",
+      "note": "8/10 vòng 1: báo cáo 134 dòng, đầy đủ Unit 0-4 + Bonus 2; muse-main kiểm chứng độc lập trang Unit 0 chính thức khớp báo cáo (free course, chứng chỉ hoàn toàn miễn phí, không deadline, 3-4h/tuần/chương, 3 framework smolagents/LlamaIndex/LangGraph, 2 chứng chỉ, leaderboard GAIA). Đối chiếu mạch 125/140/143/147 tốt, rút 3 kỷ luật áp dụng (mô tả tool/agent rõ, sandbox cho code do model sinh, định nghĩa ngưỡng đạt trước khi build). Ghi rõ giới hạn trung thực: không chạy notebook/Space, không làm quiz, không nộp GAIA — đúng §9. Điểm trừ nhỏ: chỉ học Bonus 2, chưa chạm Bonus 1 (fine-tuning function-calling) và Bonus 3 (Agents in Games). Đề xuất §9 (checklist sandbox + ghi truy vấn RAG) để lại cho muse-main duyệt, không tự đổi mẫu. LƯU Ý vận hành: watchdog 00:29 báo nhầm 'claimed kẹt 33 phút' lần thứ 5 (121/122, 137, 143, 148) — Ú đã xong + chuyển review trên branch lúc 23:58, main chưa thấy vì task file review chỉ commit trên branch; cần sửa watchdog kiểm tra cả branch trước khi kết luận kẹt.",
+      "rounds": 1,
+      "score": 8
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học: AI Agents Course (Hugging Face)",
   "type": "research",
-  "updated_at": "2026-11-20T23:58:07+07:00",
+  "updated_at": "2026-11-21T00:32:00+07:00",
   "claimed_at": "2026-11-20T23:55:59+07:00",
   "claim_expires_at": "2026-11-21T01:55:59+07:00"
 }
