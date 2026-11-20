@@ -7,7 +7,7 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "review",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-21T05:07:45+07:00",
   "claimed_at": "2026-11-21T05:09:03+07:00",
@@ -19,7 +19,14 @@
       "device_test": "n/a",
       "install": "n/a"
     },
-    "notes": "Bao cao research/169-customer-analytics-wharton-upenn.md (5 module, ~10-11 gio): thang mo ta-du doan-ke don, nhan qua/tuong quan, phan khuc/CLV o tang khai niem (RFM tuan 3 theo Bridged), doi chieu 167/168/154-156/159-162/163/165/166/158; checklist ke don 5 ve; chi hoc FREE cong khai qua syllabus, khong ghi danh/quiz/chung chi/tracking."
+    "notes": "Bao cao research/169-customer-analytics-wharton-upenn.md (5 module, ~10-11 gio): thang mo ta-du doan-ke don, nhan qua/tuong quan, phan khuc/CLV o tang khai niem (RFM tuan 3 theo Bridged), doi chieu 167/168/154-156/159-162/163/165/166/158; checklist ke don 5 ve; chi hoc FREE cong khai qua syllabus, khong ghi danh/quiz/chung chi/tracking.",
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T05:16:00+07:00",
+      "note": "muse-main kiem chung doc lap: khoa #31 dung danh sach 32 (research/140 dong 62); Coursera + Class Central khop bao cao (5 module, 3 tang descriptive/predictive/prescriptive, 4 giang vien Bradlow/Fader/Iyengar/Berman, case Amazon/Google/Starbucks, tuyen bo 'nhap mon ly thuyet, khong nham dao tao thuc hanh'); cac file doi chieu 154-167 deu co tren main; task 168 dung dang claimed boi muse-2. Diem tru nho: hoc qua syllabus, khong xem video; so 314.556 hoc vien/11.994 danh gia/4,58 chua doi chieu doc lap. De xuat §8 (thang ba tang, phan khuc ngon ngu, ghi ky vong truoc, checklist ke don 5 ve) CHUA duyet — de danh lan cham skill toi, gop cung 163 §9.1/§9.2/§9.3 + 165 §8.2 + 166 §10.1/§10.2/§10.3 + 167 §9.1."
+    }
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
@@ -28,6 +35,6 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
-  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 167 merge xong, không còn task mở). Khóa Customer Analytics — Wharton, UPenn — khóa số 31 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main (dòng 61) — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch đo lường sau 167 (thiết kế: thumbnail/ảnh bìa cần đo hiệu quả) + 168 (GA4 đang học: đo hành vi thật trên web) + 154/155/156 (SEO: đo organic traffic) + 159/161/162 (quảng cáo: attribution, đo hiệu quả chiến dịch) — đối chiếu với Content Marketing của 163 (đo lường mục tiêu-trước-chỉ-số-sau), Inbound 165 (đo hành trình khách hàng), Social 166 (đo ROI social, leading indicator) và AEO 158 (đo trích dẫn AI): chỗ nào Customer Analytics bổ sung (phân tích khách hàng: phân khúc, giá trị vòng đời, dự đoán hành vi), chỗ nào trùng với GA4/SEO, và áp dụng cho đo lường mô tả nguồn vBook / bài viết team ra sao. Delegation: giao Ú học + viết báo cáo; muse-main giữ review + merge; Anh giữ quyết định có dùng công cụ phân tích khách hàng thật / gắn tracking vào site nào hay không. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy chiến dịch quảng cáo thật, không nạp tiền, không gắn tracking thật vào site nào. Báo cáo viết vào research/169-customer-analytics-wharton-upenn.md, review muse-main chấm /10 như task research khác. [05:09 muse-1: Đã claim, đang học qua syllabus Wharton/Coursera, đối chiếu 167/168/154-156/159-162/163/165/166/158] [21/11 05:13 muse-1: Đã nộp review; đồng bộ branch cấp ngoài + sửa test n/a theo mẫu research, chờ muse-main chấm.]",
-  "updated_at": "2026-11-21T05:13:35+07:00"
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 167 merge xong, không còn task mở). Khóa Customer Analytics — Wharton, UPenn — khóa số 31 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main (dòng 61) — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch đo lường sau 167 (thiết kế: thumbnail/ảnh bìa cần đo hiệu quả) + 168 (GA4 đang học: đo hành vi thật trên web) + 154/155/156 (SEO: đo organic traffic) + 159/161/162 (quảng cáo: attribution, đo hiệu quả chiến dịch) — đối chiếu với Content Marketing của 163 (đo lường mục tiêu-trước-chỉ-số-sau), Inbound 165 (đo hành trình khách hàng), Social 166 (đo ROI social, leading indicator) và AEO 158 (đo trích dẫn AI): chỗ nào Customer Analytics bổ sung (phân tích khách hàng: phân khúc, giá trị vòng đời, dự đoán hành vi), chỗ nào trùng với GA4/SEO, và áp dụng cho đo lường mô tả nguồn vBook / bài viết team ra sao. Delegation: giao Ú học + viết báo cáo; muse-main giữ review + merge; Anh giữ quyết định có dùng công cụ phân tích khách hàng thật / gắn tracking vào site nào hay không. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy chiến dịch quảng cáo thật, không nạp tiền, không gắn tracking thật vào site nào. Báo cáo viết vào research/169-customer-analytics-wharton-upenn.md, review muse-main chấm /10 như task research khác. [05:09 muse-1: Đã claim, đang học qua syllabus Wharton/Coursera, đối chiếu 167/168/154-156/159-162/163/165/166/158] [21/11 05:13 muse-1: Đã nộp review; đồng bộ branch cấp ngoài + sửa test n/a theo mẫu research, chờ muse-main chấm.] [21/11 05:16 muse-main: Review 8/10 vòng 1, ĐÃ MERGE lên main (research/169-customer-analytics-wharton-upenn.md, 125 dòng). Ú rảnh → task 170 Get started with Microsoft data analytics (Microsoft Learn) đã tạo — khóa số 32, khóa CUỐI trong danh sách 32 đã duyệt.]",
+  "updated_at": "2026-11-21T05:16:00+07:00"
 }
