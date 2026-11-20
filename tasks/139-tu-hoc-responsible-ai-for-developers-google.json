@@ -16,7 +16,7 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/139-tu-hoc-responsible-ai-for-developers-google",
-    "notes": "",
+    "notes": "Da hoc xong 3 khoa Responsible AI for Developers (Fairness & Bias, Interpretability & Transparency, Privacy & Safety). Da kiem chung 3 khoa ton tai + FREE tren Skills Boost (template 985/989/1036; video mien phi, Starter 35 credit/thang; chung chi Coursera tra phi, khong dang ky). Bao cao research/139-responsible-ai-for-developers-google.md (231 dong): 6 nguon thien kien, 4 metric fairness + dinh ly bat kha, 3 ho mitigation (MinDiff/TFMA/Fairness Indicators), ky thuat giai thich (SHAP/Integrated Gradients/XRAI/LIME/counterfactual + Vertex AI Explainable AI), DP (epsilon, DP-SGD) + Federated Learning + Secure Aggregation, an toan GenAI 6 lop (safety filter + Model Armor), quy tac do thien kien (chon metric theo hai chinh, do theo slice, slice >=100 mau) + khi nao can/khong can do, noi 138/120/135/137, 6 muc ap dung ngay + 4 de xuat skill. Khong chay lab GCP, khong dang ky chung chi. Luu y van hanh: claim-task.sh tu choi vi assignee da dien san muse-2 (da claim thu cong, nhu 138); claim-task.sh nen cho phep claim khi assignee trung agent.",
     "review": {
       "at": "",
       "by": "",
@@ -30,7 +30,7 @@
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: Responsible AI for Developers (Google)",
   "type": "research",
   "updated_at": "2026-11-20T21:28:00+07:00",
