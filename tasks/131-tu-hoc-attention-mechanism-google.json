@@ -9,7 +9,7 @@
   "created_at": "2026-11-20T19:45:00+07:00",
   "created_by": "muse-main",
   "id": "131-tu-hoc-attention-mechanism-google",
-  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Vịt xong task 129 (Vector Search and Embeddings), board không còn task mở cho Vịt — giao khóa tiếp theo trong chương trình 10 khóa Advanced Generative AI for Developers (đã đi qua 122 Image Generation, 124 Captioning, 129 Vector Search trong chương trình này): Attention Mechanism — cơ chế nền của Transformer, nối trực tiếp task 129 (self-attention tạo embedding theo ngữ cảnh). Các khóa còn lại trong chương trình: Encoder-Decoder Architecture, Transformer Models and BERT Model, Introduction to Vertex AI Studio, Responsible AI for Developers (Fairness & Bias, Interpretability & Transparency, Privacy & Safety), Inspect Rich Documents with Gemini Multimodality and Multimodal RAG, MLOps for Generative AI. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.",
+  "notes": "muse-main tạo theo rule tự học lúc rảnh (PROTOCOL §9) + quyền quản lý chị cả Anh giao 20/11 16:29 (§10a): Vịt xong task 129 (Vector Search and Embeddings), board không còn task mở cho Vịt — giao khóa tiếp theo trong chương trình 10 khóa Advanced Generative AI for Developers (đã đi qua 122 Image Generation, 124 Captioning, 129 Vector Search trong chương trình này): Attention Mechanism — cơ chế nền của Transformer, nối trực tiếp task 129 (self-attention tạo embedding theo ngữ cảnh). Các khóa còn lại trong chương trình: Encoder-Decoder Architecture, Transformer Models and BERT Model, Introduction to Vertex AI Studio, Responsible AI for Developers (Fairness & Bias, Interpretability & Transparency, Privacy & Safety), Inspect Rich Documents with Gemini Multimodality and Multimodal RAG, MLOps for Generative AI. Nguồn trong 32 khóa AI miễn phí do Vinmedia Global tổng hợp (Thân Công Hải chia sẻ 19/11, link trên trang Vinmedia). Chỉ học nội dung, không cần chứng chỉ. Một lúc chỉ 1 task tự học; nếu board lại có task build/gấp thì ưu tiên task đó trước.\n\n[20/11 20:15 muse-main: review 8/10 vong 1, da merge research/131-attention-mechanism-google.md len main ac9c7a2; task sang done. Kiem chung doc lap: BLEU + khoa hoc khop nguon goc. De xuat cheat-sheet attention 1 trang (research/CHEAT-SHEET-ATTENTION.md) de lai cho task sau — Vịt viet trong task 134 neu tien. Khoa tiep theo: 134 Transformer Models and BERT Model da tao cho Vịt theo §10(a).]",
   "preferred_assignee": "muse-2",
   "priority": "low",
   "repo": "muse-teamwork",
@@ -17,11 +17,11 @@
     "branch": "feature/131-attention-mechanism-google",
     "notes": "Bao cao research/131-attention-mechanism-google.md: Bahdanau additive attention (co chai vector co dinh) -> self-attention Q/K/V, cong thuc softmax(QK^T/sqrt(d_k))V, multi-head 8 heads, 3 loai attention, bang do phuc tap O(n^2.d)/O(1)/O(1), ket qua goc 28.4 BLEU En-De + 41.8 BLEU En-Fr; noi 129 (self-attention tao embedding theo ngu canh), 122 (cross-attention dua prompt vao diffusion), 124 (attention tron anh+chu khi sinh caption), 127 (attention = retrieval trong model); 2 quy tac prompt rut ra tu co che; tien hoa sau khoa: FlashAttention 2022, MQA/GQA, KV cache, RoPE; de xuat 1 muc cheat-sheet attention cho research chung (muse-main quyet). Khong sua skill vBook. Task research, khong ap dung validate/device test/install.",
     "review": {
-      "at": "",
-      "by": "",
-      "note": "",
-      "rounds": 0,
-      "score": ""
+      "at": "2026-11-20T20:15:00+07:00",
+      "by": "muse-main",
+      "note": "8/10 vong 1: bao cao research/131-attention-mechanism-google.md (248 dong) day du syllabus khoa, cong thuc Bahdanau + scaled dot-product, vi du tinh tay 'the cat sat' (softmax [0.18, 0.73, 0.09] — tu tinh lai dung), bang do phuc tap O(n^2.d)/O(1)/O(1), noi 129 (self-attention tao embedding theo ngu canh), 122 (cross-attention vao diffusion), 124 (attention tron anh+chu), 127 (attention = retrieval trong model); 2 quy tac prompt + khung chan doan loi agent; gioi han ghi ro (§10: chua xem video goc, hoc qua ghi chu Atamel + bai bao goc). muse-main kiem chung doc lap: BLEU 28.4 En-De / 41.8 En-Fr + train 3.5 ngay 8 GPU khop arXiv 1706.03762; khoa co that trong learning path Generative AI (Google blog + ghi chu Atamel phan 2, khoa 7 Attention Mechanism, khoa 8 Transformer + BERT). Khong sua skill vBook; de xuat cheat-sheet 1 trang cho task sau (muse-main quyet). Task research, khong ap dung validate/device test/install.",
+      "rounds": 1,
+      "score": 8
     },
     "test": {
       "device_test": "",
@@ -29,10 +29,10 @@
       "validate": ""
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học: Attention Mechanism (Google)",
   "type": "research",
-  "updated_at": "2026-11-20T20:20:00+07:00",
+  "updated_at": "2026-11-20T20:15:00+07:00",
   "claimed_at": "2026-11-20T20:08:15+07:00",
   "claim_expires_at": "2026-11-20T22:08:15+07:00"
 }
