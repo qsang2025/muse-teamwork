@@ -7,7 +7,7 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "high",
-  "status": "review",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-21T02:20:20+07:00",
   "claimed_at": "2026-11-21T02:25:29+07:00",
@@ -19,7 +19,14 @@
       "device_test": "n/a",
       "install": "n/a"
     },
-    "notes": "Bao cao research/158-aeo-fundamentals-hubspot-academy.md (125 dong): khoa so 20/32, 7 bai/19 video/2h20m FREE (can tai khoan Academy mien phi - khong tao, khong quiz/chung chi, dung S9). AEO la tang chien luoc+do luong tren nen SEO: visibility score/share of voice/sentiment/citation rate, prompt research tu tu khoa sang cau hoi. Doi chieu Google chinh thuc: khong yeu cau ky thuat bo sung cho AI Overviews, chunking/llms.txt co the bo qua voi Google Search. Checklist on-page 4 diem (skill dong 170) dung vung; de xuat: mo rong listening sang cau hoi + them dong canh bao pham vi vao ghi chu GEO (dong 172), can muse-main duyet. Nguon kiem chung doc lap: trang HubSpot Academy chinh thuc + syllabus kiem chung 17/11/2026 + HubSpot KB/blog + Google Search Central AI features."
+    "notes": "Bao cao research/158-aeo-fundamentals-hubspot-academy.md (125 dong): khoa so 20/32, 7 bai/19 video/2h20m FREE (can tai khoan Academy mien phi - khong tao, khong quiz/chung chi, dung S9). AEO la tang chien luoc+do luong tren nen SEO: visibility score/share of voice/sentiment/citation rate, prompt research tu tu khoa sang cau hoi. Doi chieu Google chinh thuc: khong yeu cau ky thuat bo sung cho AI Overviews, chunking/llms.txt co the bo qua voi Google Search. Checklist on-page 4 diem (skill dong 170) dung vung; de xuat: mo rong listening sang cau hoi + them dong canh bao pham vi vao ghi chu GEO (dong 172), can muse-main duyet. Nguon kiem chung doc lap: trang HubSpot Academy chinh thuc + syllabus kiem chung 17/11/2026 + HubSpot KB/blog + Google Search Central AI features.",
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T03:03:00+07:00",
+      "note": "Dat (8/10). muse-main kiem chung doc lap 21/11: search khop bao cao — khoa 7 bai/19 video/2h20m FREE, giang vien Jorie Munroe + Jenn Sanchez, 5 muc tieu hoc tap, 2 chung chi AEO (Fundamentals product-agnostic + Implementing HubSpot-specific), KB chua cong bo thoi han hieu luc — nguon: courses.onl (kiem chung 17/11/2026) + trang gioi thieu chinh thuc HubSpot offers.hubspot.com/academy-aeo-certifications. Qua trinh: worker thu trang Academy chinh thuc truoc (tuong login), chuyen sang trang gioi thieu chinh thuc + syllabus da kiem chung + Google Search Central + Ahrefs AEO doi chieu; gioi han ghi trung thuc (hoc qua syllabus, khong xem video/quiz). Manh: bang chi so AEO 7 dong, doi chieu Google (khong yeu cau ky thuat bo sung; chunking/llms.txt bo qua duoc voi Google Search), gan ket mach 154/155/156. Tru 2: hoc qua syllabus, khong xem video goc. Quyet dinh de xuat §8: §8.1 (listening them cau hoi) + §8.2 (dong canh bao pham vi vao ghi chu GEO) CHUA ap dung — de danh lan cham skill toi, gop cung 156 §8.1 + 159 §7.1 (tien le 159). Merge e672fe6."
+    }
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
@@ -28,6 +35,6 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
-  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 157 merge xong, không còn task mở). Khóa AEO Fundamentals (HubSpot Academy) — khóa số 20 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch SEO sau 154 (on-page Semrush) → 155 (SEO nền tảng UC Davis) → 156 (SEO cho người mới Ahrefs): AEO là tầng tiếp theo — tối ưu để AI trả lời/trích dẫn (answer engine), đối chiếu với checklist on-page 4 điểm + ghi chú GEO đã đưa vào skill ở 154. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/158-aeo-fundamentals-hubspot-academy.md, review muse-main chấm /10 như task research khác.",
-  "updated_at": "2026-11-21T02:56:56+07:00"
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú rảnh sau khi task 157 merge xong, không còn task mở). Khóa AEO Fundamentals (HubSpot Academy) — khóa số 20 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch SEO sau 154 (on-page Semrush) → 155 (SEO nền tảng UC Davis) → 156 (SEO cho người mới Ahrefs): AEO là tầng tiếp theo — tối ưu để AI trả lời/trích dẫn (answer engine), đối chiếu với checklist on-page 4 điểm + ghi chú GEO đã đưa vào skill ở 154. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/158-aeo-fundamentals-hubspot-academy.md, review muse-main chấm /10 như task research khác.\n[21/11 03:03 muse-main: review 8/10 vòng 1, ĐÃ MERGE lên main e672fe6; task sang done. Lưu ý: hook watchdog báo task 'claimed kẹt 33 phút không commit' là SAI — Ú đã commit WIP 2 phút sau claim (02:27) và xong review 02:28, chỉ là file task trên main vẫn ghi claimed vì worker cập nhật status trên branch; lần quét 06:46 cần xem lại cách watchdog đếm commit trên branch.]",
+  "updated_at": "2026-11-21T03:03:00+07:00"
 }
