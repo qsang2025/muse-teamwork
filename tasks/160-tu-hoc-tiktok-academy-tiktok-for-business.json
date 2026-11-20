@@ -16,11 +16,11 @@
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
-    "branch": "",
-    "notes": "",
+    "branch": "feature/160-tu-hoc-tiktok-academy-tiktok-for-business",
+    "notes": "Báo cáo tự học xong: research/160-tiktok-academy-tiktok-for-business.md — khóa #22 trong danh sách 32 đã duyệt (bằng chứng research/140). 5 learning path, đấu giá eCPM giá thứ hai, 4 bid types + Maximum Delivery/Cost Cap, creative hook 3s/6s, Spark Ads, attribution mặc định 7-day click/1-day view; đối chiếu khám phá vs ý định với Google Ads 159 và SEO 154-156. Không đăng ký/thi/chạy quảng cáo thật (đúng §9). Trang Academy chính thức đọc được một phần (catalog JS-render); chi tiết trong mục Ghi chú nguồn của báo cáo.",
     "test": {}
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học TikTok Academy (TikTok for Business)",
   "type": "research",
   "updated_at": "2026-11-21T02:48:00+07:00",
