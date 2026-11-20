@@ -3,17 +3,17 @@
   "title": "Tự học: Governing AI Agents (DeepLearning.AI × Databricks)",
   "type": "research",
   "repo": "muse-teamwork",
-  "branch": "",
+  "branch": "feature/140-tu-hoc-governing-ai-agents-deeplearning-ai",
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "claimed",
+  "status": "doing",
   "created_by": "muse-main",
   "created_at": "2026-11-20T21:40:01+07:00",
   "claimed_at": "2026-11-20T21:55:28+07:00",
   "claim_expires_at": "2026-11-20T23:55:28+07:00",
   "result": {
-    "branch": "",
+    "branch": "feature/140-tu-hoc-governing-ai-agents-deeplearning-ai",
     "test": {
       "validate": "",
       "device_test": "",
@@ -28,6 +28,6 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
-  "notes": "muse-main quyet theo uy quyen 20/11 (Anh giao: chon khoa hoc tiep theo la viec chi ca quyet): giao khoa Governing AI Agents (DeepLearning.AI x Databricks, Beginner, ~1,5h, 9 lessons, free trong beta) — dung khoang trong 'an toan agent o tang hanh dong' ma bao cao 137 goi y, noi tiep truc 132-135-137.\n\nKIEM CHUNG TRUOC KHI HOC (checklist muc 1, bat buoc): khoa nay CHUA duoc kiem chung co trong danh sach 32 khoa AI mien phi da duyet (Vinmedia Global, Anh chot 20/11) khong — trang Vinmedia fetch loi khi kiem tra. Buoc dau tien: mo lai danh sach 32 khoa (bai FB Than Cong Hai 19/11 / trang Vinmedia) va xac nhan Governing AI Agents co trong do khong. NEU CO thi hoc binh thuong. NEU KHONG CO thi dung lai ngay, ghi vao task file + bao muse-main de doi khoa khac — khong hoc khoa ngoai danh sach da duyet.\n\nQuy tac tu hoc §9: chi hoc noi dung FREE cong khai; khong dang ky Databricks tra phi, khong dang ky Oracle, khong chay lab/API tra phi. Bao cao viet vao research/140-governing-ai-agents-deeplearning-ai.md, review muse-main cham /10 nhu task research khac.",
-  "updated_at": "2026-11-20T21:40:01+07:00"
+  "notes": "muse-main quyet theo uy quyen 20/11 (Anh giao: chon khoa hoc tiep theo la viec chi ca quyet): giao khoa Governing AI Agents (DeepLearning.AI x Databricks, Beginner, ~1,5h, 9 lessons, free trong beta) — dung khoang trong 'an toan agent o tang hanh dong' ma bao cao 137 goi y, noi tiep truc 132-135-137.\n\nKIEM CHUNG TRUOC KHI HOC (checklist muc 1, bat buoc): khoa nay CHUA duoc kiem chung co trong danh sach 32 khoa AI mien phi da duyet (Vinmedia Global, Anh chot 20/11) khong — trang Vinmedia fetch loi khi kiem tra. Buoc dau tien: mo lai danh sach 32 khoa (bai FB Than Cong Hai 19/11 / trang Vinmedia) va xac nhan Governing AI Agents co trong do khong. NEU CO thi hoc binh thuong. NEU KHONG CO thi dung lai ngay, ghi vao task file + bao muse-main de doi khoa khac — khong hoc khoa ngoai danh sach da duyet.\n\nQuy tac tu hoc §9: chi hoc noi dung FREE cong khai; khong dang ky Databricks tra phi, khong dang ky Oracle, khong chay lab/API tra phi. Bao cao viet vao research/140-governing-ai-agents-deeplearning-ai.md, review muse-main cham /10 nhu task research khac.\n[20/11 21:56 muse-1: Da claim + chuyen doing, tao branch feature/140-tu-hoc-governing-ai-agents-deeplearning-ai; dang kiem chung khoa co trong danh sach 32 khoa da duyet (Vinmedia/FB Than Cong Hai) truoc khi hoc — neu khong co se dung + bao muse-main doi khoa]",
+  "updated_at": "2026-11-20T21:56:13+07:00"
 }
