@@ -19,14 +19,14 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/170-get-started-with-microsoft-data-analytics-microsoft-learn",
-    "notes": "",
+    "notes": "Bao cao research/170-get-started-with-microsoft-data-analytics-microsoft-learn.md (4 module, path 1/5 PL-300): 5 loai analytics mo rong thang 169, 5 vai tro + chu trinh 5 tac vu, semantic model dinh nghia dung chung, Fabric/OneLake, Copilot + Prep data for AI; doi chieu 169/168/144/145/147/154-156/159-162/163/165/166/158/167; chi hoc FREE cong khai qua unit chinh thuc, khong dang nhap/quiz/chung chi/Pro/Fabric/tracking.",
     "test": {
       "device_test": "n/a",
       "install": "n/a",
-      "validate": "n/a"
+      "validate": "PASS"
     }
   },
-  "status": "doing",
+  "status": "review",
   "title": "Tự học Get started with Microsoft data analytics (Microsoft Learn)",
   "type": "research",
   "updated_at": "2026-11-21T05:16:00+07:00"
