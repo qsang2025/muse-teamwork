@@ -3,7 +3,7 @@
   "title": "Build extension HHTQ Vietsub (hhtq.press, video)",
   "type": "vbook-extension",
   "repo": "Qsang_vbook",
-  "branch": "",
+  "branch": "feature/113-hhtq-vietsub",
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "high",

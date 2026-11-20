@@ -3,7 +3,7 @@
   "title": "Port loại extension forum + build Otofun",
   "type": "vbook-extension",
   "repo": "Qsang_vbook",
-  "branch": "",
+  "branch": "feature/112-forum-otofun",
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "high",
