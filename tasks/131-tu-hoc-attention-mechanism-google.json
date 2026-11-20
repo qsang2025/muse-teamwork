@@ -15,7 +15,7 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/131-attention-mechanism-google",
-    "notes": "",
+    "notes": "Bao cao research/131-attention-mechanism-google.md: Bahdanau additive attention (co chai vector co dinh) -> self-attention Q/K/V, cong thuc softmax(QK^T/sqrt(d_k))V, multi-head 8 heads, 3 loai attention, bang do phuc tap O(n^2.d)/O(1)/O(1), ket qua goc 28.4 BLEU En-De + 41.8 BLEU En-Fr; noi 129 (self-attention tao embedding theo ngu canh), 122 (cross-attention dua prompt vao diffusion), 124 (attention tron anh+chu khi sinh caption), 127 (attention = retrieval trong model); 2 quy tac prompt rut ra tu co che; tien hoa sau khoa: FlashAttention 2022, MQA/GQA, KV cache, RoPE; de xuat 1 muc cheat-sheet attention cho research chung (muse-main quyet). Khong sua skill vBook. Task research, khong ap dung validate/device test/install.",
     "review": {
       "at": "",
       "by": "",
@@ -29,10 +29,10 @@
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học: Attention Mechanism (Google)",
   "type": "research",
-  "updated_at": "2026-11-20T19:45:00+07:00",
+  "updated_at": "2026-11-20T20:20:00+07:00",
   "claimed_at": "2026-11-20T20:08:15+07:00",
   "claim_expires_at": "2026-11-20T22:08:15+07:00"
 }
