@@ -17,14 +17,14 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/177-operations-analytics-wharton",
-    "notes": "",
+    "notes": "Da hoc xong Operations Analytics (Wharton, Coursera, khoa #5 mach B): 4 module, 1 tuan (~10 gio). Newsvendor - cong thuc critical fractile CF = Cu/(Cu+Co) tinh luong dat toi uu khi nhu cau bat dinh, VD tinh tay cho lo bao bi in mot lan; du bao nhu cau bang lam muot ham mu + MAD/MAPE/bias; toi uu bang Solver trong Excel + shadow price de tim nut that that su bang tien; mo phong Monte Carlo san luong tuan tu OEE lich su - bao xac suat dat ke hoach thay vi cam ket mot con so; cay quyet dinh EMV/EVPI cho quyet dinh dau tu (mua may, tang ca, thue ngoai). Mach noi: du lieu OEE o 174 -> kiem chung do tin cay o 175 (DMAIC/SPC) -> phan tich va ra quyet dinh o khoa nay; 6 viec ap dung ngay o day chuyen IFT; de xuat khoa tiep theo B4 Supply Chain Planning. Gioi han: chi hoc noi dung FREE qua che do Audit, khong lam quiz, khong lay chung chi, khong cham day chuyen that. Bao cao research/177-operations-analytics-wharton.md.",
     "test": {
       "device_test": "n/a",
       "install": "n/a",
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học Operations Analytics (Wharton, Coursera)",
   "type": "research",
   "updated_at": "2026-11-21T09:52:00+07:00",
