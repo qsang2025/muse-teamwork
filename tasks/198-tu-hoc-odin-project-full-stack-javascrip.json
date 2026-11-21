@@ -7,7 +7,7 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "review",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-21T15:01:57+07:00",
   "claimed_at": "2026-11-21T15:08:35+07:00",
@@ -21,7 +21,14 @@
       "evidence": "research/198-odin-project-full-stack-javascript.md, commit 5a8d471 tren branch feature/198-odin-project-full-stack-javascript"
     },
     "notes": "Bao cao tu hoc Odin Full Stack JavaScript xong: Foundations + 7 khoa (Intermediate HTML/CSS, JavaScript, Advanced HTML/CSS, React, Databases/SQL, NodeJS/Express/PostgreSQL, Getting Hired); doi chieu trang chinh thuc + curriculum repo + 5 nguon thu cap 21/11; khong tao tai khoan, khong lam project, Databases/Getting Hired chi tiet ghi Chua xac dinh",
-    "evidence": "research/198-odin-project-full-stack-javascript.md, commit 5a8d471 tren branch feature/198-odin-project-full-stack-javascript"
+    "evidence": "research/198-odin-project-full-stack-javascript.md, commit 5a8d471 tren branch feature/198-odin-project-full-stack-javascript",
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T15:16:00+07:00",
+      "note": "muse-main kiểm chứng độc lập 21/11: trang path chính thức khớp cấu trúc 7 khóa đúng thứ tự (HTML/CSS -> JavaScript DOM/OOP/API -> CSS chuyên sâu -> React -> Databases SQL quan hệ -> NodeJS/Express/PostgreSQL -> Getting Hired) + 'Start learning for free now!'; trang About khớp 'Our free, comprehensive curriculum' + 'The most effective learning happens while building projects'; bài Installations khớp không hỗ trợ native Windows (VM/dual-boot/WSL2), chỉ hỗ trợ Chrome, sandbox chỉ giai đoạn đầu; trang Databases fetch chỉ trả Overview — khớp đúng giới hạn báo cáo ghi; repo curriculum qua GitHub API: 13.276 stars, 16.923 forks, license NOASSERTION — khớp số báo cáo trích nguồn thứ cấp. Điểm trừ: khẳng định 'không chứng chỉ' chỉ qua nguồn thứ cấp (FAQ chưa mở trực tiếp); danh sách bài đầy đủ của Databases/Getting Hired ghi Chưa xác định (đúng §9, trung thực). Quỹ đạo khớp: claim 15:08, báo cáo commit 15:09 — worker nghiên cứu trước khi chạy claim-task.sh (task tạo 15:01); nguồn trích dẫn kiểm chứng khớp từng chữ, không phát hiện bịa số liệu."
+    }
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
@@ -31,5 +38,5 @@
     "muse-main kiểm tra + merge, task sang done"
   ],
   "notes": "Khóa số 8 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59 (sau 191 MCP, 192 Semrush, 193 Kaggle, 194 Reliable Agents, 195 Azure, 196 LangGraph, 197 Google Cloud Agents). Khóa: The Odin Project — Full Stack JavaScript, FREE, https://www.theodinproject.com/paths/full-stack-javascript — open-source, tự học theo nhịp riêng: Foundations (command line, Git/GitHub, HTML, CSS, JS cơ bản) rồi 7 khóa Full Stack JavaScript (Intermediate HTML and CSS, JavaScript/DOM/OOP/React, Advanced HTML and CSS, Databases/SQL, NodeJS/Express/PostgreSQL, Getting Hired); học bằng đọc tài liệu + làm project thật (Sign-up Form, Admin Dashboard, Library, Tic Tac Toe...), KHÔNG có chứng chỉ, KHÔNG có ước tính giờ cố định. Học theo §9: chỉ nội dung FREE công khai; khảo sát toàn bộ path qua trang chính thức + curriculum repo công khai, KHÔNG cần làm hết mọi project trong 1 task — ghi rõ phạm vi đã học và phần Chưa xác định; không ghi danh trả phí/chứng chỉ (khóa không có chứng chỉ). Lưu ý: Odin không hỗ trợ native Windows làm môi trường dev (macOS/Ubuntu/VM/WSL2) — team dùng VM Linux nên phù hợp. muse-main quyết theo ủy quyền 20/11: giao cho Ú (vai build) vì Ú rảnh sau 196 done; link đã kiểm chứng lại 21/11 15:02 trước khi giao (trang path chính thức: Free, 7 khóa, mô tả từng khóa khớp).",
-  "updated_at": "2026-11-21T15:09:43+07:00"
+  "updated_at": "2026-11-21T15:16:00+07:00"
 }
