@@ -11,7 +11,7 @@
   "created_at": "2026-11-21T11:25:00+07:00",
   "created_by": "muse-main",
   "id": "181-tu-hoc-allergen-management-training-alison",
-  "notes": "Khóa số 5, mạch A (An toàn thực phẩm & chất lượng), trong danh sách 20 khóa công việc Anh duyệt 21/11 08:31 trong voice call. Bằng chứng: research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main (dòng A5). Khóa: Allergen Management Training, Alison (Food Guard Academy), 5–6 giờ, https://alison.com/course/allergen-management-training — Allergen Control Plan, kiểm soát dị ứng chéo trên dây chuyền bột sữa. Học theo §9: chỉ nội dung FREE công khai, không đăng ký trả phí/chứng chỉ, không làm Final Assessment; ghi Chưa xác định khi không xem được nội dung sau đăng ký. muse-main quyết theo ủy quyền 20/11: giao tiếp mạch A sau khi 180 merge xong. Delegation: giao Ú học + viết báo cáo; muse-main giữ review + merge. Báo cáo viết vào research/181-allergen-management-training-alison.md, review muse-main chấm /10 như task research khác.\n[21/11 11:25 muse-1: claim thủ công vì file task đã điền sẵn assignee=muse-1 nên claim-task.sh từ chối (exit 3); chuyển claimed + hạn 2h đúng format script.]",
+  "notes": "Khóa số 5, mạch A (An toàn thực phẩm & chất lượng), trong danh sách 20 khóa công việc Anh duyệt 21/11 08:31 trong voice call. Bằng chứng: research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main (dòng A5). Khóa: Allergen Management Training, Alison (Food Guard Academy), 5–6 giờ, https://alison.com/course/allergen-management-training — Allergen Control Plan, kiểm soát dị ứng chéo trên dây chuyền bột sữa. Học theo §9: chỉ nội dung FREE công khai, không đăng ký trả phí/chứng chỉ, không làm Final Assessment; ghi Chưa xác định khi không xem được nội dung sau đăng ký. muse-main quyết theo ủy quyền 20/11: giao tiếp mạch A sau khi 180 merge xong. Delegation: giao Ú học + viết báo cáo; muse-main giữ review + merge. Báo cáo viết vào research/181-allergen-management-training-alison.md, review muse-main chấm /10 như task research khác.\n[21/11 11:25 muse-1: claim thủ công vì file task đã điền sẵn assignee=muse-1 nên claim-task.sh từ chối (exit 3); chuyển claimed + hạn 2h đúng format script.]\n[21/11 11:25 muse-1: Đã claim + tạo branch feature/181-allergen-management-training-alison, đang học Allergen Management Training qua trang chính thức Alison + đối chiếu FSSC 2.5.6; báo cáo research/181-allergen-management-training-alison.md đang viết (WIP).]",
   "preferred_assignee": "muse-1",
   "priority": "medium",
   "repo": "muse-teamwork",
@@ -24,10 +24,10 @@
       "validate": "n/a"
     }
   },
-  "status": "claimed",
+  "status": "doing",
   "title": "Tự học Allergen Management Training (Alison, Food Guard Academy)",
   "type": "research",
-  "updated_at": "2026-11-21T11:25:46+07:00",
+  "updated_at": "2026-11-21T11:25:57+07:00",
   "claimed_at": "2026-11-21T11:25:46+07:00",
   "claim_expires_at": "2026-11-21T13:25:46+07:00"
 }
