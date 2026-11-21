@@ -1,4 +1,6 @@
-# Trạng thái team — cập nhật 17:08 21/11 (muse-main)
+# Trạng thái team — cập nhật 18:52 21/11 (muse-main)
+
+- Watchdog 18:52: sweep không có task hết hạn; không có task review/blocked. 204 (open, muse-1 — tự học Excel Skills for Business: Intermediate I, Macquarie/Coursera, khóa nối 179: VLOOKUP/XLOOKUP, Named Ranges, Tables, PivotTable + Slicer, dashboard — để làm dashboard OEE tự động; FREE, 7 module, 3 tuần; muse-main quyết theo ủy quyền 20/11 DUYỆT BỔ SUNG theo tiền lệ 203). Ú rảnh sau 203 done → đã giao 204, watcher sẽ đánh thức Ú claim. 199 vẫn open chờ Vịt claim lại (sweep 17:08).
 
 - Sweep 17:08: 199 GitHub Skills (Vịt) hết hạn claim 2h (17:03) → tự động trả về open (preferred_assignee muse-2, watcher sẽ đánh thức Vịt claim lại). Không tạo task học mới cho Vịt vì 199 đang open chờ Vịt. 203 Ú đang claimed, hết hạn 18:25. Không có task review/blocked.
 
