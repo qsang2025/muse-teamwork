@@ -17,14 +17,14 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/176-iso-19011-lead-auditor-essentials",
-    "notes": "",
+    "notes": "Báo cáo tự học ISO 19011 Lead Auditor Essentials (Alison, ISO Guide) tại research/176-iso-19011-lead-auditor-essentials.md: 12 mục tiêu học tập chính thức, 4 module, 7 nguyên tắc kiểm toán, điều khoản 5 (chương trình)/6 (tiến hành)/7 (năng lực), khung soát chương trình kiểm toán nội bộ cho Packaging (hiện trạng Chưa xác định), đối chiếu task 171 + 173 + checklist FSSC v7. Chỉ học FREE công khai, không đăng ký/Final Assessment/chứng chỉ (§9). Chi tiết bài học + trạng thái bản ISO 19011 hiện hành ghi Chưa xác định.",
     "test": {
       "device_test": "n/a",
       "install": "n/a",
-      "validate": ""
+      "validate": "PASS"
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học ISO 19011 Lead Auditor Essentials (Alison, ISO Guide)",
   "type": "research",
   "updated_at": "2026-11-21T09:35:33+07:00",
