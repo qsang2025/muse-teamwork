@@ -1,1 +1,33 @@
-{"assignee":"muse-1","branch":"feature/176-iso-19011-lead-auditor-essentials","checklist":["Quét repo đích + tasks/open + ROADMAP (chống trùng)","Claim task (script claim-task.sh) + tạo branch","Build / khảo sát xong, test đầy đủ","Push branch, cập nhật task sang review","muse-main kiểm tra + merge, task sang done"],"created_at":"2026-11-21T09:33:00+07:00","created_by":"muse-main","id":"176-tu-hoc-iso-19011-lead-auditor-essentials","notes":"muse-main tạo theo ủy quyền 20/11 (§10a: Ú rảnh sau khi 173 merge xong; Anh duyệt danh sách 20 khóa công việc mới 21/11 08:31 trong voice call; giao tiếp xen kẽ 2 mạch — 175 mạch B do Vịt làm, 176 mạch A do Ú làm). Khóa ISO 19011 Lead Auditor Essentials — Alison (ISO Guide), 5–6 giờ — khóa số 3 mạch A trong danh sách 20 khóa công việc đã duyệt; bằng chứng trong research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nội dung: quy trình kiểm toán nội bộ ISO 19011:2018 — nâng chất lượng các đợt cross-check CIL và kiểm toán nội bộ; cặp với mục tiêu 7 của khóa 173 (đánh giá bộ hồ sơ HACCP) để chuẩn bị vai đánh giá viên nội bộ. Link: https://alison.com/course/iso-19011-lead-auditor-essentials. Delegation: giao Ú học + viết báo cáo; muse-main giữ review + merge. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ. Báo cáo viết vào research/176-iso-19011-lead-auditor-essentials.md, review muse-main chấm /10 như task research khác.","preferred_assignee":"muse-1","priority":"medium","repo":"muse-teamwork","result":{"branch":"feature/176-iso-19011-lead-auditor-essentials","notes":"","test":{"device_test":"n/a","install":"n/a","validate":""}},"status":"open","title":"Tự học ISO 19011 Lead Auditor Essentials (Alison, ISO Guide)","type":"research","updated_at":"2026-11-21T09:33:00+07:00"}
+{
+  "assignee": "muse-1",
+  "branch": "feature/176-iso-19011-lead-auditor-essentials",
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "created_at": "2026-11-21T09:33:00+07:00",
+  "created_by": "muse-main",
+  "id": "176-tu-hoc-iso-19011-lead-auditor-essentials",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10a: Ú rảnh sau khi 173 merge xong; Anh duyệt danh sách 20 khóa công việc mới 21/11 08:31 trong voice call; giao tiếp xen kẽ 2 mạch — 175 mạch B do Vịt làm, 176 mạch A do Ú làm). Khóa ISO 19011 Lead Auditor Essentials — Alison (ISO Guide), 5–6 giờ — khóa số 3 mạch A trong danh sách 20 khóa công việc đã duyệt; bằng chứng trong research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nội dung: quy trình kiểm toán nội bộ ISO 19011:2018 — nâng chất lượng các đợt cross-check CIL và kiểm toán nội bộ; cặp với mục tiêu 7 của khóa 173 (đánh giá bộ hồ sơ HACCP) để chuẩn bị vai đánh giá viên nội bộ. Link: https://alison.com/course/iso-19011-lead-auditor-essentials. Delegation: giao Ú học + viết báo cáo; muse-main giữ review + merge. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ. Báo cáo viết vào research/176-iso-19011-lead-auditor-essentials.md, review muse-main chấm /10 như task research khác.\n[21/11 09:35 muse-1: claim thủ công vì file task đã điền sẵn assignee=muse-1 nên claim-task.sh từ chối (exit 3); chuyển claimed + hạn 2h đúng format script.]",
+  "preferred_assignee": "muse-1",
+  "priority": "medium",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "feature/176-iso-19011-lead-auditor-essentials",
+    "notes": "",
+    "test": {
+      "device_test": "n/a",
+      "install": "n/a",
+      "validate": ""
+    }
+  },
+  "status": "claimed",
+  "title": "Tự học ISO 19011 Lead Auditor Essentials (Alison, ISO Guide)",
+  "type": "research",
+  "updated_at": "2026-11-21T09:35:33+07:00",
+  "claimed_at": "2026-11-21T09:35:33+07:00",
+  "claim_expires_at": "2026-11-21T11:35:33+07:00"
+}
