@@ -1,1 +1,24 @@
-{"assignee":"muse-2","branch":"feature/192-ai-visibility-essentials-semrush","checklist":["Quét repo đích + tasks/open + ROADMAP (chống trùng)","Claim task (script claim-task.sh) + tạo branch","Build / khảo sát xong, test đầy đủ","Push branch, cập nhật task sang review","muse-main kiểm tra + merge, task sang done"],"created_at":"2026-11-21T14:10:00+07:00","created_by":"muse-main","id":"192-tu-hoc-ai-visibility-essentials-semrush","notes":"Khóa số 2 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59, giao sau khi danh sách 20 khóa công việc hoàn tất 20/20 (189 + 190 done 14:02). ƯU TIÊN CAO — HỌC XONG TRƯỚC 15/12/2026: Semrush Academy chuyển nền tảng mới ngày 16/12, tiến độ chưa xong sẽ bị reset và chứng chỉ cũ không còn hiện trong My Certificates (chỉ link trực tiếp còn hoạt động). Khóa: AI Visibility Essentials with Semrush, Semrush Academy, FREE, https://www.semrush.com/academy/courses/ai-search/ — đo AI visibility (theo dõi prompt thay vì keyword), tối ưu cho LLM (ChatGPT...), tăng brand mention trong câu trả lời AI, walkthrough AI Visibility Toolkit (theo dõi mention, nguồn trích dẫn, share of voice). Nối 154 (On-Page SEO and AI Search Essentials, Semrush), 158 (AEO Fundamentals, HubSpot), 156 (SEO Ahrefs) — mảnh AI Search còn thiếu của mạch SEO. Học theo §9: chỉ nội dung FREE công khai, cần tài khoản Semrush miễn phí để ghi danh (không mua gói trả phí); KHÔNG chạy tool trả phí, chỉ học phương pháp + ngôn ngữ chỉ số; ghi Chưa xác định khi không xem được nội dung sau đăng ký. muse-main quyết theo ủy quyền 20/11: giao cho Vịt (vai research, mạch SEO) vì Vịt rảnh, không còn task mở; link đã kiểm chứng lại 21/11 14:09 trước khi giao.","preferred_assignee":"muse-2","priority":"high","repo":"muse-teamwork","status":"open","title":"Tự học AI Visibility Essentials (Semrush Academy)","type":"research","updated_at":"2026-11-21T14:10:00+07:00"}
+{
+  "assignee": "muse-2",
+  "branch": "feature/192-ai-visibility-essentials-semrush",
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "created_at": "2026-11-21T14:10:00+07:00",
+  "created_by": "muse-main",
+  "id": "192-tu-hoc-ai-visibility-essentials-semrush",
+  "notes": "Khóa số 2 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59, giao sau khi danh sách 20 khóa công việc hoàn tất 20/20 (189 + 190 done 14:02). ƯU TIÊN CAO — HỌC XONG TRƯỚC 15/12/2026: Semrush Academy chuyển nền tảng mới ngày 16/12, tiến độ chưa xong sẽ bị reset và chứng chỉ cũ không còn hiện trong My Certificates (chỉ link trực tiếp còn hoạt động). Khóa: AI Visibility Essentials with Semrush, Semrush Academy, FREE, https://www.semrush.com/academy/courses/ai-search/ — đo AI visibility (theo dõi prompt thay vì keyword), tối ưu cho LLM (ChatGPT...), tăng brand mention trong câu trả lời AI, walkthrough AI Visibility Toolkit (theo dõi mention, nguồn trích dẫn, share of voice). Nối 154 (On-Page SEO and AI Search Essentials, Semrush), 158 (AEO Fundamentals, HubSpot), 156 (SEO Ahrefs) — mảnh AI Search còn thiếu của mạch SEO. Học theo §9: chỉ nội dung FREE công khai, cần tài khoản Semrush miễn phí để ghi danh (không mua gói trả phí); KHÔNG chạy tool trả phí, chỉ học phương pháp + ngôn ngữ chỉ số; ghi Chưa xác định khi không xem được nội dung sau đăng ký. muse-main quyết theo ủy quyền 20/11: giao cho Vịt (vai research, mạch SEO) vì Vịt rảnh, không còn task mở; link đã kiểm chứng lại 21/11 14:09 trước khi giao.",
+  "preferred_assignee": "muse-2",
+  "priority": "high",
+  "repo": "muse-teamwork",
+  "status": "claimed",
+  "title": "Tự học AI Visibility Essentials (Semrush Academy)",
+  "type": "research",
+  "updated_at": "2026-11-21T14:13:49+07:00",
+  "claimed_at": "2026-11-21T14:13:49+07:00",
+  "claim_expires_at": "2026-11-21T16:13:49+07:00"
+}
