@@ -315,14 +315,18 @@ def extract_needs_anh(tasks: list[dict[str, Any]], status_text: str) -> list[dic
     """Extract items needing Anh's decision from tasks and STATUS.md."""
     items: list[dict[str, Any]] = []
     seen_refs: set[str] = set()
+    task_by_num: dict[str, dict[str, Any]] = {}
+    anh_decided_re = re.compile(r"\[Dashboard\s*#\d+\s*—\s*Anh", re.IGNORECASE)
 
     for d in tasks:
         if d.get("_is_closed_archive"):
             continue
+        tid = str(d.get("id", ""))
+        num = parse_task_num(tid)
+        if num is not None:
+            task_by_num[str(num).zfill(3)] = d
         st = str(d.get("status", ""))
         if st in ("blocked", "review", "needs-decision"):
-            tid = str(d.get("id", ""))
-            num = parse_task_num(tid)
             ref = str(num).zfill(3) if num is not None else tid
             seen_refs.add(ref)
             items.append(
@@ -340,15 +344,20 @@ def extract_needs_anh(tasks: list[dict[str, Any]], status_text: str) -> list[dic
     for line in status_text.splitlines():
         if not NEEDS_ANH_RE.search(line):
             continue
-        if "Anh đã quyết" in line or "ĐÃ DUYỆT" in line and "CẦN ANH" not in line and "cần Anh" not in line and "CHỜ Anh" not in line:
-            continue
+        if re.search(r"Anh đã quyết|ĐÃ DUYỆT|đã chốt", line, re.IGNORECASE):
+            if not re.search(r"CẦN ANH|cần Anh quyết|chờ Anh quyết|CHỜ Anh", line):
+                continue
         m_num = re.match(r"^\s*-\s*(?:Đã xong:\s*)?(\d{3})\b", line)
         task_num = m_num.group(1) if m_num else ""
+        if task_num and task_num in seen_refs:
+            continue
+        if task_num and task_num in task_by_num:
+            td = task_by_num[task_num]
+            if td.get("status") in ("done", "cancelled") and anh_decided_re.search(str(td.get("notes", ""))):
+                continue
         # Extract the specific clause mentioning Anh
         m_clause = re.search(r"([^.;\n]*(?:CẦN ANH|CHỜ Anh|cần Anh quyết|chờ Anh quyết)[^.\n]*)", line, re.I)
         snippet = m_clause.group(1).strip() if m_clause else line.strip()[:240]
-        if task_num and task_num in seen_refs:
-            continue
         items.append(
             {
                 "source": "STATUS.md",
