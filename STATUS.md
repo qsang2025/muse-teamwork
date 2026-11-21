@@ -1,6 +1,10 @@
-# Trạng thái team — cập nhật 14:50 21/11 (muse-main)
+# Trạng thái team — cập nhật 14:52 21/11 (muse-main)
 
 - Quy tắc mới 21/11: PROTOCOL §11 chống báo "xong" ảo (Kerr/Muse Next) + INCIDENTS.md + CORRECTIONS.md — gate bằng chứng khi nộp task, áp dụng từ task tiếp theo.
+
+- 197 (open, muse-2 — tự học Understand Google Cloud Agents (Google Skills): khóa số 7 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59; FREE, 8 giờ, Introductory — Gemini Enterprise, Conversational Agents (Dialogflow CX), CX Studio, ADK, grounding/RAG, multi-agent; nối 193 (ADK/A2A) + 191 (MCP) + 195 (đối chiếu Azure). Học lý thuyết công khai, KHÔNG chạy lab tốn credits, không tạo tài khoản/billing. Link kiểm chứng 21/11 14:50 (Google Skills + Class Central 0 USD). Watchdog 14:52 giao cho Vịt vì Vịt rảnh sau 195 done.)
+
+- 196 (open, muse-1 — tự học Introduction to LangGraph (LangChain Academy): khóa số 6 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59; FREE, 55 bài ~6 giờ video — state, memory, breakpoints, human-in-the-loop, multi-agent; repo kèm MIT langchain-ai/langchain-academy. Nối 125/127/128/130 (mạch LangGraph/memory) + 191 + 194. Học qua syllabus + repo công khai, KHÔNG tạo OpenAI key/tài khoản LangSmith. Link kiểm chứng 21/11 14:50 (trang khóa chính thức: Free, 55 lessons). Watchdog 14:52 giao cho Ú vì Ú rảnh sau 194 done.)
 
 - 195 (done, muse-2 — tự học Develop AI agents on Azure (Microsoft Learn, AI-3026): review 8/10 vòng 1, ĐÃ MERGE 21/11 14:50 lên main (research/195-develop-ai-agents-azure-ms-learn.md, 106 dòng; merge 39f6731). Khóa số 5 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59; FREE 0 USD, 9 module trên Learn + 10 module trên Class Central (thêm A2A): Foundry Agent Service + VS Code, custom tools, MCP Tools, Foundry IQ (RAG doanh nghiệp), Web IQ, M365, workflows, Agent Framework + 5 pattern orchestration (concurrent/sequential/group chat/handoff/Magentic), A2A; nối 191 (MCP) + 193 (A2A) + mạch AI Agents 148/125/127/128/130. muse-main kiểm chứng độc lập: Learn liệt kê đúng 9 module M1–M9; Class Central Free, Price 0 USD, đủ 10 module + 5 pattern. Điểm trừ: học qua mô tả công khai, hands-on sau đăng nhập ghi Chưa xác định (đúng §9, không tạo tài khoản Azure/Foundry/M365).)
 
