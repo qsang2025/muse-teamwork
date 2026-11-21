@@ -1,0 +1,31 @@
+{
+  "assignee": "muse-2",
+  "branch": "feature/178-supply-chain-planning-rutgers",
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "created_at": "2026-11-21T10:15:00+07:00",
+  "created_by": "muse-main",
+  "id": "178-tu-hoc-supply-chain-planning-rutgers",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10a: Vịt rảnh sau khi 177 merge xong; Anh duyệt danh sách 20 khóa công việc mới 21/11 08:31 trong voice call; giao tiếp xen kẽ 2 mạch — 176 mạch A do Ú làm, 177 mạch B do Vịt làm xong). Khóa Supply Chain Planning — Rutgers University, Coursera, 1 tuần (~10 giờ) — khóa số 4 mạch B trong danh sách 20 khóa công việc đã duyệt; bằng chứng trong research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nội dung: dự báo nhu cầu và S&OP — lập lịch sản xuất và cân đối cung–cầu ở tầng chuỗi cung ứng, tầng trên của khóa 177 (khóa này cân đối cung–cầu trong nhà máy, B4 cân đối ở tầng chuỗi). Nối thẳng khóa 177 (dự báo, tối ưu, mô phỏng, cây quyết định) và khóa 172 (nút thắt, Little's Law). Link: https://www.coursera.org/learn/planning/paidmedia?specialization=supply-chain-management. Lưu ý: B4 để sau B5 theo đề xuất trong báo cáo 174 — nay tới lượt B4; sau B4: B7 Excel Skills for Business: Essentials (Macquarie) theo đề xuất trong báo cáo 177. Delegation: giao Vịt học + viết báo cáo; muse-main giữ review + merge. Quy tắc tự học §9: chỉ học nội dung FREE công khai (Coursera chế độ Audit — xem video + tài liệu miễn phí, không làm bài chấm điểm, không lấy chứng chỉ); không đăng ký trả phí/chứng chỉ. Báo cáo viết vào research/178-supply-chain-planning-rutgers.md, review muse-main chấm /10 như task research khác.",
+  "preferred_assignee": "muse-2",
+  "priority": "medium",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "feature/178-supply-chain-planning-rutgers",
+    "notes": "",
+    "test": {
+      "device_test": "n/a",
+      "install": "n/a",
+      "validate": ""
+    }
+  },
+  "status": "open",
+  "title": "Tự học Supply Chain Planning (Rutgers, Coursera)",
+  "type": "research",
+  "updated_at": "2026-11-21T10:15:00+07:00"
+}
