@@ -31,6 +31,15 @@ lại, không phải người gây lỗi tự xác nhận). Không xóa mục c�
   Anh bảo Antigravity làm không.
 - **Kiểm chứng lại:** chưa xong — đóng case khi đã xác nhận từng nguồn trong
   loạt mới chạy/không chạy và ghi rõ vào task/STATUS.md.
+- **Diễn biến thêm 21/11 14:11–14:33 (ghi 15:47, muse-main):** cùng tài khoản
+  Vitbupdk đẩy tiếp 3 commit thẳng lên main — cd73df0 (hoathinh_ai_yt v7),
+  7aa7f43 (merge hoathinh_ai_yt v7 + catalog, registry 135 → 136),
+  8aaf978 (hoathinh_ai_yt v8) — main tip hiện 8aaf978, registry 136 nguồn
+  (kiểm chứng bằng `git rev-parse origin/main` + đếm plugin.json 21/11
+  15:47). Đây là lần đẩy thẳng tiếp theo sau 14:06, cùng mẫu vi phạm §4.
+  Chưa rõ bản hoathinh_ai_yt v7/v8 có chạy thật trên máy Anh không — cần
+  kiểm chứng Play thật trước khi kết luận; ROADMAP footer đã cập nhật theo
+  tip/registry thực tế để verify-spec sạch.
 
 ## INC-003 — Watchdog báo nhầm task "claimed kẹt"
 
