@@ -1,1 +1,24 @@
-{"assignee":"muse-1","branch":"feature/191-mcp-course-hugging-face","checklist":["Quét repo đích + tasks/open + ROADMAP (chống trùng)","Claim task (script claim-task.sh) + tạo branch","Build / khảo sát xong, test đầy đủ","Push branch, cập nhật task sang review","muse-main kiểm tra + merge, task sang done"],"created_at":"2026-11-21T14:10:00+07:00","created_by":"muse-main","id":"191-tu-hoc-mcp-course-hugging-face","notes":"Khóa số 1 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59, giao sau khi danh sách 20 khóa công việc hoàn tất 20/20 (189 + 190 done 14:02). Khóa: MCP Course, Hugging Face (xây cùng Anthropic), FREE, https://huggingface.co/learn/mcp-course/unit0/introduction — 4 unit, ~3–4 giờ/tuần, Python hoặc TypeScript (chọn bản JS/TS theo vai build của Ú), từ MCP cơ bản (host/client/server, JSON-RPC 2.0, tools/resources/prompts) tới build + deploy MCP server thật (Unit 2 sentiment analysis server với Gradio, Unit 3 deploy lên HF Spaces). Nối 148 (HF AI Agents Course), 125 (AI Agents/LangGraph), 127/128/130 (agent memory) — MCP là mảnh còn thiếu để agent của team gọi tool ngoài chuẩn. Học theo §9: chỉ nội dung FREE công khai, không ghi danh trả phí/chứng chỉ; ghi Chưa xác định khi không xem được nội dung sau đăng ký. muse-main quyết theo ủy quyền 20/11: giao cho Ú (vai build, mạch AI Agents) vì Ú rảnh, không còn task mở; link đã kiểm chứng lại 21/11 14:09 trước khi giao.","preferred_assignee":"muse-1","priority":"medium","repo":"muse-teamwork","status":"open","title":"Tự học MCP Course (Hugging Face)","type":"research","updated_at":"2026-11-21T14:10:00+07:00"}
+{
+  "assignee": "muse-1",
+  "branch": "feature/191-mcp-course-hugging-face",
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "created_at": "2026-11-21T14:10:00+07:00",
+  "created_by": "muse-main",
+  "id": "191-tu-hoc-mcp-course-hugging-face",
+  "notes": "Khóa số 1 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59, giao sau khi danh sách 20 khóa công việc hoàn tất 20/20 (189 + 190 done 14:02). Khóa: MCP Course, Hugging Face (xây cùng Anthropic), FREE, https://huggingface.co/learn/mcp-course/unit0/introduction — 4 unit, ~3–4 giờ/tuần, Python hoặc TypeScript (chọn bản JS/TS theo vai build của Ú), từ MCP cơ bản (host/client/server, JSON-RPC 2.0, tools/resources/prompts) tới build + deploy MCP server thật (Unit 2 sentiment analysis server với Gradio, Unit 3 deploy lên HF Spaces). Nối 148 (HF AI Agents Course), 125 (AI Agents/LangGraph), 127/128/130 (agent memory) — MCP là mảnh còn thiếu để agent của team gọi tool ngoài chuẩn. Học theo §9: chỉ nội dung FREE công khai, không ghi danh trả phí/chứng chỉ; ghi Chưa xác định khi không xem được nội dung sau đăng ký. muse-main quyết theo ủy quyền 20/11: giao cho Ú (vai build, mạch AI Agents) vì Ú rảnh, không còn task mở; link đã kiểm chứng lại 21/11 14:09 trước khi giao.",
+  "preferred_assignee": "muse-1",
+  "priority": "medium",
+  "repo": "muse-teamwork",
+  "status": "claimed",
+  "title": "Tự học MCP Course (Hugging Face)",
+  "type": "research",
+  "updated_at": "2026-11-21T14:25:30+07:00",
+  "claimed_at": "2026-11-21T14:25:30+07:00",
+  "claim_expires_at": "2026-11-21T16:25:30+07:00"
+}
