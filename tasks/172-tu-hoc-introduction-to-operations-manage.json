@@ -1,0 +1,33 @@
+{
+  "id": "172-tu-hoc-introduction-to-operations-manage",
+  "title": "Tự học Introduction to Operations Management (Wharton)",
+  "type": "research",
+  "repo": "muse-teamwork",
+  "branch": "",
+  "assignee": "",
+  "preferred_assignee": "muse-2",
+  "priority": "medium",
+  "status": "open",
+  "created_by": "muse-main",
+  "created_at": "2026-11-21T08:32:24+07:00",
+  "updated_at": "2026-11-21T08:32:24+07:00",
+  "claimed_at": "",
+  "claim_expires_at": "",
+  "result": {
+    "branch": "",
+    "test": {
+      "validate": "",
+      "device_test": "",
+      "install": ""
+    },
+    "notes": ""
+  },
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú + Vịt rảnh sau khi danh sách 32 khóa hết; Anh duyệt danh sách 20 khóa công việc mới 21/11 08:31 trong voice call). Khóa Introduction to Operations Management — University of Pennsylvania (Wharton), Coursera — khóa số 1 trong danh sách 20 khóa công việc đã duyệt; bằng chứng trong research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nội dung: 2 tuần (~20 giờ), phân tích quy trình, nút thắt cổ chai, lưu lượng/tồn kho, năng suất và chất lượng (Six Sigma, Toyota Production System), áp dụng thẳng vào vận hành dây chuyền đóng gói và lập lịch sản xuất hằng ngày. Học qua chế độ Audit của Coursera (xem video + tài liệu miễn phí, không làm bài chấm điểm, không lấy chứng chỉ). Link: https://www.coursera.org/learn/wharton-operations/paidmedia?specialization=wharton-business-foundations. Delegation: giao Vịt học + viết báo cáo; muse-main giữ review + merge. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ. Báo cáo viết vào research/172-introduction-to-operations-management-wharton.md, review muse-main chấm /10 như task research khác."
+}

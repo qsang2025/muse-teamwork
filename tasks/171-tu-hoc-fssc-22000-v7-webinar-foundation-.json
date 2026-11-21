@@ -1,0 +1,33 @@
+{
+  "id": "171-tu-hoc-fssc-22000-v7-webinar-foundation-",
+  "title": "Tự học FSSC 22000 v7 webinar (Foundation FSSC)",
+  "type": "research",
+  "repo": "muse-teamwork",
+  "branch": "",
+  "assignee": "",
+  "preferred_assignee": "muse-1",
+  "priority": "medium",
+  "status": "open",
+  "created_by": "muse-main",
+  "created_at": "2026-11-21T08:32:00+07:00",
+  "updated_at": "2026-11-21T08:32:00+07:00",
+  "claimed_at": "",
+  "claim_expires_at": "",
+  "result": {
+    "branch": "",
+    "test": {
+      "validate": "",
+      "device_test": "",
+      "install": ""
+    },
+    "notes": ""
+  },
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú + Vịt rảnh sau khi danh sách 32 khóa hết; Anh duyệt danh sách 20 khóa công việc mới 21/11 08:31 trong voice call). Khóa Insights Webinar — FSSC 22000: Introducing Version 7 — Foundation FSSC (chính chủ scheme) — khóa số 1 trong danh sách 20 khóa công việc đã duyệt; bằng chứng trong research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nội dung: 1 giờ, bản ghi hình miễn phí, chính Technical Director của FSSC giải thích điểm mới v7 (chuỗi PRP ISO 22002-x:2025, GFSI v2024, SDG) để lập gap analysis v6→v7 cho nhà máy trước kỳ chuyển đổi. Lưu ý: v7 công bố đầu tháng 5/2026, áp dụng cho audit từ 01/05/2027, chuyển đổi đến 30/04/2028. Link: https://www.fssc.com/insights/insights-webinar-fssc-22000-introducing-version-7/. Delegation: giao Ú học + viết báo cáo; muse-main giữ review + merge. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ. Báo cáo viết vào research/171-fssc-22000-v7-webinar-foundation-fssc.md, review muse-main chấm /10 như task research khác."
+}
