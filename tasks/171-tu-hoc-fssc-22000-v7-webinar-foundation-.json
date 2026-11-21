@@ -3,24 +3,24 @@
   "title": "Tự học FSSC 22000 v7 webinar (Foundation FSSC)",
   "type": "research",
   "repo": "muse-teamwork",
-  "branch": "",
+  "branch": "feature/171-fssc-22000-v7-webinar-foundation-fssc",
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "doing",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-21T08:32:00+07:00",
-  "updated_at": "2026-11-21T08:32:00+07:00",
+  "updated_at": "2026-11-21T08:38:46+07:00",
   "claimed_at": "2026-11-21T08:35:30+07:00",
   "claim_expires_at": "2026-11-21T10:35:45+07:00",
   "result": {
-    "branch": "",
+    "branch": "feature/171-fssc-22000-v7-webinar-foundation-fssc",
     "test": {
-      "validate": "",
-      "device_test": "",
-      "install": ""
+      "validate": "PASS",
+      "device_test": "n/a",
+      "install": "n/a"
     },
-    "notes": ""
+    "notes": "Bao cao research/171-fssc-22000-v7-webinar-foundation-fssc.md (webinar chinh chu 06/05/2026, Mulholland+Matthee): 3 tru cot v7, PRP 2 lop ISO 22002-100+22002-1 cho nha may sua, GFSI v2024 da cong nhan 11/11/2026, SDG/FLW 2.5.16 do duoc + 2.5.13(g) Save Food Packaging, 2.5.2 artwork + 2.5.9 changeover cho Packaging, upgrade audit toan bo 01/05/2027-30/04/2028; doi chieu checklist FSSC v7 cua Anh (Food Fraud/Allergen/FLW), khong dua dap an quiz; chi hoc FREE cong khai qua trang chinh thuc, khong dang ky/xem ghi hinh/mua ISO ban quyen."
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
@@ -29,5 +29,5 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
-  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú + Vịt rảnh sau khi danh sách 32 khóa hết; Anh duyệt danh sách 20 khóa công việc mới 21/11 08:31 trong voice call). Khóa Insights Webinar — FSSC 22000: Introducing Version 7 — Foundation FSSC (chính chủ scheme) — khóa số 1 trong danh sách 20 khóa công việc đã duyệt; bằng chứng trong research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nội dung: 1 giờ, bản ghi hình miễn phí, chính Technical Director của FSSC giải thích điểm mới v7 (chuỗi PRP ISO 22002-x:2025, GFSI v2024, SDG) để lập gap analysis v6→v7 cho nhà máy trước kỳ chuyển đổi. Lưu ý: v7 công bố đầu tháng 5/2026, áp dụng cho audit từ 01/05/2027, chuyển đổi đến 30/04/2028. Link: https://www.fssc.com/insights/insights-webinar-fssc-22000-introducing-version-7/. Delegation: giao Ú học + viết báo cáo; muse-main giữ review + merge. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ. Báo cáo viết vào research/171-fssc-22000-v7-webinar-foundation-fssc.md, review muse-main chấm /10 như task research khác. [08:35 muse-1: Đã claim, đang học webinar FSSC v7 qua trang chính thức Foundation FSSC, đối chiếu checklist FSSC v7 + danh sách 20 khóa]"
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Ú + Vịt rảnh sau khi danh sách 32 khóa hết; Anh duyệt danh sách 20 khóa công việc mới 21/11 08:31 trong voice call). Khóa Insights Webinar — FSSC 22000: Introducing Version 7 — Foundation FSSC (chính chủ scheme) — khóa số 1 trong danh sách 20 khóa công việc đã duyệt; bằng chứng trong research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nội dung: 1 giờ, bản ghi hình miễn phí, chính Technical Director của FSSC giải thích điểm mới v7 (chuỗi PRP ISO 22002-x:2025, GFSI v2024, SDG) để lập gap analysis v6→v7 cho nhà máy trước kỳ chuyển đổi. Lưu ý: v7 công bố đầu tháng 5/2026, áp dụng cho audit từ 01/05/2027, chuyển đổi đến 30/04/2028. Link: https://www.fssc.com/insights/insights-webinar-fssc-22000-introducing-version-7/. Delegation: giao Ú học + viết báo cáo; muse-main giữ review + merge. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ. Báo cáo viết vào research/171-fssc-22000-v7-webinar-foundation-fssc.md, review muse-main chấm /10 như task research khác. [08:35 muse-1: Đã claim, đang học webinar FSSC v7 qua trang chính thức Foundation FSSC, đối chiếu checklist FSSC v7 + danh sách 20 khóa] [21/11 08:38 muse-1: Đã nộp review; báo cáo FSSC v7 webinar trên branch feature, chờ muse-main chấm.]"
 }
