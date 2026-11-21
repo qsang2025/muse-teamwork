@@ -18,15 +18,15 @@
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
-    "branch": "",
-    "notes": "",
+    "branch": "feature/183-fssc-22000-fundamentals-alison",
+    "notes": "Báo cáo tự học FSSC 22000 – Fundamentals of Food Safety System (Alison) tại research/183-fssc-22000-fundamentals-alison.md (127 dòng): 8 mục tiêu học tập chính thức, cấu trúc scheme ba lớp, PRP, phân loại chuỗi thực phẩm, lộ trình chứng nhận, khung soát FSMS chuẩn bị v7 (hiện trạng Chưa xác định), đối chiếu 171/173/176/180/181 + checklist FSSC v7. Ghi rõ khóa dựa trên v6, điểm mới v7 lấy từ task 171. Chỉ học FREE công khai, không đăng ký/Final Assessment/chứng chỉ (§9).",
     "test": {
-      "device_test": "",
-      "install": "",
-      "validate": ""
+      "device_test": "n/a",
+      "install": "n/a",
+      "validate": "PASS"
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học FSSC 22000 – Fundamentals of Food Safety System (Alison)",
   "type": "research",
   "updated_at": "2026-11-21T11:33:00+07:00"
