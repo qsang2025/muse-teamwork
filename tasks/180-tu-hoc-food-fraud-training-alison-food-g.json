@@ -7,7 +7,7 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "doing",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-21T10:56:27+07:00",
   "claimed_at": "2026-11-21T11:08:44+07:00",
@@ -15,11 +15,11 @@
   "result": {
     "branch": "feature/180-food-fraud-training-alison-food-g",
     "test": {
-      "validate": "",
-      "device_test": "",
-      "install": ""
+      "validate": "PASS",
+      "device_test": "n/a",
+      "install": "n/a"
     },
-    "notes": ""
+    "notes": "Báo cáo tự học Food Fraud Training (Alison, Food Guard Academy) tại research/180-food-fraud-training-alison-food-g.md: 8 mục tiêu học tập chính thức, 7 nhóm gian lận GFSI, phân biệt HACCP/VACCP/TACCP theo động cơ, quy trình FFVA 5 bước FSSC + yêu cầu 2.5.4 (v7: ISO 22002-100:2025 điều 16.3), TACCP/PAS 96, khung soát 2.5.4 cho đường/sữa/bao bì 50kg (hiện trạng Chưa xác định), đối chiếu 171+173+176 + checklist FSSC v7. Chỉ học FREE công khai, không đăng ký/Final Assessment/chứng chỉ (§9), không đưa đáp án quiz Food Fraud. Chi tiết module + trạng thái PAS 96 hiện hành ghi Chưa xác định."
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
