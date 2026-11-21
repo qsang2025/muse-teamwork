@@ -3,7 +3,7 @@
   "title": "Tự học Supply Chain Fundamentals (MITx, edX)",
   "type": "research",
   "repo": "muse-teamwork",
-  "branch": "",
+  "branch": "feature/186-supply-chain-fundamentals-mitx-ed",
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "medium",
@@ -29,5 +29,5 @@
     "muse-main kiểm tra + merge, task sang done"
   ],
   "notes": "Khóa số 8, mạch B (Sản xuất & vận hành), trong danh sách 20 khóa công việc Anh duyệt 21/11 08:31 trong voice call. Bằng chứng: research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main (dòng B8). Khóa: Supply Chain Fundamentals (CTL.SC1x), MITx, edX, 13 tuần (8–12 giờ/tuần) — dự báo, tồn kho, vận tải, thiết kế mạng lưới chuỗi cung ứng; nối B4 (178) + khung packaging logistics của 182. Học theo §9: chỉ nội dung FREE công khai (audit miễn phí theo kỳ mở lớp), không đăng ký trả phí/chứng chỉ ($299, không cần); ghi Chưa xác định khi không xem được nội dung sau đăng ký. muse-main quyết theo ủy quyền 20/11: giao tiếp mạch B sau khi 182 merge xong (theo đề xuất của Vịt trong báo cáo 182).",
-  "updated_at": "2026-11-21T13:11:36+07:00"
+  "updated_at": "2026-11-21T14:05:00+07:00"
 }
