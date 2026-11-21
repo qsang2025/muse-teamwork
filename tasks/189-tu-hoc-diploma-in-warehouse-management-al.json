@@ -15,10 +15,19 @@
   "preferred_assignee": "muse-1",
   "priority": "medium",
   "repo": "muse-teamwork",
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học Diploma in Warehouse Management (Alison)",
   "type": "research",
   "updated_at": "2026-11-21T13:55:24+07:00",
   "claimed_at": "2026-11-21T13:55:24+07:00",
-  "claim_expires_at": "2026-11-21T15:55:24+07:00"
+  "claim_expires_at": "2026-11-21T15:55:24+07:00",
+  "result": {
+    "branch": "feature/189-diploma-in-warehouse-management-alison",
+    "notes": "Bao cao tu hoc Diploma in Warehouse Management (Alison) tai research/189-diploma-in-warehouse-management-alison.md (238 dong): khoa B9 mach B, 12 muc tieu hoc tap chinh thuc, 10 module + danh gia (doi chieu 2 nguon doc lap khop), vai tro kho trong chuoi cung ung, thach thuc quan ly kho, cong nghe WMS/robot, logistics/outsourcing, quy trinh xuat hang 7 buoc, picking 5 phuong phap + don bay nang suat, ton kho (do chinh xac, kiem ke chu ky ABC, FEFO), con nguoi + an toan kho (xe nang, ke/pallet, nang ha thu cong bao 50kg), chi phi kho tach nhom + labour expenses, slotting ABC, khung soat kho 13 hang muc (hien trang Chua xac dinh), doi chieu 186/182/187/185/181/180/174/175 + checklist FSSC v7. Chi hoc FREE cong khai qua trang Alison chinh chu + doi chieu doc lap, khong ghi danh/Final Assessment/chung chi (s9). Noi dung bai giang sau dang ky + nha phat hanh cu the: Chua xac dinh. Thoi luong niem yet 10-15h; thoi gian hoc thuc te tren trang xac minh dao dong 1h19m-28h55m (ghi trung thuc, khong san phang).",
+    "test": {
+      "validate": "PASS",
+      "device_test": "n/a",
+      "install": "n/a"
+    }
+  }
 }
