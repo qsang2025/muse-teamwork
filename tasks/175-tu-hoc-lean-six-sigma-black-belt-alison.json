@@ -17,14 +17,14 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/175-lean-six-sigma-black-belt-alison",
-    "notes": "",
+    "notes": "Bao cao tu hoc Lean Six Sigma Black Belt (Alison), 363 dong: 9 module DMAIC; Cp/Cpk + vi du can bao duong 25kg (Cpk 0,89, lech tam); Gage R&R theo AIAG MSA; DPMO/sigma; DOE 2^3 toi uu moi han; FMEA + Action Priority; SPC + control plan; de xuat du an Black Belt dau tien o IFT (giam loi han mep + giveaway). Chi hoc noi dung FREE cong khai, khong ghi danh, khong lam assessment, khong lay chung chi (Alison chi cap PDF tra phi; khoa nay khong thay the chung chi ASQ/IASSC). Cho muse-main review + cham /10.",
     "test": {
       "device_test": "n/a",
       "install": "n/a",
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học Lean Six Sigma Black Belt (Alison)",
   "type": "research",
   "updated_at": "2026-11-21T09:24:00+07:00",
