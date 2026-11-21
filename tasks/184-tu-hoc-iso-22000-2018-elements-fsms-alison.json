@@ -18,15 +18,15 @@
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
-    "branch": "",
-    "notes": "",
+    "branch": "feature/184-iso-22000-2018-elements-fsms-alison",
+    "notes": "Báo cáo tự học ISO 22000:2018 – Elements of FSMS (Alison) tại research/184-iso-22000-2018-elements-fsms-alison.md (173 dòng): 7 mục tiêu học tập chính thức, bốn yếu tố cốt lõi FSMS, khác biệt 2005→2018 (HLS, rủi ro hai tầng, điều 4 Bối cảnh mới, thuật ngữ 17→45), bản đồ 10 điều khoản, PDCA 2 cấp độ, kiểm soát vận hành điều 8 (PRP/truy xuất/khẩn cấp/CCP-OPRP/thẩm tra/không phù hợp), kiểm toán nội bộ 9.2 + xem xét lãnh đạo 9.3, khung soát tài liệu FSMS + checklist CIL/PROD-RF theo điều khoản (hiện trạng Chưa xác định), đối chiếu 171/173/176/180/181/183 + checklist FSSC v7. ISO 22000:2018 là lớp không đổi ở v7 (task 171). Chỉ học FREE công khai, không đăng ký/Final Assessment/chứng chỉ (§9). Nhà phát hành + danh sách module chi tiết: Chưa xác định (sau đăng ký).",
     "test": {
-      "device_test": "",
-      "install": "",
-      "validate": ""
+      "device_test": "n/a",
+      "install": "n/a",
+      "validate": "PASS"
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học ISO 22000:2018 – Elements of Food Safety Management System (FSMS) (Alison)",
   "type": "research",
   "updated_at": "2026-11-21T12:25:00+07:00"
