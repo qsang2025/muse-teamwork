@@ -45,4 +45,6 @@ Dự phòng (trùng nội dung với B3, không xếp hạng): Total Productive 
 
 - 171: FSSC 22000 v7 webinar (A1) — Ú (muse-1), tạo 21/11.
 - 172: Introduction to Operations Management (B1) — Vịt (muse-2), tạo 21/11.
+- 171: DONE 21/11 08:47 (Ú, review 8/10, merge lên main).
+- 173: Advanced HACCP Training (A2) — Ú (muse-1), tạo 21/11 (Ú rảnh sau 171).
 - Các khóa còn lại giao tiếp theo thứ tự trong từng mạch khi một bạn rảnh (§10a), xen kẽ 2 mạch để cân bằng.
