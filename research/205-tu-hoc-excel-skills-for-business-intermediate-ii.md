@@ -68,7 +68,7 @@ Báo cáo học qua **ba lớp nguồn**, ghi rõ để muse-main chấm review 
 | 3 | Automating Lookups | CHOOSE, VLOOKUP, INDEX, MATCH và các dynamic lookups | Tra tốc độ chuẩn theo mã máy tự động, hết gõ tay từng ca |
 | 4 | Formula Auditing and Protection | Kiểm tra lỗi, trace precedents/dependents, xử lý circular references, protect sheet/workbook | Tìm được vì sao một ô OEE sai, khóa công thức không cho sửa nhầm |
 | 5 | Data Modelling | Mô hình kịch bản theo input/assumptions/outcomes; Goal Seek, Data Tables, Scenario Manager | Trả lời ngược: "muốn OEE 70% thì sản lượng phải bao nhiêu?" |
-| 6 | Recording Macros | Nhận diện用途 macro; tạo, sửa, quản lý macro | Một chạm: Refresh PivotTable + in dashboard, thay vì bấm tay 5 bước |
+| 6 | Recording Macros | Nhận diện công dụng của macro; tạo, sửa, quản lý macro | Một chạm: Refresh PivotTable + in dashboard, thay vì bấm tay 5 bước |
 | — | Final Assessment | Bài chấm điểm cuối khóa (không làm theo §9) | — |
 
 Bốn kết quả học tập niêm yết của khóa (Class Central/MOOC-list, khớp nhau): kiểm tra + phòng lỗi trong spreadsheet; tạo automation mạnh trong spreadsheet; áp dụng advanced formulas + conditional logic để ra quyết định; tạo spreadsheet dự báo + mô hình dữ liệu. Đây đúng là tầng còn thiếu sau 204: 204 dạy *tổng hợp + trình bày* (PivotTable/Slicer), khóa này dạy *kiểm soát đầu vào + ra quyết định + mô hình + tự động hoá*.
