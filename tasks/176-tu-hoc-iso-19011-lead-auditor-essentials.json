@@ -22,12 +22,19 @@
       "device_test": "n/a",
       "install": "n/a",
       "validate": "PASS"
+    },
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T10:56:00+07:00",
+      "note": "Dat (8/10). muse-main kiem chung doc lap 21/11: trang khoa Alison chinh thuc khop bao cao — 12 muc tieu hoc tap khop tung chu, gia 0 EUR, danh gia 3.8/5 (175), mo ta box-ticking khop; noi dung ISO 19011:2018 chuan (7 nguyen tac, dieu khoan 4-7, thay doi 2018, 3 loai kiem toan). Bao cao 144 dong, trung thuc ve nguon (ten 4 module tu trang xac thuc chung chi cong khai, lop 2; danh sach bai hoc chi tiet + hien trang nha may + trang thai ISO 19011:2026 ghi Chua xac dinh); khung soat chuong trinh kiem toan noi bo muc 6 dung ngay cho cross-check CIL; doi chieu tot 171/173 + checklist FSSC v7. Tru 2: hoc qua syllabus + tai lieu cong khai thay vi xem du video (module nam sau dang ky); dien giai tu nguon tang 3 da ghi la ban do tham khao. Quyet dinh de xuat: CHUA duyet — de danh lan cham skill toi."
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học ISO 19011 Lead Auditor Essentials (Alison, ISO Guide)",
   "type": "research",
-  "updated_at": "2026-11-21T09:37:12+07:00",
+  "updated_at": "2026-11-21T10:56:00+07:00",
   "claimed_at": "2026-11-21T09:35:33+07:00",
   "claim_expires_at": "2026-11-21T11:35:33+07:00"
 }
