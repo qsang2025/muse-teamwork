@@ -51,3 +51,5 @@ Dự phòng (trùng nội dung với B3, không xếp hạng): Total Productive 
 - 187: Food Microbiology for Safe and Sustainable Food Systems (A9) — Ú (muse-1), tạo 21/11 (Ú rảnh sau 185).
 - 187: DONE 21/11 13:30 (Ú, review 8/10, merge lên main, research/187-food-microbiology-nptel.md, 155 dòng).
 - 188: Dairy Manufacturing Module 1 (A10, khóa cuối mạch A) — Ú (muse-1), tạo 21/11 (Ú rảnh sau 187).
+- 188: DONE 21/11 13:42 (Ú, review 8/10, merge lên main, research/188-dairy-manufacturing-module-1-oregon-state.md, 143 dòng) — mạch A hoàn tất 10/10 khóa.
+- 189: Diploma in Warehouse Management (B9) — Ú (muse-1), tạo 21/11 (Ú rảnh sau 188).
