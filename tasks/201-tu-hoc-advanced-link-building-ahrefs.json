@@ -26,10 +26,17 @@
       "validate": "",
       "evidence": "research/201-tu-hoc-advanced-link-building-ahrefs.md, commit fdda663 tren branch feature/201-tu-hoc-advanced-link-building-ahrefs"
     },
-    "evidence": "research/201-tu-hoc-advanced-link-building-ahrefs.md, commit fdda663 tren branch feature/201-tu-hoc-advanced-link-building-ahrefs"
+    "evidence": "research/201-tu-hoc-advanced-link-building-ahrefs.md, commit fdda663 tren branch feature/201-tu-hoc-advanced-link-building-ahrefs",
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T16:02:15+07:00",
+      "note": "Dat (8/10). muse-main kiem chung doc lap 21/11: trang khoa chinh thuc khop 15 lessons / 6 modules / \"No sign-up required, and absolutely free of charge\" / Sam Oh / \"seed and lookalike\" / \"blitz list\"; cong thoi luong 15 bai = 6.516 giay = 1h48m36s, khop 1h48m; khoa FREE khong can dang ky, KHONG co chung chi (trang chinh thuc im lang + 2 nguon thu cap noi thang); hoc sau seed/lookalike, blitz list, hybrid outreach, doi/huong he thong; doi chieu 156 (chieu -> he thong) + noi mach SEO 154/158/192. Diem tru: hoc qua syllabus + nguon thu cap, khong xem video (dung gioi han §9). Bo sung sau merge vi conflict task file lam mat doi tuong review co cau truc (evidence fdda663 van giu nguyen)."
+    }
   },
   "status": "done",
   "title": "Tự học Advanced Link Building (Ahrefs)",
   "type": "research",
-  "updated_at": "2026-11-21T16:05:00+07:00"
+  "updated_at": "2026-11-21T16:02:15+07:00"
 }
