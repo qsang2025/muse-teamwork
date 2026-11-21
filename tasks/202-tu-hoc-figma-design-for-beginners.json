@@ -1,36 +1,6 @@
 {
-  "id": "202-tu-hoc-figma-design-for-beginners",
-  "title": "Tự học Figma Design for Beginners",
-  "type": "research",
-  "repo": "muse-teamwork",
-  "branch": "feature/202-tu-hoc-figma-design-for-beginners",
   "assignee": "muse-1",
-  "preferred_assignee": "muse-1",
-  "priority": "medium",
-  "status": "done",
-  "created_by": "muse-main",
-  "created_at": "2026-11-21T16:00:56+07:00",
-  "updated_at": "2026-11-21T16:16:00+07:00",
-  "claimed_at": "2026-11-21T16:08:53+07:00",
-  "claim_expires_at": "2026-11-21T18:09:03+07:00",
-  "result": {
-    "branch": "feature/202-tu-hoc-figma-design-for-beginners",
-    "test": {
-      "validate": "",
-      "device_test": "",
-      "install": "",
-      "evidence": "research/202-tu-hoc-figma-design-for-beginners.md, commit 4098ef5 tren branch feature/202-tu-hoc-figma-design-for-beginners"
-    },
-    "notes": "Bao cao tu hoc Figma Design for Beginners xong: 18 video ~3h (13 chinh + 5 phu), FREE can tai khoan Starter mien phi, KHONG co chung chi chinh thuc (kiem chung lai 21/11: trang chinh thuc im lang + 4 nguon thu cap noi thang); hoc sau auto layout/components/prototyping; doi chieu 167 (nguyen tac -> cong cu) + noi 198 Odin/200 javascript.info (thiet ke truoc code); khong tao tai khoan Figma, khong thuc hanh trong editor, thoi luong tung video + 33 bai day du ghi Chua xac dinh.",
-    "evidence": "research/202-tu-hoc-figma-design-for-beginners.md, commit 4098ef5 tren branch feature/202-tu-hoc-figma-design-for-beginners",
-    "review": {
-      "score": 8,
-      "rounds": 1,
-      "by": "muse-main",
-      "at": "2026-11-21T16:16:00+07:00",
-      "note": "Dat 8/10 vong 1. muse-main kiem chung doc lap trang khoa chinh thuc help.figma.com (doc 21/11 16:15): xuat ban 05/2025, portfolio website tu dau, responsive + interactive layout, shapes/text/frames, auto layout/components/prototyping, Starter plan mien phi khong can goi tra phi, YouTube auto dubbing, Community file/Help Center/Forum — khop het bao cao; trang chinh thuc khong nhac chung chi, khop ket luan 'Figma khong co chung chi chinh thuc'. Quy dao (Glassbox) sach: so 18 video ~3h (13 chinh + 5 phu) ghi ro lay tu nguon thu cap Untitled UI, khong gan cho trang chinh thuc; 33 articles phan biet ro voi 33 video; thoi luong tung video + danh sach day du 33 bai ghi Chua xac dinh, khong bia; khong tao tai khoan Figma thay Anh (dung gioi han task). Diem tru: hoc qua trang cong khai + tai lieu goc, chua xem tung video, chua thuc hanh trong editor (dung §9). Task research — khong ap dung gate validate/device test/install cua extension vBook; evidence tro file research/202-tu-hoc-figma-design-for-beginners.md (115 dong, merge 5fb1e91)."
-    }
-  },
+  "branch": "feature/202-tu-hoc-figma-design-for-beginners",
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
@@ -38,5 +8,35 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
-  "notes": "Khóa CUỐI trong đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59 (sau 191 MCP, 192 Semrush, 193 Kaggle, 194 Reliable Agents, 195 Azure, 196 LangGraph, 197 Google Cloud Agents, 198 Odin, 199 GitHub Skills, 200 javascript.info, 201 Advanced Link Building). Khóa: Figma Design for Beginners (Figma Learn, khóa chính thức 2025) — FREE, https://help.figma.com/hc/en-us/articles/30848209492887-Course-overview-Figma-Design-for-beginners-2025 — 18 video ~3 giờ (13 bài chính + 5 video phụ), xuất bản 05/2025, làm một portfolio website từ đầu (từ layer đầu tiên tới layout responsive + tương tác); cần tài khoản Figma Starter MIỄN PHÍ (không cần gói trả phí); Figma KHÔNG cấp chứng chỉ chính thức — kiểm chứng lại lúc học, ghi rõ. Học theo §9: chỉ nội dung FREE công khai; khảo sát toàn bộ khóa ở mức bản đồ + học sâu phần nối việc của team (thiết kế giao diện cho dashboard OEE/sản xuất nội bộ tương lai — nối 198 Odin stack web + 200 javascript.info; nguyên tắc thiết kế UI áp cho không gian Muse Dash/space nhà 4,5x16m nếu phù hợp); không ghi danh trả phí; nếu cần tài khoản Figma thì KHÔNG tạo tài khoản thay Anh — học qua trang khóa + video công khai, phần thực hành trong Figma ghi Chưa xác định nếu không mở được mà không đăng nhập. muse-main quyết theo ủy quyền 20/11: giao cho Ú (vai build) vì Ú rảnh sau 201 done. Link đã kiểm chứng lại 21/11 16:05 trước khi giao (help.figma.com: Course overview Figma Design for beginners 2025 — 18 videos ~3h, Starter plan free, portfolio website, xuất bản 05/2025). [21/11 16:08 muse-1: claim thu cong dung mau claim-task.sh (status claimed + han 2h) vi script tu choi do assignee da dien san muse-1 luc tao task; preferred_assignee=muse-1, khong co agent nao khac claim. Khong sua script.]"
+  "claim_expires_at": "2026-11-21T18:09:03+07:00",
+  "claimed_at": "2026-11-21T16:08:53+07:00",
+  "created_at": "2026-11-21T16:00:56+07:00",
+  "created_by": "muse-main",
+  "id": "202-tu-hoc-figma-design-for-beginners",
+  "notes": "Khóa CUỐI trong đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59 (sau 191 MCP, 192 Semrush, 193 Kaggle, 194 Reliable Agents, 195 Azure, 196 LangGraph, 197 Google Cloud Agents, 198 Odin, 199 GitHub Skills, 200 javascript.info, 201 Advanced Link Building). Khóa: Figma Design for Beginners (Figma Learn, khóa chính thức 2025) — FREE, https://help.figma.com/hc/en-us/articles/30848209492887-Course-overview-Figma-Design-for-beginners-2025 — 18 video ~3 giờ (13 bài chính + 5 video phụ), xuất bản 05/2025, làm một portfolio website từ đầu (từ layer đầu tiên tới layout responsive + tương tác); cần tài khoản Figma Starter MIỄN PHÍ (không cần gói trả phí); Figma KHÔNG cấp chứng chỉ chính thức — kiểm chứng lại lúc học, ghi rõ. Học theo §9: chỉ nội dung FREE công khai; khảo sát toàn bộ khóa ở mức bản đồ + học sâu phần nối việc của team (thiết kế giao diện cho dashboard OEE/sản xuất nội bộ tương lai — nối 198 Odin stack web + 200 javascript.info; nguyên tắc thiết kế UI áp cho không gian Muse Dash/space nhà 4,5x16m nếu phù hợp); không ghi danh trả phí; nếu cần tài khoản Figma thì KHÔNG tạo tài khoản thay Anh — học qua trang khóa + video công khai, phần thực hành trong Figma ghi Chưa xác định nếu không mở được mà không đăng nhập. muse-main quyết theo ủy quyền 20/11: giao cho Ú (vai build) vì Ú rảnh sau 201 done. Link đã kiểm chứng lại 21/11 16:05 trước khi giao (help.figma.com: Course overview Figma Design for beginners 2025 — 18 videos ~3h, Starter plan free, portfolio website, xuất bản 05/2025). [21/11 16:08 muse-1: claim thu cong dung mau claim-task.sh (status claimed + han 2h) vi script tu choi do assignee da dien san muse-1 luc tao task; preferred_assignee=muse-1, khong co agent nao khac claim. Khong sua script.]\n\n[Dashboard #13 — Anh, 21/11 18:46] DUYỆT.",
+  "preferred_assignee": "muse-1",
+  "priority": "medium",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "feature/202-tu-hoc-figma-design-for-beginners",
+    "evidence": "research/202-tu-hoc-figma-design-for-beginners.md, commit 4098ef5 tren branch feature/202-tu-hoc-figma-design-for-beginners",
+    "notes": "Bao cao tu hoc Figma Design for Beginners xong: 18 video ~3h (13 chinh + 5 phu), FREE can tai khoan Starter mien phi, KHONG co chung chi chinh thuc (kiem chung lai 21/11: trang chinh thuc im lang + 4 nguon thu cap noi thang); hoc sau auto layout/components/prototyping; doi chieu 167 (nguyen tac -> cong cu) + noi 198 Odin/200 javascript.info (thiet ke truoc code); khong tao tai khoan Figma, khong thuc hanh trong editor, thoi luong tung video + 33 bai day du ghi Chua xac dinh.",
+    "review": {
+      "at": "2026-11-21T16:16:00+07:00",
+      "by": "muse-main",
+      "note": "Dat 8/10 vong 1. muse-main kiem chung doc lap trang khoa chinh thuc help.figma.com (doc 21/11 16:15): xuat ban 05/2025, portfolio website tu dau, responsive + interactive layout, shapes/text/frames, auto layout/components/prototyping, Starter plan mien phi khong can goi tra phi, YouTube auto dubbing, Community file/Help Center/Forum — khop het bao cao; trang chinh thuc khong nhac chung chi, khop ket luan 'Figma khong co chung chi chinh thuc'. Quy dao (Glassbox) sach: so 18 video ~3h (13 chinh + 5 phu) ghi ro lay tu nguon thu cap Untitled UI, khong gan cho trang chinh thuc; 33 articles phan biet ro voi 33 video; thoi luong tung video + danh sach day du 33 bai ghi Chua xac dinh, khong bia; khong tao tai khoan Figma thay Anh (dung gioi han task). Diem tru: hoc qua trang cong khai + tai lieu goc, chua xem tung video, chua thuc hanh trong editor (dung §9). Task research — khong ap dung gate validate/device test/install cua extension vBook; evidence tro file research/202-tu-hoc-figma-design-for-beginners.md (115 dong, merge 5fb1e91).",
+      "rounds": 1,
+      "score": 8
+    },
+    "test": {
+      "device_test": "",
+      "evidence": "research/202-tu-hoc-figma-design-for-beginners.md, commit 4098ef5 tren branch feature/202-tu-hoc-figma-design-for-beginners",
+      "install": "",
+      "validate": ""
+    }
+  },
+  "status": "done",
+  "title": "Tự học Figma Design for Beginners",
+  "type": "research",
+  "updated_at": "2026-11-21T16:16:00+07:00"
 }

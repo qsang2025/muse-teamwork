@@ -1,36 +1,6 @@
 {
-  "id": "203-tu-hoc-introduction-to-design-systems",
-  "title": "Tự học Introduction to Design Systems",
-  "type": "research",
-  "repo": "muse-teamwork",
-  "branch": "feature/203-tu-hoc-introduction-to-design-systems",
   "assignee": "muse-1",
-  "preferred_assignee": "muse-1",
-  "priority": "medium",
-  "status": "done",
-  "created_by": "muse-main",
-  "created_at": "2026-11-21T16:19:40+07:00",
-  "updated_at": "2026-11-21T18:43:24+07:00",
-  "claimed_at": "2026-11-21T16:25:17+07:00",
-  "claim_expires_at": "2026-11-21T18:25:28+07:00",
-  "result": {
-    "branch": "feature/203-tu-hoc-introduction-to-design-systems",
-    "test": {
-      "validate": "",
-      "device_test": "",
-      "install": "",
-      "evidence": "research/203-tu-hoc-introduction-to-design-systems.md, commit 59dc45b tren branch feature/203-tu-hoc-introduction-to-design-systems"
-    },
-    "notes": "Bao cao tu hoc Introduction to Design Systems xong: 4 bai viet + 7 video + 1 Community file, ~2h theo Overview / 200 phut theo trang section (doi chieu ro: Update 1 tokens 30m dua tong len 200), FREE doc cong khai khong can dang nhap, KHONG co chung chi chinh thuc (kiem chung lai 21/11: trang chinh thuc im lang + Untitled UI/Coursya noi thang); hoc sau audit/principles/foundations/atomic/naming/tokens 3 tang/versioning; doi chieu 202 (thao tac -> he thong) + 167 (nguyen tac -> he thong), nang cap checklist dashboard OEE; khong tao tai khoan Figma, khong thuc hanh trong editor, thoi luong tung video + noi dung Community file ghi Chua xac dinh.",
-    "evidence": "research/203-tu-hoc-introduction-to-design-systems.md, commit 59dc45b tren branch feature/203-tu-hoc-introduction-to-design-systems",
-    "review": {
-      "score": 8,
-      "rounds": 1,
-      "by": "muse-main",
-      "at": "2026-11-21T18:43:24+07:00",
-      "note": "Dat (8/10). muse-main kiem chung doc lap 21/11: trang Overview Figma Learn khop \"4 written lessons (+ 7 videos, 1 Community file)\", \"Approximately 2 hours\", 4 ket qua hoc tap, muc luc gom atomic design, dayToggle, actionPresentationCard, daySelector, tokens/variables/modes; trang section khop \"6 chapters, 200 minutes, Beginner friendly\" + thoi luong tung bai 10/45/40/45/30/30 = 200 phut; Untitled UI khop FREE, ~2h, Intermediate, \"Figma has no official certification\"; Lesson 1/2/4 khop 4 phan principles/foundations/documentation/processes, 7 pha quy trinh, ket \"marathon, not a sprint\", case Habitz/Kai. Quy dao sach, so lieu khop nguon goc. Diem tru: bai Update 1 chua doc toan van, thoi luong tung video + noi dung Community file ghi Chua xac dinh, khong thuc hanh trong editor (dung gioi han §9). Review 8/10 xac dinh luc 17:26-17:30 tu ban nop cua Ú; doi tuong review co cau truc duoc bo sung luc merge vi worker dung o buoc cham review do he thong gan co rui ro thuc thi tren branch (Anh duyet cho merge 18:42)."
-    }
-  },
+  "branch": "feature/203-tu-hoc-introduction-to-design-systems",
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
@@ -38,5 +8,35 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
-  "notes": "Khóa nối sau 202 (Figma Design for Beginners, muse-1 vừa done 21/11 16:15). Khóa: Introduction to design systems, Figma Learn (chính thức), FREE, https://help.figma.com/hc/en-us/sections/14548397990423-Course-Introduction-to-design-systems — 4 bài viết + 7 video + 1 Community file, khoảng 2 giờ theo trang Overview (trang section ghi 200 phút gồm bài cập nhật Tokens, variables, and styles — worker đối chiếu lại con số chính xác); chủ đề: design systems, styles, components, libraries, typography, accessibility, iconography, variables, tokens; KHÔNG có chứng chỉ chính thức (Figma Learn không cấp chứng chỉ — khớp kết luận 202, worker kiểm chứng lại). Học theo §9: chỉ nội dung FREE công khai; học qua trang khóa + trang từng bài học chính thức + đối chiếu nguồn thứ cấp, KHÔNG tạo tài khoản Figma thay Anh, KHÔNG thực hành trong editor thay Anh, phần hands-on ghi Chưa xác định; không ghi danh trả phí/chứng chỉ. Nối 202 (components/auto layout → hệ thống) + 167 (nguyên tắc thiết kế → hệ thống) + checklist dashboard OEE rút ra ở 202 (đặt tên frame/lớp hệ thống, component dùng lại, auto layout) — mục tiêu: tư duy design system cho mạch dashboard dài hạn. muse-main quyết theo ủy quyền 20/11: DUYỆT BỔ SUNG khóa nối này (không nằm trong danh sách 12 khóa AI/Dev Anh duyệt 21/11 13:59) vì đợt 12 đã xong 11/12 + 199 đang làm, Ú rảnh không còn khóa đã duyệt; khóa FREE chính thức cùng nhà cung cấp với 202, nối trực tiếp 202; link đã kiểm chứng lại 21/11 16:19 trước khi giao (help.figma.com: 6 chapters, Overview ~2h, 4 bài + 7 video + 1 Community file; 2 nguồn thứ cấp khớp FREE/không chứng chỉ). [16:25 muse-1: Da claim, bat dau khao sat khoa Introduction to Design Systems (Figma Learn)]"
+  "claim_expires_at": "2026-11-21T18:25:28+07:00",
+  "claimed_at": "2026-11-21T16:25:17+07:00",
+  "created_at": "2026-11-21T16:19:40+07:00",
+  "created_by": "muse-main",
+  "id": "203-tu-hoc-introduction-to-design-systems",
+  "notes": "Khóa nối sau 202 (Figma Design for Beginners, muse-1 vừa done 21/11 16:15). Khóa: Introduction to design systems, Figma Learn (chính thức), FREE, https://help.figma.com/hc/en-us/sections/14548397990423-Course-Introduction-to-design-systems — 4 bài viết + 7 video + 1 Community file, khoảng 2 giờ theo trang Overview (trang section ghi 200 phút gồm bài cập nhật Tokens, variables, and styles — worker đối chiếu lại con số chính xác); chủ đề: design systems, styles, components, libraries, typography, accessibility, iconography, variables, tokens; KHÔNG có chứng chỉ chính thức (Figma Learn không cấp chứng chỉ — khớp kết luận 202, worker kiểm chứng lại). Học theo §9: chỉ nội dung FREE công khai; học qua trang khóa + trang từng bài học chính thức + đối chiếu nguồn thứ cấp, KHÔNG tạo tài khoản Figma thay Anh, KHÔNG thực hành trong editor thay Anh, phần hands-on ghi Chưa xác định; không ghi danh trả phí/chứng chỉ. Nối 202 (components/auto layout → hệ thống) + 167 (nguyên tắc thiết kế → hệ thống) + checklist dashboard OEE rút ra ở 202 (đặt tên frame/lớp hệ thống, component dùng lại, auto layout) — mục tiêu: tư duy design system cho mạch dashboard dài hạn. muse-main quyết theo ủy quyền 20/11: DUYỆT BỔ SUNG khóa nối này (không nằm trong danh sách 12 khóa AI/Dev Anh duyệt 21/11 13:59) vì đợt 12 đã xong 11/12 + 199 đang làm, Ú rảnh không còn khóa đã duyệt; khóa FREE chính thức cùng nhà cung cấp với 202, nối trực tiếp 202; link đã kiểm chứng lại 21/11 16:19 trước khi giao (help.figma.com: 6 chapters, Overview ~2h, 4 bài + 7 video + 1 Community file; 2 nguồn thứ cấp khớp FREE/không chứng chỉ). [16:25 muse-1: Da claim, bat dau khao sat khoa Introduction to Design Systems (Figma Learn)]\n\n[Dashboard #12 — Anh, 21/11 18:46] DUYỆT.",
+  "preferred_assignee": "muse-1",
+  "priority": "medium",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "feature/203-tu-hoc-introduction-to-design-systems",
+    "evidence": "research/203-tu-hoc-introduction-to-design-systems.md, commit 59dc45b tren branch feature/203-tu-hoc-introduction-to-design-systems",
+    "notes": "Bao cao tu hoc Introduction to Design Systems xong: 4 bai viet + 7 video + 1 Community file, ~2h theo Overview / 200 phut theo trang section (doi chieu ro: Update 1 tokens 30m dua tong len 200), FREE doc cong khai khong can dang nhap, KHONG co chung chi chinh thuc (kiem chung lai 21/11: trang chinh thuc im lang + Untitled UI/Coursya noi thang); hoc sau audit/principles/foundations/atomic/naming/tokens 3 tang/versioning; doi chieu 202 (thao tac -> he thong) + 167 (nguyen tac -> he thong), nang cap checklist dashboard OEE; khong tao tai khoan Figma, khong thuc hanh trong editor, thoi luong tung video + noi dung Community file ghi Chua xac dinh.",
+    "review": {
+      "at": "2026-11-21T18:43:24+07:00",
+      "by": "muse-main",
+      "note": "Dat (8/10). muse-main kiem chung doc lap 21/11: trang Overview Figma Learn khop \"4 written lessons (+ 7 videos, 1 Community file)\", \"Approximately 2 hours\", 4 ket qua hoc tap, muc luc gom atomic design, dayToggle, actionPresentationCard, daySelector, tokens/variables/modes; trang section khop \"6 chapters, 200 minutes, Beginner friendly\" + thoi luong tung bai 10/45/40/45/30/30 = 200 phut; Untitled UI khop FREE, ~2h, Intermediate, \"Figma has no official certification\"; Lesson 1/2/4 khop 4 phan principles/foundations/documentation/processes, 7 pha quy trinh, ket \"marathon, not a sprint\", case Habitz/Kai. Quy dao sach, so lieu khop nguon goc. Diem tru: bai Update 1 chua doc toan van, thoi luong tung video + noi dung Community file ghi Chua xac dinh, khong thuc hanh trong editor (dung gioi han §9). Review 8/10 xac dinh luc 17:26-17:30 tu ban nop cua Ú; doi tuong review co cau truc duoc bo sung luc merge vi worker dung o buoc cham review do he thong gan co rui ro thuc thi tren branch (Anh duyet cho merge 18:42).",
+      "rounds": 1,
+      "score": 8
+    },
+    "test": {
+      "device_test": "",
+      "evidence": "research/203-tu-hoc-introduction-to-design-systems.md, commit 59dc45b tren branch feature/203-tu-hoc-introduction-to-design-systems",
+      "install": "",
+      "validate": ""
+    }
+  },
+  "status": "done",
+  "title": "Tự học Introduction to Design Systems",
+  "type": "research",
+  "updated_at": "2026-11-21T18:43:24+07:00"
 }
