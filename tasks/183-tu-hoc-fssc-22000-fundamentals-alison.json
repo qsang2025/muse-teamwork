@@ -1,6 +1,6 @@
 {
   "assignee": "muse-1",
-  "branch": "",
+  "branch": "feature/183-fssc-22000-fundamentals-alison",
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
