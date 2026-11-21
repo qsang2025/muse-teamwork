@@ -1,1 +1,33 @@
-{"assignee":"","branch":"","checklist":["Quét repo đích + tasks/open + ROADMAP (chống trùng)","Claim task (script claim-task.sh) + tạo branch","Build / khảo sát xong, test đầy đủ","Push branch, cập nhật task sang review","muse-main kiểm tra + merge, task sang done"],"claim_expires_at":"","claimed_at":"","created_at":"2026-11-22T00:20:00+07:00","created_by":"muse-main","id":"207-tu-hoc-excel-skills-for-business-advance","notes":"Khóa 4/4 chuỗi Excel Skills for Business (Macquarie University, Coursera), nối 179 → 204 → 205 → 206. muse-main quyết theo ủy quyền 20/11: chọn Advanced để khép chuỗi 4 khóa (ranh giới §10 — chọn khóa học tiếp theo trong danh sách đã duyệt); ngã rẽ sau 206 ĐÃ QUYẾT: Advanced trước, Power Tools (Power Query/Power Pivot) để sau — chỉ học khi việc gộp nhiều file tháng thành nút thắt thật, theo đề xuất 205/206 (áp dụng vào file thật trước, cần Anh quyết vì dùng dữ liệu thật của nhà máy). FREE (kiểm chứng 22/11 00:20): trang Coursera chính thức — 7 module, 3 tuần (~10 giờ/tuần), 271.758 ghi danh, 6.306 reviews, giảng viên Nicky Bull; syllabus MOOC-list: W1 Spreadsheet Design and Documentation, W2 Advanced Formula Techniques, W3 Data Cleaning and Preparation, W4 Financial Functions and Working with Dates, W5 Advanced Lookup Functions, W6 Building Professional Dashboards + Final Assessment. Link MOOC-list: https://www.mooc-list.com/course/excel-skills-business-advanced-coursera — worker tự kiểm chứng lại trang Coursera chính thức (slug excel-advanced) trước khi học. Học theo §9: chỉ nội dung FREE công khai; học qua trang khóa + syllabus công khai + tài liệu chuẩn, KHÔNG ghi danh trả phí/chứng chỉ, KHÔNG làm quiz/bài tập chấm điểm thay Anh; phần sau đăng nhập/video bài giảng ghi Chưa xác định. Nối 179/204/205/206: đối chiếu dashboard OEE/TblCa đã làm — công thức nâng cao, lookup nâng cao, làm sạch dữ liệu, hàm tài chính/ngày tháng, thiết kế + tài liệu bảng tính, dashboard chuyên nghiệp; KHÔNG dùng dữ liệu thật của nhà máy. Báo cáo research/207-*.md ghi rõ phần nào áp dụng được ngay cho dashboard OEE/TblCa + ngã rẽ tiếp theo (Power Tools hay dừng chuỗi Excel).","preferred_assignee":"muse-1","priority":"medium","repo":"muse-teamwork","result":{"branch":"","notes":"","test":{"device_test":"","install":"","validate":""}},"status":"open","title":"Tự học Excel Skills for Business: Advanced","type":"research","updated_at":"2026-11-22T00:20:00+07:00"}
+{
+  "assignee": "muse-1",
+  "branch": "",
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "claim_expires_at": "2026-11-22T02:25:31+07:00",
+  "claimed_at": "2026-11-22T00:25:31+07:00",
+  "created_at": "2026-11-22T00:20:00+07:00",
+  "created_by": "muse-main",
+  "id": "207-tu-hoc-excel-skills-for-business-advance",
+  "notes": "Khóa 4/4 chuỗi Excel Skills for Business (Macquarie University, Coursera), nối 179 → 204 → 205 → 206. muse-main quyết theo ủy quyền 20/11: chọn Advanced để khép chuỗi 4 khóa (ranh giới §10 — chọn khóa học tiếp theo trong danh sách đã duyệt); ngã rẽ sau 206 ĐÃ QUYẾT: Advanced trước, Power Tools (Power Query/Power Pivot) để sau — chỉ học khi việc gộp nhiều file tháng thành nút thắt thật, theo đề xuất 205/206 (áp dụng vào file thật trước, cần Anh quyết vì dùng dữ liệu thật của nhà máy). FREE (kiểm chứng 22/11 00:20): trang Coursera chính thức — 7 module, 3 tuần (~10 giờ/tuần), 271.758 ghi danh, 6.306 reviews, giảng viên Nicky Bull; syllabus MOOC-list: W1 Spreadsheet Design and Documentation, W2 Advanced Formula Techniques, W3 Data Cleaning and Preparation, W4 Financial Functions and Working with Dates, W5 Advanced Lookup Functions, W6 Building Professional Dashboards + Final Assessment. Link MOOC-list: https://www.mooc-list.com/course/excel-skills-business-advanced-coursera — worker tự kiểm chứng lại trang Coursera chính thức (slug excel-advanced) trước khi học. Học theo §9: chỉ nội dung FREE công khai; học qua trang khóa + syllabus công khai + tài liệu chuẩn, KHÔNG ghi danh trả phí/chứng chỉ, KHÔNG làm quiz/bài tập chấm điểm thay Anh; phần sau đăng nhập/video bài giảng ghi Chưa xác định. Nối 179/204/205/206: đối chiếu dashboard OEE/TblCa đã làm — công thức nâng cao, lookup nâng cao, làm sạch dữ liệu, hàm tài chính/ngày tháng, thiết kế + tài liệu bảng tính, dashboard chuyên nghiệp; KHÔNG dùng dữ liệu thật của nhà máy. Báo cáo research/207-*.md ghi rõ phần nào áp dụng được ngay cho dashboard OEE/TblCa + ngã rẽ tiếp theo (Power Tools hay dừng chuỗi Excel).",
+  "preferred_assignee": "muse-1",
+  "priority": "medium",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "",
+    "notes": "",
+    "test": {
+      "device_test": "",
+      "install": "",
+      "validate": ""
+    }
+  },
+  "status": "claimed",
+  "title": "Tự học Excel Skills for Business: Advanced",
+  "type": "research",
+  "updated_at": "2026-11-22T00:20:00+07:00"
+}
