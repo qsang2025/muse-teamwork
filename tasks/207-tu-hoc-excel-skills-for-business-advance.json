@@ -18,15 +18,17 @@
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
-    "branch": "",
-    "notes": "",
+    "branch": "feature/207-tu-hoc-excel-skills-for-business-advance",
+    "notes": "Khép chuỗi 4 khóa Excel: kiểm chứng Coursera 271.758 ghi danh/6.306 reviews/7 module khớp notes; syllabus 6 tuần W1 Design -> W6 Dashboards; đề xuất dừng chuỗi Excel, áp 6 việc vào file 206 trước, Power Tools chỉ khi gộp file tháng thành nút thắt thật.",
     "test": {
       "device_test": "",
       "install": "",
-      "validate": ""
-    }
+      "validate": "",
+      "evidence": "research/207-tu-hoc-excel-skills-for-business-advance.md, commit 3518cbd, Coursera/ClassCentral/MOOC-list đọc 22/11/2026"
+    },
+    "evidence": "research/207-tu-hoc-excel-skills-for-business-advance.md, commit 3518cbd, Coursera/ClassCentral/MOOC-list đọc 22/11/2026"
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học Excel Skills for Business: Advanced",
   "type": "research",
   "updated_at": "2026-11-22T00:20:00+07:00"
