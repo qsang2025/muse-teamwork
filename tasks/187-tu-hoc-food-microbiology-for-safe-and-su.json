@@ -7,7 +7,7 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "review",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-21T13:11:37+07:00",
   "claimed_at": "2026-11-21T13:25:29+07:00",
@@ -19,7 +19,14 @@
       "device_test": "n/a",
       "install": "n/a"
     },
-    "notes": "Bao cao tu hoc Food Microbiology for Safe and Sustainable Food Systems (NPTEL/IIT Kharagpur) tai research/187-food-microbiology-nptel.md (155 dong): 5 muc tieu chinh thuc, pho co loi-co hai, nhiem ban 3 nhom, dong hoc tang truong (phan doi, 4 pha, thoi gian the he), yeu to noi/ngoai tai (dinh duong/pH/aw/Eh/nhiet do/do am/khi), hu hong + 3 co che benh (nhiem trung/nhiem doc/nhiem doc-nhiem trung), kiem soat nhiet + hoa hoc + ve sinh van hanh, khung danh gia rui ro vi sinh cho sua bot (song sot sau pha, khong phai phat trien trong bao) va vu doi bao bi duong 25->50kg (thoi gian phoi, moi han chan am, dieu kien kho), doi chieu 173/182/183/184/185 + checklist FSSC v7. Chi hoc FREE cong khai qua Class Central + 7 transcript (C16/C18/C28/C29/C31/C35/C36), khong ghi danh/thi/chung chi (s9). Tong so bai + syllabus PDF + Cronobacter trong khoa: Chua xac dinh."
+    "notes": "Bao cao tu hoc Food Microbiology for Safe and Sustainable Food Systems (NPTEL/IIT Kharagpur) tai research/187-food-microbiology-nptel.md (155 dong): 5 muc tieu chinh thuc, pho co loi-co hai, nhiem ban 3 nhom, dong hoc tang truong (phan doi, 4 pha, thoi gian the he), yeu to noi/ngoai tai (dinh duong/pH/aw/Eh/nhiet do/do am/khi), hu hong + 3 co che benh (nhiem trung/nhiem doc/nhiem doc-nhiem trung), kiem soat nhiet + hoa hoc + ve sinh van hanh, khung danh gia rui ro vi sinh cho sua bot (song sot sau pha, khong phai phat trien trong bao) va vu doi bao bi duong 25->50kg (thoi gian phoi, moi han chan am, dieu kien kho), doi chieu 173/182/183/184/185 + checklist FSSC v7. Chi hoc FREE cong khai qua Class Central + 7 transcript (C16/C18/C28/C29/C31/C35/C36), khong ghi danh/thi/chung chi (s9). Tong so bai + syllabus PDF + Cronobacter trong khoa: Chua xac dinh.",
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T13:32:00+07:00",
+      "note": "Dat 8/10 vong 1, merge 721033a. muse-main kiem chung doc lap: trang khoa Class Central co that (5 muc tieu hoc tap khop tung chu voi bao cao, gia 0 USD, doi tuong + trinh do yeu cau khop); khoa A9 dung danh sach 20 da duyet (research/171 dong 17); khong trung (chi task 187 ve khoa nay). Diem tru nho: chi doc mau 7 transcript (C16/C18/C28/C29/C31/C35/C36), tong so bai + syllabus PDF + Cronobacter trong khoa ghi Chua xac dinh."
+    }
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
@@ -29,5 +36,5 @@
     "muse-main kiểm tra + merge, task sang done"
   ],
   "notes": "Khóa số 9, mạch A (An toàn thực phẩm & chất lượng), trong danh sách 20 khóa công việc Anh duyệt 21/11 08:31 trong voice call. Bằng chứng: research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main (dòng A9). Khóa: Food Microbiology for Safe and Sustainable Food Systems, NPTEL / IIT Kharagpur, 8 tuần (~23,5 giờ video), https://onlinecourses.nptel.ac.in/noc25_ag14/preview — vi sinh gây hỏng sữa bột, nền tảng đánh giá rủi ro vi sinh vụ đổi bao bì đường. Học theo §9: chỉ nội dung FREE công khai (học qua syllabus/mô tả công khai; NPTEL miễn phí học, chỉ thu phí thi chứng chỉ); ghi Chưa xác định khi không xem được nội dung sau đăng ký. muse-main quyết theo ủy quyền 20/11: giao tiếp mạch A sau khi 185 merge xong.",
-  "updated_at": "2026-11-21T13:27:21+07:00"
+  "updated_at": "2026-11-21T13:32:00+07:00"
 }

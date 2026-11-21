@@ -48,3 +48,6 @@ Dự phòng (trùng nội dung với B3, không xếp hạng): Total Productive 
 - 171: DONE 21/11 08:47 (Ú, review 8/10, merge lên main).
 - 173: Advanced HACCP Training (A2) — Ú (muse-1), tạo 21/11 (Ú rảnh sau 171).
 - Các khóa còn lại giao tiếp theo thứ tự trong từng mạch khi một bạn rảnh (§10a), xen kẽ 2 mạch để cân bằng.
+- 187: Food Microbiology for Safe and Sustainable Food Systems (A9) — Ú (muse-1), tạo 21/11 (Ú rảnh sau 185).
+- 187: DONE 21/11 13:30 (Ú, review 8/10, merge lên main, research/187-food-microbiology-nptel.md, 155 dòng).
+- 188: Dairy Manufacturing Module 1 (A10, khóa cuối mạch A) — Ú (muse-1), tạo 21/11 (Ú rảnh sau 187).
