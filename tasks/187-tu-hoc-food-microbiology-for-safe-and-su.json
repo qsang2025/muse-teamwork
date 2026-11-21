@@ -3,7 +3,7 @@
   "title": "Tự học Food Microbiology for Safe and Sustainable Food Systems (NPTEL)",
   "type": "research",
   "repo": "muse-teamwork",
-  "branch": "",
+  "branch": "feature/187-food-microbiology-nptel",
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
@@ -29,5 +29,5 @@
     "muse-main kiểm tra + merge, task sang done"
   ],
   "notes": "Khóa số 9, mạch A (An toàn thực phẩm & chất lượng), trong danh sách 20 khóa công việc Anh duyệt 21/11 08:31 trong voice call. Bằng chứng: research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main (dòng A9). Khóa: Food Microbiology for Safe and Sustainable Food Systems, NPTEL / IIT Kharagpur, 8 tuần (~23,5 giờ video), https://onlinecourses.nptel.ac.in/noc25_ag14/preview — vi sinh gây hỏng sữa bột, nền tảng đánh giá rủi ro vi sinh vụ đổi bao bì đường. Học theo §9: chỉ nội dung FREE công khai (học qua syllabus/mô tả công khai; NPTEL miễn phí học, chỉ thu phí thi chứng chỉ); ghi Chưa xác định khi không xem được nội dung sau đăng ký. muse-main quyết theo ủy quyền 20/11: giao tiếp mạch A sau khi 185 merge xong.",
-  "updated_at": "2026-11-21T13:11:37+07:00"
+  "updated_at": "2026-11-21T13:27:21+07:00"
 }
