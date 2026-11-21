@@ -3,7 +3,9 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover" />
-<title>Muse.ai Fleet Console — Phòng Điều Phối 3 Muse</title>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="theme-color" content="#0d1321" />
+<title>Muse.ai Fleet Console v4.0 — Phòng Điều Phối 3 Muse</title>
 <style>
   :root {
     --sb-bg: #0d1321;
@@ -33,8 +35,6 @@
     --red-soft: rgba(220,38,38,.10);
     --purple: #7c3aed;
     --purple-soft: rgba(124,58,237,.10);
-    --teal: #0d9488;
-    --teal-soft: rgba(13,148,136,.10);
 
     --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -56,7 +56,6 @@
     --amber-soft: rgba(245,158,11,.15);
     --red-soft: rgba(239,68,68,.15);
     --purple-soft: rgba(167,139,250,.15);
-    --teal-soft: rgba(45,212,191,.14);
     --shadow: 0 4px 24px rgba(0,0,0,.35);
   }
 
@@ -68,60 +67,45 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  button, input, select, textarea {
-    font-family: inherit; font-size: inherit; color: inherit;
-  }
+  button, input, select, textarea { font-family: inherit; font-size: inherit; color: inherit; }
   button { cursor: pointer; }
   a { color: var(--blue); text-decoration: none; }
   a:hover { text-decoration: underline; }
 
-  /* ===== APP SHELL ===== */
   .app {
     display: grid;
-    grid-template-columns: 268px minmax(0, 1fr) auto;
+    grid-template-columns: 264px minmax(0, 1fr) auto;
     height: 100dvh;
     width: 100vw;
     overflow: hidden;
   }
 
-  /* ===== LEFT SIDEBAR (DARK FLEET CONSOLE) ===== */
+  /* ===== SIDEBAR ===== */
   .sidebar {
-    background: var(--sb-bg);
-    color: var(--sb-text);
-    display: flex;
-    flex-direction: column;
-    border-right: 1px solid var(--sb-border);
-    min-height: 0;
-    z-index: 40;
+    background: var(--sb-bg); color: var(--sb-text);
+    display: flex; flex-direction: column;
+    border-right: 1px solid var(--sb-border); min-height: 0; z-index: 40;
   }
   .sb-brand {
-    padding: 14px 14px 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    padding: 12px 14px 10px; display: flex; align-items: center; gap: 10px;
     border-bottom: 1px solid var(--sb-border);
   }
   .sb-logo {
     width: 34px; height: 34px; border-radius: 10px;
     background: linear-gradient(135deg, #2563eb, #7c3aed);
-    display: grid; place-items: center; font-weight: 800; font-size: 15px; color: #fff;
-    flex-shrink: 0;
+    display: grid; place-items: center; font-weight: 800; font-size: 14px; color: #fff; flex-shrink: 0;
   }
   .sb-brand-txt { min-width: 0; flex: 1; }
   .sb-brand-title { font-weight: 700; font-size: 14px; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .sb-brand-sub { font-size: 11.5px; color: #4ade80; display: flex; align-items: center; gap: 5px; }
+  .sb-brand-sub { font-size: 11px; color: #4ade80; display: flex; align-items: center; gap: 5px; }
   .dot-live { width: 7px; height: 7px; border-radius: 50%; background: #22c55e; display: inline-block; box-shadow: 0 0 8px #22c55e; }
   .dot-live.stale { background: #f59e0b; box-shadow: 0 0 8px #f59e0b; }
 
-  .sb-view-switch {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 6px;
-    padding: 10px 12px 6px;
-  }
+  .sb-view-switch { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 10px 12px 6px; }
   .vbtn {
     border: 1px solid transparent; background: var(--sb-bg2); color: var(--sb-muted);
     border-radius: 9px; padding: 8px 6px; font-size: 12.5px; font-weight: 600;
-    display: flex; align-items: center; justify-content: center; gap: 5px;
-    transition: .15s ease;
+    display: flex; align-items: center; justify-content: center; gap: 5px; transition: .15s;
   }
   .vbtn:hover { color: #fff; background: var(--sb-hover); }
   .vbtn.active { background: var(--sb-active); color: #fff; box-shadow: 0 2px 10px rgba(37,99,235,.4); }
@@ -132,7 +116,6 @@
     border-radius: 8px; padding: 7px 10px; font-size: 12.5px; color: #fff; outline: none;
   }
   .sb-search input::placeholder { color: var(--sb-muted); }
-  .sb-search input:focus { border-color: #3b82f6; }
 
   .sb-scroll { flex: 1; overflow-y: auto; padding: 4px 10px 12px; min-height: 0; }
   .sb-scroll::-webkit-scrollbar { width: 5px; }
@@ -140,23 +123,19 @@
 
   .sb-sec {
     font-size: 10.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-    color: var(--sb-muted); padding: 12px 8px 5px; display: flex; align-items: center; justify-content: space-between;
+    color: var(--sb-muted); padding: 11px 8px 5px; display: flex; align-items: center; justify-content: space-between;
   }
   .ch-btn {
     width: 100%; border: 0; background: transparent; color: var(--sb-text);
     text-align: left; padding: 7px 9px; border-radius: 8px;
     display: flex; align-items: center; gap: 8px; font-size: 13px; margin-bottom: 2px;
-    transition: .12s;
   }
   .ch-btn:hover { background: var(--sb-hover); }
   .ch-btn.active { background: var(--sb-active); color: #fff; font-weight: 600; }
   .ch-hash { color: var(--sb-muted); font-family: var(--mono); font-weight: 700; width: 14px; text-align: center; flex-shrink: 0; }
   .ch-btn.active .ch-hash { color: rgba(255,255,255,.85); }
   .ch-label { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .ch-badge {
-    font-size: 11px; font-weight: 700; padding: 1px 6px; border-radius: 999px;
-    background: rgba(255,255,255,.12); color: #e2e8f0; flex-shrink: 0;
-  }
+  .ch-badge { font-size: 11px; font-weight: 700; padding: 1px 6px; border-radius: 999px; background: rgba(255,255,255,.12); color: #e2e8f0; }
   .ch-badge.alert { background: #ef4444; color: #fff; }
   .ch-badge.live { background: #16a34a; color: #fff; }
 
@@ -171,10 +150,7 @@
     width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center;
     font-weight: 700; font-size: 12px; color: #fff; flex-shrink: 0; position: relative;
   }
-  .av-dot {
-    position: absolute; right: -1px; bottom: -1px; width: 9px; height: 9px;
-    border-radius: 50%; border: 2px solid var(--sb-bg); background: #22c55e;
-  }
+  .av-dot { position: absolute; right: -1px; bottom: -1px; width: 9px; height: 9px; border-radius: 50%; border: 2px solid var(--sb-bg); background: #22c55e; }
   .av-dot.busy { background: #3b82f6; }
   .av-dot.idle { background: #94a3b8; }
   .ag-info { min-width: 0; flex: 1; }
@@ -195,32 +171,19 @@
   .icon-btn:hover { background: var(--sb-hover); }
   .icon-btn.ok { border-color: rgba(34,197,94,.45); color: #4ade80; }
 
-  /* ===== CENTER WORKSPACE ===== */
-  .main-pane {
-    display: flex; flex-direction: column; min-width: 0; min-height: 0;
-    background: var(--panel);
-  }
+  /* ===== CENTER PANE ===== */
+  .main-pane { display: flex; flex-direction: column; min-width: 0; min-height: 0; background: var(--panel); position: relative; }
   .chat-header {
-    padding: 10px 16px; border-bottom: 1px solid var(--line);
-    display: flex; align-items: center; gap: 10px; background: var(--panel);
-    flex-shrink: 0;
+    padding: 9px 14px; border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; gap: 10px; background: var(--panel); flex-shrink: 0;
   }
-  .menu-toggle {
-    display: none; border: 1px solid var(--line2); background: var(--panel2);
-    border-radius: 8px; padding: 6px 9px; font-size: 15px;
-  }
+  .menu-toggle { display: none; border: 1px solid var(--line2); background: var(--panel2); border-radius: 8px; padding: 5px 9px; font-size: 15px; }
   .ch-head-info { flex: 1; min-width: 0; }
-  .ch-head-title {
-    display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px;
-  }
-  .ch-head-tag {
-    font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 999px;
-    background: var(--blue-soft); color: var(--blue);
-  }
-  .ch-head-sub {
-    font-size: 12px; color: var(--ink3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-  }
+  .ch-head-title { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; }
+  .ch-head-tag { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 999px; background: var(--blue-soft); color: var(--blue); }
+  .ch-head-sub { font-size: 11.5px; color: var(--ink3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .hdr-actions { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+
   .btn {
     border: 1px solid var(--line2); background: var(--panel); color: var(--ink);
     border-radius: 8px; padding: 6px 10px; font-size: 12.5px; font-weight: 600;
@@ -228,30 +191,39 @@
   }
   .btn:hover { background: var(--panel2); }
   .btn.primary { background: var(--blue); border-color: var(--blue); color: #fff; }
-  .btn.primary:hover { filter: brightness(1.07); }
   .btn.good { background: var(--green); border-color: var(--green); color: #fff; }
   .btn.warn { background: var(--amber); border-color: var(--amber); color: #fff; }
   .btn.sm { padding: 4px 8px; font-size: 11.5px; border-radius: 7px; }
 
-  /* Live 3-Muse Strip */
+  /* Live 3-Muse Strip + SVG Ring Timer */
   .live-strip {
-    padding: 7px 16px; border-bottom: 1px solid var(--line); background: var(--panel2);
+    padding: 7px 14px; border-bottom: 1px solid var(--line); background: var(--panel2);
     display: flex; align-items: center; gap: 8px; overflow-x: auto; flex-shrink: 0;
   }
-  .live-strip::-webkit-scrollbar { height: 4px; }
   .muse-pill {
     display: inline-flex; align-items: center; gap: 7px; padding: 4px 10px;
     border-radius: 999px; background: var(--panel); border: 1px solid var(--line2);
-    font-size: 12px; white-space: nowrap; flex-shrink: 0; transition: .12s;
+    font-size: 12px; white-space: nowrap; flex-shrink: 0;
   }
   .muse-pill:hover { border-color: var(--blue); }
-  .muse-pill .mp-name { font-weight: 700; }
-  .muse-pill .mp-task { color: var(--ink2); max-width: 190px; overflow: hidden; text-overflow: ellipsis; }
-  .muse-pill .mp-ttl { font-family: var(--mono); font-size: 11px; color: var(--amber); font-weight: 600; }
+  .ring-svg { width: 16px; height: 16px; transform: rotate(-90deg); flex-shrink: 0; }
 
-  /* Filter Chips Bar */
+  /* Mini Flow Graph (Status Diagram) */
+  .flow-bar {
+    padding: 8px 14px; border-bottom: 1px solid var(--line); background: var(--bg);
+    display: none; flex-direction: column; gap: 6px; flex-shrink: 0;
+  }
+  .flow-bar.open { display: flex; }
+  .flow-nodes { display: flex; align-items: center; gap: 6px; overflow-x: auto; padding: 2px 0; }
+  .fnode {
+    background: var(--panel); border: 1px solid var(--line2); border-radius: 9px;
+    padding: 5px 10px; font-size: 11.5px; white-space: nowrap; flex-shrink: 0;
+  }
+  .fnode b { display: block; font-size: 12px; }
+  .farrow { color: var(--blue); font-weight: 800; font-size: 14px; flex-shrink: 0; }
+
   .filter-strip {
-    padding: 6px 16px; border-bottom: 1px solid var(--line);
+    padding: 6px 14px; border-bottom: 1px solid var(--line);
     display: flex; align-items: center; gap: 6px; overflow-x: auto; flex-shrink: 0;
   }
   .fchip {
@@ -262,55 +234,49 @@
 
   /* Chat Feed */
   .chat-feed {
-    flex: 1; overflow-y: auto; padding: 14px 18px 18px; min-height: 0;
-    display: flex; flex-direction: column; gap: 2px;
+    flex: 1; overflow-y: auto; padding: 12px 16px 16px; min-height: 0;
+    display: flex; flex-direction: column; gap: 3px;
   }
   .chat-feed::-webkit-scrollbar { width: 7px; }
   .chat-feed::-webkit-scrollbar-thumb { background: var(--line2); border-radius: 4px; }
 
-  .day-sep {
-    display: flex; align-items: center; gap: 10px; margin: 12px 0 8px;
-    color: var(--ink3); font-size: 11.5px; font-weight: 600;
+  /* Shift Digest Card */
+  .digest-card {
+    background: linear-gradient(135deg, var(--blue-soft), var(--purple-soft));
+    border: 1px solid var(--line2); border-radius: 12px; padding: 11px 14px; margin-bottom: 10px;
   }
+  .digest-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-weight: 700; font-size: 13px; }
+  .digest-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 8px; margin-top: 8px; font-size: 12px; }
+  .digest-item { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 7px 9px; }
+
+  .day-sep { display: flex; align-items: center; gap: 10px; margin: 10px 0 6px; color: var(--ink3); font-size: 11px; font-weight: 600; }
   .day-sep::before, .day-sep::after { content: ""; flex: 1; height: 1px; background: var(--line); }
 
-  .msg {
-    display: flex; gap: 11px; padding: 8px 10px; border-radius: 10px;
-    transition: background .1s;
-  }
+  .msg { display: flex; gap: 10px; padding: 7px 10px; border-radius: 10px; }
   .msg:hover { background: var(--panel2); }
   .msg.highlight { background: var(--amber-soft); border: 1px solid rgba(217,119,6,.25); }
   .msg.commander { background: var(--blue-soft); border: 1px solid rgba(37,99,235,.18); }
 
-  .msg-av {
-    width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center;
-    font-weight: 800; font-size: 13px; color: #fff; flex-shrink: 0; margin-top: 2px;
-  }
+  .msg-av { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 12px; color: #fff; flex-shrink: 0; margin-top: 2px; }
   .msg-body { flex: 1; min-width: 0; }
   .msg-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px; margin-bottom: 2px; }
-  .msg-author { font-weight: 700; font-size: 13.5px; }
-  .msg-role {
-    font-size: 10.5px; font-weight: 600; padding: 1px 6px; border-radius: 5px;
-    background: var(--panel2); color: var(--ink3); border: 1px solid var(--line);
-  }
+  .msg-author { font-weight: 700; font-size: 13px; }
+  .msg-role { font-size: 10.5px; font-weight: 600; padding: 1px 6px; border-radius: 5px; background: var(--panel2); color: var(--ink3); border: 1px solid var(--line); }
   .msg-time { font-size: 11px; color: var(--ink3); font-family: var(--mono); }
-  .msg-task-link {
-    font-family: var(--mono); font-size: 11px; font-weight: 700; padding: 1px 6px;
-    border-radius: 5px; background: var(--blue-soft); color: var(--blue); border: 0;
-  }
-  .msg-task-link:hover { text-decoration: underline; }
+  .msg-task-link { font-family: var(--mono); font-size: 11px; font-weight: 700; padding: 1px 6px; border-radius: 5px; background: var(--blue-soft); color: var(--blue); border: 0; }
   .msg-text { font-size: 13.5px; color: var(--ink); white-space: pre-wrap; word-break: break-word; }
 
-  .msg-card {
-    margin-top: 7px; border: 1px solid var(--line2); background: var(--panel);
-    border-radius: 10px; padding: 10px 12px; box-shadow: var(--shadow);
+  .log-group-btn {
+    margin-top: 5px; border: 1px dashed var(--line2); background: var(--panel2); color: var(--ink2);
+    border-radius: 7px; padding: 3px 9px; font-size: 11.5px; font-weight: 600;
   }
+  .log-group-list { margin-top: 6px; padding-left: 10px; border-left: 2px solid var(--line2); display: none; flex-direction: column; gap: 5px; }
+  .log-group-list.open { display: flex; }
+
+  .msg-card { margin-top: 7px; border: 1px solid var(--line2); background: var(--panel); border-radius: 10px; padding: 10px 12px; box-shadow: var(--shadow); }
   .mc-top { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 5px; }
   .mc-title { font-weight: 700; font-size: 13px; color: var(--ink); }
-  .pill {
-    font-size: 11px; font-weight: 600; padding: 2px 7px; border-radius: 999px;
-    display: inline-flex; align-items: center; gap: 4px;
-  }
+  .pill { font-size: 11px; font-weight: 600; padding: 2px 7px; border-radius: 999px; display: inline-flex; align-items: center; gap: 4px; }
   .p-open { background: var(--panel2); color: var(--ink2); }
   .p-doing { background: var(--blue-soft); color: var(--blue); }
   .p-review { background: var(--amber-soft); color: var(--amber); }
@@ -319,143 +285,113 @@
   .p-score { background: var(--purple-soft); color: var(--purple); font-weight: 700; }
   .mc-actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
 
-  /* Composer */
-  .composer {
-    border-top: 1px solid var(--line); padding: 10px 16px 12px;
-    background: var(--panel); flex-shrink: 0;
+  /* Composer + Slash Menu */
+  .composer { border-top: 1px solid var(--line); padding: 9px 14px 10px; background: var(--panel); flex-shrink: 0; position: relative; }
+  .slash-menu {
+    position: absolute; left: 14px; right: 14px; bottom: 100%; margin-bottom: 6px;
+    background: var(--panel); border: 1px solid var(--line2); border-radius: 11px;
+    box-shadow: 0 12px 32px rgba(0,0,0,.18); padding: 6px; display: none; z-index: 50;
   }
-  .comp-bar {
-    display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 7px;
+  .slash-menu.open { display: block; }
+  .slash-item {
+    width: 100%; text-align: left; border: 0; background: transparent; padding: 7px 10px;
+    border-radius: 7px; display: flex; justify-content: space-between; gap: 8px; font-size: 12.5px;
   }
-  .comp-select {
-    border: 1px solid var(--line2); background: var(--panel2); border-radius: 8px;
-    padding: 4px 8px; font-size: 12px; font-weight: 600; outline: none;
-  }
-  .comp-box {
-    display: flex; align-items: flex-end; gap: 8px;
-    border: 1px solid var(--line2); background: var(--panel2); border-radius: 12px;
-    padding: 7px 9px;
-  }
+  .slash-item:hover { background: var(--panel2); }
+  .comp-bar { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }
+  .comp-select { border: 1px solid var(--line2); background: var(--panel2); border-radius: 8px; padding: 4px 8px; font-size: 12px; font-weight: 600; outline: none; }
+  .comp-box { display: flex; align-items: flex-end; gap: 8px; border: 1px solid var(--line2); background: var(--panel2); border-radius: 11px; padding: 6px 9px; }
   .comp-box:focus-within { border-color: var(--blue); background: var(--panel); box-shadow: 0 0 0 3px var(--blue-soft); }
-  .comp-input {
-    flex: 1; border: 0; background: transparent; resize: none; outline: none;
-    font-size: 13.5px; line-height: 1.45; min-height: 22px; max-height: 110px; padding: 3px 2px;
-  }
-  .comp-send {
-    border: 0; background: var(--blue); color: #fff; border-radius: 9px;
-    padding: 8px 14px; font-weight: 700; font-size: 13px;
-    display: inline-flex; align-items: center; gap: 5px; flex-shrink: 0;
-  }
-  .comp-send:hover { filter: brightness(1.08); }
+  .comp-input { flex: 1; border: 0; background: transparent; resize: none; outline: none; font-size: 13.5px; line-height: 1.45; min-height: 22px; max-height: 100px; padding: 3px 2px; }
+  .comp-send { border: 0; background: var(--blue); color: #fff; border-radius: 8px; padding: 7px 13px; font-weight: 700; font-size: 12.5px; flex-shrink: 0; }
 
-  /* ===== RIGHT INSPECTOR / REPORT READER ===== */
-  .inspector {
-    width: 410px; border-left: 1px solid var(--line); background: var(--panel);
-    display: flex; flex-direction: column; min-height: 0;
-  }
+  /* ===== RIGHT INSPECTOR & ZEN READER ===== */
+  .inspector { width: 420px; border-left: 1px solid var(--line); background: var(--panel); display: flex; flex-direction: column; min-height: 0; }
   .inspector.hidden { display: none; }
-  .insp-head {
-    padding: 11px 14px; border-bottom: 1px solid var(--line);
-    display: flex; align-items: center; justify-content: space-between; gap: 8px;
-  }
-  .insp-tabs { display: flex; gap: 4px; }
+  .inspector.zen { position: fixed; inset: 0; width: 100vw; z-index: 80; border-left: 0; }
+  .insp-head { padding: 10px 14px; border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 8px; }
   .insp-body { flex: 1; overflow-y: auto; padding: 14px; min-height: 0; }
   .insp-section { margin-bottom: 14px; }
-  .insp-section h4 {
-    margin: 0 0 6px; font-size: 11.5px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink3);
+  .insp-section h4 { margin: 0 0 6px; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink3); }
+
+  .toc-box { background: var(--panel2); border: 1px solid var(--line); border-radius: 9px; padding: 8px 10px; margin-bottom: 10px; font-size: 12px; }
+  .toc-link { display: block; padding: 2px 0; color: var(--blue); cursor: pointer; border: 0; background: transparent; text-align: left; width: 100%; }
+  .md-block { position: relative; padding: 3px 28px 3px 4px; border-radius: 6px; }
+  .md-block:hover { background: var(--panel2); }
+  .pin-btn {
+    position: absolute; right: 2px; top: 3px; border: 0; background: transparent;
+    opacity: .35; font-size: 12px; padding: 2px 4px; border-radius: 5px;
   }
-  .chk-item {
-    display: flex; align-items: flex-start; gap: 7px; font-size: 12.5px; padding: 4px 0;
-    border-bottom: 1px dashed var(--line);
-  }
-  .md-view { font-size: 13px; line-height: 1.6; color: var(--ink); }
-  .md-view h1, .md-view h2, .md-view h3 { margin: 14px 0 6px; line-height: 1.3; }
+  .md-block:hover .pin-btn { opacity: 1; background: var(--amber-soft); }
+  .md-view { font-size: 13px; line-height: 1.6; }
+  .md-view h1, .md-view h2, .md-view h3 { margin: 12px 0 5px; line-height: 1.3; }
   .md-view h1 { font-size: 17px; } .md-view h2 { font-size: 15px; } .md-view h3 { font-size: 13.5px; }
-  .md-view pre {
-    background: var(--sb-bg); color: #e2e8f0; padding: 10px; border-radius: 8px;
-    overflow-x: auto; font-family: var(--mono); font-size: 11.5px;
-  }
+  .md-view pre { background: var(--sb-bg); color: #e2e8f0; padding: 10px; border-radius: 8px; overflow-x: auto; font-family: var(--mono); font-size: 11.5px; }
   .md-view code { font-family: var(--mono); font-size: 12px; background: var(--panel2); padding: 1px 4px; border-radius: 4px; }
   .md-view pre code { background: transparent; padding: 0; }
-  .md-view table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 12px; }
-  .md-view th, .md-view td { border: 1px solid var(--line2); padding: 5px 7px; text-align: left; }
-  .md-view th { background: var(--panel2); }
+  .md-view table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 12px; display: block; overflow-x: auto; }
+  .md-view th, .md-view td { border: 1px solid var(--line2); padding: 5px 8px; text-align: left; }
+  .md-view th { background: var(--panel2); font-weight: 700; }
 
-  /* ===== DASHBOARD VIEW (KANBAN + LEARNING + ECOSYSTEM) ===== */
+  .pin-bar { padding: 9px 14px; border-top: 1px solid var(--line); background: var(--amber-soft); display: none; align-items: center; justify-content: space-between; gap: 8px; }
+  .pin-bar.open { display: flex; }
+
+  /* ===== DASHBOARD VIEW ===== */
   .dash-view { flex: 1; display: flex; flex-direction: column; min-height: 0; overflow: hidden; }
-  .dash-subnav {
-    padding: 8px 16px; border-bottom: 1px solid var(--line); background: var(--panel2);
-    display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
-  }
-  .dash-body { flex: 1; overflow-y: auto; padding: 14px 16px; min-height: 0; }
+  .dash-subnav { padding: 8px 14px; border-bottom: 1px solid var(--line); background: var(--panel2); display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+  .dash-body { flex: 1; overflow-y: auto; padding: 14px; min-height: 0; }
   .kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin-bottom: 14px; }
-  .kpi-card {
-    background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
-    padding: 12px 14px; box-shadow: var(--shadow);
-  }
+  .kpi-card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; box-shadow: var(--shadow); }
   .kpi-lbl { font-size: 11.5px; color: var(--ink3); font-weight: 600; }
   .kpi-val { font-size: 20px; font-weight: 800; margin-top: 2px; }
   .kpi-sub { font-size: 11.5px; color: var(--ink2); margin-top: 2px; }
-
-  .kanban { display: grid; grid-template-columns: repeat(4, minmax(220px, 1fr)); gap: 12px; align-items: start; }
+  .kanban { display: grid; grid-template-columns: repeat(4, minmax(210px, 1fr)); gap: 10px; align-items: start; }
   .k-col { background: var(--panel2); border: 1px solid var(--line); border-radius: var(--radius); padding: 10px; }
   .k-head { display: flex; align-items: center; justify-content: space-between; font-weight: 700; font-size: 13px; margin-bottom: 8px; }
-  .k-card {
-    background: var(--panel); border: 1px solid var(--line); border-radius: 9px;
-    padding: 9px 10px; margin-bottom: 8px; cursor: pointer; transition: .12s;
-  }
-  .k-card:hover { border-color: var(--blue); transform: translateY(-1px); }
+  .k-card { background: var(--panel); border: 1px solid var(--line); border-radius: 9px; padding: 9px 10px; margin-bottom: 8px; cursor: pointer; }
+  .k-card:hover { border-color: var(--blue); }
   .k-card-title { font-weight: 600; font-size: 12.5px; margin: 4px 0; }
   .k-card-meta { font-size: 11px; color: var(--ink3); display: flex; justify-content: space-between; gap: 6px; }
-
-  .track-card {
-    background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
-    padding: 12px 14px; margin-bottom: 10px;
-  }
+  .track-card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; margin-bottom: 10px; }
   .prog-bar { height: 7px; border-radius: 999px; background: var(--panel2); overflow: hidden; margin: 7px 0; }
   .prog-fill { height: 100%; background: linear-gradient(90deg, #2563eb, #16a34a); }
 
-  /* ===== MODAL (PAT / NEW TASK) ===== */
-  .modal-back {
-    position: fixed; inset: 0; background: rgba(15,23,42,.55);
-    display: none; place-items: center; z-index: 90; padding: 16px;
+  /* ===== MOBILE BOTTOM BAR ===== */
+  .mobile-nav {
+    display: none; border-top: 1px solid var(--line); background: var(--panel);
+    grid-template-columns: repeat(4, 1fr); flex-shrink: 0;
   }
+  .mnav-btn {
+    border: 0; background: transparent; padding: 7px 4px; font-size: 11px; font-weight: 600;
+    color: var(--ink3); display: flex; flex-direction: column; align-items: center; gap: 2px;
+  }
+  .mnav-btn.active { color: var(--blue); }
+
+  /* ===== MODALS ===== */
+  .modal-back { position: fixed; inset: 0; background: rgba(15,23,42,.55); display: none; place-items: center; z-index: 95; padding: 16px; }
   .modal-back.open { display: grid; }
-  .modal {
-    width: 100%; max-width: 460px; background: var(--panel); border: 1px solid var(--line2);
-    border-radius: 14px; padding: 18px; box-shadow: 0 20px 50px rgba(0,0,0,.35);
-  }
+  .modal { width: 100%; max-width: 480px; background: var(--panel); border: 1px solid var(--line2); border-radius: 14px; padding: 18px; box-shadow: 0 20px 50px rgba(0,0,0,.35); max-height: 90dvh; overflow-y: auto; }
   .modal h3 { margin: 0 0 8px; font-size: 16px; }
   .field { margin-bottom: 10px; }
   .field label { display: block; font-size: 12px; font-weight: 600; color: var(--ink2); margin-bottom: 4px; }
-  .field input, .field select, .field textarea {
-    width: 100%; border: 1px solid var(--line2); background: var(--panel2);
-    border-radius: 8px; padding: 8px 10px; outline: none;
-  }
+  .field input, .field select, .field textarea { width: 100%; border: 1px solid var(--line2); background: var(--panel2); border-radius: 8px; padding: 8px 10px; outline: none; }
 
-  .toast {
-    position: fixed; bottom: 82px; right: 20px; z-index: 100;
-    background: var(--sb-bg); color: #fff; padding: 10px 14px; border-radius: 10px;
-    font-size: 13px; box-shadow: 0 10px 30px rgba(0,0,0,.3); display: none;
-  }
+  .toast { position: fixed; bottom: 84px; right: 20px; z-index: 110; background: var(--sb-bg); color: #fff; padding: 10px 14px; border-radius: 10px; font-size: 13px; box-shadow: 0 10px 30px rgba(0,0,0,.3); display: none; }
   .toast.show { display: block; }
-
   .sb-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.5); z-index: 35; }
 
   @media (max-width: 1080px) {
-    .inspector { position: fixed; right: 0; top: 0; bottom: 0; z-index: 60; width: min(420px, 94vw); box-shadow: -8px 0 30px rgba(0,0,0,.25); }
+    .inspector { position: fixed; right: 0; top: 0; bottom: 0; z-index: 65; width: min(430px, 94vw); box-shadow: -8px 0 30px rgba(0,0,0,.25); }
   }
   @media (max-width: 820px) {
     .app { grid-template-columns: minmax(0, 1fr); }
-    .sidebar { position: fixed; left: 0; top: 0; bottom: 0; width: 275px; transform: translateX(-100%); transition: transform .2s ease; }
+    .sidebar { position: fixed; left: 0; top: 0; bottom: 0; width: 272px; transform: translateX(-100%); transition: transform .2s ease; }
     .sidebar.open { transform: translateX(0); }
     .sb-backdrop.open { display: block; }
     .menu-toggle { display: inline-flex; }
+    .mobile-nav { display: grid; }
     .kanban { grid-template-columns: 1fr; }
-    .chat-header { padding: 9px 12px; }
-    .live-strip, .filter-strip, .composer { padding-left: 12px; padding-right: 12px; }
-    .chat-feed { padding: 10px 10px 14px; }
-    .hdr-actions .hide-sm { display: none; }
+    .hide-sm { display: none; }
   }
 </style>
 </head>
@@ -468,7 +404,7 @@
       <div class="sb-logo">M3</div>
       <div class="sb-brand-txt">
         <div class="sb-brand-title">Muse.ai Fleet Console</div>
-        <div class="sb-brand-sub"><span class="dot-live" id="liveDot"></span><span id="livePulseTxt">3 con Muse trực tuyến</span></div>
+        <div class="sb-brand-sub"><span class="dot-live" id="liveDot"></span><span id="livePulseTxt">3 con Muse</span></div>
       </div>
     </div>
 
@@ -481,7 +417,7 @@
       <input id="sbSearch" type="search" placeholder="Tìm kênh, #task, @muse..." />
     </div>
 
-    <div class="sb-scroll" id="sbScroll">
+    <div class="sb-scroll">
       <div class="sb-sec"><span>Phòng điều phối</span></div>
       <div id="channelList"></div>
 
@@ -505,7 +441,6 @@
 
   <!-- CENTER MAIN WORKSPACE -->
   <main class="main-pane">
-    <!-- VIEW 1: MULTI-AGENT CHAT ROOM -->
     <section id="viewChat" style="display:flex;flex-direction:column;flex:1;min-height:0;">
       <header class="chat-header">
         <button class="menu-toggle" id="btnMenu">☰</button>
@@ -514,19 +449,23 @@
             <span id="roomTitle"># dieu-phoi-chung</span>
             <span class="ch-head-tag" id="roomTag">Phòng Điều Phối</span>
           </div>
-          <div class="ch-head-sub" id="roomSub">Đang tải dữ liệu...</div>
+          <div class="ch-head-sub" id="roomSub">Đang tải...</div>
         </div>
         <div class="hdr-actions">
+          <button class="btn sm hide-sm" id="btnFlowToggle" title="Sơ đồ trạng thái 3 Muse">🔀 Sơ đồ</button>
+          <button class="btn sm" id="btnCmdPal" title="Tìm nhanh (Ctrl+K)">⌘K</button>
           <button class="btn primary sm" id="btnNewTask">➕ Giao việc</button>
-          <button class="btn sm" id="btnRefresh" title="Tải lại dữ liệu & trạng thái Issue">↻</button>
+          <button class="btn sm" id="btnRefresh" title="Làm mới dữ liệu">↻</button>
           <button class="btn sm hide-sm" id="btnToggleInsp">☷ Chi tiết</button>
         </div>
       </header>
 
       <div class="live-strip" id="liveStrip"></div>
-      <div class="filter-strip" id="filterStrip">
-        <button class="fchip active" data-msgfilter="all">Tất cả tin nhắn</button>
-        <button class="fchip" data-msgfilter="handoff">Giao / Nhận việc</button>
+      <div class="flow-bar" id="flowBar"></div>
+
+      <div class="filter-strip">
+        <button class="fchip active" data-msgfilter="all">Tất cả</button>
+        <button class="fchip" data-msgfilter="handoff">Giao / Nhận</button>
         <button class="fchip" data-msgfilter="report">Báo cáo &amp; QC</button>
         <button class="fchip" data-msgfilter="commander">Lệnh Chỉ Huy</button>
         <button class="fchip" data-msgfilter="gate">Cần Anh duyệt</button>
@@ -535,6 +474,7 @@
       <div class="chat-feed" id="chatFeed"></div>
 
       <footer class="composer">
+        <div class="slash-menu" id="slashMenu"></div>
         <div class="comp-bar">
           <select class="comp-select" id="compTarget">
             <option value="@muse-main">@muse-main (Chị cả Bẹp)</option>
@@ -542,18 +482,16 @@
             <option value="@muse-2">@muse-2 (Vịt Búp)</option>
             <option value="@all">@all (Cả 3 Muse)</option>
           </select>
-          <select class="comp-select" id="compTask" style="max-width:220px;"></select>
-          <button class="btn sm" id="btnQuickPing">✋ Điểm danh</button>
-          <button class="btn sm" id="btnQuickApprove" style="display:none;">✓ Duyệt task này</button>
+          <select class="comp-select" id="compTask" style="max-width:210px;"></select>
+          <button class="btn sm" id="btnSlashHint" title="Xem các lệnh /slash">/ Lệnh</button>
         </div>
         <div class="comp-box">
-          <textarea class="comp-input" id="compInput" rows="1" placeholder="Nhắn tin điều phối trong phòng... (Enter gửi, Shift+Enter xuống dòng, gõ /new để giao việc mới)"></textarea>
-          <button class="comp-send" id="btnSend">Phát lệnh ➤</button>
+          <textarea class="comp-input" id="compInput" rows="1" placeholder="Nhắn tin hoặc gõ / để dùng lệnh (/giao, /hoc, /duyet, /sua, /chuyen)..."></textarea>
+          <button class="comp-send" id="btnSend">Gửi ➤</button>
         </div>
       </footer>
     </section>
 
-    <!-- VIEW 2: DASHBOARD (KANBAN + LEARNING + ECOSYSTEM) -->
     <section id="viewDash" class="dash-view" style="display:none;">
       <header class="chat-header">
         <button class="menu-toggle" id="btnMenuDash">☰</button>
@@ -562,41 +500,59 @@
           <div class="ch-head-sub" id="dashSub">—</div>
         </div>
         <div class="hdr-actions">
-          <button class="btn sm" id="btnBackChat">💬 Về Phòng Chat</button>
+          <button class="btn sm" id="btnBackChat">💬 Phòng Chat</button>
         </div>
       </header>
       <div class="dash-subnav">
         <div style="display:flex;gap:6px;flex-wrap:wrap;">
-          <button class="fchip active" data-dashtab="kanban">Bảng Kanban</button>
-          <button class="fchip" data-dashtab="learning">Tiến Độ Tự Học (52+ Khóa)</button>
-          <button class="fchip" data-dashtab="reports">Kho Báo Cáo (research/)</button>
-          <button class="fchip" data-dashtab="eco">Hệ Sinh Thái &amp; Spec</button>
+          <button class="fchip active" data-dashtab="kanban">Kanban</button>
+          <button class="fchip" data-dashtab="learning" id="tabLearningLabel">Tự Học</button>
+          <button class="fchip" data-dashtab="reports">Kho Báo Cáo</button>
+          <button class="fchip" data-dashtab="eco">Hệ Sinh Thái</button>
         </div>
         <input id="dashSearch" type="search" placeholder="Lọc task / báo cáo..." style="border:1px solid var(--line2);background:var(--panel);border-radius:8px;padding:4px 9px;font-size:12.5px;" />
       </div>
       <div class="dash-body" id="dashBody"></div>
     </section>
+
+    <!-- MOBILE BOTTOM TAB BAR -->
+    <nav class="mobile-nav" id="mobileNav">
+      <button class="mnav-btn active" data-mnav="chat"><span>💬</span><span>Phòng Chat</span></button>
+      <button class="mnav-btn" data-mnav="needs"><span>📥</span><span>Chờ Duyệt</span></button>
+      <button class="mnav-btn" data-mnav="reports"><span>📖</span><span>Báo Cáo</span></button>
+      <button class="mnav-btn" data-mnav="kanban"><span>⊞</span><span>Kanban</span></button>
+    </nav>
   </main>
 
-  <!-- RIGHT INSPECTOR / REPORT READER -->
+  <!-- RIGHT INSPECTOR / RICH READER v2 -->
   <aside class="inspector hidden" id="inspector">
     <div class="insp-head">
-      <div class="insp-tabs">
-        <button class="fchip active" data-insptab="task">📋 Hồ sơ Task</button>
-        <button class="fchip" data-insptab="report">📖 Đọc Báo Cáo</button>
+      <div style="display:flex;gap:4px;">
+        <button class="fchip active" data-insptab="task">📋 Hồ sơ</button>
+        <button class="fchip" data-insptab="report">📖 Báo cáo</button>
       </div>
-      <button class="btn sm" id="btnCloseInsp">✕</button>
+      <div style="display:flex;gap:4px;">
+        <button class="btn sm" id="btnZen" title="Mở toàn màn hình">⛶ Zen</button>
+        <button class="btn sm" id="btnCloseInsp">✕</button>
+      </div>
     </div>
     <div class="insp-body" id="inspBody"></div>
+    <div class="pin-bar" id="pinBar">
+      <span id="pinBarTxt" style="font-size:12px;font-weight:700;">📌 0 điểm đã ghim</span>
+      <div style="display:flex;gap:6px;">
+        <button class="btn sm" id="btnClearPins">Xóa</button>
+        <button class="btn sm warn" id="btnSendPins">Gửi góp ý Plannotator</button>
+      </div>
+    </div>
   </aside>
 </div>
 
 <!-- PAT MODAL -->
 <div class="modal-back" id="patModal">
   <div class="modal">
-    <h3>🔑 Kết nối GitHub PAT (1-Click Gửi Lệnh)</h3>
+    <h3>🔑 Kết nối GitHub PAT</h3>
     <p style="font-size:12.5px;color:var(--ink2);margin:0 0 10px;">
-      Tạo fine-grained PAT chỉ cho repo <code>qsang2025/muse-teamwork</code> với quyền <b>Issues: Read &amp; Write</b>. Token chỉ lưu trong trình duyệt của Anh (<code>localStorage</code>).
+      Dùng fine-grained PAT chỉ cấp quyền <b>Issues: Read &amp; Write</b> cho repo <code>qsang2025/muse-teamwork</code>. Token chỉ lưu ở <code>localStorage</code> trình duyệt của Anh.
     </p>
     <div class="field">
       <label>GitHub Personal Access Token</label>
@@ -605,22 +561,52 @@
     <div style="display:flex;justify-content:flex-end;gap:8px;">
       <button class="btn" id="patClear">Xóa PAT</button>
       <button class="btn" id="patCancel">Đóng</button>
-      <button class="btn primary" id="patSave">Lưu kết nối</button>
+      <button class="btn primary" id="patSave">Lưu PAT</button>
     </div>
+  </div>
+</div>
+
+<!-- MANDATORY COMMAND CONFIRMATION MODAL -->
+<div class="modal-back" id="confirmModal">
+  <div class="modal">
+    <h3 id="cfmHeading">✅ Xác Nhận Tạo Issue Lệnh Dashboard</h3>
+    <p style="font-size:12px;color:var(--ink2);margin:0 0 10px;" id="cfmNote">
+      Lệnh chỉ tạo GitHub Issue để Bẹp (<code>muse-main</code>) / cron áp dụng, không ghi trực tiếp vào <code>tasks/*.json</code>.
+    </p>
+    <div class="field">
+      <label>Tiêu đề Issue</label>
+      <input id="cfmTitle" type="text" />
+    </div>
+    <div class="field">
+      <label>Nội dung Body (chuẩn apply-dashboard-issues.py)</label>
+      <textarea id="cfmBody" rows="6" style="font-family:var(--mono);font-size:12px;"></textarea>
+    </div>
+    <div style="display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap;">
+      <button class="btn" id="cfmCancel">Hủy</button>
+      <button class="btn" id="cfmOpenGh">↗ Mở trên GitHub</button>
+      <button class="btn primary" id="cfmSendPat">✓ Xác nhận gửi</button>
+    </div>
+  </div>
+</div>
+
+<!-- COMMAND PALETTE (Ctrl+K) -->
+<div class="modal-back" id="palModal">
+  <div class="modal">
+    <h3>⌘K Điều Hướng Nhanh</h3>
+    <div class="field">
+      <input id="palInput" type="search" placeholder="Gõ #task, tên báo cáo, @muse, hoặc /giao..." />
+    </div>
+    <div id="palResults" style="max-height:300px;overflow-y:auto;display:flex;flex-direction:column;gap:4px;"></div>
   </div>
 </div>
 
 <!-- NEW TASK MODAL -->
 <div class="modal-back" id="newTaskModal">
   <div class="modal">
-    <h3>➕ Giao Việc Mới Cho Đội Muse</h3>
-    <div class="field">
-      <label>Tiêu đề nhiệm vụ</label>
-      <input id="ntTitle" type="text" placeholder="Ví dụ: Nghiên cứu port nguồn mới..." />
-    </div>
+    <h3>➕ Soạn Bản Nháp Giao Việc Mới</h3>
+    <div class="field"><label>Tiêu đề nhiệm vụ</label><input id="ntTitle" type="text" placeholder="Ví dụ: Nghiên cứu..." /></div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-      <div class="field">
-        <label>Giao cho Muse</label>
+      <div class="field"><label>Đề xuất Muse</label>
         <select id="ntAssignee">
           <option value="muse-1">Em Ú (muse-1)</option>
           <option value="muse-2">Vịt Búp (muse-2)</option>
@@ -628,22 +614,22 @@
           <option value="">Để Chị cả tự phân</option>
         </select>
       </div>
-      <div class="field">
-        <label>Độ ưu tiên</label>
-        <select id="ntPrio">
-          <option value="high">High (Ưu tiên cao)</option>
-          <option value="medium" selected>Medium</option>
-          <option value="low">Low</option>
-        </select>
+      <div class="field"><label>Độ ưu tiên</label>
+        <select id="ntPrio"><option value="high">High</option><option value="medium" selected>Medium</option><option value="low">Low</option></select>
       </div>
     </div>
-    <div class="field">
-      <label>Mô tả / Yêu cầu chi tiết</label>
-      <textarea id="ntBody" rows="3" placeholder="Ghi rõ đầu ra mong muốn..."></textarea>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+      <div class="field"><label>Loại việc</label>
+        <select id="ntType"><option value="vbook-extension">vbook-extension</option><option value="research">research</option></select>
+      </div>
+      <div class="field"><label>Repo</label>
+        <select id="ntRepo"><option value="Qsang_vbook">Qsang_vbook</option><option value="muse-teamwork">muse-teamwork</option></select>
+      </div>
     </div>
+    <div class="field"><label>Mô tả chi tiết</label><textarea id="ntBody" rows="3"></textarea></div>
     <div style="display:flex;justify-content:flex-end;gap:8px;">
       <button class="btn" id="ntCancel">Hủy</button>
-      <button class="btn primary" id="ntSubmit">Phát lệnh giao việc ➤</button>
+      <button class="btn primary" id="ntSubmit">Xem trước &amp; Xác nhận ➤</button>
     </div>
   </div>
 </div>
@@ -658,7 +644,7 @@
   const REPO = "qsang2025/muse-teamwork";
   const PAT_KEY = "muse-teamwork-gh-pat-v1";
   const THEME_KEY = "muse-dash-theme-v3";
-  const LOCAL_MSGS_KEY = "muse-dash-local-cmds-v3";
+  const LOCAL_MSGS_KEY = "muse-dash-local-cmds-v4";
 
   const AGENTS = {
     "muse-main": { name: "Chị cả Bẹp", short: "Bẹp", role: "Điều phối & QC Reviewer", color: "#7c3aed", bg: "linear-gradient(135deg,#7c3aed,#6366f1)" },
@@ -666,6 +652,14 @@
     "muse-2":    { name: "Vịt Búp",    short: "Vịt", role: "Kiểm thử & Tự học", color: "#0d9488", bg: "linear-gradient(135deg,#0d9488,#10b981)" },
     "anh":       { name: "Chỉ Huy (Anh Sáng)", short: "AS", role: "AI Fleet Director", color: "#1d4ed8", bg: "linear-gradient(135deg,#1e3a8a,#2563eb)" }
   };
+
+  const SLASH_CMDS = [
+    { cmd: "/giao", syntax: "/giao @muse-1 [high] <tiêu đề>", desc: "Bản nháp giao việc mới (new-task)" },
+    { cmd: "/hoc",  syntax: "/hoc <tên hoặc link khóa học>", desc: "Đề xuất khóa học mới cho Chị cả kiểm chứng FREE" },
+    { cmd: "/duyet",syntax: "/duyet #NNN <ghi chú>", desc: "Gửi yêu cầu Bẹp xem xét duyệt (không tự đổi status)" },
+    { cmd: "/sua",  syntax: "/sua #NNN <yêu cầu sửa>", desc: "Gửi yêu cầu Bẹp/Worker xem xét sửa lại" },
+    { cmd: "/chuyen",syntax:"/chuyen #NNN @muse-2 <lý do>", desc: "Đề xuất Bẹp chuyển người phụ trách" }
+  ];
 
   let state = {
     bundle: window.__DASH_SNAPSHOT__ || {},
@@ -678,14 +672,19 @@
     dashSearch: "",
     inspOpen: false,
     inspTab: "task",
+    zenMode: false,
+    flowOpen: false,
+    digestCollapsed: false,
     selectedTaskId: null,
     selectedReportFile: null,
     reportCache: {},
     ghIssues: [],
-    localCmds: loadLocalCmds()
+    localCmds: loadLocalCmds(),
+    pins: [],
+    pendingConfirm: null,
+    lastGhErrTs: 0
   };
 
-  /* ===== SECURITY & UTILS ===== */
   function maskInfra(s) {
     if (!s) return "";
     return String(s)
@@ -695,529 +694,398 @@
       .replace(/\/home\/[a-zA-Z0-9._-]+\/[^\s"'`<>]*/g, "[local-path]")
       .replace(/\/Users\/[a-zA-Z0-9._-]+\/[^\s"'`<>]*/g, "[local-path]");
   }
-
   function esc(s) {
-    return maskInfra(s)
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;");
+    return maskInfra(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
   }
-
-  function loadLocalCmds() {
-    try { return JSON.parse(localStorage.getItem(LOCAL_MSGS_KEY) || "[]"); } catch { return []; }
-  }
-  function saveLocalCmds(arr) {
-    try { localStorage.setItem(LOCAL_MSGS_KEY, JSON.stringify(arr.slice(-30))); } catch {}
-  }
-
+  function loadLocalCmds() { try { return JSON.parse(localStorage.getItem(LOCAL_MSGS_KEY) || "[]"); } catch { return []; } }
+  function saveLocalCmds(arr) { try { localStorage.setItem(LOCAL_MSGS_KEY, JSON.stringify(arr.slice(-30))); } catch {} }
   function toast(msg) {
     const el = document.getElementById("toast");
-    el.textContent = msg;
-    el.classList.add("show");
-    clearTimeout(toast._t);
-    toast._t = setTimeout(() => el.classList.remove("show"), 3200);
+    el.textContent = msg; el.classList.add("show");
+    clearTimeout(toast._t); toast._t = setTimeout(() => el.classList.remove("show"), 3200);
   }
-
-  function parseTs(iso) {
-    if (!iso) return 0;
-    const t = Date.parse(iso);
-    return Number.isNaN(t) ? 0 : t;
-  }
-
+  function parseTs(iso) { if (!iso) return 0; const t = Date.parse(iso); return Number.isNaN(t) ? 0 : t; }
   function fmtTime(iso) {
     if (!iso) return "";
-    const d = new Date(iso);
-    if (Number.isNaN(d.getTime())) return String(iso).slice(11, 16);
-    const hh = String(d.getHours()).padStart(2, "0");
-    const mm = String(d.getMinutes()).padStart(2, "0");
-    const dd = String(d.getDate()).padStart(2, "0");
-    const mo = String(d.getMonth() + 1).padStart(2, "0");
-    return `${dd}/${mo} ${hh}:${mm}`;
+    const d = new Date(iso); if (Number.isNaN(d.getTime())) return String(iso).slice(11,16);
+    return `${String(d.getDate()).padStart(2,"0")}/${String(d.getMonth()+1).padStart(2,"0")} ${String(d.getHours()).padStart(2,"0")}:${String(d.getMinutes()).padStart(2,"0")}`;
   }
-
   function fmtDay(iso) {
-    if (!iso) return "Khác";
-    const d = new Date(iso);
-    if (Number.isNaN(d.getTime())) return "Khác";
+    if (!iso) return "Khác"; const d = new Date(iso); if (Number.isNaN(d.getTime())) return "Khác";
     return `${String(d.getDate()).padStart(2,"0")}/${String(d.getMonth()+1).padStart(2,"0")}/${d.getFullYear()}`;
   }
-
   function fmtCountdown(iso) {
     if (!iso) return "";
-    const diff = Date.parse(iso) - Date.now();
-    const mins = Math.round(diff / 60000);
+    const mins = Math.round((Date.parse(iso) - Date.now()) / 60000);
     if (mins < 0) return `quá hạn ${Math.abs(mins)}p`;
-    if (mins < 60) return `còn ${mins}p`;
-    return `còn ${Math.floor(mins/60)}h${mins%60}p`;
+    return mins < 60 ? `còn ${mins}p` : `còn ${Math.floor(mins/60)}h${mins%60}p`;
   }
-
   function taskNumOf(t) {
-    const m = String(t.id || "").match(/^(?:closed-)?(\d{2,4})/);
-    return m ? m[1].padStart(3, "0") : "";
+    const m = String((t && t.id) || t || "").match(/^(?:closed-)?(\d{2,4})/);
+    return m ? m[1].padStart(3,"0") : "";
   }
-
   function statusBadge(st) {
-    const map = {
-      open: ["Mở", "p-open"],
-      claimed: ["Đã nhận", "p-doing"],
-      doing: ["Đang làm", "p-doing"],
-      review: ["Chờ duyệt", "p-review"],
-      done: ["Hoàn thành", "p-done"],
-      blocked: ["Bị chặn", "p-blocked"],
-      cancelled: ["Đã hủy", "p-open"]
-    };
+    const map = { open:["Mở","p-open"], claimed:["Đã nhận","p-doing"], doing:["Đang làm","p-doing"], review:["Chờ duyệt","p-review"], done:["Hoàn thành","p-done"], blocked:["Bị chặn","p-blocked"], cancelled:["Đã hủy","p-open"] };
     const [lbl, cls] = map[st] || [st || "open", "p-open"];
     return `<span class="pill ${cls}">${esc(lbl)}</span>`;
   }
+  function ringTimerSvg(expiresIso) {
+    if (!expiresIso) return "";
+    const remMs = Date.parse(expiresIso) - Date.now();
+    const totalMs = 2 * 3600 * 1000;
+    const pct = Math.max(0, Math.min(1, remMs / totalMs));
+    const r = 6, c = 2 * Math.PI * r;
+    const color = remMs <= 0 || pct < 0.15 ? "#ef4444" : pct < 0.35 ? "#f59e0b" : "#22c55e";
+    return `<svg class="ring-svg" viewBox="0 0 16 16"><circle cx="8" cy="8" r="${r}" fill="none" stroke="rgba(148,163,184,.3)" stroke-width="2.2"/><circle cx="8" cy="8" r="${r}" fill="none" stroke="${color}" stroke-width="2.2" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${(c*(1-pct)).toFixed(1)}" stroke-linecap="round"/></svg>`;
+  }
 
-  /* ===== BUILD MULTI-AGENT CHAT STREAM FROM REAL DATA ===== */
+  /* ===== BUILD CHAT STREAM ===== */
   function buildChatMessages() {
     const tasks = state.bundle.tasks || [];
-    const resIndex = state.bundle.research_index || [];
     const resByNum = {};
-    resIndex.forEach(r => { if (r.task_num) resByNum[r.task_num] = r; });
+    (state.bundle.research_index || []).forEach(r => { if (r.task_num) resByNum[r.task_num] = r; });
+
+    const sorted = [...tasks].sort((a,b) => parseTs(b.updated_at || b.created_at) - parseTs(a.updated_at || a.created_at));
+    const pick = []; const seen = new Set();
+    sorted.forEach(t => { if (t.status !== "done" && t.status !== "cancelled") { pick.push(t); seen.add(t.id); } });
+    for (const t of sorted) { if (pick.length >= 45) break; if (!seen.has(t.id)) { pick.push(t); seen.add(t.id); } }
 
     const msgs = [];
-    // Focus on top 45 most recent tasks + all active/needs-anh tasks for crisp chat performance
-    const sorted = [...tasks].sort((a, b) => parseTs(b.updated_at || b.created_at) - parseTs(a.updated_at || a.created_at));
-    const activeOrRecent = [];
-    const seenIds = new Set();
-    sorted.forEach(t => {
-      const st = t.status || "";
-      if (st !== "done" && st !== "cancelled") {
-        activeOrRecent.push(t);
-        seenIds.add(t.id);
-      }
-    });
-    for (const t of sorted) {
-      if (activeOrRecent.length >= 45) break;
-      if (!seenIds.has(t.id)) {
-        activeOrRecent.push(t);
-        seenIds.add(t.id);
-      }
-    }
-
-    activeOrRecent.forEach(t => {
-      const tnum = taskNumOf(t);
-      const tTag = tnum ? `#${tnum}` : t.id;
+    pick.forEach(t => {
+      const tnum = taskNumOf(t), tTag = tnum ? `#${tnum}` : t.id;
       const baseTs = parseTs(t.created_at) || parseTs(t.updated_at) || 0;
-      const assignee = t.assignee || t.preferred_assignee || "";
-      const targetName = AGENTS[assignee] ? `@${assignee} (${AGENTS[assignee].name})` : "cả đội";
+      const asg = t.assignee || t.preferred_assignee || "";
+      const targetName = AGENTS[asg] ? `@${asg} (${AGENTS[asg].name})` : "cả đội (chưa gán)";
       const resFile = (resByNum[tnum] && resByNum[tnum].file) || "";
       const ev = (t.result && (t.result.evidence || (t.result.test && t.result.test.evidence))) || "";
 
-      // 1. Delegation message from muse-main
       msgs.push({
-        id: `del-${t.id}`,
-        ts: baseTs,
-        timeIso: t.created_at || t.updated_at,
+        id: `del-${t.id}`, ts: baseTs, timeIso: t.created_at || t.updated_at,
         sender: t.created_by && AGENTS[t.created_by] ? t.created_by : "muse-main",
-        kind: "handoff",
-        taskId: t.id,
-        taskNum: tnum,
-        taskType: t.type || "general",
-        taskStatus: t.status,
-        text: assignee
-          ? `Giao ${targetName} nhận ${tTag}: ${t.title}`
-          : `Mở nhiệm vụ mới ${tTag}: ${t.title} (ai rảnh nhận giúp chị nhé)`,
-        card: {
-          title: t.title,
-          status: t.status,
-          priority: t.priority || "medium",
-          checklistCount: (t.checklist || []).length,
-          resFile
-        }
+        kind: "handoff", taskId: t.id, taskNum: tnum, taskType: t.type || "general", taskStatus: t.status,
+        text: asg ? `Giao ${targetName} ${tTag}: ${t.title}` : `Mở nhiệm vụ ${tTag}: ${t.title}`,
+        card: { title: t.title, status: t.status, priority: t.priority || "medium", checklistCount: (t.checklist || []).length, resFile }
       });
 
-      // 2. Claim message when active
       if ((t.status === "claimed" || t.status === "doing") && t.claimed_at && AGENTS[t.assignee]) {
-        const ttl = t.claim_expires_at ? ` (${fmtCountdown(t.claim_expires_at)})` : "";
         msgs.push({
-          id: `claim-${t.id}`,
-          ts: parseTs(t.claimed_at) || baseTs + 60000,
-          timeIso: t.claimed_at,
-          sender: t.assignee,
-          kind: "handoff",
-          taskId: t.id,
-          taskNum: tnum,
-          taskType: t.type || "general",
-          taskStatus: t.status,
-          text: `✋ Dạ em nhận ${tTag} và đang triển khai ngay ạ!${ttl}`
+          id: `claim-${t.id}`, ts: parseTs(t.claimed_at) || baseTs + 60000, timeIso: t.claimed_at,
+          sender: t.assignee, kind: "handoff", taskId: t.id, taskNum: tnum, taskType: t.type || "general", taskStatus: t.status,
+          text: `✋ Em đã claim ${tTag}${t.claim_expires_at ? ` (${fmtCountdown(t.claim_expires_at)})` : ""}.`
         });
       }
 
-      // 3. Parse timestamped conversational notes: [DD/MM HH:MM muse-X: ...] & [Dashboard #N — Anh...]
       const rawNotes = [t.notes || "", (t.result && t.result.notes) || ""].filter(Boolean).join("\n");
       if (rawNotes) {
-        // Parse Dashboard commands
         const dashRe = /\[Dashboard\s*#(\d+)\s*—\s*Anh(?:,\s*([^\]]+))?\]\s*([^\[]+)/gi;
-        let dm;
-        let offset = 120000;
+        let dm, off = 0;
         while ((dm = dashRe.exec(rawNotes)) !== null) {
-          const issueNo = dm[1];
-          const body = dm[3].trim();
+          off += 1000;
           msgs.push({
-            id: `cmd-${t.id}-${issueNo}-${offset}`,
-            ts: (parseTs(t.updated_at) || baseTs) - 30000 + offset / 1000,
-            timeIso: t.updated_at,
-            sender: "anh",
-            kind: "commander",
-            taskId: t.id,
-            taskNum: tnum,
-            taskType: t.type || "general",
-            taskStatus: t.status,
-            text: `${body}`,
-            badge: `✓ Đã áp dụng • Issue #${issueNo}`
+            id: `cmd-${t.id}-${dm[1]}-${off}`, ts: (parseTs(t.updated_at) || baseTs) - 20000 + off,
+            timeIso: t.updated_at, sender: "anh", kind: "commander",
+            taskId: t.id, taskNum: tnum, taskType: t.type || "general", taskStatus: t.status,
+            text: dm[3].trim(), badge: `✓ Đã áp dụng • Issue #${dm[1]}`
           });
-          offset += 1000;
         }
-
-        // Parse agent log entries [DD/MM HH:MM muse-1: ...] or [HH:MM muse-2: ...]
         const agRe = /\[(?:(\d{1,2}\/\d{1,2})\s+)?(\d{1,2}:\d{2})\s+(muse-main|muse-1|muse-2)[^\]]*\]:?\s*([^\[]+)/gi;
-        let am;
-        let idx = 0;
+        let am, idx = 0;
         while ((am = agRe.exec(rawNotes)) !== null) {
           idx++;
-          const ag = am[3].toLowerCase();
-          const txt = am[4].trim();
-          if (!txt) continue;
-          const approxTs = baseTs + idx * 180000;
+          const txt = am[4].trim(); if (!txt) continue;
           msgs.push({
-            id: `note-${t.id}-${idx}`,
-            ts: approxTs,
-            timeIso: t.updated_at || t.created_at,
+            id: `note-${t.id}-${idx}`, ts: baseTs + idx * 120000, timeIso: t.updated_at || t.created_at,
             customTime: am[1] ? `${am[1]} ${am[2]}` : am[2],
-            sender: ag,
-            kind: "report",
-            taskId: t.id,
-            taskNum: tnum,
-            taskType: t.type || "general",
-            taskStatus: t.status,
-            text: txt.slice(0, 420) + (txt.length > 420 ? "…" : "")
+            sender: am[3].toLowerCase(), kind: "log_step",
+            taskId: t.id, taskNum: tnum, taskType: t.type || "general", taskStatus: t.status,
+            text: txt.slice(0, 360) + (txt.length > 360 ? "…" : "")
           });
         }
       }
 
-      // 4. Deliverable message
       if (t.result && t.result.completed_at && (t.status === "review" || t.status === "done")) {
-        const worker = t.result.completed_by || t.assignee || "muse-1";
+        const w = AGENTS[t.result.completed_by] ? t.result.completed_by : (AGENTS[t.assignee] ? t.assignee : "muse-1");
         const test = t.result.test || {};
         msgs.push({
-          id: `deliv-${t.id}`,
-          ts: parseTs(t.result.completed_at) || parseTs(t.updated_at),
-          timeIso: t.result.completed_at,
-          sender: AGENTS[worker] ? worker : "muse-1",
-          kind: "report",
-          taskId: t.id,
-          taskNum: tnum,
-          taskType: t.type || "general",
-          taskStatus: t.status,
-          text: `📦 Em đã hoàn thành ${tTag} và gửi báo cáo lên để Chị cả & Chỉ Huy kiểm tra ạ.`,
+          id: `deliv-${t.id}`, ts: parseTs(t.result.completed_at) || parseTs(t.updated_at),
+          timeIso: t.result.completed_at, sender: w, kind: "report",
+          taskId: t.id, taskNum: tnum, taskType: t.type || "general", taskStatus: t.status,
+          text: `📦 Đã hoàn thành ${tTag} và nộp bằng chứng nghiệm thu.`,
           deliverable: {
-            resFile,
-            evidence: ev,
-            branch: t.result.branch || t.branch || "",
-            commit: t.result.commit || "",
+            resFile, evidence: ev, branch: t.result.branch || t.branch || "", commit: t.result.commit || "",
             vdi: [test.validate ? "V" : "", test.device_test ? "D" : "", test.install ? "I" : ""].filter(Boolean)
           }
         });
       }
 
-      // 5. QC Review message from muse-main
       if (t.result && t.result.review && (t.result.review.score != null || t.result.review.note)) {
         const rv = t.result.review;
         msgs.push({
-          id: `rev-${t.id}`,
-          ts: parseTs(rv.at) || parseTs(t.updated_at) + 1000,
-          timeIso: rv.at || t.updated_at,
-          sender: AGENTS[rv.by] ? rv.by : "muse-main",
-          kind: "report",
-          taskId: t.id,
-          taskNum: tnum,
-          taskType: t.type || "general",
-          taskStatus: t.status,
-          text: rv.note || `Đã kiểm tra và nghiệm thu ${tTag}.`,
-          reviewBadge: `${rv.score != null ? `⭐ ${rv.score}/10` : "✓ QC"} • Vòng ${rv.rounds || 1} • ${t.status === "done" ? "ĐÃ ĐÓNG" : t.status.toUpperCase()}`
+          id: `rev-${t.id}`, ts: parseTs(rv.at) || parseTs(t.updated_at) + 1000,
+          timeIso: rv.at || t.updated_at, sender: AGENTS[rv.by] ? rv.by : "muse-main", kind: "report",
+          taskId: t.id, taskNum: tnum, taskType: t.type || "general", taskStatus: t.status,
+          text: rv.note || `Đã nghiệm thu ${tTag}.`,
+          reviewBadge: `${rv.score != null ? `⭐ ${rv.score}/10` : "✓ QC"} • Vòng ${rv.rounds || 1} • ${String(t.status || "").toUpperCase()}`
         });
       }
     });
 
-    // 6. Pending Needs-Anh Approval Gates
     (state.bundle.needs_anh || []).forEach((na, i) => {
       const t = tasks.find(x => x.id === na.task_id || taskNumOf(x) === na.task_num);
       msgs.push({
-        id: `gate-${na.task_num || i}`,
-        ts: Date.now() - (1000 * (i + 1)),
+        id: `gate-${na.task_num || i}`, ts: Date.now() - 1000 * (i + 1),
         timeIso: (t && t.updated_at) || state.bundle.generated_at,
-        sender: "muse-main",
-        kind: "gate",
-        taskId: (t && t.id) || na.task_id || "",
-        taskNum: na.task_num || "",
-        taskType: (t && t.type) || "general",
-        taskStatus: na.status || "needs-decision",
-        text: `🔔 @Anh Sáng ơi, việc này đang chờ Chỉ Huy chốt quyết định ạ:`,
-        gate: na
+        sender: "muse-main", kind: "gate",
+        taskId: (t && t.id) || na.task_id || "", taskNum: na.task_num || "",
+        taskType: (t && t.type) || "general", taskStatus: na.status || "needs-decision",
+        text: `🔔 Mục này đang cần Anh xem xét quyết định:`, gate: na
       });
     });
 
-    // 7. Live GitHub Issues & Local Session Optimistic Commands
     state.ghIssues.forEach(iss => {
       msgs.push({
-        id: `gh-${iss.number}`,
-        ts: parseTs(iss.created_at),
-        timeIso: iss.created_at,
-        sender: "anh",
-        kind: "commander",
-        taskId: "",
-        taskNum: "",
-        taskType: "general",
-        taskStatus: iss.state,
-        text: `${iss.title.replace(/^\[dashboard\]\s*/i, "")}\n${(iss.body || "").slice(0, 260)}`,
-        badge: iss.state === "open" ? `⏳ Đang chờ cron 15p • Issue #${iss.number}` : `✓ Đã xử lý • Issue #${iss.number}`
+        id: `gh-${iss.number}`, ts: parseTs(iss.created_at), timeIso: iss.created_at,
+        sender: "anh", kind: "commander", taskId: "", taskNum: "", taskType: "general", taskStatus: iss.state,
+        text: `${iss.title.replace(/^\[dashboard\]\s*/i, "")}\n${(iss.body || "").slice(0, 240)}`,
+        badge: iss.state === "open" ? `⏳ Chờ Bẹp/cron • Issue #${iss.number}` : `✓ Đã đóng • Issue #${iss.number}`
       });
     });
 
     state.localCmds.forEach(lc => {
-      // Avoid duplicating if already in ghIssues
       if (lc.issueNumber && state.ghIssues.some(g => g.number === lc.issueNumber)) return;
       msgs.push({
-        id: `local-${lc.id}`,
-        ts: lc.ts,
-        timeIso: new Date(lc.ts).toISOString(),
-        sender: "anh",
-        kind: "commander",
-        taskId: lc.taskId || "",
-        taskNum: lc.taskNum || "",
-        taskType: "general",
-        taskStatus: "open",
-        text: lc.text,
-        badge: lc.issueNumber ? `⏳ Vừa phát lệnh • Issue #${lc.issueNumber}` : `⏳ Đã mở tab tạo Issue`
+        id: `local-${lc.id}`, ts: lc.ts, timeIso: new Date(lc.ts).toISOString(),
+        sender: "anh", kind: "commander", taskId: lc.taskId || "", taskNum: lc.taskNum || "",
+        taskType: "general", taskStatus: "open", text: lc.text,
+        badge: lc.issueNumber ? `⏳ Đã gửi Issue #${lc.issueNumber}` : `↗ Bản nháp GitHub`
       });
     });
 
-    msgs.sort((a, b) => a.ts - b.ts);
+    msgs.sort((a,b) => a.ts - b.ts);
     return msgs;
   }
 
-  /* ===== RENDER SIDEBAR ===== */
+  /* ===== GROUP CONSECUTIVE LOG_STEP MESSAGES (NEVER HIDE QC / DELIVERABLE / GATE) ===== */
+  function groupMessages(list) {
+    const out = [];
+    for (const m of list) {
+      const prev = out[out.length - 1];
+      if (m.kind === "log_step" && prev && prev.kind === "log_step" && prev.taskId === m.taskId && prev.sender === m.sender) {
+        prev.grouped = prev.grouped || [ { time: prev.customTime || fmtTime(prev.timeIso), text: prev.text } ];
+        prev.grouped.push({ time: m.customTime || fmtTime(m.timeIso), text: m.text });
+        prev.text = m.text;
+        prev.customTime = m.customTime || fmtTime(m.timeIso);
+      } else {
+        out.push({ ...m });
+      }
+    }
+    return out;
+  }
+
+  /* ===== RENDER SIDEBAR & LIVE STRIP & FLOW ===== */
   function renderSidebar() {
     const tasks = state.bundle.tasks || [];
     const needsCount = (state.bundle.needs_anh || []).length;
     const activeTasks = tasks.filter(t => ["open","claimed","doing","review","blocked"].includes(t.status));
+    const tracks = state.bundle.learning_tracks || [];
+    const trDone = tracks.reduce((s,x)=>s+(x.done||0),0), trTot = tracks.reduce((s,x)=>s+(x.total||0),0);
+
+    document.getElementById("tabLearningLabel").textContent = `Tự Học (${trDone}/${trTot})`;
 
     const channels = [
-      { id: "dieu-phoi-chung", label: "dieu-phoi-chung", tag: "Phòng chung", badge: "" },
-      { id: "can-anh-quyet", label: "can-anh-quyet", tag: "Cổng Duyệt", badge: needsCount ? String(needsCount) : "", badgeCls: "alert" },
-      { id: "viec-dang-chay", label: "viec-dang-chay", tag: "Đang chạy", badge: String(activeTasks.length), badgeCls: "live" },
-      { id: "kho-vbook-ext", label: "kho-vbook-ext", tag: "vBook Ext", badge: "" },
-      { id: "phong-tu-hoc", label: "phong-tu-hoc", tag: "Tự học", badge: "" }
+      { id: "dieu-phoi-chung", label: "dieu-phoi-chung", badge: "" },
+      { id: "can-anh-quyet", label: "can-anh-quyet", badge: needsCount ? String(needsCount) : "", badgeCls: "alert" },
+      { id: "viec-dang-chay", label: "viec-dang-chay", badge: String(activeTasks.length), badgeCls: "live" },
+      { id: "kho-vbook-ext", label: "kho-vbook-ext", badge: "" },
+      { id: "phong-tu-hoc", label: "phong-tu-hoc", badge: "" }
     ];
 
     const q = state.search.trim().toLowerCase();
     document.getElementById("channelList").innerHTML = channels
       .filter(c => !q || c.label.includes(q))
-      .map(c => `
-        <button class="ch-btn ${state.room === c.id && !state.agentFilter ? "active" : ""}" data-room="${c.id}">
-          <span class="ch-hash">#</span>
-          <span class="ch-label">${esc(c.label)}</span>
-          ${c.badge ? `<span class="ch-badge ${c.badgeCls || ""}">${esc(c.badge)}</span>` : ""}
-        </button>
-      `).join("");
+      .map(c => `<button class="ch-btn ${state.room === c.id && !state.agentFilter ? "active" : ""}" data-room="${c.id}"><span class="ch-hash">#</span><span class="ch-label">${esc(c.label)}</span>${c.badge ? `<span class="ch-badge ${c.badgeCls || ""}">${esc(c.badge)}</span>` : ""}</button>`).join("");
 
     const recentRooms = [...activeTasks, ...tasks.filter(t => t.status === "done").slice(0, 8)]
       .filter(t => !q || String(t.id).toLowerCase().includes(q) || String(t.title).toLowerCase().includes(q))
       .slice(0, 12);
-
     document.getElementById("roomCount").textContent = recentRooms.length;
     document.getElementById("taskRoomList").innerHTML = recentRooms.map(t => {
-      const num = taskNumOf(t);
-      const rId = `task:${t.id}`;
-      const dotColor = t.status === "done" ? "#22c55e" : t.status === "review" ? "#f59e0b" : t.status === "blocked" ? "#ef4444" : "#3b82f6";
-      return `
-        <button class="ch-btn ${state.room === rId ? "active" : ""}" data-room="${esc(rId)}" title="${esc(t.title)}">
-          <span style="width:7px;height:7px;border-radius:50%;background:${dotColor};flex-shrink:0;"></span>
-          <span class="ch-label">#${esc(num || t.id)} ${esc(t.title)}</span>
-        </button>
-      `;
+      const num = taskNumOf(t), rId = `task:${t.id}`;
+      const dc = t.status === "done" ? "#22c55e" : t.status === "review" ? "#f59e0b" : t.status === "blocked" ? "#ef4444" : "#3b82f6";
+      return `<button class="ch-btn ${state.room === rId ? "active" : ""}" data-room="${esc(rId)}" title="${esc(t.title)}"><span style="width:7px;height:7px;border-radius:50%;background:${dc};flex-shrink:0;"></span><span class="ch-label">#${esc(num || t.id)} ${esc(t.title)}</span></button>`;
     }).join("");
 
-    const rosterOrder = ["muse-main", "muse-1", "muse-2"];
-    document.getElementById("agentRoster").innerHTML = rosterOrder.map(id => {
+    document.getElementById("agentRoster").innerHTML = ["muse-main", "muse-1", "muse-2"].map(id => {
       const ag = AGENTS[id];
-      const current = activeTasks.find(t => t.assignee === id && ["claimed","doing","review"].includes(t.status));
-      const sub = current ? `#${taskNumOf(current)} • ${current.status}` : ag.role;
-      const dotCls = current ? "busy" : "idle";
-      return `
-        <button class="agent-row ${state.agentFilter === id ? "active" : ""}" data-agent="${id}">
-          <div class="av" style="background:${ag.bg}">${ag.short}<span class="av-dot ${dotCls}"></span></div>
-          <div class="ag-info">
-            <div class="ag-name">${ag.name} <span style="opacity:.65;font-weight:400;">@${id}</span></div>
-            <div class="ag-sub">${esc(sub)}</div>
-          </div>
-        </button>
-      `;
+      const cur = activeTasks.find(t => t.assignee === id && ["claimed","doing","review"].includes(t.status));
+      const sub = cur ? `#${taskNumOf(cur)} • ${cur.status}` : "Đang rảnh • 0 task đang claim";
+      return `<button class="agent-row ${state.agentFilter === id ? "active" : ""}" data-agent="${id}"><div class="av" style="background:${ag.bg}">${ag.short}<span class="av-dot ${cur ? "busy" : "idle"}"></span></div><div class="ag-info"><div class="ag-name">${ag.name} <span style="opacity:.6;font-weight:400;">@${id}</span></div><div class="ag-sub">${esc(sub)}</div></div></button>`;
     }).join("");
 
-    // Stale indicator & PAT status
     const genTs = parseTs(state.bundle.generated_at);
-    const ageMin = genTs ? Math.round((Date.now() - genTs) / 60000) : 999;
-    const isStale = ageMin > 60;
+    const isStale = !genTs || ((Date.now() - genTs) / 60000) > 60;
     document.getElementById("liveDot").className = "dot-live" + (isStale ? " stale" : "");
-    document.getElementById("livePulseTxt").textContent = isStale
-      ? `Snapshot ${fmtTime(state.bundle.generated_at)}`
-      : `3 con Muse trực tuyến`;
+    document.getElementById("livePulseTxt").textContent = isStale ? `Snapshot ${fmtTime(state.bundle.generated_at)}` : "3 con Muse";
 
     const hasPat = !!localStorage.getItem(PAT_KEY);
-    document.getElementById("patStatusTxt").textContent = hasPat
-      ? "Lead Admin • PAT Đã kết nối ✓"
-      : "Lead Admin • Chưa gắn PAT";
+    document.getElementById("patStatusTxt").textContent = hasPat ? "Lead Admin • PAT Đã gắn ✓" : "Lead Admin • Chưa gắn PAT";
     document.getElementById("btnPat").className = "icon-btn" + (hasPat ? " ok" : "");
   }
 
-  /* ===== RENDER LIVE STRIP + CHAT FEED ===== */
   function renderLiveStrip() {
     const tasks = state.bundle.tasks || [];
     const active = tasks.filter(t => ["claimed","doing","review"].includes(t.status));
-    const pills = ["muse-main", "muse-1", "muse-2"].map(id => {
+    document.getElementById("liveStrip").innerHTML = ["muse-main", "muse-1", "muse-2"].map(id => {
       const ag = AGENTS[id];
       const cur = active.find(t => t.assignee === id) || (id === "muse-main" ? active.find(t => t.status === "review") : null);
       const ttl = cur && cur.claim_expires_at ? fmtCountdown(cur.claim_expires_at) : "";
-      const txt = cur ? `#${taskNumOf(cur)} ${cur.title}` : "Đang rảnh / Sẵn sàng nhận việc";
-      return `
-        <button class="muse-pill" data-jumptask="${cur ? esc(cur.id) : ""}">
-          <span style="width:8px;height:8px;border-radius:50%;background:${ag.color};"></span>
-          <span class="mp-name">${ag.name}</span>
-          <span class="mp-task">${esc(txt)}</span>
-          ${ttl ? `<span class="mp-ttl">⏱ ${esc(ttl)}</span>` : ""}
-        </button>
-      `;
+      const txt = cur ? `#${taskNumOf(cur)} ${cur.title}` : "Đang rảnh (0 claim)";
+      return `<button class="muse-pill" data-jumptask="${cur ? esc(cur.id) : ""}">${cur && cur.claim_expires_at ? ringTimerSvg(cur.claim_expires_at) : `<span style="width:8px;height:8px;border-radius:50%;background:${ag.color};"></span>`}<b>${ag.name}</b><span style="color:var(--ink2);max-width:180px;overflow:hidden;text-overflow:ellipsis;">${esc(txt)}</span>${ttl ? `<span style="font-family:var(--mono);font-size:11px;color:var(--amber);font-weight:700;">${esc(ttl)}</span>` : ""}</button>`;
     }).join("");
-    document.getElementById("liveStrip").innerHTML = pills;
+  }
+
+  function renderFlowBar() {
+    const fb = document.getElementById("flowBar");
+    fb.classList.toggle("open", state.flowOpen);
+    if (!state.flowOpen) return;
+    const tasks = state.bundle.tasks || [];
+    const openUnclaimed = tasks.filter(t => t.status === "open" && !t.assignee);
+    const activeClaimed = tasks.filter(t => t.status === "claimed" || t.status === "doing");
+    const reviewCnt = tasks.filter(t => t.status === "review").length;
+    const doneCnt = tasks.filter(t => t.status === "done").length;
+    const spec = state.bundle.spec_check || {};
+    fb.innerHTML = `
+      <div class="flow-nodes">
+        <div class="fnode"><b>Chỉ Huy (Anh Sáng)</b><span>Issue [dashboard] (${state.ghIssues.filter(x=>x.state==="open").length} mở)</span></div>
+        <span class="farrow">→</span>
+        <div class="fnode"><b>Chị cả Bẹp (@muse-main)</b><span>Điều phối &amp; QC (${doneCnt} xong)</span></div>
+        <span class="farrow">→</span>
+        <div class="fnode"><b>Workers (@muse-1 / @muse-2)</b><span>${activeClaimed.length} đang làm · ${openUnclaimed.length} chờ claim (${openUnclaimed.map(x=>"#"+taskNumOf(x)).join(", ") || "—"})</span></div>
+        <span class="farrow">→</span>
+        <div class="fnode"><b>Cổng QC &amp; Spec</b><span>${reviewCnt} chờ review · ${esc(spec.summary || "OK")}</span></div>
+      </div>
+      <div style="font-size:11px;color:var(--ink3);">Sơ đồ trạng thái thời gian thực từ <code>tasks/*.json</code> &amp; nhật ký <code>notes</code> (không phải replay giả lập).</div>
+    `;
+  }
+
+  function renderShiftDigestHtml() {
+    if (state.room !== "dieu-phoi-chung" || state.agentFilter || state.msgFilter !== "all") return "";
+    const tasks = state.bundle.tasks || [];
+    const reviewedDone = tasks
+      .filter(t => t.status === "done" && t.result && t.result.review && typeof t.result.review.score === "number")
+      .sort((a,b) => parseTs(b.result.review.at || b.updated_at) - parseTs(a.result.review.at || a.updated_at))
+      .slice(0, 3);
+    const avgScore = reviewedDone.length
+      ? (reviewedDone.reduce((s,t)=>s+t.result.review.score,0) / reviewedDone.length).toFixed(1)
+      : "—";
+    const openUnclaimed = tasks.filter(t => t.status === "open" && !t.assignee);
+    const tracks = state.bundle.learning_tracks || [];
+    const trDone = tracks.reduce((s,x)=>s+(x.done||0),0), trTot = tracks.reduce((s,x)=>s+(x.total||0),0);
+    const qsang = state.bundle.qsang || {};
+    const spec = state.bundle.spec_check || {};
+
+    return `
+      <div class="digest-card">
+        <div class="digest-head">
+          <span>📊 Tóm Tắt Trạng Thái Hiện Tại (Dữ liệu thật từ Bundle)</span>
+          <button class="btn sm" id="btnToggleDigest">${state.digestCollapsed ? "Mở rộng" : "Thu gọn"}</button>
+        </div>
+        ${state.digestCollapsed ? "" : `
+          <div class="digest-grid">
+            <div class="digest-item">
+              <b>3 Task Xong Gần Nhất</b><br/>
+              ${reviewedDone.map(t=>`#${taskNumOf(t)} (${t.result.review.score}/10)`).join(" · ") || "—"}<br/>
+              <span style="color:var(--green);font-weight:700;">Điểm TB: ${avgScore}/10</span>
+            </div>
+            <div class="digest-item">
+              <b>Đang Mở (Chưa Ai Claim)</b><br/>
+              ${openUnclaimed.length ? openUnclaimed.map(t=>`#${taskNumOf(t)}`).join(", ") + " (status: open, assignee trống)" : "Không có task open"}
+            </div>
+            <div class="digest-item">
+              <b>Tự Học &amp; Hệ Sinh Thái</b><br/>
+              Tự học: <b>${trDone}/${trTot}</b> · ${(state.bundle.research_index||[]).length} báo cáo<br/>
+              Qsang_vbook: <b>${qsang.registry_count || 0}</b> nguồn · ${esc(spec.summary || "OK")}
+            </div>
+          </div>
+        `}
+      </div>
+    `;
   }
 
   function renderChat() {
     const allMsgs = buildChatMessages();
-    const qsang = state.bundle.qsang || {};
-    const spec = state.bundle.spec_check || {};
-
-    let roomLabel = `# ${state.room}`;
-    let roomTag = "Phòng Điều Phối";
-    let roomSub = `Qsang_vbook: ${qsang.registry_count || 0} nguồn (${qsang.main_tip || "—"}) • Spec: ${spec.summary || "OK"} • Cập nhật ${fmtTime(state.bundle.generated_at)}`;
+    const qsang = state.bundle.qsang || {}, spec = state.bundle.spec_check || {};
+    let roomLabel = `# ${state.room}`, roomTag = "Phòng Điều Phối";
+    let roomSub = `Qsang_vbook: ${qsang.registry_count || 0} nguồn (${qsang.main_tip || "—"}) • Spec: ${spec.summary || "OK"} • ${fmtTime(state.bundle.generated_at)}`;
 
     const filtered = allMsgs.filter(m => {
       if (state.agentFilter && m.sender !== state.agentFilter && !m.text.includes(`@${state.agentFilter}`)) return false;
-      if (state.msgFilter !== "all" && m.kind !== state.msgFilter) return false;
+      if (state.msgFilter !== "all") {
+        if (state.msgFilter === "report" && m.kind !== "report" && m.kind !== "log_step") return false;
+        if (state.msgFilter !== "report" && m.kind !== state.msgFilter) return false;
+      }
       if (state.room === "can-anh-quyet") return m.kind === "gate" || m.taskStatus === "review" || m.taskStatus === "blocked";
       if (state.room === "viec-dang-chay") return ["open","claimed","doing","review","blocked"].includes(m.taskStatus);
       if (state.room === "kho-vbook-ext") return m.taskType === "vbook-extension";
       if (state.room === "phong-tu-hoc") return m.taskType === "research" || (m.deliverable && m.deliverable.resFile);
-      if (state.room.startsWith("task:")) {
-        const tid = state.room.slice(5);
-        return m.taskId === tid;
-      }
+      if (state.room.startsWith("task:")) return m.taskId === state.room.slice(5);
       return true;
     });
 
     if (state.room.startsWith("task:")) {
       const t = (state.bundle.tasks || []).find(x => x.id === state.room.slice(5));
-      if (t) {
-        roomLabel = `# ${taskNumOf(t) || t.id}`;
-        roomTag = t.status ? t.status.toUpperCase() : "TASK";
-        roomSub = t.title;
-      }
+      if (t) { roomLabel = `# ${taskNumOf(t) || t.id}`; roomTag = (t.status || "TASK").toUpperCase(); roomSub = t.title; }
     } else if (state.agentFilter) {
-      roomLabel = `@ ${AGENTS[state.agentFilter].name}`;
-      roomTag = "Lọc theo Muse";
+      roomLabel = `@ ${AGENTS[state.agentFilter].name}`; roomTag = "Lọc theo Muse";
     }
 
     document.getElementById("roomTitle").textContent = roomLabel;
     document.getElementById("roomTag").textContent = roomTag;
     document.getElementById("roomSub").textContent = maskInfra(roomSub);
 
+    const grouped = groupMessages(filtered);
     const feed = document.getElementById("chatFeed");
-    if (!filtered.length) {
-      feed.innerHTML = `<div style="margin:auto;text-align:center;color:var(--ink3);padding:32px;">
-        <div style="font-size:28px;margin-bottom:6px;">💬</div>
-        <div>Chưa có tin nhắn nào khớp bộ lọc trong phòng này.</div>
-      </div>`;
+    let html = renderShiftDigestHtml();
+
+    if (!grouped.length) {
+      html += `<div style="margin:auto;text-align:center;color:var(--ink3);padding:32px;"><div style="font-size:26px;">💬</div><div>Không có tin nhắn nào khớp bộ lọc.</div></div>`;
+      feed.innerHTML = html;
       return;
     }
 
-    let html = "";
     let lastDay = "";
-    filtered.forEach(m => {
+    grouped.forEach((m, gi) => {
       const day = fmtDay(m.timeIso);
-      if (day !== lastDay) {
-        html += `<div class="day-sep">${esc(day)}</div>`;
-        lastDay = day;
-      }
+      if (day !== lastDay) { html += `<div class="day-sep">${esc(day)}</div>`; lastDay = day; }
       const ag = AGENTS[m.sender] || AGENTS["muse-main"];
       const cls = m.kind === "commander" ? "commander" : (m.kind === "gate" ? "highlight" : "");
       const timeStr = m.customTime || fmtTime(m.timeIso);
 
+      let groupHtml = "";
+      if (m.grouped && m.grouped.length > 1) {
+        const prevSteps = m.grouped.slice(0, -1);
+        groupHtml = `
+          <button class="log-group-btn" data-togglelog="lg-${gi}">▾ Xem ${prevSteps.length} bước nhật ký tiến độ trước đó</button>
+          <div class="log-group-list" id="lg-${gi}">
+            ${prevSteps.map(s => `<div style="font-size:12px;color:var(--ink2);"><span style="font-family:var(--mono);color:var(--ink3);">[${esc(s.time)}]</span> ${esc(s.text)}</div>`).join("")}
+          </div>
+        `;
+      }
+
       let extra = "";
       if (m.card) {
-        extra += `<div class="msg-card">
-          <div class="mc-top">
-            ${statusBadge(m.card.status)}
-            <span class="pill p-open">Ưu tiên: ${esc(m.card.priority)}</span>
-            ${m.card.checklistCount ? `<span class="pill p-open">✓ ${m.card.checklistCount} mục kiểm tra</span>` : ""}
-          </div>
-          <div class="mc-title">${esc(m.card.title)}</div>
-          <div class="mc-actions">
-            ${m.taskId ? `<button class="btn sm" data-opentask="${esc(m.taskId)}">📋 Chi tiết #${esc(m.taskNum || m.taskId)}</button>` : ""}
-            ${m.card.resFile ? `<button class="btn sm primary" data-openreport="${esc(m.card.resFile)}" data-taskid="${esc(m.taskId)}">📖 Đọc báo cáo</button>` : ""}
-          </div>
-        </div>`;
+        extra += `<div class="msg-card"><div class="mc-top">${statusBadge(m.card.status)}<span class="pill p-open">Ưu tiên: ${esc(m.card.priority)}</span>${m.card.checklistCount ? `<span class="pill p-open">✓ ${m.card.checklistCount} mục</span>` : ""}</div><div class="mc-title">${esc(m.card.title)}</div><div class="mc-actions">${m.taskId ? `<button class="btn sm" data-opentask="${esc(m.taskId)}">📋 Chi tiết #${esc(m.taskNum || m.taskId)}</button>` : ""}${m.card.resFile ? `<button class="btn sm primary" data-openreport="${esc(m.card.resFile)}" data-taskid="${esc(m.taskId)}">📖 Đọc báo cáo</button>` : ""}</div></div>`;
       }
       if (m.deliverable) {
         const d = m.deliverable;
-        extra += `<div class="msg-card">
-          <div class="mc-top">
-            <span class="pill p-done">📄 Báo cáo &amp; Bằng chứng</span>
-            ${d.vdi.map(v => `<span class="pill p-doing">✓ ${v}</span>`).join("")}
-            ${d.commit ? `<span class="pill p-open" style="font-family:var(--mono);">${esc(d.commit.slice(0,7))}</span>` : ""}
-          </div>
-          ${d.evidence ? `<div style="font-size:12px;color:var(--ink2);font-family:var(--mono);margin-bottom:6px;">${esc(d.evidence)}</div>` : ""}
-          <div class="mc-actions">
-            ${d.resFile ? `<button class="btn sm primary" data-openreport="${esc(d.resFile)}" data-taskid="${esc(m.taskId)}">📖 Đọc báo cáo (${esc(d.resFile.split("/").pop())})</button>` : ""}
-            ${m.taskId ? `<button class="btn sm" data-opentask="${esc(m.taskId)}">📋 Hồ sơ task</button>` : ""}
-          </div>
-        </div>`;
+        extra += `<div class="msg-card"><div class="mc-top"><span class="pill p-done">📄 Báo cáo &amp; Bằng chứng</span>${d.vdi.map(v=>`<span class="pill p-doing">✓ ${v}</span>`).join("")}${d.commit ? `<span class="pill p-open" style="font-family:var(--mono);">${esc(d.commit.slice(0,7))}</span>` : ""}</div>${d.evidence ? `<div style="font-size:12px;color:var(--ink2);font-family:var(--mono);margin-bottom:6px;">${esc(d.evidence)}</div>` : ""}<div class="mc-actions">${d.resFile ? `<button class="btn sm primary" data-openreport="${esc(d.resFile)}" data-taskid="${esc(m.taskId)}">📖 Đọc báo cáo</button>` : ""}${m.taskId ? `<button class="btn sm" data-opentask="${esc(m.taskId)}">📋 Hồ sơ task</button>` : ""}</div></div>`;
       }
       if (m.gate) {
         const g = m.gate;
-        extra += `<div class="msg-card">
-          <div class="mc-top">
-            <span class="pill p-blocked">CẦN ANH QUYẾT</span>
-            <span class="mc-title">${esc(g.title)}</span>
-          </div>
-          <div style="font-size:12.5px;color:var(--ink2);margin-bottom:8px;">${esc(g.snippet)}</div>
-          <div class="mc-actions">
-            <button class="btn sm good" data-quickcmd="approve" data-taskid="${esc(m.taskId || g.task_id || g.task_num || "")}">✓ Duyệt ngay</button>
-            <button class="btn sm warn" data-quickcmd="rework" data-taskid="${esc(m.taskId || g.task_id || g.task_num || "")}">↩ Yêu cầu sửa</button>
-            ${m.taskId ? `<button class="btn sm" data-opentask="${esc(m.taskId)}">📋 Xem chi tiết</button>` : ""}
-          </div>
-        </div>`;
+        extra += `<div class="msg-card"><div class="mc-top"><span class="pill p-blocked">CẦN ANH QUYẾT</span><span class="mc-title">${esc(g.title)}</span></div><div style="font-size:12.5px;color:var(--ink2);margin-bottom:8px;">${esc(g.snippet)}</div><div class="mc-actions"><button class="btn sm good" data-reqcmd="approve" data-taskid="${esc(m.taskId || g.task_id || g.task_num || "")}">✓ Gửi đề nghị Bẹp duyệt</button><button class="btn sm warn" data-reqcmd="rework" data-taskid="${esc(m.taskId || g.task_id || g.task_num || "")}">↩ Yêu cầu sửa</button></div></div>`;
       }
 
-      html += `
-        <div class="msg ${cls}">
-          <div class="msg-av" style="background:${ag.bg}">${ag.short}</div>
-          <div class="msg-body">
-            <div class="msg-head">
-              <span class="msg-author">${esc(ag.name)}</span>
-              <span class="msg-role">${esc(ag.role)}</span>
-              ${m.taskNum ? `<button class="msg-task-link" data-jumproom="task:${esc(m.taskId)}">#${esc(m.taskNum)}</button>` : ""}
-              ${m.reviewBadge ? `<span class="pill p-score">${esc(m.reviewBadge)}</span>` : ""}
-              ${m.badge ? `<span class="pill p-doing">${esc(m.badge)}</span>` : ""}
-              <span class="msg-time">${esc(timeStr)}</span>
-            </div>
-            <div class="msg-text">${esc(m.text)}</div>
-            ${extra}
-          </div>
-        </div>`;
+      html += `<div class="msg ${cls}"><div class="msg-av" style="background:${ag.bg}">${ag.short}</div><div class="msg-body"><div class="msg-head"><span class="msg-author">${esc(ag.name)}</span><span class="msg-role">${esc(ag.role)}</span>${m.taskNum ? `<button class="msg-task-link" data-jumproom="task:${esc(m.taskId)}">#${esc(m.taskNum)}</button>` : ""}${m.reviewBadge ? `<span class="pill p-score">${esc(m.reviewBadge)}</span>` : ""}${m.badge ? `<span class="pill p-doing">${esc(m.badge)}</span>` : ""}<span class="msg-time">${esc(timeStr)}</span></div><div class="msg-text">${esc(m.text)}</div>${groupHtml}${extra}</div></div>`;
     });
 
     feed.innerHTML = html;
@@ -1226,488 +1094,438 @@
 
   function renderComposerTargets() {
     const tasks = state.bundle.tasks || [];
-    const sel = document.getElementById("compTask");
-    const curRoomTask = state.room.startsWith("task:") ? state.room.slice(5) : "";
-    const opts = [`<option value="">(Nhắn chung / Không gắn task)</option>`];
-    tasks.slice(0, 30).forEach(t => {
-      const num = taskNumOf(t);
-      opts.push(`<option value="${esc(t.id)}" ${curRoomTask === t.id ? "selected" : ""}>#${esc(num || t.id)} — ${esc(String(t.title).slice(0,32))}</option>`);
-    });
-    sel.innerHTML = opts.join("");
-    document.getElementById("btnQuickApprove").style.display = sel.value ? "inline-flex" : "none";
+    const cur = state.room.startsWith("task:") ? state.room.slice(5) : "";
+    document.getElementById("compTask").innerHTML = [`<option value="">(Nhắn chung)</option>`, ...tasks.slice(0, 30).map(t => `<option value="${esc(t.id)}" ${cur === t.id ? "selected" : ""}>#${esc(taskNumOf(t) || t.id)} — ${esc(String(t.title).slice(0,30))}</option>`)].join("");
   }
 
-  /* ===== RIGHT INSPECTOR & MARKDOWN READER ===== */
+  /* ===== RICH READER v2 + PLANNOTATOR PINNING ===== */
   function renderInspector() {
     const insp = document.getElementById("inspector");
-    if (!state.inspOpen) {
-      insp.classList.add("hidden");
-      return;
-    }
-    insp.classList.remove("hidden");
+    insp.classList.toggle("hidden", !state.inspOpen);
+    insp.classList.toggle("zen", state.zenMode);
+    if (!state.inspOpen) return;
 
-    document.querySelectorAll("[data-insptab]").forEach(b => {
-      b.classList.toggle("active", b.dataset.insptab === state.inspTab);
-    });
-
+    document.querySelectorAll("[data-insptab]").forEach(b => b.classList.toggle("active", b.dataset.insptab === state.inspTab));
     const body = document.getElementById("inspBody");
+    const pinBar = document.getElementById("pinBar");
+    pinBar.classList.toggle("open", state.pins.length > 0);
+    document.getElementById("pinBarTxt").textContent = `📌 ${state.pins.length} điểm đã ghim`;
+
     if (state.inspTab === "report") {
       if (!state.selectedReportFile) {
-        body.innerHTML = `<div style="color:var(--ink3);padding:20px;text-align:center;">Chọn một báo cáo <code>research/*.md</code> từ phòng chat hoặc Dashboard để đọc tại đây.</div>`;
+        body.innerHTML = `<div style="color:var(--ink3);padding:20px;text-align:center;">Chọn một báo cáo <code>research/*.md</code> để đọc tại đây.</div>`;
         return;
       }
       const f = state.selectedReportFile;
-      if (state.reportCache[f]) {
-        body.innerHTML = `<div style="font-size:11.5px;color:var(--ink3);font-family:var(--mono);margin-bottom:8px;">📄 ${esc(f)}</div><div class="md-view">${renderMarkdown(state.reportCache[f])}</div>`;
-      } else {
-        body.innerHTML = `<div style="padding:20px;color:var(--ink3);">Đang tải báo cáo <code>${esc(f)}</code>...</div>`;
+      if (!state.reportCache[f]) {
+        body.innerHTML = `<div style="padding:20px;color:var(--ink3);">Đang tải <code>${esc(f)}</code>...</div>`;
         fetchReport(f);
+        return;
       }
+      const { html, toc } = renderRichMarkdown(state.reportCache[f]);
+      const tocHtml = toc.length ? `<div class="toc-box"><b>📑 Mục lục (${toc.length})</b>${toc.map(h=>`<button class="toc-link" data-scrollto="${h.id}" style="padding-left:${(h.level-1)*10}px;">${esc(h.text)}</button>`).join("")}</div>` : "";
+      body.innerHTML = `<div style="font-size:11.5px;color:var(--ink3);font-family:var(--mono);margin-bottom:8px;">📄 ${esc(f)} (bấm 📌 cạnh đoạn để ghim góp ý Plannotator)</div>${tocHtml}<div class="md-view">${html}</div>`;
       return;
     }
 
     const t = (state.bundle.tasks || []).find(x => x.id === state.selectedTaskId);
-    if (!t) {
-      body.innerHTML = `<div style="color:var(--ink3);padding:20px;text-align:center;">Bấm vào một #task trong chat để xem hồ sơ chi tiết và thao tác 1-click.</div>`;
-      return;
-    }
-
-    const res = t.result || {};
-    const rv = res.review || {};
-    const tnum = taskNumOf(t);
+    if (!t) { body.innerHTML = `<div style="color:var(--ink3);padding:20px;text-align:center;">Chọn một #task để xem hồ sơ.</div>`; return; }
+    const rv = (t.result && t.result.review) || {}, tnum = taskNumOf(t);
     const resObj = (state.bundle.research_index || []).find(r => r.task_num === tnum);
 
     body.innerHTML = `
       <div class="insp-section">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px;">
-          ${statusBadge(t.status)}
-          <span class="pill p-open">#${esc(tnum || t.id)}</span>
-          ${t.assignee ? `<span class="pill p-doing">@${esc(t.assignee)}</span>` : ""}
-          ${rv.score != null ? `<span class="pill p-score">⭐ ${rv.score}/10</span>` : ""}
-        </div>
-        <h3 style="margin:0 0 6px;font-size:15px;">${esc(t.title)}</h3>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;">
-          <button class="btn sm good" data-quickcmd="approve" data-taskid="${esc(t.id)}">✓ Duyệt</button>
-          <button class="btn sm warn" data-quickcmd="rework" data-taskid="${esc(t.id)}">↩ Yêu cầu sửa</button>
-          <button class="btn sm" data-quickcmd="reopen" data-taskid="${esc(t.id)}">↻ Mở lại</button>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px;">${statusBadge(t.status)}<span class="pill p-open">#${esc(tnum || t.id)}</span>${t.assignee ? `<span class="pill p-doing">@${esc(t.assignee)}</span>` : `<span class="pill p-open">chưa gán</span>`}${rv.score != null ? `<span class="pill p-score">⭐ ${rv.score}/10</span>` : ""}</div>
+        <h3 style="margin:0 0 8px;font-size:15px;">${esc(t.title)}</h3>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;">
+          <button class="btn sm good" data-reqcmd="approve" data-taskid="${esc(t.id)}">✓ Gửi đề nghị Bẹp duyệt</button>
+          <button class="btn sm warn" data-reqcmd="rework" data-taskid="${esc(t.id)}">↩ Yêu cầu sửa</button>
           ${resObj ? `<button class="btn sm primary" data-openreport="${esc(resObj.file)}" data-taskid="${esc(t.id)}">📖 Đọc báo cáo</button>` : ""}
         </div>
       </div>
-
-      ${(t.checklist || []).length ? `<div class="insp-section">
-        <h4>Checklist (${t.checklist.length})</h4>
-        ${t.checklist.map(c => `<div class="chk-item"><span>☐</span><span>${esc(c)}</span></div>`).join("")}
-      </div>` : ""}
-
-      <div class="insp-section">
-        <h4>Ghi chú &amp; Nhật ký</h4>
-        <div style="font-size:12.5px;white-space:pre-wrap;background:var(--panel2);padding:10px;border-radius:8px;max-height:260px;overflow-y:auto;">${esc(t.notes || "(Trống)")}</div>
-      </div>
-
-      ${rv.note ? `<div class="insp-section">
-        <h4>Nhận xét QC (Chị cả Bẹp)</h4>
-        <div style="font-size:12.5px;background:var(--purple-soft);padding:10px;border-radius:8px;">${esc(rv.note)}</div>
-      </div>` : ""}
+      ${(t.checklist || []).length ? `<div class="insp-section"><h4>Checklist (${t.checklist.length})</h4>${t.checklist.map((c,i)=>`<div class="md-block" style="border-bottom:1px dashed var(--line);padding:4px 28px 4px 2px;font-size:12.5px;">☐ ${esc(c)}<button class="pin-btn" data-pin="${esc("Checklist #" + (i+1) + ": " + c.slice(0,80))}" title="Ghim góp ý">📌</button></div>`).join("")}</div>` : ""}
+      <div class="insp-section"><h4>Ghi chú &amp; Nhật ký</h4><div style="font-size:12.5px;white-space:pre-wrap;background:var(--panel2);padding:10px;border-radius:8px;max-height:240px;overflow-y:auto;">${esc(t.notes || "(Trống)")}</div></div>
+      ${rv.note ? `<div class="insp-section"><h4>Nhận xét QC (Bẹp)</h4><div style="font-size:12.5px;background:var(--purple-soft);padding:10px;border-radius:8px;">${esc(rv.note)}</div></div>` : ""}
     `;
   }
 
   async function fetchReport(file) {
-    const urls = [`./${file}`, `../${file}`, `https://raw.githubusercontent.com/${REPO}/main/${file}`];
-    for (const u of urls) {
-      try {
-        const r = await fetch(u);
-        if (r.ok) {
-          state.reportCache[file] = await r.text();
-          if (state.selectedReportFile === file) renderInspector();
-          return;
-        }
-      } catch {}
+    for (const u of [`./${file}`, `../${file}`, `https://raw.githubusercontent.com/${REPO}/main/${file}`]) {
+      try { const r = await fetch(u); if (r.ok) { state.reportCache[file] = await r.text(); if (state.selectedReportFile === file) renderInspector(); return; } } catch {}
     }
-    state.reportCache[file] = `Không thể tải tự động file \`${file}\`. Anh có thể xem trực tiếp trên GitHub: https://github.com/${REPO}/blob/main/${file}`;
+    state.reportCache[file] = `Không thể tải tự động \`${file}\`. Xem trên GitHub: https://github.com/${REPO}/blob/main/${file}`;
     if (state.selectedReportFile === file) renderInspector();
   }
 
-  function renderMarkdown(md) {
-    let text = esc(md);
-    text = text.replace(/```([\s\S]*?)```/g, (_, code) => `<pre><code>${code.trim()}</code></pre>`);
-    const lines = text.split("\n");
-    const out = [];
-    for (const ln of lines) {
-      if (ln.startsWith("### ")) out.push(`<h3>${ln.slice(4)}</h3>`);
-      else if (ln.startsWith("## ")) out.push(`<h2>${ln.slice(3)}</h2>`);
-      else if (ln.startsWith("# ")) out.push(`<h1>${ln.slice(2)}</h1>`);
-      else if (ln.startsWith("- ") || ln.startsWith("* ")) out.push(`<div>• ${ln.slice(2)}</div>`);
-      else out.push(ln ? `<div>${ln}</div>` : `<div style="height:6px;"></div>`);
+  function renderRichMarkdown(md) {
+    let raw = esc(md).replace(/```([\s\S]*?)```/g, (_, c) => `\n<pre><code>${c.trim()}</code></pre>\n`);
+    const lines = raw.split("\n"), out = [], toc = [];
+    let i = 0, hid = 0;
+    const inline = s => s.replace(/`([^`]+)`/g, "<code>$1</code>").replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>");
+
+    while (i < lines.length) {
+      const ln = lines[i];
+      if (ln.trim().startsWith("|") && i + 1 < lines.length && /^\|?[\s:-]+\|/.test(lines[i+1].trim())) {
+        const parseRow = r => r.trim().replace(/^\|/,"").replace(/\|$/,"").split("|").map(c=>inline(c.trim()));
+        const hdr = parseRow(ln); i += 2;
+        const rows = [];
+        while (i < lines.length && lines[i].trim().startsWith("|")) { rows.push(parseRow(lines[i])); i++; }
+        out.push(`<table><thead><tr>${hdr.map(c=>`<th>${c}</th>`).join("")}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join("")}</tr>`).join("")}</tbody></table>`);
+        continue;
+      }
+      if (/^#{1,3}\s+/.test(ln)) {
+        const lvl = ln.match(/^(#+)/)[1].length, txt = ln.slice(lvl + 1).trim();
+        hid++; const id = `mdh-${hid}`;
+        toc.push({ id, level: lvl, text: txt });
+        out.push(`<div class="md-block" id="${id}"><h${lvl}>${inline(txt)}</h${lvl}><button class="pin-btn" data-pin="${esc(txt.slice(0,90))}" title="Ghim góp ý">📌</button></div>`);
+      } else if (ln.startsWith("- ") || ln.startsWith("* ")) {
+        out.push(`<div class="md-block">• ${inline(ln.slice(2))}<button class="pin-btn" data-pin="${esc(ln.slice(2,90))}" title="Ghim góp ý">📌</button></div>`);
+      } else if (ln.trim()) {
+        out.push(`<div class="md-block">${inline(ln)}<button class="pin-btn" data-pin="${esc(ln.slice(0,90))}" title="Ghim góp ý">📌</button></div>`);
+      } else {
+        out.push(`<div style="height:5px;"></div>`);
+      }
+      i++;
     }
-    return out.join("").replace(/`([^`]+)`/g, "<code>$1</code>").replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>");
+    return { html: out.join(""), toc };
   }
 
-  /* ===== VIEW 2: DASHBOARD (KANBAN + LEARNING + ECOSYSTEM) ===== */
+  /* ===== DASHBOARD VIEW ===== */
   function renderDash() {
-    const tasks = state.bundle.tasks || [];
-    const tracks = state.bundle.learning_tracks || [];
-    const reports = state.bundle.research_index || [];
-    const qsang = state.bundle.qsang || {};
-    const spec = state.bundle.spec_check || {};
-    const q = state.dashSearch.trim().toLowerCase();
-
-    document.getElementById("dashSub").textContent =
-      `Tổng ${tasks.length} tasks • ${reports.length} báo cáo research • Spec: ${spec.summary || "OK"}`;
-
-    document.querySelectorAll("[data-dashtab]").forEach(b => {
-      b.classList.toggle("active", b.dataset.dashtab === state.dashTab);
-    });
-
+    const tasks = state.bundle.tasks || [], tracks = state.bundle.learning_tracks || [], reports = state.bundle.research_index || [];
+    const qsang = state.bundle.qsang || {}, spec = state.bundle.spec_check || {}, q = state.dashSearch.trim().toLowerCase();
+    document.getElementById("dashSub").textContent = `Tổng ${tasks.length} tasks • ${reports.length} báo cáo • Spec: ${spec.summary || "OK"}`;
+    document.querySelectorAll("[data-dashtab]").forEach(b => b.classList.toggle("active", b.dataset.dashtab === state.dashTab));
     const body = document.getElementById("dashBody");
+
     if (state.dashTab === "kanban") {
       const cols = [
-        { key: "open", title: "Mở (Open)", list: [] },
-        { key: "doing", title: "Đang làm (Claimed/Doing)", list: [] },
-        { key: "review", title: "Chờ duyệt / Bị chặn", list: [] },
-        { key: "done", title: "Hoàn thành (Done)", list: [] }
+        { title: "Mở (Open)", list: tasks.filter(t=>t.status==="open") },
+        { title: "Đang làm", list: tasks.filter(t=>t.status==="claimed"||t.status==="doing") },
+        { title: "Chờ duyệt / Chặn", list: tasks.filter(t=>t.status==="review"||t.status==="blocked") },
+        { title: "Hoàn thành", list: tasks.filter(t=>t.status==="done") }
       ];
-      tasks.forEach(t => {
-        if (q && !String(t.id).toLowerCase().includes(q) && !String(t.title).toLowerCase().includes(q)) return;
-        if (t.status === "open") cols[0].list.push(t);
-        else if (t.status === "claimed" || t.status === "doing") cols[1].list.push(t);
-        else if (t.status === "review" || t.status === "blocked") cols[2].list.push(t);
-        else if (t.status === "done") cols[3].list.push(t);
-      });
-
-      body.innerHTML = `<div class="kanban">
-        ${cols.map(c => `
-          <div class="k-col">
-            <div class="k-head"><span>${c.title}</span><span class="pill p-open">${c.list.length}</span></div>
-            ${c.list.slice(0, 25).map(t => `
-              <div class="k-card" data-opentask="${esc(t.id)}">
-                <div class="k-card-meta">
-                  <span style="font-family:var(--mono);font-weight:700;">#${esc(taskNumOf(t) || t.id)}</span>
-                  <span>${esc(t.assignee || "chưa gán")}</span>
-                </div>
-                <div class="k-card-title">${esc(t.title)}</div>
-                <div class="k-card-meta"><span>${esc(t.type || "")}</span><span>${esc(fmtTime(t.updated_at))}</span></div>
-              </div>
-            `).join("")}
-          </div>
-        `).join("")}
-      </div>`;
+      body.innerHTML = `<div class="kanban">${cols.map(c => {
+        const fl = c.list.filter(t => !q || String(t.id).toLowerCase().includes(q) || String(t.title).toLowerCase().includes(q));
+        return `<div class="k-col"><div class="k-head"><span>${c.title}</span><span class="pill p-open">${fl.length}</span></div>${fl.slice(0,25).map(t=>`<div class="k-card" data-opentask="${esc(t.id)}"><div class="k-card-meta"><span style="font-family:var(--mono);font-weight:700;">#${esc(taskNumOf(t)||t.id)}</span><span>${esc(t.assignee||"chưa gán")}</span></div><div class="k-card-title">${esc(t.title)}</div><div class="k-card-meta"><span>${esc(t.type||"")}</span><span>${esc(fmtTime(t.updated_at))}</span></div></div>`).join("")}</div>`;
+      }).join("")}</div>`;
     } else if (state.dashTab === "learning") {
       body.innerHTML = tracks.map(tr => {
         const pct = tr.total ? Math.round((tr.done / tr.total) * 100) : 0;
         const matched = (tr.task_ids || []).filter(x => !q || String(x.title).toLowerCase().includes(q) || String(x.num).includes(q));
-        return `
-          <div class="track-card">
-            <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;">
-              <div>
-                <div style="font-weight:700;font-size:14.5px;">${esc(tr.name)}</div>
-                <div style="font-size:12px;color:var(--ink3);">${esc(tr.description)}</div>
-              </div>
-              <span class="pill p-done">${tr.done}/${tr.total} (${pct}%)</span>
-            </div>
-            <div class="prog-bar"><div class="prog-fill" style="width:${pct}%"></div></div>
-            <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;">
-              ${matched.slice(0, 24).map(item => `
-                <button class="btn sm" data-openreport="${esc(item.research_file || "")}" data-taskid="${esc(item.id)}">
-                  #${esc(item.num)} ${item.status === "done" ? "✓" : "⏳"} ${esc(String(item.title).slice(0,28))}
-                </button>
-              `).join("")}
-            </div>
-          </div>
-        `;
+        return `<div class="track-card"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px;"><div><b>${esc(tr.name)}</b><div style="font-size:12px;color:var(--ink3);">${esc(tr.description)}</div></div><span class="pill p-done">${tr.done}/${tr.total} (${pct}%)</span></div><div class="prog-bar"><div class="prog-fill" style="width:${pct}%"></div></div><div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;">${matched.slice(0,24).map(it=>`<button class="btn sm" data-openreport="${esc(it.research_file||"")}" data-taskid="${esc(it.id)}">#${esc(it.num)} ${it.status==="done"?"✓":"⏳"} ${esc(String(it.title).slice(0,28))}</button>`).join("")}</div></div>`;
       }).join("");
     } else if (state.dashTab === "reports") {
       const list = reports.filter(r => !q || r.file.toLowerCase().includes(q) || r.title.toLowerCase().includes(q));
-      body.innerHTML = `<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:10px;">
-        ${list.map(r => `
-          <div class="k-card" data-openreport="${esc(r.file)}">
-            <div class="k-card-meta"><span>#${esc(r.task_num || "—")}</span><span>${r.lines} dòng</span></div>
-            <div class="k-card-title">${esc(r.title)}</div>
-            <div style="font-size:11px;font-family:var(--mono);color:var(--blue);">${esc(r.file)}</div>
-          </div>
-        `).join("")}
-      </div>`;
+      body.innerHTML = `<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;">${list.map(r=>`<div class="k-card" data-openreport="${esc(r.file)}"><div class="k-card-meta"><span>#${esc(r.task_num||"—")}</span><span>${r.lines} dòng</span></div><div class="k-card-title">${esc(r.title)}</div><div style="font-size:11px;font-family:var(--mono);color:var(--blue);">${esc(r.file)}</div></div>`).join("")}</div>`;
     } else {
-      const doneCnt = tasks.filter(t => t.status === "done").length;
-      body.innerHTML = `
-        <div class="kpi-row">
-          <div class="kpi-card"><div class="kpi-lbl">Qsang_vbook Registry</div><div class="kpi-val">${qsang.registry_count || 0} nguồn</div><div class="kpi-sub">main tip: <code>${esc(qsang.main_tip || "—")}</code></div></div>
-          <div class="kpi-card"><div class="kpi-lbl">Tổng Tasks Hoàn Thành</div><div class="kpi-val">${doneCnt} / ${tasks.length}</div><div class="kpi-sub">Cập nhật: ${esc(fmtTime(state.bundle.generated_at))}</div></div>
-          <div class="kpi-card"><div class="kpi-lbl">Verify Spec</div><div class="kpi-val" style="color:${spec.ok ? "var(--green)" : "var(--red)"}">${spec.ok ? "OK" : "DRIFT"}</div><div class="kpi-sub">${esc(spec.summary || "")}</div></div>
-          <div class="kpi-card"><div class="kpi-lbl">Báo Cáo Nghiên Cứu</div><div class="kpi-val">${reports.length} file</div><div class="kpi-sub">Thư mục research/*.md</div></div>
-        </div>
-        ${(spec.drifts || []).length ? `<div class="track-card"><b>Chi tiết Drift:</b><ul>${spec.drifts.map(d => `<li>${esc(d)}</li>`).join("")}</ul></div>` : ""}
-      `;
+      const doneCnt = tasks.filter(t=>t.status==="done").length;
+      body.innerHTML = `<div class="kpi-row"><div class="kpi-card"><div class="kpi-lbl">Qsang_vbook Registry</div><div class="kpi-val">${qsang.registry_count||0} nguồn</div><div class="kpi-sub">main: <code>${esc(qsang.main_tip||"—")}</code></div></div><div class="kpi-card"><div class="kpi-lbl">Tasks Hoàn Thành</div><div class="kpi-val">${doneCnt} / ${tasks.length}</div><div class="kpi-sub">${esc(fmtTime(state.bundle.generated_at))}</div></div><div class="kpi-card"><div class="kpi-lbl">Verify Spec</div><div class="kpi-val" style="color:${spec.ok?"var(--green)":"var(--red)"}">${spec.ok?"OK":"DRIFT"}</div><div class="kpi-sub">${esc(spec.summary||"")}</div></div><div class="kpi-card"><div class="kpi-lbl">Kho Báo Cáo</div><div class="kpi-val">${reports.length} file</div><div class="kpi-sub">research/*.md</div></div></div>`;
     }
   }
 
-  /* ===== GITHUB ISSUE COMMAND BRIDGE (PAT + FALLBACK) ===== */
-  async function sendCommand({ title, body, taskId, displayMsg }) {
-    const pat = localStorage.getItem(PAT_KEY);
-    if (!pat) {
-      const url = `https://github.com/${REPO}/issues/new?labels=dashboard&title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
-      window.open(url, "_blank", "noopener");
-      state.localCmds.push({ id: Date.now(), ts: Date.now(), taskId: taskId || "", taskNum: taskNumOf({id: taskId}), text: displayMsg || title });
-      saveLocalCmds(state.localCmds);
-      renderChat();
-      toast("Đã mở tab GitHub Issue (nhập PAT để gửi 1-click lần sau)");
+  /* ===== MANDATORY CONFIRMATION & GITHUB ISSUE DISPATCH ===== */
+  function openConfirm({ title, body, taskId, displayMsg, note }) {
+    state.pendingConfirm = { taskId: taskId || "", displayMsg: displayMsg || title };
+    document.getElementById("cfmTitle").value = title;
+    document.getElementById("cfmBody").value = body;
+    document.getElementById("cfmNote").textContent = note || "Mọi lệnh đều tạo GitHub Issue để Bẹp (muse-main) xem xét và áp dụng — không sửa trực tiếp tasks/*.json.";
+    document.getElementById("cfmSendPat").style.display = localStorage.getItem(PAT_KEY) ? "inline-flex" : "none";
+    document.getElementById("confirmModal").classList.add("open");
+  }
+
+  async function executeConfirmed(viaPat) {
+    const title = document.getElementById("cfmTitle").value.trim();
+    const body = document.getElementById("cfmBody").value.trim();
+    const pc = state.pendingConfirm || {};
+    document.getElementById("confirmModal").classList.remove("open");
+
+    if (!viaPat) {
+      window.open(`https://github.com/${REPO}/issues/new?labels=dashboard&title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`, "_blank", "noopener");
+      state.localCmds.push({ id: Date.now(), ts: Date.now(), taskId: pc.taskId, taskNum: taskNumOf(pc.taskId), text: pc.displayMsg });
+      saveLocalCmds(state.localCmds); renderChat();
+      toast("Đã mở bản nháp GitHub Issue");
       return;
     }
 
+    const pat = localStorage.getItem(PAT_KEY);
+    if (!pat) return toast("Chưa gắn PAT!");
     try {
       const res = await fetch(`https://api.github.com/repos/${REPO}/issues`, {
         method: "POST",
-        headers: {
-          "Authorization": `Bearer ${pat}`,
-          "Accept": "application/vnd.github+json",
-          "Content-Type": "application/json"
-        },
+        headers: { "Authorization": `Bearer ${pat}`, "Accept": "application/vnd.github+json", "Content-Type": "application/json" },
         body: JSON.stringify({ title, body, labels: ["dashboard"] })
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const iss = await res.json();
-      state.localCmds.push({
-        id: Date.now(), ts: Date.now(), issueNumber: iss.number,
-        taskId: taskId || "", taskNum: taskNumOf({id: taskId}),
-        text: displayMsg || title
-      });
-      saveLocalCmds(state.localCmds);
-      renderChat();
-      toast(`✓ Đã phát lệnh qua Issue #${iss.number}`);
+      state.localCmds.push({ id: Date.now(), ts: Date.now(), issueNumber: iss.number, taskId: pc.taskId, taskNum: taskNumOf(pc.taskId), text: pc.displayMsg });
+      saveLocalCmds(state.localCmds); renderChat();
+      toast(`✓ Đã tạo Issue #${iss.number} chờ Bẹp xử lý`);
     } catch (err) {
-      toast(`Lỗi gửi GitHub API (${err.message}). Kiểm tra lại PAT!`);
+      toast(`Lỗi GitHub API (${err.message})`);
     }
   }
 
-  async function refreshLive() {
-    try {
-      const r = await fetch(`./tasks-bundle.json?t=${Date.now()}`);
-      if (r.ok) state.bundle = await r.json();
-    } catch {}
-    try {
-      const pat = localStorage.getItem(PAT_KEY);
-      const headers = pat ? { "Authorization": `Bearer ${pat}` } : {};
-      const r2 = await fetch(`https://api.github.com/repos/${REPO}/issues?labels=dashboard&state=all&per_page=15`, { headers });
-      if (r2.ok) state.ghIssues = await r2.json();
-    } catch {}
+  async function refreshLive(manual) {
+    try { const r = await fetch(`./tasks-bundle.json?t=${Date.now()}`); if (r.ok) state.bundle = await r.json(); } catch {}
+    const pat = localStorage.getItem(PAT_KEY);
+    // Rate-limit safe: only call GitHub API when PAT exists or manual refresh, with 60s error backoff
+    if ((pat || manual) && (Date.now() - state.lastGhErrTs > 60000)) {
+      try {
+        const headers = pat ? { "Authorization": `Bearer ${pat}` } : {};
+        const r2 = await fetch(`https://api.github.com/repos/${REPO}/issues?labels=dashboard&state=all&per_page=15`, { headers });
+        if (r2.status === 403 || r2.status === 429) { state.lastGhErrTs = Date.now(); }
+        else if (r2.ok) { state.ghIssues = await r2.json(); }
+      } catch {}
+    }
     renderAll();
-    toast("Đã đồng bộ dữ liệu mới nhất");
+    if (manual) toast("Đã đồng bộ dữ liệu");
   }
 
   function renderAll() {
     document.getElementById("viewChat").style.display = state.mainView === "chat" ? "flex" : "none";
     document.getElementById("viewDash").style.display = state.mainView === "dash" ? "flex" : "none";
     document.querySelectorAll("[data-mainview]").forEach(b => b.classList.toggle("active", b.dataset.mainview === state.mainView));
-    renderSidebar();
-    renderLiveStrip();
-    renderChat();
-    renderComposerTargets();
-    renderInspector();
+    renderSidebar(); renderLiveStrip(); renderFlowBar(); renderChat(); renderComposerTargets(); renderInspector();
     if (state.mainView === "dash") renderDash();
   }
 
-  /* ===== EVENT WIRING ===== */
-  function closeMobileSidebar() {
-    document.getElementById("sidebar").classList.remove("open");
-    document.getElementById("sbBackdrop").classList.remove("open");
+  /* ===== SLASH COMMAND PARSER ===== */
+  function parseSlashAndOpen(txt) {
+    const parts = txt.trim().split(/\s+/);
+    const cmd = parts[0].toLowerCase();
+    const rest = txt.trim().slice(cmd.length).trim();
+
+    if (cmd === "/giao") {
+      const mAsg = rest.match(/@(muse-1|muse-2|muse-main)/i);
+      const asg = mAsg ? mAsg[1].toLowerCase() : "muse-1";
+      const mPrio = rest.match(/\[(high|medium|low)\]/i);
+      const prio = mPrio ? mPrio[1].toLowerCase() : "medium";
+      const title = rest.replace(/@(muse-1|muse-2|muse-main)/gi,"").replace(/\[(high|medium|low)\]/gi,"").trim() || "Nhiệm vụ mới";
+      openConfirm({
+        title: `[dashboard] Giao việc mới: ${title}`,
+        body: `task: new\naction: new-task\ntitle: ${title}\nassignee: ${asg}\npriority: ${prio}\ntype: vbook-extension\nrepo: Qsang_vbook\n\n(Bản nháp giao việc từ Phòng Chat)`,
+        displayMsg: `/giao @${asg}: ${title}`
+      });
+      return true;
+    }
+    if (cmd === "/hoc") {
+      const topic = rest || "Khóa học mới";
+      openConfirm({
+        title: `[dashboard] Giao việc mới: Tự học ${topic.slice(0,60)}`,
+        body: `task: new\naction: new-task\ntitle: Tự học ${topic.slice(0,60)}\nassignee: muse-main\npriority: medium\ntype: research\nrepo: muse-teamwork\n\nĐề xuất khóa học từ Anh (nhờ Chị cả Bẹp kiểm chứng mức FREE theo PROTOCOL §9 trước khi giao):\n${topic}`,
+        displayMsg: `/hoc ${topic}`
+      });
+      return true;
+    }
+    if (cmd === "/duyet" || cmd === "/sua" || cmd === "/chuyen") {
+      const mNum = rest.match(/#?(\d{2,3})/);
+      const selNum = taskNumOf(document.getElementById("compTask").value);
+      const tnum = mNum ? mNum[1].padStart(3,"0") : selNum;
+      if (!tnum) { toast("Anh ghi rõ mã #NNN hoặc chọn task ở thanh trên nhé!"); return false; }
+      const label = cmd === "/duyet" ? "YÊU CẦU BẸP XỬ LÝ: DUYỆT" : cmd === "/sua" ? "YÊU CẦU BẸP XỬ LÝ: SỬA LẠI" : "YÊU CẦU BẸP XỬ LÝ: CHUYỂN NGƯỜI NHẬN";
+      openConfirm({
+        title: `[dashboard] ${tnum}: bình luận`,
+        body: `task: ${tnum}\naction: comment\n\n[${label}] ${rest || "(Từ Phòng Chat Chỉ Huy)"}`,
+        taskId: tnum,
+        displayMsg: `${cmd} #${tnum} ${rest}`
+      });
+      return true;
+    }
+    return false;
   }
 
+  /* ===== COMMAND PALETTE ===== */
+  function openPalette() {
+    document.getElementById("palModal").classList.add("open");
+    const inp = document.getElementById("palInput");
+    inp.value = ""; renderPalette(""); inp.focus();
+  }
+  function renderPalette(q) {
+    const ql = q.trim().toLowerCase();
+    const items = [];
+    SLASH_CMDS.forEach(s => { if (!ql || s.cmd.includes(ql) || s.desc.toLowerCase().includes(ql)) items.push({ lbl: `${s.syntax}`, sub: s.desc, act: `slash:${s.cmd}` }); });
+    (state.bundle.tasks || []).slice(0, 30).forEach(t => {
+      const num = taskNumOf(t);
+      if (!ql || String(t.id).toLowerCase().includes(ql) || String(t.title).toLowerCase().includes(ql)) items.push({ lbl: `#${num} ${t.title}`, sub: `${t.status} • ${t.assignee || "chưa gán"}`, act: `room:task:${t.id}` });
+    });
+    (state.bundle.research_index || []).slice(0, 20).forEach(r => {
+      if (!ql || r.file.toLowerCase().includes(ql) || r.title.toLowerCase().includes(ql)) items.push({ lbl: `📖 ${r.title}`, sub: r.file, act: `rep:${r.file}` });
+    });
+    document.getElementById("palResults").innerHTML = items.slice(0, 12).map(it => `<button class="btn" style="justify-content:space-between;text-align:left;" data-pal="${esc(it.act)}"><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${esc(it.lbl)}</span><span style="font-size:11px;color:var(--ink3);flex-shrink:0;">${esc(it.sub)}</span></button>`).join("");
+  }
+
+  /* ===== EVENTS ===== */
+  function closeMobileSidebar() { document.getElementById("sidebar").classList.remove("open"); document.getElementById("sbBackdrop").classList.remove("open"); }
+
   document.addEventListener("click", e => {
-    const t = e.target.closest("[data-mainview]");
-    if (t) { state.mainView = t.dataset.mainview; closeMobileSidebar(); renderAll(); return; }
+    const t = e.target.closest("[data-mainview]"); if (t) { state.mainView = t.dataset.mainview; closeMobileSidebar(); renderAll(); return; }
+    const ch = e.target.closest("[data-room]"); if (ch) { state.room = ch.dataset.room; state.agentFilter = null; state.mainView = "chat"; closeMobileSidebar(); renderAll(); return; }
+    const ag = e.target.closest("[data-agent]"); if (ag) { state.agentFilter = state.agentFilter === ag.dataset.agent ? null : ag.dataset.agent; state.mainView = "chat"; closeMobileSidebar(); renderAll(); return; }
+    const mf = e.target.closest("[data-msgfilter]"); if (mf) { state.msgFilter = mf.dataset.msgfilter; document.querySelectorAll("[data-msgfilter]").forEach(b=>b.classList.toggle("active",b===mf)); renderChat(); return; }
+    const dt = e.target.closest("[data-dashtab]"); if (dt) { state.dashTab = dt.dataset.dashtab; renderDash(); return; }
+    const it = e.target.closest("[data-insptab]"); if (it) { state.inspTab = it.dataset.insptab; renderInspector(); return; }
+    const jr = e.target.closest("[data-jumproom]"); if (jr) { state.room = jr.dataset.jumproom; state.mainView = "chat"; renderAll(); return; }
+    const jt = e.target.closest("[data-jumptask]"); if (jt && jt.dataset.jumptask) { state.room = `task:${jt.dataset.jumptask}`; state.mainView = "chat"; renderAll(); return; }
 
-    const ch = e.target.closest("[data-room]");
-    if (ch) { state.room = ch.dataset.room; state.agentFilter = null; state.mainView = "chat"; closeMobileSidebar(); renderAll(); return; }
+    const tl = e.target.closest("[data-togglelog]"); if (tl) { const el = document.getElementById(tl.dataset.togglelog); if (el) el.classList.toggle("open"); return; }
+    if (e.target.id === "btnToggleDigest") { state.digestCollapsed = !state.digestCollapsed; renderChat(); return; }
 
-    const ag = e.target.closest("[data-agent]");
-    if (ag) {
-      state.agentFilter = state.agentFilter === ag.dataset.agent ? null : ag.dataset.agent;
-      state.mainView = "chat";
-      closeMobileSidebar();
-      renderAll();
+    const ot = e.target.closest("[data-opentask]"); if (ot && ot.dataset.opentask) { state.selectedTaskId = ot.dataset.opentask; state.inspOpen = true; state.inspTab = "task"; renderInspector(); return; }
+    const or = e.target.closest("[data-openreport]"); if (or) {
+      if (or.dataset.openreport) { state.selectedReportFile = or.dataset.openreport; if (or.dataset.taskid) state.selectedTaskId = or.dataset.taskid; state.inspOpen = true; state.inspTab = "report"; renderInspector(); }
+      else if (or.dataset.taskid) { state.selectedTaskId = or.dataset.taskid; state.inspOpen = true; state.inspTab = "task"; renderInspector(); }
       return;
     }
 
-    const mf = e.target.closest("[data-msgfilter]");
-    if (mf) {
-      state.msgFilter = mf.dataset.msgfilter;
-      document.querySelectorAll("[data-msgfilter]").forEach(b => b.classList.toggle("active", b === mf));
-      renderChat();
+    const sc = e.target.closest("[data-scrollto]"); if (sc) { const el = document.getElementById(sc.dataset.scrollto); if (el) el.scrollIntoView({behavior:"smooth"}); return; }
+    const pb = e.target.closest("[data-pin]"); if (pb) {
+      const note = prompt(`Ghim góp ý cho đoạn:\n"${pb.dataset.pin}"\n\nNhập nhận xét của Anh:`);
+      if (note && note.trim()) { state.pins.push({ snippet: pb.dataset.pin, note: note.trim() }); renderInspector(); toast("Đã ghim góp ý 📌"); }
       return;
     }
 
-    const dt = e.target.closest("[data-dashtab]");
-    if (dt) { state.dashTab = dt.dataset.dashtab; renderDash(); return; }
-
-    const it = e.target.closest("[data-insptab]");
-    if (it) { state.inspTab = it.dataset.insptab; renderInspector(); return; }
-
-    const jr = e.target.closest("[data-jumproom]");
-    if (jr) { state.room = jr.dataset.jumproom; state.mainView = "chat"; renderAll(); return; }
-
-    const jt = e.target.closest("[data-jumptask]");
-    if (jt && jt.dataset.jumptask) { state.room = `task:${jt.dataset.jumptask}`; state.mainView = "chat"; renderAll(); return; }
-
-    const ot = e.target.closest("[data-opentask]");
-    if (ot && ot.dataset.opentask) {
-      state.selectedTaskId = ot.dataset.opentask;
-      state.inspOpen = true;
-      state.inspTab = "task";
-      renderInspector();
+    const rc = e.target.closest("[data-reqcmd]"); if (rc) {
+      const act = rc.dataset.reqcmd, tid = rc.dataset.taskid, tnum = taskNumOf(tid);
+      if (!tnum) return toast("Thiếu mã task NNN");
+      const lbl = act === "approve" ? "YÊU CẦU BẸP XỬ LÝ: DUYỆT" : "YÊU CẦU BẸP XỬ LÝ: SỬA LẠI";
+      openConfirm({ title: `[dashboard] ${tnum}: bình luận`, body: `task: ${tnum}\naction: comment\n\n[${lbl}] Nhờ Bẹp xem xét task #${tnum}.`, taskId: tid, displayMsg: `${lbl} #${tnum}` });
       return;
     }
 
-    const or = e.target.closest("[data-openreport]");
-    if (or) {
-      const rf = or.dataset.openreport;
-      if (rf) {
-        state.selectedReportFile = rf;
-        if (or.dataset.taskid) state.selectedTaskId = or.dataset.taskid;
-        state.inspOpen = true;
-        state.inspTab = "report";
-        renderInspector();
-      } else if (or.dataset.taskid) {
-        state.selectedTaskId = or.dataset.taskid;
-        state.inspOpen = true;
-        state.inspTab = "task";
-        renderInspector();
-      }
+    const scmd = e.target.closest("[data-slashfill]"); if (scmd) {
+      const inp = document.getElementById("compInput");
+      inp.value = scmd.dataset.slashfill + " "; inp.focus();
+      document.getElementById("slashMenu").classList.remove("open");
       return;
     }
 
-    const qc = e.target.closest("[data-quickcmd]");
-    if (qc) {
-      const act = qc.dataset.quickcmd;
-      const tid = qc.dataset.taskid;
-      const lbl = act === "approve" ? "DUYỆT" : act === "rework" ? "YÊU CẦU SỬA" : "MỞ LẠI";
-      sendCommand({
-        title: `[dashboard] ${act} ${tid}`,
-        body: `Lệnh từ Phòng Chat Chỉ Huy: ${lbl} task ${tid}`,
-        taskId: tid,
-        displayMsg: `${lbl} task ${tid}`
-      });
+    const pal = e.target.closest("[data-pal]"); if (pal) {
+      document.getElementById("palModal").classList.remove("open");
+      const a = pal.dataset.pal;
+      if (a.startsWith("room:")) { state.room = a.slice(5); state.mainView = "chat"; renderAll(); }
+      else if (a.startsWith("rep:")) { state.selectedReportFile = a.slice(4); state.inspOpen = true; state.inspTab = "report"; renderInspector(); }
+      else if (a.startsWith("slash:")) { const inp = document.getElementById("compInput"); inp.value = a.slice(6) + " "; inp.focus(); }
       return;
+    }
+
+    const mn = e.target.closest("[data-mnav]"); if (mn) {
+      document.querySelectorAll("[data-mnav]").forEach(b=>b.classList.toggle("active",b===mn));
+      const v = mn.dataset.mnav;
+      if (v === "chat") { state.mainView = "chat"; state.room = "dieu-phoi-chung"; state.inspOpen = false; }
+      else if (v === "needs") { state.mainView = "chat"; state.room = "can-anh-quyet"; state.inspOpen = false; }
+      else if (v === "reports") { state.mainView = "dash"; state.dashTab = "reports"; state.inspOpen = false; }
+      else if (v === "kanban") { state.mainView = "dash"; state.dashTab = "kanban"; state.inspOpen = false; }
+      renderAll(); return;
     }
   });
 
-  document.getElementById("btnMenu").onclick = () => {
-    document.getElementById("sidebar").classList.add("open");
-    document.getElementById("sbBackdrop").classList.add("open");
-  };
+  document.getElementById("btnMenu").onclick = () => { document.getElementById("sidebar").classList.add("open"); document.getElementById("sbBackdrop").classList.add("open"); };
   document.getElementById("btnMenuDash").onclick = document.getElementById("btnMenu").onclick;
   document.getElementById("sbBackdrop").onclick = closeMobileSidebar;
   document.getElementById("btnBackChat").onclick = () => { state.mainView = "chat"; renderAll(); };
   document.getElementById("btnToggleInsp").onclick = () => { state.inspOpen = !state.inspOpen; renderInspector(); };
-  document.getElementById("btnCloseInsp").onclick = () => { state.inspOpen = false; renderInspector(); };
-  document.getElementById("btnRefresh").onclick = refreshLive;
+  document.getElementById("btnCloseInsp").onclick = () => { state.inspOpen = false; state.zenMode = false; renderInspector(); };
+  document.getElementById("btnZen").onclick = () => { state.zenMode = !state.zenMode; renderInspector(); };
+  document.getElementById("btnFlowToggle").onclick = () => { state.flowOpen = !state.flowOpen; renderFlowBar(); };
+  document.getElementById("btnRefresh").onclick = () => refreshLive(true);
+  document.getElementById("btnCmdPal").onclick = openPalette;
+  document.getElementById("palInput").oninput = e => renderPalette(e.target.value);
+  document.getElementById("palModal").onclick = e => { if (e.target.id === "palModal") e.target.classList.remove("open"); };
 
   document.getElementById("sbSearch").oninput = e => { state.search = e.target.value; renderSidebar(); };
   document.getElementById("dashSearch").oninput = e => { state.dashSearch = e.target.value; renderDash(); };
-  document.getElementById("compTask").onchange = e => {
-    document.getElementById("btnQuickApprove").style.display = e.target.value ? "inline-flex" : "none";
-  };
 
-  // Theme toggle
   const savedTheme = localStorage.getItem(THEME_KEY) || "light";
   document.documentElement.setAttribute("data-theme", savedTheme);
   document.getElementById("btnTheme").onclick = () => {
     const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
-    document.documentElement.setAttribute("data-theme", next);
-    localStorage.setItem(THEME_KEY, next);
+    document.documentElement.setAttribute("data-theme", next); localStorage.setItem(THEME_KEY, next);
   };
 
-  // PAT Modal
-  document.getElementById("btnPat").onclick = () => {
-    document.getElementById("patInput").value = localStorage.getItem(PAT_KEY) || "";
-    document.getElementById("patModal").classList.add("open");
-  };
+  document.getElementById("btnPat").onclick = () => { document.getElementById("patInput").value = localStorage.getItem(PAT_KEY) || ""; document.getElementById("patModal").classList.add("open"); };
   document.getElementById("patCancel").onclick = () => document.getElementById("patModal").classList.remove("open");
-  document.getElementById("patClear").onclick = () => {
-    localStorage.removeItem(PAT_KEY);
-    document.getElementById("patModal").classList.remove("open");
-    renderSidebar();
-    toast("Đã xóa PAT khỏi trình duyệt");
-  };
-  document.getElementById("patSave").onclick = () => {
-    const v = document.getElementById("patInput").value.trim();
-    if (v) localStorage.setItem(PAT_KEY, v);
-    document.getElementById("patModal").classList.remove("open");
-    renderSidebar();
-    toast("Đã lưu GitHub PAT ✓");
-  };
+  document.getElementById("patClear").onclick = () => { localStorage.removeItem(PAT_KEY); document.getElementById("patModal").classList.remove("open"); renderSidebar(); toast("Đã xóa PAT"); };
+  document.getElementById("patSave").onclick = () => { const v = document.getElementById("patInput").value.trim(); if (v) localStorage.setItem(PAT_KEY, v); document.getElementById("patModal").classList.remove("open"); renderSidebar(); toast("Đã lưu PAT ✓"); };
 
-  // New Task Modal
+  document.getElementById("cfmCancel").onclick = () => document.getElementById("confirmModal").classList.remove("open");
+  document.getElementById("cfmOpenGh").onclick = () => executeConfirmed(false);
+  document.getElementById("cfmSendPat").onclick = () => executeConfirmed(true);
+
   document.getElementById("btnNewTask").onclick = () => document.getElementById("newTaskModal").classList.add("open");
   document.getElementById("ntCancel").onclick = () => document.getElementById("newTaskModal").classList.remove("open");
   document.getElementById("ntSubmit").onclick = () => {
-    const title = document.getElementById("ntTitle").value.trim();
-    if (!title) return toast("Anh nhập tiêu đề task nhé!");
-    const asg = document.getElementById("ntAssignee").value;
-    const prio = document.getElementById("ntPrio").value;
+    const title = document.getElementById("ntTitle").value.trim(); if (!title) return toast("Nhập tiêu đề task!");
+    const asg = document.getElementById("ntAssignee").value, prio = document.getElementById("ntPrio").value;
+    const typ = document.getElementById("ntType").value, repo = document.getElementById("ntRepo").value;
     const body = document.getElementById("ntBody").value.trim();
     document.getElementById("newTaskModal").classList.remove("open");
-    sendCommand({
-      title: `[dashboard] new-task: ${title}`,
-      body: `assignee: ${asg}\npriority: ${prio}\n\n${body}`,
-      displayMsg: `➕ Giao việc mới ${asg ? `@${asg}` : ""}: ${title}`
-    });
-    document.getElementById("ntTitle").value = "";
-    document.getElementById("ntBody").value = "";
-  };
-
-  // Quick Buttons in Composer
-  document.getElementById("btnQuickPing").onclick = () => {
-    sendCommand({
-      title: `[dashboard] comment ping-all`,
-      body: `@muse-main @muse-1 @muse-2 Điểm danh báo cáo tiến độ hiện tại cho Anh nhé!`,
-      displayMsg: `@all Điểm danh báo cáo tiến độ hiện tại!`
-    });
-  };
-  document.getElementById("btnQuickApprove").onclick = () => {
-    const tid = document.getElementById("compTask").value;
-    if (!tid) return;
-    sendCommand({
-      title: `[dashboard] approve ${tid}`,
-      body: `Duyệt task ${tid} từ Phòng Chat Chỉ Huy`,
-      taskId: tid,
-      displayMsg: `✓ Duyệt task #${taskNumOf({id: tid}) || tid}`
+    openConfirm({
+      title: `[dashboard] Giao việc mới: ${title}`,
+      body: `task: new\naction: new-task\ntitle: ${title}\nassignee: ${asg}\npriority: ${prio}\ntype: ${typ}\nrepo: ${repo}\n\n${body}`,
+      displayMsg: `➕ Đề xuất việc mới: ${title}`
     });
   };
 
-  // Composer Send
-  function handleSend() {
+  document.getElementById("btnClearPins").onclick = () => { state.pins = []; renderInspector(); };
+  document.getElementById("btnSendPins").onclick = () => {
+    const tnum = taskNumOf(state.selectedTaskId) || (state.selectedReportFile && taskNumOf(state.selectedReportFile.split("/").pop())) || "";
+    if (!tnum) return toast("Không xác định được mã task NNN cho báo cáo này!");
+    const lines = state.pins.map((p,i)=>`${i+1}. [Đoạn: "${p.snippet}"] -> Góp ý: ${p.note}`).join("\n");
+    openConfirm({
+      title: `[dashboard] ${tnum}: bình luận góp ý báo cáo (Plannotator)`,
+      body: `task: ${tnum}\naction: comment\n\n[PLANNOTATOR REVIEW — Góp ý của Anh cho task #${tnum}]\n${lines}`,
+      taskId: tnum,
+      displayMsg: `📌 Gửi ${state.pins.length} góp ý Plannotator cho #${tnum}`
+    });
+  };
+
+  function renderSlashMenu(val) {
+    const sm = document.getElementById("slashMenu");
+    if (!val.startsWith("/")) { sm.classList.remove("open"); return; }
+    const q = val.split(/\s+/)[0].toLowerCase();
+    const hits = SLASH_CMDS.filter(s => s.cmd.startsWith(q));
+    if (!hits.length) { sm.classList.remove("open"); return; }
+    sm.innerHTML = hits.map(s=>`<button class="slash-item" data-slashfill="${s.cmd}"><b>${esc(s.syntax)}</b><span style="color:var(--ink3);">${esc(s.desc)}</span></button>`).join("");
+    sm.classList.add("open");
+  }
+
+  document.getElementById("btnSlashHint").onclick = () => {
     const inp = document.getElementById("compInput");
-    const txt = inp.value.trim();
+    if (!inp.value.startsWith("/")) inp.value = "/";
+    renderSlashMenu(inp.value); inp.focus();
+  };
+  document.getElementById("compInput").oninput = e => renderSlashMenu(e.target.value);
+
+  function handleSend() {
+    const inp = document.getElementById("compInput"), txt = inp.value.trim();
     if (!txt) return;
+    document.getElementById("slashMenu").classList.remove("open");
+    if (txt.startsWith("/")) {
+      if (parseSlashAndOpen(txt)) inp.value = "";
+      return;
+    }
     const target = document.getElementById("compTarget").value;
     const tid = document.getElementById("compTask").value;
+    const tnum = taskNumOf(tid);
+    if (!tnum) return toast("Chọn #task ở thanh trên hoặc dùng /giao, /hoc để tạo bản nháp mới!");
     inp.value = "";
-    if (txt.startsWith("/new ")) {
-      const nt = txt.slice(5).trim();
-      sendCommand({
-        title: `[dashboard] new-task: ${nt}`,
-        body: `assignee: ${target.replace("@","").replace("all","")}\npriority: high`,
-        displayMsg: `➕ Giao việc mới ${target}: ${nt}`
-      });
-    } else {
-      sendCommand({
-        title: tid ? `[dashboard] comment ${tid}` : `[dashboard] comment team`,
-        body: `${target} ${txt}`,
-        taskId: tid,
-        displayMsg: `${target} ${txt}`
-      });
-    }
+    openConfirm({
+      title: `[dashboard] ${tnum}: bình luận`,
+      body: `task: ${tnum}\naction: comment\n\n${target} ${txt}`,
+      taskId: tid, displayMsg: `${target} ${txt}`
+    });
   }
   document.getElementById("btnSend").onclick = handleSend;
   document.getElementById("compInput").addEventListener("keydown", e => {
-    if (e.key === "Enter" && !e.shiftKey) {
-      e.preventDefault();
-      handleSend();
-    }
+    if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); handleSend(); }
+  });
+  document.addEventListener("keydown", e => {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") { e.preventDefault(); openPalette(); }
   });
 
   renderAll();
-  // Silently try fetching fresher bundle & live GitHub issues on load
-  refreshLive();
+  refreshLive(false);
 })();
 </script>
 </body>
