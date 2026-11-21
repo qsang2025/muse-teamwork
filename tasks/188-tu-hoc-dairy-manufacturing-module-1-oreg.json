@@ -7,7 +7,7 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "review",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-21T13:32:00+07:00",
   "claimed_at": "2026-11-21T13:35:14+07:00",
@@ -19,7 +19,14 @@
       "device_test": "n/a",
       "install": "n/a"
     },
-    "notes": "Bao cao tu hoc Dairy Manufacturing Module 1 Oregon State tai research/188-dairy-manufacturing-module-1-oregon-state.md (143 dong): khoa A10 cuoi mach A, 4 ket qua hoc tap chinh thuc, cau truc 23 module (Essential 12 + Advanced 23 + micro-cert), chuoi farm-to-table, vat nuoi/san xuat so cap, dai san pham theo nhanh (sua long/len men/san pham kho/kem-bo), vi tri Packaging + 3 module lien quan truc tiep (7 Packaging, 15 Supply Chain non-dairy, 20 Dried Dairy Products I - deu tra phi, khong hoc), khung soat vi tri Packaging trong chuoi, doi chieu 187/182/173/185/183/184 + checklist FSSC v7. Chi hoc FREE cong khai qua trang OSU chinh chu + Educatly, khong ghi danh/mua/chung chi (s9). Noi dung bai giang sau ghi danh + gia rieng Module 1 tren trang chinh chu: Chua xac dinh."
+    "notes": "Bao cao tu hoc Dairy Manufacturing Module 1 Oregon State tai research/188-dairy-manufacturing-module-1-oregon-state.md (143 dong): khoa A10 cuoi mach A, 4 ket qua hoc tap chinh thuc, cau truc 23 module (Essential 12 + Advanced 23 + micro-cert), chuoi farm-to-table, vat nuoi/san xuat so cap, dai san pham theo nhanh (sua long/len men/san pham kho/kem-bo), vi tri Packaging + 3 module lien quan truc tiep (7 Packaging, 15 Supply Chain non-dairy, 20 Dried Dairy Products I - deu tra phi, khong hoc), khung soat vi tri Packaging trong chuoi, doi chieu 187/182/173/185/183/184 + checklist FSSC v7. Chi hoc FREE cong khai qua trang OSU chinh chu + Educatly, khong ghi danh/mua/chung chi (s9). Noi dung bai giang sau ghi danh + gia rieng Module 1 tren trang chinh chu: Chua xac dinh.",
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T13:42:00+07:00",
+      "note": "muse-main kiem chung doc lap: trang khoa OSU Module 1 co that (tong quan farm-to-table + 4 ket qua hoc tap khop tung chu, chi module duy nhat day san xuat so cap, 4 micro-certificate khop danh sach module); trang Advanced Certificate khop 23 module, $1,650/$1,100, Module 7 Packaging dung mo ta; khoa A10 dung danh sach 20 da duyet (research/171 dong 10); khong trung. Diem tru nho: noi dung bai giang sau ghi danh chua xem duoc (theo s9, da ghi Chua xac dinh trung thuc)."
+    }
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
@@ -28,6 +35,6 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
-  "notes": "Khóa số 10, mạch A (An toàn thực phẩm & chất lượng) — khóa CUỐI mạch A trong danh sách 20 khóa công việc Anh duyệt 21/11 08:31 trong voice call. Bằng chứng: research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main (dòng A10). Khóa: Dairy Manufacturing Online Certificate: Module 1 – Introduction to Dairy Production and Processing Industry, Oregon State University, ~1–2 giờ, on-demand, https://workspace.oregonstate.edu/course/dairy-online-certificate-module-1-introduction-to-dairy-production-and-processing-industry-course — toàn chuỗi sữa từ trang trại đến bàn ăn, đặt công việc đóng gói IFT đúng vị trí trong chuỗi; nối 187 (vi sinh sữa bột) + 182 (bao bì). Học theo §9: CHỈ module nhập môn miễn phí; module chuyên sâu $50–75/module, KHÔNG học; ghi Chưa xác định khi không xem được nội dung sau đăng ký. muse-main quyết theo ủy quyền 20/11: giao tiếp mạch A sau khi 187 merge xong (Ú rảnh).",
-  "updated_at": "2026-11-21T13:36:38+07:00"
+  "notes": "Khóa số 10, mạch A (An toàn thực phẩm & chất lượng) — khóa CUỐI mạch A trong danh sách 20 khóa công việc Anh duyệt 21/11 08:31 trong voice call. Bằng chứng: research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main (dòng A10). Khóa: Dairy Manufacturing Online Certificate: Module 1 – Introduction to Dairy Production and Processing Industry, Oregon State University, ~1–2 giờ, on-demand, https://workspace.oregonstate.edu/course/dairy-online-certificate-module-1-introduction-to-dairy-production-and-processing-industry-course — toàn chuỗi sữa từ trang trại đến bàn ăn, đặt công việc đóng gói IFT đúng vị trí trong chuỗi; nối 187 (vi sinh sữa bột) + 182 (bao bì). Học theo §9: CHỈ module nhập môn miễn phí; module chuyên sâu $50–75/module, KHÔNG học; ghi Chưa xác định khi không xem được nội dung sau đăng ký. muse-main quyết theo ủy quyền 20/11: giao tiếp mạch A sau khi 187 merge xong (Ú rảnh). [21/11 13:42 muse-main: Review 8/10 vòng 1, ĐÃ MERGE lên main — khóa CUỐI mạch A trong danh sách 20 khóa công việc đã duyệt; mạch A hoàn tất 10/10 khóa.]",
+  "updated_at": "2026-11-21T13:42:00+07:00"
 }
