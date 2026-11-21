@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="theme-color" content="#0d1321" />
-<title>Muse.ai Fleet Console v5.1 — Phòng Điều Phối 3 Muse</title>
+<title>Muse.ai Fleet Console v6.0 — Phòng Điều Phối 3 Muse</title>
 <style>
   :root {
     --sb-bg: #0d1321;
@@ -507,6 +507,7 @@
       <div class="dash-subnav">
         <div style="display:flex;gap:6px;flex-wrap:wrap;">
           <button class="fchip active" data-dashtab="kanban">Kanban</button>
+          <button class="fchip" data-dashtab="agents">👥 Hồ Sơ 3 Muse</button>
           <button class="fchip" data-dashtab="learning" id="tabLearningLabel">Tự Học</button>
           <button class="fchip" data-dashtab="reports">Kho Báo Cáo</button>
           <button class="fchip" data-dashtab="eco">Hệ Sinh Thái</button>
@@ -531,6 +532,7 @@
       <div style="display:flex;gap:4px;">
         <button class="fchip active" data-insptab="task">📋 Hồ sơ</button>
         <button class="fchip" data-insptab="report">📖 Báo cáo</button>
+        <button class="fchip" data-insptab="agent">👤 Muse</button>
       </div>
       <div style="display:flex;gap:4px;">
         <button class="btn sm" id="btnCopyInspLink" title="Copy link dẫn tới hồ sơ / báo cáo này">🔗 Link</button>
@@ -694,6 +696,7 @@
     digestCollapsed: false,
     selectedTaskId: null,
     selectedReportFile: null,
+    selectedAgentId: "muse-1",
     reportCache: {},
     ghIssues: [],
     localCmds: loadLocalCmds(),
@@ -992,7 +995,10 @@
   }
 
   function renderShiftDigestHtml() {
-    if (state.room !== "dieu-phoi-chung" || state.agentFilter || state.msgFilter !== "all") return "";
+    if (state.agentFilter && AGENTS[state.agentFilter]) {
+      return renderAgentScorecardHtml(state.agentFilter, true);
+    }
+    if (state.room !== "dieu-phoi-chung" || state.msgFilter !== "all") return "";
     const tasks = state.bundle.tasks || [];
     const reviewedDone = tasks
       .filter(t => t.status === "done" && t.result && t.result.review && typeof t.result.review.score === "number")
@@ -1122,6 +1128,111 @@
   }
 
   /* ===== RICH READER v2 + PLANNOTATOR PINNING ===== */
+  /* ===== AGENT SCORECARD (100% FROM BUNDLE TRUTH, EXPLICIT SAMPLE SIZE n) ===== */
+  function computeAgentStats(agentId) {
+    const tasks = state.bundle.tasks || [];
+    const doneTasks = tasks.filter(t =>
+      t.status === "done" && (t.assignee === agentId || (t.result && typeof t.result === "object" && t.result.completed_by === agentId))
+    );
+    const activeTasks = tasks.filter(t =>
+      ["claimed", "doing", "review"].includes(t.status) && t.assignee === agentId
+    );
+    const preferredOpen = tasks.filter(t =>
+      t.status === "open" && !t.assignee && t.preferred_assignee === agentId
+    );
+
+    const scored = [];
+    const rounds = [];
+    let unscoredCount = 0;
+    doneTasks.forEach(t => {
+      const rv = t.result && typeof t.result === "object" && typeof t.result.review === "object" && t.result.review !== null ? t.result.review : null;
+      if (rv && typeof rv.score === "number" && !Number.isNaN(rv.score)) scored.push(rv.score);
+      else unscoredCount++;
+      if (rv && typeof rv.rounds === "number" && !Number.isNaN(rv.rounds)) rounds.push(rv.rounds);
+    });
+
+    const avgScore = scored.length ? (scored.reduce((a, b) => a + b, 0) / scored.length).toFixed(2) : null;
+    const avgRounds = rounds.length ? (rounds.reduce((a, b) => a + b, 0) / rounds.length).toFixed(2) : null;
+
+    const researchDone = doneTasks.filter(t => t.type === "research").length;
+    const extDone = doneTasks.filter(t => t.type === "vbook-extension").length;
+    const otherDone = doneTasks.length - researchDone - extDone;
+
+    const qcReviewed = [];
+    tasks.forEach(t => {
+      const rv = t.result && typeof t.result === "object" && typeof t.result.review === "object" && t.result.review !== null ? t.result.review : null;
+      if (rv && rv.by === agentId && typeof rv.score === "number" && !Number.isNaN(rv.score)) qcReviewed.push(rv.score);
+    });
+    const qcReviewedAvg = qcReviewed.length ? (qcReviewed.reduce((a, b) => a + b, 0) / qcReviewed.length).toFixed(2) : null;
+    const createdCount = tasks.filter(t => t.created_by === agentId).length;
+
+    const recentDone = [...doneTasks]
+      .sort((a, b) => parseTs(b.updated_at || b.created_at) - parseTs(a.updated_at || a.created_at))
+      .slice(0, 6);
+
+    return {
+      agentId, doneTasks, activeTasks, preferredOpen,
+      scoredN: scored.length, unscoredCount, avgScore,
+      roundsN: rounds.length, avgRounds,
+      researchDone, extDone, otherDone,
+      qcReviewedN: qcReviewed.length, qcReviewedAvg, createdCount,
+      recentDone
+    };
+  }
+
+  function renderAgentScorecardHtml(agentId, compact) {
+    const ag = AGENTS[agentId] || AGENTS["muse-1"];
+    const st = computeAgentStats(agentId);
+    const resByNum = {};
+    (state.bundle.research_index || []).forEach(r => { if (r.task_num) resByNum[r.task_num] = r; });
+
+    const scoreTxt = st.avgScore !== null ? `${st.avgScore}/10 (n=${st.scoredN})` : `Chưa xác định (n=0)`;
+    const roundsTxt = st.avgRounds !== null ? `${st.avgRounds} vòng (n=${st.roundsN})` : `Chưa xác định (n=0)`;
+    const noteExcluded = st.unscoredCount ? ` • loại ${st.unscoredCount} task chưa có điểm cấu trúc` : "";
+
+    return `
+      <div class="digest-card" style="margin-bottom:12px;">
+        <div class="digest-head">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <div class="av" style="background:${ag.bg};width:26px;height:26px;font-size:11px;">${ag.short}</div>
+            <span>${esc(ag.name)} <span style="opacity:.7;font-weight:400;">@${esc(agentId)}</span></span>
+          </div>
+          ${compact ? `<button class="btn sm" data-openagent="${esc(agentId)}">👤 Hồ sơ chi tiết</button>` : `<span class="pill p-done">${st.doneTasks.length} task hoàn thành</span>`}
+        </div>
+        <div style="font-size:11.5px;color:var(--ink2);margin-top:3px;">${esc(ag.role)}</div>
+        <div class="digest-grid">
+          <div class="digest-item">
+            <b>Điểm QC TB (được chấm)</b><br/>
+            <span style="font-size:14px;font-weight:800;color:var(--purple);">${esc(scoreTxt)}</span><br/>
+            <span style="font-size:11px;color:var(--ink3);">Số vòng TB: ${esc(roundsTxt)}${esc(noteExcluded)}</span>
+          </div>
+          <div class="digest-item">
+            <b>Sản phẩm hoàn thành (${st.doneTasks.length})</b><br/>
+            📖 Research: <b>${st.researchDone}</b> · 🧩 vBook Ext: <b>${st.extDone}</b>${st.otherDone ? ` · ⚙️ Khác: <b>${st.otherDone}</b>` : ""}<br/>
+            <span style="font-size:11px;color:var(--ink3);">Đang ôm: ${st.activeTasks.length} · Ưu tiên open: ${st.preferredOpen.length}</span>
+          </div>
+          <div class="digest-item">
+            <b>Điều phối &amp; Kiểm định</b><br/>
+            ${st.qcReviewedN ? `Đã chấm QC: <b>${st.qcReviewedAvg}/10 (n=${st.qcReviewedN})</b>` : "Chưa chấm QC task nào (n=0)"}<br/>
+            <span style="font-size:11px;color:var(--ink3);">Tạo task: ${st.createdCount} · Sweep: Chưa xác định</span>
+          </div>
+        </div>
+        ${compact ? "" : `
+          <div style="margin-top:10px;">
+            <div style="font-size:11.5px;font-weight:700;color:var(--ink2);margin-bottom:5px;">Task hoàn thành gần nhất:</div>
+            <div style="display:flex;flex-wrap:wrap;gap:5px;">
+              ${st.recentDone.map(t => {
+                const num = taskNumOf(t), rf = (resByNum[num] && resByNum[num].file) || "";
+                const sc = t.result && t.result.review && typeof t.result.review.score === "number" ? ` · ⭐${t.result.review.score}` : "";
+                return `<button class="btn sm" ${rf ? `data-openreport="${esc(rf)}"` : `data-opentask="${esc(t.id)}"`} data-taskid="${esc(t.id)}">#${esc(num || t.id)}${sc}</button>`;
+              }).join("") || `<span style="font-size:12px;color:var(--ink3);">Chưa có</span>`}
+            </div>
+          </div>
+        `}
+      </div>
+    `;
+  }
+
   function renderInspector() {
     const insp = document.getElementById("inspector");
     insp.classList.toggle("hidden", !state.inspOpen);
@@ -1133,6 +1244,12 @@
     const pinBar = document.getElementById("pinBar");
     pinBar.classList.toggle("open", state.pins.length > 0);
     document.getElementById("pinBarTxt").textContent = `📌 ${state.pins.length} điểm đã ghim`;
+
+    if (state.inspTab === "agent") {
+      const pickBtns = ["muse-main", "muse-1", "muse-2"].map(id => `<button class="fchip ${state.selectedAgentId === id ? "active" : ""}" data-openagent="${id}">${esc(AGENTS[id].name)}</button>`).join("");
+      body.innerHTML = `<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">${pickBtns}</div>${renderAgentScorecardHtml(state.selectedAgentId || "muse-1", false)}`;
+      return;
+    }
 
     if (state.inspTab === "report") {
       if (!state.selectedReportFile) {
@@ -1232,6 +1349,15 @@
         const fl = c.list.filter(t => !q || String(t.id).toLowerCase().includes(q) || String(t.title).toLowerCase().includes(q));
         return `<div class="k-col"><div class="k-head"><span>${c.title}</span><span class="pill p-open">${fl.length}</span></div>${fl.slice(0,25).map(t=>`<div class="k-card" data-opentask="${esc(t.id)}"><div class="k-card-meta"><span style="font-family:var(--mono);font-weight:700;">#${esc(taskNumOf(t)||t.id)}</span><span>${esc(t.assignee||"chưa gán")}</span></div><div class="k-card-title">${esc(t.title)}</div><div class="k-card-meta"><span>${esc(t.type||"")}</span><span>${esc(fmtTime(t.updated_at))}</span></div></div>`).join("")}</div>`;
       }).join("")}</div>`;
+    } else if (state.dashTab === "agents") {
+      body.innerHTML = `
+        <div style="font-size:12px;color:var(--ink3);margin-bottom:10px;">
+          Số liệu tính trực tiếp từ <code>bundle.tasks</code>. Điểm QC &amp; số vòng trung bình chỉ tính trên task có <code>result.review.score</code> / <code>rounds</code> cấu trúc (kèm cỡ mẫu <code>n</code>); task chưa chấm được loại khỏi mẫu.
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;">
+          ${["muse-main", "muse-1", "muse-2"].map(id => renderAgentScorecardHtml(id, false)).join("")}
+        </div>
+      `;
     } else if (state.dashTab === "learning") {
       body.innerHTML = tracks.map(tr => {
         const pct = tr.total ? Math.round((tr.done / tr.total) * 100) : 0;
@@ -1316,7 +1442,7 @@
 
   /* ===== WHITELIST-ONLY DEEP-LINK NAVIGATION (NO EVAL / NO INNERHTML / NO AUTO-ACTION) ===== */
   const STATIC_ROOMS = ["dieu-phoi-chung", "can-anh-quyet", "viec-dang-chay", "kho-vbook-ext", "phong-tu-hoc"];
-  const ALLOWED_DASH_TABS = ["kanban", "learning", "reports", "eco"];
+  const ALLOWED_DASH_TABS = ["kanban", "agents", "learning", "reports", "eco"];
   const ALLOWED_AGENTS = ["muse-main", "muse-1", "muse-2"];
 
   function findBundleTask(ref) {
@@ -1510,6 +1636,7 @@
     if (e.target.id === "btnToggleDigest") { state.digestCollapsed = !state.digestCollapsed; renderChat(); return; }
 
     const ot = e.target.closest("[data-opentask]"); if (ot && ot.dataset.opentask) { state.selectedTaskId = ot.dataset.opentask; state.inspOpen = true; state.inspTab = "task"; renderInspector(); syncUrlHash(); return; }
+    const oa = e.target.closest("[data-openagent]"); if (oa && AGENTS[oa.dataset.openagent]) { state.selectedAgentId = oa.dataset.openagent; state.inspOpen = true; state.inspTab = "agent"; renderInspector(); syncUrlHash(); return; }
     const or = e.target.closest("[data-openreport]"); if (or) {
       if (or.dataset.openreport) { state.selectedReportFile = or.dataset.openreport; if (or.dataset.taskid) state.selectedTaskId = or.dataset.taskid; state.inspOpen = true; state.inspTab = "report"; renderInspector(); syncUrlHash(); }
       else if (or.dataset.taskid) { state.selectedTaskId = or.dataset.taskid; state.inspOpen = true; state.inspTab = "task"; renderInspector(); syncUrlHash(); }
