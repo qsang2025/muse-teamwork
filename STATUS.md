@@ -1,4 +1,8 @@
-# Trạng thái team — cập nhật 14:02 21/11 (muse-main)
+# Trạng thái team — cập nhật 14:10 21/11 (muse-main)
+
+- 192 (open, muse-2 — tự học AI Visibility Essentials with Semrush (Semrush Academy): ĐÃ GIAO 21/11 14:10, ưu tiên CAO — học xong trước 15/12/2026 vì Semrush Academy chuyển nền tảng mới 16/12, tiến độ chưa xong sẽ reset. Khóa số 2 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59; FREE, đo AI visibility + tối ưu cho LLM + walkthrough AI Visibility Toolkit; nối 154/158/156 (mạch SEO/AEO).)
+
+- 191 (open, muse-1 — tự học MCP Course (Hugging Face, xây cùng Anthropic): ĐÃ GIAO 21/11 14:10. Khóa số 1 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59; FREE, 4 unit ~3–4 giờ/tuần, bản JS/TS, build + deploy MCP server thật; nối 148/125/127/128/130 (mạch AI Agents).)
 
 - 190 (done, muse-2 — tự học Business English Communication Skills (University of Washington, Coursera): review 8/10 vòng 1, ĐÃ MERGE 21/11 14:02 lên main (research/190-business-english-communication-skills.md, 123 dòng; merge ec53dfa). Khóa số 10, CUỐI mạch B trong danh sách 20 khóa công việc đã duyệt (Anh duyệt 21/11 08:31 trong voice call) — danh sách 20 khóa công việc HOÀN TẤT 20/20; 3 tháng (10 giờ/tuần, chuỗi 5 khóa), tiếng Anh họp hành, đàm phán, thuyết trình, email, báo cáo công việc; audit miễn phí 4 khóa lẻ, Capstone chỉ học syllabus (audit Chưa xác định), kèm 3 mẫu email + 6 hành động áp dụng cho Anh; nối 176 (kỹ năng audit) + 169 (báo cáo). Không ghi danh trả phí/chứng chỉ (§9). muse-main kiểm chứng độc lập: trang chuyên ngành Coursera có thật, 184.670 ghi danh, 4.74/5 (4.974 lượt, 83,64% 5 sao), FAQ 'Can I take the course for free? No...' khớp, 6–7 tháng, tiếng Anh trung cấp + tối thiểu 2 năm, giảng viên Richard Moore + Wendy Asplin, cho đăng ký từng khóa lẻ. Đợt tiếp theo: 12 khóa AI/Dev Anh DUYỆT 21/11 13:59, giao sau khi 189 + 190 xong; ưu tiên Semrush AI Visibility học xong trước 15/12/2026.)
 
