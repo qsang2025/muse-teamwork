@@ -18,15 +18,17 @@
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
-    "branch": "",
-    "notes": "",
+    "branch": "feature/201-tu-hoc-advanced-link-building-ahrefs",
+    "notes": "Bao cao tu hoc Advanced Link Building (Ahrefs) xong: 15 bai/6 module/1h48m; FREE khong can dang ky, KHONG co chung chi (kiem chung lai 21/11: trang chinh thuc im lang + 2 nguon thu cap noi thang); hoc sau seed-lookalike/blitz list/hybrid outreach; doi chieu 156 (chieu -> he thong) + noi mach SEO 154/158/192; khong xem tung video, khong chay Ahrefs, loi giang chi tiet ghi Chua xac dinh",
     "test": {
       "device_test": "",
       "install": "",
-      "validate": ""
-    }
+      "validate": "",
+      "evidence": "research/201-tu-hoc-advanced-link-building-ahrefs.md, commit 8e9c70d tren branch feature/201-tu-hoc-advanced-link-building-ahrefs"
+    },
+    "evidence": "research/201-tu-hoc-advanced-link-building-ahrefs.md, commit 8e9c70d tren branch feature/201-tu-hoc-advanced-link-building-ahrefs"
   },
-  "status": "doing",
+  "status": "review",
   "title": "Tự học Advanced Link Building (Ahrefs)",
   "type": "research",
   "updated_at": "2026-11-21T15:45:39+07:00"
