@@ -18,16 +18,23 @@
   "result": {
     "branch": "feature/174-total-productive-maintenance-oee",
     "notes": "Da hoc xong Total Productive Maintenance (TPM) and OEE (iCompetent, khoa B3 mach B): 6 ton that lon gan voi tung thanh phan OEE (dung nho + giam toc do hay bi bo sot nhat); OEE = Availability x Performance x Quality, cong thuc rut gon doi chieu cuoi ca; TEEP = OEE x Loading - OEE cao ma TEEP thap thi van de la lich chay, khong phai mua may moi (VD: OEE 79,2% nhung TEEP chi 26,4% neu ngay chi chay 1 ca); benchmark world-class 85% (~90% x 95% x 99%), nganh thuc pham-do uong dien hinh 55-70% - muc tieu dung la cai thien deu so voi chinh day chuyen; 8 tru cot TPM tren nen 5S (TRACC da co san nen) + 7 buoc bao tri tu chu Jishu Hozen (buoc 1 've sinh la kiem tra', gan the moi bat thuong); 6 viec lam duoc ngay o day chuyen IFT + ke hoach pilot TPM cho 1 may - tat ca o tang nguyen tac, viec nao cham day chuyen that can Anh quyet truoc. Gioi han: khoa mien phi (0 USD) nhung khong tao tai khoan ghi danh, khong xem video trong khoa, khong lam quiz - hoc qua syllabus cong khai + tai lieu TPM/OEE chuan, da ghi ro trong bao cao. Bao cao research/174-total-productive-maintenance-oee.md.",
+    "review": {
+      "at": "2026-11-21T09:24:00+07:00",
+      "by": "muse-main",
+      "note": "Review 8/10 vong 1. Bao cao du 7 module: 6 ton that lon gan dung tung thanh phan OEE + vi du IFT, cong thuc OEE/TEEP + vi du tinh, benchmark 85%, 8 tru cot tren nen 5S, 7 buoc Jishu Hozen, ke hoach pilot + 6 viec lam ngay, muc 'khong ap may moc'. Ghi ro 3 lop nguon + gioi han trung thuc (khong tao tai khoan/khong xem video/khong quiz - dung §9; case pilot trong video khong xem duoc, da ghi ro). muse-main kiem chung doc lap: trang khoa iCompetent ban online khop (0 USD, 4 bai module 1: 12/11/12/11 phut, quiz 6 cau dat 70%); trang classroom khop syllabus 7 module (ten module/bai khop bao cao, ghi ro 'does not award any TPM certificate'); khoa B3 dung danh sach 20 da duyet (research/171 dong 26: 7h12m, 7 module, 36 bai, cung link); tu tinh lai vi du muc 3: OEE 79,2% (87,5%x92,9%x97,4%), doi chieu cheo (760x0,5)/480 = 79,2% khop, TEEP 26,4%, 90%x95%x99% = 84,6% ~ 85%. Diem tru nho: hoc qua syllabus cong khai + tai lieu chuan thay vi xem du video; tong 36 bai/7h12m khong hien truc tiep trong ban fetch trang online (chi liet ke module 1) nhung khop danh sach 171. De xuat tiep theo B2 Lean Six Sigma Black Belt roi B5 Operations Analytics - Vit ranh -> task 175 B2 da tao.",
+      "rounds": 1,
+      "score": 8
+    },
     "test": {
       "device_test": "n/a",
       "install": "n/a",
       "validate": ""
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học Total Productive Maintenance (TPM) and OEE (iCompetent)",
   "type": "research",
-  "updated_at": "2026-11-21T08:56:00+07:00",
+  "updated_at": "2026-11-21T09:24:00+07:00",
   "claimed_at": "2026-11-21T09:05:20+07:00",
   "claim_expires_at": "2026-11-21T11:05:20+07:00"
 }
