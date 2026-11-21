@@ -17,14 +17,14 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/179-excel-skills-for-business-essentials",
-    "notes": "",
+    "notes": "Bao cao tu hoc xong: Excel Skills for Business Essentials (Macquarie, Coursera), 6 module + Final Assessment, 4,9/5 (51.309 danh gia). Bao cao research/179-excel-skills-for-business-essentials.md: cong thuc/tham chieu tuyet doi, dinh dang, Sort/Filter/Conditional Formatting, in an, bieu do; vi du OEE 68,6% va mo hinh SES 3 cot alpha noi bao cao 177/178. Gioi han trung thuc: IF/VLOOKUP/PivotTable/Solver/Data Table thuoc Intermediate I/II/Advanced, khong phai Essentials. Khong dang ky tra phi/chung chi, khong lam Final Assessment.",
     "test": {
       "device_test": "n/a",
       "install": "n/a",
-      "validate": ""
+      "validate": "n/a"
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học Excel Skills for Business: Essentials (Macquarie, Coursera)",
   "type": "research",
   "updated_at": "2026-11-21T11:05:00+07:00",
