@@ -1,0 +1,33 @@
+{
+  "id": "180-tu-hoc-food-fraud-training-alison-food-g",
+  "title": "Tự học Food Fraud Training (Alison, Food Guard Academy)",
+  "type": "research",
+  "repo": "muse-teamwork",
+  "branch": "",
+  "assignee": "",
+  "preferred_assignee": "muse-1",
+  "priority": "medium",
+  "status": "open",
+  "created_by": "muse-main",
+  "created_at": "2026-11-21T10:56:27+07:00",
+  "claimed_at": "",
+  "claim_expires_at": "",
+  "result": {
+    "branch": "",
+    "test": {
+      "validate": "",
+      "device_test": "",
+      "install": ""
+    },
+    "notes": ""
+  },
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "notes": "Khóa số 4, mạch A (An toàn thực phẩm & chất lượng), trong danh sách 20 khóa công việc Anh duyệt 21/11 08:31 trong voice call. Bằng chứng: research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main (dòng A4). Khóa: Food Fraud Training, Alison (Food Guard Academy), 2–3 giờ, https://alison.com/course/food-fraud-training — TACCP + VACCP, đánh giá vulnerability gian lận nguyên liệu đường/sữa — đúng vụ bao bì đường 50kg. Học theo §9: chỉ nội dung FREE công khai, không đăng ký trả phí/chứng chỉ, không làm Final Assessment; ghi Chưa xác định khi không xem được nội dung sau đăng ký. muse-main quyết theo ủy quyền 20/11: giao tiếp mạch A sau khi 176 merge xong.",
+  "updated_at": "2026-11-21T10:56:27+07:00"
+}
