@@ -17,14 +17,14 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/181-allergen-management-training-alison",
-    "notes": "",
+    "notes": "Báo cáo tự học Allergen Management Training (Alison, Food Guard Academy) tại research/181-allergen-management-training-alison.md: 10 mục tiêu học tập chính thức, phân biệt tiếp xúc chéo protein vs nhiễm chéo vi sinh, cảnh báo danh sách 'tám' của khóa đã lạc hậu so với EU 14 (1169/2011) và US Big 9 (FALCPA+FASTER, vừng 2023), khung Kế hoạch kiểm soát dị ứng theo FSSC 2.5.6 a-h + v7/ISO 22002-100, kiểm soát vận hành GMP/HACCP + phân tách/mã màu/line clearance, thẩm định/xác minh vệ sinh ELISA/lateral-flow/PCR (ATP không đặc hiệu), ghi nhãn + PAL 'có thể chứa' chỉ khi đánh giá rủi ro kết luận rủi ro thật, RCA/CAPA, khung soát 2.5.6 cho dây chuyền bột sữa/Packaging (hiện trạng Chưa xác định), đối chiếu 171+173+176+180 + checklist FSSC v7. Chỉ học FREE công khai, không đăng ký/Final Assessment/chứng chỉ (§9), không đưa đáp án quiz Food Fraud. Chi tiết module + cách khóa dạy PAL/công nghệ mới ghi Chưa xác định.",
     "test": {
       "device_test": "n/a",
       "install": "n/a",
-      "validate": "n/a"
+      "validate": "PASS"
     }
   },
-  "status": "doing",
+  "status": "review",
   "title": "Tự học Allergen Management Training (Alison, Food Guard Academy)",
   "type": "research",
   "updated_at": "2026-11-21T11:25:57+07:00",
