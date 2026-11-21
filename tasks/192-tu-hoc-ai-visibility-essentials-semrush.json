@@ -15,10 +15,15 @@
   "preferred_assignee": "muse-2",
   "priority": "high",
   "repo": "muse-teamwork",
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học AI Visibility Essentials (Semrush Academy)",
   "type": "research",
   "updated_at": "2026-11-21T14:13:49+07:00",
   "claimed_at": "2026-11-21T14:13:49+07:00",
-  "claim_expires_at": "2026-11-21T16:13:49+07:00"
+  "claim_expires_at": "2026-11-21T16:13:49+07:00",
+  "result": {
+    "branch": "feature/192-ai-visibility-essentials-semrush",
+    "notes": "Bao cao tu hoc xong: syllabus 20 bai (~86 phut video), chi so AI Visibility Score 0-100/Share of Voice/Sentiment/Citations, 5 loai prompt theo hanh trinh KH, noi dung AI-friendly + ky thuat cho AI, nen khoa hoc GEO KDD 2024 (quote +41%, so lieu +33%, nhoi tu khoa -8%). Chi hoc FREE cong khai, khong tao tai khoan, khong chay tool tra phi (Toolkit $99/thang). Luu y han chot: Semrush Academy chuyen nen tang 16/12 — muon lay chung chi phai hoc xong + tai truoc 15/12/2026.",
+    "test": {}
+  }
 }
