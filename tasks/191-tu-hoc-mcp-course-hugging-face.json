@@ -15,10 +15,18 @@
   "preferred_assignee": "muse-1",
   "priority": "medium",
   "repo": "muse-teamwork",
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học MCP Course (Hugging Face)",
   "type": "research",
   "updated_at": "2026-11-21T14:25:30+07:00",
   "claimed_at": "2026-11-21T14:25:30+07:00",
-  "claim_expires_at": "2026-11-21T16:25:30+07:00"
+  "claim_expires_at": "2026-11-21T16:25:30+07:00",
+  "result": {
+    "branch": "feature/191-mcp-course-hugging-face",
+    "evidence": "research/191-mcp-course-hugging-face.md, commit e608e30 (branch feature/191-mcp-course-hugging-face), nguon chinh thuc HF Unit0-3 + Unit1 recap + spec transports doc 21/11/2026",
+    "notes": "Bao cao tu hoc xong: kien truc host/client/server (M×N→M+N), 3 primitive Tools/Resources/Prompts + phan quyen kiem soat, JSON-RPC + transport (khoa day HTTP+SSE, spec hien hanh Streamable HTTP), Unit 2 Gradio sentiment server (docstring+type hints = schema), Unit 3 PR Agent Workflow Server, Unit 4 Coming Soon (Chua xac dinh). Diem quan trong: spec 2026-07-28 deprecate Sampling/Roots/Logging (SEP-2577) — hoc khoa lay kien truc, build theo spec. Chi hoc FREE cong khai, khong tao tai khoan HF, khong chay lab/Claude Code (chi phi Chua xac dinh). De xuat co dieu kien: chua MCP-hoa hub ngay (chua co client chuan ben ngoai can goi), thiet ke kha nang moi theo 3 primitive.",
+    "test": {
+      "evidence": "research/191-mcp-course-hugging-face.md, commit e608e30 (branch feature/191-mcp-course-hugging-face), nguon chinh thuc HF Unit0-3 + Unit1 recap + spec transports doc 21/11/2026"
+    }
+  }
 }
