@@ -15,10 +15,18 @@
   "preferred_assignee": "muse-1",
   "priority": "medium",
   "repo": "muse-teamwork",
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học Introduction to LangGraph (LangChain Academy)",
   "type": "research",
   "updated_at": "2026-11-21T14:51:00+07:00",
   "claimed_at": "2026-11-21T14:55:17+07:00",
-  "claim_expires_at": "2026-11-21T16:55:17+07:00"
+  "claim_expires_at": "2026-11-21T16:55:17+07:00",
+  "result": {
+    "branch": "feature/196-introduction-to-langgraph-langchain-academy",
+    "evidence": "research/196-introduction-to-langgraph-langchain-academy.md, commit 9060a29 tren branch feature/196-introduction-to-langgraph-langchain-academy",
+    "notes": "Bao cao tu hoc Intro to LangGraph xong: state/reducer/multiple schemas, breakpoints static vs interrupt() dynamic, time travel, parallelization/sub-graphs/map-reduce, Store profile vs collection; doi chieu docs Checkpointers/Interrupts/Graph API 21/11; khong tao OpenAI key/LangSmith/Tavily, khong chay notebook",
+    "test": {
+      "evidence": "research/196-introduction-to-langgraph-langchain-academy.md, commit 9060a29 tren branch feature/196-introduction-to-langgraph-langchain-academy"
+    }
+  }
 }
