@@ -98,8 +98,9 @@ task = json.load(open(path, encoding="utf-8"))
 if task.get("status") != "open":
     print(f"Task {task['id']} KHÔNG còn open (status={task.get('status')}, assignee={task.get('assignee') or 'trống'}). Chọn task khác, đừng làm trùng.")
     sys.exit(3)
-if task.get("assignee"):
-    print(f"Task {task['id']} đã có người nhận ({task['assignee']}). Chọn task khác.")
+existing_assignee = task.get("assignee") or ""
+if existing_assignee and existing_assignee != agent:
+    print(f"Task {task['id']} đã có người nhận ({existing_assignee}). Chọn task khác.")
     sys.exit(3)
 # F-03: task đã gán cho agent khác (preferred_assignee) thì từ chối claim.
 pref = task.get("preferred_assignee") or ""
