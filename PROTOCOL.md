@@ -176,3 +176,93 @@ sang task khác, không cãi nhau trong code.
 - **Ranh giới quyết (Anh chốt 20/11 16:31):**
   - **muse-main quyết luôn, không hỏi Anh:** chọn khóa học tiếp theo trong danh sách đã duyệt; thứ tự ưu tiên task; sửa kỹ thuật, drop nguồn hỏng; kết quả review (pass/fail theo tiêu chí §4); chạy probe/device test; unblock task khi điều kiện kỹ thuật đã đủ (ví dụ: Anh đã chốt site thì cho chạy probe).
   - **Mang ra hỏi Anh:** hướng sản phẩm (thêm loại nội dung mới như news, site mới ngoài backlog); bất cứ việc gì tốn tiền/trả phí; đổi permission/cài đặt; việc cần tay Anh trên điện thoại/máy tính (mở app xác nhận, bấm Play, đăng nhập); merge khi có tranh cãi hoặc nội dung nhạy cảm.
+
+## 11. Chống báo "xong" ảo — học từ Stuart Kerr / Muse Next (Anh duyệt 21/11)
+
+Nguồn: nghiên cứu sâu 21/11 về Stuart Kerr dùng Muse 3 tháng cho việc thật:
+81% trong 58 quy tắc của ông chỉ nằm trong trí nhớ của model, không có cơ
+chế nào kiểm chứng phía sau; mọi sự cố ghi lại đều gãy ở nhóm quy tắc đó,
+còn quy tắc nào có cơ chế kiểm chứng thì giữ được 100%. Team mình đã có
+nhiều cơ chế kiểu đó (§2 commit 15 phút, §4 merge 3 điều kiện + chấm /10,
+§7 watchdog, verify-spec.sh) — mục này bịt các lỗ còn lại: lời khẳng định
+"xong rồi / PASS rồi" vẫn được chấp nhận mà không cần bằng chứng.
+
+### 11.1 Nguyên tắc vàng: "xong" = bằng chứng đọc lại từ hệ thống thật
+
+- Không ai được ghi `review`/`done` chỉ bằng lời khẳng định của mình. Mỗi
+  khẳng định phải kèm bằng chứng đọc lại được: commit SHA, log test, file
+  `research/`, URL + ngày kiểm chứng.
+- muse-main KHÔNG merge chỉ vì worker báo PASS (§4 đã nói kiểm tra lại —
+  giờ là bắt buộc): chạy lại validate, xem log device test thật, kiểm tra
+  install 200 trên máy Anh; thiếu một trong ba thì trả về `doing`, không
+  merge.
+- Số liệu nào cũng phải có ngày: số dư, giá, số lượng, trạng thái — không
+  ngày thì coi như cũ (bài học từ vụ travel sheet của Kerr: số liệu
+  27/12/2024 đứng cạnh số liệu sáng nay mà không phân biệt được).
+
+### 11.2 Gate bằng chứng khi nộp task (enforcement hook)
+
+- `complete-task.sh` từ nay bắt buộc cờ `--evidence` (vd:
+  `--evidence "research/191-mcp-course-hugging-face.md, commit abc1234"`).
+  Không có evidence → script từ chối, task ở nguyên trạng thái cũ.
+- Task vbook-extension: phải đủ cả 3 trường test
+  (validate/device_test/install) + evidence; thiếu một → từ chối.
+- Task research: evidence phải trỏ tới file `research/<id>-....md` và nguồn
+  gốc phải nằm trong file đó.
+- Task infra/script: evidence là output chạy lại script.
+- `device_test` chỉ được ghi khi có log chạy thật trên điện thoại Anh
+  (muse-main chạy); worker không tự điền số device test nếu chưa có log đó.
+
+### 11.3 Trí nhớ kèm nguồn (memory with sources)
+
+- Mọi khẳng định sự thật trong `result.notes`, `notes`, STATUS.md phải có
+  nguồn + ngày: commit SHA, URL + ngày truy cập, hoặc đường dẫn file.
+  Khẳng định không nguồn thì người đọc được quyền coi là chưa xác minh.
+- Mâu thuẫn không được cùng tồn tại: phát hiện giá trị mới mâu thuẫn giá
+  trị cũ (main tip, registry, link, số liệu) thì trong cùng một lượt push
+  phải sửa/gạch giá trị cũ, ghi rõ cái nào thay cái nào, ngày nào. Không
+  để hai giá trị cùng đúng trong hai file.
+- `verify-spec.sh` §5 kiểm tra: task ở `review` thiếu evidence → DRIFT;
+  task `doing` im lặng >12h → WARN, >48h → DRIFT (đã có từ trước).
+
+### 11.4 Checkpoint cho việc nhiều bước
+
+- Task dài phải chia checkpoint trong `checklist` (đã có trong template) —
+  mỗi mục checklist chỉ được coi là xong khi có bằng chứng kèm theo
+  (commit, file, log), không tick bằng lời.
+- Watchdog (§7) mở rộng: task `doing` mà `updated_at` quá 12h không có
+  heartbeat/commit mới thì lượt quét 06:46 báo muse-main kiểm tra (không
+  chờ tới 48h). Task `claimed` vẫn giữ ngưỡng 30 phút như cũ.
+
+### 11.5 Sửa sai thành bài kiểm tra (CORRECTIONS.md)
+
+- Mỗi lần muse-main trả task về (`review` < 7) hoặc sửa một lỗi lặp lại:
+  ghi vào `CORRECTIONS.md` — ngày, task, lỗi, bài kiểm tra thêm vào,
+  người chịu trách nhiệm kiểm tra lại, ngày kiểm tra lại.
+- Task mới cùng loại phải qua hết các mục kiểm tra trong CORRECTIONS.md
+  liên quan trước khi nộp review; muse-main kiểm tra mục này khi chấm
+  review.
+- Sổ này không bao giờ xóa mục cũ — chỉ thêm mục mới và ghi ngày kiểm
+  tra lại.
+
+### 11.6 Lỗi thành case có chủ sở hữu (INCIDENTS.md)
+
+- Mỗi sự cố (worker chết không commit, push thẳng main, báo nhầm, báo
+  xong ảo, mất đồng bộ) mở một case `INC-xxx` trong `INCIDENTS.md`: ngày,
+  chủ sở hữu (mặc định muse-main), lời khẳng định vs thực tế, ảnh hưởng,
+  cách sửa, kiểm chứng lại, trạng thái.
+- Task `blocked` quá 24h → muse-main mở case. Case chỉ đóng khi cách sửa
+  đã được kiểm chứng độc lập (người khác kiểm tra lại, không phải người
+  gây lỗi tự xác nhận).
+
+### 11.7 Vault: dùng chung tài khoản nhưng nhãn riêng từng người
+
+- Team dùng chung tài khoản GitHub qsang2025 (Anh quyết 16/11 — giữ
+  nguyên, không đổi). Bù lại bằng nhãn: mọi commit phải có `user.name`
+  là agent-id của máy đó (muse-main / muse-1 / muse-2); mọi thay đổi task
+  phải ghi agent-id trong commit message và notes; không chia sẻ token/gh
+  auth giữa các máy — token của máy nào chỉ ở máy đó.
+- Không ghi IP, port, mẫu máy, đường dẫn local vào notes (đã có §8) —
+  nhãn agent thì được ghi, vì đó là chủ sở hữu, không phải hạ tầng.
+- Kiểm tra: `git config user.name` trên mỗi máy phải đúng agent-id của
+  máy đó; sai thì sửa trước khi commit tiếp.

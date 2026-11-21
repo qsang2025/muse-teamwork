@@ -125,12 +125,53 @@ if rb and not d.get("branch"):
     errs.append("branch cấp ngoài trống trong khi result.branch có giá trị")
 if len(str(d.get("notes", ""))) > 8000:
     errs.append(f"notes dài {len(str(d['notes']))} ký tự (>8000, cần archive)")
+age_h = locals().get("age_h")
+if d.get("status") == "doing" and age_h is not None and age_h > 12:
+    print(f"WARN: task {d.get('id')}: doing mà updated_at đã {age_h:.0f}h trước (>12h, PROTOCOL §11.4 — muse-main kiểm tra, chưa tính là DRIFT)")
 for e in errs:
     print(f"DRIFT: task {d.get('id')}: {e}")
 sys.exit(1 if errs else 0)
 PYEOF
 done
 # (không có DRIFT in ra ở vòng này = các task đều đạt 3 mục trên)
+
+# --- 2b. Gate bằng chứng (PROTOCOL §11.2 — Kerr/Muse Next) ---
+# Chỉ kiểm task ở review (cửa nộp bài đang mở): task done cũ không hồi tố,
+# vì các task cũ nộp trước khi có gate. Task review thiếu evidence hoặc
+# thiếu trường test thì là DRIFT — muse-main không merge cho tới khi đủ.
+python3 - "$ROOT" <<'PYEOF' || DRIFT=1
+import json, glob, os, sys
+root = sys.argv[1]
+errs = []
+for f in sorted(glob.glob(os.path.join(root, "tasks", "*.json"))):
+    if os.path.basename(f) in ("_template.json", "000-template.json"):
+        continue
+    if os.path.basename(f).startswith("closed-"):
+        continue
+    d = json.load(open(f, encoding="utf-8"))
+    if d.get("status") != "review":
+        continue
+    tid = d.get("id", "?")
+    typ = d.get("type", "")
+    res = d.get("result") or {}
+    test = res.get("test") or {}
+    ev = test.get("evidence", "") or res.get("evidence", "")
+    if typ == "vbook-extension":
+        missing = [k for k in ("validate", "device_test", "install") if not test.get(k)]
+        if missing:
+            errs.append(f"task {tid} ở review thiếu trường test: {', '.join(missing)}")
+        if not ev:
+            errs.append(f"task {tid} ở review thiếu evidence (PROTOCOL §11.2)")
+    elif typ == "research":
+        if not ev or "research/" not in str(ev):
+            errs.append(f"task {tid} ở review: evidence phải trỏ tới file research/ (PROTOCOL §11.2)")
+    else:
+        if not ev:
+            errs.append(f"task {tid} ở review thiếu evidence (PROTOCOL §11.2)")
+for e in errs:
+    print(f"DRIFT: {e}")
+sys.exit(1 if errs else 0)
+PYEOF
 
 # --- 3. Task done/review: branch đã merge vào main chưa (chỉ kiểm khi ref còn) ---
 if [ -d "$QSANG/.git" ]; then
