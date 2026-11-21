@@ -24,8 +24,10 @@
       "validate": ""
     }
   },
-  "status": "open",
+  "status": "claimed",
   "title": "Tự học Excel Skills for Business: Essentials (Macquarie, Coursera)",
   "type": "research",
-  "updated_at": "2026-11-21T10:52:00+07:00"
+  "updated_at": "2026-11-21T11:05:00+07:00",
+  "claimed_at": "2026-11-21T11:05:00+07:00",
+  "claim_expires_at": "2026-11-21T13:05:00+07:00"
 }
