@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="theme-color" content="#0d1321" />
-<title>Muse.ai Fleet Console v6.0 — Phòng Điều Phối 3 Muse</title>
+<title>Muse.ai Fleet Console v7.0 — Phòng Điều Phối 3 Muse</title>
 <style>
   :root {
     --sb-bg: #0d1321;
@@ -308,7 +308,12 @@
   /* ===== RIGHT INSPECTOR & ZEN READER ===== */
   .inspector { width: 420px; border-left: 1px solid var(--line); background: var(--panel); display: flex; flex-direction: column; min-height: 0; }
   .inspector.hidden { display: none; }
+  .inspector.split { width: min(840px, 96vw); }
   .inspector.zen { position: fixed; inset: 0; width: 100vw; z-index: 80; border-left: 0; }
+  .split-grid { display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 14px; align-items: start; }
+  @media (max-width: 820px) { .split-grid { grid-template-columns: 1fr; } }
+  .bm-btn { border: 1px solid var(--line2); background: var(--panel2); border-radius: 7px; padding: 2px 7px; font-size: 11px; font-weight: 600; }
+  .bm-btn.saved { background: var(--amber-soft); border-color: var(--amber); color: var(--amber); }
   .insp-head { padding: 10px 14px; border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 8px; }
   .insp-body { flex: 1; overflow-y: auto; padding: 14px; min-height: 0; }
   .insp-section { margin-bottom: 14px; }
@@ -536,6 +541,7 @@
       </div>
       <div style="display:flex;gap:4px;">
         <button class="btn sm" id="btnCopyInspLink" title="Copy link dẫn tới hồ sơ / báo cáo này">🔗 Link</button>
+        <button class="btn sm hide-sm" id="btnSplit" title="Đọc song song Hồ sơ &amp; Báo cáo">⚖️ Song song</button>
         <button class="btn sm" id="btnZen" title="Mở toàn màn hình">⛶ Zen</button>
         <button class="btn sm" id="btnCloseInsp">✕</button>
       </div>
@@ -653,6 +659,7 @@
   const PAT_KEY = "muse-teamwork-gh-pat-v1";
   const THEME_KEY = "muse-dash-theme-v3";
   const LOCAL_MSGS_KEY = "muse-dash-local-cmds-v4";
+  const BOOKMARK_KEY = "muse-dash-bookmarks-v7";
 
   const AGENTS = {
     "muse-main": { name: "Chị cả Bẹp", short: "Bẹp", role: "Điều phối & QC Reviewer", color: "#7c3aed", bg: "linear-gradient(135deg,#7c3aed,#6366f1)" },
@@ -692,12 +699,15 @@
     inspOpen: false,
     inspTab: "task",
     zenMode: false,
+    splitMode: false,
     flowOpen: false,
     digestCollapsed: false,
+    reportTrackFilter: "all",
     selectedTaskId: null,
     selectedReportFile: null,
     selectedAgentId: "muse-1",
     reportCache: {},
+    bookmarks: loadBookmarks(),
     ghIssues: [],
     localCmds: loadLocalCmds(),
     pins: [],
@@ -719,6 +729,18 @@
   }
   function loadLocalCmds() { try { return JSON.parse(localStorage.getItem(LOCAL_MSGS_KEY) || "[]"); } catch { return []; } }
   function saveLocalCmds(arr) { try { localStorage.setItem(LOCAL_MSGS_KEY, JSON.stringify(arr.slice(-30))); } catch {} }
+  function loadBookmarks() { try { const a = JSON.parse(localStorage.getItem(BOOKMARK_KEY) || "[]"); return Array.isArray(a) ? a : []; } catch { return []; } }
+  function saveBookmarks() { try { localStorage.setItem(BOOKMARK_KEY, JSON.stringify(state.bookmarks)); } catch {} }
+  function toggleBookmark(file) {
+    if (!file) return;
+    const i = state.bookmarks.indexOf(file);
+    if (i >= 0) state.bookmarks.splice(i, 1);
+    else state.bookmarks.push(file);
+    saveBookmarks();
+  }
+  function getResearchCardScore(r) {
+    return (r && typeof r.score === "number" && !Number.isNaN(r.score)) ? `⭐ ${r.score}/10` : "Chưa chấm";
+  }
   function toast(msg) {
     const el = document.getElementById("toast");
     el.textContent = msg; el.classList.add("show");
@@ -1233,47 +1255,11 @@
     `;
   }
 
-  function renderInspector() {
-    const insp = document.getElementById("inspector");
-    insp.classList.toggle("hidden", !state.inspOpen);
-    insp.classList.toggle("zen", state.zenMode);
-    if (!state.inspOpen) return;
-
-    document.querySelectorAll("[data-insptab]").forEach(b => b.classList.toggle("active", b.dataset.insptab === state.inspTab));
-    const body = document.getElementById("inspBody");
-    const pinBar = document.getElementById("pinBar");
-    pinBar.classList.toggle("open", state.pins.length > 0);
-    document.getElementById("pinBarTxt").textContent = `📌 ${state.pins.length} điểm đã ghim`;
-
-    if (state.inspTab === "agent") {
-      const pickBtns = ["muse-main", "muse-1", "muse-2"].map(id => `<button class="fchip ${state.selectedAgentId === id ? "active" : ""}" data-openagent="${id}">${esc(AGENTS[id].name)}</button>`).join("");
-      body.innerHTML = `<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">${pickBtns}</div>${renderAgentScorecardHtml(state.selectedAgentId || "muse-1", false)}`;
-      return;
-    }
-
-    if (state.inspTab === "report") {
-      if (!state.selectedReportFile) {
-        body.innerHTML = `<div style="color:var(--ink3);padding:20px;text-align:center;">Chọn một báo cáo <code>research/*.md</code> để đọc tại đây.</div>`;
-        return;
-      }
-      const f = state.selectedReportFile;
-      if (!state.reportCache[f]) {
-        body.innerHTML = `<div style="padding:20px;color:var(--ink3);">Đang tải <code>${esc(f)}</code>...</div>`;
-        fetchReport(f);
-        return;
-      }
-      const { html, toc } = renderRichMarkdown(state.reportCache[f]);
-      const tocHtml = toc.length ? `<div class="toc-box"><b>📑 Mục lục (${toc.length})</b>${toc.map(h=>`<button class="toc-link" data-scrollto="${h.id}" style="padding-left:${(h.level-1)*10}px;">${esc(h.text)}</button>`).join("")}</div>` : "";
-      body.innerHTML = `<div style="font-size:11.5px;color:var(--ink3);font-family:var(--mono);margin-bottom:8px;">📄 ${esc(f)} (bấm 📌 cạnh đoạn để ghim góp ý Plannotator)</div>${tocHtml}<div class="md-view">${html}</div>`;
-      return;
-    }
-
-    const t = (state.bundle.tasks || []).find(x => x.id === state.selectedTaskId);
-    if (!t) { body.innerHTML = `<div style="color:var(--ink3);padding:20px;text-align:center;">Chọn một #task để xem hồ sơ.</div>`; return; }
+  function renderTaskDetailHtml(t) {
+    if (!t) return `<div style="color:var(--ink3);padding:20px;text-align:center;">Chọn một #task để xem hồ sơ.</div>`;
     const rv = (t.result && t.result.review) || {}, tnum = taskNumOf(t);
     const resObj = (state.bundle.research_index || []).find(r => r.task_num === tnum);
-
-    body.innerHTML = `
+    return `
       <div class="insp-section">
         <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px;">${statusBadge(t.status)}<span class="pill p-open">#${esc(tnum || t.id)}</span>${t.assignee ? `<span class="pill p-doing">@${esc(t.assignee)}</span>` : `<span class="pill p-open">chưa gán</span>`}${rv.score != null ? `<span class="pill p-score">⭐ ${rv.score}/10</span>` : ""}</div>
         <h3 style="margin:0 0 8px;font-size:15px;">${esc(t.title)}</h3>
@@ -1289,11 +1275,81 @@
     `;
   }
 
-  async function fetchReport(file) {
-    for (const u of [`./${file}`, `../${file}`, `https://raw.githubusercontent.com/${REPO}/main/${file}`]) {
-      try { const r = await fetch(u); if (r.ok) { state.reportCache[file] = await r.text(); if (state.selectedReportFile === file) renderInspector(); return; } } catch {}
+  function renderReportReaderHtml(f) {
+    if (!f) return `<div style="color:var(--ink3);padding:20px;text-align:center;">Chọn một báo cáo <code>research/*.md</code> để đọc tại đây.</div>`;
+    const cached = state.reportCache[f];
+    if (!cached) {
+      fetchReport(f);
+      return `<div style="padding:20px;color:var(--ink3);">Đang tải <code>${esc(f)}</code>...</div>`;
     }
-    state.reportCache[file] = `Không thể tải tự động \`${file}\`. Xem trên GitHub: https://github.com/${REPO}/blob/main/${file}`;
+    if (cached && cached.error404) {
+      return `<div style="padding:18px;border:1px solid var(--line2);border-radius:10px;background:var(--amber-soft);color:var(--ink);"><b>⚠️ Không tìm thấy file</b><div style="font-size:12.5px;margin-top:4px;">Không tìm thấy file <code>${esc(f)}</code> trên cùng origin.</div></div>`;
+    }
+    const isSaved = state.bookmarks.includes(f);
+    const { html, toc } = renderRichMarkdown(String(cached));
+    const tocHtml = toc.length ? `<div class="toc-box"><b>📑 Mục lục (${toc.length})</b>${toc.map(h=>`<button class="toc-link" data-scrollto="${h.id}" style="padding-left:${(h.level-1)*10}px;">${esc(h.text)}</button>`).join("")}</div>` : "";
+    return `
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;flex-wrap:wrap;">
+        <span style="font-size:11.5px;color:var(--ink3);font-family:var(--mono);">📄 ${esc(f)}</span>
+        <button class="bm-btn ${isSaved ? "saved" : ""}" data-bookmark="${esc(f)}">${isSaved ? "★ Đã lưu" : "☆ Đánh dấu"}</button>
+      </div>
+      ${tocHtml}<div class="md-view">${html}</div>
+    `;
+  }
+
+  function renderInspector() {
+    const insp = document.getElementById("inspector");
+    insp.classList.toggle("hidden", !state.inspOpen);
+    insp.classList.toggle("zen", state.zenMode);
+    insp.classList.toggle("split", state.splitMode && !state.zenMode);
+    if (!state.inspOpen) return;
+
+    document.querySelectorAll("[data-insptab]").forEach(b => b.classList.toggle("active", b.dataset.insptab === state.inspTab));
+    const body = document.getElementById("inspBody");
+    const pinBar = document.getElementById("pinBar");
+    pinBar.classList.toggle("open", state.pins.length > 0);
+    document.getElementById("pinBarTxt").textContent = `📌 ${state.pins.length} điểm đã ghim`;
+
+    if (state.inspTab === "agent") {
+      const pickBtns = ["muse-main", "muse-1", "muse-2"].map(id => `<button class="fchip ${state.selectedAgentId === id ? "active" : ""}" data-openagent="${id}">${esc(AGENTS[id].name)}</button>`).join("");
+      body.innerHTML = `<div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">${pickBtns}</div>${renderAgentScorecardHtml(state.selectedAgentId || "muse-1", false)}`;
+      return;
+    }
+
+    const t = (state.bundle.tasks || []).find(x => x.id === state.selectedTaskId);
+    if (state.splitMode && state.selectedReportFile) {
+      body.innerHTML = `<div class="split-grid"><div>${renderTaskDetailHtml(t)}</div><div>${renderReportReaderHtml(state.selectedReportFile)}</div></div>`;
+      return;
+    }
+
+    if (state.inspTab === "report") {
+      body.innerHTML = renderReportReaderHtml(state.selectedReportFile);
+      return;
+    }
+
+    body.innerHTML = renderTaskDetailHtml(t);
+  }
+
+  async function fetchReport(file) {
+    // Strictly same-origin relative path fetch only (whitelist from bundle.research_index; no third-party URLs)
+    const mr = findBundleReport(file);
+    const rel = mr ? mr.file : "";
+    if (!rel || !rel.startsWith("research/")) {
+      state.reportCache[file] = { error404: true };
+      if (state.selectedReportFile === file) renderInspector();
+      return;
+    }
+    for (const u of [`./${rel}`, `../${rel}`]) {
+      try {
+        const r = await fetch(u);
+        if (r.ok) {
+          state.reportCache[file] = await r.text();
+          if (state.selectedReportFile === file) renderInspector();
+          return;
+        }
+      } catch {}
+    }
+    state.reportCache[file] = { error404: true };
     if (state.selectedReportFile === file) renderInspector();
   }
 
@@ -1365,8 +1421,43 @@
         return `<div class="track-card"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px;"><div><b>${esc(tr.name)}</b><div style="font-size:12px;color:var(--ink3);">${esc(tr.description)}</div></div><span class="pill p-done">${tr.done}/${tr.total} (${pct}%)</span></div><div class="prog-bar"><div class="prog-fill" style="width:${pct}%"></div></div><div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;">${matched.slice(0,24).map(it=>`<button class="btn sm" data-openreport="${esc(it.research_file||"")}" data-taskid="${esc(it.id)}">#${esc(it.num)} ${it.status==="done"?"✓":"⏳"} ${esc(String(it.title).slice(0,28))}</button>`).join("")}</div></div>`;
       }).join("");
     } else if (state.dashTab === "reports") {
-      const list = reports.filter(r => !q || r.file.toLowerCase().includes(q) || r.title.toLowerCase().includes(q));
-      body.innerHTML = `<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;">${list.map(r=>`<div class="k-card" data-openreport="${esc(r.file)}"><div class="k-card-meta"><span>#${esc(r.task_num||"—")}</span><span>${r.lines} dòng</span></div><div class="k-card-title">${esc(r.title)}</div><div style="font-size:11px;font-family:var(--mono);color:var(--blue);">${esc(r.file)}</div></div>`).join("")}</div>`;
+      const trackMap = {};
+      tracks.forEach(tr => { (tr.task_ids || []).forEach(it => { if (it.research_file) trackMap[it.research_file] = tr.id; }); });
+      const filterChips = [
+        `<button class="fchip ${state.reportTrackFilter==="all"?"active":""}" data-rfilter="all">Tất cả (${reports.length})</button>`,
+        `<button class="fchip ${state.reportTrackFilter==="saved"?"active":""}" data-rfilter="saved">★ Đã lưu (${state.bookmarks.length})</button>`,
+        ...tracks.map(tr => `<button class="fchip ${state.reportTrackFilter===tr.id?"active":""}" data-rfilter="${esc(tr.id)}">${esc(tr.name.split("(")[0].trim())} (${tr.done}/${tr.total})</button>`)
+      ].join("");
+
+      const list = reports.filter(r => {
+        if (q && !r.file.toLowerCase().includes(q) && !r.title.toLowerCase().includes(q)) return false;
+        if (state.reportTrackFilter === "saved") return state.bookmarks.includes(r.file);
+        if (state.reportTrackFilter !== "all") return trackMap[r.file] === state.reportTrackFilter;
+        return true;
+      });
+      body.innerHTML = `
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px;">${filterChips}</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:10px;">
+          ${list.map(r => {
+            const isSaved = state.bookmarks.includes(r.file);
+            const scTxt = getResearchCardScore(r);
+            const kb = r.bytes ? `${(r.bytes/1024).toFixed(1)} KB` : "";
+            return `
+              <div class="k-card" data-openreport="${esc(r.file)}">
+                <div class="k-card-meta">
+                  <span>#${esc(r.task_num||"—")} · ${r.lines} dòng${kb ? ` · ${kb}` : ""}</span>
+                  <span class="pill ${scTxt==="Chưa chấm"?"p-open":"p-score"}">${esc(scTxt)}</span>
+                </div>
+                <div class="k-card-title">${esc(r.title)}</div>
+                <div style="display:flex;justify-content:space-between;align-items:center;gap:6px;margin-top:6px;">
+                  <span style="font-size:11px;font-family:var(--mono);color:var(--blue);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${esc(r.file)}</span>
+                  <button class="bm-btn ${isSaved?"saved":""}" data-bookmark="${esc(r.file)}" title="Đánh dấu bài">${isSaved?"★":"☆"}</button>
+                </div>
+              </div>
+            `;
+          }).join("") || `<div style="color:var(--ink3);padding:16px;">Chưa có báo cáo nào khớp bộ lọc.</div>`}
+        </div>
+      `;
     } else {
       const doneCnt = tasks.filter(t=>t.status==="done").length;
       body.innerHTML = `<div class="kpi-row"><div class="kpi-card"><div class="kpi-lbl">Qsang_vbook Registry</div><div class="kpi-val">${qsang.registry_count||0} nguồn</div><div class="kpi-sub">main: <code>${esc(qsang.main_tip||"—")}</code></div></div><div class="kpi-card"><div class="kpi-lbl">Tasks Hoàn Thành</div><div class="kpi-val">${doneCnt} / ${tasks.length}</div><div class="kpi-sub">${esc(fmtTime(state.bundle.generated_at))}</div></div><div class="kpi-card"><div class="kpi-lbl">Verify Spec</div><div class="kpi-val" style="color:${spec.ok?"var(--green)":"var(--red)"}">${spec.ok?"OK":"DRIFT"}</div><div class="kpi-sub">${esc(spec.summary||"")}</div></div><div class="kpi-card"><div class="kpi-lbl">Kho Báo Cáo</div><div class="kpi-val">${reports.length} file</div><div class="kpi-sub">research/*.md</div></div></div>`;
@@ -1627,6 +1718,8 @@
     const ch = e.target.closest("[data-room]"); if (ch) { state.room = ch.dataset.room; state.agentFilter = null; state.mainView = "chat"; closeMobileSidebar(); renderAll(); return; }
     const ag = e.target.closest("[data-agent]"); if (ag) { state.agentFilter = state.agentFilter === ag.dataset.agent ? null : ag.dataset.agent; state.mainView = "chat"; closeMobileSidebar(); renderAll(); return; }
     const mf = e.target.closest("[data-msgfilter]"); if (mf) { state.msgFilter = mf.dataset.msgfilter; document.querySelectorAll("[data-msgfilter]").forEach(b=>b.classList.toggle("active",b===mf)); renderChat(); return; }
+    const bm = e.target.closest("[data-bookmark]"); if (bm) { e.stopPropagation(); toggleBookmark(bm.dataset.bookmark); if (state.inspOpen) renderInspector(); if (state.mainView==="dash" && state.dashTab==="reports") renderDash(); return; }
+    const rf = e.target.closest("[data-rfilter]"); if (rf) { state.reportTrackFilter = rf.dataset.rfilter; renderDash(); return; }
     const dt = e.target.closest("[data-dashtab]"); if (dt) { state.dashTab = dt.dataset.dashtab; renderDash(); syncUrlHash(); return; }
     const it = e.target.closest("[data-insptab]"); if (it) { state.inspTab = it.dataset.insptab; renderInspector(); syncUrlHash(); return; }
     const jr = e.target.closest("[data-jumproom]"); if (jr) { state.room = jr.dataset.jumproom; state.mainView = "chat"; renderAll(); return; }
@@ -1696,7 +1789,8 @@
   document.getElementById("sbBackdrop").onclick = closeMobileSidebar;
   document.getElementById("btnBackChat").onclick = () => { state.mainView = "chat"; renderAll(); };
   document.getElementById("btnToggleInsp").onclick = () => { state.inspOpen = !state.inspOpen; renderInspector(); syncUrlHash(); };
-  document.getElementById("btnCloseInsp").onclick = () => { state.inspOpen = false; state.zenMode = false; renderInspector(); syncUrlHash(); };
+  document.getElementById("btnCloseInsp").onclick = () => { state.inspOpen = false; state.zenMode = false; state.splitMode = false; renderInspector(); syncUrlHash(); };
+  document.getElementById("btnSplit").onclick = () => { state.splitMode = !state.splitMode; if (state.splitMode) state.zenMode = false; renderInspector(); };
   document.getElementById("btnCopyRoomLink").onclick = () => copyDeepLink(false);
   document.getElementById("btnCopyInspLink").onclick = () => copyDeepLink(true);
   document.getElementById("btnZen").onclick = () => { state.zenMode = !state.zenMode; renderInspector(); };
