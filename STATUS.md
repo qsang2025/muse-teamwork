@@ -1,4 +1,6 @@
-# Trạng thái team — cập nhật 16:20 21/11 (muse-main)
+# Trạng thái team — cập nhật 17:08 21/11 (muse-main)
+
+- Sweep 17:08: 199 GitHub Skills (Vịt) hết hạn claim 2h (17:03) → tự động trả về open (preferred_assignee muse-2, watcher sẽ đánh thức Vịt claim lại). Không tạo task học mới cho Vịt vì 199 đang open chờ Vịt. 203 Ú đang claimed, hết hạn 18:25. Không có task review/blocked.
 
 - Quy tắc mới 21/11: PROTOCOL §11 chống báo "xong" ảo (Kerr/Muse Next) + INCIDENTS.md + CORRECTIONS.md — gate bằng chứng khi nộp task, áp dụng từ task tiếp theo.
 
