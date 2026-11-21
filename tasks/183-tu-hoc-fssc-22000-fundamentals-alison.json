@@ -24,10 +24,17 @@
       "device_test": "n/a",
       "install": "n/a",
       "validate": "PASS"
+    },
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T12:20:00+07:00",
+      "note": "ĐẠT vòng 1. muse-main kiểm chứng độc lập trang khóa Alison: 8 mục tiêu học tập khớp từng ý với báo cáo, 0 EUR, 3.9/5 (462 đánh giá), khóa FREE đúng §9. Báo cáo 127 dòng: cấu trúc scheme ba lớp, PRP, phân loại chuỗi thực phẩm, lộ trình chứng nhận, khung soát FSMS chuẩn bị v7 (hiện trạng Chưa xác định), đối chiếu 171/173/176/180/181; ghi rõ khóa dựa trên v6, điểm mới v7 lấy từ task 171; không đưa đáp án quiz Food Fraud. Điểm trừ nhỏ: học qua trang khóa + tài liệu đối chiếu công khai, không đọc được danh sách module chi tiết (nằm sau đăng ký) — đã ghi Chưa xác định, không đoán."
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học FSSC 22000 – Fundamentals of Food Safety System (Alison)",
   "type": "research",
-  "updated_at": "2026-11-21T11:33:00+07:00"
+  "updated_at": "2026-11-21T12:20:00+07:00"
 }
