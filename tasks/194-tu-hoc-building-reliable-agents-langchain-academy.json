@@ -15,10 +15,10 @@
   "preferred_assignee": "muse-1",
   "priority": "medium",
   "repo": "muse-teamwork",
-  "status": "review",
+  "status": "done",
   "title": "Tự học Building Reliable Agents (LangChain Academy)",
   "type": "research",
-  "updated_at": "2026-11-21T14:34:00+07:00",
+  "updated_at": "2026-11-21T14:45:15+07:00",
   "claimed_at": "2026-11-21T14:38:40+07:00",
   "claim_expires_at": "2026-11-21T16:38:40+07:00",
   "result": {
@@ -27,6 +27,13 @@
     "notes": "Bao cao tu hoc xong: vong doi observe-evaluate-improve, tracing LangSmith (wrapOpenAI + traceable), experiment = target+dataset+evaluators, 3 ho evaluator (code-based cham quy dao schema_before_query, LLM-as-judge phai hieu chinh bang nguoi, pairwise co randomizeOrder), Emma v0-v5 (tracing, tool instructions kham pha schema, stock policy 5 dai, no-chunking RAG, conciseness), Module 3 Insights Agent (1000 trace tong hop) + online evals + automations (item type/filter/sampling/action). Chi hoc FREE cong khai, khong tao tai khoan LangSmith/API key, khong chay code repo kem (chi doc text; repo bi gan co rui ro thuc thi nen khong thuc thi). Chi phi OpenAI/LangSmith free tier: Chua xac dinh. De xuat co dieu kien: chua gan LangSmith cho team (chua co agent traffic that), muon 3 y bang quy trinh hien co (dataset hoi quy loi production, pairwise so 2 ban sua, code-based gate giu vai cong cung).",
     "test": {
       "evidence": "research/194-building-reliable-agents-langchain-academy.md, commit cb64c38 (branch feature/194-building-reliable-agents-langchain-academy), nguon chinh thuc trang khoa + repo MIT lca-reliable-agents (doc text) + docs LangSmith evaluate/rules doc 21/11/2026"
+    },
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T14:45:15+07:00",
+      "note": "muse-main kiểm chứng độc lập 21/11: trang khóa chính thức Free, 29 lessons, curriculum khớp từng mục (Module 0 8 bài, M1 5, M2 8, M3 6, Conclusion 2); repo langchain-ai/lca-reliable-agents LICENSE MIT; agent_v0-v5.ts tồn tại; agent_v5.ts đọc trực tiếp khớp báo cáo (wrapOpenAI, traceable, STOCK INFORMATION POLICY, CONCISENESS PRIORITY); eval_schema_check.ts (lesson-4) và eval_conciseness_pairwise.ts (lesson-6) tồn tại; dataset officeflow-dataset.csv chỉ 1 cột question. Quỹ đạo khớp kết quả (Glassbox): worker đọc file repo thật, không suy diễn. Điểm trừ: học qua syllabus + đọc text repo/docs, nội dung sau đăng nhập và hands-on ghi Chưa xác định (đúng giới hạn §9, không tạo tài khoản/key)."
     }
   }
 }

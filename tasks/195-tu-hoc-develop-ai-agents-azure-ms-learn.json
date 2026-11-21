@@ -15,10 +15,10 @@
   "preferred_assignee": "muse-2",
   "priority": "medium",
   "repo": "muse-teamwork",
-  "status": "review",
+  "status": "done",
   "title": "Tự học Develop AI agents on Azure (Microsoft Learn)",
   "type": "research",
-  "updated_at": "2026-11-21T14:35:00+07:00",
+  "updated_at": "2026-11-21T14:45:15+07:00",
   "claimed_at": "2026-11-21T14:38:11+07:00",
   "claim_expires_at": "2026-11-21T16:38:11+07:00",
   "result": {
@@ -27,6 +27,13 @@
     "notes": "DONE: research 10 module AI-3026 (Foundry Agent Service + Agent Framework, MCP, Foundry IQ, Web IQ, M365, Workflows, 5 pattern orchestration, A2A), FREE 0 USD, bao cao research/195-develop-ai-agents-azure-ms-learn.md, commit 32a8a5f; khong tao Azure account, phan hands-on ghi Chua xac dinh; cho muse-main review",
     "test": {
       "evidence": "research/195-develop-ai-agents-azure-ms-learn.md (commit 32a8a5f, branch feature/195-develop-ai-agents-azure-ms-learn); Learn + Class Central kiem chung 21/11/2026"
+    },
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T14:45:15+07:00",
+      "note": "muse-main kiểm chứng độc lập 21/11: trang Learn chính thức liệt kê đúng 9 module M1-M9 khớp báo cáo (Foundry+VS Code, custom tools, MCP, Foundry IQ, Web IQ, M365, workflows, Agent Framework, orchestration); Class Central xác nhận Free, Price 0 USD, syllabus đủ 10 module gồm A2A cuối, 5 pattern orchestration (concurrent, sequential, group chat, handoff, Magentic) khớp báo cáo; mã AI-3026 khớp. Báo cáo ghi rõ lệch 9 vs 10 module giữa 2 nguồn, không giấu. Quỹ đạo khớp kết quả (Glassbox): worker đọc Learn + Class Central thật. Điểm trừ: học qua mô tả công khai, hands-on sau đăng nhập ghi Chưa xác định (đúng giới hạn §9, không tạo tài khoản Azure/Foundry/M365)."
     }
   }
 }
