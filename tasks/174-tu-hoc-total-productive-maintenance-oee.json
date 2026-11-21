@@ -17,14 +17,14 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/174-total-productive-maintenance-oee",
-    "notes": "",
+    "notes": "Da hoc xong Total Productive Maintenance (TPM) and OEE (iCompetent, khoa B3 mach B): 6 ton that lon gan voi tung thanh phan OEE (dung nho + giam toc do hay bi bo sot nhat); OEE = Availability x Performance x Quality, cong thuc rut gon doi chieu cuoi ca; TEEP = OEE x Loading - OEE cao ma TEEP thap thi van de la lich chay, khong phai mua may moi (VD: OEE 79,2% nhung TEEP chi 26,4% neu ngay chi chay 1 ca); benchmark world-class 85% (~90% x 95% x 99%), nganh thuc pham-do uong dien hinh 55-70% - muc tieu dung la cai thien deu so voi chinh day chuyen; 8 tru cot TPM tren nen 5S (TRACC da co san nen) + 7 buoc bao tri tu chu Jishu Hozen (buoc 1 've sinh la kiem tra', gan the moi bat thuong); 6 viec lam duoc ngay o day chuyen IFT + ke hoach pilot TPM cho 1 may - tat ca o tang nguyen tac, viec nao cham day chuyen that can Anh quyet truoc. Gioi han: khoa mien phi (0 USD) nhung khong tao tai khoan ghi danh, khong xem video trong khoa, khong lam quiz - hoc qua syllabus cong khai + tai lieu TPM/OEE chuan, da ghi ro trong bao cao. Bao cao research/174-total-productive-maintenance-oee.md.",
     "test": {
       "device_test": "n/a",
       "install": "n/a",
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học Total Productive Maintenance (TPM) and OEE (iCompetent)",
   "type": "research",
   "updated_at": "2026-11-21T08:56:00+07:00",
