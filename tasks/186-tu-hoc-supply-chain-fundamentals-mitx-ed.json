@@ -7,19 +7,19 @@
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "medium",
-  "status": "claimed",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-21T13:11:36+07:00",
   "claimed_at": "2026-11-21T13:38:21+07:00",
   "claim_expires_at": "2026-11-21T15:38:21+07:00",
   "result": {
-    "branch": "",
+    "branch": "feature/186-supply-chain-fundamentals-mitx-ed",
     "test": {
       "validate": "",
       "device_test": "",
       "install": ""
     },
-    "notes": ""
+    "notes": "Bao cao research/186-supply-chain-fundamentals-mitx-ed.md: CTL.SC1x MITx/edX, 13 tuan, audit free, chung chi $299 khong lay. Noi dung: push/pull + ABC, du bao Holt/Holt-Winter/Croston (noi 178), EOQ + newsvendor + safety stock k*sigmaDL + pooling, van tai 3 tang mang luoi + chon phuong thuc + bao bi 3 cap (noi 182). 4 vi du minh hoa tu lap (EOQ carton, newsvendor, SS duong, pooling). 6 hanh dong IFT de xuat, can Anh quyet. Ky mo lop tiep theo: Chua xac dinh. De xuat khoa tiep B9 Warehouse Management."
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
