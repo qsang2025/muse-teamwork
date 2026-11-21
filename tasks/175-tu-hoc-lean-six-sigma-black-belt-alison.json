@@ -1,1 +1,33 @@
-{"assignee":"muse-2","branch":"feature/175-lean-six-sigma-black-belt-alison","checklist":["Quét repo đích + tasks/open + ROADMAP (chống trùng)","Claim task (script claim-task.sh) + tạo branch","Build / khảo sát xong, test đầy đủ","Push branch, cập nhật task sang review","muse-main kiểm tra + merge, task sang done"],"created_at":"2026-11-21T09:24:00+07:00","created_by":"muse-main","id":"175-tu-hoc-lean-six-sigma-black-belt-alison","notes":"muse-main tạo theo ủy quyền 20/11 (§10a: Vịt rảnh sau khi 174 merge xong; Anh duyệt danh sách 20 khóa công việc mới 21/11 08:31 trong voice call; giao tiếp xen kẽ 2 mạch — 173 mạch A do Ú làm, 174 mạch B do Vịt làm xong). Khóa Lean Six Sigma Black Belt — Alison, 15–20 giờ — khóa số 2 mạch B trong danh sách 20 khóa công việc đã duyệt; bằng chứng trong research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nội dung: DMAIC, Cp/Cpk, DOE, Gage R&R, SPC, FMEA, Kaizen — nấc tiếp theo sau Green Belt của Anh, dẫn dự án giảm chi phí/lỗi ở IFT; nối thẳng Quality Maintenance + SPC của khóa 174 theo đề xuất của Vịt trong báo cáo 174. Link: https://alison.com/course/lean-six-sigma-black-belt?show_modal=true. Delegation: giao Vịt học + viết báo cáo; muse-main giữ review + merge. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ (Alison học miễn phí hoàn toàn, chỉ chứng chỉ PDF trả phí, không cần). Báo cáo viết vào research/175-lean-six-sigma-black-belt-alison.md, review muse-main chấm /10 như task research khác.","preferred_assignee":"muse-2","priority":"medium","repo":"muse-teamwork","result":{"branch":"feature/175-lean-six-sigma-black-belt-alison","notes":"","test":{"device_test":"n/a","install":"n/a","validate":""}},"status":"open","title":"Tự học Lean Six Sigma Black Belt (Alison)","type":"research","updated_at":"2026-11-21T09:24:00+07:00"}
+{
+  "assignee": "muse-2",
+  "branch": "feature/175-lean-six-sigma-black-belt-alison",
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "created_at": "2026-11-21T09:24:00+07:00",
+  "created_by": "muse-main",
+  "id": "175-tu-hoc-lean-six-sigma-black-belt-alison",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10a: Vịt rảnh sau khi 174 merge xong; Anh duyệt danh sách 20 khóa công việc mới 21/11 08:31 trong voice call; giao tiếp xen kẽ 2 mạch — 173 mạch A do Ú làm, 174 mạch B do Vịt làm xong). Khóa Lean Six Sigma Black Belt — Alison, 15–20 giờ — khóa số 2 mạch B trong danh sách 20 khóa công việc đã duyệt; bằng chứng trong research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nội dung: DMAIC, Cp/Cpk, DOE, Gage R&R, SPC, FMEA, Kaizen — nấc tiếp theo sau Green Belt của Anh, dẫn dự án giảm chi phí/lỗi ở IFT; nối thẳng Quality Maintenance + SPC của khóa 174 theo đề xuất của Vịt trong báo cáo 174. Link: https://alison.com/course/lean-six-sigma-black-belt?show_modal=true. Delegation: giao Vịt học + viết báo cáo; muse-main giữ review + merge. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ (Alison học miễn phí hoàn toàn, chỉ chứng chỉ PDF trả phí, không cần). Báo cáo viết vào research/175-lean-six-sigma-black-belt-alison.md, review muse-main chấm /10 như task research khác.",
+  "preferred_assignee": "muse-2",
+  "priority": "medium",
+  "repo": "muse-teamwork",
+  "result": {
+    "branch": "feature/175-lean-six-sigma-black-belt-alison",
+    "notes": "",
+    "test": {
+      "device_test": "n/a",
+      "install": "n/a",
+      "validate": ""
+    }
+  },
+  "status": "claimed",
+  "title": "Tự học Lean Six Sigma Black Belt (Alison)",
+  "type": "research",
+  "updated_at": "2026-11-21T09:24:00+07:00",
+  "claimed_at": "2026-11-21T09:38:36+07:00",
+  "claim_expires_at": "2026-11-21T11:38:36+07:00"
+}
