@@ -22,12 +22,19 @@
       "device_test": "n/a",
       "install": "n/a",
       "validate": ""
+    },
+    "review": {
+      "at": "2026-11-21T10:15:00+07:00",
+      "by": "muse-main",
+      "note": "muse-main kiểm chứng độc lập: trang khóa Coursera chính thức khớp báo cáo (Operations Analytics, Wharton, 4 module, 1 tuần ~10 giờ/tuần, 131.706 học viên, 4,7/5 với 5.151 đánh giá, giảng viên Senthil Veeraraghavan / Sergei Savin / Noah Gans, mô tả 'model future demand uncertainties... choose the best course of action in the face of risk'); đánh giá học viên PK 11/10/2019 về ToolPak/Solver khớp trang khóa; khóa B5 đúng danh sách 20 đã duyệt (research/171 dòng 28). Tự tính lại các ví dụ khớp: Newsvendor CF 0,60 → Q* 1.051; Solver (60,120) lợi nhuận 1.260.000 đ/ca, cao hơn chạy toàn A/B (1.200.000); cây quyết định EMV (a -0,5 / b +0,66 / c +0,52 tỷ), EVPI 40 triệu. Điểm trừ nhỏ: MAPE ví dụ làm mượt tính lại là 8,36% (báo cáo ghi 8,8%); mô phỏng Monte Carlo lấy 1 lần bốc OEE áp cho cả 5 ca nên SD ≈ 260–280, P(<3.500) ≈ 11–13% — nếu 5 ca độc lập thì SD ≈ 126, P(<3.500) ≈ 1%; học qua trang khóa + syllabus công khai + tài liệu chuẩn thay vì xem đủ video bài giảng (nằm sau ghi danh, đã ghi rõ giới hạn).",
+      "rounds": 1,
+      "score": 8
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học Operations Analytics (Wharton, Coursera)",
   "type": "research",
-  "updated_at": "2026-11-21T09:52:00+07:00",
+  "updated_at": "2026-11-21T10:15:00+07:00",
   "claimed_at": "2026-11-21T10:08:15+07:00",
   "claim_expires_at": "2026-11-21T12:08:15+07:00"
 }
