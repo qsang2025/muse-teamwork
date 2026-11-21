@@ -7,7 +7,7 @@
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "medium",
-  "status": "review",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-21T11:24:18+07:00",
   "claimed_at": "2026-11-21T11:38:25+07:00",
@@ -19,7 +19,14 @@
       "device_test": "",
       "install": ""
     },
-    "notes": "DONE: báo cáo research/182-food-packaging-technology-nptel.md — học FREE công khai qua syllabus + 8 transcript (Lec 1,7,10,11,14,17,29,L33,L37); 5 module: vật liệu, hệ thống bao bì, kiểm tra vật liệu, MAP/vô trùng, máy đóng gói; 6 hành động cho IFT (trọng tâm vụ đường 25→50kg: nghiệm thu 4 chỉ tiêu kéo MD/CD, mối hàn, đâm thủng, WVTR + thử rơi/nén, tính lại pallet). Không ghi danh/thi/chứng chỉ. Chưa xác định: tổng số bài chính xác, assignment sau đăng nhập, 2/4 tiêu chí hệ thống vô trùng."
+    "notes": "DONE: báo cáo research/182-food-packaging-technology-nptel.md — học FREE công khai qua syllabus + 8 transcript (Lec 1,7,10,11,14,17,29,L33,L37); 5 module: vật liệu, hệ thống bao bì, kiểm tra vật liệu, MAP/vô trùng, máy đóng gói; 6 hành động cho IFT (trọng tâm vụ đường 25→50kg: nghiệm thu 4 chỉ tiêu kéo MD/CD, mối hàn, đâm thủng, WVTR + thử rơi/nén, tính lại pallet). Không ghi danh/thi/chứng chỉ. Chưa xác định: tổng số bài chính xác, assignment sau đăng nhập, 2/4 tiêu chí hệ thống vô trùng.",
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T13:10:30+07:00",
+      "note": "Dat (8/10). muse-main kiem chung doc lap 21/11: trang khoa NPTEL xac nhan \"NOC: Food Packaging Technology, KUFOS Panangad\", giang vien Prof. Maya Raman va Prof. Jenny Ann John; syllabus PDF chinh thuc xac nhan du 5 module khop bao cao; khoa B6 dung danh sach 20 da duyet (research/171). Bao cao 212 dong, 5 module, 6 hanh dong cho vu doi bao bi duong 25->50kg (nghiem thu 4 chi tieu keo MD/CD, moi han, dam thung, WVTR + thu roi/nen, tinh lai pallet); ghi ro gioi han (chi doc 8/~50 transcript, khong ghi danh/thi, 2/4 tieu chi he thong vo trung va tong so bai ghi Chua xac dinh). Tru 2: hoc qua syllabus + transcript cong khai thay vi xem du video; mo rong ngoai syllabus o muc ung dung (ghi ro la mo rong). Merge giu theo quyet dinh cua Anh 13:09 (merge ca 182 + 185)."
+    }
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
@@ -29,5 +36,5 @@
     "muse-main kiểm tra + merge, task sang done"
   ],
   "notes": "Khóa số 6, mạch B (Sản xuất & vận hành), trong danh sách 20 khóa công việc Anh duyệt 21/11 08:31 trong voice call. Bằng chứng: research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main (dòng B6). Khóa: Food Packaging Technology, NPTEL (KUFOS/IIT Madras), 12 tuần, https://nptel.ac.in/courses/127106237 — vật liệu bao bì, hệ thống bao bì cho sữa, bao bì vô trùng và máy đóng gói — đúng vụ đổi bao bì đường 25kg→50kg (học qua video bài giảng công khai). Học theo §9: chỉ nội dung FREE công khai, không đăng ký trả phí/chứng chỉ; ghi Chưa xác định khi không xem được nội dung sau đăng ký. muse-main quyết theo ủy quyền 20/11: giao tiếp mạch B sau khi 179 merge xong — chọn B6 (trong danh sách, sát việc đóng gói của Anh) thay vì Excel Intermediate I (ngoài danh sách, cần Anh duyệt riêng) hay B8 Supply Chain Fundamentals (khóa dự phòng, trùng một phần B4 vừa học ở 178).",
-  "updated_at": "2026-11-21T11:58:00+07:00"
+  "updated_at": "2026-11-21T13:10:30+07:00"
 }
