@@ -15,10 +15,10 @@
   "preferred_assignee": "muse-2",
   "priority": "medium",
   "repo": "muse-teamwork",
-  "status": "review",
+  "status": "done",
   "title": "Tự học Understand Google Cloud Agents (Google Skills)",
   "type": "research",
-  "updated_at": "2026-11-21T14:51:00+07:00",
+  "updated_at": "2026-11-21T15:01:00+07:00",
   "claimed_at": "2026-11-21T14:53:23+07:00",
   "claim_expires_at": "2026-11-21T16:53:23+07:00",
   "result": {
@@ -27,6 +27,13 @@
     "notes": "Học xong khóa Understand Google Cloud Agents (Google Skills, FREE, 8 giờ, 9 module): báo cáo research/197-understand-google-cloud-agents.md — bản đồ chọn công cụ (Gemini Enterprise / CX Studio / ADK / Agent Runtime), đối chiếu Azure (195), nối 193 (ADK/A2A/MCP) + 191 (MCP). Không chạy lab, không tạo tài khoản/billing (đúng §9); nội dung sau đăng nhập ghi Chưa xác định.",
     "test": {
       "evidence": "research/197-understand-google-cloud-agents.md, commit 079b5de"
+    },
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T15:01:00+07:00",
+      "note": "muse-main kiểm chứng độc lập 21/11: trang Google Skills chính thức khớp (8 giờ, Introductory, xuất bản 05/11/2026, badge, cập nhật ~16 ngày trước); Class Central khớp (Price 0 USD); Coursera cùng nội dung 9 module khớp số module báo cáo; mô tả khóa liệt kê đúng Gemini Enterprise, Conversational Agents (Dialogflow CX), CX Studio, ADK. Điểm trừ: học qua mô tả công khai + docs/blog, lab và nội dung sau đăng nhập ghi Chưa xác định (đúng §9, không chạy lab tốn credits, không tạo tài khoản/billing); giá Enterprise/CX Studio chỉ từ nguồn thứ ba, báo cáo đã ghi cần kiểm chứng lại. Quỹ đạo khớp: đối chiếu 193/195/191 rõ ràng, phát hiện ADK 2.x deprecated Sequential/Parallel/LoopAgent thay bằng Workflow có nguồn kiểm chứng."
     }
   }
 }
