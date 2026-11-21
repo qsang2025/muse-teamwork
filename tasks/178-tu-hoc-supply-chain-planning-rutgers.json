@@ -24,8 +24,10 @@
       "validate": ""
     }
   },
-  "status": "open",
+  "status": "claimed",
   "title": "Tự học Supply Chain Planning (Rutgers, Coursera)",
   "type": "research",
-  "updated_at": "2026-11-21T10:15:00+07:00"
+  "updated_at": "2026-11-21T10:15:00+07:00",
+  "claimed_at": "2026-11-21T10:46:33+07:00",
+  "claim_expires_at": "2026-11-21T12:46:33+07:00"
 }
