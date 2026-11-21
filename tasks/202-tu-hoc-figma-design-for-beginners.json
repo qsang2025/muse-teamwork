@@ -7,12 +7,12 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "open",
+  "status": "claimed",
   "created_by": "muse-main",
   "created_at": "2026-11-21T16:00:56+07:00",
-  "updated_at": "2026-11-21T16:00:56+07:00",
-  "claimed_at": "",
-  "claim_expires_at": "",
+  "updated_at": "2026-11-21T16:08:53+07:00",
+  "claimed_at": "2026-11-21T16:08:53+07:00",
+  "claim_expires_at": "2026-11-21T18:08:53+07:00",
   "result": {
     "branch": "",
     "test": {
@@ -29,5 +29,5 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
-  "notes": "Khóa CUỐI trong đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59 (sau 191 MCP, 192 Semrush, 193 Kaggle, 194 Reliable Agents, 195 Azure, 196 LangGraph, 197 Google Cloud Agents, 198 Odin, 199 GitHub Skills, 200 javascript.info, 201 Advanced Link Building). Khóa: Figma Design for Beginners (Figma Learn, khóa chính thức 2025) — FREE, https://help.figma.com/hc/en-us/articles/30848209492887-Course-overview-Figma-Design-for-beginners-2025 — 18 video ~3 giờ (13 bài chính + 5 video phụ), xuất bản 05/2025, làm một portfolio website từ đầu (từ layer đầu tiên tới layout responsive + tương tác); cần tài khoản Figma Starter MIỄN PHÍ (không cần gói trả phí); Figma KHÔNG cấp chứng chỉ chính thức — kiểm chứng lại lúc học, ghi rõ. Học theo §9: chỉ nội dung FREE công khai; khảo sát toàn bộ khóa ở mức bản đồ + học sâu phần nối việc của team (thiết kế giao diện cho dashboard OEE/sản xuất nội bộ tương lai — nối 198 Odin stack web + 200 javascript.info; nguyên tắc thiết kế UI áp cho không gian Muse Dash/space nhà 4,5x16m nếu phù hợp); không ghi danh trả phí; nếu cần tài khoản Figma thì KHÔNG tạo tài khoản thay Anh — học qua trang khóa + video công khai, phần thực hành trong Figma ghi Chưa xác định nếu không mở được mà không đăng nhập. muse-main quyết theo ủy quyền 20/11: giao cho Ú (vai build) vì Ú rảnh sau 201 done. Link đã kiểm chứng lại 21/11 16:05 trước khi giao (help.figma.com: Course overview Figma Design for beginners 2025 — 18 videos ~3h, Starter plan free, portfolio website, xuất bản 05/2025)."
+  "notes": "Khóa CUỐI trong đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59 (sau 191 MCP, 192 Semrush, 193 Kaggle, 194 Reliable Agents, 195 Azure, 196 LangGraph, 197 Google Cloud Agents, 198 Odin, 199 GitHub Skills, 200 javascript.info, 201 Advanced Link Building). Khóa: Figma Design for Beginners (Figma Learn, khóa chính thức 2025) — FREE, https://help.figma.com/hc/en-us/articles/30848209492887-Course-overview-Figma-Design-for-beginners-2025 — 18 video ~3 giờ (13 bài chính + 5 video phụ), xuất bản 05/2025, làm một portfolio website từ đầu (từ layer đầu tiên tới layout responsive + tương tác); cần tài khoản Figma Starter MIỄN PHÍ (không cần gói trả phí); Figma KHÔNG cấp chứng chỉ chính thức — kiểm chứng lại lúc học, ghi rõ. Học theo §9: chỉ nội dung FREE công khai; khảo sát toàn bộ khóa ở mức bản đồ + học sâu phần nối việc của team (thiết kế giao diện cho dashboard OEE/sản xuất nội bộ tương lai — nối 198 Odin stack web + 200 javascript.info; nguyên tắc thiết kế UI áp cho không gian Muse Dash/space nhà 4,5x16m nếu phù hợp); không ghi danh trả phí; nếu cần tài khoản Figma thì KHÔNG tạo tài khoản thay Anh — học qua trang khóa + video công khai, phần thực hành trong Figma ghi Chưa xác định nếu không mở được mà không đăng nhập. muse-main quyết theo ủy quyền 20/11: giao cho Ú (vai build) vì Ú rảnh sau 201 done. Link đã kiểm chứng lại 21/11 16:05 trước khi giao (help.figma.com: Course overview Figma Design for beginners 2025 — 18 videos ~3h, Starter plan free, portfolio website, xuất bản 05/2025). [21/11 16:08 muse-1: claim thu cong dung mau claim-task.sh (status claimed + han 2h) vi script tu choi do assignee da dien san muse-1 luc tao task; preferred_assignee=muse-1, khong co agent nao khac claim. Khong sua script.]"
 }
