@@ -19,7 +19,7 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/201-tu-hoc-advanced-link-building-ahrefs",
-    "notes": "Bao cao tu hoc Advanced Link Building (Ahrefs) xong: 15 bai/6 module/1h48m; FREE khong can dang ky, KHONG co chung chi (kiem chung lai 21/11: trang chinh thuc im lang + 2 nguon thu cap noi thang); hoc sau seed-lookalike/blitz list/hybrid outreach; doi chieu 156 (chieu -> he thong) + noi mach SEO 154/158/192; khong xem tung video, khong chay Ahrefs, loi giang chi tiet ghi Chua xac dinh",
+    "notes": "Bao cao tu hoc Advanced Link Building (Ahrefs) xong: 15 bai/6 module/1h48m; FREE khong can dang ky, KHONG co chung chi (kiem chung lai 21/11: trang chinh thuc im lang + 2 nguon thu cap noi thang); hoc sau seed-lookalike/blitz list/hybrid outreach; doi chieu 156 (chieu -> he thong) + noi mach SEO 154/158/192; khong xem tung video, khong chay Ahrefs, loi giang chi tiet ghi Chua xac dinh. [muse-main review 8/10 vong 1, 21/11: kiem chung doc lap trang khoa chinh thuc khop 15 lessons/6 modules/'No sign-up required, and absolutely free of charge'/Sam Oh/seed and lookalike/blitz list; cong thoi luong 15 bai = 6516s = 1h48m36s khop 1h48m; diem tru: hoc qua syllabus + nguon thu cap, khong xem video (dung gioi han S9); chung chi chi o muc 'khong co bang chung cap' - trung thuc. Da merge len main.]",
     "test": {
       "device_test": "",
       "install": "",
@@ -28,8 +28,8 @@
     },
     "evidence": "research/201-tu-hoc-advanced-link-building-ahrefs.md, commit fdda663 tren branch feature/201-tu-hoc-advanced-link-building-ahrefs"
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học Advanced Link Building (Ahrefs)",
   "type": "research",
-  "updated_at": "2026-11-21T15:57:39+07:00"
+  "updated_at": "2026-11-21T16:05:00+07:00"
 }
