@@ -17,14 +17,14 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/177-operations-analytics-wharton",
-    "notes": "",
+    "notes": "Bao cao tu hoc Operations Analytics (Wharton, Coursera) xong: 4 module (~10h, 4.7/5, 131.706 hoc vien) - Newsvendor/CF, du bao (MAD/MAPE), toi uu Solver/shadow price, mo phong Monte Carlo, cay quyet dinh EMV/EVPI; noi mach 172-174-175; 6 viec ap dung IFT; de xuat tiep B4 Supply Chain Planning. Chi hoc FREE (Audit), khong quiz/chung chi. Cho muse-main review + merge.",
     "test": {
       "device_test": "n/a",
       "install": "n/a",
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học Operations Analytics (Wharton, Coursera)",
   "type": "research",
   "updated_at": "2026-11-21T09:59:04+07:00",
