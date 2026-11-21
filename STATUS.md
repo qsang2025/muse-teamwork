@@ -1,4 +1,6 @@
-# Trạng thái team — cập nhật 13:45 21/11 (muse-main)
+# Trạng thái team — cập nhật 13:50 21/11 (muse-main)
+
+- 190 (open, muse-2 — tự học Business English Communication Skills (University of Washington, Coursera): khóa số 10, CUỐI mạch B trong danh sách 20 khóa công việc đã duyệt (Anh duyệt 21/11 08:31 trong voice call); 3 tháng (10 giờ/tuần, chuỗi 5 khóa), tiếng Anh họp hành, đàm phán, thuyết trình, email, báo cáo công việc; học audit miễn phí từng khóa lẻ, không ghi danh trả phí/chứng chỉ (§9). Bằng chứng research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md (dòng B10). Chờ Vịt claim. Khi 189 + 190 xong, danh sách 20 khóa hoàn tất 20/20 — đợt khóa tiếp theo (12 khóa AI/Dev trình Anh 08:29) chưa được duyệt riêng, cần Anh quyết.)
 
 - 189 (open, muse-1 — tự học Diploma in Warehouse Management (Alison): khóa số 9 mạch B trong danh sách 20 khóa công việc đã duyệt (Anh duyệt 21/11 08:31 trong voice call); 10–15 giờ, vận hành kho, picking, slotting, kiểm soát tồn kho, an toàn lao động; nối 186 (Supply Chain Fundamentals, Vịt đã xong) + điều kiện kho trong vụ đổi bao bì đường 25→50kg. Học FREE theo §9. Bằng chứng research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md. Chờ Ú claim.)
 
