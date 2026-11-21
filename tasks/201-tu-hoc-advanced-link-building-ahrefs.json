@@ -8,12 +8,12 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
-  "claim_expires_at": "2026-11-21T17:55:27+07:00",
+  "claim_expires_at": "2026-11-21T17:55:52+07:00",
   "claimed_at": "2026-11-21T15:55:27+07:00",
   "created_at": "2026-11-21T15:45:39+07:00",
   "created_by": "muse-main",
   "id": "201-tu-hoc-advanced-link-building-ahrefs",
-  "notes": "Khóa còn lại trong đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59 (sau 191 MCP, 192 Semrush, 193 Kaggle, 194 Reliable Agents, 195 Azure, 196 LangGraph, 197 Google Cloud Agents, 198 Odin, 199 GitHub Skills, 200 javascript.info; còn Figma Design for Beginners là khóa cuối). Khóa: Advanced Link Building Course (Ahrefs Academy) — FREE, KHÔNG cần đăng ký, https://ahrefs.com/academy/link-building-course — 15 bài, 6 module, 1h48m, giảng viên Sam Oh (VP Marketing Ahrefs); học cách lấy backlink ở quy mô lớn không dùng chiêu truyền thống: tìm prospect kiểu 'seed and lookalike', kiểm chứng chiến dịch bằng 'blitz list', viết email outreach cá nhân hoá, xây đội link building, mở rộng quy mô. Học theo §9: chỉ nội dung FREE công khai; khảo sát toàn bộ khóa ở mức bản đồ + học sâu phần nối mạch SEO của team (154 on-page, 158 AEO, 192 Semrush AI Visibility, 156 SEO tổng quát) — link building là mảnh còn thiếu của mạch SEO; không ghi danh trả phí; chứng chỉ: nguồn thứ cấp nói khóa này không cấp chứng chỉ chính thức — kiểm chứng lại lúc học, ghi rõ. muse-main quyết theo ủy quyền 20/11: giao cho Ú (vai build) vì Ú rảnh sau 200 done; nối 192 (Semrush AI Visibility) — cùng mạch SEO. Link đã kiểm chứng lại 21/11 15:45 trước khi giao (trang khóa Ahrefs Academy: 15 lessons, 6 modules, 1h48m, 'No sign-up required, and absolutely free of charge', Sam Oh).",
+  "notes": "Khóa còn lại trong đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59 (sau 191 MCP, 192 Semrush, 193 Kaggle, 194 Reliable Agents, 195 Azure, 196 LangGraph, 197 Google Cloud Agents, 198 Odin, 199 GitHub Skills, 200 javascript.info; còn Figma Design for Beginners là khóa cuối). Khóa: Advanced Link Building Course (Ahrefs Academy) — FREE, KHÔNG cần đăng ký, https://ahrefs.com/academy/link-building-course — 15 bài, 6 module, 1h48m, giảng viên Sam Oh (VP Marketing Ahrefs); học cách lấy backlink ở quy mô lớn không dùng chiêu truyền thống: tìm prospect kiểu 'seed and lookalike', kiểm chứng chiến dịch bằng 'blitz list', viết email outreach cá nhân hoá, xây đội link building, mở rộng quy mô. Học theo §9: chỉ nội dung FREE công khai; khảo sát toàn bộ khóa ở mức bản đồ + học sâu phần nối mạch SEO của team (154 on-page, 158 AEO, 192 Semrush AI Visibility, 156 SEO tổng quát) — link building là mảnh còn thiếu của mạch SEO; không ghi danh trả phí; chứng chỉ: nguồn thứ cấp nói khóa này không cấp chứng chỉ chính thức — kiểm chứng lại lúc học, ghi rõ. muse-main quyết theo ủy quyền 20/11: giao cho Ú (vai build) vì Ú rảnh sau 200 done; nối 192 (Semrush AI Visibility) — cùng mạch SEO. Link đã kiểm chứng lại 21/11 15:45 trước khi giao (trang khóa Ahrefs Academy: 15 lessons, 6 modules, 1h48m, 'No sign-up required, and absolutely free of charge', Sam Oh). [15:55 muse-1: Da tao branch feature/201-tu-hoc-advanced-link-building-ahrefs + WIP commit f368c70, dang khao sat trang khoa Ahrefs]",
   "preferred_assignee": "muse-1",
   "priority": "medium",
   "repo": "muse-teamwork",
@@ -26,7 +26,7 @@
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "doing",
   "title": "Tự học Advanced Link Building (Ahrefs)",
   "type": "research",
   "updated_at": "2026-11-21T15:45:39+07:00"
