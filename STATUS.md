@@ -1,5 +1,7 @@
 # Trạng thái team — cập nhật 14:10 21/11 (muse-main)
 
+- Quy tắc mới 21/11: PROTOCOL §11 chống báo "xong" ảo (Kerr/Muse Next) + INCIDENTS.md + CORRECTIONS.md — gate bằng chứng khi nộp task, áp dụng từ task tiếp theo.
+
 - 192 (open, muse-2 — tự học AI Visibility Essentials with Semrush (Semrush Academy): ĐÃ GIAO 21/11 14:10, ưu tiên CAO — học xong trước 15/12/2026 vì Semrush Academy chuyển nền tảng mới 16/12, tiến độ chưa xong sẽ reset. Khóa số 2 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59; FREE, đo AI visibility + tối ưu cho LLM + walkthrough AI Visibility Toolkit; nối 154/158/156 (mạch SEO/AEO).)
 
 - 191 (open, muse-1 — tự học MCP Course (Hugging Face, xây cùng Anthropic): ĐÃ GIAO 21/11 14:10. Khóa số 1 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59; FREE, 4 unit ~3–4 giờ/tuần, bản JS/TS, build + deploy MCP server thật; nối 148/125/127/128/130 (mạch AI Agents).)
@@ -170,7 +172,7 @@
 - 112 (done, muse-2 — port forum + build Otofun, đã merge lên main 563e93d, registry 123; review vòng 4 10:45 20/11 score 8/10: validate PASS, device test 7/7 code 0 + install 200 trên điện thoại Anh. Lưu ý: KHÔNG có tìm kiếm từ khóa — XenForo bắt cookie xf_csrf mà runtime vBook không đọc được, đã ghi rõ trong mô tả; nguồn probe 'Otofun Probe' vẫn còn trên máy Anh, Anh tự xóa khi rảnh)
 - 113 (done, muse-1 — build extension HHTQ Vietsub, đã merge lên main 38f97e8, registry 121; device test 8/8 + track embed code 0; Anh báo lỗi Play 08:45, task 116 đang sửa)
 - 114 (done, muse-2 — build extension VOZ Forum (voz.vn), đã merge lên main c0f48f4, registry 124; review vòng 1 15:38 20/11 score 8/10: validate PASS (tự chạy lại), device test 7/7 code 0 + install 200 trên điện thoại Anh. Lưu ý: KHÔNG có tìm kiếm từ khóa — XenForo bắt cookie xf_csrf như Otofun, đã ghi rõ trong mô tả; board live dùng /f/ (47 board), comment/mô tả còn ghi /s/ — sửa ở lần chạm sau)
-- Qsang_vbook main: 171c666 | Registry: 130 nguồn | Validate: PASS
+- Qsang_vbook main: 385884b | Registry: 135 nguồn | Validate: PASS
 - 105 (done, muse-1 — fix TruyenTV sang tvtruyen1.com, review vòng 1 8/10, đã merge lên main 9cc9f0a 20/11 ~00:55; validate PASS 120 nguồn; device test 15/15 code 0 + install 200 trên điện thoại Anh)
 - 110 (done, muse-1 — nghiên cứu port loại extension news từ Darkrai9x, review 9/10, báo cáo research/110-news-port.md đã merge 20/11 00:24; kết luận: ĐỂ SAU — port được về kỹ thuật, chi phí hạ tầng thấp, nhưng chưa có nhu cầu thật + chưa kiểm chứng app điện thoại Anh hỗ trợ type news; bổ sung kiểm chứng muse-main: fork duongden/vbook đã có 3 ext news thật (baikebaidu v2, sohu v3, viblo v6) nên hợp đồng news đã được dùng thật, vẫn cần probe trên máy Anh; site đạt: VnExpress, CafeF, Genk (200); CHỜ Anh: Anh có muốn đọc/nghe tin trong vBook không + khi nào sẵn sàng cài probe news)
 - 111 (done, muse-2 — nghiên cứu port loại extension forum từ Darkrai9x, review 9/10, báo cáo research/111-nghien-cuu-port-loai-extension-forum-tu--forum-port.md đã merge 20/11 00:20; kết luận: NÊN PORT có điều kiện — chỉ port sau khi probe điện thoại Anh xác nhận app hỗ trợ loại forum; chặn duy nhất phía repo là validate.js TYPES thiếu news/forum; site đạt: tinhte.vn, otofun.net.vn (200); voz.vn 403, tangthuvien.vn timeout từ VM — cần phone test; CHỜ Anh: Anh có đọc diễn đàn nào không + khi nào sẵn sàng cài probe)
