@@ -7,7 +7,7 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "review",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-21T10:56:27+07:00",
   "claimed_at": "2026-11-21T11:08:44+07:00",
@@ -19,7 +19,14 @@
       "device_test": "n/a",
       "install": "n/a"
     },
-    "notes": "Báo cáo tự học Food Fraud Training (Alison, Food Guard Academy) tại research/180-food-fraud-training-alison-food-g.md: 8 mục tiêu học tập chính thức, 7 nhóm gian lận GFSI, phân biệt HACCP/VACCP/TACCP theo động cơ, quy trình FFVA 5 bước FSSC + yêu cầu 2.5.4 (v7: ISO 22002-100:2025 điều 16.3), TACCP/PAS 96, khung soát 2.5.4 cho đường/sữa/bao bì 50kg (hiện trạng Chưa xác định), đối chiếu 171+173+176 + checklist FSSC v7. Chỉ học FREE công khai, không đăng ký/Final Assessment/chứng chỉ (§9), không đưa đáp án quiz Food Fraud. Chi tiết module + trạng thái PAS 96 hiện hành ghi Chưa xác định."
+    "notes": "Báo cáo tự học Food Fraud Training (Alison, Food Guard Academy) tại research/180-food-fraud-training-alison-food-g.md: 8 mục tiêu học tập chính thức, 7 nhóm gian lận GFSI, phân biệt HACCP/VACCP/TACCP theo động cơ, quy trình FFVA 5 bước FSSC + yêu cầu 2.5.4 (v7: ISO 22002-100:2025 điều 16.3), TACCP/PAS 96, khung soát 2.5.4 cho đường/sữa/bao bì 50kg (hiện trạng Chưa xác định), đối chiếu 171+173+176 + checklist FSSC v7. Chỉ học FREE công khai, không đăng ký/Final Assessment/chứng chỉ (§9), không đưa đáp án quiz Food Fraud. Chi tiết module + trạng thái PAS 96 hiện hành ghi Chưa xác định.",
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T11:22:00+07:00",
+      "note": "muse-main kiểm chứng độc lập: khóa A4 đúng danh sách 20 đã duyệt (research/171 dòng 12: Food Fraud Training, Alison, Food Guard Academy, 2-3 giờ, link trùng). Trang khóa Alison trực tiếp khớp toàn bộ: 8 mục tiêu học tập khớp từng ý, mô tả 'Food Fraud Prevention and Mitigation', giá 0 EUR, đánh giá 3,3/5 (233 lượt); trang nhà phát hành khớp (Saifeldeen Abdalla + Dr. Helen Onyeaka, Associate Professor of Chemical Engineering, University of Birmingham; 2-3 giờ, 3.201 học viên, 227 lượt thích, Beginner). Đối chiếu chuẩn đúng: 7 nhóm gian lận GFSI (pha loãng/thay thế/che giấu/ghi nhãn sai/tăng cường không phép/làm giả/thị trường xám); VACCP=FSSC 2.5.4, TACCP=FSSC 2.5.3, HACCP=mối nguy không cố ý; v7 đối chiếu ISO 22002-100:2025 điều 16.3 khớp task 171. Trung thực: danh sách module chi tiết ghi Chưa xác định (nằm sau đăng ký), không đưa đáp án quiz Food Fraud, hiện trạng nhà máy để trống chờ Anh. Điểm trừ nhỏ: học qua mục tiêu học tập + mô tả công khai + tài liệu đối chiếu thay vì xem đủ bài giảng (nằm sau đăng ký); trạng thái bản PAS 96 hiện hành ghi Chưa xác định (đúng, chưa kiểm chứng từ BSI)."
+    }
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
@@ -29,5 +36,5 @@
     "muse-main kiểm tra + merge, task sang done"
   ],
   "notes": "Khóa số 4, mạch A (An toàn thực phẩm & chất lượng), trong danh sách 20 khóa công việc Anh duyệt 21/11 08:31 trong voice call. Bằng chứng: research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main (dòng A4). Khóa: Food Fraud Training, Alison (Food Guard Academy), 2–3 giờ, https://alison.com/course/food-fraud-training — TACCP + VACCP, đánh giá vulnerability gian lận nguyên liệu đường/sữa — đúng vụ bao bì đường 50kg. Học theo §9: chỉ nội dung FREE công khai, không đăng ký trả phí/chứng chỉ, không làm Final Assessment; ghi Chưa xác định khi không xem được nội dung sau đăng ký. muse-main quyết theo ủy quyền 20/11: giao tiếp mạch A sau khi 176 merge xong.\n[21/11 11:10 muse-1: Đã claim + tạo branch, đang học Food Fraud Training qua trang chính thức Alison + đối chiếu TACCP/VACCP/FSSC 2.5.4; báo cáo research/180-food-fraud-training-alison-food-g.md đang viết, không đưa đáp án quiz Food Fraud.]",
-  "updated_at": "2026-11-21T11:11:27+07:00"
+  "updated_at": "2026-11-21T11:22:00+07:00"
 }
