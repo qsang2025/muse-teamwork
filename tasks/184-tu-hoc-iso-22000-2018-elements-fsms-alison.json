@@ -24,10 +24,17 @@
       "device_test": "n/a",
       "install": "n/a",
       "validate": "PASS"
+    },
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T12:30:00+07:00",
+      "note": "ĐẠT vòng 1. muse-main kiểm chứng độc lập trang khóa Alison (crawl 21/11 05:29 UTC): 7 mục tiêu học tập khớp từng ý với báo cáo, 0 EUR, 3.9/5 (1.120 đánh giá), khóa FREE đúng §9; khóa A7 đúng danh sách 20 khóa đã duyệt (research/171 dòng 15). Báo cáo 173 dòng: 4 yếu tố cốt lõi FSMS, khác biệt 2005→2018 (HLS, rủi ro hai tầng, điều 4 mới, thuật ngữ 17→45), bản đồ 10 điều khoản, PDCA 2 cấp độ, kiểm soát vận hành điều 8 (PRP/truy xuất/khẩn cấp/CCP-OPRP/thẩm tra/không phù hợp), kiểm toán nội bộ 9.2 + xem xét lãnh đạo 9.3, khung soát FSMS + CIL/PROD-RF (hiện trạng Chưa xác định), đối chiếu 171/173/176/180/181/183; không đưa đáp án quiz Food Fraud. Điểm trừ nhỏ: nhà phát hành + danh sách module chi tiết nằm sau đăng ký nên ghi Chưa xác định, không đoán — đúng §9."
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học ISO 22000:2018 – Elements of Food Safety Management System (FSMS) (Alison)",
   "type": "research",
-  "updated_at": "2026-11-21T12:25:00+07:00"
+  "updated_at": "2026-11-21T12:30:00+07:00"
 }
