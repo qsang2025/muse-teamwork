@@ -15,10 +15,15 @@
   "preferred_assignee": "muse-2",
   "priority": "medium",
   "repo": "muse-teamwork",
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học Business English Communication Skills (Coursera)",
   "type": "research",
   "updated_at": "2026-11-21T13:53:34+07:00",
   "claimed_at": "2026-11-21T13:53:34+07:00",
-  "claim_expires_at": "2026-11-21T15:53:34+07:00"
+  "claim_expires_at": "2026-11-21T15:53:34+07:00",
+  "result": {
+    "branch": "feature/190-business-english-communication-skills",
+    "notes": "Bao cao tu hoc xong: research/190-business-english-communication-skills.md (123 dong). Chuoi 5 khoa UW Coursera, audit mien phi 4 khoa le, Capstone chi hoc syllabus (audit Chua xac dinh); kem 3 mau email + 6 hanh dong ap dung cho Anh. B10 - khoa cuoi mach B; khi 189 xong thi 20/20 khoa cong viec hoan tat.",
+    "test": {}
+  }
 }
