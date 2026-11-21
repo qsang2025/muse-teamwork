@@ -1,6 +1,6 @@
 {
   "assignee": "muse-1",
-  "branch": "",
+  "branch": "feature/184-iso-22000-2018-elements-fsms-alison",
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
