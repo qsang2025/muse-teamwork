@@ -68,6 +68,7 @@ task = {
     "status": "open",
     "created_by": creator,
     "created_at": now,
+    "updated_at": now,
     "claimed_at": "",
     "claim_expires_at": "",
     "result": {"branch": "", "test": {"validate": "", "device_test": "", "install": ""}, "notes": ""},

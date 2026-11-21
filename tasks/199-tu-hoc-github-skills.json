@@ -4,14 +4,14 @@
   "type": "research",
   "repo": "muse-teamwork",
   "branch": "",
-  "assignee": "muse-2",
+  "assignee": "",
   "preferred_assignee": "muse-2",
   "priority": "medium",
-  "status": "claimed",
+  "status": "open",
   "created_by": "muse-main",
   "created_at": "2026-11-21T15:02:02+07:00",
-  "claimed_at": "2026-11-21T15:03:19+07:00",
-  "claim_expires_at": "2026-11-21T17:03:19+07:00",
+  "claimed_at": "",
+  "claim_expires_at": "",
   "result": {
     "branch": "",
     "test": {
@@ -28,5 +28,6 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
-  "notes": "Khóa số 9 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59 (sau 191 MCP, 192 Semrush, 193 Kaggle, 194 Reliable Agents, 195 Azure, 196 LangGraph, 197 Google Cloud Agents). Khóa: GitHub Skills, FREE, https://skills.github.com/ — khóa tương tác ngắn chạy ngay trong repo GitHub, chấm tự động bằng GitHub Actions: Introduction to GitHub, Communicate using Markdown, GitHub Pages, Review Pull Requests, Introduction to Git, Resolve Merge Conflicts, Release-based Workflow, Connect the Dots, GitHub Actions (Hello World, Test with Actions), Secure Code Game, Code with Codespaces, + 4 khóa GitHub Copilot (trong đó có Integrate MCP with GitHub Copilot — nối 191). Học theo §9: chỉ nội dung FREE công khai; học qua catalog + README từng khóa công khai (repo skills/*), KHÔNG tạo repo/khóa học trên tài khoản qsang2025 thay Anh (Anh tự mở khóa nếu muốn làm thật), ghi Chưa xác định phần hands-on; không ghi danh trả phí/chứng chỉ. muse-main quyết theo ủy quyền 20/11: giao cho Vịt (vai research) vì Vịt rảnh sau 197 done; link đã kiểm chứng lại 21/11 15:02 trước khi giao (docs.github.com + github.blog: free interactive courses, built into GitHub, automated feedback)."
+  "notes": "Khóa số 9 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59 (sau 191 MCP, 192 Semrush, 193 Kaggle, 194 Reliable Agents, 195 Azure, 196 LangGraph, 197 Google Cloud Agents). Khóa: GitHub Skills, FREE, https://skills.github.com/ — khóa tương tác ngắn chạy ngay trong repo GitHub, chấm tự động bằng GitHub Actions: Introduction to GitHub, Communicate using Markdown, GitHub Pages, Review Pull Requests, Introduction to Git, Resolve Merge Conflicts, Release-based Workflow, Connect the Dots, GitHub Actions (Hello World, Test with Actions), Secure Code Game, Code with Codespaces, + 4 khóa GitHub Copilot (trong đó có Integrate MCP with GitHub Copilot — nối 191). Học theo §9: chỉ nội dung FREE công khai; học qua catalog + README từng khóa công khai (repo skills/*), KHÔNG tạo repo/khóa học trên tài khoản qsang2025 thay Anh (Anh tự mở khóa nếu muốn làm thật), ghi Chưa xác định phần hands-on; không ghi danh trả phí/chứng chỉ. muse-main quyết theo ủy quyền 20/11: giao cho Vịt (vai research) vì Vịt rảnh sau 197 done; link đã kiểm chứng lại 21/11 15:02 trước khi giao (docs.github.com + github.blog: free interactive courses, built into GitHub, automated feedback).",
+  "updated_at": "2026-11-21T15:02:02+07:00"
 }
