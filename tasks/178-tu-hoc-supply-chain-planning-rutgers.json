@@ -8,6 +8,8 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
+  "claimed_at": "2026-11-21T10:41:00+07:00",
+  "claim_expires_at": "2026-11-21T12:41:00+07:00",
   "created_at": "2026-11-21T10:15:00+07:00",
   "created_by": "muse-main",
   "id": "178-tu-hoc-supply-chain-planning-rutgers",
@@ -24,8 +26,8 @@
       "validate": ""
     }
   },
-  "status": "open",
+  "status": "claimed",
   "title": "Tự học Supply Chain Planning (Rutgers, Coursera)",
   "type": "research",
-  "updated_at": "2026-11-21T10:15:00+07:00"
+  "updated_at": "2026-11-21T10:41:00+07:00"
 }
