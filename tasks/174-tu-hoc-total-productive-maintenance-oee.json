@@ -17,14 +17,14 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/174-total-productive-maintenance-oee",
-    "notes": "",
+    "notes": "Da hoc xong khoa TPM and OEE (iCompetent, 7 module, 36 bai, 7h12m, free): bao cao research/174-total-productive-maintenance-oee.md — 6 ton that lon, tinh dung OEE (cong thuc rut gon doi chieu cheo) + TEEP, benchmark 85% (F&B dien hinh 55-70%), 8 tru cot TPM tren nen 5S, 7 buoc bao tri tu chu Jishu Hozen, ke hoach pilot TPM cho 1 may day chuyen IFT + 6 viec lam ngay. Khong tao tai khoan ghi danh, khong xem video trong khoa, khong lam quiz — hoc qua syllabus cong khai + tai lieu TPM/OEE chuan, ghi ro gioi han trong bao cao. De xuat tiep theo: B2 Lean Six Sigma Black Belt, roi B5 Operations Analytics.",
     "test": {
       "device_test": "n/a",
       "install": "n/a",
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học Total Productive Maintenance (TPM) and OEE (iCompetent)",
   "type": "research",
   "updated_at": "2026-11-21T08:56:00+07:00",
