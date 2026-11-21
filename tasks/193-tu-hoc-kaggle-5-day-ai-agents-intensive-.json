@@ -7,19 +7,21 @@
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "high",
-  "status": "claimed",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-21T14:24:17+07:00",
   "claimed_at": "2026-11-21T14:28:21+07:00",
   "claim_expires_at": "2026-11-21T16:28:21+07:00",
   "result": {
-    "branch": "",
+    "branch": "feature/193-tu-hoc-kaggle-5-day-ai-agents-intensive-",
     "test": {
       "validate": "",
       "device_test": "",
-      "install": ""
+      "install": "",
+      "evidence": "research/193-kaggle-5-day-ai-agents-intensive.md, commit b6cf8a6"
     },
-    "notes": ""
+    "notes": "Bao cao tu hoc xong: 5 whitepaper + 10 codelab Kaggle/Google ADK (Gemini). Noi 191 (MCP), 148/125/127/128/130. Khong tao tai khoan Kaggle, khong chay notebook, khong mua gi, khong hua chung chi. De xuat bo sung checklist Glassbox khi cham review (de muse-main quyet).",
+    "evidence": "research/193-kaggle-5-day-ai-agents-intensive.md, commit b6cf8a6"
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
