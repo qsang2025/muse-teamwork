@@ -7,19 +7,19 @@
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "medium",
-  "status": "claimed",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-21T11:24:18+07:00",
   "claimed_at": "2026-11-21T11:38:25+07:00",
   "claim_expires_at": "2026-11-21T13:38:25+07:00",
   "result": {
-    "branch": "",
+    "branch": "research/182-food-packaging-nptel",
     "test": {
       "validate": "",
       "device_test": "",
       "install": ""
     },
-    "notes": ""
+    "notes": "DONE: báo cáo research/182-food-packaging-technology-nptel.md — học FREE công khai qua syllabus + 8 transcript (Lec 1,7,10,11,14,17,29,L33,L37); 5 module: vật liệu, hệ thống bao bì, kiểm tra vật liệu, MAP/vô trùng, máy đóng gói; 6 hành động cho IFT (trọng tâm vụ đường 25→50kg: nghiệm thu 4 chỉ tiêu kéo MD/CD, mối hàn, đâm thủng, WVTR + thử rơi/nén, tính lại pallet). Không ghi danh/thi/chứng chỉ. Chưa xác định: tổng số bài chính xác, assignment sau đăng nhập, 2/4 tiêu chí hệ thống vô trùng."
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
