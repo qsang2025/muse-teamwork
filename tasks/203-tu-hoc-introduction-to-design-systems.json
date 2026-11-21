@@ -7,10 +7,10 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "review",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-21T16:19:40+07:00",
-  "updated_at": "2026-11-21T17:26:15+07:00",
+  "updated_at": "2026-11-21T18:43:24+07:00",
   "claimed_at": "2026-11-21T16:25:17+07:00",
   "claim_expires_at": "2026-11-21T18:25:28+07:00",
   "result": {
@@ -22,7 +22,14 @@
       "evidence": "research/203-tu-hoc-introduction-to-design-systems.md, commit 59dc45b tren branch feature/203-tu-hoc-introduction-to-design-systems"
     },
     "notes": "Bao cao tu hoc Introduction to Design Systems xong: 4 bai viet + 7 video + 1 Community file, ~2h theo Overview / 200 phut theo trang section (doi chieu ro: Update 1 tokens 30m dua tong len 200), FREE doc cong khai khong can dang nhap, KHONG co chung chi chinh thuc (kiem chung lai 21/11: trang chinh thuc im lang + Untitled UI/Coursya noi thang); hoc sau audit/principles/foundations/atomic/naming/tokens 3 tang/versioning; doi chieu 202 (thao tac -> he thong) + 167 (nguyen tac -> he thong), nang cap checklist dashboard OEE; khong tao tai khoan Figma, khong thuc hanh trong editor, thoi luong tung video + noi dung Community file ghi Chua xac dinh.",
-    "evidence": "research/203-tu-hoc-introduction-to-design-systems.md, commit 59dc45b tren branch feature/203-tu-hoc-introduction-to-design-systems"
+    "evidence": "research/203-tu-hoc-introduction-to-design-systems.md, commit 59dc45b tren branch feature/203-tu-hoc-introduction-to-design-systems",
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T18:43:24+07:00",
+      "note": "Dat (8/10). muse-main kiem chung doc lap 21/11: trang Overview Figma Learn khop \"4 written lessons (+ 7 videos, 1 Community file)\", \"Approximately 2 hours\", 4 ket qua hoc tap, muc luc gom atomic design, dayToggle, actionPresentationCard, daySelector, tokens/variables/modes; trang section khop \"6 chapters, 200 minutes, Beginner friendly\" + thoi luong tung bai 10/45/40/45/30/30 = 200 phut; Untitled UI khop FREE, ~2h, Intermediate, \"Figma has no official certification\"; Lesson 1/2/4 khop 4 phan principles/foundations/documentation/processes, 7 pha quy trinh, ket \"marathon, not a sprint\", case Habitz/Kai. Quy dao sach, so lieu khop nguon goc. Diem tru: bai Update 1 chua doc toan van, thoi luong tung video + noi dung Community file ghi Chua xac dinh, khong thuc hanh trong editor (dung gioi han §9). Review 8/10 xac dinh luc 17:26-17:30 tu ban nop cua Ú; doi tuong review co cau truc duoc bo sung luc merge vi worker dung o buoc cham review do he thong gan co rui ro thuc thi tren branch (Anh duyet cho merge 18:42)."
+    }
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
