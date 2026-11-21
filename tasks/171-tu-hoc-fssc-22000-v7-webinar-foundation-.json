@@ -7,20 +7,20 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "doing",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-21T08:32:00+07:00",
   "updated_at": "2026-11-21T08:32:00+07:00",
   "claimed_at": "2026-11-21T08:35:30+07:00",
   "claim_expires_at": "2026-11-21T10:35:45+07:00",
   "result": {
-    "branch": "",
+    "branch": "feature/171-fssc-22000-v7-webinar-foundation-fssc",
     "test": {
-      "validate": "",
-      "device_test": "",
-      "install": ""
+      "validate": "PASS",
+      "device_test": "n/a",
+      "install": "n/a"
     },
-    "notes": ""
+    "notes": "Bao cao research/171-fssc-22000-v7-webinar-foundation-fssc.md (webinar chinh chu 06/05/2026, Mulholland+Matthee): 3 tru cot v7, PRP 2 lop ISO 22002-100+22002-1 cho nha may sua, GFSI v2024 da cong nhan 11/11/2026, SDG/FLW 2.5.16 do duoc + 2.5.13(g) Save Food Packaging, 2.5.2 artwork + 2.5.9 changeover cho Packaging, upgrade audit toan bo 01/05/2027-30/04/2028; doi chieu checklist FSSC v7 cua Anh (Food Fraud/Allergen/FLW), khong dua dap an quiz; chi hoc FREE cong khai qua trang chinh thuc, khong dang ky/xem ghi hinh/mua ISO ban quyen."
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
