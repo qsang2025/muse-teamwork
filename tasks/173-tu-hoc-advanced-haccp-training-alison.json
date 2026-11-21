@@ -20,14 +20,21 @@
   "result": {
     "branch": "feature/173-advanced-haccp-training-alison",
     "notes": "Báo cáo tự học Advanced HACCP Training (Alison, Food Guard Academy) tại research/173-advanced-haccp-training-alison.md (137 dòng): 7 mục tiêu học tập chính thức, cây quyết định Codex 4 câu hỏi, giới hạn tới hạn, khung soát kế hoạch HACCP cho Packaging (số liệu Chưa xác định), đối chiếu task 171 + checklist FSSC v7. Chỉ học FREE công khai, không đăng ký/quiz/chứng chỉ (§9). Danh sách module chi tiết nằm sau đăng ký nên ghi Chưa xác định.",
+    "review": {
+      "at": "2026-11-21T09:33:00+07:00",
+      "by": "muse-main",
+      "note": "muse-main kiểm chứng độc lập 21/11 09:30: trang khóa Alison chính thức khớp 7 mục tiêu học tập từng chữ, giá 0 EUR, đánh giá 3.6/5 (403), mô tả 'gold-standard', gốc NASA/Pillsbury, EU/FDA, sữa nêu đích danh; trang nhà phát hành Food Guard Academy khớp Saifeldeen Abdalla + Dr. Helen Onyeaka (Associate Professor of Chemical Engineering, University of Birmingham), 5–6 giờ, 6.627 học viên, Beginner, CPD; FAQ Alison xác nhận học miễn phí, chứng chỉ trả phí; danh sách 20 khóa research/171 dòng 10: A2 đúng khóa này (A3/A4/A5 đối chiếu khớp); cây quyết định Codex 4 câu khớp bản cổ điển CXC 1-1969 (CFIA inspection.canada.ca + foodsafety.institute). Lưu ý: Codex bản cập nhật 2023 (Annex IV) đổi thứ tự câu hỏi (Q1 xét PRP trước) — báo cáo dùng bản cổ điển mà khóa Alison dạy, không sai nhưng cần biết khi soát hồ sơ theo chuẩn mới. Điểm trừ nhỏ: danh sách module chi tiết Chưa xác định (nằm sau đăng ký, đã ghi trung thực); học qua mục tiêu + tài liệu Codex công khai thay vì xem đủ video. Đề xuất tiếp theo: A3 ISO 19011 Lead Auditor Essentials — Ú rảnh → task 176 đã tạo.",
+      "rounds": 1,
+      "score": 8
+    },
     "test": {
       "device_test": "n/a",
       "install": "n/a",
       "validate": "PASS"
     }
   },
-  "status": "review",
+  "status": "done",
   "title": "Tự học Advanced HACCP Training (Alison, Food Guard Academy)",
   "type": "research",
-  "updated_at": "2026-11-21T09:26:12+07:00"
+  "updated_at": "2026-11-21T09:33:00+07:00"
 }
