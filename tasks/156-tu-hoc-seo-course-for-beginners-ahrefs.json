@@ -8,29 +8,29 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
+  "claim_expires_at": "2026-11-21T04:08:34+07:00",
+  "claimed_at": "2026-11-21T02:08:34+07:00",
   "created_at": "2026-11-21T01:50:00+07:00",
   "created_by": "muse-main",
   "id": "156-tu-hoc-seo-course-for-beginners-ahrefs",
-  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Vịt rảnh sau khi task 154 merge xong, không còn task mở). Khóa SEO Course for Beginners (Ahrefs Academy) — khóa số 19 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch SEO sau 154 (on-page kỹ thuật Semrush) và 155 (Google SEO Fundamentals, Ú đang làm): khóa Ahrefs dạy SEO nền tảng từ góc công cụ Ahrefs (keyword research, on-page, link building, technical) — đối chiếu 3 góc Semrush/Google/Ahrefs xem chỗ nào đồng thuận, chỗ nào khác nhau, và đối chiếu với checklist on-page 4 điểm + ghi chú GEO vừa đưa vào skill ở 154. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/156-seo-course-for-beginners-ahrefs.md, review muse-main chấm /10 như task research khác. [21/11 02:28 muse-main: review 8/10 vong 1, DA MERGE len main 43054a4 (research/156-seo-course-for-beginners-ahrefs.md, 131 dong). Kiem chung doc lap trang Ahrefs Academy khop bao cao. Sua 1 cho loi thoi trong bao cao (155 'U dang lam' -> da merge 21/11). De xuat 8.1 chua duyet; 8.2 dong y giu nguyen checklist + GEO note; 8.4 AEO Ahrefs ngoai danh sach - cho Anh duyet. Vit ranh -> task 159 Google Ads Search Certification (Google Skillshop) da tao - khoa so 21, noi mach sau 156.]",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Vịt rảnh sau khi task 154 merge xong, không còn task mở). Khóa SEO Course for Beginners (Ahrefs Academy) — khóa số 19 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch SEO sau 154 (on-page kỹ thuật Semrush) và 155 (Google SEO Fundamentals, Ú đang làm): khóa Ahrefs dạy SEO nền tảng từ góc công cụ Ahrefs (keyword research, on-page, link building, technical) — đối chiếu 3 góc Semrush/Google/Ahrefs xem chỗ nào đồng thuận, chỗ nào khác nhau, và đối chiếu với checklist on-page 4 điểm + ghi chú GEO vừa đưa vào skill ở 154. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy lab/API tốn phí. Báo cáo viết vào research/156-seo-course-for-beginners-ahrefs.md, review muse-main chấm /10 như task research khác. [21/11 02:28 muse-main: review 8/10 vong 1, DA MERGE len main 43054a4 (research/156-seo-course-for-beginners-ahrefs.md, 131 dong). Kiem chung doc lap trang Ahrefs Academy khop bao cao. Sua 1 cho loi thoi trong bao cao (155 'U dang lam' -> da merge 21/11). De xuat 8.1 chua duyet; 8.2 dong y giu nguyen checklist + GEO note; 8.4 AEO Ahrefs ngoai danh sach - cho Anh duyet. Vit ranh -> task 159 Google Ads Search Certification (Google Skillshop) da tao - khoa so 21, noi mach sau 156.]\n\n[Dashboard #22 — Anh, 21/11 20:13] DUYỆT.",
   "preferred_assignee": "muse-2",
   "priority": "medium",
   "repo": "muse-teamwork",
-  "status": "done",
-  "title": "Tự học: SEO Course for Beginners (Ahrefs Academy)",
-  "type": "research",
-  "updated_at": "2026-11-21T02:28:00+07:00",
-  "claimed_at": "2026-11-21T02:08:34+07:00",
-  "claim_expires_at": "2026-11-21T04:08:34+07:00",
   "result": {
     "branch": "feature/156-tu-hoc-seo-course-for-beginners-ahrefs",
     "notes": "Bao cao tu hoc SEO Course for Beginners (Ahrefs Academy): 14 bai/5 module/2h, Sam Oh, FREE hoan toan khong can dang ky. Doi chieu 3 goc Semrush(154)/Google(155)/Ahrefs: dong thuan intent la trung tam, title/meta la loi hua, 1 trang 1 tu khoa; Ahrefs sau nhat ve keyword research (5 tieu chi, business potential 0-3, khung 3 C) va link building (5 bai, prospecting->vetting->outreach, HARO/guest blogging/Skyscraper); khong co AI Search/GEO trong khoa (Ahrefs tach rieng khoa AEO, ngoai danh sach 32, can duyet moi hoc). Checklist on-page 4 diem + ghi chu GEO trong skill dung vung, khong can sua. Gioi han: video goc 2021 (HARO doi chu 2 lan, dong 09/12/2024 roi chay lai 22/04/2025), khong nhac E-E-A-T, khong co bai tap cham diem. De xuat: them thang business potential 0-3 vao de xuat tu khoa 153/155 (can chi Bep duyet); AEO la ung vien khoa tiep theo trong mach SEO (can duyet bo sung). Bao cao: research/156-seo-course-for-beginners-ahrefs.md",
-    "test": {},
     "review": {
-      "score": 8,
-      "rounds": 1,
-      "by": "muse-main",
       "at": "2026-11-21T02:28:00+07:00",
-      "note": "Dat (7-8). Bao cao 131 dong: du 14 bai/5 module, doi chieu 3 goc 154/155/156 co bang tong hop, gioi han ghi trung thuc (video goc 2021, HARO doi chu, khong co AI Search/E-E-A-T, hoc qua tom tat transcript chu khong xem tung phut video, khong co bai tap cham diem). De xuat co dieu kien, khong tu sua skill, khong tu tao task AEO ngoai danh sach. muse-main kiem chung doc lap: trang Ahrefs Academy chinh thuc khop bao cao (14 bai, 5 module, 2h00, khong can dang ky, mien phi; Sam Oh VP Marketing; AEO Course 12 bai 1h26, Advanced Link Building 15 bai 1h48, Blogging for Business 40 bai 4h56); khoa so 19 dung danh sach 32 (research/140). Diem tru nho: nguon doi chieu ghi 155 'U dang lam' da loi thoi luc merge (155 merge 02:05) - muse-main da sua. De xuat 8.1 (thang business potential 0-3) CHUA duyet - de danh cung de xuat tu khoa 153/155 o lan cham skill toi; 8.2 dong y giu nguyen checklist 4 diem + ghi chu GEO; 8.4 AEO (Ahrefs) ngoai danh sach 32 - khong tu hoc, cho Anh duyet bo sung."
-    }
-  }
+      "by": "muse-main",
+      "note": "Dat (7-8). Bao cao 131 dong: du 14 bai/5 module, doi chieu 3 goc 154/155/156 co bang tong hop, gioi han ghi trung thuc (video goc 2021, HARO doi chu, khong co AI Search/E-E-A-T, hoc qua tom tat transcript chu khong xem tung phut video, khong co bai tap cham diem). De xuat co dieu kien, khong tu sua skill, khong tu tao task AEO ngoai danh sach. muse-main kiem chung doc lap: trang Ahrefs Academy chinh thuc khop bao cao (14 bai, 5 module, 2h00, khong can dang ky, mien phi; Sam Oh VP Marketing; AEO Course 12 bai 1h26, Advanced Link Building 15 bai 1h48, Blogging for Business 40 bai 4h56); khoa so 19 dung danh sach 32 (research/140). Diem tru nho: nguon doi chieu ghi 155 'U dang lam' da loi thoi luc merge (155 merge 02:05) - muse-main da sua. De xuat 8.1 (thang business potential 0-3) CHUA duyet - de danh cung de xuat tu khoa 153/155 o lan cham skill toi; 8.2 dong y giu nguyen checklist 4 diem + ghi chu GEO; 8.4 AEO (Ahrefs) ngoai danh sach 32 - khong tu hoc, cho Anh duyet bo sung.",
+      "rounds": 1,
+      "score": 8
+    },
+    "test": {}
+  },
+  "status": "done",
+  "title": "Tự học: SEO Course for Beginners (Ahrefs Academy)",
+  "type": "research",
+  "updated_at": "2026-11-21T02:28:00+07:00"
 }

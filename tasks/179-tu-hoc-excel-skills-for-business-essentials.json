@@ -8,33 +8,33 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
+  "claim_expires_at": "2026-11-21T13:05:00+07:00",
+  "claimed_at": "2026-11-21T11:05:00+07:00",
   "created_at": "2026-11-21T10:52:00+07:00",
   "created_by": "muse-main",
   "id": "179-tu-hoc-excel-skills-for-business-essentials",
-  "notes": "muse-main tạo theo ủy quyền 20/11 (§10a: Vịt rảnh sau khi 178 merge xong; Anh duyệt danh sách 20 khóa công việc mới 21/11 08:31 trong voice call; giao tiếp xen kẽ 2 mạch — 176 mạch A do Ú làm, 178 mạch B do Vịt làm xong). Khóa Excel Skills for Business: Essentials — Macquarie University, Coursera, ~6 tuần (3–5 giờ/tuần), khóa 1 trong chuỗi 4 khóa Excel Skills for Business — khóa số 7 mạch B trong danh sách 20 khóa công việc đã duyệt; bằng chứng trong research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nội dung: công thức, hàm, dashboard — nâng tay nghề Excel để chạy các mô hình trong báo cáo 177 (dự báo SES, Solver, mô phỏng, cây quyết định) và báo cáo 178 (so sánh phương pháp dự báo MAD/MAPE/tracking signal, kế hoạch tổng hợp, tồn kho an toàn) nhanh hơn, phục vụ báo cáo OEE và theo dõi sản lượng/ca kíp. Link: https://www.coursera.org/specializations/excel. Lưu ý: đây là khóa tiếp theo theo đề xuất trong báo cáo 177 và báo cáo 178 (sau B4); sau B7: B8 Supply Chain Fundamentals (MITx, edX) là khóa dự phòng trùng một phần với B4 — chỉ học sau B7 nếu cần đi sâu, không phải khóa tiếp theo mặc định. Delegation: giao Vịt học + viết báo cáo; muse-main giữ review + merge. Quy tắc tự học §9: chỉ học nội dung FREE công khai (Coursera chế độ Audit — xem video + tài liệu miễn phí, không làm bài chấm điểm, không lấy chứng chỉ); không đăng ký trả phí/chứng chỉ. Báo cáo viết vào research/179-excel-skills-for-business-essentials.md, review muse-main chấm /10 như task research khác.\n[21/11 11:25 muse-2: Đã học xong qua 3 lớp nguồn (trang Coursera, syllabus Class Central/MOOC-list, tài liệu Excel chuẩn); báo cáo research/179-excel-skills-for-business-essentials.md: 6 module + giới hạn trung thực (IF/VLOOKUP/PivotTable/Solver thuộc khóa sau, không phải Essentials).]",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10a: Vịt rảnh sau khi 178 merge xong; Anh duyệt danh sách 20 khóa công việc mới 21/11 08:31 trong voice call; giao tiếp xen kẽ 2 mạch — 176 mạch A do Ú làm, 178 mạch B do Vịt làm xong). Khóa Excel Skills for Business: Essentials — Macquarie University, Coursera, ~6 tuần (3–5 giờ/tuần), khóa 1 trong chuỗi 4 khóa Excel Skills for Business — khóa số 7 mạch B trong danh sách 20 khóa công việc đã duyệt; bằng chứng trong research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main — KHÔNG cần kiểm chứng lại từ đầu. Nội dung: công thức, hàm, dashboard — nâng tay nghề Excel để chạy các mô hình trong báo cáo 177 (dự báo SES, Solver, mô phỏng, cây quyết định) và báo cáo 178 (so sánh phương pháp dự báo MAD/MAPE/tracking signal, kế hoạch tổng hợp, tồn kho an toàn) nhanh hơn, phục vụ báo cáo OEE và theo dõi sản lượng/ca kíp. Link: https://www.coursera.org/specializations/excel. Lưu ý: đây là khóa tiếp theo theo đề xuất trong báo cáo 177 và báo cáo 178 (sau B4); sau B7: B8 Supply Chain Fundamentals (MITx, edX) là khóa dự phòng trùng một phần với B4 — chỉ học sau B7 nếu cần đi sâu, không phải khóa tiếp theo mặc định. Delegation: giao Vịt học + viết báo cáo; muse-main giữ review + merge. Quy tắc tự học §9: chỉ học nội dung FREE công khai (Coursera chế độ Audit — xem video + tài liệu miễn phí, không làm bài chấm điểm, không lấy chứng chỉ); không đăng ký trả phí/chứng chỉ. Báo cáo viết vào research/179-excel-skills-for-business-essentials.md, review muse-main chấm /10 như task research khác.\n[21/11 11:25 muse-2: Đã học xong qua 3 lớp nguồn (trang Coursera, syllabus Class Central/MOOC-list, tài liệu Excel chuẩn); báo cáo research/179-excel-skills-for-business-essentials.md: 6 module + giới hạn trung thực (IF/VLOOKUP/PivotTable/Solver thuộc khóa sau, không phải Essentials).]\n\n[Dashboard #18 — Anh, 21/11 20:13] DUYỆT.",
   "preferred_assignee": "muse-2",
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/179-excel-skills-for-business-essentials",
     "notes": "Bao cao tu hoc xong: Excel Skills for Business Essentials (Macquarie, Coursera), 6 module + Final Assessment, 4,9/5 (51.309 danh gia). Bao cao research/179-excel-skills-for-business-essentials.md: cong thuc/tham chieu tuyet doi, dinh dang, Sort/Filter/Conditional Formatting, in an, bieu do; vi du OEE 68,6% va mo hinh SES 3 cot alpha noi bao cao 177/178. Gioi han trung thuc: IF/VLOOKUP/PivotTable/Solver/Data Table thuoc Intermediate I/II/Advanced, khong phai Essentials. Khong dang ky tra phi/chung chi, khong lam Final Assessment.",
+    "review": {
+      "at": "2026-11-21T11:20:00+07:00",
+      "by": "muse-main",
+      "note": "muse-main kiểm chứng độc lập: khóa B7 đúng danh sách 20 đã duyệt (research/171 dòng 30: Excel Skills for Business: Essentials, Macquarie, Coursera, ~6 tuần, link trùng). Class Central/Coursera khớp báo cáo (4,9/5 với 51.309 đánh giá; giảng viên Nicky Bull, Yvonne Breyer, Prashan S. M. Karunaratne; khóa đầu chuỗi 4 khóa; mô tả 'master the fundamental capabilities of Microsoft Excel'; cấu trúc 6 tuần). Tự tính lại ví dụ OEE khớp: 420/480=87,5%, 8400/10500=80,0%, (8400-168)/8400=98,0%, OEE=68,6% — đúng dải 55-70% báo cáo 174. Giới hạn trung thực tốt: IF/VLOOKUP/PivotTable/Solver/Data Table ghi rõ thuộc Intermediate I/II/Advanced, không phải Essentials; nút Audit chưa kiểm chứng được (ghi Chưa xác định); FAQ 'cannot take this course for free' được giải thích đúng là cho lộ trình chứng chỉ cả chuyên ngành. Điểm trừ nhỏ: học qua trang khóa + syllabus công khai + tài liệu chuẩn thay vì xem đủ video bài giảng (nằm sau ghi danh, đã ghi rõ giới hạn).",
+      "rounds": 1,
+      "score": 8
+    },
     "test": {
       "device_test": "n/a",
       "install": "n/a",
       "validate": "n/a (research task, không có extension)"
-    },
-    "review": {
-      "score": 8,
-      "rounds": 1,
-      "by": "muse-main",
-      "at": "2026-11-21T11:20:00+07:00",
-      "note": "muse-main kiểm chứng độc lập: khóa B7 đúng danh sách 20 đã duyệt (research/171 dòng 30: Excel Skills for Business: Essentials, Macquarie, Coursera, ~6 tuần, link trùng). Class Central/Coursera khớp báo cáo (4,9/5 với 51.309 đánh giá; giảng viên Nicky Bull, Yvonne Breyer, Prashan S. M. Karunaratne; khóa đầu chuỗi 4 khóa; mô tả 'master the fundamental capabilities of Microsoft Excel'; cấu trúc 6 tuần). Tự tính lại ví dụ OEE khớp: 420/480=87,5%, 8400/10500=80,0%, (8400-168)/8400=98,0%, OEE=68,6% — đúng dải 55-70% báo cáo 174. Giới hạn trung thực tốt: IF/VLOOKUP/PivotTable/Solver/Data Table ghi rõ thuộc Intermediate I/II/Advanced, không phải Essentials; nút Audit chưa kiểm chứng được (ghi Chưa xác định); FAQ 'cannot take this course for free' được giải thích đúng là cho lộ trình chứng chỉ cả chuyên ngành. Điểm trừ nhỏ: học qua trang khóa + syllabus công khai + tài liệu chuẩn thay vì xem đủ video bài giảng (nằm sau ghi danh, đã ghi rõ giới hạn)."
     }
   },
   "status": "done",
   "title": "Tự học Excel Skills for Business: Essentials (Macquarie, Coursera)",
   "type": "research",
-  "updated_at": "2026-11-21T11:20:00+07:00",
-  "claimed_at": "2026-11-21T11:05:00+07:00",
-  "claim_expires_at": "2026-11-21T13:05:00+07:00"
+  "updated_at": "2026-11-21T11:20:00+07:00"
 }

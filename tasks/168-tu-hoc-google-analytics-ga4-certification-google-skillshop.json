@@ -8,29 +8,29 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
+  "claim_expires_at": "2026-11-21T07:05:23+07:00",
+  "claimed_at": "2026-11-21T05:05:23+07:00",
   "created_at": "2026-11-21T04:55:00+07:00",
   "created_by": "muse-main",
   "id": "168-tu-hoc-google-analytics-ga4-certification-google-skillshop",
-  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Vịt rảnh sau khi task 166 merge xong, không còn task mở). Khóa Google Analytics (GA4) Certification — Google Skillshop — khóa số 30 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main (dòng 61) — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch đo lường sau 166 (Social Media Marketing: đo ROI social, leading indicator, audit social — GA4 là công cụ đo traffic/conversion từ social về website) + 154/155/156 (SEO: GA4 đo organic traffic, hành vi người dùng, hiệu quả nội dung) + 159/161/162 (quảng cáo: attribution, đo hiệu quả chiến dịch theo kênh) — đối chiếu với Content Marketing của 163 (đo lường mục tiêu-trước-chỉ-số-sau), Blogging 164 (traffic potential, đo hiệu quả bài viết) và AEO 158 (đo trích dẫn AI): chỗ nào GA4 bổ sung (đo hành vi thật trên web, event/conversion, attribution đa kênh), chỗ nào trùng, và áp dụng cho đo lường mô tả nguồn vBook / bài viết team ra sao. Delegation: giao Vịt học + viết báo cáo; muse-main giữ review + merge; Anh giữ quyết định có dùng GA4 thật / gắn tracking vào site nào hay không. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy chiến dịch quảng cáo thật, không nạp tiền, không gắn tracking thật vào site nào. Báo cáo viết vào research/168-google-analytics-ga4-certification-google-skillshop.md, review muse-main chấm /10 như task research khác.",
+  "notes": "muse-main tạo theo ủy quyền 20/11 (§10: Vịt rảnh sau khi task 166 merge xong, không còn task mở). Khóa Google Analytics (GA4) Certification — Google Skillshop — khóa số 30 trong danh sách 32 khóa AI miễn phí đã duyệt (Vinmedia Global, Anh chốt 20/11); bằng chứng trong research/140-governing-ai-agents-deeplearning-ai.md trên main (dòng 61) — KHÔNG cần kiểm chứng lại từ đầu. Nối mạch đo lường sau 166 (Social Media Marketing: đo ROI social, leading indicator, audit social — GA4 là công cụ đo traffic/conversion từ social về website) + 154/155/156 (SEO: GA4 đo organic traffic, hành vi người dùng, hiệu quả nội dung) + 159/161/162 (quảng cáo: attribution, đo hiệu quả chiến dịch theo kênh) — đối chiếu với Content Marketing của 163 (đo lường mục tiêu-trước-chỉ-số-sau), Blogging 164 (traffic potential, đo hiệu quả bài viết) và AEO 158 (đo trích dẫn AI): chỗ nào GA4 bổ sung (đo hành vi thật trên web, event/conversion, attribution đa kênh), chỗ nào trùng, và áp dụng cho đo lường mô tả nguồn vBook / bài viết team ra sao. Delegation: giao Vịt học + viết báo cáo; muse-main giữ review + merge; Anh giữ quyết định có dùng GA4 thật / gắn tracking vào site nào hay không. Quy tắc tự học §9: chỉ học nội dung FREE công khai; không đăng ký trả phí/chứng chỉ, không chạy chiến dịch quảng cáo thật, không nạp tiền, không gắn tracking thật vào site nào. Báo cáo viết vào research/168-google-analytics-ga4-certification-google-skillshop.md, review muse-main chấm /10 như task research khác.\n\n[Dashboard #21 — Anh, 21/11 20:13] DUYỆT.",
   "preferred_assignee": "muse-2",
   "priority": "medium",
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/168-google-analytics-ga4-certification",
     "notes": "Da hoc xong Google Analytics (GA4) Certification (Google Skillshop, khoa #30/32): 4 khoa chuan bi 101/102/201/301 (cai dat dung -> doc bao cao -> dao sau -> noi cong cu khac) + bai thi 50 cau trac nghiem, 75 phut, dat 80%, hieu luc 12 thang (con so thu cap, da doi chieu 2 huong dan doc lap cap nhat 11/2026, chua doi chieu man hinh Skillshop chinh thuc - da ghi ro trong bao cao). 3 co che dung duoc cho team: event + key event, User Acquisition vs Traffic Acquisition, attribution data-driven + ly do so GA4 lech so nen tang quang cao. Doi chieu 166, 154-156, 159-162, 163, 164, 158 + 3 de xuat co dieu kien. Gioi han: chi hoc noi dung FREE cong khai, khong dang ky/thi/lay chung chi, khong gan tracking that. Bao cao research/168-google-analytics-ga4-certification-google-skillshop.md.",
-    "test": {},
     "review": {
-      "score": 8,
-      "rounds": 1,
-      "by": "muse-main",
       "at": "2026-11-21T05:21:06+07:00",
-      "note": "Đạt 8/10 vòng 1. Kiểm chứng độc lập: khóa #30 đúng danh sách 32 (research/140 dòng 61); Loves Data khớp báo cáo (FREE, 50 câu trắc nghiệm, 75 phút, 80% = 40/50, thi lại sau 1 ngày, hiệu lực 12 tháng, 4 khóa chuẩn bị 101/102/201/301, User vs Traffic Acquisition, BigQuery, vai Analyst); các file đối chiếu 154-166 đều có trên main. Điểm trừ nhỏ: số liệu thi là thứ cấp (2 hướng dẫn 11/2026 đối chiếu chéo) — báo cáo đã ghi rõ giới hạn này, không ảnh hưởng giá trị học khung. Đề xuất §9.1/§9.2/§9.3 CHƯA duyệt — để dành lần chạm skill tới, gộp cùng 163 §9.1/§9.2/§9.3 + 165 §8.2 + 166 §10.1/§10.2/§10.3 + 167 §9.1."
-    }
+      "by": "muse-main",
+      "note": "Đạt 8/10 vòng 1. Kiểm chứng độc lập: khóa #30 đúng danh sách 32 (research/140 dòng 61); Loves Data khớp báo cáo (FREE, 50 câu trắc nghiệm, 75 phút, 80% = 40/50, thi lại sau 1 ngày, hiệu lực 12 tháng, 4 khóa chuẩn bị 101/102/201/301, User vs Traffic Acquisition, BigQuery, vai Analyst); các file đối chiếu 154-166 đều có trên main. Điểm trừ nhỏ: số liệu thi là thứ cấp (2 hướng dẫn 11/2026 đối chiếu chéo) — báo cáo đã ghi rõ giới hạn này, không ảnh hưởng giá trị học khung. Đề xuất §9.1/§9.2/§9.3 CHƯA duyệt — để dành lần chạm skill tới, gộp cùng 163 §9.1/§9.2/§9.3 + 165 §8.2 + 166 §10.1/§10.2/§10.3 + 167 §9.1.",
+      "rounds": 1,
+      "score": 8
+    },
+    "test": {}
   },
   "status": "done",
   "title": "Tự học Google Analytics (GA4) Certification (Google Skillshop)",
   "type": "research",
-  "updated_at": "2026-11-21T05:21:06+07:00",
-  "claimed_at": "2026-11-21T05:05:23+07:00",
-  "claim_expires_at": "2026-11-21T07:05:23+07:00"
+  "updated_at": "2026-11-21T05:21:06+07:00"
 }
