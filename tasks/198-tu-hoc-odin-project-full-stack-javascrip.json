@@ -7,19 +7,21 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "claimed",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-21T15:01:57+07:00",
   "claimed_at": "2026-11-21T15:08:35+07:00",
   "claim_expires_at": "2026-11-21T17:08:35+07:00",
   "result": {
-    "branch": "",
+    "branch": "feature/198-odin-project-full-stack-javascript",
     "test": {
       "validate": "",
       "device_test": "",
-      "install": ""
+      "install": "",
+      "evidence": "research/198-odin-project-full-stack-javascript.md, commit 5a8d471 tren branch feature/198-odin-project-full-stack-javascript"
     },
-    "notes": ""
+    "notes": "Bao cao tu hoc Odin Full Stack JavaScript xong: Foundations + 7 khoa (Intermediate HTML/CSS, JavaScript, Advanced HTML/CSS, React, Databases/SQL, NodeJS/Express/PostgreSQL, Getting Hired); doi chieu trang chinh thuc + curriculum repo + 5 nguon thu cap 21/11; khong tao tai khoan, khong lam project, Databases/Getting Hired chi tiet ghi Chua xac dinh",
+    "evidence": "research/198-odin-project-full-stack-javascript.md, commit 5a8d471 tren branch feature/198-odin-project-full-stack-javascript"
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
