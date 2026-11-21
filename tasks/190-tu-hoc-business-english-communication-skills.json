@@ -11,19 +11,30 @@
   "created_at": "2026-11-21T13:50:00+07:00",
   "created_by": "muse-main",
   "id": "190-tu-hoc-business-english-communication-skills",
-  "notes": "Khóa số 10, CUỐI mạch B (Quản lý sản xuất & vận hành), trong danh sách 20 khóa công việc Anh duyệt 21/11 08:31 trong voice call. Bằng chứng: research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main (dòng B10). Khóa: Business English Communication Skills, University of Washington, Coursera, 3 tháng (10 giờ/tuần, chuỗi 5 khóa), https://www.coursera.org/specializations/business-english?action=enroll — tiếng Anh họp hành, đàm phán, thuyết trình, email, báo cáo công việc; nối 176 (ISO 19011, kỹ năng audit) + 169 (Customer Analytics, báo cáo) + nhu cầu tiếng Anh công việc của Anh. Học theo §9: chỉ nội dung FREE công khai (học audit miễn phí từng khóa lẻ trong chuỗi, không ghi danh trả phí/chứng chỉ); ghi Chưa xác định khi không xem được nội dung sau đăng ký. muse-main quyết theo ủy quyền 20/11: giao khóa cuối mạch B cho Vịt sau khi 186 merge xong (Vịt rảnh, không còn task mở). Khi 189 + 190 xong, danh sách 20 khóa công việc hoàn tất 20/20 — đợt khóa tiếp theo (12 khóa AI/Dev đã trình Anh 21/11 08:29) CHƯA được duyệt riêng, cần Anh quyết trước khi giao.",
+  "notes": "Khóa số 10, CUỐI mạch B (Quản lý sản xuất & vận hành), trong danh sách 20 khóa công việc Anh duyệt 21/11 08:31 trong voice call. Bằng chứng: research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main (dòng B10). Khóa: Business English Communication Skills, University of Washington, Coursera, 3 tháng (10 giờ/tuần, chuỗi 5 khóa), https://www.coursera.org/specializations/business-english?action=enroll — tiếng Anh họp hành, đàm phán, thuyết trình, email, báo cáo công việc; nối 176 (ISO 19011, kỹ năng audit) + 169 (Customer Analytics, báo cáo) + nhu cầu tiếng Anh công việc của Anh. Học theo §9: chỉ nội dung FREE công khai (học audit miễn phí từng khóa lẻ trong chuỗi, không ghi danh trả phí/chứng chỉ); ghi Chưa xác định khi không xem được nội dung sau đăng ký. muse-main quyết theo ủy quyền 20/11: giao khóa cuối mạch B cho Vịt sau khi 186 merge xong (Vịt rảnh, không còn task mở). Khi 189 + 190 xong, danh sách 20 khóa công việc hoàn tất 20/20 — đợt khóa tiếp theo (12 khóa AI/Dev đã trình Anh 21/11 08:29) CHƯA được duyệt riêng, cần Anh quyết trước khi giao.\n[21/11 14:02 muse-main: review 8/10 vong 1, DA MERGE len main (merge ec53dfa, research/190-business-english-communication-skills.md 123 dong). Khoa B10, CUOI mach B — danh sach 20 khoa cong viec HOAN TAT 20/20. Dot 12 khoa AI/Dev Anh DUYET 21/11 13:59, giao sau khi 189 + 190 xong; uu tien Semrush AI Visibility truoc 15/12/2026.]",
   "preferred_assignee": "muse-2",
   "priority": "medium",
   "repo": "muse-teamwork",
-  "status": "review",
+  "status": "done",
   "title": "Tự học Business English Communication Skills (Coursera)",
   "type": "research",
-  "updated_at": "2026-11-21T13:59:04+07:00",
+  "updated_at": "2026-11-21T14:02:00+07:00",
   "claimed_at": "2026-11-21T13:53:34+07:00",
   "claim_expires_at": "2026-11-21T15:53:34+07:00",
   "result": {
     "branch": "feature/190-business-english-communication-skills",
     "notes": "Bao cao tu hoc xong: research/190-business-english-communication-skills.md (123 dong). Chuoi 5 khoa UW Coursera, audit mien phi 4 khoa le, Capstone chi hoc syllabus (audit Chua xac dinh); kem 3 mau email + 6 hanh dong ap dung cho Anh. B10 - khoa cuoi mach B; khi 189 xong thi 20/20 khoa cong viec hoan tat.",
-    "test": {}
+    "test": {
+      "validate": "PASS",
+      "device_test": "n/a",
+      "install": "n/a"
+    },
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T14:02:00+07:00",
+      "note": "muse-main kiem chung doc lap: trang chuyen nganh Coursera co that, UW, 184.670 ghi danh, 4.74/5 (4.974 luot, 83,64% 5 sao), FAQ 'Can I take the course for free? No...' khop, hoan thanh 6-7 thang, tieng Anh trung cap + toi thieu 2 nam, giang vien Richard Moore + Wendy Asplin, cho dang ky tung khoa le (duong audit). Bao cao 123 dong: chuoi 5 khoa, audit mien phi 4 khoa le, Capstone chi syllabus (audit Chua xac dinh), kem 3 mau email + 6 hanh dong ap dung cho Anh. Diem tru nho: hoc qua syllabus + mau cau chuan thay vi xem video; khoa email song hanh edX lay qua Class Central/careers360, khong kiem chung truc tiep trong luot nay."
+    }
   }
 }

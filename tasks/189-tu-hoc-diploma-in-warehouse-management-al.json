@@ -11,14 +11,14 @@
   "created_at": "2026-11-21T13:44:00+07:00",
   "created_by": "muse-main",
   "id": "189-tu-hoc-diploma-in-warehouse-management-al",
-  "notes": "Khóa số 9, mạch B (Quản lý sản xuất & vận hành), trong danh sách 20 khóa công việc Anh duyệt 21/11 08:31 trong voice call. Bằng chứng: research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main (dòng B9). Khóa: Diploma in Warehouse Management, Alison, 10–15 giờ, https://alison.com/course/diploma-in-warehouse-management — vận hành kho, picking, slotting, kiểm soát tồn kho, an toàn lao động; nối 186 (Supply Chain Fundamentals, Vịt đang làm) + điều kiện kho trong vụ đổi bao bì đường 25→50kg. Học theo §9: chỉ nội dung FREE công khai (Alison học miễn phí, chỉ chứng chỉ PDF trả phí, không cần); ghi Chưa xác định khi không xem được nội dung sau đăng ký. muse-main quyết theo ủy quyền 20/11: giao tiếp mạch B sau khi 188 merge xong (Ú rảnh).\n[21/11 13:57 muse-1: Đã nộp review — báo cáo research/189-diploma-in-warehouse-management-alison.md (238 dòng) trên branch feature/189-diploma-in-warehouse-management-alison; học FREE theo §9, hiện trạng nhà máy Chưa xác định.]",
+  "notes": "Khóa số 9, mạch B (Quản lý sản xuất & vận hành), trong danh sách 20 khóa công việc Anh duyệt 21/11 08:31 trong voice call. Bằng chứng: research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main (dòng B9). Khóa: Diploma in Warehouse Management, Alison, 10–15 giờ, https://alison.com/course/diploma-in-warehouse-management — vận hành kho, picking, slotting, kiểm soát tồn kho, an toàn lao động; nối 186 (Supply Chain Fundamentals, Vịt đang làm) + điều kiện kho trong vụ đổi bao bì đường 25→50kg. Học theo §9: chỉ nội dung FREE công khai (Alison học miễn phí, chỉ chứng chỉ PDF trả phí, không cần); ghi Chưa xác định khi không xem được nội dung sau đăng ký. muse-main quyết theo ủy quyền 20/11: giao tiếp mạch B sau khi 188 merge xong (Ú rảnh).\n[21/11 13:57 muse-1: Đã nộp review — báo cáo research/189-diploma-in-warehouse-management-alison.md (238 dòng) trên branch feature/189-diploma-in-warehouse-management-alison; học FREE theo §9, hiện trạng nhà máy Chưa xác định.]\n[21/11 14:02 muse-main: review 8/10 vong 1, DA MERGE len main (merge 66bb95b, research/189-diploma-in-warehouse-management-alison.md 238 dong). Khoa B9 mach B; khi 190 xong thi 20/20 khoa cong viec hoan tat.]",
   "preferred_assignee": "muse-1",
   "priority": "medium",
   "repo": "muse-teamwork",
-  "status": "review",
+  "status": "done",
   "title": "Tự học Diploma in Warehouse Management (Alison)",
   "type": "research",
-  "updated_at": "2026-11-21T13:57:02+07:00",
+  "updated_at": "2026-11-21T14:02:00+07:00",
   "claimed_at": "2026-11-21T13:55:24+07:00",
   "claim_expires_at": "2026-11-21T15:55:24+07:00",
   "result": {
@@ -28,6 +28,13 @@
       "validate": "PASS",
       "device_test": "n/a",
       "install": "n/a"
+    },
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T14:02:00+07:00",
+      "note": "muse-main kiem chung doc lap: trang khoa Alison co that, 12 muc tieu hoc tap khop tung chu, gia 0 EUR, danh gia 4.1/5 (1.266 luot). Bao cao 238 dong: 12 muc tieu + 10 module doi chieu 2 nguon, khung soat kho 13 hang muc (hien trang Chua xac dinh), noi 186/182/187/185/181/180/174/175 + checklist FSSC v7, ghi ro gioi han (noi dung bai giang sau dang ky + ten nha phat hanh: Chua xac dinh; thoi luong thuc te dao dong 1h19m-28h55m, khong san phang). Diem tru nho: hoc qua muc tieu + tai lieu cong khai thay vi xem du video; 10-15h/81.083 hoc vien lay tu trang danh muc, khong kiem chung truc tiep trong luot nay."
     }
   }
 }
