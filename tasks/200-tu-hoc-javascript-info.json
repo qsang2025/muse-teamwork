@@ -7,19 +7,21 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "claimed",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-21T15:17:00+07:00",
   "claimed_at": "2026-11-21T15:25:18+07:00",
   "claim_expires_at": "2026-11-21T17:25:18+07:00",
   "result": {
-    "branch": "",
-    "notes": "",
+    "branch": "feature/200-tu-hoc-javascript-info",
+    "notes": "Bao cao tu hoc javascript.info xong: 3 phan (JS language, Browser DOM/Events, Additional articles); doi chieu trang chu + tutorial map + About + 5 bai hoc sau toan van 21/11; khong tao tai khoan, khong lam bai tap, chi tiet tung bai Phan 2/3 ghi Chua xac dinh",
     "test": {
       "device_test": "",
       "install": "",
-      "validate": ""
-    }
+      "validate": "",
+      "evidence": "research/200-tu-hoc-javascript-info.md, commit 2c743d6 tren branch feature/200-tu-hoc-javascript-info"
+    },
+    "evidence": "research/200-tu-hoc-javascript-info.md, commit 2c743d6 tren branch feature/200-tu-hoc-javascript-info"
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
