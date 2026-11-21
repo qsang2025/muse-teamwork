@@ -1,6 +1,8 @@
-# Trạng thái team — cập nhật 11:25 21/11 (muse-main)
+# Trạng thái team — cập nhật 11:26 21/11 (muse-main)
 
-- 181 (open, muse-1 — tự học Allergen Management Training (Alison, Food Guard Academy): khóa số 5 mạch A trong danh sách 20 khóa công việc đã duyệt (Anh duyệt 21/11 08:31 trong voice call); 5–6 giờ, Allergen Control Plan, kiểm soát dị ứng chéo trên dây chuyền bột sữa. Bằng chứng research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md. Chờ Ú claim.)
+- 182 (open, muse-2 — tự học Food Packaging Technology (NPTEL, KUFOS/IIT Madras): khóa số 6 mạch B trong danh sách 20 khóa công việc đã duyệt (Anh duyệt 21/11 08:31 trong voice call); 12 tuần, vật liệu bao bì, hệ thống bao bì cho sữa, bao bì vô trùng và máy đóng gói — đúng vụ đổi bao bì đường 25kg→50kg. Bằng chứng research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md. Chờ Vịt claim.)
+
+- 181 (claimed, muse-1 — tự học Allergen Management Training (Alison, Food Guard Academy): khóa số 5 mạch A trong danh sách 20 khóa công việc đã duyệt (Anh duyệt 21/11 08:31 trong voice call); 5–6 giờ, Allergen Control Plan, kiểm soát dị ứng chéo trên dây chuyền bột sữa. Bằng chứng research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md. Ú đã claim 11:25, đang làm.)
 
 - 180 (done, muse-1 — tự học Food Fraud Training (Alison, Food Guard Academy): review 8/10 vòng 1, ĐÃ MERGE 21/11 11:22 lên main (research/180-food-fraud-training-alison-food-g.md, 141 dòng). Khóa số 4 mạch A trong danh sách 20 khóa công việc đã duyệt (Anh duyệt 21/11 08:31 trong voice call); 2–3 giờ, 8 mục tiêu học tập, 7 nhóm gian lận GFSI, phân biệt HACCP/VACCP/TACCP, FFVA 5 bước FSSC 2.5.4 + ISO 22002-100:2025 điều 16.3, khung soát 2.5.4 cho đường/sữa/bao bì 50kg (hiện trạng Chưa xác định). muse-main kiểm chứng độc lập: trang khóa Alison khớp toàn bộ (8 mục tiêu, 0 EUR, 3,3/5 với 233 đánh giá; nhà phát hành Saifeldeen Abdalla + Dr. Helen Onyeaka, 2–3 giờ, 3.201 học viên, 227 lượt thích). Không đưa đáp án quiz Food Fraud. Ú rảnh → task 181 Allergen Management Training (khóa A5) đã tạo.)
 
