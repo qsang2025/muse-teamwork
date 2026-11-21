@@ -11,19 +11,27 @@
   "created_at": "2026-11-21T14:10:00+07:00",
   "created_by": "muse-main",
   "id": "192-tu-hoc-ai-visibility-essentials-semrush",
-  "notes": "Khóa số 2 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59, giao sau khi danh sách 20 khóa công việc hoàn tất 20/20 (189 + 190 done 14:02). ƯU TIÊN CAO — HỌC XONG TRƯỚC 15/12/2026: Semrush Academy chuyển nền tảng mới ngày 16/12, tiến độ chưa xong sẽ bị reset và chứng chỉ cũ không còn hiện trong My Certificates (chỉ link trực tiếp còn hoạt động). Khóa: AI Visibility Essentials with Semrush, Semrush Academy, FREE, https://www.semrush.com/academy/courses/ai-search/ — đo AI visibility (theo dõi prompt thay vì keyword), tối ưu cho LLM (ChatGPT...), tăng brand mention trong câu trả lời AI, walkthrough AI Visibility Toolkit (theo dõi mention, nguồn trích dẫn, share of voice). Nối 154 (On-Page SEO and AI Search Essentials, Semrush), 158 (AEO Fundamentals, HubSpot), 156 (SEO Ahrefs) — mảnh AI Search còn thiếu của mạch SEO. Học theo §9: chỉ nội dung FREE công khai, cần tài khoản Semrush miễn phí để ghi danh (không mua gói trả phí); KHÔNG chạy tool trả phí, chỉ học phương pháp + ngôn ngữ chỉ số; ghi Chưa xác định khi không xem được nội dung sau đăng ký. muse-main quyết theo ủy quyền 20/11: giao cho Vịt (vai research, mạch SEO) vì Vịt rảnh, không còn task mở; link đã kiểm chứng lại 21/11 14:09 trước khi giao.",
+  "notes": "Khóa số 2 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59, giao sau khi danh sách 20 khóa công việc hoàn tất 20/20 (189 + 190 done 14:02). ƯU TIÊN CAO — HỌC XONG TRƯỚC 15/12/2026: Semrush Academy chuyển nền tảng mới ngày 16/12, tiến độ chưa xong sẽ bị reset và chứng chỉ cũ không còn hiện trong My Certificates (chỉ link trực tiếp còn hoạt động). Khóa: AI Visibility Essentials with Semrush, Semrush Academy, FREE, https://www.semrush.com/academy/courses/ai-search/ — đo AI visibility (theo dõi prompt thay vì keyword), tối ưu cho LLM (ChatGPT...), tăng brand mention trong câu trả lời AI, walkthrough AI Visibility Toolkit (theo dõi mention, nguồn trích dẫn, share of voice). Nối 154 (On-Page SEO and AI Search Essentials, Semrush), 158 (AEO Fundamentals, HubSpot), 156 (SEO Ahrefs) — mảnh AI Search còn thiếu của mạch SEO. Học theo §9: chỉ nội dung FREE công khai, cần tài khoản Semrush miễn phí để ghi danh (không mua gói trả phí); KHÔNG chạy tool trả phí, chỉ học phương pháp + ngôn ngữ chỉ số; ghi Chưa xác định khi không xem được nội dung sau đăng ký. muse-main quyết theo ủy quyền 20/11: giao cho Vịt (vai research, mạch SEO) vì Vịt rảnh, không còn task mở; link đã kiểm chứng lại 21/11 14:09 trước khi giao.\n[21/11 14:25 muse-main: review 8/10 vong 1, DA MERGE len main (merge a40be8c, research/192-ai-visibility-essentials-semrush.md 177 dong). Khoa so 2 dot 12 khoa AI/Dev; mach SEO du bo 4 manh 154/158/192/156. CAN ANH QUYET: co lay chung chi Semrush truoc 15/12/2026 khong — neu co thi Anh tu ghi danh bang tai khoan Semrush mien phi (Vit khong tao tai khoan thay); sau 16/12 tien do reset, My Certificates khong hien chung chi cu.]",
   "preferred_assignee": "muse-2",
   "priority": "high",
   "repo": "muse-teamwork",
-  "status": "review",
+  "status": "done",
   "title": "Tự học AI Visibility Essentials (Semrush Academy)",
   "type": "research",
-  "updated_at": "2026-11-21T14:13:49+07:00",
+  "updated_at": "2026-11-21T14:25:00+07:00",
   "claimed_at": "2026-11-21T14:13:49+07:00",
   "claim_expires_at": "2026-11-21T16:13:49+07:00",
   "result": {
     "branch": "feature/192-ai-visibility-essentials-semrush",
     "notes": "Bao cao tu hoc xong: syllabus 20 bai (~86 phut video), chi so AI Visibility Score 0-100/Share of Voice/Sentiment/Citations, 5 loai prompt theo hanh trinh KH, noi dung AI-friendly + ky thuat cho AI, nen khoa hoc GEO KDD 2024 (quote +41%, so lieu +33%, nhoi tu khoa -8%). Chi hoc FREE cong khai, khong tao tai khoan, khong chay tool tra phi (Toolkit $99/thang). Luu y han chot: Semrush Academy chuyen nen tang 16/12 — muon lay chung chi phai hoc xong + tai truoc 15/12/2026.",
-    "test": {}
+    "test": {},
+    "evidence": "research/192-ai-visibility-essentials-semrush.md, commit 680a50c8d4c6a80777f1530bc124a199d65c98b5 (branch feature/192-ai-visibility-essentials-semrush, merged a40be8c)",
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T14:25:00+07:00",
+      "note": "muse-main kiem chung doc lap: trang khoa Semrush Academy doc 21/11 14:20 +07 — 20 bai, thoi luong cong lai 86 phut, giang vien Rita Cidre 15 nam/Zillow/Time/NPR + Leigh McKenzie, thong bao chuyen nen tang 16/12 + han chung chi 15/12 khop tung chu; so GEO KDD 2024 khop arXiv:2311.09735 qua 3 nguon doc lap (quote +41% 19.3->27.2, nhoi tu khoa -8% 19.3->17.7). Sua 2 so trong bao cao luc merge: Statistics +33%->+31% (25.2 vs 19.3), Fluency +29%->+28% (24.7 vs 19.3) theo bang goc bai bao. Diem tru nho: hoc qua syllabus + nguon thu cap, khong xem video/ghi danh (da ghi ro gioi han). Evidence do muse-main bo sung luc merge vi Vit nop review bang script cu chua pull gate §11 — file research da co tren branch tu commit 680a50c."
+    }
   }
 }

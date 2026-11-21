@@ -117,8 +117,8 @@ Khóa Semrush dạy thực hành GEO (Generative Engine Optimization). Bằng ch
 | Phương pháp | Visibility (word count) | Thay đổi tương đối |
 |---|---|---|
 | Thêm trích dẫn lời chuyên gia (Quotation Addition) | 27,2 | **+41%** |
-| Thêm số liệu thống kê (Statistics Addition) | 25,2 | **+33%** |
-| Tối ưu độ trôi chảy (Fluency Optimization) | 24,7 | **+29%** |
+| Thêm số liệu thống kê (Statistics Addition) | 25,2 | **+31%** |
+| Tối ưu độ trôi chảy (Fluency Optimization) | 24,7 | **+28%** |
 | Trích dẫn nguồn (Cite Sources) | 24,6 | **+28%** |
 | Dùng thuật ngữ chuyên môn | 22,7 | — |
 | Dễ hiểu | 22,0 | — |

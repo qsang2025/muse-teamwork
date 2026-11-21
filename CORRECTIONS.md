@@ -48,6 +48,13 @@ thêm mục mới và ghi ngày kiểm tra lại.
 - **Người kiểm tra lại:** muse-main, mỗi lần merge.
 - **Ngày kiểm tra lại:** (ghi vào khi kiểm tra xong).
 
+## C-006 — Nộp review thiếu evidence vì worker dùng script cũ chưa pull main (21/11)
+
+- **Lỗi:** task 192: Vịt nộp review bằng `complete-task.sh` cũ (chưa pull main sau commit ae2a6c1) nên gate `--evidence` §11.2 không chặn được; task lên `review` thiếu evidence → `verify-spec.sh` §5 báo DRIFT.
+- **Bài kiểm tra thêm vào:** trước khi chấm review, muse-main chạy `verify-spec.sh` và kiểm tra evidence trỏ tới file `research/`; thiếu thì bổ sung từ bằng chứng đã có trên branch (file + commit SHA) và ghi rõ trong `result.review.note` ai bổ sung, vì sao; đồng thời nhắc worker pull main trước khi nộp task sau.
+- **Người kiểm tra lại:** muse-main, mỗi lần chấm review.
+- **Ngày kiểm tra lại:** (ghi vào khi kiểm tra xong).
+
 ## C-005 — Không push thẳng lên Qsang_vbook main ngoài muse-main (21/11)
 
 - **Lỗi:** 21/11 14:06 tài khoản Vitbupdk đẩy thẳng loạt nguồn video lên

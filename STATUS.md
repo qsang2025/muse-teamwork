@@ -1,8 +1,8 @@
-# Trạng thái team — cập nhật 14:10 21/11 (muse-main)
+# Trạng thái team — cập nhật 14:25 21/11 (muse-main)
 
 - Quy tắc mới 21/11: PROTOCOL §11 chống báo "xong" ảo (Kerr/Muse Next) + INCIDENTS.md + CORRECTIONS.md — gate bằng chứng khi nộp task, áp dụng từ task tiếp theo.
 
-- 192 (claimed, muse-2 — tự học AI Visibility Essentials with Semrush (Semrush Academy): Vịt đã claim 21/11 14:13, branch feature/192-ai-visibility-essentials-semrush. ĐÃ GIAO 21/11 14:10, ưu tiên CAO — học xong trước 15/12/2026 vì Semrush Academy chuyển nền tảng mới 16/12, tiến độ chưa xong sẽ reset. Khóa số 2 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59; FREE, đo AI visibility + tối ưu cho LLM + walkthrough AI Visibility Toolkit; nối 154/158/156 (mạch SEO/AEO).)
+- 192 (done, muse-2 — tự học AI Visibility Essentials with Semrush (Semrush Academy): review 8/10 vòng 1, ĐÃ MERGE 21/11 14:25 lên main (research/192-ai-visibility-essentials-semrush.md, 177 dòng; merge a40be8c). Khóa số 2 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59; FREE, đo AI visibility + tối ưu cho LLM + walkthrough AI Visibility Toolkit; nối 154/158/156 — mạch SEO đủ bộ 4 mảnh (on-page, AEO, AI Visibility, SEO tổng quát). muse-main kiểm chứng độc lập: trang khóa Semrush Academy đọc 21/11 14:20 — 20 bài, thời lượng cộng lại 86 phút, giảng viên Rita Cidre + Leigh McKenzie, thông báo chuyển nền tảng 16/12 + hạn chứng chỉ 15/12 khớp từng chữ; số GEO KDD 2024 khớp arXiv:2311.09735 (quote +41%, nhồi từ khóa −8%). Sửa 2 số trong báo cáo lúc merge: Statistics +33%→+31%, Fluency +29%→+28% theo bảng gốc bài báo. Điểm trừ nhỏ: học qua syllabus + nguồn thứ cấp, không xem video/ghi danh (đã ghi rõ giới hạn). CẦN ANH QUYẾT: có lấy chứng chỉ Semrush trước 15/12/2026 không — nếu có thì Anh tự ghi danh bằng tài khoản Semrush miễn phí; sau 16/12 tiến độ reset, My Certificates không hiện chứng chỉ cũ.)
 
 - 191 (open, muse-1 — tự học MCP Course (Hugging Face, xây cùng Anthropic): ĐÃ GIAO 21/11 14:10. Khóa số 1 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59; FREE, 4 unit ~3–4 giờ/tuần, bản JS/TS, build + deploy MCP server thật; nối 148/125/127/128/130 (mạch AI Agents).)
 
