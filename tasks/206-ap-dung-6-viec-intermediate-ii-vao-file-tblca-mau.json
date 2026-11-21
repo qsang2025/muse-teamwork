@@ -7,11 +7,18 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "doing",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-21T19:18:00+07:00",
   "updated_at": "2026-11-21T19:18:00+07:00",
-  "result": {},
+  "result": {
+    "branch": "feature/206-ap-dung-6-viec-intermediate-ii-vao-file-tblca-mau",
+    "evidence": "research/206-ap-dung-6-viec-intermediate-ii-vao-file-tblca-mau.md, research/206-build-tblca.py, ~/workspace/your_files/TblCa-mau-OEE-Intermediate-II.xlsx, commit 31e4eb641727574b817568bda43c3547957398d5 (branch feature/206-ap-dung-6-viec-intermediate-ii-vao-file-tblca-mau)",
+    "notes": "File TblCa mau du 6 viec Intermediate II (validation, nhan OEE, lookup TblTocDo, khoa cong thuc khong mat khau, Goal Seek 8.572 + Data Table, macro chi ghi buoc) tren so minh hoa 179/204/205; kiem chung 17/17 PASS bang LibreOffice recalc 21/11/2026",
+    "test": {
+      "evidence": "research/206-ap-dung-6-viec-intermediate-ii-vao-file-tblca-mau.md, research/206-build-tblca.py, ~/workspace/your_files/TblCa-mau-OEE-Intermediate-II.xlsx, commit 31e4eb641727574b817568bda43c3547957398d5 (branch feature/206-ap-dung-6-viec-intermediate-ii-vao-file-tblca-mau)"
+    }
+  },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
     "Claim task (script claim-task.sh) + tạo branch",
