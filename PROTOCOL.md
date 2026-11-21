@@ -90,6 +90,12 @@ sang task khác, không cãi nhau trong code.
   `result.review.note`. Tối đa 3 vòng chấm: sau 3 vòng vẫn < 7 thì muse-main
   quyết — giao lại agent khác, tách nhỏ task, hoặc `blocked`/`cancelled` +
   báo Anh.
+- Khi chấm review, kiểm tra cả **quỹ đạo** (Glassbox, Day 4 task 193 —
+  muse-main quyết 21/11 theo đề xuất task 193): log/nguồn/truy vấn worker
+  đã thử có khớp kết quả không — đáp án đúng nhưng đường đi sai (vd gọi
+  thừa tool, đọc sai nguồn, số liệu không khớp nguồn gốc) thì trừ điểm và
+  ghi rõ vào `result.review.note`. Đây là checklist chấm review, nối quy
+  tắc 150 §8.2/§8.3 (kiểm quá trình bên cạnh sản phẩm cuối).
 - Khi tạo task, ghi 1 dòng Delegation (vì sao giao cho agent này, việc gì giữ
   lại cho người). Khi chấm review, kiểm thêm quá trình (nguồn/truy vấn worker
   đã thử) bên cạnh sản phẩm cuối — theo đề xuất task 150 §8.2/§8.3.

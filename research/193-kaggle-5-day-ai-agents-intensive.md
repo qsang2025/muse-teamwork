@@ -1,7 +1,7 @@
 # Kaggle 5-Day AI Agents Intensive Course (Google) — Báo cáo tự học (task 193)
 
 - **Khóa học:** 5-Day AI Agents Intensive Course with Google, Kaggle
-- **Trang khóa:** https://www.kaggle.com/competitions/5-day-ai-agents-intens
+- **Trang khóa:** https://www.kaggle.com/competitions/5-day-ai-agents-intens (đã kết thúc live — kiểm chứng 21/11: trang này trả 404; nay học self-paced qua Learn Guide https://www.kaggle.com/learn-guide/5-day-agents)
 - **Learn Guide (self-paced):** https://www.kaggle.com/learn-guide/5-day-agents
 - **Học viên:** muse-2 (Vịt) — vai research, mạch AI Agents, theo phân vai Anh chốt 20/11 (PROTOCOL §9/§10)
 - **Ngày học:** 21/11/2026
@@ -205,7 +205,7 @@ Anh không phải dev chuyên agent, nhưng khóa này soi thẳng vào 3 việc
 
 ## Nguồn
 
-- Trang khóa chính thức: https://www.kaggle.com/competitions/5-day-ai-agents-intens
+- Trang khóa chính thức (đã kết thúc live, trả 404 khi kiểm chứng 21/11; nay học qua Learn Guide): https://www.kaggle.com/competitions/5-day-ai-agents-intens
 - Learn Guide (trả 429 khi đọc 21/11/2026): https://www.kaggle.com/learn-guide/5-day-agents
 - Whitepaper Day 1: https://www.kaggle.com/whitepaper-introduction-to-agents
 - Whitepaper Day 2: https://www.kaggle.com/whitepaper-agent-tools-and-interoperability-with-mcp
@@ -219,7 +219,7 @@ Anh không phải dev chuyên agent, nhưng khóa này soi thẳng vào 3 việc
 - Whitepaper "Agents" (Google, 09/2024) — tóm tắt: https://devlocus.com/posts/agents-by-google ; https://xiaodu-flying.github.io/posts/agents-from-google/index.html
 - Khóa Gen AI Intensive tiền thân (KDnuggets): https://www.kdnuggets.com/kaggle-googles-free-5-day-gen-ai-course
 - Chứng chỉ Kaggle không có giám sát (DesignCopy, cập nhật 17/06/2026): https://designcopy.net/en/google-gen-ai-intensive-review-2026/
-- Báo cáo nối tiếp trong repo: `research/125-ai-agents-langgraph-deeplearning-ai.md`, `research/148-ai-agents-course-hugging-face.md`, `research/127-long-term-agentic-memory-langgraph-deeplearning-ai.md`, `research/128-agent-memory-building-memory-aware-agents-deeplearning-ai-oracle.md`, `research/130-llms-as-operating-systems-agent-memory-letta-memgpt.md` (191 — MCP Course — đang ở `review`, chưa có file báo cáo cuối)
+- Báo cáo nối tiếp trong repo: `research/125-ai-agents-langgraph-deeplearning-ai.md`, `research/148-ai-agents-course-hugging-face.md`, `research/127-long-term-agentic-memory-langgraph-deeplearning-ai.md`, `research/128-agent-memory-building-memory-aware-agents-deeplearning-ai-oracle.md`, `research/130-llms-as-operating-systems-agent-memory-letta-memgpt.md` (191 — MCP Course — đã merge, `research/191-mcp-course-hugging-face.md`)
 
 ---
 *Báo cáo tự học task 193 — muse-2 (Vịt), 21/11/2026. Chỉ nội dung FREE công khai; không tạo tài khoản Kaggle, không chạy notebook cần đăng nhập, không mua gì, không hứa chứng chỉ.*

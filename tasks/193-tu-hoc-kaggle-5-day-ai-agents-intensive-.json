@@ -7,7 +7,7 @@
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "high",
-  "status": "review",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-21T14:24:17+07:00",
   "claimed_at": "2026-11-21T14:28:21+07:00",
@@ -21,7 +21,14 @@
       "evidence": "research/193-kaggle-5-day-ai-agents-intensive.md, commit b6cf8a6"
     },
     "notes": "Bao cao tu hoc xong: 5 whitepaper + 10 codelab Kaggle/Google ADK (Gemini). Noi 191 (MCP), 148/125/127/128/130. Khong tao tai khoan Kaggle, khong chay notebook, khong mua gi, khong hua chung chi. De xuat bo sung checklist Glassbox khi cham review (de muse-main quyet).",
-    "evidence": "research/193-kaggle-5-day-ai-agents-intensive.md, commit b6cf8a6"
+    "evidence": "research/193-kaggle-5-day-ai-agents-intensive.md, commit b6cf8a6",
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T14:35:00+07:00",
+      "note": "muse-main kiem chung doc lap 21/11: 5/6 URL nguon chinh HTTP 200 (whitepaper Day 1 + Day 4, KDnuggets gioi thieu, DEV tong ket 5 ngay, Learn Guide 200 qua curl — Vit gap 429 khi doc bang trinh duyet, da ghi ro trong bao cao); rieng trang competition Kaggle tra 404 (da ket thuc live, nay hoc qua Learn Guide) — muse-main da sua chu thich trong bao cao luc merge + sua dong 191 dang review thanh da merge; branch chi them dung 1 file 225 dong, commit b6cf8a6 khop evidence; bao cao ghi ro 3 lop nguon + gioi han (khong tao tai khoan Kaggle, khong chay notebook, ban 06/2026 Chua xac dinh). De xuat Glassbox cho cham review DA DUYET, ghi vao PROTOCOL §4. Diem tru: hoc qua whitepaper + nguon thu cap, chua chay notebook ADK that (dung gioi han §9, cung mau 148/192/191)."
+    }
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
@@ -30,6 +37,6 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
-  "notes": "Khóa số 3 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59. muse-main quyết theo ủy quyền 20/11: giao cho Vịt (vai research, mạch AI Agents) vì Vịt rảnh sau khi 192 done 21/11 14:25. Khóa: 5-Day AI Agents Intensive Course with Google (Kaggle), FREE, tự học theo Kaggle Learn Guide — chạy live 10–14/11/2025 (1,5 triệu người đăng ký), nay self-paced, miễn phí. Nội dung: Day 1 Introduction to agents (kiến trúc agent, khi nào cần agent vs workflow đơn giản, multi-agent); Day 2 Tools + MCP (custom tools, human-in-the-loop); Day 3 Context engineering — sessions + memory; Day 4 Agent quality (logging, tracing, metrics, đánh giá response + tool use); Day 5 Prototype to production (agent-to-agent protocol, deploy Vertex AI Agent Engine). Mỗi ngày 1 whitepaper + 2 codelab trên Gemini + Google ADK + capstone. Link: https://www.kaggle.com/competitions/5-day-ai-agents-intens ; bài giới thiệu: https://www.kdnuggets.com/kaggle-googles-free-5-day-agentic-ai-course — link đã kiểm chứng lại 21/11 14:27. Nối 191 (MCP Course, Hugging Face — Ú đang làm), 148/125/127/128/130 (mạch AI Agents). Học theo §9: chỉ nội dung FREE công khai (whitepaper + Learn Guide); KHÔNG tạo tài khoản Kaggle thay Anh, không chạy notebook cần đăng nhập thì ghi Chưa xác định; không hứa chứng chỉ (Google/Kaggle không hứa chứng chỉ cho khóa này).",
-  "updated_at": "2026-11-21T14:41:00+07:00"
+  "notes": "Khóa số 3 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59. muse-main quyết theo ủy quyền 20/11: giao cho Vịt (vai research, mạch AI Agents) vì Vịt rảnh sau khi 192 done 21/11 14:25. Khóa: 5-Day AI Agents Intensive Course with Google (Kaggle), FREE, tự học theo Kaggle Learn Guide — chạy live 10–14/11/2025 (1,5 triệu người đăng ký), nay self-paced, miễn phí. Nội dung: Day 1 Introduction to agents (kiến trúc agent, khi nào cần agent vs workflow đơn giản, multi-agent); Day 2 Tools + MCP (custom tools, human-in-the-loop); Day 3 Context engineering — sessions + memory; Day 4 Agent quality (logging, tracing, metrics, đánh giá response + tool use); Day 5 Prototype to production (agent-to-agent protocol, deploy Vertex AI Agent Engine). Mỗi ngày 1 whitepaper + 2 codelab trên Gemini + Google ADK + capstone. Link: https://www.kaggle.com/competitions/5-day-ai-agents-intens ; bài giới thiệu: https://www.kdnuggets.com/kaggle-googles-free-5-day-agentic-ai-course — link đã kiểm chứng lại 21/11 14:27. Nối 191 (MCP Course, Hugging Face — Ú đang làm), 148/125/127/128/130 (mạch AI Agents). Học theo §9: chỉ nội dung FREE công khai (whitepaper + Learn Guide); KHÔNG tạo tài khoản Kaggle thay Anh, không chạy notebook cần đăng nhập thì ghi Chưa xác định; không hứa chứng chỉ (Google/Kaggle không hứa chứng chỉ cho khóa này). [21/11 14:35 muse-main: review 8/10 vong 1, merge d2f9eb9 len main; de xuat Glassbox DUYET — ghi checklist quy dao vao PROTOCOL §4; sua 2 cho loi thoi trong bao cao (competition 404, 191 da merge).]",
+  "updated_at": "2026-11-21T14:35:00+07:00"
 }
