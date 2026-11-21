@@ -98,7 +98,7 @@ fi
 # MODE=watchdog) bang python3 (1 tien trinh duy nhat), so sanh voi state,
 # in ra quyet dinh JSON: {"decision":..., "reason":..., "payload":...}
 DECISION="$(python3 - "$REPO" "$STATE" "$AGENT" "$DRY" "$SHA_NEW" "$MODE" <<'PYEOF'
-import json, os, subprocess, sys
+import json, os, re, subprocess, sys
 from datetime import datetime, timezone, timedelta
 
 repo, state_path, agent, dry = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4] == "1"
@@ -198,13 +198,21 @@ if mode == "full" and old:
         elif new_status == "cancelled" and mine(cur):
             wakes.append({"task": tid, "why": "cancelled", "from": old_status, "to": new_status})
 
-def resolve_branch_repo(cur):
-    """(branch, repo) cua task; state cu chua luu branch thi doc lai file
-    task tren origin/main (ref local, khong can mang)."""
+def resolve_branch_repo(tid, cur):
+    """([branch], repo) cua task; state cu chua luu branch thi doc lai file
+    task tren origin/main (ref local, khong can mang). Tra ve [] khi
+    khong co ten branch trong file — luc do branch_has_progress se
+    tu tim branch theo so task (xem duoi).
+    VA 21/11 (sua bao nham lan 9, task 183): worker chi dien branch vao
+    task file TREN BRANCH cua minh — file tren main van de branch rong
+    cho toi luc merge. Doan ten branch tu task id la SAI: ten branch
+    cua worker rut gon khac id (183: feature/183-fssc-... thay vi
+    feature/183-tu-hoc-fssc-...; 182: research/182-food-packaging-nptel
+    thay vi research/182-tu-hoc-food-packaging-technology-nptel)."""
     branch = cur.get("branch", "") or ""
     repo = cur.get("repo", "") or "muse-teamwork"
     if branch:
-        return branch, repo
+        return [branch], repo
     raw = git("show", f"origin/main:{cur.get('file', '')}") if cur.get("file") else ""
     try:
         t = json.loads(raw) if raw else {}
@@ -213,35 +221,78 @@ def resolve_branch_repo(cur):
     if isinstance(t, dict):
         branch = str(t.get("branch", "") or (t.get("result") or {}).get("branch", "") or "")
         repo = str(t.get("repo", "") or "muse-teamwork")
-    return branch, repo
+    if branch:
+        return [branch], repo
+    return [], repo
 
 CLONES = {"muse-teamwork": repo,
           "Qsang_vbook": os.path.expanduser("~/workspace/vbook/Qsang_vbook")}
 
-def branch_has_progress(task_repo, branch, claimed_dt):
-    """True: branch co commit sau claimed_at (worker da bat dau lam).
-    False: khong co commit nao sau claimed_at.
-    None: khong kiem chung duoc (khong co branch, fetch loi, repo la) —
-    goi ham tra ve None thi giu hanh vi cu (bao)."""
-    if not branch or claimed_dt is None:
+def branches_for_task(task_repo, tid):
+    """Cac branch remote co the la cua task: ten branch bat dau bang
+    '<so>-', voi <so> la so dau cua task id (vd task 183 -> branch
+    feature/183-... hoac research/183-...). Tim bang ls-remote (1
+    request nhe) vi ten branch worker dat rut gon khac task id nen
+    khong doan truc tiep duoc. Tra ve [] neu khong liet ke duoc."""
+    num = str(tid or "").split("-")[0]
+    if not num.isdigit():
+        return []
+    clone = CLONES.get(task_repo or "muse-teamwork")
+    if not clone or not os.path.isdir(os.path.join(clone, ".git")):
+        return []
+    try:
+        r = subprocess.run(["git", "-C", clone, "ls-remote", "origin",
+                            "refs/heads/*"],
+                           capture_output=True, text=True, timeout=30)
+        if r.returncode != 0:
+            return []
+        out = []
+        for line in r.stdout.splitlines():
+            parts = line.split()
+            if len(parts) != 2 or not parts[1].startswith("refs/heads/"):
+                continue
+            short = parts[1][len("refs/heads/"):]
+            if re.match(r"^(feature|research|fix|hotfix)/" + re.escape(num) + r"-", short):
+                out.append(short)
+        return out
+    except Exception:
+        return []
+
+def branch_has_progress(task_repo, tid, branches, claimed_dt):
+    """True: mot trong cac branch co commit sau claimed_at (worker da bat
+    dau lam). False: branch ton tai nhung khong co commit nao sau
+    claimed_at. None: khong kiem chung duoc (khong tim thay branch nao,
+    fetch loi, repo la) — goi ham tra ve None thi giu hanh vi cu (bao).
+    branches rong => tu tim branch theo so task (worker dat ten rut
+    gon, khong doan tu id duoc)."""
+    if claimed_dt is None:
         return None
     clone = CLONES.get(task_repo or "muse-teamwork")
     if not clone or not os.path.isdir(os.path.join(clone, ".git")):
         return None
+    if not branches:
+        branches = branches_for_task(task_repo, tid)
+    if not branches:
+        return None
+    any_fetchable = False
     try:
-        r = subprocess.run(["git", "-C", clone, "fetch", "origin",
-                            f"+{branch}:refs/remotes/origin/{branch}"],
-                           capture_output=True, text=True, timeout=30)
-        if r.returncode != 0:
-            return None
         epoch = int(claimed_dt.timestamp())
-        r = subprocess.run(["git", "-C", clone, "log",
-                            f"--since=@{epoch}", "--format=%H",
-                            f"origin/{branch}"],
-                           capture_output=True, text=True, timeout=30)
-        if r.returncode != 0:
-            return None
-        return bool(r.stdout.strip())
+        for branch in branches:
+            r = subprocess.run(["git", "-C", clone, "fetch", "origin",
+                                f"+{branch}:refs/remotes/origin/{branch}"],
+                               capture_output=True, text=True, timeout=30)
+            if r.returncode != 0:
+                continue
+            any_fetchable = True
+            r = subprocess.run(["git", "-C", clone, "log",
+                                f"--since=@{epoch}", "--format=%H",
+                                f"origin/{branch}"],
+                               capture_output=True, text=True, timeout=30)
+            if r.returncode != 0:
+                continue
+            if r.stdout.strip():
+                return True
+        return False if any_fetchable else None
     except Exception:
         return None
 
@@ -271,8 +322,8 @@ for tid, cur in snap.items():
     # worker cap nhat status tren branch truoc khi dong bo len main.
     # Co commit sau claimed_at => worker da bat dau, khong bao.
     # None (khong kiem chung duoc) => giu hanh vi cu: bao.
-    branch, task_repo = resolve_branch_repo(cur)
-    if branch_has_progress(task_repo, branch, claimed):
+    branch, task_repo = resolve_branch_repo(tid, cur)
+    if branch_has_progress(task_repo, tid, branch, claimed):
         continue
     if agent != "muse-main" and cur.get("assignee") != agent:
         continue
