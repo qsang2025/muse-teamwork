@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="theme-color" content="#0d1321" />
-<title>Muse.ai Fleet Console v5.0 — Phòng Điều Phối 3 Muse</title>
+<title>Muse.ai Fleet Console v5.1 — Phòng Điều Phối 3 Muse</title>
 <style>
   :root {
     --sb-bg: #0d1321;
@@ -454,6 +454,7 @@
         <div class="hdr-actions">
           <button class="btn sm hide-sm" id="btnFlowToggle" title="Sơ đồ trạng thái 3 Muse">🔀 Sơ đồ</button>
           <button class="btn sm" id="btnCmdPal" title="Tìm nhanh (Ctrl+K)">⌘K</button>
+          <button class="btn sm hide-sm" id="btnCopyRoomLink" title="Copy link dẫn tới phòng này">🔗 Link</button>
           <button class="btn primary sm" id="btnNewTask">➕ Giao việc</button>
           <button class="btn sm" id="btnRefresh" title="Làm mới dữ liệu">↻</button>
           <button class="btn sm hide-sm" id="btnToggleInsp">☷ Chi tiết</button>
@@ -532,6 +533,7 @@
         <button class="fchip" data-insptab="report">📖 Báo cáo</button>
       </div>
       <div style="display:flex;gap:4px;">
+        <button class="btn sm" id="btnCopyInspLink" title="Copy link dẫn tới hồ sơ / báo cáo này">🔗 Link</button>
         <button class="btn sm" id="btnZen" title="Mở toàn màn hình">⛶ Zen</button>
         <button class="btn sm" id="btnCloseInsp">✕</button>
       </div>
@@ -1309,6 +1311,120 @@
     document.querySelectorAll("[data-mainview]").forEach(b => b.classList.toggle("active", b.dataset.mainview === state.mainView));
     renderSidebar(); renderLiveStrip(); renderFlowBar(); renderChat(); renderComposerTargets(); renderInspector();
     if (state.mainView === "dash") renderDash();
+    syncUrlHash();
+  }
+
+  /* ===== WHITELIST-ONLY DEEP-LINK NAVIGATION (NO EVAL / NO INNERHTML / NO AUTO-ACTION) ===== */
+  const STATIC_ROOMS = ["dieu-phoi-chung", "can-anh-quyet", "viec-dang-chay", "kho-vbook-ext", "phong-tu-hoc"];
+  const ALLOWED_DASH_TABS = ["kanban", "learning", "reports", "eco"];
+  const ALLOWED_AGENTS = ["muse-main", "muse-1", "muse-2"];
+
+  function findBundleTask(ref) {
+    if (!ref) return null;
+    const clean = String(ref).trim();
+    const tasks = state.bundle.tasks || [];
+    return tasks.find(t => t.id === clean) || tasks.find(t => taskNumOf(t) === clean.padStart(3, "0")) || null;
+  }
+
+  function findBundleReport(ref) {
+    if (!ref) return null;
+    const clean = String(ref).trim();
+    return (state.bundle.research_index || []).find(r => r.file === clean) || null;
+  }
+
+  function buildDeepLinkHash(includeInspector) {
+    const p = new URLSearchParams();
+    p.set("view", state.mainView === "dash" ? "dash" : "chat");
+    if (state.mainView === "dash") {
+      p.set("tab", ALLOWED_DASH_TABS.includes(state.dashTab) ? state.dashTab : "kanban");
+    } else {
+      if (state.room) p.set("room", state.room);
+      if (state.agentFilter && ALLOWED_AGENTS.includes(state.agentFilter)) p.set("agent", state.agentFilter);
+    }
+    if (includeInspector && state.inspOpen) {
+      if (state.inspTab === "report" && state.selectedReportFile) p.set("report", state.selectedReportFile);
+      else if (state.selectedTaskId) p.set("task", state.selectedTaskId);
+    }
+    return "#" + p.toString();
+  }
+
+  function syncUrlHash() {
+    try {
+      const next = buildDeepLinkHash(true);
+      if (window.location.hash !== next) history.replaceState(null, "", next);
+    } catch {}
+  }
+
+  function applyHashNavigation(fromHashChange) {
+    const raw = (window.location.hash || "").replace(/^#/, "");
+    if (!raw) return;
+    let params;
+    try { params = new URLSearchParams(raw); } catch { return; }
+
+    // Preserve in-progress composer draft when navigating via hashchange
+    const inp = document.getElementById("compInput");
+    const draft = fromHashChange && inp ? inp.value : null;
+
+    let changedView = false;
+    const v = params.get("view");
+    if (v === "chat" || v === "dash") { state.mainView = v; changedView = true; }
+
+    const tb = params.get("tab");
+    if (tb && ALLOWED_DASH_TABS.includes(tb)) { state.dashTab = tb; changedView = true; }
+
+    const rm = params.get("room");
+    if (rm) {
+      if (STATIC_ROOMS.includes(rm)) { state.room = rm; changedView = true; }
+      else if (rm.startsWith("task:")) {
+        const mt = findBundleTask(rm.slice(5));
+        if (mt) { state.room = `task:${mt.id}`; changedView = true; }
+      }
+    }
+
+    const ag = params.get("agent");
+    if (ag && ALLOWED_AGENTS.includes(ag)) { state.agentFilter = ag; changedView = true; }
+
+    const rep = params.get("report");
+    const mr = findBundleReport(rep);
+    if (mr) {
+      state.selectedReportFile = mr.file;
+      state.inspOpen = true;
+      state.inspTab = "report";
+      changedView = true;
+    }
+
+    const tsk = params.get("task");
+    const mt = findBundleTask(tsk);
+    if (mt) {
+      state.selectedTaskId = mt.id;
+      if (!mr) { state.inspOpen = true; state.inspTab = "task"; }
+      changedView = true;
+    }
+
+    if (fromHashChange && changedView) {
+      renderAll();
+      if (draft !== null && inp) inp.value = draft;
+    }
+  }
+
+  function copyDeepLink(includeInspector) {
+    const hash = buildDeepLinkHash(includeInspector);
+    const url = window.location.origin + window.location.pathname + hash;
+    const done = () => toast("🔗 Đã copy link dẫn thẳng tới mục này");
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(done).catch(() => fallbackCopy(url, done));
+    } else {
+      fallbackCopy(url, done);
+    }
+  }
+
+  function fallbackCopy(text, cb) {
+    try {
+      const ta = document.createElement("textarea");
+      ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select(); document.execCommand("copy");
+      document.body.removeChild(ta); cb();
+    } catch { toast("Không thể copy tự động"); }
   }
 
   /* ===== SLASH COMMAND PARSER ===== */
@@ -1385,18 +1501,18 @@
     const ch = e.target.closest("[data-room]"); if (ch) { state.room = ch.dataset.room; state.agentFilter = null; state.mainView = "chat"; closeMobileSidebar(); renderAll(); return; }
     const ag = e.target.closest("[data-agent]"); if (ag) { state.agentFilter = state.agentFilter === ag.dataset.agent ? null : ag.dataset.agent; state.mainView = "chat"; closeMobileSidebar(); renderAll(); return; }
     const mf = e.target.closest("[data-msgfilter]"); if (mf) { state.msgFilter = mf.dataset.msgfilter; document.querySelectorAll("[data-msgfilter]").forEach(b=>b.classList.toggle("active",b===mf)); renderChat(); return; }
-    const dt = e.target.closest("[data-dashtab]"); if (dt) { state.dashTab = dt.dataset.dashtab; renderDash(); return; }
-    const it = e.target.closest("[data-insptab]"); if (it) { state.inspTab = it.dataset.insptab; renderInspector(); return; }
+    const dt = e.target.closest("[data-dashtab]"); if (dt) { state.dashTab = dt.dataset.dashtab; renderDash(); syncUrlHash(); return; }
+    const it = e.target.closest("[data-insptab]"); if (it) { state.inspTab = it.dataset.insptab; renderInspector(); syncUrlHash(); return; }
     const jr = e.target.closest("[data-jumproom]"); if (jr) { state.room = jr.dataset.jumproom; state.mainView = "chat"; renderAll(); return; }
     const jt = e.target.closest("[data-jumptask]"); if (jt && jt.dataset.jumptask) { state.room = `task:${jt.dataset.jumptask}`; state.mainView = "chat"; renderAll(); return; }
 
     const tl = e.target.closest("[data-togglelog]"); if (tl) { const el = document.getElementById(tl.dataset.togglelog); if (el) el.classList.toggle("open"); return; }
     if (e.target.id === "btnToggleDigest") { state.digestCollapsed = !state.digestCollapsed; renderChat(); return; }
 
-    const ot = e.target.closest("[data-opentask]"); if (ot && ot.dataset.opentask) { state.selectedTaskId = ot.dataset.opentask; state.inspOpen = true; state.inspTab = "task"; renderInspector(); return; }
+    const ot = e.target.closest("[data-opentask]"); if (ot && ot.dataset.opentask) { state.selectedTaskId = ot.dataset.opentask; state.inspOpen = true; state.inspTab = "task"; renderInspector(); syncUrlHash(); return; }
     const or = e.target.closest("[data-openreport]"); if (or) {
-      if (or.dataset.openreport) { state.selectedReportFile = or.dataset.openreport; if (or.dataset.taskid) state.selectedTaskId = or.dataset.taskid; state.inspOpen = true; state.inspTab = "report"; renderInspector(); }
-      else if (or.dataset.taskid) { state.selectedTaskId = or.dataset.taskid; state.inspOpen = true; state.inspTab = "task"; renderInspector(); }
+      if (or.dataset.openreport) { state.selectedReportFile = or.dataset.openreport; if (or.dataset.taskid) state.selectedTaskId = or.dataset.taskid; state.inspOpen = true; state.inspTab = "report"; renderInspector(); syncUrlHash(); }
+      else if (or.dataset.taskid) { state.selectedTaskId = or.dataset.taskid; state.inspOpen = true; state.inspTab = "task"; renderInspector(); syncUrlHash(); }
       return;
     }
 
@@ -1452,8 +1568,10 @@
   document.getElementById("btnMenuDash").onclick = document.getElementById("btnMenu").onclick;
   document.getElementById("sbBackdrop").onclick = closeMobileSidebar;
   document.getElementById("btnBackChat").onclick = () => { state.mainView = "chat"; renderAll(); };
-  document.getElementById("btnToggleInsp").onclick = () => { state.inspOpen = !state.inspOpen; renderInspector(); };
-  document.getElementById("btnCloseInsp").onclick = () => { state.inspOpen = false; state.zenMode = false; renderInspector(); };
+  document.getElementById("btnToggleInsp").onclick = () => { state.inspOpen = !state.inspOpen; renderInspector(); syncUrlHash(); };
+  document.getElementById("btnCloseInsp").onclick = () => { state.inspOpen = false; state.zenMode = false; renderInspector(); syncUrlHash(); };
+  document.getElementById("btnCopyRoomLink").onclick = () => copyDeepLink(false);
+  document.getElementById("btnCopyInspLink").onclick = () => copyDeepLink(true);
   document.getElementById("btnZen").onclick = () => { state.zenMode = !state.zenMode; renderInspector(); };
   document.getElementById("btnFlowToggle").onclick = () => { state.flowOpen = !state.flowOpen; renderFlowBar(); };
   document.getElementById("btnRefresh").onclick = () => refreshLive(true);
@@ -1574,6 +1692,8 @@
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") { e.preventDefault(); openPalette(); }
   });
 
+  applyHashNavigation(false);
+  window.addEventListener("hashchange", () => applyHashNavigation(true));
   renderAll();
   refreshLive(false);
 })();
