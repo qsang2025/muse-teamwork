@@ -55,7 +55,7 @@ def protect_no_password(ws):
     """Bật Protect Sheet KHÔNG mật khẩu (task 206 việc 4: chưa có quy định
     mật khẩu của nhà máy nên không đặt mật khẩu; khóa chỉ chống sửa nhầm)."""
     ws.protection.sheet = True
-    ws.protection.password = None
+    # Không gán password: mặc định openpyxl là không mật khẩu (gán None sẽ lỗi hash).
     ws.protection.formatCells = False
     ws.protection.formatColumns = False
     ws.protection.formatRows = False
@@ -528,6 +528,7 @@ wk.print_area = "A1:D21"
 # Thứ tự sheet: README, TblCa, TblTocDo, MoHinh, Macro_CuoiCa, KiemChung
 wb._sheets = [wb["README"], wb["TblCa"], wb["TblTocDo"], wb["MoHinh"], wb["Macro_CuoiCa"], wb["KiemChung"]]
 wb.active = wb["README"]
+wb.calculation.fullCalcOnLoad = True  # Excel tính lại toàn bộ khi mở file (openpyxl không lưu giá trị đệm)
 wb.properties.creator = "muse-1 (Ú)"
 wb.properties.title = "TblCa mẫu OEE — Intermediate II (task 206)"
 wb.properties.description = "File mẫu áp dụng 6 việc Intermediate II (205 mục 8) lên số liệu minh họa 179/204/205. Không macro, không số liệu thật nhà máy."
