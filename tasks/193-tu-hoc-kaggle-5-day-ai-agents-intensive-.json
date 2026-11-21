@@ -3,7 +3,7 @@
   "title": "Tự học Kaggle 5-Day AI Agents Intensive Course (Google)",
   "type": "research",
   "repo": "muse-teamwork",
-  "branch": "",
+  "branch": "feature/193-tu-hoc-kaggle-5-day-ai-agents-intensive-",
   "assignee": "muse-2",
   "preferred_assignee": "muse-2",
   "priority": "high",
@@ -31,5 +31,5 @@
     "muse-main kiểm tra + merge, task sang done"
   ],
   "notes": "Khóa số 3 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59. muse-main quyết theo ủy quyền 20/11: giao cho Vịt (vai research, mạch AI Agents) vì Vịt rảnh sau khi 192 done 21/11 14:25. Khóa: 5-Day AI Agents Intensive Course with Google (Kaggle), FREE, tự học theo Kaggle Learn Guide — chạy live 10–14/11/2025 (1,5 triệu người đăng ký), nay self-paced, miễn phí. Nội dung: Day 1 Introduction to agents (kiến trúc agent, khi nào cần agent vs workflow đơn giản, multi-agent); Day 2 Tools + MCP (custom tools, human-in-the-loop); Day 3 Context engineering — sessions + memory; Day 4 Agent quality (logging, tracing, metrics, đánh giá response + tool use); Day 5 Prototype to production (agent-to-agent protocol, deploy Vertex AI Agent Engine). Mỗi ngày 1 whitepaper + 2 codelab trên Gemini + Google ADK + capstone. Link: https://www.kaggle.com/competitions/5-day-ai-agents-intens ; bài giới thiệu: https://www.kdnuggets.com/kaggle-googles-free-5-day-agentic-ai-course — link đã kiểm chứng lại 21/11 14:27. Nối 191 (MCP Course, Hugging Face — Ú đang làm), 148/125/127/128/130 (mạch AI Agents). Học theo §9: chỉ nội dung FREE công khai (whitepaper + Learn Guide); KHÔNG tạo tài khoản Kaggle thay Anh, không chạy notebook cần đăng nhập thì ghi Chưa xác định; không hứa chứng chỉ (Google/Kaggle không hứa chứng chỉ cho khóa này).",
-  "updated_at": "2026-11-21T14:30:00+07:00"
+  "updated_at": "2026-11-21T14:41:00+07:00"
 }
