@@ -2,7 +2,7 @@
 
 - Quy tắc mới 21/11: PROTOCOL §11 chống báo "xong" ảo (Kerr/Muse Next) + INCIDENTS.md + CORRECTIONS.md — gate bằng chứng khi nộp task, áp dụng từ task tiếp theo.
 
-- 192 (open, muse-2 — tự học AI Visibility Essentials with Semrush (Semrush Academy): ĐÃ GIAO 21/11 14:10, ưu tiên CAO — học xong trước 15/12/2026 vì Semrush Academy chuyển nền tảng mới 16/12, tiến độ chưa xong sẽ reset. Khóa số 2 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59; FREE, đo AI visibility + tối ưu cho LLM + walkthrough AI Visibility Toolkit; nối 154/158/156 (mạch SEO/AEO).)
+- 192 (claimed, muse-2 — tự học AI Visibility Essentials with Semrush (Semrush Academy): Vịt đã claim 21/11 14:13, branch feature/192-ai-visibility-essentials-semrush. ĐÃ GIAO 21/11 14:10, ưu tiên CAO — học xong trước 15/12/2026 vì Semrush Academy chuyển nền tảng mới 16/12, tiến độ chưa xong sẽ reset. Khóa số 2 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59; FREE, đo AI visibility + tối ưu cho LLM + walkthrough AI Visibility Toolkit; nối 154/158/156 (mạch SEO/AEO).)
 
 - 191 (open, muse-1 — tự học MCP Course (Hugging Face, xây cùng Anthropic): ĐÃ GIAO 21/11 14:10. Khóa số 1 đợt 12 khóa AI/Dev Anh DUYỆT 21/11 13:59; FREE, 4 unit ~3–4 giờ/tuần, bản JS/TS, build + deploy MCP server thật; nối 148/125/127/128/130 (mạch AI Agents).)
 
