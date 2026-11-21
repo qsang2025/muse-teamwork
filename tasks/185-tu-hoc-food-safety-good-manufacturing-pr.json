@@ -7,7 +7,7 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "review",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-21T12:31:18+07:00",
   "claimed_at": "2026-11-21T12:38:35+07:00",
@@ -19,7 +19,14 @@
       "device_test": "n/a",
       "install": "n/a"
     },
-    "notes": "Báo cáo tự học Food Safety: GMP in the Food Industry (Alison) tại research/185-food-safety-gmp-alison.md (163 dòng): 6 mục tiêu học tập chính thức, định nghĩa an toàn thực phẩm, cách tiếp cận chuỗi + vị trí GMP dưới HACCP, yêu cầu cơ sở (thiết kế/tiện ích/thiết bị/nguyên liệu mua vào/ngăn nhiễm chéo/làm sạch/sâu hại), vai trò nhân sự, kiểm soát quá trình (nguyên liệu đầu vào/bao bì/nước/hồ sơ/thu hồi), nhãn & thông tin sản phẩm, khung soát GMP/PRP khi kiểm toán nội bộ theo hạng mục (hiện trạng Chưa xác định), đối chiếu 171/173/180/181/183/184 + checklist FSSC v7. PRP v7 đối chiếu cặp ISO 22002-100+1:2025 (task 171). Chỉ học FREE công khai, không đăng ký/Final Assessment/chứng chỉ (§9). Nhà phát hành + danh sách module chi tiết: Chưa xác định (sau đăng ký)."
+    "notes": "Báo cáo tự học Food Safety: GMP in the Food Industry (Alison) tại research/185-food-safety-gmp-alison.md (163 dòng): 6 mục tiêu học tập chính thức, định nghĩa an toàn thực phẩm, cách tiếp cận chuỗi + vị trí GMP dưới HACCP, yêu cầu cơ sở (thiết kế/tiện ích/thiết bị/nguyên liệu mua vào/ngăn nhiễm chéo/làm sạch/sâu hại), vai trò nhân sự, kiểm soát quá trình (nguyên liệu đầu vào/bao bì/nước/hồ sơ/thu hồi), nhãn & thông tin sản phẩm, khung soát GMP/PRP khi kiểm toán nội bộ theo hạng mục (hiện trạng Chưa xác định), đối chiếu 171/173/180/181/183/184 + checklist FSSC v7. PRP v7 đối chiếu cặp ISO 22002-100+1:2025 (task 171). Chỉ học FREE công khai, không đăng ký/Final Assessment/chứng chỉ (§9). Nhà phát hành + danh sách module chi tiết: Chưa xác định (sau đăng ký).",
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T13:10:46+07:00",
+      "note": "Dat (8/10). muse-main kiem chung doc lap 21/11: khoa co that tren Alison, hoc FREE 0 EUR, 1,5-3 gio, dung link trong task; 6 muc tieu hoc tap khop mo ta chinh thuc; bao cao phan biet dung voi khoa Alison khac ten gan giong; doi chieu cheo 171/173/180/181/183/184 nhat quan; khung soat GMP/PRP 14 hang muc cho kiem toan noi bo, moi hien trang de Chua xac dinh; khong dua dap an quiz Food Fraud; khong dung noi dung tra phi. Bao cao 163 dong. Tru 2: hoc qua muc tieu + mo ta chinh thuc + tai lieu cong khai thay vi xem du video (module nam sau dang ky, da ghi Chua xac dinh). Merge giu theo quyet dinh cua Anh 13:09 (merge ca 182 + 185)."
+    }
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
@@ -29,5 +36,5 @@
     "muse-main kiểm tra + merge, task sang done"
   ],
   "notes": "Khóa số 8, mạch A (An toàn thực phẩm & chất lượng), trong danh sách 20 khóa công việc Anh duyệt 21/11 08:31 trong voice call. Bằng chứng: research/171-danh-sach-khoa-hoc-cong-viec-da-duyet.md trên main (dòng A8). Khóa: Food Safety: Good Manufacturing Practices (GMP) in the Food Industry, Alison, 1,5–3 giờ, https://alison.com/course/food-safety-good-manufacturing-practices-gmp-in-the-food-industry — PRP/GMP từ tiếp nhận nguyên liệu đến thành phẩm — đối chiếu PRP FSSC 22000 khi kiểm toán nội bộ. Học theo §9: chỉ nội dung FREE công khai, không đăng ký trả phí/chứng chỉ, không làm Final Assessment; ghi Chưa xác định khi không xem được nội dung sau đăng ký. muse-main quyết theo ủy quyền 20/11: giao tiếp mạch A sau khi 184 merge xong. Delegation: giao Ú học + viết báo cáo; muse-main giữ review + merge. Báo cáo viết vào research/185-food-safety-gmp-alison.md, review muse-main chấm /10 như task research khác.",
-  "updated_at": "2026-11-21T12:41:06+07:00"
+  "updated_at": "2026-11-21T13:10:46+07:00"
 }
