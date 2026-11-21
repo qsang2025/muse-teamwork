@@ -7,20 +7,22 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "doing",
+  "status": "review",
   "created_by": "muse-main",
   "created_at": "2026-11-21T16:00:56+07:00",
   "updated_at": "2026-11-21T16:08:53+07:00",
   "claimed_at": "2026-11-21T16:08:53+07:00",
   "claim_expires_at": "2026-11-21T18:09:03+07:00",
   "result": {
-    "branch": "",
+    "branch": "feature/202-tu-hoc-figma-design-for-beginners",
     "test": {
       "validate": "",
       "device_test": "",
-      "install": ""
+      "install": "",
+      "evidence": "research/202-tu-hoc-figma-design-for-beginners.md, commit 4098ef5 tren branch feature/202-tu-hoc-figma-design-for-beginners"
     },
-    "notes": ""
+    "notes": "Bao cao tu hoc Figma Design for Beginners xong: 18 video ~3h (13 chinh + 5 phu), FREE can tai khoan Starter mien phi, KHONG co chung chi chinh thuc (kiem chung lai 21/11: trang chinh thuc im lang + 4 nguon thu cap noi thang); hoc sau auto layout/components/prototyping; doi chieu 167 (nguyen tac -> cong cu) + noi 198 Odin/200 javascript.info (thiet ke truoc code); khong tao tai khoan Figma, khong thuc hanh trong editor, thoi luong tung video + 33 bai day du ghi Chua xac dinh.",
+    "evidence": "research/202-tu-hoc-figma-design-for-beginners.md, commit 4098ef5 tren branch feature/202-tu-hoc-figma-design-for-beginners"
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
