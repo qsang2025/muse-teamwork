@@ -17,14 +17,14 @@
   "repo": "muse-teamwork",
   "result": {
     "branch": "feature/178-supply-chain-planning-rutgers",
-    "notes": "",
+    "notes": "Da hoc xong Supply Chain Planning (Rutgers, Coursera, khoa B4 mach B): 4 module, 1 tuan ~10 gio, 106.042 hoc vien, 4,7/5 (3.092 danh gia), GV Rudolf Leuschner, Ph.D. Chi noi dung FREE cong khai qua che do Audit, khong ghi danh, khong lam bai cham diem, khong lay chung chi. Tu tinh so sanh 7 phuong phap du bao tren day nhu cau 12 thang - chi phuong phap Holt nam trong nguong kiem soat (tracking signal -1,79, MAPE 5,02%); phuong phap naive tuy sai trung binh it nhat nhung tracking signal +6,51, tuc sai deu mot huong, khong dung duoc. VD lap ke hoach tong hop 6 thang: san xuat deu (level) re hon duoi theo nhu cau (chase) 2.922.000 d voi gia dinh minh hoa. Khoa tiep theo theo de xuat trong bao cao 177 la B7 Excel Skills for Business: Essentials (Macquarie). Bao cao research/178-supply-chain-planning-rutgers.md.",
     "test": {
       "device_test": "n/a",
       "install": "n/a",
       "validate": ""
     }
   },
-  "status": "claimed",
+  "status": "review",
   "title": "Tự học Supply Chain Planning (Rutgers, Coursera)",
   "type": "research",
   "updated_at": "2026-11-21T10:15:00+07:00",
