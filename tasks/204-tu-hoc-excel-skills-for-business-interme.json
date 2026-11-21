@@ -7,10 +7,10 @@
   "assignee": "muse-1",
   "preferred_assignee": "muse-1",
   "priority": "medium",
-  "status": "review",
+  "status": "done",
   "created_by": "muse-main",
   "created_at": "2026-11-21T18:49:15+07:00",
-  "updated_at": "2026-11-21T18:57:32+07:00",
+  "updated_at": "2026-11-21T19:02:00+07:00",
   "claimed_at": "2026-11-21T18:55:21+07:00",
   "claim_expires_at": "2026-11-21T20:55:52+07:00",
   "result": {
@@ -22,7 +22,14 @@
       "evidence": "research/204-tu-hoc-excel-skills-for-business-intermediate-i.md, commit a94ca66"
     },
     "notes": "Bao cao research/204 (145 dong): Intermediate I ban goc 7 module/6 tuan (Multiple Worksheets, Text/Date, Named Ranges, COUNTIFS, Tables, PivotTable/Slicer/dashboard) + doi chieu ban AI moi 7/2026 (6 module, 43 bai, VLOOKUP/XLOOKUP, HR scenario) — hai ban song song, khong phai doi ten; dinh chinh VLOOKUP thuoc Intermediate II/ban AI, khong co trong syllabus ban goc; 6 viec ap dung dashboard OEE (TblCa, COUNTIFS ca xau, PivotTable OEE tinh tu tong, Slicer). Khong ghi danh/tra phi/lam bai thay Anh.",
-    "evidence": "research/204-tu-hoc-excel-skills-for-business-intermediate-i.md, commit a94ca66"
+    "evidence": "research/204-tu-hoc-excel-skills-for-business-intermediate-i.md, commit a94ca66",
+    "review": {
+      "score": 8,
+      "rounds": 1,
+      "by": "muse-main",
+      "at": "2026-11-21T19:02:00+07:00",
+      "note": "Kiem chung doc lap 21/11 19:02 (muse-main): trang Coursera ban goc khop 7 module, 3 tuan x 10h, 39 assignments, rating 4,888/5, ~449k ghi danh, 17.781 reviews, FAQ Excel 2016; ban AI moi khop 6 module, 4 tuan, 43 assignments, Recently updated July 2026, HR scenario, AI Corner module Lookups, VLOOKUP/XLOOKUP + Flash Fill + timeline; Class Central ca hai Price 0 USD; tu tinh lai vi du COUNTIFS/AVERAGEIFS muc 4 khop (1 ca do, 2 ca vang, 71,75%). Quy dao khop nguon, ghi Chua xac dinh dung cho (ten module ban AI, nut Audit). Diem tru nho: so ghi danh/reviews dao dong theo ngay crawl; danh sach 3 giang vien ban goc chua doi chieu tung ten; hoc qua trang khoa + syllabus cong khai, khong xem video sau ghi danh (gioi han da ghi ro, nhu 179/203). Merge 26e5f4b."
+    }
   },
   "checklist": [
     "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
@@ -31,5 +38,5 @@
     "Push branch, cập nhật task sang review",
     "muse-main kiểm tra + merge, task sang done"
   ],
-  "notes": "Khóa nối tiếp 179 (Excel Skills for Business: Essentials, muse-2 done 21/11 11:20) — khóa 2 trong chuỗi 4 khóa Excel Skills for Business (Essentials → Intermediate I → Intermediate II → Advanced), Macquarie University, Coursera. FREE (Class Central ghi Price 0 USD, kiểm chứng 21/11 18:50): https://www.classcentral.com/course/coursera-excel-intermediate-1-9640?follow=true — 7 module, 3 tuần (~10 giờ/tuần), ~449.000 học viên, 17.780 đánh giá, giảng viên Nicky Bull + Prashan Karunaratne; nội dung: gộp dữ liệu nhiều sheet/workbook, hàm date/text/COUNTIFS, Named Ranges, Tables, VLOOKUP/XLOOKUP, PivotTable + Pivot Chart + Slicer, dashboard — đúng phần 179 ghi rõ còn thiếu để làm dashboard OEE tự động (179 mục 7 + kết luận: 'Muốn dashboard thật thì phải học tiếp Intermediate I'). Học theo §9: chỉ nội dung FREE công khai; học qua trang khóa + syllabus công khai + tài liệu chuẩn, KHÔNG ghi danh trả phí/chứng chỉ, KHÔNG làm quiz/bài tập chấm điểm thay Anh; phần sau đăng nhập/video bài giảng ghi Chưa xác định. Lưu ý 179: khóa Intermediate đã được làm mới tháng 7/2026 thành 'Excel for Business with AI: Intermediate' (thêm Flash Fill, hàm text/date, VLOOKUP/XLOOKUP, PivotTable, dashboard, 43 bài tập) — worker đối chiếu xem trang hiện tại là bản Intermediate I cũ hay bản AI mới, ghi rõ. Nối 179 (nền Essentials → dashboard) + 177/178 (mô hình dự báo/S&OP → tự động hóa bằng PivotTable/Slicer) + checklist OEE 174/179. muse-main quyết theo ủy quyền 20/11: DUYỆT BỔ SUNG khóa nối này (ngoài danh sách 20 khóa công việc đã duyệt — theo đúng tiền lệ 203: khóa FREE chính thức, nối trực tiếp báo cáo trước, Ú rảnh không còn khóa đã duyệt; đợt 12 khóa AI/Dev đã xong 11/12, còn 199 Vịt đang làm). [18:55 muse-1: Da claim, dang khao sat syllabus Intermediate I + ban AI moi de doi chieu]"
+  "notes": "Khóa nối tiếp 179 (Excel Skills for Business: Essentials, muse-2 done 21/11 11:20) — khóa 2 trong chuỗi 4 khóa Excel Skills for Business (Essentials → Intermediate I → Intermediate II → Advanced), Macquarie University, Coursera. FREE (Class Central ghi Price 0 USD, kiểm chứng 21/11 18:50): https://www.classcentral.com/course/coursera-excel-intermediate-1-9640?follow=true — 7 module, 3 tuần (~10 giờ/tuần), ~449.000 học viên, 17.780 đánh giá, giảng viên Nicky Bull + Prashan Karunaratne; nội dung: gộp dữ liệu nhiều sheet/workbook, hàm date/text/COUNTIFS, Named Ranges, Tables, VLOOKUP/XLOOKUP, PivotTable + Pivot Chart + Slicer, dashboard — đúng phần 179 ghi rõ còn thiếu để làm dashboard OEE tự động (179 mục 7 + kết luận: 'Muốn dashboard thật thì phải học tiếp Intermediate I'). Học theo §9: chỉ nội dung FREE công khai; học qua trang khóa + syllabus công khai + tài liệu chuẩn, KHÔNG ghi danh trả phí/chứng chỉ, KHÔNG làm quiz/bài tập chấm điểm thay Anh; phần sau đăng nhập/video bài giảng ghi Chưa xác định. Lưu ý 179: khóa Intermediate đã được làm mới tháng 7/2026 thành 'Excel for Business with AI: Intermediate' (thêm Flash Fill, hàm text/date, VLOOKUP/XLOOKUP, PivotTable, dashboard, 43 bài tập) — worker đối chiếu xem trang hiện tại là bản Intermediate I cũ hay bản AI mới, ghi rõ. Nối 179 (nền Essentials → dashboard) + 177/178 (mô hình dự báo/S&OP → tự động hóa bằng PivotTable/Slicer) + checklist OEE 174/179. muse-main quyết theo ủy quyền 20/11: DUYỆT BỔ SUNG khóa nối này (ngoài danh sách 20 khóa công việc đã duyệt — theo đúng tiền lệ 203: khóa FREE chính thức, nối trực tiếp báo cáo trước, Ú rảnh không còn khóa đã duyệt; đợt 12 khóa AI/Dev đã xong 11/12, còn 199 Vịt đang làm). [18:55 muse-1: Da claim, dang khao sat syllabus Intermediate I + ban AI moi de doi chieu] [21/11 19:02 muse-main: review 8/10 vong 1, DA MERGE 26e5f4b (research/204-tu-hoc-excel-skills-for-business-intermediate-i.md, 145 dong). U ranh → task 205 Intermediate II da tao.]"
 }

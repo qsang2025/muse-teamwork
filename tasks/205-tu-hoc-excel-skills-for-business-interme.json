@@ -1,0 +1,33 @@
+{
+  "id": "205-tu-hoc-excel-skills-for-business-interme",
+  "title": "Tự học Excel Skills for Business: Intermediate II",
+  "type": "research",
+  "repo": "muse-teamwork",
+  "branch": "feature/205-tu-hoc-excel-skills-for-business-intermediate-ii",
+  "assignee": "",
+  "preferred_assignee": "muse-1",
+  "priority": "medium",
+  "status": "open",
+  "created_by": "muse-main",
+  "created_at": "2026-11-21T19:02:06+07:00",
+  "updated_at": "2026-11-21T19:02:06+07:00",
+  "claimed_at": "",
+  "claim_expires_at": "",
+  "result": {
+    "branch": "",
+    "test": {
+      "validate": "",
+      "device_test": "",
+      "install": ""
+    },
+    "notes": ""
+  },
+  "checklist": [
+    "Quét repo đích + tasks/open + ROADMAP (chống trùng)",
+    "Claim task (script claim-task.sh) + tạo branch",
+    "Build / khảo sát xong, test đầy đủ",
+    "Push branch, cập nhật task sang review",
+    "muse-main kiểm tra + merge, task sang done"
+  ],
+  "notes": "Khóa nối tiếp 204 (Excel Skills for Business: Intermediate I, muse-1 done 21/11 19:02) — khóa 3 trong chuỗi 4 khóa Excel Skills for Business (Essentials → Intermediate I → Intermediate II → Advanced), Macquarie University, Coursera. FREE (kiểm chứng 21/11 19:02): https://www.coursera.org/learn/excel-intermediate-2 — 7 module, 3 tuần (~10 giờ/tuần), Course 3 of 4 trong Specialization; syllabus 6 tuần (MOOC-list, đọc 21/11/2026): Data Validation, Conditional Logic, Automating Lookups (CHOOSE/VLOOKUP/INDEX/MATCH), Formula Auditing and Protection, Data Modelling, Recording Macros. Đúng phần 179 mục 7 + 204 mục 7/8 ghi còn thiếu sau Intermediate I: VLOOKUP/XLOOKUP (lookups), IF/conditional logic sâu, data validation, formula auditing/protection, macros — các mảnh còn thiếu để hoàn thiện dashboard OEE (validation chống nhập sai + XLOOKUP tra tốc độ chuẩn theo máy + macro refresh tự động). Học theo §9: chỉ nội dung FREE công khai; học qua trang khóa + syllabus công khai + tài liệu chuẩn, KHÔNG ghi danh trả phí/chứng chỉ, KHÔNG làm quiz/bài tập chấm điểm thay Anh; phần sau đăng nhập/video bài giảng ghi Chưa xác định. Lưu ý 204: bản AI mới 'Excel for Business with AI: Intermediate' (7/2026) đã gộp một phần Intermediate II (VLOOKUP/XLOOKUP, validation) — worker đối chiếu xem có nên học bản AI thay bản gốc không, nhưng KHÔNG tự đổi khóa đã giao; đề xuất để muse-main/Anh quyết (Anh chưa trả lời ngã rẽ này ở 204). Nối 204 (PivotTable/Slicer/dashboard) + 179 (IFERROR thuộc Intermediate II) + 177/178 (mô hình dự báo/S&OP → tự động hóa bằng lookups/macros). muse-main quyết theo ủy quyền 20/11: DUYỆT BỔ SUNG khóa nối này (ngoài danh sách 20 khóa công việc đã duyệt — theo đúng tiền lệ 203/204: khóa FREE chính thức, nối trực tiếp báo cáo trước, Ú rảnh không còn khóa đã duyệt)."
+}
