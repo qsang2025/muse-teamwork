@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="theme-color" content="#0d1321" />
-<title>Muse.ai Fleet Console v4.0 — Phòng Điều Phối 3 Muse</title>
+<title>Muse.ai Fleet Console v5.0 — Phòng Điều Phối 3 Muse</title>
 <style>
   :root {
     --sb-bg: #0d1321;
@@ -486,7 +486,7 @@
           <button class="btn sm" id="btnSlashHint" title="Xem các lệnh /slash">/ Lệnh</button>
         </div>
         <div class="comp-box">
-          <textarea class="comp-input" id="compInput" rows="1" placeholder="Nhắn tin hoặc gõ / để dùng lệnh (/giao, /hoc, /duyet, /sua, /chuyen)..."></textarea>
+          <textarea class="comp-input" id="compInput" rows="1" placeholder="Nhắn tin hoặc gõ / để dùng lệnh (/giao, /hoc, /duyet [⏳ đề nghị Bẹp duyệt], /sua, /chuyen)..."></textarea>
           <button class="comp-send" id="btnSend">Gửi ➤</button>
         </div>
       </footer>
@@ -552,12 +552,16 @@
   <div class="modal">
     <h3>🔑 Kết nối GitHub PAT</h3>
     <p style="font-size:12.5px;color:var(--ink2);margin:0 0 10px;">
-      Dùng fine-grained PAT chỉ cấp quyền <b>Issues: Read &amp; Write</b> cho repo <code>qsang2025/muse-teamwork</code>. Token chỉ lưu ở <code>localStorage</code> trình duyệt của Anh.
+      Dùng fine-grained PAT chỉ cấp cho <b>1 repo <code>qsang2025/muse-teamwork</code></b>, chỉ quyền <b>Issues: Read &amp; Write</b>, hạn <b>30 ngày</b>. Mặc định lưu vào <code>sessionStorage</code> (đóng tab tự xóa).
     </p>
     <div class="field">
       <label>GitHub Personal Access Token</label>
       <input id="patInput" type="password" placeholder="github_pat_..." autocomplete="off" />
     </div>
+    <label style="display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink2);margin:6px 0 12px;cursor:pointer;">
+      <input type="checkbox" id="patRemember" />
+      <span>Ghi nhớ trên thiết bị cá nhân này (<code>localStorage</code>)</span>
+    </label>
     <div style="display:flex;justify-content:flex-end;gap:8px;">
       <button class="btn" id="patClear">Xóa PAT</button>
       <button class="btn" id="patCancel">Đóng</button>
@@ -656,10 +660,21 @@
   const SLASH_CMDS = [
     { cmd: "/giao", syntax: "/giao @muse-1 [high] <tiêu đề>", desc: "Bản nháp giao việc mới (new-task)" },
     { cmd: "/hoc",  syntax: "/hoc <tên hoặc link khóa học>", desc: "Đề xuất khóa học mới cho Chị cả kiểm chứng FREE" },
-    { cmd: "/duyet",syntax: "/duyet #NNN <ghi chú>", desc: "Gửi yêu cầu Bẹp xem xét duyệt (không tự đổi status)" },
+    { cmd: "/duyet",syntax: "/duyet #NNN <ghi chú>", desc: "⏳ Đã gửi đề nghị Bẹp duyệt (chưa merge)" },
     { cmd: "/sua",  syntax: "/sua #NNN <yêu cầu sửa>", desc: "Gửi yêu cầu Bẹp/Worker xem xét sửa lại" },
     { cmd: "/chuyen",syntax:"/chuyen #NNN @muse-2 <lý do>", desc: "Đề xuất Bẹp chuyển người phụ trách" }
   ];
+
+  function getPat() {
+    try { return sessionStorage.getItem(PAT_KEY) || localStorage.getItem(PAT_KEY) || ""; } catch { return ""; }
+  }
+  function getPatMode() {
+    try {
+      if (sessionStorage.getItem(PAT_KEY)) return "session";
+      if (localStorage.getItem(PAT_KEY)) return "local";
+    } catch {}
+    return "";
+  }
 
   let state = {
     bundle: window.__DASH_SNAPSHOT__ || {},
@@ -853,11 +868,14 @@
 
     state.localCmds.forEach(lc => {
       if (lc.issueNumber && state.ghIssues.some(g => g.number === lc.issueNumber)) return;
+      const bdg = lc.badge
+        ? (lc.issueNumber ? `${lc.badge} • Issue #${lc.issueNumber}` : lc.badge)
+        : (lc.issueNumber ? `⏳ Đã gửi Issue #${lc.issueNumber}` : `↗ Bản nháp GitHub`);
       msgs.push({
         id: `local-${lc.id}`, ts: lc.ts, timeIso: new Date(lc.ts).toISOString(),
         sender: "anh", kind: "commander", taskId: lc.taskId || "", taskNum: lc.taskNum || "",
         taskType: "general", taskStatus: "open", text: lc.text,
-        badge: lc.issueNumber ? `⏳ Đã gửi Issue #${lc.issueNumber}` : `↗ Bản nháp GitHub`
+        badge: bdg
       });
     });
 
@@ -927,9 +945,12 @@
     document.getElementById("liveDot").className = "dot-live" + (isStale ? " stale" : "");
     document.getElementById("livePulseTxt").textContent = isStale ? `Snapshot ${fmtTime(state.bundle.generated_at)}` : "3 con Muse";
 
-    const hasPat = !!localStorage.getItem(PAT_KEY);
-    document.getElementById("patStatusTxt").textContent = hasPat ? "Lead Admin • PAT Đã gắn ✓" : "Lead Admin • Chưa gắn PAT";
-    document.getElementById("btnPat").className = "icon-btn" + (hasPat ? " ok" : "");
+    const patMode = getPatMode();
+    document.getElementById("patStatusTxt").textContent =
+      patMode === "session" ? "Lead Admin • PAT Phiên tạm ✓ (sessionStorage)" :
+      patMode === "local" ? "Lead Admin • PAT Ghi nhớ ✓ (localStorage)" :
+      "Lead Admin • Chưa gắn PAT";
+    document.getElementById("btnPat").className = "icon-btn" + (patMode ? " ok" : "");
   }
 
   function renderLiveStrip() {
@@ -1225,12 +1246,12 @@
   }
 
   /* ===== MANDATORY CONFIRMATION & GITHUB ISSUE DISPATCH ===== */
-  function openConfirm({ title, body, taskId, displayMsg, note }) {
-    state.pendingConfirm = { taskId: taskId || "", displayMsg: displayMsg || title };
+  function openConfirm({ title, body, taskId, displayMsg, note, badge }) {
+    state.pendingConfirm = { taskId: taskId || "", displayMsg: displayMsg || title, badge: badge || "" };
     document.getElementById("cfmTitle").value = title;
     document.getElementById("cfmBody").value = body;
     document.getElementById("cfmNote").textContent = note || "Mọi lệnh đều tạo GitHub Issue để Bẹp (muse-main) xem xét và áp dụng — không sửa trực tiếp tasks/*.json.";
-    document.getElementById("cfmSendPat").style.display = localStorage.getItem(PAT_KEY) ? "inline-flex" : "none";
+    document.getElementById("cfmSendPat").style.display = getPat() ? "inline-flex" : "none";
     document.getElementById("confirmModal").classList.add("open");
   }
 
@@ -1242,13 +1263,13 @@
 
     if (!viaPat) {
       window.open(`https://github.com/${REPO}/issues/new?labels=dashboard&title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`, "_blank", "noopener");
-      state.localCmds.push({ id: Date.now(), ts: Date.now(), taskId: pc.taskId, taskNum: taskNumOf(pc.taskId), text: pc.displayMsg });
+      state.localCmds.push({ id: Date.now(), ts: Date.now(), taskId: pc.taskId, taskNum: taskNumOf(pc.taskId), text: pc.displayMsg, badge: pc.badge || "" });
       saveLocalCmds(state.localCmds); renderChat();
       toast("Đã mở bản nháp GitHub Issue");
       return;
     }
 
-    const pat = localStorage.getItem(PAT_KEY);
+    const pat = getPat();
     if (!pat) return toast("Chưa gắn PAT!");
     try {
       const res = await fetch(`https://api.github.com/repos/${REPO}/issues`, {
@@ -1258,7 +1279,7 @@
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const iss = await res.json();
-      state.localCmds.push({ id: Date.now(), ts: Date.now(), issueNumber: iss.number, taskId: pc.taskId, taskNum: taskNumOf(pc.taskId), text: pc.displayMsg });
+      state.localCmds.push({ id: Date.now(), ts: Date.now(), issueNumber: iss.number, taskId: pc.taskId, taskNum: taskNumOf(pc.taskId), text: pc.displayMsg, badge: pc.badge || "" });
       saveLocalCmds(state.localCmds); renderChat();
       toast(`✓ Đã tạo Issue #${iss.number} chờ Bẹp xử lý`);
     } catch (err) {
@@ -1268,7 +1289,7 @@
 
   async function refreshLive(manual) {
     try { const r = await fetch(`./tasks-bundle.json?t=${Date.now()}`); if (r.ok) state.bundle = await r.json(); } catch {}
-    const pat = localStorage.getItem(PAT_KEY);
+    const pat = getPat();
     // Rate-limit safe: only call GitHub API when PAT exists or manual refresh, with 60s error backoff
     if ((pat || manual) && (Date.now() - state.lastGhErrTs > 60000)) {
       try {
@@ -1328,7 +1349,8 @@
         title: `[dashboard] ${tnum}: bình luận`,
         body: `task: ${tnum}\naction: comment\n\n[${label}] ${rest || "(Từ Phòng Chat Chỉ Huy)"}`,
         taskId: tnum,
-        displayMsg: `${cmd} #${tnum} ${rest}`
+        displayMsg: `${cmd} #${tnum} ${rest}`,
+        badge: cmd === "/duyet" ? "⏳ Đã gửi đề nghị Bẹp duyệt (chưa merge)" : ""
       });
       return true;
     }
@@ -1389,7 +1411,13 @@
       const act = rc.dataset.reqcmd, tid = rc.dataset.taskid, tnum = taskNumOf(tid);
       if (!tnum) return toast("Thiếu mã task NNN");
       const lbl = act === "approve" ? "YÊU CẦU BẸP XỬ LÝ: DUYỆT" : "YÊU CẦU BẸP XỬ LÝ: SỬA LẠI";
-      openConfirm({ title: `[dashboard] ${tnum}: bình luận`, body: `task: ${tnum}\naction: comment\n\n[${lbl}] Nhờ Bẹp xem xét task #${tnum}.`, taskId: tid, displayMsg: `${lbl} #${tnum}` });
+      openConfirm({
+        title: `[dashboard] ${tnum}: bình luận`,
+        body: `task: ${tnum}\naction: comment\n\n[${lbl}] Nhờ Bẹp xem xét task #${tnum}.`,
+        taskId: tid,
+        displayMsg: `${lbl} #${tnum}`,
+        badge: act === "approve" ? "⏳ Đã gửi đề nghị Bẹp duyệt (chưa merge)" : ""
+      });
       return;
     }
 
@@ -1443,10 +1471,32 @@
     document.documentElement.setAttribute("data-theme", next); localStorage.setItem(THEME_KEY, next);
   };
 
-  document.getElementById("btnPat").onclick = () => { document.getElementById("patInput").value = localStorage.getItem(PAT_KEY) || ""; document.getElementById("patModal").classList.add("open"); };
+  document.getElementById("btnPat").onclick = () => {
+    document.getElementById("patInput").value = getPat();
+    document.getElementById("patRemember").checked = false;
+    document.getElementById("patModal").classList.add("open");
+  };
   document.getElementById("patCancel").onclick = () => document.getElementById("patModal").classList.remove("open");
-  document.getElementById("patClear").onclick = () => { localStorage.removeItem(PAT_KEY); document.getElementById("patModal").classList.remove("open"); renderSidebar(); toast("Đã xóa PAT"); };
-  document.getElementById("patSave").onclick = () => { const v = document.getElementById("patInput").value.trim(); if (v) localStorage.setItem(PAT_KEY, v); document.getElementById("patModal").classList.remove("open"); renderSidebar(); toast("Đã lưu PAT ✓"); };
+  document.getElementById("patClear").onclick = () => {
+    try { sessionStorage.removeItem(PAT_KEY); localStorage.removeItem(PAT_KEY); } catch {}
+    document.getElementById("patRemember").checked = false;
+    document.getElementById("patModal").classList.remove("open");
+    renderSidebar();
+    toast("Đã xóa PAT");
+  };
+  document.getElementById("patSave").onclick = () => {
+    const v = document.getElementById("patInput").value.trim();
+    const remember = document.getElementById("patRemember").checked;
+    try {
+      if (v) {
+        if (remember) { localStorage.setItem(PAT_KEY, v); sessionStorage.removeItem(PAT_KEY); }
+        else { sessionStorage.setItem(PAT_KEY, v); localStorage.removeItem(PAT_KEY); }
+      }
+    } catch {}
+    document.getElementById("patModal").classList.remove("open");
+    renderSidebar();
+    toast(v ? (remember ? "Đã lưu PAT vào localStorage ✓" : "Đã lưu PAT tạm (sessionStorage) ✓") : "Chưa nhập PAT");
+  };
 
   document.getElementById("cfmCancel").onclick = () => document.getElementById("confirmModal").classList.remove("open");
   document.getElementById("cfmOpenGh").onclick = () => executeConfirmed(false);
